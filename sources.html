@@ -1,0 +1,1030 @@
+<!DOCTYPE html>
+<!--
+  ============================================================================
+  Malaniru — Master Sources Index (branded HTML page)
+  Built by: Web (Morgan Shaw) · orchestrated by Claudia · Date: 2026-06-16
+  Project:  Malaniru_Marketing_Site
+  Source:   Claudia INPUT.MD ("sources") — three lists, de-duplicated:
+            (1) Anthropic training material, (2) Anthropic's description of
+            personas/role prompting, (3) all sources behind the research and
+            daily-intelligence briefings published to the Review website.
+  Purpose:  Single citation index for everything Malaniru publishes, with the
+            Anthropic foundations kept at the top. Cross-linked both ways with
+            ai-enablement.html.
+
+  ACCURACY / FLAGS (per the Malaniru accuracy standard — a wrong answer is
+  worse than no answer):
+  - LINKED, VERIFIED: the 531 unique external URLs in section 3 are the live
+    hyperlinks already cited inside the published research + briefings; the
+    Anthropic links (section 1) and the named per-article sources were each
+    confirmed via web search on 2026-06-16.
+  - The ~10 long-form articles that cite sources as plain text (no URL) were
+    searched to attach an official link. Citations that could NOT be
+    independently verified to a public URL are collected in the clearly
+    labelled "Cited in our research — public URL not verified" group rather
+    than guessed. CRE market-data products (e.g. proprietary quarterly
+    databases) are publisher-level only; the specific reports are not
+    individually addressable and are flagged as such.
+  - robots noindex/nofollow while pre-publication. Pricing omitted (none here).
+  - CTA "Book a discovery call" is a PLACEHOLDER pending Marketing approval
+    (matches the rest of the set; same Calendly link).
+
+  TECHNICAL:
+  - Single self-contained HTML5 file. Embedded CSS. No JavaScript.
+  - Brand tokens + component classes mirror philanthropy-ai-research.html.
+  - WCAG AA contrast. Mobile-first. Semantic HTML5. Keyboard-navigable.
+  ============================================================================
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sources &amp; Citations Index — Malaniru</title>
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="The complete, de-duplicated source index behind Malaniru's published research and daily intelligence briefings — beginning with Anthropic's training material and persona/role-prompting guidance.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy:#0F1A2E; --navy-mid:#2A3F63; --copper:#C07830; --gold:#D4A853;
+      --off-white:#F4F1EC; --light-gray:#E8E6E1; --mid-gray:#8A8A96; --dark-text:#1C1C1C;
+      --font:"Inter","Helvetica Neue",Arial,sans-serif;
+    }
+    * { box-sizing:border-box; margin:0; padding:0; }
+    body { font-family:var(--font); background:var(--off-white); color:var(--dark-text); line-height:1.6; font-size:16px; -webkit-font-smoothing:antialiased; }
+    .skip-link { position:absolute; left:-999px; top:0; background:var(--gold); color:var(--navy); padding:10px 16px; font-weight:700; z-index:10; }
+    .skip-link:focus { left:8px; top:8px; }
+    header { background:var(--navy); color:var(--off-white); padding:56px 24px 60px; position:relative; overflow:hidden; }
+    header::after { content:""; position:absolute; inset:0; background:radial-gradient(circle at 85% 15%, rgba(192,120,48,0.20) 0%, rgba(15,26,46,0) 55%); pointer-events:none; }
+    .header-inner { max-width:960px; margin:0 auto; position:relative; z-index:1; }
+    .wordmark { font-weight:800; font-size:1.25rem; letter-spacing:0.02em; margin-bottom:36px; }
+    .wordmark .dot { color:var(--copper); }
+    .wordmark a { color:var(--off-white); text-decoration:none; transition:opacity 0.18s ease; }
+    .wordmark a:hover, .wordmark a:focus-visible { opacity:0.85; outline:none; }
+    .eyebrow { display:inline-block; font-size:0.74rem; font-weight:600; letter-spacing:0.16em; text-transform:uppercase; color:var(--gold); margin-bottom:16px; }
+    header h1 { font-weight:800; font-size:clamp(1.9rem,5vw,2.8rem); line-height:1.12; letter-spacing:-0.01em; margin-bottom:18px; max-width:24ch; }
+    header p.intro { font-size:1.05rem; color:var(--light-gray); max-width:68ch; }
+    header p.intro + p.intro { margin-top:14px; }
+    .hero-cta { display:inline-block; margin-top:30px; background:var(--copper); color:#fff; font-weight:700; font-size:0.98rem; padding:13px 26px; border-radius:8px; text-decoration:none; transition:background 0.18s ease; }
+    .hero-cta:hover, .hero-cta:focus-visible { background:var(--gold); color:var(--navy); outline:none; }
+    /* in-page nav */
+    .toc { max-width:960px; margin:28px auto 0; padding:0 24px; }
+    .toc ul { list-style:none; display:flex; flex-wrap:wrap; gap:10px; }
+    .toc a { display:inline-block; background:#fff; border:1px solid var(--light-gray); border-radius:999px; padding:7px 15px; font-size:0.86rem; font-weight:600; color:var(--navy); text-decoration:none; transition:border-color 0.18s ease,color 0.18s ease; }
+    .toc a:hover, .toc a:focus-visible { border-color:var(--copper); color:var(--copper); outline:none; }
+    main { max-width:960px; margin:0 auto; padding:48px 24px 24px; }
+    .section-eyebrow { display:block; font-size:0.72rem; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:var(--copper); margin-bottom:10px; }
+    .section-title { font-weight:800; font-size:1.6rem; color:var(--navy); line-height:1.2; margin-bottom:14px; letter-spacing:-0.01em; }
+    .section-lead { font-size:1.02rem; color:var(--dark-text); max-width:70ch; margin-bottom:30px; }
+    section.block { margin-bottom:54px; scroll-margin-top:20px; }
+    .reading-group { margin-bottom:26px; }
+    .reading-group h3 { font-weight:700; font-size:1.02rem; color:var(--navy); margin-bottom:12px; padding-bottom:8px; border-bottom:1px solid var(--light-gray); }
+    .reading-group ul { list-style:none; }
+    .reading-group li { margin-bottom:9px; padding-left:18px; position:relative; word-break:break-word; }
+    .reading-group li::before { content:"\2197"; position:absolute; left:0; top:0; color:var(--copper); font-weight:700; }
+    .reading-group a { color:var(--dark-text); text-decoration:none; font-weight:600; border-bottom:1px solid transparent; transition:border-color 0.18s ease,color 0.18s ease; }
+    .reading-group a:hover, .reading-group a:focus-visible { color:var(--navy); border-bottom-color:var(--copper); outline:none; }
+    .reading-group .src { color:var(--mid-gray); font-weight:400; font-size:0.9rem; }
+    .note { background:#fff; border:1px solid var(--light-gray); border-left:4px solid var(--copper); border-radius:10px; padding:18px 22px; margin:0 0 28px; font-size:0.95rem; color:var(--dark-text); max-width:72ch; }
+    .note.warn { border-left-color:var(--gold); }
+    .count-pill { display:inline-block; background:var(--navy); color:var(--off-white); font-size:0.72rem; font-weight:700; letter-spacing:0.06em; padding:3px 10px; border-radius:999px; margin-left:8px; vertical-align:middle; }
+    details.domains > summary { cursor:pointer; font-weight:700; color:var(--navy); padding:10px 0; }
+    details.domains > summary:hover { color:var(--copper); }
+    .prereq { background:#fff; border:1px solid var(--light-gray); border-left:4px solid var(--copper); border-radius:10px; padding:24px 28px; margin:40px 0 48px; }
+    .prereq h4 { font-weight:700; color:var(--navy); margin-bottom:6px; font-size:1.05rem; }
+    .prereq a { color:var(--copper); font-weight:600; }
+    .cta-band { background:var(--navy); color:var(--off-white); border-radius:12px; padding:44px 34px; text-align:center; margin-bottom:8px; }
+    .cta-band h2 { font-weight:800; font-size:clamp(1.5rem,3.6vw,2rem); margin-bottom:12px; letter-spacing:-0.01em; }
+    .cta-band p { color:var(--light-gray); max-width:54ch; margin:0 auto 26px; }
+    .cta-band .btn { display:inline-block; background:var(--copper); color:#fff; font-weight:700; padding:14px 30px; border-radius:8px; text-decoration:none; transition:background 0.18s ease; }
+    .cta-band .btn:hover, .cta-band .btn:focus-visible { background:var(--gold); color:var(--navy); outline:none; }
+    footer { max-width:960px; margin:16px auto 0; padding:24px; font-size:0.82rem; color:var(--mid-gray); border-top:1px solid var(--light-gray); }
+    footer p + p { margin-top:6px; }
+    footer a { color:var(--mid-gray); text-decoration:underline; }
+    @media (prefers-reduced-motion: reduce) { * { transition:none !important; } }
+  
+    /* 2026-06-16: hide Book a discovery call CTA buttons (per Principal) */
+    a[href*="calendly.com"] { display: none !important; }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header>
+    <div class="header-inner">
+      <div class="wordmark"><a href="index.html">Malaniru<span class="dot">.</span></a></div>
+      <span class="eyebrow">AI Enablement &middot; Sources</span>
+      <h1>The sources behind our research</h1>
+      <p class="intro">
+        Every Malaniru report and daily briefing is built from sources we can point to. This is the
+        complete, de-duplicated index of them &mdash; beginning with the Anthropic training material
+        and persona guidance that underpins how we work, then every citation behind our published
+        research and intelligence briefings.
+      </p>
+      <p class="intro">
+        Where a source could not be tied to a public URL, we say so rather than guess. A wrong link
+        is worse than an honest gap.
+      </p>
+      <a class="hero-cta" href="https://calendly.com/mark-malaniru/30min" target="_blank" rel="noopener">Book a discovery call</a>
+    </div>
+  </header>
+
+  <nav class="toc" aria-label="On this page">
+    <ul>
+      <li><a href="#anthropic-training">Anthropic training material</a></li>
+      <li><a href="#anthropic-personas">Anthropic on personas</a></li>
+      <li><a href="#anthropic-corpus">Anthropic in our coverage</a></li>
+      <li><a href="#research-sources">Research article sources</a></li>
+      <li><a href="#briefing-sources">Daily briefing sources</a></li>
+      <li><a href="#unverified">Cited, URL not verified</a></li>
+    </ul>
+  </nav>
+
+  <main id="main">
+
+    <!-- ============ 1. ANTHROPIC TRAINING MATERIAL ============ -->
+    <section class="block" id="anthropic-training" aria-labelledby="at-h">
+      <span class="section-eyebrow">Anthropic &middot; Foundations</span>
+      <h2 class="section-title" id="at-h">Anthropic training material</h2>
+      <p class="section-lead">
+        Anthropic's official learning resources &mdash; the Academy, AI Fluency framework, and
+        developer courses Malaniru draws on for hands-on training and its own practice. All links
+        verified 2026-06-16 and open in a new tab.
+      </p>
+      <div class="reading-group">
+        <h3>Anthropic Academy &amp; learning hubs</h3>
+        <ul>
+          <li><a href="https://www.anthropic.com/learn" target="_blank" rel="noopener">AI Learning Resources &amp; Guides (learning hub)</a> <span class="src">— Anthropic</span></li>
+          <li><a href="https://www.anthropic.com/learn/claude-for-you" target="_blank" rel="noopener">AI Fluency: Framework and Foundations</a> <span class="src">— Anthropic</span></li>
+          <li><a href="https://www.anthropic.com/learn/claude-for-work" target="_blank" rel="noopener">Anthropic Academy: Claude AI Solutions for Business</a> <span class="src">— Anthropic</span></li>
+          <li><a href="https://www.anthropic.com/learn/build-with-claude" target="_blank" rel="noopener">Anthropic Academy: Claude API Development Guide</a> <span class="src">— Anthropic</span></li>
+          <li><a href="https://claude.com/resources/courses" target="_blank" rel="noopener">Courses</a> <span class="src">— Claude (Anthropic)</span></li>
+          <li><a href="https://claude.com/resources/tutorials" target="_blank" rel="noopener">Tutorials</a> <span class="src">— Claude (Anthropic)</span></li>
+          <li><a href="https://docs.anthropic.com/en/docs/resources/courses" target="_blank" rel="noopener">Anthropic Courses (developer docs)</a> <span class="src">— Anthropic</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ 2. ANTHROPIC ON PERSONAS ============ -->
+    <section class="block" id="anthropic-personas" aria-labelledby="ap-h">
+      <span class="section-eyebrow">Anthropic &middot; Foundations</span>
+      <h2 class="section-title" id="ap-h">Anthropic's description of personas</h2>
+      <p class="section-lead">
+        How Anthropic describes giving Claude a role, character, and persona &mdash; the basis for
+        Malaniru's persona system. Documentation and research, verified 2026-06-16.
+      </p>
+      <div class="reading-group">
+        <h3>Role &amp; persona guidance</h3>
+        <ul>
+          <li><a href="https://docs.claude.com/en/docs/build-with-claude/prompt-engineering/system-prompts" target="_blank" rel="noopener">Giving Claude a role with a system prompt</a> <span class="src">— Anthropic developer docs</span></li>
+          <li><a href="https://docs.anthropic.com/en/docs/test-and-evaluate/strengthen-guardrails/keep-claude-in-character" target="_blank" rel="noopener">Keep Claude in character / increase output consistency</a> <span class="src">— Anthropic developer docs</span></li>
+          <li><a href="https://www.anthropic.com/research/claude-character" target="_blank" rel="noopener">Claude's Character</a> <span class="src">— Anthropic research</span></li>
+          <li><a href="https://www.anthropic.com/research/persona-selection-model" target="_blank" rel="noopener">The persona selection model</a> <span class="src">— Anthropic research</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ ANTHROPIC LINKS WITHIN OUR COVERAGE ============ -->
+    <section class="block" id="anthropic-corpus" aria-labelledby="ac-h">
+      <span class="section-eyebrow">Anthropic &middot; In our coverage</span>
+      <h2 class="section-title" id="ac-h">Anthropic &amp; Claude sources we&rsquo;ve cited<span class="count-pill">32</span></h2>
+      <p class="section-lead">
+        Every anthropic.com, claude.com, and Model Context Protocol link referenced across our
+        research and briefings, pulled to the top and de-duplicated.
+      </p>
+      <div class="reading-group">
+        <h3>From our research &amp; briefings</h3>
+        <ul>
+          <li><a href="https://blog.modelcontextprotocol.io/" target="_blank" rel="noopener">https://blog.modelcontextprotocol.io/</a></li>
+          <li><a href="https://blog.modelcontextprotocol.io/posts/2026-04-08-maintainer-update/" target="_blank" rel="noopener">https://blog.modelcontextprotocol.io/posts/2026-04-08-maintainer-update/</a></li>
+          <li><a href="https://blog.modelcontextprotocol.io/posts/2026-07-28-release-candidate/" target="_blank" rel="noopener">https://blog.modelcontextprotocol.io/posts/2026-07-28-release-candidate/</a></li>
+          <li><a href="https://blog.modelcontextprotocol.io/posts/2026-mcp-roadmap/" target="_blank" rel="noopener">https://blog.modelcontextprotocol.io/posts/2026-mcp-roadmap/</a></li>
+          <li><a href="https://claude.com/blog/claude-platform-on-aws" target="_blank" rel="noopener">https://claude.com/blog/claude-platform-on-aws</a></li>
+          <li><a href="https://claude.com/blog/cowork-for-enterprise" target="_blank" rel="noopener">https://claude.com/blog/cowork-for-enterprise</a></li>
+          <li><a href="https://claude.com/claude-for-word" target="_blank" rel="noopener">https://claude.com/claude-for-word</a></li>
+          <li><a href="https://modelcontextprotocol.io/development/roadmap" target="_blank" rel="noopener">https://modelcontextprotocol.io/development/roadmap</a></li>
+          <li><a href="https://platform.claude.com/docs/en/about-claude/model-deprecations" target="_blank" rel="noopener">https://platform.claude.com/docs/en/about-claude/model-deprecations</a></li>
+          <li><a href="https://platform.claude.com/docs/en/release-notes/overview" target="_blank" rel="noopener">https://platform.claude.com/docs/en/release-notes/overview</a></li>
+          <li><a href="https://red.anthropic.com/2026/mythos-preview/" target="_blank" rel="noopener">https://red.anthropic.com/2026/mythos-preview/</a></li>
+          <li><a href="https://status.claude.com/" target="_blank" rel="noopener">https://status.claude.com/</a></li>
+          <li><a href="https://www.anthropic.com/claude-opus-4-8-system-card" target="_blank" rel="noopener">https://www.anthropic.com/claude-opus-4-8-system-card</a></li>
+          <li><a href="https://www.anthropic.com/engineering/april-23-postmortem" target="_blank" rel="noopener">https://www.anthropic.com/engineering/april-23-postmortem</a></li>
+          <li><a href="https://www.anthropic.com/events" target="_blank" rel="noopener">https://www.anthropic.com/events</a></li>
+          <li><a href="https://www.anthropic.com/glasswing" target="_blank" rel="noopener">https://www.anthropic.com/glasswing</a></li>
+          <li><a href="https://www.anthropic.com/news" target="_blank" rel="noopener">https://www.anthropic.com/news</a></li>
+          <li><a href="https://www.anthropic.com/news/anthropic-amazon-compute" target="_blank" rel="noopener">https://www.anthropic.com/news/anthropic-amazon-compute</a></li>
+          <li><a href="https://www.anthropic.com/news/anthropic-kpmg" target="_blank" rel="noopener">https://www.anthropic.com/news/anthropic-kpmg</a></li>
+          <li><a href="https://www.anthropic.com/news/anthropic-raises-30-billion-series-g-funding-380-billion-post-money-valuation" target="_blank" rel="noopener">https://www.anthropic.com/news/anthropic-raises-30-billion-series-g-funding-380-billion-post-money-valuation</a></li>
+          <li><a href="https://www.anthropic.com/news/claude-corps" target="_blank" rel="noopener">https://www.anthropic.com/news/claude-corps</a></li>
+          <li><a href="https://www.anthropic.com/news/claude-fable-5-mythos-5" target="_blank" rel="noopener">https://www.anthropic.com/news/claude-fable-5-mythos-5</a></li>
+          <li><a href="https://www.anthropic.com/news/claude-opus-4-7" target="_blank" rel="noopener">https://www.anthropic.com/news/claude-opus-4-7</a></li>
+          <li><a href="https://www.anthropic.com/news/claude-opus-4-8" target="_blank" rel="noopener">https://www.anthropic.com/news/claude-opus-4-8</a></li>
+          <li><a href="https://www.anthropic.com/news/google-broadcom-partnership-compute" target="_blank" rel="noopener">https://www.anthropic.com/news/google-broadcom-partnership-compute</a></li>
+          <li><a href="https://www.anthropic.com/news/higher-limits-spacex" target="_blank" rel="noopener">https://www.anthropic.com/news/higher-limits-spacex</a></li>
+          <li><a href="https://www.anthropic.com/news/series-h" target="_blank" rel="noopener">https://www.anthropic.com/news/series-h</a></li>
+          <li><a href="https://www.anthropic.com/news/services-track-partner-hub" target="_blank" rel="noopener">https://www.anthropic.com/news/services-track-partner-hub</a></li>
+          <li><a href="https://www.anthropic.com/news/sydney-fourth-office-asia-pacific" target="_blank" rel="noopener">https://www.anthropic.com/news/sydney-fourth-office-asia-pacific</a></li>
+          <li><a href="https://www.anthropic.com/news/theo-hourmouzis-general-manager-australia-new-zealand" target="_blank" rel="noopener">https://www.anthropic.com/news/theo-hourmouzis-general-manager-australia-new-zealand</a></li>
+          <li><a href="https://www.anthropic.com/research/natural-language-autoencoders" target="_blank" rel="noopener">https://www.anthropic.com/research/natural-language-autoencoders</a></li>
+          <li><a href="https://www.anthropic.com/research/teaching-claude-why" target="_blank" rel="noopener">https://www.anthropic.com/research/teaching-claude-why</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ 3. RESEARCH ARTICLE SOURCES ============ -->
+    <section class="block" id="research-sources" aria-labelledby="rs-h">
+      <span class="section-eyebrow">Review website</span>
+      <h2 class="section-title" id="rs-h">Sources behind our long-form research</h2>
+      <p class="section-lead">
+        The eleven long-form research articles published to the Review website, with each cited
+        source linked to a verified URL. Sources that appear in more than one article are listed
+        once, under the first article that cites them.
+      </p>
+
+      <div class="reading-group">
+        <h3>The Current State of AI Adoption in Philanthropy <span class="src">(article cites these directly)</span></h3>
+        <ul>
+          <li><a href="https://blog.google/company-news/outreach-and-initiatives/google-org/google-org-generative-ai-accelerator-2025/" target="_blank" rel="noopener">https://blog.google/company-news/outreach-and-initiatives/google-org/google-org-generative-ai-accelerator-2025/</a></li>
+          <li><a href="https://blog.google/outreach-initiatives/google-org/generative-ai-accelerator-cohort-2025/" target="_blank" rel="noopener">https://blog.google/outreach-initiatives/google-org/generative-ai-accelerator-cohort-2025/</a></li>
+          <li><a href="https://blog.techsoup.org/posts/what-ai-means-for-nonprofits-in-2025-insights-from-the-ai-benchmark-report" target="_blank" rel="noopener">https://blog.techsoup.org/posts/what-ai-means-for-nonprofits-in-2025-insights-from-the-ai-benchmark-report</a></li>
+          <li><a href="https://candid.org/blogs/what-ai-equity-for-nonprofits-means-looks-like-in-practice/" target="_blank" rel="noopener">https://candid.org/blogs/what-ai-equity-for-nonprofits-means-looks-like-in-practice/</a></li>
+          <li><a href="https://cep.org/wp-content/uploads/2025/09/CEP_AI_Layout_FINAL.pdf" target="_blank" rel="noopener">https://cep.org/wp-content/uploads/2025/09/CEP_AI_Layout_FINAL.pdf</a></li>
+          <li><a href="https://johnsoncenter.org/blog/artificial-intelligence-and-philanthropy/" target="_blank" rel="noopener">https://johnsoncenter.org/blog/artificial-intelligence-and-philanthropy/</a></li>
+          <li><a href="https://kpmg.com/us/en/media/news/ai-impact-grant-2025.html" target="_blank" rel="noopener">https://kpmg.com/us/en/media/news/ai-impact-grant-2025.html</a></li>
+          <li><a href="https://page.techsoup.org/ai-benchmark-report-2025" target="_blank" rel="noopener">https://page.techsoup.org/ai-benchmark-report-2025</a></li>
+          <li><a href="https://projectevident.org/news/where-does-your-foundation-stand-on-ai-introducing-the-ai-journey-map-for-philanthropy/" target="_blank" rel="noopener">https://projectevident.org/news/where-does-your-foundation-stand-on-ai-introducing-the-ai-journey-map-for-philanthropy/</a></li>
+          <li><a href="https://www.bridgespan.org/insights/exploring-ai-opportunities-for-nonprofits-and-the-social-sector" target="_blank" rel="noopener">https://www.bridgespan.org/insights/exploring-ai-opportunities-for-nonprofits-and-the-social-sector</a></li>
+          <li><a href="https://www.devex.com/news/mcgovern-foundation-s-ai-grants-prioritize-institutions-over-breakthroughs-111581" target="_blank" rel="noopener">https://www.devex.com/news/mcgovern-foundation-s-ai-grants-prioritize-institutions-over-breakthroughs-111581</a></li>
+          <li><a href="https://www.fluxx.io/ai-grants-management-software" target="_blank" rel="noopener">https://www.fluxx.io/ai-grants-management-software</a></li>
+          <li><a href="https://www.mcgovern.org/2024-grants-press-release/" target="_blank" rel="noopener">https://www.mcgovern.org/2024-grants-press-release/</a></li>
+          <li><a href="https://www.mcgovern.org/2025-press-release/" target="_blank" rel="noopener">https://www.mcgovern.org/2025-press-release/</a></li>
+          <li><a href="https://www.nten.org/learn/resource-hubs/artificial-intelligence" target="_blank" rel="noopener">https://www.nten.org/learn/resource-hubs/artificial-intelligence</a></li>
+          <li><a href="https://www.plinth.org.uk/complete-guide/grant-management-systems-compared" target="_blank" rel="noopener">https://www.plinth.org.uk/complete-guide/grant-management-systems-compared</a></li>
+          <li><a href="https://www.tagtech.org/2025/09/grantmaking-in-the-age-of-ai/" target="_blank" rel="noopener">https://www.tagtech.org/2025/09/grantmaking-in-the-age-of-ai/</a></li>
+          <li><a href="https://www.verifiedmarketreports.com/product/ai-consulting-services-market/" target="_blank" rel="noopener">https://www.verifiedmarketreports.com/product/ai-consulting-services-market/</a></li>
+        </ul>
+      </div>
+
+      <div class="reading-group">
+        <h3>How Foundations Are Using AI for Grant Management</h3>
+        <ul>
+          <li><a href="https://cep.org/report-backpacks/ai-with-purpose-how-foundations-and-nonprofits-are-thinking-about-and-using-artificial-intelligence/" target="_blank" rel="noopener">AI With Purpose</a> <span class="src">— Center for Effective Philanthropy</span></li>
+          <li><a href="https://www.philanthropy.com/solutions/how-foundations-are-using-ai-to-vet-grantees/" target="_blank" rel="noopener">How Foundations Are Using AI to Vet Grantees</a> <span class="src">— Chronicle of Philanthropy</span></li>
+          <li><a href="https://www.foundant.com/en-gb/blog/the-rise-of-ai-in-grant-applications-what-grantmakers-need-to-know/" target="_blank" rel="noopener">AI Grant Applications: What Today's Grantmakers Should Know</a> <span class="src">— Foundant</span></li>
+          <li><a href="https://www.sopact.com/use-case/grant-management-software" target="_blank" rel="noopener">Grant Management Software: AI Application Review &amp; Outcome Tracking</a> <span class="src">— SoPact</span></li>
+          <li><a href="https://www.mcgovern.org/our-work/data-solutions/grant-guardian/" target="_blank" rel="noopener">Grant Guardian</a> <span class="src">— Patrick J. McGovern Foundation</span></li>
+          <li><a href="https://www.bridgespan.org/insights/closing-the-nonprofit-funding-gap-in-the-age-of-ai" target="_blank" rel="noopener">Closing the Nonprofit Funding Gap in the Age of AI</a> <span class="src">— Bridgespan Group</span></li>
+          <li><a href="https://www.macfound.org/press/press-releases/humanity-ai-commits-500-million-to-build-a-people-centered-future-for-ai" target="_blank" rel="noopener">Humanity AI Commits $500 Million</a> <span class="src">— MacArthur Foundation</span></li>
+          <li><a href="https://openai.com/index/people-first-ai-fund/" target="_blank" rel="noopener">People-First AI Fund</a> <span class="src">— OpenAI</span></li>
+          <li><a href="https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai" target="_blank" rel="noopener">The State of AI: Global Survey 2025</a> <span class="src">— McKinsey</span></li>
+          <li><a href="https://www.tagtech.org/ai-resources-for-philanthropy/" target="_blank" rel="noopener">AI Resources for Philanthropy</a> <span class="src">— Technology Association of Grantmakers</span></li>
+          <li><a href="https://www.peakgrantmaking.org/event/shaping-ethical-ai-policies-for-philanthropy-peak-ai-for-grantmakers-forum/" target="_blank" rel="noopener">Shaping Ethical AI Policies for Philanthropy</a> <span class="src">— PEAK Grantmaking</span></li>
+        </ul>
+      </div>
+
+      <div class="reading-group">
+        <h3>AI Implementation Trends in the Philanthropy Sector</h3>
+        <ul>
+          <li><a href="https://candid.org/blogs/will-foundations-soon-use-ai-to-screen-grant-applications/" target="_blank" rel="noopener">Will AI Soon Be Reviewing Your Grant Applications?</a> <span class="src">— Candid</span></li>
+          <li><a href="https://cep.org/blog/an-ai-roadmap-for-philanthropy-in-2025/" target="_blank" rel="noopener">An AI Roadmap for Philanthropy in 2025</a> <span class="src">— Center for Effective Philanthropy</span></li>
+          <li><a href="https://www.foundant.com/blog/how-foundations-are-using-ai-to-multiply-impact-a-strategic-guide-for-philanthropic-leaders/" target="_blank" rel="noopener">How Foundations Are Using AI to Multiply Impact</a> <span class="src">— Foundant</span></li>
+          <li><a href="https://www.tagtech.org/report/2024-state-of-philanthropy-tech-survey/" target="_blank" rel="noopener">2024 State of Philanthropy Tech Survey</a> <span class="src">— Technology Association of Grantmakers</span></li>
+          <li><a href="https://www.washingtonpost.com/business/2025/10/14/artificial-intelligence-philanthropy-macarthur-foundation-ford-foundation/1a6f7aee-a917-11f0-a2bc-82cf6840599d_story.html" target="_blank" rel="noopener">Foundations Want to Curb AI Developers' Influence</a> <span class="src">— Washington Post</span></li>
+        </ul>
+      </div>
+
+      <div class="reading-group">
+        <h3>Digital Transformation and How It Applies to Philanthropy</h3>
+        <ul>
+          <li><a href="https://candid.org/press/launch-of-candid-search-unifies-nonprofit-and-funder-data-in-one-place-enabling-faster-and-more-meaningful-connections/" target="_blank" rel="noopener">Launch of Candid Search</a> <span class="src">— Candid</span></li>
+          <li><a href="https://johnsoncenter.org/blog/11-trends-in-philanthropy-for-2026/" target="_blank" rel="noopener">11 Trends in Philanthropy for 2026</a> <span class="src">— Dorothy A. Johnson Center for Philanthropy</span></li>
+          <li><a href="https://foundationsource.com/newsroom/press-releases/2026-giving-outlook-resilient-donors-drive-growth-amid-shifts-in-philanthropy/" target="_blank" rel="noopener">2026 Giving Outlook: Resilient Donors Drive Growth</a> <span class="src">— Foundation Source</span></li>
+        </ul>
+      </div>
+
+      <div class="reading-group">
+        <h3>The Foundation AI Support Gap</h3>
+        <ul>
+          <li><a href="https://charitableadvisors.com/the-ai-questions-foundations-will-ask-in-2026-and-why-thats-good-news/" target="_blank" rel="noopener">The AI Questions Foundations Will Ask in 2026</a> <span class="src">— Charitable Advisors</span></li>
+          <li><a href="https://thenonprofittimes.com/npt_articles/10-funders-500-million-targeting-ai-and-humanity/" target="_blank" rel="noopener">10 Funders, $500 Million Targeting AI and Humanity</a> <span class="src">— The NonProfit Times</span></li>
+          <li><a href="https://www.insidephilanthropy.com/home/a-look-under-the-hood-of-the-openai-foundations-people-first-ai-fund" target="_blank" rel="noopener">A Look Under the Hood of the OpenAI Foundation's People-First AI Fund</a> <span class="src">— Inside Philanthropy</span></li>
+        </ul>
+      </div>
+
+      <div class="reading-group">
+        <h3>Data and Security Compliance in Philanthropy <span class="src">(research, not legal advice)</span></h3>
+        <ul>
+          <li><a href="https://www.bdo.com/insights/industries/nonprofit-education/the-crucial-role-of-cybersecurity-for-nonprofit-organizations-in-2025" target="_blank" rel="noopener">The Crucial Role of Cybersecurity for Nonprofit Organizations in 2025</a> <span class="src">— BDO</span></li>
+          <li><a href="https://www.fortinet.com/resources/cyberglossary/cybersecurity-statistics" target="_blank" rel="noopener">Cybersecurity Statistics 2025</a> <span class="src">— Fortinet</span></li>
+          <li><a href="https://www.whitecase.com/insight-alert/privacy-and-cybersecurity-2025-2026-insights-challenges-and-trends-ahead" target="_blank" rel="noopener">Privacy and Cybersecurity 2025&ndash;2026</a> <span class="src">— White &amp; Case</span></li>
+        </ul>
+      </div>
+
+      <div class="reading-group">
+        <h3>Data Integrity and IP-Based Security in the Philanthropic Sector <span class="src">(research, not legal advice)</span></h3>
+        <ul>
+          <li><a href="https://www.nist.gov/cyberframework" target="_blank" rel="noopener">Cybersecurity Framework 2.0</a> <span class="src">— NIST</span></li>
+          <li><a href="https://www.verizon.com/business/resources/reports/dbir/" target="_blank" rel="noopener">2025 Data Breach Investigations Report (DBIR)</a> <span class="src">— Verizon</span></li>
+          <li><a href="https://www.ibm.com/reports/data-breach" target="_blank" rel="noopener">Cost of a Data Breach Report 2025</a> <span class="src">— IBM</span></li>
+          <li><a href="https://natlawreview.com/article/ftc-proposes-settlement-blackbaud-connection-alleged-security-failures" target="_blank" rel="noopener">FTC Settlement with Blackbaud (security failures)</a> <span class="src">— National Law Review</span></li>
+        </ul>
+      </div>
+
+      <div class="reading-group">
+        <h3>Multi-Agent Orchestration Patterns in Production</h3>
+        <ul>
+          <li><a href="https://www.gartner.com/en/newsroom/press-releases/2025-08-26-gartner-predicts-40-percent-of-enterprise-apps-will-feature-task-specific-ai-agents-by-2026-up-from-less-than-5-percent-in-2025" target="_blank" rel="noopener">40% of Enterprise Apps Will Feature Task-Specific AI Agents by 2026</a> <span class="src">— Gartner</span></li>
+          <li><a href="https://www.deloitte.com/us/en/insights/industry/technology/technology-media-and-telecom-predictions/2026/ai-agent-orchestration.html" target="_blank" rel="noopener">Unlocking Exponential Value with AI Agent Orchestration</a> <span class="src">— Deloitte (TMT Predictions 2026)</span></li>
+          <li><a href="https://www.salesforce.com/news/stories/connectivity-report-announcement-2026/" target="_blank" rel="noopener">2026 Connectivity Benchmark Report</a> <span class="src">— Salesforce</span></li>
+          <li><a href="https://www.langchain.com/state-of-agent-engineering" target="_blank" rel="noopener">State of Agent Engineering</a> <span class="src">— LangChain</span></li>
+          <li><a href="https://developers.googleblog.com/developers-guide-to-multi-agent-patterns-in-adk/" target="_blank" rel="noopener">Developer's Guide to Multi-Agent Patterns in ADK</a> <span class="src">— Google Developers Blog</span></li>
+        </ul>
+        <p class="src" style="padding-left:0;">Anthropic engineering sources for this article appear in &ldquo;Anthropic &amp; Claude sources we've cited&rdquo; above.</p>
+      </div>
+
+      <div class="reading-group">
+        <h3>Best Practices for Integrating Gmail &amp; Google Drive with Claude Connectors</h3>
+        <ul>
+          <li><a href="https://support.claude.com/en/articles/10166901-use-google-workspace-connectors" target="_blank" rel="noopener">Use Google Workspace connectors (Help Center)</a> <span class="src">— Anthropic</span></li>
+        </ul>
+        <p class="src" style="padding-left:0;">Additional connector citations (community MCP repos, third-party security guides) are listed under &ldquo;Cited in our research &mdash; public URL not verified&rdquo; below.</p>
+      </div>
+
+      <div class="note warn">
+        <strong>Two articles cite sources at the category level, not by URL.</strong>
+        <em>Agentic AI Adoption in Enterprise SaaS (Q1 2026)</em> attributes figures to analyst
+        firms (Gartner, IDC, Mordor Intelligence) and vendor disclosures without per-source links.
+        <em>Bridge Loan Availability in Secondary CRE Markets (Q1 2026)</em> draws on proprietary
+        quarterly market-data products (CBRE, Cushman &amp; Wakefield, JLL, CoStar, Federal Reserve,
+        Mortgage Bankers Association, CME FedWatch, S&amp;P Global, SIFMA, and an internal "Floating
+        Rate Trends" dataset). These reports are not individually addressable as public URLs; the
+        publishers are named in the article and listed below where a public research hub exists.
+      </div>
+    </section>
+
+    <!-- ============ DAILY BRIEFING SOURCES ============ -->
+    <section class="block" id="briefing-sources" aria-labelledby="bs-h">
+      <span class="section-eyebrow">Review website</span>
+      <h2 class="section-title" id="bs-h">Daily Intelligence Briefing sources<span class="count-pill">472</span></h2>
+      <p class="section-lead">
+        Every external link cited across the published Daily Intelligence Briefings, de-duplicated
+        and grouped by publisher. The most-cited outlets are broken out; the long tail is collected
+        A&ndash;Z. Anthropic and Claude links are pulled up into the Anthropic section above.
+      </p>
+      <details class="domains" open>
+        <summary>Browse all briefing sources by publisher</summary>
+        <div class="reading-group">
+          <h3>cnbc.com <span class="src">(28)</span></h3>
+          <ul>
+          <li><a href="https://www.cnbc.com/2026/03/31/openai-funding-round-ipo.html" target="_blank" rel="noopener">https://www.cnbc.com/2026/03/31/openai-funding-round-ipo.html</a></li>
+          <li><a href="https://www.cnbc.com/2026/04/07/anthropic-claude-mythos-ai-hackers-cyberattacks.html" target="_blank" rel="noopener">https://www.cnbc.com/2026/04/07/anthropic-claude-mythos-ai-hackers-cyberattacks.html</a></li>
+          <li><a href="https://www.cnbc.com/2026/04/08/meta-debuts-first-major-ai-model-since-14-billion-deal-to-bring-in-alexandr-wang.html" target="_blank" rel="noopener">https://www.cnbc.com/2026/04/08/meta-debuts-first-major-ai-model-since-14-billion-deal-to-bring-in-alexandr-wang.html</a></li>
+          <li><a href="https://www.cnbc.com/2026/04/10/coreweave-anthropic-claude-ai-deal.html" target="_blank" rel="noopener">https://www.cnbc.com/2026/04/10/coreweave-anthropic-claude-ai-deal.html</a></li>
+          <li><a href="https://www.cnbc.com/2026/04/11/vibe-check-from-ai-industry-humanx-anthropic-is-talk-of-the-town.html" target="_blank" rel="noopener">https://www.cnbc.com/2026/04/11/vibe-check-from-ai-industry-humanx-anthropic-is-talk-of-the-town.html</a></li>
+          <li><a href="https://www.cnbc.com/2026/04/17/anthropic-dario-amodei-trump-mythos.html" target="_blank" rel="noopener">https://www.cnbc.com/2026/04/17/anthropic-dario-amodei-trump-mythos.html</a></li>
+          <li><a href="https://www.cnbc.com/2026/04/19/cursor-ai-2-billion-funding-round.html" target="_blank" rel="noopener">https://www.cnbc.com/2026/04/19/cursor-ai-2-billion-funding-round.html</a></li>
+          <li><a href="https://www.cnbc.com/2026/04/20/amazon-invest-up-to-25-billion-in-anthropic-part-of-ai-infrastructure.html" target="_blank" rel="noopener">https://www.cnbc.com/2026/04/20/amazon-invest-up-to-25-billion-in-anthropic-part-of-ai-infrastructure.html</a></li>
+          <li><a href="https://www.cnbc.com/2026/04/23/openai-announces-latest-artificial-intelligence-model.html" target="_blank" rel="noopener">https://www.cnbc.com/2026/04/23/openai-announces-latest-artificial-intelligence-model.html</a></li>
+          <li><a href="https://www.cnbc.com/2026/04/24/deepseek-v4-llm-preview-open-source-ai-competition-china.html" target="_blank" rel="noopener">https://www.cnbc.com/2026/04/24/deepseek-v4-llm-preview-open-source-ai-competition-china.html</a></li>
+          <li><a href="https://www.cnbc.com/2026/04/24/google-to-invest-up-to-40-billion-in-anthropic-as-search-giant-spreads-its-ai-bets.html" target="_blank" rel="noopener">https://www.cnbc.com/2026/04/24/google-to-invest-up-to-40-billion-in-anthropic-as-search-giant-spreads-its-ai-bets.html</a></li>
+          <li><a href="https://www.cnbc.com/2026/04/27/musk-altman-trial-openai-jury-selection.html" target="_blank" rel="noopener">https://www.cnbc.com/2026/04/27/musk-altman-trial-openai-jury-selection.html</a></li>
+          <li><a href="https://www.cnbc.com/2026/04/27/openai-microsoft-partnership-revenue-cap.html" target="_blank" rel="noopener">https://www.cnbc.com/2026/04/27/openai-microsoft-partnership-revenue-cap.html</a></li>
+          <li><a href="https://www.cnbc.com/2026/04/28/openai-trial-elon-musk-sam-altman-live-updates.html" target="_blank" rel="noopener">https://www.cnbc.com/2026/04/28/openai-trial-elon-musk-sam-altman-live-updates.html</a></li>
+          <li><a href="https://www.cnbc.com/2026/04/29/anthropic-weighs-raising-funds-at-900b-valuation-topping-openai.html" target="_blank" rel="noopener">https://www.cnbc.com/2026/04/29/anthropic-weighs-raising-funds-at-900b-valuation-topping-openai.html</a></li>
+          <li><a href="https://www.cnbc.com/2026/04/29/microsoft-msft-q3-earnings-report-2026.html" target="_blank" rel="noopener">https://www.cnbc.com/2026/04/29/microsoft-msft-q3-earnings-report-2026.html</a></li>
+          <li><a href="https://www.cnbc.com/2026/04/29/musk-altman-live-updates-day-3-open-ai-trial.html" target="_blank" rel="noopener">https://www.cnbc.com/2026/04/29/musk-altman-live-updates-day-3-open-ai-trial.html</a></li>
+          <li><a href="https://www.cnbc.com/2026/04/30/openai-trial-elon-musk-sam-altman-live-updates.html" target="_blank" rel="noopener">https://www.cnbc.com/2026/04/30/openai-trial-elon-musk-sam-altman-live-updates.html</a></li>
+          <li><a href="https://www.cnbc.com/2026/05/02/musk-testimony-dominated-first-week-musk-v-altman-trial-in-oakland.html" target="_blank" rel="noopener">https://www.cnbc.com/2026/05/02/musk-testimony-dominated-first-week-musk-v-altman-trial-in-oakland.html</a></li>
+          <li><a href="https://www.cnbc.com/2026/05/04/anthropic-goldman-blackstone-ai-venture.html" target="_blank" rel="noopener">https://www.cnbc.com/2026/05/04/anthropic-goldman-blackstone-ai-venture.html</a></li>
+          <li><a href="https://www.cnbc.com/2026/05/04/musk-altman-open-ai-settlement-trial-brockman.html" target="_blank" rel="noopener">https://www.cnbc.com/2026/05/04/musk-altman-open-ai-settlement-trial-brockman.html</a></li>
+          <li><a href="https://www.cnbc.com/2026/05/05/ai-oversight-trump-google-microsoft-xai.html" target="_blank" rel="noopener">https://www.cnbc.com/2026/05/05/ai-oversight-trump-google-microsoft-xai.html</a></li>
+          <li><a href="https://www.cnbc.com/2026/05/06/anthropic-spacex-data-center-capacity.html" target="_blank" rel="noopener">https://www.cnbc.com/2026/05/06/anthropic-spacex-data-center-capacity.html</a></li>
+          <li><a href="https://www.cnbc.com/2026/05/07/open-ai-trial-shivon-zilis-musk-altman-tesla-board.html" target="_blank" rel="noopener">https://www.cnbc.com/2026/05/07/open-ai-trial-shivon-zilis-musk-altman-tesla-board.html</a></li>
+          <li><a href="https://www.cnbc.com/2026/05/28/anthropic-open-ai-startup-value.html" target="_blank" rel="noopener">https://www.cnbc.com/2026/05/28/anthropic-open-ai-startup-value.html</a></li>
+          <li><a href="https://www.cnbc.com/2026/06/01/anthropic-ipo-s1-prospectus.html" target="_blank" rel="noopener">https://www.cnbc.com/2026/06/01/anthropic-ipo-s1-prospectus.html</a></li>
+          <li><a href="https://www.cnbc.com/2026/06/02/microsoft-unveils-new-ai-models-lessen-reliance-on-openai-lower-costs.html" target="_blank" rel="noopener">https://www.cnbc.com/2026/06/02/microsoft-unveils-new-ai-models-lessen-reliance-on-openai-lower-costs.html</a></li>
+          <li><a href="https://www.cnbc.com/2026/06/09/anthropic-mythos-claude-fable-5.html" target="_blank" rel="noopener">https://www.cnbc.com/2026/06/09/anthropic-mythos-claude-fable-5.html</a></li>
+          </ul>
+        </div>
+        <div class="reading-group">
+          <h3>techcrunch.com <span class="src">(22)</span></h3>
+          <ul>
+          <li><a href="https://techcrunch.com/2026/03/29/why-openai-really-shut-down-sora/" target="_blank" rel="noopener">https://techcrunch.com/2026/03/29/why-openai-really-shut-down-sora/</a></li>
+          <li><a href="https://techcrunch.com/2026/04/04/anthropic-says-claude-code-subscribers-will-need-to-pay-extra-for-openclaw-support/" target="_blank" rel="noopener">https://techcrunch.com/2026/04/04/anthropic-says-claude-code-subscribers-will-need-to-pay-extra-for-openclaw-support/</a></li>
+          <li><a href="https://techcrunch.com/2026/04/07/anthropic-mythos-ai-model-preview-security/" target="_blank" rel="noopener">https://techcrunch.com/2026/04/07/anthropic-mythos-ai-model-preview-security/</a></li>
+          <li><a href="https://techcrunch.com/2026/04/10/anthropic-temporarily-banned-openclaws-creator-from-accessing-claude/" target="_blank" rel="noopener">https://techcrunch.com/2026/04/10/anthropic-temporarily-banned-openclaws-creator-from-accessing-claude/</a></li>
+          <li><a href="https://techcrunch.com/2026/04/12/at-the-humanx-conference-everyone-was-talking-about-claude/" target="_blank" rel="noopener">https://techcrunch.com/2026/04/12/at-the-humanx-conference-everyone-was-talking-about-claude/</a></li>
+          <li><a href="https://techcrunch.com/2026/04/15/openai-updates-its-agents-sdk-to-help-enterprises-build-safer-more-capable-agents/" target="_blank" rel="noopener">https://techcrunch.com/2026/04/15/openai-updates-its-agents-sdk-to-help-enterprises-build-safer-more-capable-agents/</a></li>
+          <li><a href="https://techcrunch.com/2026/04/17/anthropic-launches-claude-design-a-new-product-for-creating-quick-visuals/" target="_blank" rel="noopener">https://techcrunch.com/2026/04/17/anthropic-launches-claude-design-a-new-product-for-creating-quick-visuals/</a></li>
+          <li><a href="https://techcrunch.com/2026/04/17/sources-cursor-in-talks-to-raise-2b-at-50b-valuation-as-enterprise-growth-surges/" target="_blank" rel="noopener">https://techcrunch.com/2026/04/17/sources-cursor-in-talks-to-raise-2b-at-50b-valuation-as-enterprise-growth-surges/</a></li>
+          <li><a href="https://techcrunch.com/2026/04/20/app-host-vercel-confirms-security-incident-says-customer-data-was-stolen-via-breach-at-context-ai/" target="_blank" rel="noopener">https://techcrunch.com/2026/04/20/app-host-vercel-confirms-security-incident-says-customer-data-was-stolen-via-breach-at-context-ai/</a></li>
+          <li><a href="https://techcrunch.com/2026/04/23/another-customer-of-troubled-startup-delve-suffered-a-big-security-incident/" target="_blank" rel="noopener">https://techcrunch.com/2026/04/23/another-customer-of-troubled-startup-delve-suffered-a-big-security-incident/</a></li>
+          <li><a href="https://techcrunch.com/2026/04/24/google-to-invest-up-to-40b-in-anthropic-in-cash-and-compute/" target="_blank" rel="noopener">https://techcrunch.com/2026/04/24/google-to-invest-up-to-40b-in-anthropic-in-cash-and-compute/</a></li>
+          <li><a href="https://techcrunch.com/2026/04/29/sources-anthropic-could-raise-a-new-50b-round-at-a-valuation-of-900b/" target="_blank" rel="noopener">https://techcrunch.com/2026/04/29/sources-anthropic-could-raise-a-new-50b-round-at-a-valuation-of-900b/</a></li>
+          <li><a href="https://techcrunch.com/2026/04/30/anthropic-potential-900b-valuation-round-could-happen-within-two-weeks/" target="_blank" rel="noopener">https://techcrunch.com/2026/04/30/anthropic-potential-900b-valuation-round-could-happen-within-two-weeks/</a></li>
+          <li><a href="https://techcrunch.com/2026/05/04/anthropic-and-openai-are-both-launching-joint-ventures-for-enterprise-ai-services/" target="_blank" rel="noopener">https://techcrunch.com/2026/05/04/anthropic-and-openai-are-both-launching-joint-ventures-for-enterprise-ai-services/</a></li>
+          <li><a href="https://techcrunch.com/2026/05/04/elon-musk-sent-ominous-texts-to-greg-brockman-sam-altman-after-asking-for-a-settlement-openai-claims/" target="_blank" rel="noopener">https://techcrunch.com/2026/05/04/elon-musk-sent-ominous-texts-to-greg-brockman-sam-altman-after-asking-for-a-settlement-openai-claims/</a></li>
+          <li><a href="https://techcrunch.com/2026/05/04/sierra-raises-950m-as-the-race-to-own-enterprise-ai-gets-serious/" target="_blank" rel="noopener">https://techcrunch.com/2026/05/04/sierra-raises-950m-as-the-race-to-own-enterprise-ai-gets-serious/</a></li>
+          <li><a href="https://techcrunch.com/2026/05/05/openai-releases-gpt-5-5-instant-a-new-default-model-for-chatgpt/" target="_blank" rel="noopener">https://techcrunch.com/2026/05/05/openai-releases-gpt-5-5-instant-a-new-default-model-for-chatgpt/</a></li>
+          <li><a href="https://techcrunch.com/2026/05/07/openai-introduces-new-trusted-contact-safeguard-for-cases-of-possible-self-harm/" target="_blank" rel="noopener">https://techcrunch.com/2026/05/07/openai-introduces-new-trusted-contact-safeguard-for-cases-of-possible-self-harm/</a></li>
+          <li><a href="https://techcrunch.com/2026/05/12/the-ai-legal-services-industry-is-heating-up-anthropic-is-getting-in-on-the-action/" target="_blank" rel="noopener">https://techcrunch.com/2026/05/12/the-ai-legal-services-industry-is-heating-up-anthropic-is-getting-in-on-the-action/</a></li>
+          <li><a href="https://techcrunch.com/2026/05/19/how-to-use-googles-new-ai-agents-to-go-beyond-your-standard-searches/" target="_blank" rel="noopener">https://techcrunch.com/2026/05/19/how-to-use-googles-new-ai-agents-to-go-beyond-your-standard-searches/</a></li>
+          <li><a href="https://techcrunch.com/2026/06/02/anthropic-scales-claude-mythos-to-critical-infrastructure-in-15-countries/" target="_blank" rel="noopener">https://techcrunch.com/2026/06/02/anthropic-scales-claude-mythos-to-critical-infrastructure-in-15-countries/</a></li>
+          <li><a href="https://techcrunch.com/2026/06/09/anthropics-claude-fable-5-is-a-version-of-mythos-the-public-can-access-today/" target="_blank" rel="noopener">https://techcrunch.com/2026/06/09/anthropics-claude-fable-5-is-a-version-of-mythos-the-public-can-access-today/</a></li>
+          </ul>
+        </div>
+        <div class="reading-group">
+          <h3>bloomberg.com <span class="src">(15)</span></h3>
+          <ul>
+          <li><a href="https://www.bloomberg.com/news/articles/2026-04-06/broadcom-confirms-deal-to-ship-google-tpu-chips-to-anthropic" target="_blank" rel="noopener">https://www.bloomberg.com/news/articles/2026-04-06/broadcom-confirms-deal-to-ship-google-tpu-chips-to-anthropic</a></li>
+          <li><a href="https://www.bloomberg.com/news/articles/2026-04-06/openai-anthropic-google-unite-to-combat-model-copying-in-china" target="_blank" rel="noopener">https://www.bloomberg.com/news/articles/2026-04-06/openai-anthropic-google-unite-to-combat-model-copying-in-china</a></li>
+          <li><a href="https://www.bloomberg.com/news/articles/2026-04-10/anthropic-agrees-to-rent-coreweave-ai-capacity-to-power-claude" target="_blank" rel="noopener">https://www.bloomberg.com/news/articles/2026-04-10/anthropic-agrees-to-rent-coreweave-ai-capacity-to-power-claude</a></li>
+          <li><a href="https://www.bloomberg.com/news/articles/2026-04-14/novo-taps-openai-to-speed-development-of-new-obesity-drugs" target="_blank" rel="noopener">https://www.bloomberg.com/news/articles/2026-04-14/novo-taps-openai-to-speed-development-of-new-obesity-drugs</a></li>
+          <li><a href="https://www.bloomberg.com/news/articles/2026-04-22/google-launches-750-million-fund-for-consultants-to-adopt-ai" target="_blank" rel="noopener">https://www.bloomberg.com/news/articles/2026-04-22/google-launches-750-million-fund-for-consultants-to-adopt-ai</a></li>
+          <li><a href="https://www.bloomberg.com/news/articles/2026-04-24/deepseek-unveils-newest-flagship-a-year-after-ai-breakthrough" target="_blank" rel="noopener">https://www.bloomberg.com/news/articles/2026-04-24/deepseek-unveils-newest-flagship-a-year-after-ai-breakthrough</a></li>
+          <li><a href="https://www.bloomberg.com/news/articles/2026-04-24/google-plans-to-invest-up-to-40-billion-in-anthropic" target="_blank" rel="noopener">https://www.bloomberg.com/news/articles/2026-04-24/google-plans-to-invest-up-to-40-billion-in-anthropic</a></li>
+          <li><a href="https://www.bloomberg.com/news/articles/2026-04-27/microsoft-to-stop-sharing-revenue-with-main-ai-partner-openai" target="_blank" rel="noopener">https://www.bloomberg.com/news/articles/2026-04-27/microsoft-to-stop-sharing-revenue-with-main-ai-partner-openai</a></li>
+          <li><a href="https://www.bloomberg.com/news/articles/2026-04-29/anthropic-considering-funding-offers-at-over-900-billion-value" target="_blank" rel="noopener">https://www.bloomberg.com/news/articles/2026-04-29/anthropic-considering-funding-offers-at-over-900-billion-value</a></li>
+          <li><a href="https://www.bloomberg.com/news/articles/2026-05-04/goldman-blackstone-partner-with-anthropic-on-ai-services-firm" target="_blank" rel="noopener">https://www.bloomberg.com/news/articles/2026-05-04/goldman-blackstone-partner-with-anthropic-on-ai-services-firm</a></li>
+          <li><a href="https://www.bloomberg.com/news/articles/2026-05-04/openai-finalizes-10-billion-joint-venture-with-pe-firms-to-deploy-ai" target="_blank" rel="noopener">https://www.bloomberg.com/news/articles/2026-05-04/openai-finalizes-10-billion-joint-venture-with-pe-firms-to-deploy-ai</a></li>
+          <li><a href="https://www.bloomberg.com/news/articles/2026-05-05/anthropic-unveils-ai-agents-to-field-financial-services-tasks" target="_blank" rel="noopener">https://www.bloomberg.com/news/articles/2026-05-05/anthropic-unveils-ai-agents-to-field-financial-services-tasks</a></li>
+          <li><a href="https://www.bloomberg.com/news/articles/2026-05-06/anthropic-inks-computing-deal-with-spacex-to-meet-ai-demand" target="_blank" rel="noopener">https://www.bloomberg.com/news/articles/2026-05-06/anthropic-inks-computing-deal-with-spacex-to-meet-ai-demand</a></li>
+          <li><a href="https://www.bloomberg.com/news/articles/2026-05-12/anthropic-in-talks-to-raise-30-billion-at-900-billion-valuation" target="_blank" rel="noopener">https://www.bloomberg.com/news/articles/2026-05-12/anthropic-in-talks-to-raise-30-billion-at-900-billion-valuation</a></li>
+          <li><a href="https://www.bloomberg.com/news/newsletters/2026-04-09/anthropic-dominates-the-discussion-at-the-humanx-ai-conference" target="_blank" rel="noopener">https://www.bloomberg.com/news/newsletters/2026-04-09/anthropic-dominates-the-discussion-at-the-humanx-ai-conference</a></li>
+          </ul>
+        </div>
+        <div class="reading-group">
+          <h3>openai.com <span class="src">(10)</span></h3>
+          <ul>
+          <li><a href="https://openai.com/index/accelerating-the-next-phase-ai/" target="_blank" rel="noopener">https://openai.com/index/accelerating-the-next-phase-ai/</a></li>
+          <li><a href="https://openai.com/index/advancing-voice-intelligence-with-new-models-in-the-api/" target="_blank" rel="noopener">https://openai.com/index/advancing-voice-intelligence-with-new-models-in-the-api/</a></li>
+          <li><a href="https://openai.com/index/agentic-ai-foundation/" target="_blank" rel="noopener">https://openai.com/index/agentic-ai-foundation/</a></li>
+          <li><a href="https://openai.com/index/introducing-chatgpt-futures-class-of-2026/" target="_blank" rel="noopener">https://openai.com/index/introducing-chatgpt-futures-class-of-2026/</a></li>
+          <li><a href="https://openai.com/index/introducing-gpt-5-5/" target="_blank" rel="noopener">https://openai.com/index/introducing-gpt-5-5/</a></li>
+          <li><a href="https://openai.com/index/introducing-trusted-contact-in-chatgpt/" target="_blank" rel="noopener">https://openai.com/index/introducing-trusted-contact-in-chatgpt/</a></li>
+          <li><a href="https://openai.com/index/next-phase-of-enterprise-ai/" target="_blank" rel="noopener">https://openai.com/index/next-phase-of-enterprise-ai/</a></li>
+          <li><a href="https://openai.com/index/openai-launches-the-deployment-company/" target="_blank" rel="noopener">https://openai.com/index/openai-launches-the-deployment-company/</a></li>
+          <li><a href="https://openai.com/index/the-next-evolution-of-the-agents-sdk/" target="_blank" rel="noopener">https://openai.com/index/the-next-evolution-of-the-agents-sdk/</a></li>
+          <li><a href="https://openai.com/news/" target="_blank" rel="noopener">https://openai.com/news/</a></li>
+          </ul>
+        </div>
+        <div class="reading-group">
+          <h3>pymnts.com <span class="src">(8)</span></h3>
+          <ul>
+          <li><a href="https://www.pymnts.com/artificial-intelligence-2/2026/anthropic-briefs-eu-regulators-on-mythos-cybersecurity-concerns" target="_blank" rel="noopener">https://www.pymnts.com/artificial-intelligence-2/2026/anthropic-briefs-eu-regulators-on-mythos-cybersecurity-concerns</a></li>
+          <li><a href="https://www.pymnts.com/artificial-intelligence-2/2026/anthropic-hits-30-billion-run-rate-as-enterprise-demand-accelerates/" target="_blank" rel="noopener">https://www.pymnts.com/artificial-intelligence-2/2026/anthropic-hits-30-billion-run-rate-as-enterprise-demand-accelerates/</a></li>
+          <li><a href="https://www.pymnts.com/artificial-intelligence-2/2026/anthropic-updates-partner-program-as-enterprise-ai-adoption-grows/" target="_blank" rel="noopener">https://www.pymnts.com/artificial-intelligence-2/2026/anthropic-updates-partner-program-as-enterprise-ai-adoption-grows/</a></li>
+          <li><a href="https://www.pymnts.com/artificial-intelligence-2/2026/google-brings-all-enterprise-ai-agent-tools-under-one-roof/" target="_blank" rel="noopener">https://www.pymnts.com/artificial-intelligence-2/2026/google-brings-all-enterprise-ai-agent-tools-under-one-roof/</a></li>
+          <li><a href="https://www.pymnts.com/artificial-intelligence-2/2026/microsoft-tests-mythos-to-identify-and-mitigate-vulnerabilities/" target="_blank" rel="noopener">https://www.pymnts.com/artificial-intelligence-2/2026/microsoft-tests-mythos-to-identify-and-mitigate-vulnerabilities/</a></li>
+          <li><a href="https://www.pymnts.com/artificial-intelligence-2/2026/moodys-integrates-ai-agents-with-anthropics-claude/" target="_blank" rel="noopener">https://www.pymnts.com/artificial-intelligence-2/2026/moodys-integrates-ai-agents-with-anthropics-claude/</a></li>
+          <li><a href="https://www.pymnts.com/news/artificial-intelligence/2026/anthropic-valuation-could-eclipse-openai-50-billion-dollar-funding-round/" target="_blank" rel="noopener">https://www.pymnts.com/news/artificial-intelligence/2026/anthropic-valuation-could-eclipse-openai-50-billion-dollar-funding-round/</a></li>
+          <li><a href="https://www.pymnts.com/news/artificial-intelligence/2026/openai-launches-4-billion-dollar-company-accelerate-enterprise-ai-adoption/" target="_blank" rel="noopener">https://www.pymnts.com/news/artificial-intelligence/2026/openai-launches-4-billion-dollar-company-accelerate-enterprise-ai-adoption/</a></li>
+          </ul>
+        </div>
+        <div class="reading-group">
+          <h3>venturebeat.com <span class="src">(8)</span></h3>
+          <ul>
+          <li><a href="https://venturebeat.com/orchestration/openais-codex-update-lets-agents-build-interactive-enterprise-workspaces-via-sites-and-role-specific-plugins" target="_blank" rel="noopener">https://venturebeat.com/orchestration/openais-codex-update-lets-agents-build-interactive-enterprise-workspaces-via-sites-and-role-specific-plugins</a></li>
+          <li><a href="https://venturebeat.com/security/microsoft-salesforce-copilot-agentforce-prompt-injection-cve-agent-remediation-playbook" target="_blank" rel="noopener">https://venturebeat.com/security/microsoft-salesforce-copilot-agentforce-prompt-injection-cve-agent-remediation-playbook</a></li>
+          <li><a href="https://venturebeat.com/technology/anthropic-brings-mythos-to-the-masses-with-claude-fable-5-its-most-powerful-generally-available-model-ever" target="_blank" rel="noopener">https://venturebeat.com/technology/anthropic-brings-mythos-to-the-masses-with-claude-fable-5-its-most-powerful-generally-available-model-ever</a></li>
+          <li><a href="https://venturebeat.com/technology/anthropic-cuts-off-the-ability-to-use-claude-subscriptions-with-openclaw-and" target="_blank" rel="noopener">https://venturebeat.com/technology/anthropic-cuts-off-the-ability-to-use-claude-subscriptions-with-openclaw-and</a></li>
+          <li><a href="https://venturebeat.com/technology/claude-codes-source-code-appears-to-have-leaked-heres-what-we-know" target="_blank" rel="noopener">https://venturebeat.com/technology/claude-codes-source-code-appears-to-have-leaked-heres-what-we-know</a></li>
+          <li><a href="https://venturebeat.com/technology/is-anthropic-nerfing-claude-users-increasingly-report-performance" target="_blank" rel="noopener">https://venturebeat.com/technology/is-anthropic-nerfing-claude-users-increasingly-report-performance</a></li>
+          <li><a href="https://venturebeat.com/technology/microsoft-launches-mai-image-2-efficient-a-cheaper-and-faster-ai-image-model" target="_blank" rel="noopener">https://venturebeat.com/technology/microsoft-launches-mai-image-2-efficient-a-cheaper-and-faster-ai-image-model</a></li>
+          <li><a href="https://venturebeat.com/technology/nvidia-launches-enterprise-ai-agent-platform-with-adobe-salesforce-sap-among" target="_blank" rel="noopener">https://venturebeat.com/technology/nvidia-launches-enterprise-ai-agent-platform-with-adobe-salesforce-sap-among</a></li>
+          </ul>
+        </div>
+        <div class="reading-group">
+          <h3>aws.amazon.com <span class="src">(7)</span></h3>
+          <ul>
+          <li><a href="https://aws.amazon.com/about-aws/whats-new/2026/04/amazon-bedrock-claude-mythos/" target="_blank" rel="noopener">https://aws.amazon.com/about-aws/whats-new/2026/04/amazon-bedrock-claude-mythos/</a></li>
+          <li><a href="https://aws.amazon.com/about-aws/whats-new/2026/05/aws-mcp-server/" target="_blank" rel="noopener">https://aws.amazon.com/about-aws/whats-new/2026/05/aws-mcp-server/</a></li>
+          <li><a href="https://aws.amazon.com/about-aws/whats-new/2026/05/aws-sap-mcp-amazon-bedrock/" target="_blank" rel="noopener">https://aws.amazon.com/about-aws/whats-new/2026/05/aws-sap-mcp-amazon-bedrock/</a></li>
+          <li><a href="https://aws.amazon.com/about-aws/whats-new/2026/05/claude-platform-aws/" target="_blank" rel="noopener">https://aws.amazon.com/about-aws/whats-new/2026/05/claude-platform-aws/</a></li>
+          <li><a href="https://aws.amazon.com/blogs/aws/anthropic-claude-fable-5-on-aws-mythos-class-capabilities-with-built-in-safeguards-now-available/" target="_blank" rel="noopener">https://aws.amazon.com/blogs/aws/anthropic-claude-fable-5-on-aws-mythos-class-capabilities-with-built-in-safeguards-now-available/</a></li>
+          <li><a href="https://aws.amazon.com/blogs/aws/the-aws-mcp-server-is-now-generally-available/" target="_blank" rel="noopener">https://aws.amazon.com/blogs/aws/the-aws-mcp-server-is-now-generally-available/</a></li>
+          <li><a href="https://aws.amazon.com/blogs/machine-learning/introducing-claude-platform-on-aws-anthropics-native-platform-through-your-aws-account/" target="_blank" rel="noopener">https://aws.amazon.com/blogs/machine-learning/introducing-claude-platform-on-aws-anthropics-native-platform-through-your-aws-account/</a></li>
+          </ul>
+        </div>
+        <div class="reading-group">
+          <h3>siliconangle.com <span class="src">(7)</span></h3>
+          <ul>
+          <li><a href="https://siliconangle.com/2026/04/07/anthropic-debuts-project-glasswing-initiative-will-leverage-powerful-mythos-model-reinforce-software-security/" target="_blank" rel="noopener">https://siliconangle.com/2026/04/07/anthropic-debuts-project-glasswing-initiative-will-leverage-powerful-mythos-model-reinforce-software-security/</a></li>
+          <li><a href="https://siliconangle.com/2026/04/08/anthropic-launches-claude-managed-agents-speed-ai-agent-development/" target="_blank" rel="noopener">https://siliconangle.com/2026/04/08/anthropic-launches-claude-managed-agents-speed-ai-agent-development/</a></li>
+          <li><a href="https://siliconangle.com/2026/04/09/anthropic-openai-target-big-businesses-enterprise-grade-controls-lower-pricing/" target="_blank" rel="noopener">https://siliconangle.com/2026/04/09/anthropic-openai-target-big-businesses-enterprise-grade-controls-lower-pricing/</a></li>
+          <li><a href="https://siliconangle.com/2026/04/10/coreweave-inks-multiyear-cloud-deal-anthropic/" target="_blank" rel="noopener">https://siliconangle.com/2026/04/10/coreweave-inks-multiyear-cloud-deal-anthropic/</a></li>
+          <li><a href="https://siliconangle.com/2026/04/27/openai-microsoft-revise-terms-ai-partnership/" target="_blank" rel="noopener">https://siliconangle.com/2026/04/27/openai-microsoft-revise-terms-ai-partnership/</a></li>
+          <li><a href="https://siliconangle.com/2026/04/28/google-anthropic-partnership-stakes-claim-trust-ai-googlecloudnext/" target="_blank" rel="noopener">https://siliconangle.com/2026/04/28/google-anthropic-partnership-stakes-claim-trust-ai-googlecloudnext/</a></li>
+          <li><a href="https://siliconangle.com/2026/04/30/anthropic-announces-claude-security-public-beta-find-fix-software-vulnerabilities/" target="_blank" rel="noopener">https://siliconangle.com/2026/04/30/anthropic-announces-claude-security-public-beta-find-fix-software-vulnerabilities/</a></li>
+          </ul>
+        </div>
+        <div class="reading-group">
+          <h3>thenextweb.com <span class="src">(7)</span></h3>
+          <ul>
+          <li><a href="https://thenextweb.com/news/anthropic-900-billion-valuation-funding-round" target="_blank" rel="noopener">https://thenextweb.com/news/anthropic-900-billion-valuation-funding-round</a></li>
+          <li><a href="https://thenextweb.com/news/anthropic-claude-corps-150m-nonprofit-fellowship" target="_blank" rel="noopener">https://thenextweb.com/news/anthropic-claude-corps-150m-nonprofit-fellowship</a></li>
+          <li><a href="https://thenextweb.com/news/anthropic-openclaw-claude-subscription-ban-cost" target="_blank" rel="noopener">https://thenextweb.com/news/anthropic-openclaw-claude-subscription-ban-cost</a></li>
+          <li><a href="https://thenextweb.com/news/coreweave-has-agreed-a-multi-year-gpu-cloud-deal-with-anthropic-to-power-claude-at-production-scale-its-second-major-ai-infrastructure-announcement-in-48-hours" target="_blank" rel="noopener">https://thenextweb.com/news/coreweave-has-agreed-a-multi-year-gpu-cloud-deal-with-anthropic-to-power-claude-at-production-scale-its-second-major-ai-infrastructure-announcement-in-48-hours</a></li>
+          <li><a href="https://thenextweb.com/news/google-cloud-next-ai-agents-agentic-era" target="_blank" rel="noopener">https://thenextweb.com/news/google-cloud-next-ai-agents-agentic-era</a></li>
+          <li><a href="https://thenextweb.com/news/openai-deployco-finalized-10-billion-joint-venture" target="_blank" rel="noopener">https://thenextweb.com/news/openai-deployco-finalized-10-billion-joint-venture</a></li>
+          <li><a href="https://thenextweb.com/news/sap-autonomous-enterprise-ai-agents-sapphire" target="_blank" rel="noopener">https://thenextweb.com/news/sap-autonomous-enterprise-ai-agents-sapphire</a></li>
+          </ul>
+        </div>
+        <div class="reading-group">
+          <h3>fortune.com <span class="src">(6)</span></h3>
+          <ul>
+          <li><a href="https://fortune.com/2026/04/02/mercor-ai-startup-security-incident-10-billion/" target="_blank" rel="noopener">https://fortune.com/2026/04/02/mercor-ai-startup-security-incident-10-billion/</a></li>
+          <li><a href="https://fortune.com/2026/04/07/anthropic-claude-mythos-model-project-glasswing-cybersecurity/" target="_blank" rel="noopener">https://fortune.com/2026/04/07/anthropic-claude-mythos-model-project-glasswing-cybersecurity/</a></li>
+          <li><a href="https://fortune.com/2026/04/14/anthropic-claude-performance-decline-user-complaints-backlash-lack-of-transparency-accusations-compute-crunch/" target="_blank" rel="noopener">https://fortune.com/2026/04/14/anthropic-claude-performance-decline-user-complaints-backlash-lack-of-transparency-accusations-compute-crunch/</a></li>
+          <li><a href="https://fortune.com/2026/05/04/anthropic-claude-consulting-industry-joint-venture-blackstone-goldman-sachs/" target="_blank" rel="noopener">https://fortune.com/2026/05/04/anthropic-claude-consulting-industry-joint-venture-blackstone-goldman-sachs/</a></li>
+          <li><a href="https://fortune.com/2026/05/05/anthropic-wall-street-financial-services-agents-jamie-dimon/" target="_blank" rel="noopener">https://fortune.com/2026/05/05/anthropic-wall-street-financial-services-agents-jamie-dimon/</a></li>
+          <li><a href="https://fortune.com/2026/05/12/anthropic-legal-plug-in-release-claude-cowork-big-law/" target="_blank" rel="noopener">https://fortune.com/2026/05/12/anthropic-legal-plug-in-release-claude-cowork-big-law/</a></li>
+          </ul>
+        </div>
+        <div class="reading-group">
+          <h3>finance.yahoo.com <span class="src">(5)</span></h3>
+          <ul>
+          <li><a href="https://finance.yahoo.com/markets/crypto/articles/circle-gives-ai-agents-usdc-211546876.html" target="_blank" rel="noopener">https://finance.yahoo.com/markets/crypto/articles/circle-gives-ai-agents-usdc-211546876.html</a></li>
+          <li><a href="https://finance.yahoo.com/markets/stocks/articles/microsoft-q3-2026-earnings-beat-205308206.html" target="_blank" rel="noopener">https://finance.yahoo.com/markets/stocks/articles/microsoft-q3-2026-earnings-beat-205308206.html</a></li>
+          <li><a href="https://finance.yahoo.com/news/enterprise-llm-spend-reaches-8-130000140.html" target="_blank" rel="noopener">https://finance.yahoo.com/news/enterprise-llm-spend-reaches-8-130000140.html</a></li>
+          <li><a href="https://finance.yahoo.com/sectors/technology/articles/affinity-launches-model-context-protocol-130500144.html" target="_blank" rel="noopener">https://finance.yahoo.com/sectors/technology/articles/affinity-launches-model-context-protocol-130500144.html</a></li>
+          <li><a href="https://finance.yahoo.com/sectors/technology/articles/openai-secures-4-billion-joint-134629932.html" target="_blank" rel="noopener">https://finance.yahoo.com/sectors/technology/articles/openai-secures-4-billion-joint-134629932.html</a></li>
+          </ul>
+        </div>
+        <div class="reading-group">
+          <h3>globenewswire.com <span class="src">(5)</span></h3>
+          <ul>
+          <li><a href="https://www.globenewswire.com/news-release/2026/04/08/3269912/0/en/Lucidworks-Launches-Model-Context-Protocol-to-Reduce-AI-Agent-Integration-Timelines-by-Up-to-10x.html" target="_blank" rel="noopener">https://www.globenewswire.com/news-release/2026/04/08/3269912/0/en/Lucidworks-Launches-Model-Context-Protocol-to-Reduce-AI-Agent-Integration-Timelines-by-Up-to-10x.html</a></li>
+          <li><a href="https://www.globenewswire.com/news-release/2026/04/08/3270430/0/en/" target="_blank" rel="noopener">https://www.globenewswire.com/news-release/2026/04/08/3270430/0/en/</a></li>
+          <li><a href="https://www.globenewswire.com/news-release/2026/04/14/3273010/0/en/Novo-Nordisk-and-OpenAI-partner-to-transform-how-medicines-are-discovered-and-delivered.html" target="_blank" rel="noopener">https://www.globenewswire.com/news-release/2026/04/14/3273010/0/en/Novo-Nordisk-and-OpenAI-partner-to-transform-how-medicines-are-discovered-and-delivered.html</a></li>
+          <li><a href="https://www.globenewswire.com/news-release/2026/05/04/3286889/0/en/Jama-Software-Launches-Model-Context-Protocol-MCP-Server.html" target="_blank" rel="noopener">https://www.globenewswire.com/news-release/2026/05/04/3286889/0/en/Jama-Software-Launches-Model-Context-Protocol-MCP-Server.html</a></li>
+          <li><a href="https://www.globenewswire.com/news-release/2026/05/06/3288916/0/en/Coder-Sets-a-New-Standard-for-AI-Coding-with-Self-Hosted-AI-Model-Agnostic-Coder-Agents.html" target="_blank" rel="noopener">https://www.globenewswire.com/news-release/2026/05/06/3288916/0/en/Coder-Sets-a-New-Standard-for-AI-Coding-with-Self-Hosted-AI-Model-Agnostic-Coder-Agents.html</a></li>
+          </ul>
+        </div>
+        <div class="reading-group">
+          <h3>helpnetsecurity.com <span class="src">(5)</span></h3>
+          <ul>
+          <li><a href="https://www.helpnetsecurity.com/2026/03/03/enterprise-ai-agent-security-2026/" target="_blank" rel="noopener">https://www.helpnetsecurity.com/2026/03/03/enterprise-ai-agent-security-2026/</a></li>
+          <li><a href="https://www.helpnetsecurity.com/2026/04/03/microsoft-ai-agent-governance-toolkit/" target="_blank" rel="noopener">https://www.helpnetsecurity.com/2026/04/03/microsoft-ai-agent-governance-toolkit/</a></li>
+          <li><a href="https://www.helpnetsecurity.com/2026/04/09/claude-managed-agents-bring-execution-and-control-to-ai-agent-workflows/" target="_blank" rel="noopener">https://www.helpnetsecurity.com/2026/04/09/claude-managed-agents-bring-execution-and-control-to-ai-agent-workflows/</a></li>
+          <li><a href="https://www.helpnetsecurity.com/2026/05/04/anthropic-claude-security-public-beta/" target="_blank" rel="noopener">https://www.helpnetsecurity.com/2026/05/04/anthropic-claude-security-public-beta/</a></li>
+          <li><a href="https://www.helpnetsecurity.com/2026/05/08/snyk-ai-security-platform/" target="_blank" rel="noopener">https://www.helpnetsecurity.com/2026/05/08/snyk-ai-security-platform/</a></li>
+          </ul>
+        </div>
+        <div class="reading-group">
+          <h3>microsoft.com <span class="src">(5)</span></h3>
+          <ul>
+          <li><a href="https://www.microsoft.com/en-us/investor/earnings/fy-2026-q3/press-release-webcast" target="_blank" rel="noopener">https://www.microsoft.com/en-us/investor/earnings/fy-2026-q3/press-release-webcast</a></li>
+          <li><a href="https://www.microsoft.com/en-us/investor/events/fy-2026/earnings-fy-2026-q3" target="_blank" rel="noopener">https://www.microsoft.com/en-us/investor/events/fy-2026/earnings-fy-2026-q3</a></li>
+          <li><a href="https://www.microsoft.com/en-us/microsoft-agent-365" target="_blank" rel="noopener">https://www.microsoft.com/en-us/microsoft-agent-365</a></li>
+          <li><a href="https://www.microsoft.com/en-us/research/wp-content/uploads/2026/05/Microsoft-AI-Diffusion-Report-2026-Q1.pdf" target="_blank" rel="noopener">https://www.microsoft.com/en-us/research/wp-content/uploads/2026/05/Microsoft-AI-Diffusion-Report-2026-Q1.pdf</a></li>
+          <li><a href="https://www.microsoft.com/en-us/security/blog/2026/05/01/microsoft-agent-365-now-generally-available-expands-capabilities-and-integrations/" target="_blank" rel="noopener">https://www.microsoft.com/en-us/security/blog/2026/05/01/microsoft-agent-365-now-generally-available-expands-capabilities-and-integrations/</a></li>
+          </ul>
+        </div>
+        <div class="reading-group">
+          <h3>axios.com <span class="src">(4)</span></h3>
+          <ul>
+          <li><a href="https://www.axios.com/2026/04/06/anthropic-openclaw-subscription-openai" target="_blank" rel="noopener">https://www.axios.com/2026/04/06/anthropic-openclaw-subscription-openai</a></li>
+          <li><a href="https://www.axios.com/2026/04/16/anthropic-claude-power-user-complaints" target="_blank" rel="noopener">https://www.axios.com/2026/04/16/anthropic-claude-power-user-complaints</a></li>
+          <li><a href="https://www.axios.com/2026/04/17/anthropic-trump-administration-mythos" target="_blank" rel="noopener">https://www.axios.com/2026/04/17/anthropic-trump-administration-mythos</a></li>
+          <li><a href="https://www.axios.com/2026/05/11/openai-deployco-private-equity" target="_blank" rel="noopener">https://www.axios.com/2026/05/11/openai-deployco-private-equity</a></li>
+          </ul>
+        </div>
+        <div class="reading-group">
+          <h3>simonwillison.net <span class="src">(4)</span></h3>
+          <ul>
+          <li><a href="https://simonwillison.net/2026/Apr/22/claude-code-confusion/" target="_blank" rel="noopener">https://simonwillison.net/2026/Apr/22/claude-code-confusion/</a></li>
+          <li><a href="https://simonwillison.net/2026/Apr/24/deepseek-v4/" target="_blank" rel="noopener">https://simonwillison.net/2026/Apr/24/deepseek-v4/</a></li>
+          <li><a href="https://simonwillison.net/2026/May/29/anthropic/" target="_blank" rel="noopener">https://simonwillison.net/2026/May/29/anthropic/</a></li>
+          <li><a href="https://simonwillison.net/2026/May/6/code-w-claude-2026/" target="_blank" rel="noopener">https://simonwillison.net/2026/May/6/code-w-claude-2026/</a></li>
+          </ul>
+        </div>
+        <div class="reading-group">
+          <h3>theregister.com <span class="src">(4)</span></h3>
+          <ul>
+          <li><a href="https://www.theregister.com/2026/04/06/anthropic_closes_door_on_subscription/" target="_blank" rel="noopener">https://www.theregister.com/2026/04/06/anthropic_closes_door_on_subscription/</a></li>
+          <li><a href="https://www.theregister.com/2026/04/07/broadcom_google_chip_deal_anthropic_customer/" target="_blank" rel="noopener">https://www.theregister.com/2026/04/07/broadcom_google_chip_deal_anthropic_customer/</a></li>
+          <li><a href="https://www.theregister.com/ai-and-ml/2026/06/11/anthropic-hires-1000-fellows-to-push-claude-into-nonprofits/" target="_blank" rel="noopener">https://www.theregister.com/ai-and-ml/2026/06/11/anthropic-hires-1000-fellows-to-push-claude-into-nonprofits/</a></li>
+          <li><a href="https://www.theregister.com/ai-ml/2026/05/11/openai-buys-ai-consultancy-to-sell-enterprises-on-its-models/5238213" target="_blank" rel="noopener">https://www.theregister.com/ai-ml/2026/05/11/openai-buys-ai-consultancy-to-sell-enterprises-on-its-models/5238213</a></li>
+          </ul>
+        </div>
+        <div class="reading-group">
+          <h3>Additional cited sources, A&ndash;Z <span class="src">(322)</span></h3>
+          <ul>
+          <li><a href="https://247wallst.com/investing/2026/04/23/microsoft-falls-4-as-110-billion-ai-bet-forces-historic-employee-buyout-what-investors-need-to-know/" target="_blank" rel="noopener">https://247wallst.com/investing/2026/04/23/microsoft-falls-4-as-110-billion-ai-bet-forces-historic-employee-buyout-what-investors-need-to-know/</a></li>
+          <li><a href="https://9to5google.com/2026/05/19/google-io-2026-news/" target="_blank" rel="noopener">https://9to5google.com/2026/05/19/google-io-2026-news/</a></li>
+          <li><a href="https://9to5mac.com/2026/04/07/anthropic-unveils-powerful-mythos-ai-model-working-with-apple-in-cybersecurity-initiative/" target="_blank" rel="noopener">https://9to5mac.com/2026/04/07/anthropic-unveils-powerful-mythos-ai-model-working-with-apple-in-cybersecurity-initiative/</a></li>
+          <li><a href="https://9to5mac.com/2026/04/09/anthropic-scales-up-with-enterprise-features-for-claude-cowork-and-managed-agents/" target="_blank" rel="noopener">https://9to5mac.com/2026/04/09/anthropic-scales-up-with-enterprise-features-for-claude-cowork-and-managed-agents/</a></li>
+          <li><a href="https://9to5mac.com/2026/04/22/google-teases-gemini-powered-siri-upgrade-during-cloud-next-keynote/" target="_blank" rel="noopener">https://9to5mac.com/2026/04/22/google-teases-gemini-powered-siri-upgrade-during-cloud-next-keynote/</a></li>
+          <li><a href="https://abc7news.com/live-updates/elon-musk-sam-altman-live-updates-trial-enters-2nd-week-focus-shifting-openai-president-greg-brockman/19036397/" target="_blank" rel="noopener">https://abc7news.com/live-updates/elon-musk-sam-altman-live-updates-trial-enters-2nd-week-focus-shifting-openai-president-greg-brockman/19036397/</a></li>
+          <li><a href="https://abc7news.com/live-updates/elon-musk-sam-altman-live-updates-week-1-trial-could-alter-direction-artificial-intelligence/18968485/" target="_blank" rel="noopener">https://abc7news.com/live-updates/elon-musk-sam-altman-live-updates-week-1-trial-could-alter-direction-artificial-intelligence/18968485/</a></li>
+          <li><a href="https://agatsoftware.com/blog/ai-agent-security-enterprise-2026/" target="_blank" rel="noopener">https://agatsoftware.com/blog/ai-agent-security-enterprise-2026/</a></li>
+          <li><a href="https://analyticsindiamag.com/ai-news/deepseek-releases-v4-pro-challenging-openai-anthropic-on-key-benchmarks" target="_blank" rel="noopener">https://analyticsindiamag.com/ai-news/deepseek-releases-v4-pro-challenging-openai-anthropic-on-key-benchmarks</a></li>
+          <li><a href="https://api-docs.deepseek.com/news/news260424" target="_blank" rel="noopener">https://api-docs.deepseek.com/news/news260424</a></li>
+          <li><a href="https://applyingai.com/2026/03/openai-foundations-1-billion-grant-pledge-a-new-paradigm-for-inclusive-ai-advancement/" target="_blank" rel="noopener">https://applyingai.com/2026/03/openai-foundations-1-billion-grant-pledge-a-new-paradigm-for-inclusive-ai-advancement/</a></li>
+          <li><a href="https://arnav.au/2026/05/01/openai-gpt-5-5-cyber-rollout-in-2026/" target="_blank" rel="noopener">https://arnav.au/2026/05/01/openai-gpt-5-5-cyber-rollout-in-2026/</a></li>
+          <li><a href="https://artificialintelligenceact.eu/implementation-timeline/" target="_blank" rel="noopener">https://artificialintelligenceact.eu/implementation-timeline/</a></li>
+          <li><a href="https://benchlm.ai/benchmarks/swePro" target="_blank" rel="noopener">https://benchlm.ai/benchmarks/swePro</a></li>
+          <li><a href="https://bigid.com/blog/complying-with-the-doj-rule-on-cross-border-data-transfers/" target="_blank" rel="noopener">https://bigid.com/blog/complying-with-the-doj-rule-on-cross-border-data-transfers/</a></li>
+          <li><a href="https://blockchain.news/news/anthropic-claude-cowork-enterprise-rollout-april-2026" target="_blank" rel="noopener">https://blockchain.news/news/anthropic-claude-cowork-enterprise-rollout-april-2026</a></li>
+          <li><a href="https://blogs.microsoft.com/blog/2026/03/09/introducing-the-first-frontier-suite-built-on-intelligence-trust/" target="_blank" rel="noopener">https://blogs.microsoft.com/blog/2026/03/09/introducing-the-first-frontier-suite-built-on-intelligence-trust/</a></li>
+          <li><a href="https://blogs.microsoft.com/blog/2026/04/27/the-next-phase-of-the-microsoft-openai-partnership/" target="_blank" rel="noopener">https://blogs.microsoft.com/blog/2026/04/27/the-next-phase-of-the-microsoft-openai-partnership/</a></li>
+          <li><a href="https://blogs.microsoft.com/on-the-issues/2026/05/07/the-state-of-global-ai-diffusion-in-2026/" target="_blank" rel="noopener">https://blogs.microsoft.com/on-the-issues/2026/05/07/the-state-of-global-ai-diffusion-in-2026/</a></li>
+          <li><a href="https://blogs.nvidia.com/blog/nemotron-3-nano-omni-multimodal-ai-agents/" target="_blank" rel="noopener">https://blogs.nvidia.com/blog/nemotron-3-nano-omni-multimodal-ai-agents/</a></li>
+          <li><a href="https://blogs.nvidia.com/blog/servicenow-autonomous-ai-agents-enterprises/" target="_blank" rel="noopener">https://blogs.nvidia.com/blog/servicenow-autonomous-ai-agents-enterprises/</a></li>
+          <li><a href="https://claudefa.st/blog/guide/changelog" target="_blank" rel="noopener">https://claudefa.st/blog/guide/changelog</a></li>
+          <li><a href="https://cloud.google.com/blog/products/ai-machine-learning/claude-mythos-preview-on-vertex-ai" target="_blank" rel="noopener">https://cloud.google.com/blog/products/ai-machine-learning/claude-mythos-preview-on-vertex-ai</a></li>
+          <li><a href="https://cloud.google.com/blog/products/ai-machine-learning/introducing-gemini-enterprise-agent-platform" target="_blank" rel="noopener">https://cloud.google.com/blog/products/ai-machine-learning/introducing-gemini-enterprise-agent-platform</a></li>
+          <li><a href="https://cloud.google.com/blog/topics/google-cloud-next/next26-day-1-recap" target="_blank" rel="noopener">https://cloud.google.com/blog/topics/google-cloud-next/next26-day-1-recap</a></li>
+          <li><a href="https://clsbluesky.law.columbia.edu/2026/04/23/sullivan-cromwell-discusses-warnings-to-bank-ceos-about-cybersecurity-risks-of-anthropics-new-ai-model/" target="_blank" rel="noopener">https://clsbluesky.law.columbia.edu/2026/04/23/sullivan-cromwell-discusses-warnings-to-bank-ceos-about-cybersecurity-risks-of-anthropics-new-ai-model/</a></li>
+          <li><a href="https://coder.com/blog/introducing-coder-agents" target="_blank" rel="noopener">https://coder.com/blog/introducing-coder-agents</a></li>
+          <li><a href="https://codersera.com/blog/anthropic-june-2026-billing-change-claude-code/" target="_blank" rel="noopener">https://codersera.com/blog/anthropic-june-2026-billing-change-claude-code/</a></li>
+          <li><a href="https://codersera.com/blog/gemini-3-5-pro-launch-guide-2026/" target="_blank" rel="noopener">https://codersera.com/blog/gemini-3-5-pro-launch-guide-2026/</a></li>
+          <li><a href="https://coefficientgiving.org/funds/navigating-transformative-ai/request-for-proposals-ai-governance/" target="_blank" rel="noopener">https://coefficientgiving.org/funds/navigating-transformative-ai/request-for-proposals-ai-governance/</a></li>
+          <li><a href="https://coindcx.com/blog/us-stock/microsoft-fy26-earnings-preview/" target="_blank" rel="noopener">https://coindcx.com/blog/us-stock/microsoft-fy26-earnings-preview/</a></li>
+          <li><a href="https://cryptobriefing.com/kimi-k2-7-code-open-source-release/" target="_blank" rel="noopener">https://cryptobriefing.com/kimi-k2-7-code-open-source-release/</a></li>
+          <li><a href="https://cursor.com/blog/cursor-3" target="_blank" rel="noopener">https://cursor.com/blog/cursor-3</a></li>
+          <li><a href="https://cursor.com/changelog" target="_blank" rel="noopener">https://cursor.com/changelog</a></li>
+          <li><a href="https://cybernews.com/ai-news/claude-outage-resolved-anthropic-opus-model-errors/" target="_blank" rel="noopener">https://cybernews.com/ai-news/claude-outage-resolved-anthropic-opus-model-errors/</a></li>
+          <li><a href="https://cybersecuritynews.com/claude-beta-for-word/" target="_blank" rel="noopener">https://cybersecuritynews.com/claude-beta-for-word/</a></li>
+          <li><a href="https://dasroot.net/posts/2026/04/model-context-protocol-ai-integration/" target="_blank" rel="noopener">https://dasroot.net/posts/2026/04/model-context-protocol-ai-integration/</a></li>
+          <li><a href="https://dataconomy.com/2026/04/13/humanx-conference-puts-agentic-ai-and-claude-at-center-stage/" target="_blank" rel="noopener">https://dataconomy.com/2026/04/13/humanx-conference-puts-agentic-ai-and-claude-at-center-stage/</a></li>
+          <li><a href="https://datatracker.ietf.org/doc/draft-mohiuddin-mcp-security-considerations/" target="_blank" rel="noopener">https://datatracker.ietf.org/doc/draft-mohiuddin-mcp-security-considerations/</a></li>
+          <li><a href="https://decrypt.co/366685/us-says-china-best-ai-models-lag-behind-experts-not-sure" target="_blank" rel="noopener">https://decrypt.co/366685/us-says-china-best-ai-models-lag-behind-experts-not-sure</a></li>
+          <li><a href="https://deepmind.google/models/model-cards/gemini-3-1-pro/" target="_blank" rel="noopener">https://deepmind.google/models/model-cards/gemini-3-1-pro/</a></li>
+          <li><a href="https://dev.to/alexmercedcoder/ai-tools-race-heats-up-week-of-april-3-9-2026-37fl" target="_blank" rel="noopener">https://dev.to/alexmercedcoder/ai-tools-race-heats-up-week-of-april-3-9-2026-37fl</a></li>
+          <li><a href="https://devblogs.microsoft.com/agent-framework/microsoft-agent-framework-version-1-0/" target="_blank" rel="noopener">https://devblogs.microsoft.com/agent-framework/microsoft-agent-framework-version-1-0/</a></li>
+          <li><a href="https://developer.nvidia.com/blog/nvidia-nemotron-3-nano-omni-powers-multimodal-agent-reasoning-in-a-single-efficient-open-model/" target="_blank" rel="noopener">https://developer.nvidia.com/blog/nvidia-nemotron-3-nano-omni-powers-multimodal-agent-reasoning-in-a-single-efficient-open-model/</a></li>
+          <li><a href="https://developers.googleblog.com/all-the-news-from-the-google-io-2026-developer-keynote/" target="_blank" rel="noopener">https://developers.googleblog.com/all-the-news-from-the-google-io-2026-developer-keynote/</a></li>
+          <li><a href="https://devops.com/anthropic-brings-ai-powered-security-scanning-to-enterprise-teams-with-claude-security/" target="_blank" rel="noopener">https://devops.com/anthropic-brings-ai-powered-security-scanning-to-enterprise-teams-with-claude-security/</a></li>
+          <li><a href="https://devops.com/xai-enters-the-coding-agent-race-with-grok-build/" target="_blank" rel="noopener">https://devops.com/xai-enters-the-coding-agent-race-with-grok-build/</a></li>
+          <li><a href="https://dig.watch/updates/deepseek-v4-pro-caisi-us-nist-evaluation" target="_blank" rel="noopener">https://dig.watch/updates/deepseek-v4-pro-caisi-us-nist-evaluation</a></li>
+          <li><a href="https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" target="_blank" rel="noopener">https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai</a></li>
+          <li><a href="https://dl.acm.org/doi/10.1145/3796519" target="_blank" rel="noopener">https://dl.acm.org/doi/10.1145/3796519</a></li>
+          <li><a href="https://ec.europa.eu/commission/presscorner/detail/en/mex_26_1030" target="_blank" rel="noopener">https://ec.europa.eu/commission/presscorner/detail/en/mex_26_1030</a></li>
+          <li><a href="https://enterprisedna.co/resources/news/anthropic-claude-june-15-retirements-billing-2026/" target="_blank" rel="noopener">https://enterprisedna.co/resources/news/anthropic-claude-june-15-retirements-billing-2026/</a></li>
+          <li><a href="https://epoch.ai/benchmarks/swe-bench-verified/" target="_blank" rel="noopener">https://epoch.ai/benchmarks/swe-bench-verified/</a></li>
+          <li><a href="https://explainx.ai/blog/anthropic-claude-code-agent-view-goal-command" target="_blank" rel="noopener">https://explainx.ai/blog/anthropic-claude-code-agent-view-goal-command</a></li>
+          <li><a href="https://findskill.ai/blog/claude-haiku-3-retirement-migration-guide/" target="_blank" rel="noopener">https://findskill.ai/blog/claude-haiku-3-retirement-migration-guide/</a></li>
+          <li><a href="https://findskill.ai/blog/claude-managed-agents-explained/" target="_blank" rel="noopener">https://findskill.ai/blog/claude-managed-agents-explained/</a></li>
+          <li><a href="https://foreignpolicy.com/2026/04/20/claude-mythos-preview-anthropic-project-glasswing-cybersecurity-ai-hacking-danger/" target="_blank" rel="noopener">https://foreignpolicy.com/2026/04/20/claude-mythos-preview-anthropic-project-glasswing-cybersecurity-ai-hacking-danger/</a></li>
+          <li><a href="https://fpf.org/blog/understanding-the-new-wave-of-chatbot-legislation-california-sb-243-and-beyond/" target="_blank" rel="noopener">https://fpf.org/blog/understanding-the-new-wave-of-chatbot-legislation-california-sb-243-and-beyond/</a></li>
+          <li><a href="https://futurumgroup.com/insights/agentic-ai-11/" target="_blank" rel="noopener">https://futurumgroup.com/insights/agentic-ai-11/</a></li>
+          <li><a href="https://futurumgroup.com/insights/openai-sora-discontinuation-what-the-end-of-a-platform-means-for-enterprise-ai-strategy/" target="_blank" rel="noopener">https://futurumgroup.com/insights/openai-sora-discontinuation-what-the-end-of-a-platform-means-for-enterprise-ai-strategy/</a></li>
+          <li><a href="https://github.blog/changelog/2026-06-09-claude-fable-5-is-generally-available-for-github-copilot/" target="_blank" rel="noopener">https://github.blog/changelog/2026-06-09-claude-fable-5-is-generally-available-for-github-copilot/</a></li>
+          <li><a href="https://github.com/NousResearch/hermes-agent/releases/tag/v2026.4.3" target="_blank" rel="noopener">https://github.com/NousResearch/hermes-agent/releases/tag/v2026.4.3</a></li>
+          <li><a href="https://github.com/anthropics/claude-code/releases" target="_blank" rel="noopener">https://github.com/anthropics/claude-code/releases</a></li>
+          <li><a href="https://github.com/microsoft/agent-governance-toolkit" target="_blank" rel="noopener">https://github.com/microsoft/agent-governance-toolkit</a></li>
+          <li><a href="https://grantedai.com/grants/vista-institute-ai-policy-fellowship-governance-research-vista-d4e5f6a7" target="_blank" rel="noopener">https://grantedai.com/grants/vista-institute-ai-policy-fellowship-governance-research-vista-d4e5f6a7</a></li>
+          <li><a href="https://help.openai.com/en/articles/20001152-what-to-know-about-the-sora-discontinuation" target="_blank" rel="noopener">https://help.openai.com/en/articles/20001152-what-to-know-about-the-sora-discontinuation</a></li>
+          <li><a href="https://huggingface.co/blog/nvidia/nemotron-3-nano-omni-multimodal-intelligence" target="_blank" rel="noopener">https://huggingface.co/blog/nvidia/nemotron-3-nano-omni-multimodal-intelligence</a></li>
+          <li><a href="https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro" target="_blank" rel="noopener">https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro</a></li>
+          <li><a href="https://ia.acs.org.au/article/2026/microsoft-adds-anthropic-s-claude-to-copilot.html" target="_blank" rel="noopener">https://ia.acs.org.au/article/2026/microsoft-adds-anthropic-s-claude-to-copilot.html</a></li>
+          <li><a href="https://iapp.org/news/a/ai-act-omnibus-what-just-happened-and-what-comes-next" target="_blank" rel="noopener">https://iapp.org/news/a/ai-act-omnibus-what-just-happened-and-what-comes-next</a></li>
+          <li><a href="https://investors.digitalocean.com/news/news-details/2026/DigitalOcean-Acquires-Katanemo-Labs-to-Accelerate-the-Inference-Cloud-for-the-Agentic-Era/default.aspx" target="_blank" rel="noopener">https://investors.digitalocean.com/news/news-details/2026/DigitalOcean-Acquires-Katanemo-Labs-to-Accelerate-the-Inference-Cloud-for-the-Agentic-Era/default.aspx</a></li>
+          <li><a href="https://kpmg.com/xx/en/media/press-releases/2026/05/kpmg-and-anthropic-sign-global-alliance-and-launch-digital-gateway-powered-by-claude.html" target="_blank" rel="noopener">https://kpmg.com/xx/en/media/press-releases/2026/05/kpmg-and-anthropic-sign-global-alliance-and-launch-digital-gateway-powered-by-claude.html</a></li>
+          <li><a href="https://learn.microsoft.com/en-us/microsoft-agent-365/overview" target="_blank" rel="noopener">https://learn.microsoft.com/en-us/microsoft-agent-365/overview</a></li>
+          <li><a href="https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260SB243" target="_blank" rel="noopener">https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260SB243</a></li>
+          <li><a href="https://letsdatascience.com/news/deepseek-launches-v4-preview-with-pro-and-flash-343285ec" target="_blank" rel="noopener">https://letsdatascience.com/news/deepseek-launches-v4-preview-with-pro-and-flash-343285ec</a></li>
+          <li><a href="https://letsdatascience.com/news/google-delays-gemini-35-pro-releases-35-flash-at-io-0dcab6cd" target="_blank" rel="noopener">https://letsdatascience.com/news/google-delays-gemini-35-pro-releases-35-flash-at-io-0dcab6cd</a></li>
+          <li><a href="https://llm-stats.com/benchmarks/swe-bench-verified" target="_blank" rel="noopener">https://llm-stats.com/benchmarks/swe-bench-verified</a></li>
+          <li><a href="https://llm-stats.com/llm-updates" target="_blank" rel="noopener">https://llm-stats.com/llm-updates</a></li>
+          <li><a href="https://lmcouncil.ai/benchmarks" target="_blank" rel="noopener">https://lmcouncil.ai/benchmarks</a></li>
+          <li><a href="https://localnewsmatters.org/2026/04/27/musk-v-altman-day-1-jury-selected-as-blockbuster-openai-trial-begins-in-oakland/" target="_blank" rel="noopener">https://localnewsmatters.org/2026/04/27/musk-v-altman-day-1-jury-selected-as-blockbuster-openai-trial-begins-in-oakland/</a></li>
+          <li><a href="https://m365admin.handsontek.net/microsoft-agent-365-generally-available-may-1-2026/" target="_blank" rel="noopener">https://m365admin.handsontek.net/microsoft-agent-365-generally-available-may-1-2026/</a></li>
+          <li><a href="https://marketplace.microsoft.com/en-us/product/office/wa200010453?tab=overview" target="_blank" rel="noopener">https://marketplace.microsoft.com/en-us/product/office/wa200010453?tab=overview</a></li>
+          <li><a href="https://martech.org/adobe-rebrands-experience-cloud-as-cx-enterprise-goes-all-in-on-ai-agents/" target="_blank" rel="noopener">https://martech.org/adobe-rebrands-experience-cloud-as-cx-enterprise-goes-all-in-on-ai-agents/</a></li>
+          <li><a href="https://nationaltoday.com/us/ca/san-francisco/news/2026/04/08/anthropic-unveils-managed-agents-for-claude-eyeing-enterprise-ai-workflows/" target="_blank" rel="noopener">https://nationaltoday.com/us/ca/san-francisco/news/2026/04/08/anthropic-unveils-managed-agents-for-claude-eyeing-enterprise-ai-workflows/</a></li>
+          <li><a href="https://nationaltoday.com/us/dc/washington/news/2026/04/12/anthropics-claude-mythos-ai-sparks-emergency-us-banking-meetings/" target="_blank" rel="noopener">https://nationaltoday.com/us/dc/washington/news/2026/04/12/anthropics-claude-mythos-ai-sparks-emergency-us-banking-meetings/</a></li>
+          <li><a href="https://natlawreview.com/press-releases/vision-compliance-releases-2026-eu-ai-act-readiness-report-finds-78" target="_blank" rel="noopener">https://natlawreview.com/press-releases/vision-compliance-releases-2026-eu-ai-act-readiness-report-finds-78</a></li>
+          <li><a href="https://newmarketpitch.com/blogs/news/agentic-ai-funding-trends" target="_blank" rel="noopener">https://newmarketpitch.com/blogs/news/agentic-ai-funding-trends</a></li>
+          <li><a href="https://news.adobe.com/news/2026/04/adobe-redefines-custome-experience" target="_blank" rel="noopener">https://news.adobe.com/news/2026/04/adobe-redefines-custome-experience</a></li>
+          <li><a href="https://news.adobe.com/news/2026/04/adobe-unveils-cx-enterprise-coworker" target="_blank" rel="noopener">https://news.adobe.com/news/2026/04/adobe-unveils-cx-enterprise-coworker</a></li>
+          <li><a href="https://news.alphastreet.com/microsofts-q3-fy2026-earnings-test-will-azure-re-accelerate-or-extend-its-deceleration/" target="_blank" rel="noopener">https://news.alphastreet.com/microsofts-q3-fy2026-earnings-test-will-azure-re-accelerate-or-extend-its-deceleration/</a></li>
+          <li><a href="https://news.bloombergtax.com/financial-accounting/ey-weaves-advanced-ai-into-corporate-financial-audits-globally" target="_blank" rel="noopener">https://news.bloombergtax.com/financial-accounting/ey-weaves-advanced-ai-into-corporate-financial-audits-globally</a></li>
+          <li><a href="https://news.cognizant.com/2026-05-07-Cognizant-Launches-Secure-AI-Services-to-Help-Enterprises-Safely-Scale-Agentic-Systems" target="_blank" rel="noopener">https://news.cognizant.com/2026-05-07-Cognizant-Launches-Secure-AI-Services-to-Help-Enterprises-Safely-Scale-Agentic-Systems</a></li>
+          <li><a href="https://news.crunchbase.com/venture/foundational-ai-startup-funding-doubled-openai-anthropic-xai-q1-2026/" target="_blank" rel="noopener">https://news.crunchbase.com/venture/foundational-ai-startup-funding-doubled-openai-anthropic-xai-q1-2026/</a></li>
+          <li><a href="https://news.crunchbase.com/venture/record-breaking-funding-ai-global-q1-2026/" target="_blank" rel="noopener">https://news.crunchbase.com/venture/record-breaking-funding-ai-global-q1-2026/</a></li>
+          <li><a href="https://news.sap.com/2026/05/sap-anthropic-to-bring-claude-sap-business-ai-platform/" target="_blank" rel="noopener">https://news.sap.com/2026/05/sap-anthropic-to-bring-claude-sap-business-ai-platform/</a></li>
+          <li><a href="https://news.sap.com/2026/05/sap-sapphire-sap-unveils-autonomous-enterprise/" target="_blank" rel="noopener">https://news.sap.com/2026/05/sap-sapphire-sap-unveils-autonomous-enterprise/</a></li>
+          <li><a href="https://news.sap.com/2026/05/sap-to-acquire-prior-labs-establish-frontier-ai-lab-europe/" target="_blank" rel="noopener">https://news.sap.com/2026/05/sap-to-acquire-prior-labs-establish-frontier-ai-lab-europe/</a></li>
+          <li><a href="https://newsroom.accenture.com/news/2026/servicenow-and-accenture-launch-forward-deployed-engineering-program-to-scale-agentic-ai-across-the-enterprise" target="_blank" rel="noopener">https://newsroom.accenture.com/news/2026/servicenow-and-accenture-launch-forward-deployed-engineering-program-to-scale-agentic-ai-across-the-enterprise</a></li>
+          <li><a href="https://newsroom.servicenow.com/press-releases/details/2026/ServiceNow-extends-agentic-AI-governance-from-desktops-to-data-centers-with-NVIDIA/default.aspx" target="_blank" rel="noopener">https://newsroom.servicenow.com/press-releases/details/2026/ServiceNow-extends-agentic-AI-governance-from-desktops-to-data-centers-with-NVIDIA/default.aspx</a></li>
+          <li><a href="https://nvidianews.nvidia.com/news/ai-agents" target="_blank" rel="noopener">https://nvidianews.nvidia.com/news/ai-agents</a></li>
+          <li><a href="https://nvidianews.nvidia.com/news/nvidia-debuts-nemotron-3-family-of-open-models" target="_blank" rel="noopener">https://nvidianews.nvidia.com/news/nvidia-debuts-nemotron-3-family-of-open-models</a></li>
+          <li><a href="https://officechai.com/ai/anthropic-says-it-has-eliminated-undesirable-behaviour-like-blackmail-from-claude-by-deeply-explaining-to-it-why-it-was-wrong/" target="_blank" rel="noopener">https://officechai.com/ai/anthropic-says-it-has-eliminated-undesirable-behaviour-like-blackmail-from-claude-by-deeply-explaining-to-it-why-it-was-wrong/</a></li>
+          <li><a href="https://officechai.com/ai/deepseek-v4-pro-deepseek-v4-flash-benchmarks-pricing/" target="_blank" rel="noopener">https://officechai.com/ai/deepseek-v4-pro-deepseek-v4-flash-benchmarks-pricing/</a></li>
+          <li><a href="https://omidyar.com/update/humanity-ai/" target="_blank" rel="noopener">https://omidyar.com/update/humanity-ai/</a></li>
+          <li><a href="https://openrouter.ai/nvidia/nemotron-3-nano-30b-a3b:free" target="_blank" rel="noopener">https://openrouter.ai/nvidia/nemotron-3-nano-30b-a3b:free</a></li>
+          <li><a href="https://opensource.microsoft.com/blog/2026/04/02/introducing-the-agent-governance-toolkit-open-source-runtime-security-for-ai-agents/" target="_blank" rel="noopener">https://opensource.microsoft.com/blog/2026/04/02/introducing-the-agent-governance-toolkit-open-source-runtime-security-for-ai-agents/</a></li>
+          <li><a href="https://opentools.ai/news/brockman-defends-30b-stake-musk-altman-trial-week-2" target="_blank" rel="noopener">https://opentools.ai/news/brockman-defends-30b-stake-musk-altman-trial-week-2</a></li>
+          <li><a href="https://perkinscoie.com/insights/update/california-companion-chatbot-law-now-effect" target="_blank" rel="noopener">https://perkinscoie.com/insights/update/california-companion-chatbot-law-now-effect</a></li>
+          <li><a href="https://phandroid.com/2026/05/08/google-is-testing-an-ai-agent-called-remy/" target="_blank" rel="noopener">https://phandroid.com/2026/05/08/google-is-testing-an-ai-agent-called-remy/</a></li>
+          <li><a href="https://philanthropynewsdigest.org/news/foundations-launch-500-million-initiative-for-human-centered-ai-tech" target="_blank" rel="noopener">https://philanthropynewsdigest.org/news/foundations-launch-500-million-initiative-for-human-centered-ai-tech</a></li>
+          <li><a href="https://polymarket.com/event/next-google-gemini-pro-model-released-onptptpt" target="_blank" rel="noopener">https://polymarket.com/event/next-google-gemini-pro-model-released-onptptpt</a></li>
+          <li><a href="https://press.spglobal.com/2026-04-06-Caseys-General-Stores-Set-to-Join-S-P-500-DigitalOcean-Holdings-to-Join-S-P-MidCap-400-Broadstone-Net-Lease-to-Join-S-P-SmallCap-600" target="_blank" rel="noopener">https://press.spglobal.com/2026-04-06-Caseys-General-Stores-Set-to-Join-S-P-500-DigitalOcean-Holdings-to-Join-S-P-MidCap-400-Broadstone-Net-Lease-to-Join-S-P-SmallCap-600</a></li>
+          <li><a href="https://pureai.com/articles/2026/05/07/google-remy.aspx" target="_blank" rel="noopener">https://pureai.com/articles/2026/05/07/google-remy.aspx</a></li>
+          <li><a href="https://qz.com/anthropic-ai-agents-financial-services-banks-insurers-050526" target="_blank" rel="noopener">https://qz.com/anthropic-ai-agents-financial-services-banks-insurers-050526</a></li>
+          <li><a href="https://qz.com/anthropic-funding-round-900-billion-valuation-042926" target="_blank" rel="noopener">https://qz.com/anthropic-funding-round-900-billion-valuation-042926</a></li>
+          <li><a href="https://rapidclaw.dev/blog/ai-agent-benchmarks-2026" target="_blank" rel="noopener">https://rapidclaw.dev/blog/ai-agent-benchmarks-2026</a></li>
+          <li><a href="https://redmondmag.com/articles/2026/04/23/microsoft-expands-copilot-agentic-capabilities.aspx" target="_blank" rel="noopener">https://redmondmag.com/articles/2026/04/23/microsoft-expands-copilot-agentic-capabilities.aspx</a></li>
+          <li><a href="https://redmondmag.com/articles/2026/05/07/global-ai-use-rises-as-adoption-gap-continues-to-widen.aspx" target="_blank" rel="noopener">https://redmondmag.com/articles/2026/05/07/global-ai-use-rises-as-adoption-gap-continues-to-widen.aspx</a></li>
+          <li><a href="https://releasebot.io/updates/anthropic" target="_blank" rel="noopener">https://releasebot.io/updates/anthropic</a></li>
+          <li><a href="https://releasebot.io/updates/anthropic/claude-code" target="_blank" rel="noopener">https://releasebot.io/updates/anthropic/claude-code</a></li>
+          <li><a href="https://releasebot.io/updates/openai" target="_blank" rel="noopener">https://releasebot.io/updates/openai</a></li>
+          <li><a href="https://sacra.com/c/anthropic/" target="_blank" rel="noopener">https://sacra.com/c/anthropic/</a></li>
+          <li><a href="https://samexpert.com/microsoft-365-e7-licensing-guide/" target="_blank" rel="noopener">https://samexpert.com/microsoft-365-e7-licensing-guide/</a></li>
+          <li><a href="https://sdtimes.com/ai/agentic-ai-goes-mainstream-in-the-enterprise-but-94-raise-concern-about-sprawl-outsystems-research-finds/" target="_blank" rel="noopener">https://sdtimes.com/ai/agentic-ai-goes-mainstream-in-the-enterprise-but-94-raise-concern-about-sprawl-outsystems-research-finds/</a></li>
+          <li><a href="https://sdtimes.com/ai/may-8-2026-ai-updates-from-the-past-week-coder-agents-launch-snyk-claude-partnership-opsera-cursor-partnership-and-more/" target="_blank" rel="noopener">https://sdtimes.com/ai/may-8-2026-ai-updates-from-the-past-week-coder-agents-launch-snyk-claude-partnership-opsera-cursor-partnership-and-more/</a></li>
+          <li><a href="https://securityboulevard.com/2026/04/microsoft-and-salesforce-patch-ai-agent-flaws-that-could-leak-sensitive-data/" target="_blank" rel="noopener">https://securityboulevard.com/2026/04/microsoft-and-salesforce-patch-ai-agent-flaws-that-could-leak-sensitive-data/</a></li>
+          <li><a href="https://sifted.eu/articles/sap-acquire-german-ai-startup-prior-labs" target="_blank" rel="noopener">https://sifted.eu/articles/sap-acquire-german-ai-startup-prior-labs</a></li>
+          <li><a href="https://snyk.io/ai-partners/claude/" target="_blank" rel="noopener">https://snyk.io/ai-partners/claude/</a></li>
+          <li><a href="https://startupfortune.com/anthropic-hits-a-trillion-dollar-valuation-on-secondary-markets-and-knocks-openai-from-the-top-spot/" target="_blank" rel="noopener">https://startupfortune.com/anthropic-hits-a-trillion-dollar-valuation-on-secondary-markets-and-knocks-openai-from-the-top-spot/</a></li>
+          <li><a href="https://stocktwits.com/news-articles/markets/equity/microsoft-loses-exclusive-license-openai-models-taps-anthropic-claude/cZBNAqiRePg" target="_blank" rel="noopener">https://stocktwits.com/news-articles/markets/equity/microsoft-loses-exclusive-license-openai-models-taps-anthropic-claude/cZBNAqiRePg</a></li>
+          <li><a href="https://techbriefly.com/2026/04/10/anthropic-explores-custom-ai-chip-design-to-power-claude-models/" target="_blank" rel="noopener">https://techbriefly.com/2026/04/10/anthropic-explores-custom-ai-chip-design-to-power-claude-models/</a></li>
+          <li><a href="https://techcommunity.microsoft.com/blog/agent-365-blog/what%E2%80%99s-new-in-agent-365-may-2026/4516340" target="_blank" rel="noopener">https://techcommunity.microsoft.com/blog/agent-365-blog/what%E2%80%99s-new-in-agent-365-may-2026/4516340</a></li>
+          <li><a href="https://techcommunity.microsoft.com/blog/microsoft_365blog/microsoft-365-e7-and-agent-365-are-now-generally-available/4516295" target="_blank" rel="noopener">https://techcommunity.microsoft.com/blog/microsoft_365blog/microsoft-365-e7-and-agent-365-are-now-generally-available/4516295</a></li>
+          <li><a href="https://techcommunity.microsoft.com/discussions/agent-365-discussions/agent-365-will-be-generally-available-on-may-1-2026/4500380" target="_blank" rel="noopener">https://techcommunity.microsoft.com/discussions/agent-365-discussions/agent-365-will-be-generally-available-on-may-1-2026/4500380</a></li>
+          <li><a href="https://techfundingnews.com/anthropic-1-trillion-valuation-secondary-market-overtakes-openai/" target="_blank" rel="noopener">https://techfundingnews.com/anthropic-1-trillion-valuation-secondary-market-overtakes-openai/</a></li>
+          <li><a href="https://techjacksolutions.com/ai-brief/claude-fable-5s-swe-bench-pro-score-is-contested-what-indepe/" target="_blank" rel="noopener">https://techjacksolutions.com/ai-brief/claude-fable-5s-swe-bench-pro-score-is-contested-what-indepe/</a></li>
+          <li><a href="https://the-decoder.com/china-is-falling-behind-in-the-ai-race-according-to-a-us-government-benchmark/" target="_blank" rel="noopener">https://the-decoder.com/china-is-falling-behind-in-the-ai-race-according-to-a-us-government-benchmark/</a></li>
+          <li><a href="https://the-decoder.com/openai-raises-over-4-billion-for-new-enterprise-deployment-venture/" target="_blank" rel="noopener">https://the-decoder.com/openai-raises-over-4-billion-for-new-enterprise-deployment-venture/</a></li>
+          <li><a href="https://the-decoder.com/openai-sets-two-stage-sora-shutdown-with-app-closing-april-2026-and-api-following-in-september/" target="_blank" rel="noopener">https://the-decoder.com/openai-sets-two-stage-sora-shutdown-with-app-closing-april-2026-and-api-following-in-september/</a></li>
+          <li><a href="https://theaiinsider.tech/2026/06/01/geordie-closes-30m-in-funding-to-help-enterprises-securely-adopt-agentic-ai-at-scale/" target="_blank" rel="noopener">https://theaiinsider.tech/2026/06/01/geordie-closes-30m-in-funding-to-help-enterprises-securely-adopt-agentic-ai-at-scale/</a></li>
+          <li><a href="https://thehackernews.com/2026/04/claude-code-tleaked-via-npm-packaging.html" target="_blank" rel="noopener">https://thehackernews.com/2026/04/claude-code-tleaked-via-npm-packaging.html</a></li>
+          <li><a href="https://thenewstack.io/anthropic-takes-claude-cowork-out-of-preview-and-straight-into-the-enterprise/" target="_blank" rel="noopener">https://thenewstack.io/anthropic-takes-claude-cowork-out-of-preview-and-straight-into-the-enterprise/</a></li>
+          <li><a href="https://thenewstack.io/anthropics-claude-security-beta/" target="_blank" rel="noopener">https://thenewstack.io/anthropics-claude-security-beta/</a></li>
+          <li><a href="https://thenewstack.io/model-context-protocol-roadmap-2026/" target="_blank" rel="noopener">https://thenewstack.io/model-context-protocol-roadmap-2026/</a></li>
+          <li><a href="https://thepaypers.com/crypto-web3-and-cbdc/news/circle-launches-ai-agent-infrastructure-suite-for-stablecoin-payments" target="_blank" rel="noopener">https://thepaypers.com/crypto-web3-and-cbdc/news/circle-launches-ai-agent-infrastructure-suite-for-stablecoin-payments</a></li>
+          <li><a href="https://thesoogroup.com/blog/openclaw-github-phenomenon-autonomous-agent-framework" target="_blank" rel="noopener">https://thesoogroup.com/blog/openclaw-github-phenomenon-autonomous-agent-framework</a></li>
+          <li><a href="https://thetechportal.com/2026/05/04/openai-forms-10bn-jv-the-deployment-company-with-pe-firms-to-scale-enterprise-ai-adoption/" target="_blank" rel="noopener">https://thetechportal.com/2026/05/04/openai-forms-10bn-jv-the-deployment-company-with-pe-firms-to-scale-enterprise-ai-adoption/</a></li>
+          <li><a href="https://thetechportal.com/2026/05/08/openai-launches-three-new-gpt-realtime-audio-models-for-speech-translation-and-transcription/" target="_blank" rel="noopener">https://thetechportal.com/2026/05/08/openai-launches-three-new-gpt-realtime-audio-models-for-speech-translation-and-transcription/</a></li>
+          <li><a href="https://time.com/7335746/ai-anthropic-claude-hack-evil/" target="_blank" rel="noopener">https://time.com/7335746/ai-anthropic-claude-hack-evil/</a></li>
+          <li><a href="https://tokenmix.ai/blog/gpt-5-6-release-date-leaks-2026" target="_blank" rel="noopener">https://tokenmix.ai/blog/gpt-5-6-release-date-leaks-2026</a></li>
+          <li><a href="https://tokenmix.ai/blog/mcp-updates-changelog-every-protocol-change-2026" target="_blank" rel="noopener">https://tokenmix.ai/blog/mcp-updates-changelog-every-protocol-change-2026</a></li>
+          <li><a href="https://tomoro.ai/insights/tomoro-acquired-by-openai-deployment-company" target="_blank" rel="noopener">https://tomoro.ai/insights/tomoro-acquired-by-openai-deployment-company</a></li>
+          <li><a href="https://transformer-circuits.pub/2026/nla/index.html" target="_blank" rel="noopener">https://transformer-circuits.pub/2026/nla/index.html</a></li>
+          <li><a href="https://ts2.tech/en/anthropics-900-billion-funding-push-puts-its-ipo-race-in-the-spotlight/" target="_blank" rel="noopener">https://ts2.tech/en/anthropics-900-billion-funding-push-puts-its-ipo-race-in-the-spotlight/</a></li>
+          <li><a href="https://usagebox.com/articles/anthropic-june-15-agent-sdk-credit-split-claude-4-retirement" target="_blank" rel="noopener">https://usagebox.com/articles/anthropic-june-15-agent-sdk-credit-split-claude-4-retirement</a></li>
+          <li><a href="https://vercel.com/kb/bulletin/vercel-april-2026-security-incident" target="_blank" rel="noopener">https://vercel.com/kb/bulletin/vercel-april-2026-security-incident</a></li>
+          <li><a href="https://virtualizationreview.com/articles/2026/04/24/google-cloud-next-26-gemini-enterprise-agent-platform-leads-ai-centric-news.aspx" target="_blank" rel="noopener">https://virtualizationreview.com/articles/2026/04/24/google-cloud-next-26-gemini-enterprise-agent-platform-leads-ai-centric-news.aspx</a></li>
+          <li><a href="https://virtuous.org/blog/2026-nonprofit-ai-adoption-report/" target="_blank" rel="noopener">https://virtuous.org/blog/2026-nonprofit-ai-adoption-report/</a></li>
+          <li><a href="https://wavespeed.ai/blog/posts/gemini-3-5-pro-coming-next-month/" target="_blank" rel="noopener">https://wavespeed.ai/blog/posts/gemini-3-5-pro-coming-next-month/</a></li>
+          <li><a href="https://wavespeed.ai/blog/posts/gpt-5-6-canary-leak-what-we-know/" target="_blank" rel="noopener">https://wavespeed.ai/blog/posts/gpt-5-6-canary-leak-what-we-know/</a></li>
+          <li><a href="https://wccftech.com/nvidia-lines-up-foxconn-palantir-oracle-behind-nemotron-3-nano-omni-open-ai-model/" target="_blank" rel="noopener">https://wccftech.com/nvidia-lines-up-foxconn-palantir-oracle-behind-nemotron-3-nano-omni-open-ai-model/</a></li>
+          <li><a href="https://windowsnews.ai/article/microsoft-2026-copilot-update-agents-as-the-next-operating-layer-for-work.416574" target="_blank" rel="noopener">https://windowsnews.ai/article/microsoft-2026-copilot-update-agents-as-the-next-operating-layer-for-work.416574</a></li>
+          <li><a href="https://windowsnews.ai/article/microsoft-copilot-agent-mode-now-ga-in-word-excel-and-powerpoint.415032" target="_blank" rel="noopener">https://windowsnews.ai/article/microsoft-copilot-agent-mode-now-ga-in-word-excel-and-powerpoint.415032</a></li>
+          <li><a href="https://www.abhs.in/blog/claude-fable-5-free-until-june-22-github-copilot-bedrock-api-access-2026" target="_blank" rel="noopener">https://www.abhs.in/blog/claude-fable-5-free-until-june-22-github-copilot-bedrock-api-access-2026</a></li>
+          <li><a href="https://www.aboutamazon.com/news/company-news/amazon-invests-additional-5-billion-anthropic-ai" target="_blank" rel="noopener">https://www.aboutamazon.com/news/company-news/amazon-invests-additional-5-billion-anthropic-ai</a></li>
+          <li><a href="https://www.aljazeera.com/economy/2026/4/27/elon-musk-trial-against-sam-altman-to-reveal-openai-power-struggle" target="_blank" rel="noopener">https://www.aljazeera.com/economy/2026/4/27/elon-musk-trial-against-sam-altman-to-reveal-openai-power-struggle</a></li>
+          <li><a href="https://www.aljazeera.com/economy/2026/5/6/spacex-backs-anthropic-with-data-centre-deal-amidst-musks-openai-lawsuit" target="_blank" rel="noopener">https://www.aljazeera.com/economy/2026/5/6/spacex-backs-anthropic-with-data-centre-deal-amidst-musks-openai-lawsuit</a></li>
+          <li><a href="https://www.amnesty.org/en/latest/news/2026/04/eu-simplification-laws/" target="_blank" rel="noopener">https://www.amnesty.org/en/latest/news/2026/04/eu-simplification-laws/</a></li>
+          <li><a href="https://www.androidcentral.com/apps-software/google-gemini-is-finally-becoming-the-personal-assistant-we-were-promised" target="_blank" rel="noopener">https://www.androidcentral.com/apps-software/google-gemini-is-finally-becoming-the-personal-assistant-we-were-promised</a></li>
+          <li><a href="https://www.aoshearman.com/en/insights/digital-omnibus-on-ai-what-is-really-on-the-table-as-trilogues-begin" target="_blank" rel="noopener">https://www.aoshearman.com/en/insights/digital-omnibus-on-ai-what-is-really-on-the-table-as-trilogues-begin</a></li>
+          <li><a href="https://www.arnnet.com.au/article/4163981/anthropic-opens-in-sydney-with-theo-hourmouzis-at-the-helm.html" target="_blank" rel="noopener">https://www.arnnet.com.au/article/4163981/anthropic-opens-in-sydney-with-theo-hourmouzis-at-the-helm.html</a></li>
+          <li><a href="https://www.artificialintelligence-news.com/news/nvidia-agent-toolkit-enterprise-ai-agents/" target="_blank" rel="noopener">https://www.artificialintelligence-news.com/news/nvidia-agent-toolkit-enterprise-ai-agents/</a></li>
+          <li><a href="https://www.artificiallawyer.com/2026/04/11/anthropic-targets-lawyers-with-claude-for-word/" target="_blank" rel="noopener">https://www.artificiallawyer.com/2026/04/11/anthropic-targets-lawyers-with-claude-for-word/</a></li>
+          <li><a href="https://www.artificiallawyer.com/2026/05/12/claude-for-legal-launches-may-reshape-the-legal-tech-world/" target="_blank" rel="noopener">https://www.artificiallawyer.com/2026/05/12/claude-for-legal-launches-may-reshape-the-legal-tech-world/</a></li>
+          <li><a href="https://www.axiomlaw.com/blog/state-privacy-laws" target="_blank" rel="noopener">https://www.axiomlaw.com/blog/state-privacy-laws</a></li>
+          <li><a href="https://www.bain.com/insights/google_cloud_next_2026_the_agentic_enterprise_control_plane_comes_into_view/" target="_blank" rel="noopener">https://www.bain.com/insights/google_cloud_next_2026_the_agentic_enterprise_control_plane_comes_into_view/</a></li>
+          <li><a href="https://www.bakerlaw.com/insights/california-privacy-in-2026-regulations-enforcement-ai-and-more/" target="_blank" rel="noopener">https://www.bakerlaw.com/insights/california-privacy-in-2026-regulations-enforcement-ai-and-more/</a></li>
+          <li><a href="https://www.bdo.com/insights/industries/technology/california-consumer-privacy-act-ccpa-key-2026-impacts-for-technology-companies" target="_blank" rel="noopener">https://www.bdo.com/insights/industries/technology/california-consumer-privacy-act-ccpa-key-2026-impacts-for-technology-companies</a></li>
+          <li><a href="https://www.blackstone.com/news/press/anthropic-partners-with-blackstone-hellman-friedman-and-goldman-sachs-to-launch-enterprise-ai-services-firm/" target="_blank" rel="noopener">https://www.blackstone.com/news/press/anthropic-partners-with-blackstone-hellman-friedman-and-goldman-sachs-to-launch-enterprise-ai-services-firm/</a></li>
+          <li><a href="https://www.blankrome.com/publications/br-privacy-security-ai-download-may-2026" target="_blank" rel="noopener">https://www.blankrome.com/publications/br-privacy-security-ai-download-may-2026</a></li>
+          <li><a href="https://www.bnnbloomberg.ca/business/artificial-intelligence/2026/04/27/microsoft-will-no-longer-have-exclusive-access-to-openais-technology/" target="_blank" rel="noopener">https://www.bnnbloomberg.ca/business/artificial-intelligence/2026/04/27/microsoft-will-no-longer-have-exclusive-access-to-openais-technology/</a></li>
+          <li><a href="https://www.buildfastwithai.com/blogs/nvidia-nemotron-3-nano-omni-2026" target="_blank" rel="noopener">https://www.buildfastwithai.com/blogs/nvidia-nemotron-3-nano-omni-2026</a></li>
+          <li><a href="https://www.businessstory.org/2026/04/17/anthropics-updated-cybersecurity-framework-might-help-restore-its-standing-with-the-government/" target="_blank" rel="noopener">https://www.businessstory.org/2026/04/17/anthropics-updated-cybersecurity-framework-might-help-restore-its-standing-with-the-government/</a></li>
+          <li><a href="https://www.businesswire.com/news/home/20260407749542/en/" target="_blank" rel="noopener">https://www.businesswire.com/news/home/20260407749542/en/</a></li>
+          <li><a href="https://www.businesswire.com/news/home/20260409047490/en/Moodys-Brings-Credit-and-Compliance-Workflows-Directly-into-Anthropics-Claude" target="_blank" rel="noopener">https://www.businesswire.com/news/home/20260409047490/en/Moodys-Brings-Credit-and-Compliance-Workflows-Directly-into-Anthropics-Claude</a></li>
+          <li><a href="https://www.businesswire.com/news/home/20260512860475/en/Veeam-Unveils-Intelligent-ResOps-for-the-Agentic-AI-Era" target="_blank" rel="noopener">https://www.businesswire.com/news/home/20260512860475/en/Veeam-Unveils-Intelligent-ResOps-for-the-Agentic-AI-Era</a></li>
+          <li><a href="https://www.caproasia.com/2026/04/18/chatgpt-parent-openai-raised-122-billion-funding-at-852-billion-valuation-including-3-billion-from-individual-investors-via-bank-channels-openai-plans-ipo-in-2026-or-2027-at-1-trillion-valuation/" target="_blank" rel="noopener">https://www.caproasia.com/2026/04/18/chatgpt-parent-openai-raised-122-billion-funding-at-852-billion-valuation-including-3-billion-from-individual-investors-via-bank-channels-openai-plans-ipo-in-2026-or-2027-at-1-trillion-valuation/</a></li>
+          <li><a href="https://www.cbsnews.com/news/anthropic-ipo-confidential-filing-claude-ai/" target="_blank" rel="noopener">https://www.cbsnews.com/news/anthropic-ipo-confidential-filing-claude-ai/</a></li>
+          <li><a href="https://www.channeldive.com/news/anthropic-claude-partner-program-services-track/821936/" target="_blank" rel="noopener">https://www.channeldive.com/news/anthropic-claude-partner-program-services-track/821936/</a></li>
+          <li><a href="https://www.channelstv.com/2026/05/04/musk-vs-openai-trial-enters-second-week/" target="_blank" rel="noopener">https://www.channelstv.com/2026/05/04/musk-vs-openai-trial-enters-second-week/</a></li>
+          <li><a href="https://www.cio.com/article/4168122/us-government-agency-to-safety-test-frontier-ai-models-before-release.html" target="_blank" rel="noopener">https://www.cio.com/article/4168122/us-government-agency-to-safety-test-frontier-ai-models-before-release.html</a></li>
+          <li><a href="https://www.circle.com/pressroom/circle-launches-ai-infrastructure-to-power-the-agentic-economy" target="_blank" rel="noopener">https://www.circle.com/pressroom/circle-launches-ai-infrastructure-to-power-the-agentic-economy</a></li>
+          <li><a href="https://www.clawbot.blog/blog/openclaw-the-rise-of-an-open-source-ai-agent-framework-april-2026-update/" target="_blank" rel="noopener">https://www.clawbot.blog/blog/openclaw-the-rise-of-an-open-source-ai-agent-framework-april-2026-update/</a></li>
+          <li><a href="https://www.cloudflare.com/agents-week/updates/" target="_blank" rel="noopener">https://www.cloudflare.com/agents-week/updates/</a></li>
+          <li><a href="https://www.cloudflare.com/press/press-releases/2026/cloudflare-launches-mesh-to-secure-the-ai-agent-lifecycle/" target="_blank" rel="noopener">https://www.cloudflare.com/press/press-releases/2026/cloudflare-launches-mesh-to-secure-the-ai-agent-lifecycle/</a></li>
+          <li><a href="https://www.cmswire.com/customer-experience/adobe-doubles-down-on-agentic-ai-but-the-hard-work-may-be-operating-model/" target="_blank" rel="noopener">https://www.cmswire.com/customer-experience/adobe-doubles-down-on-agentic-ai-but-the-hard-work-may-be-operating-model/</a></li>
+          <li><a href="https://www.cnn.com/2026/04/17/business/anthropic-white-house-meeting-dario-amodei" target="_blank" rel="noopener">https://www.cnn.com/2026/04/17/business/anthropic-white-house-meeting-dario-amodei</a></li>
+          <li><a href="https://www.cnn.com/2026/04/28/tech/elon-musk-sam-altman-openai" target="_blank" rel="noopener">https://www.cnn.com/2026/04/28/tech/elon-musk-sam-altman-openai</a></li>
+          <li><a href="https://www.coindesk.com/tech/2026/05/06/anthropic-signs-elon-musk-s-spacex-for-colossus-1-compute-ahead-of-june-ipo" target="_blank" rel="noopener">https://www.coindesk.com/tech/2026/05/06/anthropic-signs-elon-musk-s-spacex-for-colossus-1-compute-ahead-of-june-ipo</a></li>
+          <li><a href="https://www.consilium.europa.eu/en/press/press-releases/2026/05/07/artificial-intelligence-council-and-parliament-agree-to-simplify-and-streamline-rules/" target="_blank" rel="noopener">https://www.consilium.europa.eu/en/press/press-releases/2026/05/07/artificial-intelligence-council-and-parliament-agree-to-simplify-and-streamline-rules/</a></li>
+          <li><a href="https://www.constellationr.com/insights/news/sap-acquires-dremio-prior-labs-it-builds-out-its-data-platform-plan" target="_blank" rel="noopener">https://www.constellationr.com/insights/news/sap-acquires-dremio-prior-labs-it-builds-out-its-data-platform-plan</a></li>
+          <li><a href="https://www.coreweave.com/news/coreweave-announces-multi-year-agreement-with-anthropic" target="_blank" rel="noopener">https://www.coreweave.com/news/coreweave-announces-multi-year-agreement-with-anthropic</a></li>
+          <li><a href="https://www.cpapracticeadvisor.com/2026/05/20/kpmg-partners-with-anthropic-for-digital-gateway-powered-by-claude/183743/" target="_blank" rel="noopener">https://www.cpapracticeadvisor.com/2026/05/20/kpmg-partners-with-anthropic-for-digital-gateway-powered-by-claude/183743/</a></li>
+          <li><a href="https://www.crescendo.ai/news/latest-ai-news-and-updates" target="_blank" rel="noopener">https://www.crescendo.ai/news/latest-ai-news-and-updates</a></li>
+          <li><a href="https://www.crowdstrike.com/en-us/blog/crowdstrike-founding-member-anthropic-mythos-frontier-model-to-secure-ai/" target="_blank" rel="noopener">https://www.crowdstrike.com/en-us/blog/crowdstrike-founding-member-anthropic-mythos-frontier-model-to-secure-ai/</a></li>
+          <li><a href="https://www.cryptopolitan.com/anthropic-claude-ability-to-blackmail-humans/" target="_blank" rel="noopener">https://www.cryptopolitan.com/anthropic-claude-ability-to-blackmail-humans/</a></li>
+          <li><a href="https://www.cryptopolitan.com/google-commits-40-billion-investment-to-claude-ai-developer-anthropic/" target="_blank" rel="noopener">https://www.cryptopolitan.com/google-commits-40-billion-investment-to-claude-ai-developer-anthropic/</a></li>
+          <li><a href="https://www.cxtoday.com/ai-automation-in-cx/adobe-cx-enterprise-coworker-what-does-it-mean-for-the-future-of-enterprise-cx/" target="_blank" rel="noopener">https://www.cxtoday.com/ai-automation-in-cx/adobe-cx-enterprise-coworker-what-does-it-mean-for-the-future-of-enterprise-cx/</a></li>
+          <li><a href="https://www.darkreading.com/cloud-security/microsoft-salesforce-patch-ai-agent-data-leak-flaws" target="_blank" rel="noopener">https://www.darkreading.com/cloud-security/microsoft-salesforce-patch-ai-agent-data-leak-flaws</a></li>
+          <li><a href="https://www.datacenterdynamics.com/en/news/anthropic-to-use-all-of-spacex-xais-colossus-1-data-center-compute/" target="_blank" rel="noopener">https://www.datacenterdynamics.com/en/news/anthropic-to-use-all-of-spacex-xais-colossus-1-data-center-compute/</a></li>
+          <li><a href="https://www.datacenterknowledge.com/data-center-software/anthropic-targets-ai-data-center-bottleneck-with-claude-managed-agents" target="_blank" rel="noopener">https://www.datacenterknowledge.com/data-center-software/anthropic-targets-ai-data-center-bottleneck-with-claude-managed-agents</a></li>
+          <li><a href="https://www.digit.fyi/openai-acquires-scottish-ai-firm-tomoro-in-4bn-deployment-drive/" target="_blank" rel="noopener">https://www.digit.fyi/openai-acquires-scottish-ai-firm-tomoro-in-4bn-deployment-drive/</a></li>
+          <li><a href="https://www.digitalapplied.com/blog/gemini-3-5-flash-vs-gpt-5-5-opus-4-7-agentic-coding" target="_blank" rel="noopener">https://www.digitalapplied.com/blog/gemini-3-5-flash-vs-gpt-5-5-opus-4-7-agentic-coding</a></li>
+          <li><a href="https://www.digitalapplied.com/blog/state-of-agentic-ai-q2-2026-quarterly-report" target="_blank" rel="noopener">https://www.digitalapplied.com/blog/state-of-agentic-ai-q2-2026-quarterly-report</a></li>
+          <li><a href="https://www.droid-life.com/2026/05/07/google-ai-agent-remy/" target="_blank" rel="noopener">https://www.droid-life.com/2026/05/07/google-ai-agent-remy/</a></li>
+          <li><a href="https://www.eweek.com/news/nvidia-agent-toolkit-openshell-enterprise-ai-agents/" target="_blank" rel="noopener">https://www.eweek.com/news/nvidia-agent-toolkit-openshell-enterprise-ai-agents/</a></li>
+          <li><a href="https://www.ey.com/en_gl/newsroom/2026/04/ey-launches-enterprise-scale-agentic-ai-to-redefine-the-audit-experience-for-the-ai-era" target="_blank" rel="noopener">https://www.ey.com/en_gl/newsroom/2026/04/ey-launches-enterprise-scale-agentic-ai-to-redefine-the-audit-experience-for-the-ai-era</a></li>
+          <li><a href="https://www.ey.com/en_us/newsroom/2026/04/ey-launches-enterprise-scale-agentic-ai-to-redefine-the-audit-experience-for-the-ai-era" target="_blank" rel="noopener">https://www.ey.com/en_us/newsroom/2026/04/ey-launches-enterprise-scale-agentic-ai-to-redefine-the-audit-experience-for-the-ai-era</a></li>
+          <li><a href="https://www.foreignpolicyjournal.com/2026/04/28/microsoft-msft-stock-handed-boost-as-openai-tears-up-exclusivity-restructured-deal-opens-chatgpt-to-amazon-and-google-clouds/" target="_blank" rel="noopener">https://www.foreignpolicyjournal.com/2026/04/28/microsoft-msft-stock-handed-boost-as-openai-tears-up-exclusivity-restructured-deal-opens-chatgpt-to-amazon-and-google-clouds/</a></li>
+          <li><a href="https://www.forrester.com/blogs/sap-sapphire-2026-the-autonomous-enterprise-is-credible-but-it-comes-with-concentration-risk/" target="_blank" rel="noopener">https://www.forrester.com/blogs/sap-sapphire-2026-the-autonomous-enterprise-is-credible-but-it-comes-with-concentration-risk/</a></li>
+          <li><a href="https://www.france24.com/en/live-news/20260504-musk-vs-openai-trial-enters-second-week" target="_blank" rel="noopener">https://www.france24.com/en/live-news/20260504-musk-vs-openai-trial-enters-second-week</a></li>
+          <li><a href="https://www.geekwire.com/2026/amazon-doubles-down-on-anthropic-with-25b-investment-mirroring-its-openai-cloud-deal/" target="_blank" rel="noopener">https://www.geekwire.com/2026/amazon-doubles-down-on-anthropic-with-25b-investment-mirroring-its-openai-cloud-deal/</a></li>
+          <li><a href="https://www.geekwire.com/2026/microsoft-earnings-preview-after-a-357-billion-wipeout-tech-giant-gets-another-chance/" target="_blank" rel="noopener">https://www.geekwire.com/2026/microsoft-earnings-preview-after-a-357-billion-wipeout-tech-giant-gets-another-chance/</a></li>
+          <li><a href="https://www.geeky-gadgets.com/gpt-5-6-june-2026-release/" target="_blank" rel="noopener">https://www.geeky-gadgets.com/gpt-5-6-june-2026-release/</a></li>
+          <li><a href="https://www.geeky-gadgets.com/open-source-deepseek-v4-limitations/" target="_blank" rel="noopener">https://www.geeky-gadgets.com/open-source-deepseek-v4-limitations/</a></li>
+          <li><a href="https://www.gibsondunn.com/eu-ai-act-omnibus-agreement-postponed-high-risk-deadlines-and-other-key-changes/" target="_blank" rel="noopener">https://www.gibsondunn.com/eu-ai-act-omnibus-agreement-postponed-high-risk-deadlines-and-other-key-changes/</a></li>
+          <li><a href="https://www.gic.com.sg/newsroom/all/anthropic-partners-with-blackstone-hellman-friedman-and-goldman-sachs-to-launch-enterprise-ai-services-firm/" target="_blank" rel="noopener">https://www.gic.com.sg/newsroom/all/anthropic-partners-with-blackstone-hellman-friedman-and-goldman-sachs-to-launch-enterprise-ai-services-firm/</a></li>
+          <li><a href="https://www.googlecloudpresscorner.com/2026-04-22-Google-Cloud-Commits-750-Million-to-Accelerate-Partners-Agentic-AI-Development" target="_blank" rel="noopener">https://www.googlecloudpresscorner.com/2026-04-22-Google-Cloud-Commits-750-Million-to-Accelerate-Partners-Agentic-AI-Development</a></li>
+          <li><a href="https://www.googlecloudpresscorner.com/2026-04-22-McKinsey-and-Google-Cloud-Launch-the-McKinsey-Google-Transformation-Group-to-Scale-Enterprise-Impact-for-the-AI-era" target="_blank" rel="noopener">https://www.googlecloudpresscorner.com/2026-04-22-McKinsey-and-Google-Cloud-Launch-the-McKinsey-Google-Transformation-Group-to-Scale-Enterprise-Impact-for-the-AI-era</a></li>
+          <li><a href="https://www.hpcwire.com/aiwire/2026/05/04/sap-to-acquire-prior-labs-to-establish-a-globally-leading-frontier-ai-lab-in-europe/" target="_blank" rel="noopener">https://www.hpcwire.com/aiwire/2026/05/04/sap-to-acquire-prior-labs-to-establish-a-globally-leading-frontier-ai-lab-in-europe/</a></li>
+          <li><a href="https://www.hpcwire.com/off-the-wire/nists-caisi-announces-new-frontier-ai-testing-agreements-with-google-deepmind-microsoft-xai/" target="_blank" rel="noopener">https://www.hpcwire.com/off-the-wire/nists-caisi-announces-new-frontier-ai-testing-agreements-with-google-deepmind-microsoft-xai/</a></li>
+          <li><a href="https://www.ibtimes.com.au/claude-ai-down-again-april-8-2026-anthropic-outage-hits-users-after-yesterdays-major-incident-1865761" target="_blank" rel="noopener">https://www.ibtimes.com.au/claude-ai-down-again-april-8-2026-anthropic-outage-hits-users-after-yesterdays-major-incident-1865761</a></li>
+          <li><a href="https://www.ibtimes.com.au/claude-ai-outage-highlights-challenges-ai-service-reliability-1870210" target="_blank" rel="noopener">https://www.ibtimes.com.au/claude-ai-outage-highlights-challenges-ai-service-reliability-1870210</a></li>
+          <li><a href="https://www.inc.com/chloe-aiello/anthropics-powerful-new-cybersecurity-tool-is-designed-to-find-vulnerabilities-in-your-code-and-patch-them/91338485" target="_blank" rel="noopener">https://www.inc.com/chloe-aiello/anthropics-powerful-new-cybersecurity-tool-is-designed-to-find-vulnerabilities-in-your-code-and-patch-them/91338485</a></li>
+          <li><a href="https://www.infoq.com/news/2026/04/cursor-3-agent-first-interface/" target="_blank" rel="noopener">https://www.infoq.com/news/2026/04/cursor-3-agent-first-interface/</a></li>
+          <li><a href="https://www.infoq.com/news/2026/04/pinterest-mcp-ecosystem/" target="_blank" rel="noopener">https://www.infoq.com/news/2026/04/pinterest-mcp-ecosystem/</a></li>
+          <li><a href="https://www.infoworld.com/article/4155591/microsofts-new-agent-governance-toolkit-targets-top-owasp-risks-for-ai-agents.html" target="_blank" rel="noopener">https://www.infoworld.com/article/4155591/microsofts-new-agent-governance-toolkit-targets-top-owasp-risks-for-ai-agents.html</a></li>
+          <li><a href="https://www.insideprivacy.com/artificial-intelligence/eu-ai-act-update-timeline-relief-targeted-simplification-and-new-prohibitions/" target="_blank" rel="noopener">https://www.insideprivacy.com/artificial-intelligence/eu-ai-act-update-timeline-relief-targeted-simplification-and-new-prohibitions/</a></li>
+          <li><a href="https://www.insideprivacy.com/european-union-2/what-to-watch-in-2026-key-eu-privacy-cybersecurity-developments/" target="_blank" rel="noopener">https://www.insideprivacy.com/european-union-2/what-to-watch-in-2026-key-eu-privacy-cybersecurity-developments/</a></li>
+          <li><a href="https://www.japantimes.co.jp/business/2026/04/07/tech/openai-anthropic-google-china-copy/" target="_blank" rel="noopener">https://www.japantimes.co.jp/business/2026/04/07/tech/openai-anthropic-google-china-copy/</a></li>
+          <li><a href="https://www.joneswalker.com/en/insights/blogs/ai-law-blog/ai-regulatory-update-californias-sb-243-mandates-companion-ai-safety-and-accoun.html" target="_blank" rel="noopener">https://www.joneswalker.com/en/insights/blogs/ai-law-blog/ai-regulatory-update-californias-sb-243-mandates-companion-ai-safety-and-accoun.html</a></li>
+          <li><a href="https://www.kennedyslaw.com/en/thought-leadership/article/2026/the-eu-ai-act-implementation-timeline-understanding-the-next-deadline-for-compliance/" target="_blank" rel="noopener">https://www.kennedyslaw.com/en/thought-leadership/article/2026/the-eu-ai-act-implementation-timeline-understanding-the-next-deadline-for-compliance/</a></li>
+          <li><a href="https://www.kimi.com/resources/kimi-k2-7-code" target="_blank" rel="noopener">https://www.kimi.com/resources/kimi-k2-7-code</a></li>
+          <li><a href="https://www.klgates.com/EU-and-Luxembourg-Update-on-the-European-Harmonised-Rules-on-Artificial-IntelligenceRecent-Developments-1-20-2026" target="_blank" rel="noopener">https://www.klgates.com/EU-and-Luxembourg-Update-on-the-European-Harmonised-Rules-on-Artificial-IntelligenceRecent-Developments-1-20-2026</a></li>
+          <li><a href="https://www.law.com/legaltechnews/2026/05/12/anthropic-announces-legal-practice-plug-ins-for-claude-legal-tech-integrations/" target="_blank" rel="noopener">https://www.law.com/legaltechnews/2026/05/12/anthropic-announces-legal-practice-plug-ins-for-claude-legal-tech-integrations/</a></li>
+          <li><a href="https://www.lawnext.com/2026/05/anthropic-goes-all-in-on-legal-releasing-more-than-20-connectors-and-12-practice-area-plugins-for-claude.html" target="_blank" rel="noopener">https://www.lawnext.com/2026/05/anthropic-goes-all-in-on-legal-releasing-more-than-20-connectors-and-12-practice-area-plugins-for-claude.html</a></li>
+          <li><a href="https://www.legalnodes.com/article/eu-ai-act-2026-updates-compliance-requirements-and-business-risks" target="_blank" rel="noopener">https://www.legalnodes.com/article/eu-ai-act-2026-updates-compliance-requirements-and-business-risks</a></li>
+          <li><a href="https://www.legaltechnologyhub.com/contents/anthropic-unveils-claude-for-legal-with-12-new-plugins-20-mcp-connectors-and-more/" target="_blank" rel="noopener">https://www.legaltechnologyhub.com/contents/anthropic-unveils-claude-for-legal-with-12-new-plugins-20-mcp-connectors-and-more/</a></li>
+          <li><a href="https://www.lexology.com/library/detail.aspx?g=4b0588c3-63a5-4c63-9b1f-a6e9b3687e3b" target="_blank" rel="noopener">https://www.lexology.com/library/detail.aspx?g=4b0588c3-63a5-4c63-9b1f-a6e9b3687e3b</a></li>
+          <li><a href="https://www.linuxfoundation.org/press/linux-foundation-announces-the-formation-of-the-agentic-ai-foundation" target="_blank" rel="noopener">https://www.linuxfoundation.org/press/linux-foundation-announces-the-formation-of-the-agentic-ai-foundation</a></li>
+          <li><a href="https://www.lw.com/en/insights/ai-act-update-eu-resolves-to-change-rules-and-extend-deadlines" target="_blank" rel="noopener">https://www.lw.com/en/insights/ai-act-update-eu-resolves-to-change-rules-and-extend-deadlines</a></li>
+          <li><a href="https://www.macrumors.com/2026/04/24/openai-gpt-5-5-research-gains/" target="_blank" rel="noopener">https://www.macrumors.com/2026/04/24/openai-gpt-5-5-research-gains/</a></li>
+          <li><a href="https://www.macrumors.com/2026/05/28/anthropic-claude-opus-4-8/" target="_blank" rel="noopener">https://www.macrumors.com/2026/05/28/anthropic-claude-opus-4-8/</a></li>
+          <li><a href="https://www.marktechpost.com/2026/04/18/anthropic-releases-claude-opus-4-7-a-major-upgrade-for-agentic-coding-high-resolution-vision-and-long-horizon-autonomous-tasks/" target="_blank" rel="noopener">https://www.marktechpost.com/2026/04/18/anthropic-releases-claude-opus-4-7-a-major-upgrade-for-agentic-coding-high-resolution-vision-and-long-horizon-autonomous-tasks/</a></li>
+          <li><a href="https://www.marktechpost.com/2026/05/08/anthropic-introduces-natural-language-autoencoders-that-convert-claudes-internal-activations-directly-into-human-readable-text-explanations/" target="_blank" rel="noopener">https://www.marktechpost.com/2026/05/08/anthropic-introduces-natural-language-autoencoders-that-convert-claudes-internal-activations-directly-into-human-readable-text-explanations/</a></li>
+          <li><a href="https://www.mcgovern.org/grants/" target="_blank" rel="noopener">https://www.mcgovern.org/grants/</a></li>
+          <li><a href="https://www.mckinsey.com/about-us/new-at-mckinsey-blog/mckinsey-and-google-cloud-launch-the-mckinsey-google-transformation-group-to-scale-enterprise-impact-for-the-ai-era" target="_blank" rel="noopener">https://www.mckinsey.com/about-us/new-at-mckinsey-blog/mckinsey-and-google-cloud-launch-the-mckinsey-google-transformation-group-to-scale-enterprise-impact-for-the-ai-era</a></li>
+          <li><a href="https://www.mellon.org/news/humanity-ai-commits-500m-build-people-centered-future-ai" target="_blank" rel="noopener">https://www.mellon.org/news/humanity-ai-commits-500m-build-people-centered-future-ai</a></li>
+          <li><a href="https://www.merck.com/news/merck-and-google-cloud-partner-to-accelerate-agentic-ai-enterprise-transformation/" target="_blank" rel="noopener">https://www.merck.com/news/merck-and-google-cloud-partner-to-accelerate-agentic-ai-enterprise-transformation/</a></li>
+          <li><a href="https://www.mindstudio.ai/blog/claude-sonnet-4-opus-4-deprecation-migration-guide" target="_blank" rel="noopener">https://www.mindstudio.ai/blog/claude-sonnet-4-opus-4-deprecation-migration-guide</a></li>
+          <li><a href="https://www.modulos.ai/blog/eu-ai-act-omnibus-deal/" target="_blank" rel="noopener">https://www.modulos.ai/blog/eu-ai-act-omnibus-deal/</a></li>
+          <li><a href="https://www.moodys.com/web/en/us/media-relations/press-releases/moodys-brings-credit-and-compliance-workflows-directly-into-anthropics-claude.html" target="_blank" rel="noopener">https://www.moodys.com/web/en/us/media-relations/press-releases/moodys-brings-credit-and-compliance-workflows-directly-into-anthropics-claude.html</a></li>
+          <li><a href="https://www.morphllm.com/claude-benchmarks" target="_blank" rel="noopener">https://www.morphllm.com/claude-benchmarks</a></li>
+          <li><a href="https://www.morphllm.com/swe-bench-pro" target="_blank" rel="noopener">https://www.morphllm.com/swe-bench-pro</a></li>
+          <li><a href="https://www.nbcnews.com/tech/security/anthropic-project-glasswing-mythos-preview-claude-gets-limited-release-rcna267234" target="_blank" rel="noopener">https://www.nbcnews.com/tech/security/anthropic-project-glasswing-mythos-preview-claude-gets-limited-release-rcna267234</a></li>
+          <li><a href="https://www.newsweek.com/elon-musk-vs-sam-altman-feud-explained-as-openai-trial-begins-11886815" target="_blank" rel="noopener">https://www.newsweek.com/elon-musk-vs-sam-altman-feud-explained-as-openai-trial-begins-11886815</a></li>
+          <li><a href="https://www.nextplatform.com/ai/2026/04/28/microsoft-and-openai-remain-friends-are-looking-to-hook-up-with-others/5218929" target="_blank" rel="noopener">https://www.nextplatform.com/ai/2026/04/28/microsoft-and-openai-remain-friends-are-looking-to-hook-up-with-others/5218929</a></li>
+          <li><a href="https://www.nicfab.eu/en/posts/digital-omnibus-ai-deal/" target="_blank" rel="noopener">https://www.nicfab.eu/en/posts/digital-omnibus-ai-deal/</a></li>
+          <li><a href="https://www.nist.gov/news-events/news/2026/05/caisi-evaluation-deepseek-v4-pro" target="_blank" rel="noopener">https://www.nist.gov/news-events/news/2026/05/caisi-evaluation-deepseek-v4-pro</a></li>
+          <li><a href="https://www.nixonpeabody.com/insights/alerts/2026/02/09/data-privacy-cybersecurity-ai-developments-shaping-2026" target="_blank" rel="noopener">https://www.nixonpeabody.com/insights/alerts/2026/02/09/data-privacy-cybersecurity-ai-developments-shaping-2026</a></li>
+          <li><a href="https://www.nonprofitpro.com/article/nonprofit-ai-adoption-hits-92-but-only-7-see-major-impact/" target="_blank" rel="noopener">https://www.nonprofitpro.com/article/nonprofit-ai-adoption-hits-92-but-only-7-see-major-impact/</a></li>
+          <li><a href="https://www.nonprofitpro.com/article/report-funders-back-ai-for-philanthropy-urge-responsible-use/" target="_blank" rel="noopener">https://www.nonprofitpro.com/article/report-funders-back-ai-for-philanthropy-urge-responsible-use/</a></li>
+          <li><a href="https://www.npmjs.com/package/@anthropic-ai/claude-code?activeTab=versions" target="_blank" rel="noopener">https://www.npmjs.com/package/@anthropic-ai/claude-code?activeTab=versions</a></li>
+          <li><a href="https://www.npr.org/2026/04/27/nx-s1-5795661/trial-openai-elon-musk-sam-altman" target="_blank" rel="noopener">https://www.npr.org/2026/04/27/nx-s1-5795661/trial-openai-elon-musk-sam-altman</a></li>
+          <li><a href="https://www.npr.org/2026/04/28/nx-s1-5801438/musk-altman-openai-trial-opening-statements" target="_blank" rel="noopener">https://www.npr.org/2026/04/28/nx-s1-5801438/musk-altman-openai-trial-opening-statements</a></li>
+          <li><a href="https://www.nxcode.io/resources/news/claude-sonnet-4-8-release-date-features-what-to-expect-2026" target="_blank" rel="noopener">https://www.nxcode.io/resources/news/claude-sonnet-4-8-release-date-features-what-to-expect-2026</a></li>
+          <li><a href="https://www.omm.com/insights/alerts-publications/2026-data-security-and-privacy-compliance-checklist-key-us-state-law-updates-ai-rules-coppa-changes-and-global-data-protection-risks/" target="_blank" rel="noopener">https://www.omm.com/insights/alerts-publications/2026-data-security-and-privacy-compliance-checklist-key-us-state-law-updates-ai-rules-coppa-changes-and-global-data-protection-risks/</a></li>
+          <li><a href="https://www.onetrust.com/blog/ccpa-in-2026-whats-changing-in-consent-consumer-rights-and-ai-governance/" target="_blank" rel="noopener">https://www.onetrust.com/blog/ccpa-in-2026-whats-changing-in-consent-consumer-rights-and-ai-governance/</a></li>
+          <li><a href="https://www.onetrust.com/blog/how-the-eu-digital-omnibus-reshapes-ai-act-timelines-and-governance-in-2026/" target="_blank" rel="noopener">https://www.onetrust.com/blog/how-the-eu-digital-omnibus-reshapes-ai-act-timelines-and-governance-in-2026/</a></li>
+          <li><a href="https://www.onetrust.com/blog/where-ai-regulation-is-heading-in-2026-a-global-outlook/" target="_blank" rel="noopener">https://www.onetrust.com/blog/where-ai-regulation-is-heading-in-2026-a-global-outlook/</a></li>
+          <li><a href="https://www.orrick.com/en/Insights/2026/05/EUs-Digital-Omnibus-on-AI-7-Key-Changes-You-Need-to-Know" target="_blank" rel="noopener">https://www.orrick.com/en/Insights/2026/05/EUs-Digital-Omnibus-on-AI-7-Key-Changes-You-Need-to-Know</a></li>
+          <li><a href="https://www.outsystems.com/1/state-ai-development/" target="_blank" rel="noopener">https://www.outsystems.com/1/state-ai-development/</a></li>
+          <li><a href="https://www.pearlcohen.com/new-privacy-data-protection-and-ai-laws-in-2026/" target="_blank" rel="noopener">https://www.pearlcohen.com/new-privacy-data-protection-and-ai-laws-in-2026/</a></li>
+          <li><a href="https://www.philanthropy.com/news/can-ai-make-grant-seeking-easier-and-grant-making-more-refined/" target="_blank" rel="noopener">https://www.philanthropy.com/news/can-ai-make-grant-seeking-easier-and-grant-making-more-refined/</a></li>
+          <li><a href="https://www.pressrelease.com/news/voxpopme-introduces-compass-an-ai-research-agent-for-enterprise-22775538" target="_blank" rel="noopener">https://www.pressrelease.com/news/voxpopme-introduces-compass-an-ai-research-agent-for-enterprise-22775538</a></li>
+          <li><a href="https://www.privacyworld.blog/2026/01/primer-on-2026-consumer-privacy-ai-and-cybersecurity-laws/" target="_blank" rel="noopener">https://www.privacyworld.blog/2026/01/primer-on-2026-consumer-privacy-ai-and-cybersecurity-laws/</a></li>
+          <li><a href="https://www.prnewswire.com/news-releases/sap-to-acquire-prior-labs-to-establish-a-globally-leading-frontier-ai-lab-in-europe-302761284.html" target="_blank" rel="noopener">https://www.prnewswire.com/news-releases/sap-to-acquire-prior-labs-to-establish-a-globally-leading-frontier-ai-lab-in-europe-302761284.html</a></li>
+          <li><a href="https://www.prnewswire.com/news-releases/thomson-reuters-and-anthropic-expand-partnership-to-connect-claude-with-cocounsel-legal-302769890.html" target="_blank" rel="noopener">https://www.prnewswire.com/news-releases/thomson-reuters-and-anthropic-expand-partnership-to-connect-claude-with-cocounsel-legal-302769890.html</a></li>
+          <li><a href="https://www.quiverquant.com/news/Microsoft+Stock+(MSFT" target="_blank" rel="noopener">https://www.quiverquant.com/news/Microsoft+Stock+(MSFT</a></li>
+          <li><a href="https://www.ropesgray.com/en/insights/viewpoints/102mquz/ai-omnibus-trilogue-underwaywhat-to-expect-as-negotiations-progress" target="_blank" rel="noopener">https://www.ropesgray.com/en/insights/viewpoints/102mquz/ai-omnibus-trilogue-underwaywhat-to-expect-as-negotiations-progress</a></li>
+          <li><a href="https://www.salesforce.com/news/press-releases/2026/04/22/salesforce-google-cloud-launch-new-integrations-deep-context/" target="_blank" rel="noopener">https://www.salesforce.com/news/press-releases/2026/04/22/salesforce-google-cloud-launch-new-integrations-deep-context/</a></li>
+          <li><a href="https://www.schneier.com/blog/archives/2026/04/on-anthropics-mythos-preview-and-project-glasswing.html" target="_blank" rel="noopener">https://www.schneier.com/blog/archives/2026/04/on-anthropics-mythos-preview-and-project-glasswing.html</a></li>
+          <li><a href="https://www.scworld.com/news/anthropic-grants-mythos-access-to-150-more-organizations-plans-wider-release" target="_blank" rel="noopener">https://www.scworld.com/news/anthropic-grants-mythos-access-to-150-more-organizations-plans-wider-release</a></li>
+          <li><a href="https://www.slaughtermay.com/horizon-scanning/2026/digital/ai-update-for-2026/" target="_blank" rel="noopener">https://www.slaughtermay.com/horizon-scanning/2026/digital/ai-update-for-2026/</a></li>
+          <li><a href="https://www.softwareimprovementgroup.com/blog/eu-ai-act-summary/" target="_blank" rel="noopener">https://www.softwareimprovementgroup.com/blog/eu-ai-act-summary/</a></li>
+          <li><a href="https://www.storyboard18.com/digital/claude-opus-4-6-outage-resolved-anthropic-restores-services-after-nearly-six-hour-disruption-99992.htm" target="_blank" rel="noopener">https://www.storyboard18.com/digital/claude-opus-4-6-outage-resolved-anthropic-restores-services-after-nearly-six-hour-disruption-99992.htm</a></li>
+          <li><a href="https://www.technologyreview.com/2026/04/27/1136466/elon-musk-and-sam-altman-are-going-to-court-over-openais-future/" target="_blank" rel="noopener">https://www.technologyreview.com/2026/04/27/1136466/elon-musk-and-sam-altman-are-going-to-court-over-openais-future/</a></li>
+          <li><a href="https://www.technologyreview.com/2026/05/01/1136800/musk-v-altman-week-1-musk-says-he-was-duped-warns-ai-could-kill-us-all-and-admits-that-xai-distills-openais-models/" target="_blank" rel="noopener">https://www.technologyreview.com/2026/05/01/1136800/musk-v-altman-week-1-musk-says-he-was-duped-warns-ai-could-kill-us-all-and-admits-that-xai-distills-openais-models/</a></li>
+          <li><a href="https://www.technologyreview.com/2026/05/04/1136826/week-one-of-the-musk-v-altman-trial-what-it-was-like-in-the-room/" target="_blank" rel="noopener">https://www.technologyreview.com/2026/05/04/1136826/week-one-of-the-musk-v-altman-trial-what-it-was-like-in-the-room/</a></li>
+          <li><a href="https://www.techradar.com/news/live/claude-anthropic-down-outage-april-15-2026" target="_blank" rel="noopener">https://www.techradar.com/news/live/claude-anthropic-down-outage-april-15-2026</a></li>
+          <li><a href="https://www.techradar.com/pro/claude-cowork-is-now-available-for-enterprise-use-adds-analytics-access-controls-and-more" target="_blank" rel="noopener">https://www.techradar.com/pro/claude-cowork-is-now-available-for-enterprise-use-adds-analytics-access-controls-and-more</a></li>
+          <li><a href="https://www.techradar.com/pro/go-from-prototype-to-launch-in-days-rather-than-months-anthropic-reveals-claude-managed-agents-promises-to-make-agent-building-10x-faster" target="_blank" rel="noopener">https://www.techradar.com/pro/go-from-prototype-to-launch-in-days-rather-than-months-anthropic-reveals-claude-managed-agents-promises-to-make-agent-building-10x-faster</a></li>
+          <li><a href="https://www.techtimes.com/articles/317625/20260602/anthropic-ends-subscription-subsidy-agents-june-15-credit-pool-replaces-flat-rate-access.htm" target="_blank" rel="noopener">https://www.techtimes.com/articles/317625/20260602/anthropic-ends-subscription-subsidy-agents-june-15-credit-pool-replaces-flat-rate-access.htm</a></li>
+          <li><a href="https://www.techtimes.com/articles/317919/20260606/google-gemini-35-pro-nears-june-launch-2-million-token-context-deep-think-reasoning.htm" target="_blank" rel="noopener">https://www.techtimes.com/articles/317919/20260606/google-gemini-35-pro-nears-june-launch-2-million-token-context-deep-think-reasoning.htm</a></li>
+          <li><a href="https://www.techzine.eu/news/infrastructure/140353/anthropic-considers-developing-own-chip-to-reduce-third-party-reliance/" target="_blank" rel="noopener">https://www.techzine.eu/news/infrastructure/140353/anthropic-considers-developing-own-chip-to-reduce-third-party-reliance/</a></li>
+          <li><a href="https://www.telecoms.com/fibre/nokia-launches-agentic-ai-tools-for-fixed-networks" target="_blank" rel="noopener">https://www.telecoms.com/fibre/nokia-launches-agentic-ai-tools-for-fixed-networks</a></li>
+          <li><a href="https://www.tipranks.com/news/private-companies/snyk-embeds-anthropics-claude-to-scale-ai-native-application-security" target="_blank" rel="noopener">https://www.tipranks.com/news/private-companies/snyk-embeds-anthropics-claude-to-scale-ai-native-application-security</a></li>
+          <li><a href="https://www.tomsguide.com/news/live/google-io-2026-live-news-updates" target="_blank" rel="noopener">https://www.tomsguide.com/news/live/google-io-2026-live-news-updates</a></li>
+          <li><a href="https://www.tradingkey.com/analysis/stocks/us-stocks/261828809-microsoft-q3-2026-earnings-report-tradingkey" target="_blank" rel="noopener">https://www.tradingkey.com/analysis/stocks/us-stocks/261828809-microsoft-q3-2026-earnings-report-tradingkey</a></li>
+          <li><a href="https://www.trendmicro.com/en_us/research/26/d/vercel-breach-oauth-supply-chain.html" target="_blank" rel="noopener">https://www.trendmicro.com/en_us/research/26/d/vercel-breach-oauth-supply-chain.html</a></li>
+          <li><a href="https://www.twobirds.com/en/insights/2026/digital-omnibus-on-ai-provisional-agreement-reached-at-the-may-trilogue" target="_blank" rel="noopener">https://www.twobirds.com/en/insights/2026/digital-omnibus-on-ai-provisional-agreement-reached-at-the-may-trilogue</a></li>
+          <li><a href="https://www.twobirds.com/en/insights/2026/germany/digital-omnibus-on-ai-trilogue-stalls-ahead-of-the-ai-act-deadline" target="_blank" rel="noopener">https://www.twobirds.com/en/insights/2026/germany/digital-omnibus-on-ai-trilogue-stalls-ahead-of-the-ai-act-deadline</a></li>
+          <li><a href="https://www.usnews.com/news/technology/articles/2026-05-28/anthropic-vaults-to-a-965-billion-valuation-with-new-funding-as-claude-demand-surges" target="_blank" rel="noopener">https://www.usnews.com/news/technology/articles/2026-05-28/anthropic-vaults-to-a-965-billion-valuation-with-new-funding-as-claude-demand-surges</a></li>
+          <li><a href="https://www.usnews.com/news/top-news/articles/2026-05-06/in-openai-trial-former-technology-chief-says-altman-sowed-chaos-distrust-among-top-executives" target="_blank" rel="noopener">https://www.usnews.com/news/top-news/articles/2026-05-06/in-openai-trial-former-technology-chief-says-altman-sowed-chaos-distrust-among-top-executives</a></li>
+          <li><a href="https://www.vals.ai/benchmarks/swebench" target="_blank" rel="noopener">https://www.vals.ai/benchmarks/swebench</a></li>
+          <li><a href="https://www.vellum.ai/blog/claude-fable-5-and-mythos-5-benchmarks-explained" target="_blank" rel="noopener">https://www.vellum.ai/blog/claude-fable-5-and-mythos-5-benchmarks-explained</a></li>
+          <li><a href="https://www.vktr.com/ai-news/cloudflare-agents-week/" target="_blank" rel="noopener">https://www.vktr.com/ai-news/cloudflare-agents-week/</a></li>
+          <li><a href="https://www.washingtonpost.com/business/2026/05/28/anthropic-ai-claude-openai-valuation/" target="_blank" rel="noopener">https://www.washingtonpost.com/business/2026/05/28/anthropic-ai-claude-openai-valuation/</a></li>
+          <li><a href="https://www.washingtonpost.com/technology/2026/04/17/anthropic-ai-trump-security/" target="_blank" rel="noopener">https://www.washingtonpost.com/technology/2026/04/17/anthropic-ai-trump-security/</a></li>
+          <li><a href="https://www.wealthmanagement.com/artificial-intelligence/openai-anthropic-launch-separate-joint-venture-pe-partnerships" target="_blank" rel="noopener">https://www.wealthmanagement.com/artificial-intelligence/openai-anthropic-launch-separate-joint-venture-pe-partnerships</a></li>
+          <li><a href="https://www.whitecase.com/insight-alert/eu-agrees-digital-omnibus-deal-simplify-ai-rules" target="_blank" rel="noopener">https://www.whitecase.com/insight-alert/eu-agrees-digital-omnibus-deal-simplify-ai-rules</a></li>
+          <li><a href="https://www.wsgr.com/en/insights/2026-year-in-preview-ai-regulatory-developments-for-companies-to-watch-out-for.html" target="_blank" rel="noopener">https://www.wsgr.com/en/insights/2026-year-in-preview-ai-regulatory-developments-for-companies-to-watch-out-for.html</a></li>
+          </ul>
+        </div>
+      </details>
+    </section>
+
+    <!-- ============ UNVERIFIED / PUBLISHER-LEVEL ============ -->
+    <section class="block" id="unverified" aria-labelledby="uv-h">
+      <span class="section-eyebrow">Honesty about gaps</span>
+      <h2 class="section-title" id="uv-h">Cited in our research &mdash; public URL not verified</h2>
+      <p class="section-lead">
+        These sources are named in our articles but could not be tied to a confirmed public URL on
+        2026-06-16, or are proprietary/data-product references without an individually addressable
+        page. We list them by name and publisher rather than link to an unverified address.
+      </p>
+      <div class="reading-group">
+        <h3>Philanthropy &amp; nonprofit sector</h3>
+        <ul>
+          <li>Chronicle of Philanthropy &mdash; "A Foundation Pilot Program Simplifies Grant Reporting With AI" (2025)</li>
+          <li>CommunityForce &mdash; "Leveraging Advanced AI Features" (2025)</li>
+          <li>Momentive Software &mdash; "2025 Nonprofit Trends" (2025)</li>
+          <li>One Hundred Nights &mdash; "AI for Community Foundations" (2025)</li>
+          <li>PEAK Grantmaking &mdash; "Practical Applications of AI in Philanthropy" (2025)</li>
+          <li>CflowApps &mdash; "Nonprofit Digital Transformation in 2026: A Complete Guide" (2026)</li>
+          <li>PEAK Grantmaking / Grantbook / TAG / Tech Impact &mdash; "A Consumer's Guide to Grants Management Systems," 6th Edition</li>
+          <li>Salesforce &mdash; "Nonprofit Statistics and Trends" (2022)</li>
+          <li>Council on Foundations &mdash; responsible-AI convenings, Leading Locally 2025 (2025)</li>
+          <li>BNN Bloomberg &mdash; "Benevity Unveils New AI and Management Features" (March 2026)</li>
+        </ul>
+      </div>
+      <div class="reading-group">
+        <h3>Security, privacy &amp; compliance</h3>
+        <ul>
+          <li>BDO &mdash; "U.S. Federal Privacy Landscape for Nonprofit Organizations: HIPAA" (2025)</li>
+          <li>Lathrop GPM &mdash; "Get Ready for the New Minnesota Consumer Privacy Act" (2025)</li>
+          <li>Tardigrade Technology &mdash; "Key Nonprofit Cybersecurity Statistics in 2025" (2025)</li>
+          <li>VikingCloud &mdash; "205 Cybersecurity Statistics for 2026" (2026)</li>
+          <li>Wagenmaker Law / Wagenmaker &amp; Oberly &mdash; "New State Data Privacy Laws Affect Nonprofits" (2025)</li>
+          <li>Integrity360 (2024); CyberPeace Institute (2024); VeraSafe (2025); Number Analytics (2025); Barker Brettell (2024)</li>
+          <li>Aaron Hall (2024); BotCrawl (2025); Fundraise Up (2024); Hurwit &amp; Associates (2024); Reintivity Solutions (2025)</li>
+          <li>Regulatory references cited inline: FTC (May 2024); SEC (2023); California AG (June 2024); New York AG (Oct 2023); Protect Democracy (2024)</li>
+        </ul>
+      </div>
+      <div class="reading-group">
+        <h3>Agentic AI / orchestration</h3>
+        <ul>
+          <li>AI2 Incubator &mdash; "The State of AI Agents in 2025" (2025)</li>
+          <li>DataCamp &mdash; "CrewAI vs LangGraph vs AutoGen" (2026)</li>
+          <li>OpenAgents &mdash; "Open Source AI Agent Frameworks Compared" (2026)</li>
+          <li>CB Insights &mdash; "5 AI Agent Predictions for 2026" (2026)</li>
+          <li>Community MCP repositories &mdash; taylorwilsdon/google_workspace_mcp, ngs/google-mcp-server, bobmatnyc/gworkspace-mcp (GitHub)</li>
+          <li>Harmonic Security; Lasso Security; Fast.io; Make.com &mdash; connector security &amp; integration guides (2026)</li>
+          <li>SaaS adoption article analyst references: IDC; Mordor Intelligence (category-level, no per-source URL)</li>
+        </ul>
+      </div>
+      <div class="reading-group">
+        <h3>Commercial real estate market data <span class="src">(proprietary quarterly products)</span></h3>
+        <ul>
+          <li><a href="https://www.cbre.com/insights" target="_blank" rel="noopener">CBRE Insights / Capital Markets</a> <span class="src">— quarterly market &amp; underwriting reports (publisher hub)</span></li>
+          <li><a href="https://www.cushmanwakefield.com/en/united-states/insights" target="_blank" rel="noopener">Cushman &amp; Wakefield Insights</a> <span class="src">— bridge lending &amp; regional surveys (publisher hub)</span></li>
+          <li><a href="https://www.us.jll.com/en/trends-and-insights" target="_blank" rel="noopener">JLL Trends &amp; Insights</a> <span class="src">— bridge finance &amp; sector reports (publisher hub)</span></li>
+          <li><a href="https://www.costar.com/" target="_blank" rel="noopener">CoStar</a> <span class="src">— market profiles &amp; cap-rate data (subscription product)</span></li>
+          <li><a href="https://www.federalreserve.gov/" target="_blank" rel="noopener">Federal Reserve</a> <span class="src">— policy statements &amp; Financial Stability Report (March 2026)</span></li>
+          <li><a href="https://www.mba.org/news-and-research" target="_blank" rel="noopener">Mortgage Bankers Association</a> <span class="src">— origination &amp; credit conditions data (publisher hub)</span></li>
+          <li><a href="https://www.cmegroup.com/markets/interest-rates/cme-fedwatch-tool.html" target="_blank" rel="noopener">CME FedWatch</a> <span class="src">— rate-expectation tool (March 2026)</span></li>
+          <li><a href="https://www.spglobal.com/market-intelligence/en" target="_blank" rel="noopener">S&amp;P Global Market Intelligence</a> <span class="src">— banking-sector analysis (publisher hub)</span></li>
+          <li><a href="https://www.sifma.org/resources/research/" target="_blank" rel="noopener">SIFMA Research</a> <span class="src">— bond-market data (publisher hub)</span></li>
+          <li>"Floating Rate Trends" and "SNAPS (Securitized Non-Agency Property Studies)" &mdash; specialist/internal datasets, no public page located</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ CROSS-LINK ============ -->
+    <div class="prereq">
+      <h4>Where these sources lead</h4>
+      <p>
+        This index is the evidence base under everything we publish &mdash; and under how we help
+        organizations adopt AI responsibly. <a href="index.html">See the AI Enablement service &rarr;</a>
+        &nbsp;&middot;&nbsp; <a href="philanthropy-ai-research.html">Browse the research itself &rarr;</a>
+      </p>
+    </div>
+
+    <section class="cta-band" id="contact" aria-labelledby="cta-heading">
+      <h2 id="cta-heading">From AI curiosity to AI capability</h2>
+      <p>A curated, white-glove Claude Cowork implementation, tailored to your organization's workflow.</p>
+      <a class="btn" href="https://calendly.com/mark-malaniru/30min" target="_blank" rel="noopener">Book a discovery call</a>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Malaniru Inc, LLC &middot; Lafayette, Colorado &middot; AI Enablement</p>
+    <p>Part of Malaniru's guided AI adoption path. <a href="index.html">Back to AI Enablement &rarr;</a></p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<!--
+  ============================================================================
+  Malaniru — Intake Questionnaires (branded HTML)
+  Source: Projects/Philanthropy_io_Consultant_Enablement/Assets/05-onboarding/
+            ai-readiness-questionnaire.md
+            security-compliance-questionnaire.md
+            client-intake-merged.md  (Operational Assessment)
+  Scope: overview page — purpose, completion time, turnaround, and section
+         breakdown per questionnaire (not full question text).
+  Same style system as policy-summary.html. Single self-contained HTML5 file.
+  Embedded CSS. No JavaScript. Brand tokens from _config/brand-voice.md.
+  WCAG AA contrast. Mobile-first. robots noindex while pre-publication.
+  ============================================================================
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Intake Questionnaires — Malaniru</title>
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="Three structured intake questionnaires that open a Malaniru engagement — AI Readiness, Security & Compliance, and Operational Assessment.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    /* ---- Brand tokens (from _config/brand-voice.md) ---------------------- */
+    :root {
+      --navy:        #0F1A2E;
+      --navy-mid:    #2A3F63;
+      --copper:      #C07830;
+      --gold:        #D4A853;
+      --off-white:   #F4F1EC;
+      --light-gray:  #E8E6E1;
+      --mid-gray:    #8A8A96;
+      --dark-text:   #1C1C1C;
+      --font: "Inter", "Helvetica Neue", Arial, sans-serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: var(--font);
+      background: var(--off-white);
+      color: var(--dark-text);
+      line-height: 1.6;
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ---- Header / hero --------------------------------------------------- */
+    header {
+      background: var(--navy);
+      color: var(--off-white);
+      padding: 56px 24px 60px;
+      position: relative;
+      overflow: hidden;
+    }
+    header::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 85% 15%, rgba(192,120,48,0.20) 0%, rgba(15,26,46,0) 55%);
+      pointer-events: none;
+    }
+    .header-inner { max-width: 860px; margin: 0 auto; position: relative; z-index: 1; }
+
+    .wordmark {
+      font-weight: 800;
+      font-size: 1.25rem;
+      letter-spacing: 0.02em;
+      margin-bottom: 36px;
+    }
+    .wordmark .dot { color: var(--copper); }
+    .wordmark a {
+      color: var(--off-white);
+      text-decoration: none;
+      transition: opacity 0.18s ease;
+    }
+    .wordmark a:hover, .wordmark a:focus-visible { opacity: 0.85; outline: none; }
+
+    .eyebrow {
+      display: inline-block;
+      font-size: 0.74rem;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 16px;
+    }
+
+    header h1 {
+      font-weight: 800;
+      font-size: clamp(1.9rem, 5vw, 2.8rem);
+      line-height: 1.12;
+      letter-spacing: -0.01em;
+      margin-bottom: 18px;
+      max-width: 20ch;
+    }
+
+    header p.intro {
+      font-size: 1.05rem;
+      color: var(--light-gray);
+      max-width: 64ch;
+    }
+
+    /* ---- Content --------------------------------------------------------- */
+    main {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 56px 24px 24px;
+    }
+
+    .quest {
+      background: #fff;
+      border: 1px solid var(--light-gray);
+      border-radius: 12px;
+      padding: 30px 30px 26px;
+      margin-bottom: 26px;
+    }
+
+    .quest-head {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 18px;
+    }
+    .num {
+      flex-shrink: 0;
+      width: 42px;
+      height: 42px;
+      border-radius: 9px;
+      background: var(--navy);
+      color: var(--gold);
+      font-weight: 700;
+      font-size: 1.1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .quest-head h2 {
+      font-weight: 700;
+      font-size: 1.3rem;
+      color: var(--navy);
+      line-height: 1.2;
+    }
+
+    /* meta chips */
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 18px;
+    }
+    .chip {
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--navy-mid);
+      background: var(--off-white);
+      border: 1px solid var(--light-gray);
+      border-radius: 999px;
+      padding: 5px 13px;
+    }
+    .chip strong { color: var(--copper); }
+
+    .purpose {
+      color: var(--dark-text);
+      margin-bottom: 20px;
+      padding-bottom: 18px;
+      border-bottom: 1px solid var(--light-gray);
+    }
+
+    .sections-label {
+      display: block;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--navy-mid);
+      margin-bottom: 12px;
+    }
+
+    ol.sections {
+      list-style: none;
+      counter-reset: sec;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px 24px;
+    }
+    ol.sections li {
+      counter-increment: sec;
+      position: relative;
+      padding-left: 30px;
+      font-size: 0.95rem;
+      color: var(--dark-text);
+    }
+    ol.sections li::before {
+      content: counter(sec);
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 21px;
+      height: 21px;
+      border-radius: 5px;
+      background: var(--light-gray);
+      color: var(--navy);
+      font-size: 0.72rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* ---- Process note ---------------------------------------------------- */
+    .process {
+      background: var(--navy);
+      color: var(--light-gray);
+      border-radius: 12px;
+      padding: 30px 32px;
+      margin-bottom: 26px;
+      font-size: 1rem;
+    }
+    .process .sections-label { color: var(--gold); }
+    .process p { color: var(--light-gray); }
+    .process a {
+      color: var(--gold);
+      font-weight: 600;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(212,168,83,0.4);
+      transition: border-color 0.18s ease;
+    }
+    .process a:hover, .process a:focus-visible { border-bottom-color: var(--gold); outline: none; }
+
+    footer {
+      max-width: 860px;
+      margin: 8px auto 0;
+      padding: 24px;
+      font-size: 0.82rem;
+      color: var(--mid-gray);
+      border-top: 1px solid var(--light-gray);
+    }
+    a { color: var(--copper); }
+
+    @media (max-width: 620px) {
+      ol.sections { grid-template-columns: 1fr; }
+    }
+  
+    /* 2026-06-16: hide Book a discovery call CTA buttons (per Principal) */
+    a[href*="calendly.com"] { display: none !important; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <div class="wordmark"><a href="index.html">Malaniru<span class="dot">.</span></a></div>
+      <span class="eyebrow">Engagement Intake</span>
+      <h1>Intake Questionnaires</h1>
+      <p class="intro">
+        Three structured questionnaires open an engagement. Each meets your
+        organization where it is, gathers an honest current-state picture, and
+        feeds a specific deliverable. Answer based on what you do today, not what
+        you aspire to &mdash; candid answers produce the most useful assessment.
+      </p>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- 1 — Operational Assessment -->
+    <section class="quest">
+      <div class="quest-head"><span class="num" aria-hidden="true">1</span><h2>Operational Assessment</h2></div>
+      <div class="meta">
+        <span class="chip"><strong>63</strong> questions</span>
+        <span class="chip"><strong>50&ndash;60</strong> min</span>
+        <span class="chip">Turnaround <strong>5&ndash;7</strong> business days</span>
+      </div>
+      <p class="purpose">A single new-client intake covering current state, operations, technology, governance, and goals. Feeds both your engagement plan and your Operational Assessment &mdash; a structured analysis of where you're strong, where gaps exist, and which gaps are the highest-impact opportunities.</p>
+      <span class="sections-label">Sections</span>
+      <ol class="sections">
+        <li>Your Organization</li>
+        <li>Grant Lifecycle &amp; Workflow</li>
+        <li>Technology &amp; Systems</li>
+        <li>Data, Documents &amp; Knowledge Management</li>
+        <li>Compliance &amp; Reporting</li>
+        <li>Impact Measurement &amp; Learning</li>
+        <li>Staff &amp; Organizational Readiness</li>
+        <li>Process Maturity &amp; Change Readiness</li>
+        <li>AI Awareness &amp; Appetite</li>
+        <li>Business Continuity &amp; Risk</li>
+        <li>Engagement Goals</li>
+      </ol>
+    </section>
+
+    <!-- 2 — Security & Compliance -->
+    <section class="quest">
+      <div class="quest-head"><span class="num" aria-hidden="true">2</span><h2>Security &amp; Compliance Review</h2></div>
+      <div class="meta">
+        <span class="chip"><strong>38</strong> questions</span>
+        <span class="chip"><strong>35&ndash;45</strong> min</span>
+        <span class="chip">Turnaround <strong>5&ndash;7</strong> business days</span>
+      </div>
+      <p class="purpose">Evaluates current security practices, data handling procedures, and compliance posture to identify risks and prioritize improvements. Feeds your Security &amp; Compliance Review &mdash; current-state findings, a risk matrix, and prioritized recommendations proportionate to your size and resources.</p>
+      <span class="sections-label">Sections</span>
+      <ol class="sections">
+        <li>Organization &amp; Data Landscape</li>
+        <li>Access Controls &amp; Identity Management</li>
+        <li>Data Handling &amp; Storage</li>
+        <li>Vendor &amp; Third-Party Risk</li>
+        <li>Compliance Posture</li>
+        <li>Email &amp; Communication Security</li>
+        <li>Incident Readiness</li>
+        <li>AI &amp; Emerging Technology (Security Lens)</li>
+        <li>Closing</li>
+      </ol>
+    </section>
+
+    <!-- 3 — AI Readiness -->
+    <section class="quest">
+      <div class="quest-head"><span class="num" aria-hidden="true">3</span><h2>AI Readiness Assessment</h2></div>
+      <div class="meta">
+        <span class="chip"><strong>37</strong> questions</span>
+        <span class="chip"><strong>30&ndash;40</strong> min</span>
+        <span class="chip">Turnaround <strong>5&ndash;7</strong> business days</span>
+      </div>
+      <p class="purpose">Understands where your organization stands with AI today, where the opportunities are, and what needs to be true before meaningful adoption can begin. Feeds your AI Readiness Assessment &mdash; mapping AI capabilities to mission-critical workflows with a practical adoption path.</p>
+      <span class="sections-label">Sections</span>
+      <ol class="sections">
+        <li>Current State &mdash; AI Awareness &amp; Usage</li>
+        <li>Data Readiness</li>
+        <li>Workflow Mapping &mdash; Where AI Could Help</li>
+        <li>Governance &amp; Compliance Considerations</li>
+        <li>Staff Readiness &amp; Change Management</li>
+        <li>Strategic Alignment</li>
+        <li>Vision &amp; Priorities</li>
+        <li>Closing</li>
+      </ol>
+    </section>
+
+    <div class="process">
+      <span class="sections-label">What happens next</span>
+      <p>After you submit a questionnaire, your engagement team reviews your responses and may follow up with a brief call to clarify specific items. We then produce the corresponding deliverable &mdash; tailored to your organization's size, culture, resources, and goals. All responses are treated as confidential and are not shared outside your engagement team. Assessments are informational and do not constitute legal advice; findings should be reviewed by qualified counsel before implementation decisions.</p>
+      <p style="margin-top:14px;">These intake questionnaires are the first step of <a href="index.html#analysis">Analysis in the AI Enablement engagement &rarr;</a></p>
+    </div>
+
+  </main>
+
+  <footer>
+    &copy; 2026 Malaniru Inc, LLC &middot; Lafayette, Colorado &middot; Engagement intake questionnaires
+  </footer>
+</body>
+</html>

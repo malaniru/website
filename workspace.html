@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<!--
+  ============================================================================
+  Malaniru — The Malaniru Workspace (Hands-on Training summary, branded HTML)
+  Built by: Morgan Shaw (Web Designer) · Date: 2026-06-16
+  Project:  Malaniru_Marketing_Site
+  Source spec:    Agents/Marketing/Web/Input/INPUT.MD (As Web · 2026-06-16)
+  Content source: Projects/Malaniru_Marketing_Site/Outputs/
+                  20260616-claudia-workspace-summary-output.md  (approved copy)
+
+  STATUS / FLAGS:
+  - PUBLIC marketing/enablement summary of the Malaniru workspace and the
+    hands-on training stage of an engagement. Sibling to ai-fluency.html;
+    matches the ai-enablement.html / ai-fluency.html page system.
+  - Visitor-facing copy rendered VERBATIM from the approved source. No
+    paraphrase, reorder, or invented copy.
+  - Internal annotations from the source were STRIPPED per spec, exactly as
+    Morgan handled ai-enablement.html: the "⚑ For Malaniru review before
+    publishing" note and the "Draft prepared for translation…" line are NOT
+    published.
+  - ⚑ OPEN FLAG (carried forward): the Anthropic data & data-training policy
+    section must be verified against Anthropic's live published terms before
+    this page goes public. Wording here is rendered verbatim from the approved
+    draft, which itself flags this for launch-time verification. Anthropic's
+    data policies have changed more than once in the past year.
+  - PRICING intentionally omitted everywhere — remains [HUMAN REVIEW].
+  - Filename workspace.html and link label "Explore the Workspace →" confirmed
+    by Marketing (2026-06-16), not silently chosen.
+  - robots noindex/nofollow while pre-publication.
+  - Brand language: "hands-on / workflow-specific." Avoids "certification /
+    course / cutting-edge / revolutionary / supercharge / unlock" per
+    brand-voice.md. No "Not X, Not Y, just Z" pattern.
+
+  TECHNICAL:
+  - Single self-contained HTML5 file. Embedded CSS. No JavaScript. No frameworks.
+  - Only external resource: Inter via Google Fonts (400;500;600;700;800).
+  - Brand tokens from _config/brand-voice.md. WCAG AA contrast. Mobile-first.
+  ============================================================================
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Malaniru Workspace — Malaniru</title>
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="A plain-language summary of the Malaniru workspace used in hands-on training: the Claude desktop app in folder mode, Anthropic's data policies, connectors, the skill builder, open-source skills, and scheduled tasks — and how they fit together.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    /* ---- Brand tokens (from _config/brand-voice.md) ---------------------- */
+    :root {
+      --navy:        #0F1A2E;
+      --navy-mid:    #2A3F63;
+      --copper:      #C07830;
+      --gold:        #D4A853;
+      --off-white:   #F4F1EC;
+      --light-gray:  #E8E6E1;
+      --mid-gray:    #8A8A96;
+      --dark-text:   #1C1C1C;
+      --font: "Inter", "Helvetica Neue", Arial, sans-serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: var(--font);
+      background: var(--off-white);
+      color: var(--dark-text);
+      line-height: 1.6;
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .skip-link {
+      position: absolute;
+      left: -999px;
+      top: 0;
+      background: var(--gold);
+      color: var(--navy);
+      padding: 10px 16px;
+      font-weight: 700;
+      z-index: 10;
+    }
+    .skip-link:focus { left: 8px; top: 8px; }
+
+    /* ---- Header / hero --------------------------------------------------- */
+    header {
+      background: var(--navy);
+      color: var(--off-white);
+      padding: 56px 24px 60px;
+      position: relative;
+      overflow: hidden;
+    }
+    header::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 85% 15%, rgba(192,120,48,0.20) 0%, rgba(15,26,46,0) 55%);
+      pointer-events: none;
+    }
+    .header-inner { max-width: 860px; margin: 0 auto; position: relative; z-index: 1; }
+
+    .wordmark {
+      font-weight: 800;
+      font-size: 1.25rem;
+      letter-spacing: 0.02em;
+      margin-bottom: 36px;
+    }
+    .wordmark .dot { color: var(--copper); }
+    .wordmark a {
+      color: var(--off-white);
+      text-decoration: none;
+      transition: opacity 0.18s ease;
+    }
+    .wordmark a:hover, .wordmark a:focus-visible { opacity: 0.85; outline: none; }
+
+    .eyebrow {
+      display: inline-block;
+      font-size: 0.74rem;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 16px;
+    }
+
+    header h1 {
+      font-weight: 800;
+      font-size: clamp(1.9rem, 5vw, 2.8rem);
+      line-height: 1.12;
+      letter-spacing: -0.01em;
+      margin-bottom: 18px;
+      max-width: 20ch;
+    }
+
+    header p.intro {
+      font-size: 1.05rem;
+      color: var(--light-gray);
+      max-width: 64ch;
+    }
+    header p.intro + p.intro { margin-top: 14px; }
+
+    /* ---- Content --------------------------------------------------------- */
+    main {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 56px 24px 24px;
+    }
+
+    .lead-prose { margin-bottom: 48px; }
+    .lead-prose p { color: var(--dark-text); max-width: 66ch; }
+    .lead-prose p + p { margin-top: 16px; }
+    .lead-prose em { font-style: italic; }
+
+    section { margin-bottom: 48px; }
+
+    .section-eyebrow {
+      display: block;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--copper);
+      margin-bottom: 10px;
+    }
+    .section-title {
+      font-weight: 800;
+      font-size: 1.6rem;
+      color: var(--navy);
+      line-height: 1.2;
+      margin-bottom: 14px;
+      letter-spacing: -0.01em;
+    }
+    .prose p { color: var(--dark-text); max-width: 66ch; }
+    .prose p + p { margin-top: 16px; }
+    .prose strong { font-weight: 700; }
+    .prose em { font-style: italic; }
+    .prose a { color: var(--copper); font-weight: 600; }
+
+    .subsection-title {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: var(--navy);
+      line-height: 1.25;
+      margin: 28px 0 12px;
+    }
+
+    /* ---- Data-policy card ------------------------------------------------ */
+    .datapolicy {
+      background: #fff;
+      border: 1px solid var(--light-gray);
+      border-left: 4px solid var(--copper);
+      border-radius: 12px;
+      padding: 28px 30px 24px;
+      margin-top: 18px;
+    }
+    .datapolicy .plan {
+      padding: 18px 0;
+      border-bottom: 1px solid var(--light-gray);
+    }
+    .datapolicy .plan:first-of-type { padding-top: 4px; }
+    .datapolicy .plan:last-of-type { border-bottom: none; }
+    .datapolicy .plan p { color: var(--dark-text); max-width: 66ch; }
+    .datapolicy .lead-in { color: var(--dark-text); max-width: 66ch; margin-bottom: 6px; }
+    .datapolicy .guidance { color: var(--dark-text); max-width: 66ch; margin-top: 18px; }
+    .datapolicy strong { font-weight: 700; }
+    .datapolicy em { font-style: italic; }
+
+    /* ---- Connectors list ------------------------------------------------- */
+    .connectors {
+      list-style: none;
+      background: #fff;
+      border: 1px solid var(--light-gray);
+      border-radius: 12px;
+      padding: 8px 30px;
+      margin: 22px 0;
+    }
+    .connectors li {
+      display: flex;
+      gap: 16px;
+      padding: 18px 0;
+      border-bottom: 1px solid var(--light-gray);
+    }
+    .connectors li:last-child { border-bottom: none; }
+    .connectors .marker {
+      flex-shrink: 0;
+      width: 10px;
+      height: 10px;
+      margin-top: 9px;
+      border-radius: 50%;
+      background: var(--copper);
+    }
+    .connectors .name { font-weight: 700; color: var(--navy); }
+    .connectors p { color: var(--dark-text); }
+
+    /* ---- Skill cards ----------------------------------------------------- */
+    .skills { margin-top: 22px; }
+    .skill-card {
+      background: #fff;
+      border: 1px solid var(--light-gray);
+      border-radius: 12px;
+      padding: 26px 30px 24px;
+      margin-bottom: 18px;
+    }
+    .skill-card h3 {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: var(--navy);
+      margin-bottom: 10px;
+    }
+    .skill-card p { color: var(--dark-text); max-width: 64ch; }
+    .skill-card code {
+      font-family: "JetBrains Mono", "Fira Code", "Courier New", monospace;
+      background: var(--light-gray);
+      color: var(--navy);
+      padding: 1px 6px;
+      border-radius: 4px;
+      font-size: 0.92em;
+    }
+
+    /* ---- Fit-together summary list --------------------------------------- */
+    .fit {
+      list-style: none;
+      margin-top: 20px;
+    }
+    .fit li {
+      display: flex;
+      gap: 16px;
+      padding: 14px 0;
+    }
+    .fit .marker {
+      flex-shrink: 0;
+      width: 10px;
+      height: 10px;
+      margin-top: 9px;
+      border-radius: 50%;
+      background: var(--gold);
+    }
+    .fit p { color: var(--dark-text); max-width: 64ch; }
+    .fit strong { font-weight: 700; color: var(--navy); }
+
+    /* ---- Return / cross-link block --------------------------------------- */
+    .return {
+      background: #fff;
+      border: 1px solid var(--light-gray);
+      border-left: 4px solid var(--copper);
+      border-radius: 10px;
+      padding: 24px 28px;
+      margin-bottom: 8px;
+    }
+    .return h4 { font-weight: 700; color: var(--navy); margin-bottom: 6px; font-size: 1.05rem; }
+    .return p { color: var(--dark-text); max-width: 64ch; }
+    .return a { color: var(--copper); font-weight: 600; text-decoration: none; }
+    .return a:hover, .return a:focus-visible { text-decoration: underline; }
+
+    /* ---- Footer ---------------------------------------------------------- */
+    footer {
+      max-width: 860px;
+      margin: 16px auto 0;
+      padding: 24px;
+      font-size: 0.82rem;
+      color: var(--mid-gray);
+      border-top: 1px solid var(--light-gray);
+    }
+    footer .sources { margin-bottom: 14px; }
+    footer .sources h2 {
+      font-size: 0.74rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--mid-gray);
+      margin-bottom: 8px;
+    }
+    footer .sources ul { list-style: none; }
+    footer .sources li { margin-bottom: 5px; word-break: break-word; }
+    footer .sources li .label { color: var(--dark-text); font-weight: 600; }
+    footer a { color: var(--mid-gray); text-decoration: underline; }
+    footer p + p { margin-top: 6px; }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header>
+    <div class="header-inner">
+      <div class="wordmark"><a href="index.html">Malaniru<span class="dot">.</span></a></div>
+      <span class="eyebrow">Hands-On AI Training</span>
+      <h1>The Malaniru Workspace</h1>
+      <p class="intro">How the tools you&rsquo;ll actually use fit together &mdash; and why they&rsquo;re set up the way they are.</p>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- Opening prose (verbatim source intro) -->
+    <div class="lead-prose">
+      <p>This is the companion piece to the workflow-integration stage of a Malaniru engagement. The earlier steps put governance and AI awareness in place; this is where the team learns to work inside a real, configured environment rather than a generic chat window. The summary below walks through the pieces of that environment &mdash; the application itself, the data policies that make it safe for sensitive work, the connectors that bring your existing tools into reach, and the skills and automation that turn one-off prompts into repeatable workflows.</p>
+      <p>Nothing here requires a technical background. The goal is for you to understand <em>what each piece does and why it&rsquo;s there</em>, so the hands-on sessions build on a clear foundation.</p>
+    </div>
+
+    <!-- Why we work in the Claude desktop app -->
+    <section aria-labelledby="app-heading">
+      <span class="section-eyebrow">The Environment</span>
+      <h2 class="section-title" id="app-heading">Why we work in the Claude desktop app</h2>
+      <div class="prose">
+        <p>Most people meet AI through a browser tab: a single text box, one conversation at a time, no memory of what you did yesterday. That&rsquo;s fine for quick questions. It is not a workspace.</p>
+        <p>The Malaniru environment runs in the <strong>Claude desktop application</strong> in what&rsquo;s called <em>&ldquo;work in a folder&rdquo;</em> mode. Instead of a disconnected chat, Claude works directly inside a folder on your computer &mdash; reading the files that are there, writing new ones back, and keeping the structure organized. Your documents, templates, notes, and outputs all live in one place that you control, on your own machine. Claude becomes a colleague who can see the filing cabinet, not a stranger you have to describe everything to.</p>
+        <p>This matters for three practical reasons. First, <strong>context</strong>: the work persists. The environment remembers your projects, your preferences, and prior decisions across sessions, so you aren&rsquo;t starting from zero each morning. Second, <strong>control</strong>: files stay in your folder, named and routed the way your work actually flows. Third, <strong>capability</strong>: the desktop app is where connectors, skills, and scheduled automation are available &mdash; the features that move you from &ldquo;asking an AI questions&rdquo; to &ldquo;running your workflow with an AI inside it.&rdquo;</p>
+        <p>For each Client, we build a <strong>trimmed-down version of this workspace</strong> &mdash; configured for your team&rsquo;s actual tasks, without the parts you don&rsquo;t need. You&rsquo;re learning the environment you&rsquo;ll use, not a demo of one.</p>
+      </div>
+
+      <h3 class="subsection-title">Anthropic&rsquo;s data and data-training policies</h3>
+      <div class="datapolicy">
+        <p class="lead-in">For work involving foundation and grantee data, <em>where your information goes</em> is not a footnote. It&rsquo;s the first question, and it deserves a clear answer.</p>
+        <p class="lead-in">Anthropic &mdash; the company that makes Claude &mdash; handles data differently depending on which kind of plan you&rsquo;re on, and the distinction is important:</p>
+
+        <div class="plan">
+          <p><strong>Consumer plans (Claude Free, Pro, and Max).</strong> As of an August 2025 policy change, conversations on these plans <strong>can be used to help train future Claude models</strong> <em>unless you turn that setting off</em>. The control is a toggle labeled <strong>&ldquo;Help improve Claude&rdquo;</strong> in Privacy Settings. If it&rsquo;s left on, data can be retained for up to five years; if you switch it off, the older 30-day deletion window applies and your chats are not used for training. New users choose during signup; existing users were prompted to make a selection.</p>
+        </div>
+
+        <div class="plan">
+          <p><strong>Commercial plans (Claude for Work / Team, Enterprise, Education, Gov, and the API).</strong> These are <strong>excluded</strong> from the consumer training policy. Data from commercial accounts is <strong>not used to train Anthropic&rsquo;s models</strong> by default, and there is no opt-in/opt-out toggle because the commercial terms already cover it.</p>
+        </div>
+
+        <p class="guidance">The practical guidance for your work is straightforward: for anything touching sensitive foundation, donor, or grantee information, you want to be operating under terms where your data is not used for training. On a consumer plan that means confirming &ldquo;Help improve Claude&rdquo; is <strong>off</strong>; on a commercial plan that protection is the default.</p>
+      </div>
+    </section>
+
+    <!-- Connectors -->
+    <section aria-labelledby="connectors-heading">
+      <span class="section-eyebrow">Connectors</span>
+      <h2 class="section-title" id="connectors-heading">Bringing your existing tools into the workspace</h2>
+      <div class="prose">
+        <p>A connector is a secure link between Claude and a service you already use. Once connected, Claude can work with the information in that service directly &mdash; find a document, read an email thread, check a task list &mdash; without you copying and pasting it back and forth. You authorize each connection, and you can see and revoke them.</p>
+        <p>The connectors configured for this environment cover the everyday tools a consultant actually lives in:</p>
+      </div>
+      <ul class="connectors">
+        <li><span class="marker" aria-hidden="true"></span><p><span class="name">Google Drive</span> &mdash; find, read, and reference documents, spreadsheets, and folders stored in Drive.</p></li>
+        <li><span class="marker" aria-hidden="true"></span><p><span class="name">Gmail</span> &mdash; search and read email threads, draft replies, and pull context out of correspondence.</p></li>
+        <li><span class="marker" aria-hidden="true"></span><p><span class="name">Asana</span> &mdash; look up tasks and projects, check what&rsquo;s assigned and what&rsquo;s due, and keep project tracking in sync with the work.</p></li>
+        <li><span class="marker" aria-hidden="true"></span><p><span class="name">Box</span> &mdash; access files and folders stored in Box, a common system of record for organizations with stricter document-management needs.</p></li>
+        <li><span class="marker" aria-hidden="true"></span><p><span class="name">Office 365</span> &mdash; work with Microsoft documents, email, and calendar for teams that run on the Microsoft stack.</p></li>
+      </ul>
+      <div class="prose">
+        <p>The point of connectors is to remove the busywork of moving information between tools. Instead of exporting a task list from Asana, pasting it into a chat, and asking for a summary, you ask once and Claude reaches the source itself. The same data-handling care applies here: a connector only does what you&rsquo;ve authorized, and sensitive-data judgment still belongs to you.</p>
+      </div>
+    </section>
+
+    <!-- The skill builder -->
+    <section aria-labelledby="skillbuilder-heading">
+      <span class="section-eyebrow">The Skill Builder</span>
+      <h2 class="section-title" id="skillbuilder-heading">Teaching the workspace your repeatable jobs</h2>
+      <div class="prose">
+        <p>A <strong>skill</strong> is a saved, reusable instruction set &mdash; a way to package &ldquo;how we do this particular task&rdquo; so it runs the same way every time, without re-explaining it. Think of a skill as a recipe the workspace already knows.</p>
+        <p>The <strong>skill builder</strong> is the tool for creating and refining these. When you find yourself doing the same kind of work repeatedly &mdash; formatting a grant summary a specific way, drafting a standard client update, running a particular review checklist &mdash; that pattern can be turned into a skill. Once built, it&rsquo;s available on demand and behaves consistently, which is exactly what you want when the output has to meet a standard rather than just &ldquo;look about right.&rdquo;</p>
+        <p>For the team, the value is durability: a good skill captures the <em>right</em> way to do something once, so the quality doesn&rsquo;t depend on whoever happens to be at the keyboard or how well they remember the steps that day.</p>
+      </div>
+    </section>
+
+    <!-- Open-source skills -->
+    <section aria-labelledby="oss-heading">
+      <span class="section-eyebrow">Open-Source Skills</span>
+      <h2 class="section-title" id="oss-heading">Malaniru&rsquo;s open-source skills</h2>
+      <div class="prose">
+        <p>Beyond skills you build yourself, Malaniru maintains a set of open-source skills that come configured in the workspace. Three are worth knowing from day one:</p>
+      </div>
+      <div class="skills">
+        <article class="skill-card">
+          <h3>Prompt Builder</h3>
+          <p>Turns a rough request into a complete, well-structured instruction before any work begins. You start a message with <code>Prompt:</code> and describe what you need; the skill asks a few targeted clarifying questions, assembles a proper brief, and then runs it &mdash; routing the result to the right folder automatically. It&rsquo;s the difference between firing off a vague ask and handing over a clear assignment. It also keeps an organized trail of what was produced and where, so the workspace stays tidy on its own.</p>
+        </article>
+        <article class="skill-card">
+          <h3>Research</h3>
+          <p>A structured research workflow that gathers information from reputable sources, checks claims rather than just asserting them, and produces a dated, cited write-up. It&rsquo;s built around a simple discipline that runs through everything Malaniru does: <em>a wrong answer is worse than no answer</em>, so sources are required and uncertain claims are flagged rather than dressed up as fact. You trigger it by starting a message with <code>Research:</code> followed by the topic.</p>
+        </article>
+        <article class="skill-card">
+          <h3>Project Memory</h3>
+          <p>Keeps the thread across sessions and across projects. It captures the current state of a piece of work &mdash; open decisions, what&rsquo;s done, what&rsquo;s next, which files matter &mdash; into a project record, so when you return days later (or hand off to a colleague), the context is there waiting rather than locked in someone&rsquo;s head. This is what lets the workspace feel continuous instead of resetting every time you open it.</p>
+        </article>
+      </div>
+      <div class="prose">
+        <p>These skills are open source, which means the way they work is inspectable and not a black box &mdash; a deliberate choice for an organization that has to be able to explain its tools to data-conscious clients.</p>
+      </div>
+    </section>
+
+    <!-- Scheduled tasks -->
+    <section aria-labelledby="scheduled-heading">
+      <span class="section-eyebrow">Scheduled Tasks</span>
+      <h2 class="section-title" id="scheduled-heading">Work that runs without you</h2>
+      <div class="prose">
+        <p>The workspace can also do things <strong>on a schedule</strong>, without you starting them by hand. A scheduled task is a saved instruction set to run at a chosen time or on a repeating cadence &mdash; every morning, each Monday, the first of the month.</p>
+        <p>The useful pattern here is the recurring job you&rsquo;d otherwise have to remember: a morning briefing assembled before you sit down, a weekly status digest, a standing check that flags anything needing attention. You set it up once; it runs on its own and the result is waiting for you. For irreversible or external actions &mdash; anything that sends, publishes, or deletes &mdash; the standing rule is that a human approves before it happens. Automation handles the preparation; people keep the final say.</p>
+      </div>
+    </section>
+
+    <!-- How the pieces fit together -->
+    <section aria-labelledby="fit-heading">
+      <span class="section-eyebrow">The Whole Picture</span>
+      <h2 class="section-title" id="fit-heading">How the pieces fit together</h2>
+      <div class="prose">
+        <p>Taken individually, each of these is a feature. Taken together, they&rsquo;re a way of working:</p>
+      </div>
+      <ul class="fit">
+        <li><span class="marker" aria-hidden="true"></span><p>The <strong>desktop app in folder mode</strong> gives you a real workspace instead of a chat window.</p></li>
+        <li><span class="marker" aria-hidden="true"></span><p><strong>Anthropic&rsquo;s data terms</strong>, set correctly, keep sensitive work safe.</p></li>
+        <li><span class="marker" aria-hidden="true"></span><p><strong>Connectors</strong> bring your existing tools &mdash; Drive, Gmail, Asana, Box, Office 365 &mdash; into that workspace.</p></li>
+        <li><span class="marker" aria-hidden="true"></span><p>The <strong>skill builder</strong> and <strong>Malaniru&rsquo;s open-source skills</strong> turn repeated work into reliable, repeatable jobs.</p></li>
+        <li><span class="marker" aria-hidden="true"></span><p><strong>Scheduled tasks</strong> let the routine parts run on their own, with humans in control of anything that matters.</p></li>
+      </ul>
+      <div class="prose">
+        <p>The hands-on sessions are where this stops being a description and becomes muscle memory. You don&rsquo;t need to master all of it at once &mdash; you need to understand the shape of the environment well enough to start using it deliberately. That&rsquo;s what this summary is for.</p>
+      </div>
+    </section>
+
+    <!-- Return / cross-link back to AI Enablement -->
+    <div class="return">
+      <h4>Part of the AI Enablement engagement</h4>
+      <p>
+        This workspace summary accompanies the workflow-integration stage of a Malaniru engagement.
+        <a href="index.html">&larr; Back to AI Enablement</a>
+      </p>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="sources">
+      <h2>Sources (data-policy section)</h2>
+      <ul>
+        <li><span class="label">Anthropic &mdash; Updates to Consumer Terms and Privacy Policy:</span> <a href="https://www.anthropic.com/news/updates-to-our-consumer-terms" target="_blank" rel="noopener">anthropic.com/news/updates-to-our-consumer-terms</a></li>
+        <li><span class="label">Anthropic &mdash; Data policies (Claude Code / commercial):</span> <a href="https://docs.anthropic.com/en/docs/claude-code/data-usage" target="_blank" rel="noopener">docs.anthropic.com/en/docs/claude-code/data-usage</a></li>
+      </ul>
+    </div>
+    <p>&copy; 2026 Malaniru Inc, LLC &middot; Lafayette, Colorado &middot; Hands-on AI Training</p>
+  </footer>
+</body>
+</html>

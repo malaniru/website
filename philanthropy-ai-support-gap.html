@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<!--
+  ============================================================================
+  Malaniru - Research article page (branded HTML)
+  Built by: Web (Morgan Shaw) - orchestrated by Claudia - Date: 2026-06-16
+  Project:  Malaniru_Marketing_Site
+  Source:   Website/src/content/research/philanthropy-ai-support-gap.md (published, copy-reviewed)
+  Purpose:  Standalone public article page linked from philanthropy-ai-research.html.
+            Replaces the non-resolving /topics/<slug>/research route with a local page.
+  STATUS:   Public marketing/thought-leadership page. robots noindex pre-launch.
+            Pricing omitted. Brand voice per brand-voice.md. Sources retained.
+  TECH:     Single self-contained HTML5 file. Embedded CSS. No JavaScript.
+            Brand tokens mirror the Live/ page set. WCAG AA. Mobile-first.
+  ============================================================================
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Foundation AI Support Gap: Adoption Has Outrun Governance - Malaniru</title>
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="Nearly two-thirds of nonprofits use AI, but nearly 90% of foundations offer grantees no support for it. Inside the gap that defines philanthropy&#x27;s AI moment in 2026.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --navy:#0F1A2E;--navy-mid:#2A3F63;--copper:#C07830;--gold:#D4A853;
+      --off-white:#F4F1EC;--light-gray:#E8E6E1;--mid-gray:#8A8A96;--dark-text:#1C1C1C;
+      --font:"Inter","Helvetica Neue",Arial,sans-serif;
+    }
+    *{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:var(--font);background:var(--off-white);color:var(--dark-text);line-height:1.65;font-size:16px;-webkit-font-smoothing:antialiased;}
+    .skip-link{position:absolute;left:-999px;top:0;background:var(--gold);color:var(--navy);padding:10px 16px;font-weight:700;z-index:10;}
+    .skip-link:focus{left:8px;top:8px;}
+    a{color:var(--copper);}
+    /* Header */
+    header{background:var(--navy);color:var(--off-white);padding:48px 24px 52px;position:relative;overflow:hidden;}
+    header::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 85% 12%,rgba(192,120,48,0.20) 0%,rgba(15,26,46,0) 55%);pointer-events:none;}
+    .header-inner{max-width:760px;margin:0 auto;position:relative;z-index:1;}
+    .wordmark{font-weight:800;font-size:1.25rem;letter-spacing:0.02em;margin-bottom:30px;}
+    .wordmark .dot{color:var(--copper);}
+    .wordmark a{color:var(--off-white);text-decoration:none;transition:opacity .18s ease;}
+    .wordmark a:hover,.wordmark a:focus-visible{opacity:.85;outline:none;}
+    .eyebrow{display:inline-block;font-size:0.72rem;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;}
+    header h1{font-weight:800;font-size:clamp(1.8rem,4.6vw,2.6rem);line-height:1.14;letter-spacing:-0.01em;margin-bottom:16px;}
+    .byline{font-size:0.9rem;color:var(--light-gray);letter-spacing:0.01em;}
+    .byline .sep{color:var(--copper);margin:0 8px;}
+    .lede{font-size:1.08rem;color:var(--light-gray);max-width:66ch;margin-top:18px;}
+    .backlink{display:inline-block;margin-top:26px;color:var(--gold);font-weight:600;font-size:0.9rem;text-decoration:none;border-bottom:1px solid rgba(212,168,83,0.4);}
+    .backlink:hover,.backlink:focus-visible{border-bottom-color:var(--gold);outline:none;}
+    /* Article */
+    main{max-width:760px;margin:0 auto;padding:48px 24px 8px;}
+    .disclaimer{background:#fff;border:1px solid var(--light-gray);border-left:4px solid var(--copper);border-radius:8px;padding:14px 18px;font-size:0.9rem;color:var(--navy-mid);margin-bottom:34px;}
+    article{font-size:1.05rem;}
+    article h2{font-weight:800;font-size:1.5rem;color:var(--navy);line-height:1.22;letter-spacing:-0.01em;margin:42px 0 14px;}
+    article h3{font-weight:700;font-size:1.18rem;color:var(--navy-mid);line-height:1.25;margin:30px 0 10px;}
+    article h2 + p, article h3 + p{margin-top:0;}
+    article p{margin:0 0 18px;color:var(--dark-text);}
+    article ul,article ol{margin:0 0 18px;padding-left:24px;}
+    article li{margin-bottom:8px;}
+    article strong{font-weight:700;color:var(--navy);}
+    article em{font-style:italic;}
+    article a{color:var(--copper);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(192,120,48,0.35);transition:border-color .18s ease;}
+    article a:hover,article a:focus-visible{border-bottom-color:var(--copper);outline:none;}
+    article hr{border:none;border-top:1px solid var(--light-gray);margin:34px 0;}
+    article h2#sources, article h2#references{border-top:1px solid var(--light-gray);padding-top:30px;font-size:1.2rem;color:var(--navy-mid);}
+    /* sources list smaller */
+    article h2[id^="sources"] ~ ul li, article h3[id^="sources"] ~ ul li{font-size:0.95rem;color:var(--navy-mid);}
+    /* CTA */
+    .cta-band{background:var(--navy);color:var(--off-white);border-radius:12px;padding:42px 32px;text-align:center;margin:48px 0 8px;}
+    .cta-band h2{font-weight:800;font-size:clamp(1.4rem,3.4vw,1.9rem);margin-bottom:12px;letter-spacing:-0.01em;color:var(--off-white);}
+    .cta-band p{color:var(--light-gray);max-width:52ch;margin:0 auto 24px;}
+    .cta-band .btn{display:inline-block;background:var(--copper);color:#fff;font-weight:700;padding:13px 28px;border-radius:8px;text-decoration:none;transition:background .18s ease;}
+    .cta-band .btn:hover,.cta-band .btn:focus-visible{background:var(--gold);color:var(--navy);outline:none;}
+    /* Footer */
+    footer{max-width:760px;margin:16px auto 0;padding:24px;font-size:0.82rem;color:var(--mid-gray);border-top:1px solid var(--light-gray);}
+    footer p+p{margin-top:6px;}
+    footer a{color:var(--mid-gray);text-decoration:underline;}
+    @media (prefers-reduced-motion:reduce){*{transition:none!important;}}
+  
+    /* 2026-06-16: hide Book a discovery call CTA buttons (per Principal) */
+    a[href*="calendly.com"] { display: none !important; }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header>
+    <div class="header-inner">
+      <div class="wordmark"><a href="index.html">Malaniru<span class="dot">.</span></a></div>
+      <span class="eyebrow">AI Enablement &middot; Research &middot; Governance</span>
+      <h1>The Foundation AI Support Gap: Adoption Has Outrun Governance</h1>
+      <p class="byline">By Marco Harris<span class="sep">&middot;</span>May 31, 2026</p>
+      <p class="lede">Nearly two-thirds of nonprofits use AI, but nearly 90% of foundations offer grantees no support for it. Inside the gap that defines philanthropy&#x27;s AI moment in 2026.</p>
+      <a class="backlink" href="philanthropy-ai-research.html">&larr; All philanthropy &amp; AI research</a>
+    </div>
+  </header>
+
+  <main id="main">
+    
+    <article>
+      <p>The defining feature of artificial intelligence in the philanthropic sector right now is not a tool, a model, or a funding round. It is a gap — the distance between how many organizations use AI and how few are supported in using it well.</p>
+      <h2 id="the-data">The data</h2>
+      <p>The most representative evidence comes from the Center for Effective Philanthropy&rsquo;s study &ldquo;AI With Purpose: How Foundations and Nonprofits Are Thinking About and Using Artificial Intelligence,&rdquo; released in September 2025. CEP surveyed 215 foundation leaders and 451 nonprofit leaders and conducted 16 interviews — the most representative comparison of AI use and views across philanthropy and nonprofits to date.</p>
+      <p>Two findings stand out. First, adoption is broad: most foundations and nonprofits now use AI in their work, with broader sector reporting putting nonprofit adoption near two-thirds. Second, support is nearly absent: few foundations provide any funding or non-monetary support for their grantees&rsquo; AI use — sector commentary summarizing the finding puts it at nearly 90% of foundations not yet offering implementation support — and only 15% of foundations are even talking to grantees about AI policies and support needs. Both foundation and nonprofit leaders in the study reported a shared belief that foundation staff lack an understanding of nonprofits&rsquo; actual AI-related needs.</p>
+      <h2 id="the-capital-that-is-moving-targets-the-field-not-the-grantee">The capital that is moving targets the field, not the grantee</h2>
+      <p>This is not for lack of philanthropic interest in AI. Large commitments anchor the funding picture. Humanity AI — a coalition of ten foundations including MacArthur, Ford, Omidyar Network, Mellon, and Packard — has committed $500 million over five years to ensure people have a stake in AI&rsquo;s future, with pooled grantmaking beginning in 2026. The OpenAI Foundation has pledged at least $1 billion over the next year across life sciences, jobs and economic impact, and AI resiliency.</p>
+      <p>But this capital targets AI&rsquo;s societal direction and access — not the operational readiness of individual grantees. For historical scale, US foundations allocated an estimated $300 million to AI programs between 2018 and 2023, roughly a third of it earmarked for AI governance and policy. The money is real and the intent is serious. It simply does not reach the program officer whose grantees are using these tools today, often without policies, training, or a security review.</p>
+      <h2 id="a-governance-gap-before-a-technology-gap">A governance gap before a technology gap</h2>
+      <p>A two-thirds adoption rate paired with almost no foundation-level policy guidance is, in plain terms, unmanaged risk distributed across a portfolio. Grantees are entering sensitive beneficiary data into tools they have not vetted. They are making accuracy-dependent decisions on outputs no one has been trained to question. The foundations funding that work have, for the most part, not asked about it.</p>
+      <p>This reframes AI for a foundation board. The first-order issue is not which model to adopt or how much to spend. It is governance: knowing where AI already lives in the organization and its portfolio, what policies exist, where data flows, and what responsible adoption would require.</p>
+      <h2 id="the-credible-fix-is-enablement-not-just-dollars">The credible fix is enablement, not just dollars</h2>
+      <p>The encouraging part is that the support model with the most traction is not larger grants — it is literacy and implementation help. A handful of funders are already moving this way. The KPMG Foundation committed $6 million to help nonprofits integrate AI into operations. The GitLab Foundation pairs $250,000 grants with six months of technical support, API credits, and peer learning. An AI for Nonprofits Sprint aims to bring 100,000 nonprofit staff to baseline AI literacy in 2026. (These program figures are sector-reported and worth verifying against each funder&rsquo;s primary announcement before citing in a proposal.) The signal holds even where individual numbers need confirmation: the most credible near-term support in philanthropy is enablement.</p>
+      <h2 id="where-a-foundation-starts">Where a foundation starts</h2>
+      <p>The practical first step is smaller than any headline program. It is an honest assessment — where AI is already being used across operations and grantees, what policies exist, where the data goes, and what responsible adoption would actually require. That assessment turns a vague unease about AI into a short list of decisions a board can act on.</p>
+      <p>The foundations that close this gap will not be the ones that fund the most AI. They will be the ones that understood, before their grantees got there on their own, that adoption without governance is risk with a friendly interface.</p>
+      <hr />
+      <h3 id="sources">Sources</h3>
+      <ul>
+      <li>Center for Effective Philanthropy, &ldquo;AI With Purpose: How Foundations and Nonprofits Are Thinking About and Using Artificial Intelligence,&rdquo; September 2025.</li>
+      <li>Charitable Advisors, &ldquo;The AI Questions Foundations Will Ask In 2026 (And Why That&rsquo;s Good News),&rdquo; 2026.</li>
+      <li>The NonProfit Times, &ldquo;10 Funders, $500 Million Targeting AI and Humanity,&rdquo; 2026.</li>
+      <li>Inside Philanthropy, &ldquo;OpenAI Foundation sheds more light on its grantmaking,&rdquo; 2026.</li>
+      </ul>
+      <p><em>Research date: May 31, 2026. The &ldquo;nearly 90%&rdquo; figure is sector-commentary phrasing of CEP&rsquo;s finding; CEP is the primary source. Funder program figures are sector-reported. Large-commitment and adoption figures are likely to shift over the next 30–60 days as pooled grantmaking begins.</em></p>
+    </article>
+
+    <section class="cta-band" id="contact" aria-labelledby="cta-heading">
+      <h2 id="cta-heading">From AI curiosity to AI capability</h2>
+      <p>This research is the groundwork behind our AI Enablement service &mdash; a curated, white-glove Claude Cowork implementation tailored to your organization&rsquo;s workflow.</p>
+      <a class="btn" href="https://calendly.com/mark-malaniru/30min" target="_blank" rel="noopener">Book a discovery call</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Malaniru Inc, LLC &middot; Lafayette, Colorado &middot; AI Enablement</p>
+    <p><a href="philanthropy-ai-research.html">&larr; Back to Philanthropy &amp; AI Research</a> &middot; <a href="index.html">AI Enablement</a></p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<!--
+  ============================================================================
+  Malaniru — Governance Policies Summary (branded HTML)
+  Source: Projects/Philanthropy_io_Consultant_Enablement/Consultant_Curriculum/
+          Outputs/20260609-generic-policy-library/00-policies-overview-summary.md
+  NOTE: Source is a generic template. Your Organization placeholders are preserved
+        verbatim — fill per client before any external publication.
+  Single self-contained HTML5 file. Embedded CSS. No JavaScript.
+  Brand tokens from _config/brand-voice.md. WCAG AA contrast. Mobile-first.
+  robots noindex while pre-publication.
+  ============================================================================
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Governance Policies — Malaniru</title>
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="A plain-language guide to the nine policies that form an AI governance framework — what each policy does for leadership and what it means for staff in practice.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    /* ---- Brand tokens (from _config/brand-voice.md) ---------------------- */
+    :root {
+      --navy:        #0F1A2E;
+      --navy-mid:    #2A3F63;
+      --copper:      #C07830;
+      --gold:        #D4A853;
+      --off-white:   #F4F1EC;
+      --light-gray:  #E8E6E1;
+      --mid-gray:    #8A8A96;
+      --dark-text:   #1C1C1C;
+      --font: "Inter", "Helvetica Neue", Arial, sans-serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: var(--font);
+      background: var(--off-white);
+      color: var(--dark-text);
+      line-height: 1.6;
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ---- Header / hero --------------------------------------------------- */
+    header {
+      background: var(--navy);
+      color: var(--off-white);
+      padding: 56px 24px 60px;
+      position: relative;
+      overflow: hidden;
+    }
+    header::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 85% 15%, rgba(192,120,48,0.20) 0%, rgba(15,26,46,0) 55%);
+      pointer-events: none;
+    }
+    .header-inner { max-width: 860px; margin: 0 auto; position: relative; z-index: 1; }
+
+    .wordmark {
+      font-weight: 800;
+      font-size: 1.25rem;
+      letter-spacing: 0.02em;
+      margin-bottom: 36px;
+    }
+    .wordmark .dot { color: var(--copper); }
+    .wordmark a {
+      color: var(--off-white);
+      text-decoration: none;
+      transition: opacity 0.18s ease;
+    }
+    .wordmark a:hover, .wordmark a:focus-visible {
+      opacity: 0.85;
+      outline: none;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      font-size: 0.74rem;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 16px;
+    }
+
+    header h1 {
+      font-weight: 800;
+      font-size: clamp(1.9rem, 5vw, 2.8rem);
+      line-height: 1.12;
+      letter-spacing: -0.01em;
+      margin-bottom: 18px;
+      max-width: 18ch;
+    }
+
+    header p.intro {
+      font-size: 1.05rem;
+      color: var(--light-gray);
+      max-width: 62ch;
+    }
+
+    /* ---- Content --------------------------------------------------------- */
+    main {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 56px 24px 24px;
+    }
+
+    .policy {
+      background: #fff;
+      border: 1px solid var(--light-gray);
+      border-radius: 12px;
+      padding: 30px 30px 26px;
+      margin-bottom: 26px;
+    }
+
+    .policy-head {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 20px;
+      padding-bottom: 18px;
+      border-bottom: 1px solid var(--light-gray);
+    }
+    .num {
+      flex-shrink: 0;
+      width: 42px;
+      height: 42px;
+      border-radius: 9px;
+      background: var(--navy);
+      color: var(--gold);
+      font-weight: 700;
+      font-size: 1.1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .policy-head h2 {
+      font-weight: 700;
+      font-size: 1.3rem;
+      color: var(--navy);
+      line-height: 1.2;
+    }
+
+    .block { margin-bottom: 16px; }
+    .block:last-child { margin-bottom: 0; }
+
+    .label {
+      display: block;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 5px;
+    }
+    .label.what  { color: var(--navy-mid); }
+    .label.lead  { color: var(--copper); }
+    .label.staff { color: var(--navy-mid); }
+
+    .block p { color: var(--dark-text); }
+
+    /* ---- Closing framework note ----------------------------------------- */
+    .framework {
+      background: var(--navy);
+      color: var(--light-gray);
+      border-radius: 12px;
+      padding: 30px 32px;
+      margin-bottom: 26px;
+      font-size: 1rem;
+    }
+    .framework .label { color: var(--gold); margin-bottom: 10px; }
+    .framework p { color: var(--light-gray); }
+
+    /* ---- Footer ---------------------------------------------------------- */
+    footer {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 24px;
+      font-size: 0.82rem;
+      color: var(--mid-gray);
+      border-top: 1px solid var(--light-gray);
+      margin-top: 8px;
+    }
+
+    a { color: var(--copper); }
+  
+    /* 2026-06-16: hide Book a discovery call CTA buttons (per Principal) */
+    a[href*="calendly.com"] { display: none !important; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <div class="wordmark"><a href="index.html">Malaniru<span class="dot">.</span></a></div>
+      <span class="eyebrow">AI Governance Framework</span>
+      <h1>Governance Policies — What They Mean and Why They Matter</h1>
+      <p class="intro">
+        A plain-language guide to the nine policies that form Your Organization's AI
+        governance framework. Your Organization is evolving into an AI-enabled
+        environment, and these policies set the
+        guardrails for that evolution. Each section explains what the policy does
+        for leadership and what it means for staff in practice.
+      </p>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- 1 -->
+    <section class="policy">
+      <div class="policy-head"><span class="num" aria-hidden="true">1</span><h2>AI Usage Policy</h2></div>
+      <div class="block"><span class="label what">What it is</span><p>The foundational rules for how Your Organization uses AI tools — which tools are approved, what data can and can't go into them, and who's responsible for checking AI output before it goes anywhere.</p></div>
+      <div class="block"><span class="label lead">Why leadership should care</span><p>This is your liability shield. Without clear AI usage rules, any staff member could paste donor records into a free AI chatbot or publish AI-generated grant language without review. This policy draws the line between productive AI use and organizational risk. It also establishes that certain decisions — grant awards, hiring, legal determinations, public statements — are never delegated to AI. That distinction matters to funders, auditors, and regulators.</p></div>
+      <div class="block"><span class="label staff">What it means for staff</span><p>Before using any AI tool for work, check that it's on the approved list. Never enter donor names, Social Security numbers, financial account details, or confidential client information into any AI tool unless explicitly authorized. Every piece of AI-generated content gets human review before it leaves your desk — treat AI output as a draft, never a final product. If something goes wrong (you accidentally paste sensitive data, an AI tool produces something inaccurate that gets shared), report it immediately. There's no penalty for reporting.</p></div>
+    </section>
+
+    <!-- 2 -->
+    <section class="policy">
+      <div class="policy-head"><span class="num" aria-hidden="true">2</span><h2>AI &amp; Emerging Technology Use Policy</h2></div>
+      <div class="block"><span class="label what">What it is</span><p>A deeper layer of governance for the specific AI platforms Your Organization uses — covering data classification, intellectual property, client environment separation, and how to evaluate new tools before adopting them.</p></div>
+      <div class="block"><span class="label lead">Why leadership should care</span><p>AI platforms change their terms of service constantly. This policy ensures someone is monitoring those changes and assessing the impact on your operations. It also protects your intellectual property — your custom prompts, personas, and workflows are organizational assets, not throwaway experiments. For foundations serving multiple clients or grantees, this policy requires that each client's data stays segregated, which is essential if you're ever audited.</p></div>
+      <div class="block"><span class="label staff">What it means for staff</span><p>Know your data classification before pasting anything into an AI tool. Public information is fine. Internal information requires the approved platform. Confidential information requires both the approved platform and explicit authorization. When AI-generated content forms a substantial part of a deliverable, disclose that. And if a new AI tool catches your eye, don't sign up — run it through the vendor evaluation process first.</p></div>
+    </section>
+
+    <!-- 3 -->
+    <section class="policy">
+      <div class="policy-head"><span class="num" aria-hidden="true">3</span><h2>Acceptable Use Policy</h2></div>
+      <div class="block"><span class="label what">What it is</span><p>The baseline technology use rules for every system, device, and platform Your Organization touches — from email to cloud storage to personal phones used for work.</p></div>
+      <div class="block"><span class="label lead">Why leadership should care</span><p>This is the policy that prevents the most common security incidents: someone sharing credentials, someone using a personal Dropbox for client files, someone installing unauthorized software. It also establishes your right to monitor company-provided systems, which is essential if you ever need to investigate a breach or dispute. Without it, you have no enforceable standard for how people use your technology.</p></div>
+      <div class="block"><span class="label staff">What it means for staff</span><p>Use organizational technology for work. Incidental personal use is fine as long as it doesn't create security risks or interfere with your job. Never share your login credentials or API keys with anyone. Don't copy client data to personal accounts or unapproved cloud services. If you get a suspicious email, report it — don't open attachments. If you use a personal device for work, it needs encryption, current updates, and a screen lock. If that device is lost or stolen, notify the Policy Owner immediately.</p></div>
+    </section>
+
+    <!-- 4 -->
+    <section class="policy">
+      <div class="policy-head"><span class="num" aria-hidden="true">4</span><h2>Conflict of Interest Policy</h2></div>
+      <div class="block"><span class="label what">What it is</span><p>A framework for identifying and managing situations where someone's personal interests could influence their professional judgment — covering financial interests, personal relationships, outside activities, and overlapping client relationships.</p></div>
+      <div class="block"><span class="label lead">Why leadership should care</span><p>Foundations operate on trust. A single undisclosed conflict — a board member with a financial interest in a vendor, a consultant with competing client loyalties — can damage funder relationships and trigger regulatory scrutiny. This policy creates a structured disclosure process so conflicts are surfaced early and managed appropriately, rather than discovered after damage is done. It also addresses the reality that a consultancy may serve organizations in the same space, requiring clear information barriers between engagements.</p></div>
+      <div class="block"><span class="label staff">What it means for staff</span><p>If you have a financial interest, personal relationship, outside commitment, or any situation that could reasonably look like it influences your work decisions — disclose it in writing. The standard is "could reasonably influence," not "definitely will influence." When in doubt, disclose. You'll get a response: it might be a simple acknowledgment, it might mean stepping back from a specific project, or it might require disclosure to an affected party. The annual confirmation is mandatory — even if you have nothing to disclose, you confirm that in writing.</p></div>
+    </section>
+
+    <!-- 5 -->
+    <section class="policy">
+      <div class="policy-head"><span class="num" aria-hidden="true">5</span><h2>Data Privacy &amp; Data Protection Policy</h2></div>
+      <div class="block"><span class="label what">What it is</span><p>The rules for how Your Organization collects, stores, transmits, and eventually disposes of personal and sensitive information — covering both the data you handle directly and the data you process on behalf of clients.</p></div>
+      <div class="block"><span class="label lead">Why leadership should care</span><p>Privacy regulations are multiplying. The Colorado Privacy Act, state-level equivalents, and sector-specific rules (HIPAA for health data, FERPA for education data, COPPA for children's data) all apply depending on whose data you handle. This policy establishes the baseline: collect only what you need, store it securely, transmit it encrypted, restrict access to people who need it, and destroy it when the engagement ends. It also requires that service agreements with clients explicitly address data handling — which protects both parties.</p></div>
+      <div class="block"><span class="label staff">What it means for staff</span><p>Collect only the data you actually need for the work. Store it on approved, encrypted platforms — never on personal accounts or devices. Send sensitive data only through encrypted channels, not plain email. Before processing any client data through an AI tool, verify that doing so complies with both the AI Usage Policy and the client's agreement. When a client engagement ends, their data gets returned or destroyed within 30 days unless the agreement says otherwise. If someone requests access to, correction of, or deletion of their personal data, escalate within 24 hours.</p></div>
+    </section>
+
+    <!-- 6 -->
+    <section class="policy">
+      <div class="policy-head"><span class="num" aria-hidden="true">6</span><h2>Document Retention &amp; Destruction Policy</h2></div>
+      <div class="block"><span class="label what">What it is</span><p>A schedule that tells you how long to keep every type of record Your Organization creates or receives — and how to destroy it properly when the time comes.</p></div>
+      <div class="block"><span class="label lead">Why leadership should care</span><p>Keeping records too long creates liability exposure. Destroying them too soon can violate legal obligations or leave you unable to respond to audits. This policy eliminates guesswork: corporate records like articles of incorporation are permanent; tax returns stay for seven years; client deliverables for five years after the engagement; general correspondence for three. It also establishes litigation holds — if there's any hint of a dispute, investigation, or audit, all destruction stops until the hold is released in writing. Without this policy, you're making ad hoc decisions about records every time someone cleans out a folder.</p></div>
+      <div class="block"><span class="label staff">What it means for staff</span><p>Follow the schedule. Client data gets returned or destroyed within 30 days of the engagement ending. Internal project files stay for two years after completion. Don't delete anything during a litigation hold — if one is announced, it applies to everything related to that matter regardless of the normal schedule. When you do destroy records, do it properly: digital files permanently deleted from all locations including trash and backups, paper records cross-cut shredded. And if you're unsure whether something should be kept or destroyed, ask before you act.</p></div>
+    </section>
+
+    <!-- 7 -->
+    <section class="policy">
+      <div class="policy-head"><span class="num" aria-hidden="true">7</span><h2>Information Security Policy</h2></div>
+      <div class="block"><span class="label what">What it is</span><p>The technical security requirements for every device, account, and system used for organizational work — covering access controls, encryption, passwords, network security, and incident response.</p></div>
+      <div class="block"><span class="label lead">Why leadership should care</span><p>A single compromised account or unencrypted laptop can expose client data, trigger breach notification obligations, and destroy organizational credibility. This policy sets the floor: multi-factor authentication on every account, full-disk encryption on every device, unique 16-character passwords managed through a password manager, and least-privilege access so people only see what they need for their role. It also requires that when a contractor's engagement ends, all access is revoked within 24 hours — not next week, not when someone remembers.</p></div>
+      <div class="block"><span class="label staff">What it means for staff</span><p>Turn on multi-factor authentication everywhere it's available. Use a password manager and generate unique passwords of at least 16 characters for every service. Encrypt your device. Install security updates within seven days of release for critical patches. Lock your screen after five minutes of inactivity. Don't do organizational work on public or shared computers. When transmitting sensitive information, use encrypted channels — not SMS, not unencrypted messaging apps. If your device is lost, stolen, or you suspect your account has been compromised, report it immediately.</p></div>
+    </section>
+
+    <!-- 8 -->
+    <section class="policy">
+      <div class="policy-head"><span class="num" aria-hidden="true">8</span><h2>Vendor Management &amp; Procurement Policy</h2></div>
+      <div class="block"><span class="label what">What it is</span><p>The process for evaluating, approving, monitoring, and offboarding every third-party vendor, platform, and service provider Your Organization uses — with requirements scaled by risk level.</p></div>
+      <div class="block"><span class="label lead">Why leadership should care</span><p>Your vendors are an extension of your security posture. If your cloud storage provider has a breach, your client data is exposed regardless of how good your internal security is. This policy classifies vendors into three tiers based on data access and operational criticality, then applies proportionate scrutiny. Tier 1 critical vendors (your AI platform, cloud storage, email) get a full written evaluation and annual review. Tier 2 standard vendors get a briefer assessment on a two-year cycle. Tier 3 low-risk vendors get standard diligence. It also addresses the specific dependency risk of building on an AI platform — what happens if your primary vendor changes its terms, pricing, or capabilities.</p></div>
+      <div class="block"><span class="label staff">What it means for staff</span><p>Don't sign up for new tools or services without going through the evaluation process. If you want to try a new platform, flag it to the Policy Owner — even free-tier services need a basic review if they'll touch organizational data. When you work with vendors, keep track of what data they have access to. If a vendor experiences a security incident that could affect your data, report it immediately. When a vendor relationship ends, make sure data is exported, deletion is confirmed, and all credentials and API keys are revoked.</p></div>
+    </section>
+
+    <!-- 9 -->
+    <section class="policy">
+      <div class="policy-head"><span class="num" aria-hidden="true">9</span><h2>Whistleblower Policy</h2></div>
+      <div class="block"><span class="label what">What it is</span><p>A protected channel for reporting fraud, misconduct, policy violations, or unethical behavior — with explicit guarantees against retaliation.</p></div>
+      <div class="block"><span class="label lead">Why leadership should care</span><p>Organizations that lack a clear reporting mechanism don't have fewer problems — they have more hidden ones. This policy creates a defined process: reports go to the Policy Owner in writing (or to outside counsel if the Policy Owner is the subject), get acknowledged within 48 hours, and are investigated proportionately. The retaliation prohibition is the backbone — if people fear consequences for reporting, they won't report, and small issues become organizational crises. For foundations subject to funder oversight, having a whistleblower policy is increasingly a governance expectation rather than a nice-to-have.</p></div>
+      <div class="block"><span class="label staff">What it means for staff</span><p>If you see fraud, data misuse, policy violations, illegal activity, or retaliation against someone who reported any of these — report it in writing to the Policy Owner. If the Policy Owner is involved, report to outside legal counsel. You can report anonymously. Include as much detail as you can: what happened, when, who was involved, what evidence exists. Good-faith reports are protected — no one can retaliate against you for making one. "Good faith" means you reasonably believe what you're reporting is true; it doesn't mean you have to be right. Reports that are knowingly false or malicious are not protected.</p></div>
+    </section>
+
+    <div class="framework">
+      <span class="label">How they fit together</span>
+      <p>These nine policies work together as a governance framework. The AI Usage and Emerging Technology policies govern how you use AI. The Acceptable Use and Information Security policies protect your technology environment. The Data Privacy and Document Retention policies manage information through its lifecycle. The Vendor Management policy extends your standards to third parties. The Conflict of Interest and Whistleblower policies maintain organizational integrity. No single policy stands alone — they reference and reinforce each other.</p>
+    </div>
+
+  </main>
+
+  <footer>
+    &copy; 2026 Malaniru Inc, LLC &middot; Lafayette, Colorado &middot; AI Governance Framework summary
+  </footer>
+</body>
+</html>

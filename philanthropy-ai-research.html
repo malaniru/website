@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<!--
+  ============================================================================
+  Malaniru — Philanthropy & AI Research (branded HTML showcase page)
+  Built by: Web (Morgan Shaw) · orchestrated by Claudia · Date: 2026-06-16
+  Project:  Malaniru_Marketing_Site
+  Source:   Projects/Malaniru_Marketing_Site/Outputs/
+            20260616-claudia-philanthropy-ai-research-inventory-output.md
+  Purpose:  Public showcase of Malaniru's philanthropy/foundations AI research,
+            positioned as the evidence base behind the AI Enablement service.
+            Cross-linked both ways with ai-enablement.html.
+
+  STATUS / FLAGS:
+  - PUBLIC marketing page. All internal artifacts stripped: workspace file
+    paths, persona names, word counts, draft/[HUMAN REVIEW]/confidence/⚑FLAG
+    annotations. None appear on the page.
+  - FEATURED = 7 published research pieces, each linked to its live Review-site
+    article (/topics/<slug>/research). All seven slugs verified present and
+    non-draft in Website/src/content/research/ on 2026-06-16.
+  - OMITTED from the inventory's 8, by deliberate decision (flagged):
+      • "Foundation Data-Handling Matrix — Philanthropy.io Consultant
+        Enablement" — internal draft, pending counsel review, and tied to a
+        named client engagement. Not appropriate for a public page.
+      • "The State of AI Adoption in Philanthropy — Sector Intelligence Brief
+        (Mar 2026)" — superseded by the June 2026 adoption piece (featured #1)
+        and has no distinct published URL. Folding avoids duplication.
+  - ADDED (per build-prompt option): "The Foundation AI Support Gap" — a
+    published, on-theme piece not in the original 8-item inventory. Flagged.
+  - FURTHER READING = curated third-party sources, "Events & Convenings"
+    category removed per Principal. External links open in a new tab and are
+    clearly labeled as third-party, not Malaniru's.
+  - CTA "Book a discovery call" is a PLACEHOLDER pending Marketing approval
+    (matches ai-enablement.html; same Calendly link).
+  - H1 is PROVISIONAL pending Marketing review.
+  - PRICING intentionally omitted everywhere — remains [HUMAN REVIEW].
+  - robots noindex/nofollow while pre-publication.
+  - Brand language per brand-voice.md. No "cutting-edge/revolutionary",
+    no guaranteed-outcome/compliance claims, no "Not X, Not Y" pattern.
+
+  TECHNICAL:
+  - Single self-contained HTML5 file. Embedded CSS. No JavaScript.
+  - Brand tokens + component classes mirror building-sops.html / ai-fluency.html.
+  - WCAG AA contrast. Mobile-first. Semantic HTML5. Keyboard-navigable.
+  ============================================================================
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Philanthropy &amp; AI Research — Malaniru</title>
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="Malaniru's field research on how foundations and the philanthropic sector are adopting AI — adoption, grant management, digital transformation, data security, and governance. The evidence base behind our AI Enablement service.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    /* ---- Brand tokens (from _config/brand-voice.md) ---------------------- */
+    :root {
+      --navy:        #0F1A2E;
+      --navy-mid:    #2A3F63;
+      --copper:      #C07830;
+      --gold:        #D4A853;
+      --off-white:   #F4F1EC;
+      --light-gray:  #E8E6E1;
+      --mid-gray:    #8A8A96;
+      --dark-text:   #1C1C1C;
+      --font: "Inter", "Helvetica Neue", Arial, sans-serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: var(--font);
+      background: var(--off-white);
+      color: var(--dark-text);
+      line-height: 1.6;
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .skip-link {
+      position: absolute;
+      left: -999px;
+      top: 0;
+      background: var(--gold);
+      color: var(--navy);
+      padding: 10px 16px;
+      font-weight: 700;
+      z-index: 10;
+    }
+    .skip-link:focus { left: 8px; top: 8px; }
+
+    /* ---- Header / hero --------------------------------------------------- */
+    header {
+      background: var(--navy);
+      color: var(--off-white);
+      padding: 56px 24px 60px;
+      position: relative;
+      overflow: hidden;
+    }
+    header::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 85% 15%, rgba(192,120,48,0.20) 0%, rgba(15,26,46,0) 55%);
+      pointer-events: none;
+    }
+    .header-inner { max-width: 960px; margin: 0 auto; position: relative; z-index: 1; }
+
+    .wordmark {
+      font-weight: 800;
+      font-size: 1.25rem;
+      letter-spacing: 0.02em;
+      margin-bottom: 36px;
+    }
+    .wordmark .dot { color: var(--copper); }
+    .wordmark a {
+      color: var(--off-white);
+      text-decoration: none;
+      transition: opacity 0.18s ease;
+    }
+    .wordmark a:hover, .wordmark a:focus-visible { opacity: 0.85; outline: none; }
+
+    .eyebrow {
+      display: inline-block;
+      font-size: 0.74rem;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 16px;
+    }
+
+    header h1 {
+      font-weight: 800;
+      font-size: clamp(1.9rem, 5vw, 2.8rem);
+      line-height: 1.12;
+      letter-spacing: -0.01em;
+      margin-bottom: 18px;
+      max-width: 22ch;
+    }
+
+    header p.intro {
+      font-size: 1.05rem;
+      color: var(--light-gray);
+      max-width: 66ch;
+    }
+    header p.intro + p.intro { margin-top: 14px; }
+
+    .hero-cta {
+      display: inline-block;
+      margin-top: 30px;
+      background: var(--copper);
+      color: #fff;
+      font-weight: 700;
+      font-size: 0.98rem;
+      padding: 13px 26px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.18s ease;
+    }
+    .hero-cta:hover, .hero-cta:focus-visible { background: var(--gold); color: var(--navy); outline: none; }
+
+    /* ---- Content --------------------------------------------------------- */
+    main {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 56px 24px 24px;
+    }
+
+    .section-eyebrow {
+      display: block;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--copper);
+      margin-bottom: 10px;
+    }
+    .section-title {
+      font-weight: 800;
+      font-size: 1.6rem;
+      color: var(--navy);
+      line-height: 1.2;
+      margin-bottom: 14px;
+      letter-spacing: -0.01em;
+    }
+    .section-lead {
+      font-size: 1.05rem;
+      color: var(--dark-text);
+      max-width: 68ch;
+      margin-bottom: 30px;
+    }
+
+    /* ---- Research card grid --------------------------------------------- */
+    .research-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      margin-bottom: 12px;
+    }
+    .research-card {
+      display: flex;
+      flex-direction: column;
+      background: #fff;
+      border: 1px solid var(--light-gray);
+      border-top: 4px solid var(--copper);
+      border-radius: 12px;
+      padding: 26px 26px 22px;
+    }
+    .research-card .card-eyebrow {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--copper);
+      margin-bottom: 10px;
+    }
+    .research-card h3 {
+      font-weight: 700;
+      font-size: 1.18rem;
+      color: var(--navy);
+      line-height: 1.25;
+      margin-bottom: 12px;
+    }
+    .research-card p {
+      color: var(--dark-text);
+      font-size: 0.97rem;
+      margin-bottom: 18px;
+    }
+    .research-card .read-link {
+      margin-top: auto;
+      align-self: flex-start;
+      color: var(--copper);
+      font-weight: 600;
+      font-size: 0.92rem;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(192,120,48,0.35);
+      transition: border-color 0.18s ease;
+    }
+    .research-card .read-link:hover,
+    .research-card .read-link:focus-visible { border-bottom-color: var(--copper); outline: none; }
+
+    /* ---- Methodology / trust note --------------------------------------- */
+    .ethic {
+      background: var(--navy);
+      color: var(--light-gray);
+      border-radius: 12px;
+      padding: 34px 32px;
+      margin: 40px 0 48px;
+    }
+    .ethic .quote {
+      font-weight: 800;
+      font-size: clamp(1.3rem, 3.2vw, 1.75rem);
+      line-height: 1.28;
+      color: var(--off-white);
+      letter-spacing: -0.01em;
+      margin-bottom: 16px;
+    }
+    .ethic .quote span { color: var(--gold); }
+    .ethic p { color: var(--light-gray); max-width: 66ch; }
+    .ethic p + p { margin-top: 12px; }
+
+    /* ---- Further reading ------------------------------------------------- */
+    .further { margin-top: 8px; }
+    .reading-note {
+      font-size: 0.95rem;
+      color: var(--navy-mid);
+      max-width: 68ch;
+      margin-bottom: 28px;
+    }
+    .reading-group { margin-bottom: 26px; }
+    .reading-group h3 {
+      font-weight: 700;
+      font-size: 1.02rem;
+      color: var(--navy);
+      margin-bottom: 12px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--light-gray);
+    }
+    .reading-group ul { list-style: none; }
+    .reading-group li { margin-bottom: 9px; padding-left: 18px; position: relative; }
+    .reading-group li::before {
+      content: "\2197";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: var(--copper);
+      font-weight: 700;
+    }
+    .reading-group a {
+      color: var(--dark-text);
+      text-decoration: none;
+      font-weight: 600;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.18s ease, color 0.18s ease;
+    }
+    .reading-group a:hover, .reading-group a:focus-visible {
+      color: var(--navy);
+      border-bottom-color: var(--copper);
+      outline: none;
+    }
+    .reading-group .src { color: var(--mid-gray); font-weight: 400; font-size: 0.9rem; }
+
+    /* ---- Cross-link note ------------------------------------------------- */
+    .prereq {
+      background: #fff;
+      border: 1px solid var(--light-gray);
+      border-left: 4px solid var(--copper);
+      border-radius: 10px;
+      padding: 24px 28px;
+      margin: 40px 0 48px;
+    }
+    .prereq h4 { font-weight: 700; color: var(--navy); margin-bottom: 6px; font-size: 1.05rem; }
+    .prereq p { color: var(--dark-text); }
+    .prereq a { color: var(--copper); font-weight: 600; }
+
+    /* ---- CTA band -------------------------------------------------------- */
+    .cta-band {
+      background: var(--navy);
+      color: var(--off-white);
+      border-radius: 12px;
+      padding: 44px 34px;
+      text-align: center;
+      margin-bottom: 8px;
+    }
+    .cta-band h2 {
+      font-weight: 800;
+      font-size: clamp(1.5rem, 3.6vw, 2rem);
+      margin-bottom: 12px;
+      letter-spacing: -0.01em;
+    }
+    .cta-band p { color: var(--light-gray); max-width: 54ch; margin: 0 auto 26px; }
+    .cta-band .btn {
+      display: inline-block;
+      background: var(--copper);
+      color: #fff;
+      font-weight: 700;
+      padding: 14px 30px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.18s ease;
+    }
+    .cta-band .btn:hover, .cta-band .btn:focus-visible { background: var(--gold); color: var(--navy); outline: none; }
+
+    /* ---- Footer ---------------------------------------------------------- */
+    footer {
+      max-width: 960px;
+      margin: 16px auto 0;
+      padding: 24px;
+      font-size: 0.82rem;
+      color: var(--mid-gray);
+      border-top: 1px solid var(--light-gray);
+    }
+    footer p + p { margin-top: 6px; }
+    footer a { color: var(--mid-gray); text-decoration: underline; }
+
+    @media (prefers-reduced-motion: reduce) {
+      * { transition: none !important; }
+    }
+  
+    /* 2026-06-16: hide Book a discovery call CTA buttons (per Principal) */
+    a[href*="calendly.com"] { display: none !important; }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header>
+    <div class="header-inner">
+      <div class="wordmark"><a href="index.html">Malaniru<span class="dot">.</span></a></div>
+      <span class="eyebrow">AI Enablement &middot; Research</span>
+      <h1>Philanthropy &amp; AI: Field Research from Malaniru</h1>
+      <p class="intro">
+        Before we help a foundation adopt AI, we read the sector closely &mdash; who is using
+        which tools, where governance is missing, and what responsible adoption actually
+        requires. This is the evidence base behind our AI Enablement work, published in full.
+      </p>
+      <p class="intro">
+        Every report is sourced from reputable sector research and primary announcements. Where
+        a figure is self-reported or directional, we say so.
+      </p>
+      <a class="hero-cta" href="https://calendly.com/mark-malaniru/30min" target="_blank" rel="noopener">Book a discovery call</a>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ===================== OUR RESEARCH ===================== -->
+    <section aria-labelledby="research-heading">
+      <span class="section-eyebrow">Our Research</span>
+      <h2 class="section-title" id="research-heading">What we've published on AI in philanthropy</h2>
+      <p class="section-lead">
+        Seven reports mapping AI adoption across grantmaking foundations and the nonprofits they
+        fund &mdash; from the headline adoption picture to the specific data, security, and
+        governance questions that adoption raises.
+      </p>
+
+      <div class="research-grid">
+
+        <article class="research-card">
+          <span class="card-eyebrow">Adoption</span>
+          <h3>The Current State of AI Adoption in the Philanthropy Sector</h3>
+          <p>Four in five foundations now use AI, yet only about one in twenty-five uses it organization-wide. A sourced map of who uses what, and where policy and training are still missing.</p>
+          <a class="read-link" href="philanthropy-ai-adoption.html">Read the research &rarr;</a>
+        </article>
+
+        <article class="research-card">
+          <span class="card-eyebrow">Implementation</span>
+          <h3>AI Implementation Trends in the Philanthropy Sector</h3>
+          <p>Where grantmakers are actually putting AI to work &mdash; grant review, reporting, donor engagement &mdash; and the patterns separating early movers from everyone else.</p>
+          <a class="read-link" href="philanthropy-ai-implementation-trends.html">Read the research &rarr;</a>
+        </article>
+
+        <article class="research-card">
+          <span class="card-eyebrow">Strategy</span>
+          <h3>Digital Transformation and How It Applies to Philanthropy</h3>
+          <p>What digital transformation means for a sector built on relationships and trust &mdash; and why AI is the forcing function bringing it to grantmaking now.</p>
+          <a class="read-link" href="philanthropy-digital-transformation.html">Read the research &rarr;</a>
+        </article>
+
+        <article class="research-card">
+          <span class="card-eyebrow">Grant Management</span>
+          <h3>How Foundations Are Using AI for Grant Management</h3>
+          <p>Grant management is the natural entry point for AI in a foundation. The tools, the due-diligence use cases, and the governance that has to come with them.</p>
+          <a class="read-link" href="foundations-ai-grant-management.html">Read the research &rarr;</a>
+        </article>
+
+        <article class="research-card">
+          <span class="card-eyebrow">Data &amp; Security</span>
+          <h3>Data Integrity and IP-Based Security in the Philanthropic Sector</h3>
+          <p>Donor records, grantee data, and institutional IP are a foundation's most sensitive assets. What it takes to protect their integrity as AI tools enter the workflow.</p>
+          <a class="read-link" href="philanthropy-data-integrity-ip-security.html">Read the research &rarr;</a>
+        </article>
+
+        <article class="research-card">
+          <span class="card-eyebrow">Compliance</span>
+          <h3>Data and Security Compliance in Philanthropy</h3>
+          <p>The privacy and security obligations that follow a foundation into AI adoption &mdash; from state privacy laws to HIPAA-adjacent data. Research, not legal advice.</p>
+          <a class="read-link" href="philanthropy-data-security-compliance.html">Read the research &rarr;</a>
+        </article>
+
+        <article class="research-card">
+          <span class="card-eyebrow">Governance</span>
+          <h3>The Foundation AI Support Gap: Adoption Has Outrun Governance</h3>
+          <p>Nearly nine in ten foundations give their grantees no AI support at all. The gap between funders' own adoption and what they enable downstream &mdash; and what closing it would take.</p>
+          <a class="read-link" href="philanthropy-ai-support-gap.html">Read the research &rarr;</a>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ===================== METHODOLOGY / TRUST ===================== -->
+    <section class="ethic" aria-label="How we source this research">
+      <p class="quote">We treat a <span>wrong answer as worse than no answer.</span></p>
+      <p>
+        Each report draws on the best sector-representative sources available &mdash; the
+        Technology Association of Grantmakers, the Center for Effective Philanthropy, TechSoup,
+        Candid, and primary funder announcements among them. Vendor and self-reported figures are
+        labeled as such, and claims we can't source are flagged rather than stated as fact.
+      </p>
+      <p>
+        That discipline is the same one we bring to client work: governance and verification first,
+        so the tools can be trusted.
+      </p>
+    </section>
+
+    <!-- ===================== FURTHER READING ===================== -->
+    <section class="further" aria-labelledby="further-heading">
+      <span class="section-eyebrow">Further Reading</span>
+      <h2 class="section-title" id="further-heading">Key sources from across the sector</h2>
+      <p class="reading-note">
+        A curated set of third-party reports, announcements, and analyses we track on AI in
+        philanthropy. These are external publications &mdash; not Malaniru research &mdash; and open
+        in a new tab.
+      </p>
+
+      <div class="reading-group">
+        <h3>Research Reports &amp; White Papers</h3>
+        <ul>
+          <li><a href="https://cep.org/report-backpacks/ai-with-purpose-how-foundations-and-nonprofits-are-thinking-about-and-using-artificial-intelligence/" target="_blank" rel="noopener">AI With Purpose: How Foundations and Nonprofits Are Thinking About and Using AI</a> <span class="src">— Center for Effective Philanthropy</span></li>
+          <li><a href="https://www.bridgespan.org/insights/closing-the-nonprofit-funding-gap-in-the-age-of-ai" target="_blank" rel="noopener">Closing the Nonprofit Funding Gap in the Age of AI</a> <span class="src">— Bridgespan Group</span></li>
+          <li><a href="https://virtuous.org/blog/2026-nonprofit-ai-adoption-report/" target="_blank" rel="noopener">2026 Nonprofit AI Adoption Report</a> <span class="src">— Virtuous</span></li>
+          <li><a href="https://www.bridgespan.org/insights/harnessing-ai-for-social-good-insights-from-the-frontlines" target="_blank" rel="noopener">Harnessing AI for Social Good: Insights from the Frontlines</a> <span class="src">— Bridgespan Group</span></li>
+          <li><a href="https://clarknuber.com/articles/harnessing-ai-in-foundations-a-guide-to-responsible-adoption/" target="_blank" rel="noopener">Responsible AI Adoption in Foundations: A Practical Guide</a> <span class="src">— Clark Nuber PS</span></li>
+        </ul>
+      </div>
+
+      <div class="reading-group">
+        <h3>Major Foundation Initiatives &amp; Announcements</h3>
+        <ul>
+          <li><a href="https://www.macfound.org/press/press-releases/humanity-ai-commits-500-million-to-build-a-people-centered-future-for-ai" target="_blank" rel="noopener">Humanity AI Commits $500 Million to a People-Centered Future for AI</a> <span class="src">— MacArthur Foundation</span></li>
+          <li><a href="https://www.philanthropy.com/news/foundations-commit-500-million-to-curb-ai-developers-influence/" target="_blank" rel="noopener">Foundations Commit $500 Million to Curb AI Developers' Influence</a> <span class="src">— Chronicle of Philanthropy</span></li>
+          <li><a href="https://www.mcgovern.org/2025-press-release/" target="_blank" rel="noopener">$75.8M Commitment Across 149 Grants</a> <span class="src">— Patrick J. McGovern Foundation</span></li>
+          <li><a href="https://openai.com/index/people-first-ai-fund/" target="_blank" rel="noopener">People-First AI Fund</a> <span class="src">— OpenAI</span></li>
+          <li><a href="https://www.insidephilanthropy.com/home/a-look-under-the-hood-of-the-openai-foundations-people-first-ai-fund" target="_blank" rel="noopener">A Look Under the Hood of the People-First AI Fund</a> <span class="src">— Inside Philanthropy</span></li>
+          <li><a href="https://kpmg.com/us/en/media/news/ai-impact-grant-2025.html" target="_blank" rel="noopener">$6 Million to Empower Nonprofits with AI</a> <span class="src">— KPMG U.S. Foundation</span></li>
+        </ul>
+      </div>
+
+      <div class="reading-group">
+        <h3>Thought Leadership &amp; Analysis</h3>
+        <ul>
+          <li><a href="https://cep.org/blog/an-ai-roadmap-for-philanthropy-in-2025/" target="_blank" rel="noopener">An AI Roadmap for Philanthropy in 2025</a> <span class="src">— Center for Effective Philanthropy</span></li>
+          <li><a href="https://charitableadvisors.com/the-ai-questions-foundations-will-ask-in-2026-and-why-thats-good-news/" target="_blank" rel="noopener">The AI Questions Foundations Will Ask in 2026</a> <span class="src">— Charitable Advisors</span></li>
+          <li><a href="https://www.philanthropy.com/news/how-philanthropy-built-lost-and-could-reclaim-the-a-i-race/" target="_blank" rel="noopener">How Philanthropy Built, Lost, and Could Reclaim the A.I. Race</a> <span class="src">— Chronicle of Philanthropy</span></li>
+          <li><a href="https://www.philanthropy.com/news/even-tech-savvy-foundations-are-uncertain-how-to-fund-ai/" target="_blank" rel="noopener">Even Tech-Savvy Foundations Are Uncertain How to Fund AI</a> <span class="src">— Chronicle of Philanthropy</span></li>
+          <li><a href="https://www.fidelitycharitable.org/articles/balancing-innovation-and-trust.html" target="_blank" rel="noopener">Balancing Innovation and Trust: AI in Philanthropy's Future</a> <span class="src">— Fidelity Charitable</span></li>
+          <li><a href="https://www.insidephilanthropy.com/home/how-is-ai-disrupting-education-and-workforce-development-philanthropy" target="_blank" rel="noopener">How Is AI Disrupting Workforce Development Giving?</a> <span class="src">— Inside Philanthropy</span></li>
+        </ul>
+      </div>
+
+      <div class="reading-group">
+        <h3>AI Tools &amp; Practical Applications</h3>
+        <ul>
+          <li><a href="https://www.philanthropy.com/solutions/how-foundations-are-using-ai-to-vet-grantees/" target="_blank" rel="noopener">How Foundations Are Using AI to Vet Grantees</a> <span class="src">— Chronicle of Philanthropy</span></li>
+          <li><a href="https://www.foundant.com/blog/how-foundations-are-using-ai-to-multiply-impact-a-strategic-guide-for-philanthropic-leaders/" target="_blank" rel="noopener">How Foundations Are Using AI to Multiply Impact</a> <span class="src">— Foundant</span></li>
+          <li><a href="https://blog.candid.org/post/how-candid-recommendation-systems-uncover-new-nonprofit-funding/" target="_blank" rel="noopener">How Candid's AI Can Uncover New Funding Opportunities</a> <span class="src">— Candid</span></li>
+          <li><a href="https://www.peakgrantmaking.org/event/ai-for-grantmakers-the-grant-guardian-experience-peak-southwest/" target="_blank" rel="noopener">AI for Grantmakers: The Grant Guardian Experience</a> <span class="src">— PEAK Grantmaking</span></li>
+        </ul>
+      </div>
+
+      <div class="reading-group">
+        <h3>Industry Outlook &amp; Trends</h3>
+        <ul>
+          <li><a href="https://www.tagtech.org/2025/12/tech-trends-2026/" target="_blank" rel="noopener">Five Tech Trends to Watch in 2026</a> <span class="src">— Technology Association of Grantmakers</span></li>
+          <li><a href="https://www.philanthropy.com/opinion/ais-impact-on-fundraising-in-2026/" target="_blank" rel="noopener">Good News — and Bad News — About AI and Fundraising in 2026</a> <span class="src">— Chronicle of Philanthropy</span></li>
+          <li><a href="https://www.philanthropy.com/solutions/5-trends-that-will-shape-fundraising-in-2026/" target="_blank" rel="noopener">5 Trends That Will Shape Fundraising in 2026</a> <span class="src">— Chronicle of Philanthropy</span></li>
+          <li><a href="https://www.philanthropy.com/predictions/" target="_blank" rel="noopener">Predictions for Philanthropy in 2026</a> <span class="src">— Chronicle of Philanthropy</span></li>
+          <li><a href="https://www.philanthropy.com/opinion/foundation-giving-in-2026/" target="_blank" rel="noopener">Up or Down? Forecasts for Foundation Giving in 2026</a> <span class="src">— Chronicle of Philanthropy</span></li>
+          <li><a href="https://www.social-current.org/2026/01/the-growing-ai-gap-between-social-sector-organizations/" target="_blank" rel="noopener">The Growing AI Gap Between Social Sector Organizations</a> <span class="src">— Social Current</span></li>
+          <li><a href="https://www.nptechforgood.com/101-best-practices/ai-marketing-fundraising-statistics-for-nonprofits/" target="_blank" rel="noopener">2026 AI Marketing &amp; Fundraising Statistics for Nonprofits</a> <span class="src">— Nonprofit Tech for Good</span></li>
+        </ul>
+      </div>
+
+      <div class="reading-group">
+        <h3>Governance &amp; Policy</h3>
+        <ul>
+          <li><a href="https://cof.org/content/responsible-ai-philanthropy" target="_blank" rel="noopener">Responsible AI in Philanthropy</a> <span class="src">— Council on Foundations</span></li>
+          <li><a href="https://www.peakgrantmaking.org/event/shaping-ethical-ai-policies-for-philanthropy-peak-ai-for-grantmakers-forum/" target="_blank" rel="noopener">Shaping Ethical AI Policies for Philanthropy</a> <span class="src">— PEAK Grantmaking</span></li>
+          <li><a href="https://www.tagtech.org/ai-resources-for-philanthropy/" target="_blank" rel="noopener">AI Resources for Philanthropy</a> <span class="src">— Technology Association of Grantmakers</span></li>
+        </ul>
+      </div>
+
+      <div class="reading-group">
+        <h3>Sector Data Infrastructure</h3>
+        <ul>
+          <li><a href="https://blog.candid.org/post/how-candid-recommendation-systems-uncover-new-nonprofit-funding/" target="_blank" rel="noopener">Candid Launches Unified Search for Nonprofit and Grant Data</a> <span class="src">— Candid</span></li>
+          <li><a href="https://www.philanthropy.com/news/candid-cuts-staff-bets-its-future-on-ai/" target="_blank" rel="noopener">As AI Advances, Candid Cuts Staff, Bets Its Future on Data</a> <span class="src">— Chronicle of Philanthropy</span></li>
+          <li><a href="https://fortune.com/2025/12/08/google-org-philanthropy-nonprofits-need-ai-21st-century-tech/" target="_blank" rel="noopener">Nonprofits Are Solving 21st-Century Problems — They Need 21st-Century Tech</a> <span class="src">— Fortune / Google.org</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===================== CROSS-LINK ===================== -->
+    <div class="prereq">
+      <h4>From research to your workflow</h4>
+      <p>
+        This research is the groundwork for how we help organizations adopt AI responsibly &mdash;
+        assess where you stand, put governance in place, build hands-on skill, and document what
+        works. <a href="index.html">See the AI Enablement service &rarr;</a>
+      </p>
+    </div>
+
+    <!-- ===================== CLOSING CTA ===================== -->
+    <section class="cta-band" id="contact" aria-labelledby="cta-heading">
+      <h2 id="cta-heading">From AI curiosity to AI capability</h2>
+      <p>A curated, white-glove Claude Cowork implementation, tailored to your organization's workflow.</p>
+      <a class="btn" href="https://calendly.com/mark-malaniru/30min" target="_blank" rel="noopener">Book a discovery call</a>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Malaniru Inc, LLC &middot; Lafayette, Colorado &middot; AI Enablement</p>
+    <p>Part of Malaniru's guided AI adoption path. <a href="index.html">Back to AI Enablement &rarr;</a></p>
+  </footer>
+</body>
+</html>

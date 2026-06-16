@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<!--
+  ============================================================================
+  Malaniru - Research article page (branded HTML)
+  Built by: Web (Morgan Shaw) - orchestrated by Claudia - Date: 2026-06-16
+  Project:  Malaniru_Marketing_Site
+  Source:   Website/src/content/research/philanthropy-ai-implementation-trends.md (published, copy-reviewed)
+  Purpose:  Standalone public article page linked from philanthropy-ai-research.html.
+            Replaces the non-resolving /topics/<slug>/research route with a local page.
+  STATUS:   Public marketing/thought-leadership page. robots noindex pre-launch.
+            Pricing omitted. Brand voice per brand-voice.md. Sources retained.
+  TECH:     Single self-contained HTML5 file. Embedded CSS. No JavaScript.
+            Brand tokens mirror the Live/ page set. WCAG AA. Mobile-first.
+  ============================================================================
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Implementation Trends in the Philanthropy Sector - Malaniru</title>
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="An analysis of how foundations are actually using AI — the use cases showing traction, the governance gap, the vendor landscape, and the $500 million Humanity AI initiative positioning philanthropy as an AI stakeholder.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --navy:#0F1A2E;--navy-mid:#2A3F63;--copper:#C07830;--gold:#D4A853;
+      --off-white:#F4F1EC;--light-gray:#E8E6E1;--mid-gray:#8A8A96;--dark-text:#1C1C1C;
+      --font:"Inter","Helvetica Neue",Arial,sans-serif;
+    }
+    *{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:var(--font);background:var(--off-white);color:var(--dark-text);line-height:1.65;font-size:16px;-webkit-font-smoothing:antialiased;}
+    .skip-link{position:absolute;left:-999px;top:0;background:var(--gold);color:var(--navy);padding:10px 16px;font-weight:700;z-index:10;}
+    .skip-link:focus{left:8px;top:8px;}
+    a{color:var(--copper);}
+    /* Header */
+    header{background:var(--navy);color:var(--off-white);padding:48px 24px 52px;position:relative;overflow:hidden;}
+    header::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 85% 12%,rgba(192,120,48,0.20) 0%,rgba(15,26,46,0) 55%);pointer-events:none;}
+    .header-inner{max-width:760px;margin:0 auto;position:relative;z-index:1;}
+    .wordmark{font-weight:800;font-size:1.25rem;letter-spacing:0.02em;margin-bottom:30px;}
+    .wordmark .dot{color:var(--copper);}
+    .wordmark a{color:var(--off-white);text-decoration:none;transition:opacity .18s ease;}
+    .wordmark a:hover,.wordmark a:focus-visible{opacity:.85;outline:none;}
+    .eyebrow{display:inline-block;font-size:0.72rem;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;}
+    header h1{font-weight:800;font-size:clamp(1.8rem,4.6vw,2.6rem);line-height:1.14;letter-spacing:-0.01em;margin-bottom:16px;}
+    .byline{font-size:0.9rem;color:var(--light-gray);letter-spacing:0.01em;}
+    .byline .sep{color:var(--copper);margin:0 8px;}
+    .lede{font-size:1.08rem;color:var(--light-gray);max-width:66ch;margin-top:18px;}
+    .backlink{display:inline-block;margin-top:26px;color:var(--gold);font-weight:600;font-size:0.9rem;text-decoration:none;border-bottom:1px solid rgba(212,168,83,0.4);}
+    .backlink:hover,.backlink:focus-visible{border-bottom-color:var(--gold);outline:none;}
+    /* Article */
+    main{max-width:760px;margin:0 auto;padding:48px 24px 8px;}
+    .disclaimer{background:#fff;border:1px solid var(--light-gray);border-left:4px solid var(--copper);border-radius:8px;padding:14px 18px;font-size:0.9rem;color:var(--navy-mid);margin-bottom:34px;}
+    article{font-size:1.05rem;}
+    article h2{font-weight:800;font-size:1.5rem;color:var(--navy);line-height:1.22;letter-spacing:-0.01em;margin:42px 0 14px;}
+    article h3{font-weight:700;font-size:1.18rem;color:var(--navy-mid);line-height:1.25;margin:30px 0 10px;}
+    article h2 + p, article h3 + p{margin-top:0;}
+    article p{margin:0 0 18px;color:var(--dark-text);}
+    article ul,article ol{margin:0 0 18px;padding-left:24px;}
+    article li{margin-bottom:8px;}
+    article strong{font-weight:700;color:var(--navy);}
+    article em{font-style:italic;}
+    article a{color:var(--copper);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(192,120,48,0.35);transition:border-color .18s ease;}
+    article a:hover,article a:focus-visible{border-bottom-color:var(--copper);outline:none;}
+    article hr{border:none;border-top:1px solid var(--light-gray);margin:34px 0;}
+    article h2#sources, article h2#references{border-top:1px solid var(--light-gray);padding-top:30px;font-size:1.2rem;color:var(--navy-mid);}
+    /* sources list smaller */
+    article h2[id^="sources"] ~ ul li, article h3[id^="sources"] ~ ul li{font-size:0.95rem;color:var(--navy-mid);}
+    /* CTA */
+    .cta-band{background:var(--navy);color:var(--off-white);border-radius:12px;padding:42px 32px;text-align:center;margin:48px 0 8px;}
+    .cta-band h2{font-weight:800;font-size:clamp(1.4rem,3.4vw,1.9rem);margin-bottom:12px;letter-spacing:-0.01em;color:var(--off-white);}
+    .cta-band p{color:var(--light-gray);max-width:52ch;margin:0 auto 24px;}
+    .cta-band .btn{display:inline-block;background:var(--copper);color:#fff;font-weight:700;padding:13px 28px;border-radius:8px;text-decoration:none;transition:background .18s ease;}
+    .cta-band .btn:hover,.cta-band .btn:focus-visible{background:var(--gold);color:var(--navy);outline:none;}
+    /* Footer */
+    footer{max-width:760px;margin:16px auto 0;padding:24px;font-size:0.82rem;color:var(--mid-gray);border-top:1px solid var(--light-gray);}
+    footer p+p{margin-top:6px;}
+    footer a{color:var(--mid-gray);text-decoration:underline;}
+    @media (prefers-reduced-motion:reduce){*{transition:none!important;}}
+  
+    /* 2026-06-16: hide Book a discovery call CTA buttons (per Principal) */
+    a[href*="calendly.com"] { display: none !important; }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header>
+    <div class="header-inner">
+      <div class="wordmark"><a href="index.html">Malaniru<span class="dot">.</span></a></div>
+      <span class="eyebrow">AI Enablement &middot; Research &middot; Implementation</span>
+      <h1>AI Implementation Trends in the Philanthropy Sector</h1>
+      <p class="byline">By Marco Harris<span class="sep">&middot;</span>March 20, 2026</p>
+      <p class="lede">An analysis of how foundations are actually using AI — the use cases showing traction, the governance gap, the vendor landscape, and the $500 million Humanity AI initiative positioning philanthropy as an AI stakeholder.</p>
+      <a class="backlink" href="philanthropy-ai-research.html">&larr; All philanthropy &amp; AI research</a>
+    </div>
+  </header>
+
+  <main id="main">
+    
+    <article>
+      <h2 id="executive-summary">Executive Summary</h2>
+      <p>AI adoption in philanthropy is broad but shallow. The TAG 2024 State of Philanthropy Tech Survey found that 81 percent of foundations report some degree of AI usage, yet only 4 percent have adopted AI across their entire organization (Source: TAG, 2024 State of Philanthropy Tech Survey, October 2024). The sector is in an experimentation phase — individual staff members are trying AI tools for specific tasks, but enterprise-wide strategy, governance, and integration remain rare.</p>
+      <p>The most promising implementation patterns are emerging in grant application processing, grantee reporting, document synthesis, and board materials preparation. But the most significant development in 2025 was not a foundation&rsquo;s internal adoption — it was the launch of Humanity AI, a $500 million five-year initiative backed by ten major foundations to ensure AI development centers human needs (Source: MacArthur Foundation, October 2025).</p>
+      <h2 id="1-the-current-state-experimentation-without-strategy">1. The Current State: Experimentation Without Strategy</h2>
+      <p>The TAG 2024 survey provides the clearest picture: 81 percent report some AI usage, but only 4 percent have enterprise-wide adoption. Thirty percent have an AI policy; 9 percent have both a policy and an advisory committee. Community foundations lead on governance at 33 percent (Source: TAG, 2024).</p>
+      <p>AI adoption among nonprofits broadly increased from 31 percent in 2024 to 48 percent in 2025 (Source: Momentive Software, 2025). The primary barriers remain privacy and security concerns (55 percent), lack of necessary skills (43 percent), and uncertainty about relevant use cases (40 percent) (Source: TAG, 2024).</p>
+      <h2 id="2-use-cases-showing-traction">2. Use Cases Showing Traction</h2>
+      <p><strong>Grant Application Processing.</strong> Foundations are using AI for completeness checks, eligibility verification, coding/tagging, and generating preliminary summaries for reviewers (Source: Foundant, 2025; PEAK Grantmaking, 2025). Only 1 percent use AI for actual screening decisions, and 65 percent have no plans to (Source: Candid, 2025).</p>
+      <p><strong>Grantee Reporting.</strong> The Houston Endowment piloted AI-assisted oral reporting — using transcription tools to generate structured reports from conversations rather than requiring written submissions. The pilot found improved data quality and has since expanded to additional program areas (Source: Chronicle of Philanthropy, 2025).</p>
+      <p><strong>Document Synthesis and Board Preparation.</strong> AI-assisted summarization of grantee reports, evaluation data, and board briefing materials is the most common informal use case. AI can compile impact narratives from grantee reports for donor-facing communications (Source: One Hundred Nights, 2025).</p>
+      <p><strong>Administrative Tasks.</strong> Drafting communications, summarizing meeting notes, and preparing agenda materials — low-risk, high-return starting points.</p>
+      <h2 id="3-the-vendor-landscape">3. The Vendor Landscape</h2>
+      <p>Foundant Technologies offers AI-powered review summaries with explicit data privacy commitments (Source: Foundant, 2025). CommunityForce positions AI features as competitive differentiators including document intelligence and qualitative data analysis (Source: CommunityForce, 2025). Fluxx remains the most widely used GMS platform with active AI feature development (Source: Fluxx, 2024).</p>
+      <p>Foundations evaluating GMS platforms should ask specific questions about AI features: what data is processed, whether it is used for model training, and where it is stored.</p>
+      <h2 id="4-philanthropy-as-an-ai-stakeholder-humanity-ai">4. Philanthropy as an AI Stakeholder: Humanity AI</h2>
+      <p>In October 2025, ten major foundations launched Humanity AI — a $500 million five-year initiative. Participating foundations include Ford, MacArthur, Mellon, Packard, Mozilla, Doris Duke, Lumina, Kapor, Omidyar Network, and Siegel Family Endowment. Rockefeller Philanthropy Advisors serves as fiscal sponsor (Source: MacArthur Foundation, 2025).</p>
+      <p>Early grantees include the National Black Tech Ecosystem Association, AI Now, and a Howard Law School initiative on AI and civil rights (Source: Washington Post, October 2025).</p>
+      <p>This initiative positions philanthropy as an active shaper of AI governance — not just a consumer. For smaller foundations, it creates a resource stream of research, frameworks, and governance models.</p>
+      <h2 id="5-recommendations">5. Recommendations</h2>
+      <p>The 81 percent adoption rate is a starting point. Foundations should establish AI policies defining approved tools, acceptable data categories, and human review requirements. Staff capacity building should focus on evaluation and governance, not just tool usage. Vendor AI features should be evaluated with the same rigor as core platform functionality.</p>
+      <h2 id="sources">Sources</h2>
+      <ul>
+      <li>Candid, &ldquo;Will AI Soon Be Reviewing Your Grant Applications?&rdquo;, 2025</li>
+      <li>CEP, &ldquo;An AI Roadmap for Philanthropy in 2025,&rdquo; 2025</li>
+      <li>Chronicle of Philanthropy, &ldquo;A Foundation Pilot Program Simplifies Grant Reporting With AI,&rdquo; 2025</li>
+      <li>CommunityForce, &ldquo;Leveraging Advanced AI Features,&rdquo; 2025</li>
+      <li>Foundant, &ldquo;How Foundations Are Using AI to Multiply Impact,&rdquo; 2025</li>
+      <li>MacArthur Foundation, &ldquo;Humanity AI Commits $500 Million,&rdquo; October 2025</li>
+      <li>Momentive Software, &ldquo;2025 Nonprofit Trends,&rdquo; 2025</li>
+      <li>One Hundred Nights, &ldquo;AI for Community Foundations,&rdquo; 2025</li>
+      <li>PEAK Grantmaking, &ldquo;Practical Applications of AI in Philanthropy,&rdquo; 2025</li>
+      <li>TAG, &ldquo;2024 State of Philanthropy Tech Survey,&rdquo; October 2024</li>
+      <li>Washington Post, &ldquo;Foundations Want to Curb AI Developers&rsquo; Influence,&rdquo; October 2025</li>
+      </ul>
+    </article>
+
+    <section class="cta-band" id="contact" aria-labelledby="cta-heading">
+      <h2 id="cta-heading">From AI curiosity to AI capability</h2>
+      <p>This research is the groundwork behind our AI Enablement service &mdash; a curated, white-glove Claude Cowork implementation tailored to your organization&rsquo;s workflow.</p>
+      <a class="btn" href="https://calendly.com/mark-malaniru/30min" target="_blank" rel="noopener">Book a discovery call</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Malaniru Inc, LLC &middot; Lafayette, Colorado &middot; AI Enablement</p>
+    <p><a href="philanthropy-ai-research.html">&larr; Back to Philanthropy &amp; AI Research</a> &middot; <a href="index.html">AI Enablement</a></p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<!--
+  ============================================================================
+  Malaniru - Research article page (branded HTML)
+  Built by: Web (Morgan Shaw) - orchestrated by Claudia - Date: 2026-06-16
+  Project:  Malaniru_Marketing_Site
+  Source:   Website/src/content/research/foundations-ai-grant-management.md (published, copy-reviewed)
+  Purpose:  Standalone public article page linked from philanthropy-ai-research.html.
+            Replaces the non-resolving /topics/<slug>/research route with a local page.
+  STATUS:   Public marketing/thought-leadership page. robots noindex pre-launch.
+            Pricing omitted. Brand voice per brand-voice.md. Sources retained.
+  TECH:     Single self-contained HTML5 file. Embedded CSS. No JavaScript.
+            Brand tokens mirror the Live/ page set. WCAG AA. Mobile-first.
+  ============================================================================
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How Foundations Are Using AI for Grant Management - Malaniru</title>
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="An evidence-based analysis of AI adoption in foundation grant management — where it works, what the data shows, and the structural gap foundations need to close.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --navy:#0F1A2E;--navy-mid:#2A3F63;--copper:#C07830;--gold:#D4A853;
+      --off-white:#F4F1EC;--light-gray:#E8E6E1;--mid-gray:#8A8A96;--dark-text:#1C1C1C;
+      --font:"Inter","Helvetica Neue",Arial,sans-serif;
+    }
+    *{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:var(--font);background:var(--off-white);color:var(--dark-text);line-height:1.65;font-size:16px;-webkit-font-smoothing:antialiased;}
+    .skip-link{position:absolute;left:-999px;top:0;background:var(--gold);color:var(--navy);padding:10px 16px;font-weight:700;z-index:10;}
+    .skip-link:focus{left:8px;top:8px;}
+    a{color:var(--copper);}
+    /* Header */
+    header{background:var(--navy);color:var(--off-white);padding:48px 24px 52px;position:relative;overflow:hidden;}
+    header::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 85% 12%,rgba(192,120,48,0.20) 0%,rgba(15,26,46,0) 55%);pointer-events:none;}
+    .header-inner{max-width:760px;margin:0 auto;position:relative;z-index:1;}
+    .wordmark{font-weight:800;font-size:1.25rem;letter-spacing:0.02em;margin-bottom:30px;}
+    .wordmark .dot{color:var(--copper);}
+    .wordmark a{color:var(--off-white);text-decoration:none;transition:opacity .18s ease;}
+    .wordmark a:hover,.wordmark a:focus-visible{opacity:.85;outline:none;}
+    .eyebrow{display:inline-block;font-size:0.72rem;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;}
+    header h1{font-weight:800;font-size:clamp(1.8rem,4.6vw,2.6rem);line-height:1.14;letter-spacing:-0.01em;margin-bottom:16px;}
+    .byline{font-size:0.9rem;color:var(--light-gray);letter-spacing:0.01em;}
+    .byline .sep{color:var(--copper);margin:0 8px;}
+    .lede{font-size:1.08rem;color:var(--light-gray);max-width:66ch;margin-top:18px;}
+    .backlink{display:inline-block;margin-top:26px;color:var(--gold);font-weight:600;font-size:0.9rem;text-decoration:none;border-bottom:1px solid rgba(212,168,83,0.4);}
+    .backlink:hover,.backlink:focus-visible{border-bottom-color:var(--gold);outline:none;}
+    /* Article */
+    main{max-width:760px;margin:0 auto;padding:48px 24px 8px;}
+    .disclaimer{background:#fff;border:1px solid var(--light-gray);border-left:4px solid var(--copper);border-radius:8px;padding:14px 18px;font-size:0.9rem;color:var(--navy-mid);margin-bottom:34px;}
+    article{font-size:1.05rem;}
+    article h2{font-weight:800;font-size:1.5rem;color:var(--navy);line-height:1.22;letter-spacing:-0.01em;margin:42px 0 14px;}
+    article h3{font-weight:700;font-size:1.18rem;color:var(--navy-mid);line-height:1.25;margin:30px 0 10px;}
+    article h2 + p, article h3 + p{margin-top:0;}
+    article p{margin:0 0 18px;color:var(--dark-text);}
+    article ul,article ol{margin:0 0 18px;padding-left:24px;}
+    article li{margin-bottom:8px;}
+    article strong{font-weight:700;color:var(--navy);}
+    article em{font-style:italic;}
+    article a{color:var(--copper);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(192,120,48,0.35);transition:border-color .18s ease;}
+    article a:hover,article a:focus-visible{border-bottom-color:var(--copper);outline:none;}
+    article hr{border:none;border-top:1px solid var(--light-gray);margin:34px 0;}
+    article h2#sources, article h2#references{border-top:1px solid var(--light-gray);padding-top:30px;font-size:1.2rem;color:var(--navy-mid);}
+    /* sources list smaller */
+    article h2[id^="sources"] ~ ul li, article h3[id^="sources"] ~ ul li{font-size:0.95rem;color:var(--navy-mid);}
+    /* CTA */
+    .cta-band{background:var(--navy);color:var(--off-white);border-radius:12px;padding:42px 32px;text-align:center;margin:48px 0 8px;}
+    .cta-band h2{font-weight:800;font-size:clamp(1.4rem,3.4vw,1.9rem);margin-bottom:12px;letter-spacing:-0.01em;color:var(--off-white);}
+    .cta-band p{color:var(--light-gray);max-width:52ch;margin:0 auto 24px;}
+    .cta-band .btn{display:inline-block;background:var(--copper);color:#fff;font-weight:700;padding:13px 28px;border-radius:8px;text-decoration:none;transition:background .18s ease;}
+    .cta-band .btn:hover,.cta-band .btn:focus-visible{background:var(--gold);color:var(--navy);outline:none;}
+    /* Footer */
+    footer{max-width:760px;margin:16px auto 0;padding:24px;font-size:0.82rem;color:var(--mid-gray);border-top:1px solid var(--light-gray);}
+    footer p+p{margin-top:6px;}
+    footer a{color:var(--mid-gray);text-decoration:underline;}
+    @media (prefers-reduced-motion:reduce){*{transition:none!important;}}
+  
+    /* 2026-06-16: hide Book a discovery call CTA buttons (per Principal) */
+    a[href*="calendly.com"] { display: none !important; }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header>
+    <div class="header-inner">
+      <div class="wordmark"><a href="index.html">Malaniru<span class="dot">.</span></a></div>
+      <span class="eyebrow">AI Enablement &middot; Research &middot; Grant Management</span>
+      <h1>How Foundations Are Using AI for Grant Management</h1>
+      <p class="byline">By Marco Harris<span class="sep">&middot;</span>March 17, 2026</p>
+      <p class="lede">An evidence-based analysis of AI adoption in foundation grant management — where it works, what the data shows, and the structural gap foundations need to close.</p>
+      <a class="backlink" href="philanthropy-ai-research.html">&larr; All philanthropy &amp; AI research</a>
+    </div>
+  </header>
+
+  <main id="main">
+    
+    <article>
+      <h2 id="executive-summary">Executive Summary</h2>
+      <p>Foundation adoption of AI in grant management has moved from exploratory to operational. As of early 2026, 81% of foundations report some degree of AI usage, but meaningful integration into core grantmaking workflows remains uneven. The most advanced implementations target financial due diligence, application screening, and report synthesis — functions where AI demonstrably returns hours to program staff. However, a significant structural gap persists: nearly 90% of foundations provide no AI implementation support to their grantees, even as they adopt these tools internally.</p>
+      <p>The evidence points to three clear adoption tiers: a small vanguard of foundations building and sharing purpose-built AI tools, a growing middle tier experimenting with general-purpose AI for drafting and summarization, and a large base of foundations that acknowledge AI&rsquo;s relevance but have not moved beyond ad hoc individual use.</p>
+      <p>For foundation leaders evaluating where AI fits in their operations, grant management is the most natural entry point: the workflows are document-heavy, repetitive, and directly connected to mission outcomes.</p>
+      <hr />
+      <h2 id="the-current-state-of-ai-adoption-in-foundations">The Current State of AI Adoption in Foundations</h2>
+      <h3 id="adoption-by-the-numbers">Adoption by the Numbers</h3>
+      <p>The philanthropic sector&rsquo;s AI adoption trajectory mirrors the broader business landscape, with some notable lag. Business adoption of AI surged from 55% in 2023 to nearly 80% in 2025 (Source: McKinsey Global Survey on AI, 2025). The Center for Effective Philanthropy&rsquo;s landmark 2025 report, <em>AI With Purpose</em>, found that 81% of foundations report some degree of AI usage, based on surveys of 215 foundation leaders and 451 nonprofit organizations (Source: Center for Effective Philanthropy, &ldquo;AI With Purpose,&rdquo; September 2025).</p>
+      <p>However, the depth of that adoption varies dramatically. Only 30% of foundations have an AI policy in place, and just 9% have an advisory group focused on both technology implementation and policy governance (Source: Center for Effective Philanthropy, &ldquo;AI With Purpose,&rdquo; September 2025).</p>
+      <h3 id="what-foundations-are-actually-using-ai-for">What Foundations Are Actually Using AI For</h3>
+      <p><strong>Financial Due Diligence and Grantee Vetting</strong></p>
+      <p>The standout example is Grant Guardian, developed by the Patrick J. McGovern Foundation. Built on Anthropic&rsquo;s Claude, Grant Guardian extracts financial data from submitted records including Form 990s, analyzes a charity&rsquo;s financial history, generates a scorecard with a summary of findings, and allows program officers to weight specific financial metrics. As of early 2026, 189 philanthropies have adopted Grant Guardian — which the McGovern Foundation provides free of charge — including the GitLab Foundation and United Way chapters (Source: Chronicle of Philanthropy, &ldquo;How Foundations Are Using AI to Vet Grantees,&rdquo; 2025).</p>
+      <p><strong>Application Screening and Review</strong></p>
+      <p>AI-enabled platforms are increasingly used to parse, categorize, and surface patterns in grant applications. Foundant has documented how AI tools can reduce initial application review time by helping program officers identify key data points, flag missing information, and assess alignment with program priorities (Source: Foundant, &ldquo;AI Grant Applications: What Today&rsquo;s Grantmakers Should Know,&rdquo; 2025).</p>
+      <p>Benevity launched AI-powered Grant Summaries in March 2026, using generative AI to provide structured overviews of each application&rsquo;s purpose, funding needs, and intended impact (Source: BNN Bloomberg, &ldquo;Benevity Unveils New AI and Management Features,&rdquo; March 16, 2026).</p>
+      <p><strong>Report Synthesis and Outcome Tracking</strong></p>
+      <p>Platforms like Candid and SoPact are applying AI to analyze grantee reporting data at scale — evaluating thousands of variables simultaneously, synthesizing findings from annual reports and programmatic data, and tracking alignment between stated goals and reported outcomes (Source: SoPact, &ldquo;Grant Management Software: AI Application Review &amp; Outcome Tracking,&rdquo; 2025).</p>
+      <p><strong>Document Drafting and Board Preparation</strong></p>
+      <p>The most accessible AI use case remains content generation: drafting grant letters, summarizing grantee reports for board packets, and preparing meeting materials. This is where the majority of the &ldquo;81% adoption&rdquo; figure lives — individual staff members using general-purpose AI tools for productivity, often without formal institutional oversight.</p>
+      <hr />
+      <h2 id="the-structural-gap-foundation-ai-use-vs-grantee-support">The Structural Gap: Foundation AI Use vs. Grantee Support</h2>
+      <p>While foundations are adopting AI for their own operations, nearly 90% provide no AI implementation support — financial or otherwise — to their grantees. Fewer than 15% plan to increase this support in the next three years. Only 10% of funders accept grant applications with AI-generated content, and just 5% of grantmakers fund AI-related work directly (Source: Center for Effective Philanthropy, &ldquo;AI With Purpose,&rdquo; September 2025).</p>
+      <p>On the grantee side, the barriers are acute: more than half of nonprofit leaders report their staff lack the expertise to use or even learn about AI. Among nonprofits that have adopted AI, 48% report higher technology-related expenses, and 84% say additional funding is essential to sustain their AI development (Source: Center for Effective Philanthropy, &ldquo;AI With Purpose,&rdquo; September 2025).</p>
+      <p>The Bridgespan Group has characterized this as a structural funding gap: without funder investment in grantee infrastructure, the sector risks creating a two-tier system where well-resourced organizations accelerate while smaller ones fall further behind (Source: Bridgespan, &ldquo;Closing the Nonprofit Funding Gap in the Age of AI,&rdquo; 2025).</p>
+      <hr />
+      <h2 id="major-funders-shaping-the-landscape">Major Funders Shaping the Landscape</h2>
+      <p>The Patrick J. McGovern Foundation committed $75.8 million across 149 grants in 2025, funding organizations applying AI to climate resilience, human rights, health equity, and crisis response — pairing financial support with in-house technical teams who advise grantees on data governance and risk assessment (Source: Patrick J. McGovern Foundation, Annual Report, 2025).</p>
+      <p>Ten major foundations — including the Ford Foundation, MacArthur Foundation, and Mellon Foundation — announced Humanity AI, a $500 million five-year initiative, with grants expected to begin disbursing in 2026 (Source: MacArthur Foundation, Press Release, 2025).</p>
+      <p>The OpenAI Foundation disbursed $40.5 million in unrestricted grants to 208 U.S.-based nonprofits through its People-First AI Fund, targeting organizations with annual budgets between $500,000 and $10 million (Source: OpenAI, 2025).</p>
+      <hr />
+      <h2 id="frameworks-for-responsible-adoption">Frameworks for Responsible Adoption</h2>
+      <p>The Technology Association of Grantmakers, in partnership with Project Evident, released a Responsible AI Adoption Framework for Philanthropy built on three pillars: Organizational, Ethical, and Technical (Source: TAG, &ldquo;AI Resources for Philanthropy,&rdquo; 2025).</p>
+      <p>The Council on Foundations has hosted multiple convenings on responsible AI adoption, including sessions at the Leading Locally 2025 conference and executive leader roundtables (Source: Council on Foundations, 2025).</p>
+      <p>PEAK Grantmaking has facilitated forums on developing AI policies tailored to foundations, with experts discussing strategies for creating ethical guardrails (Source: PEAK Grantmaking, &ldquo;Shaping Ethical AI Policies for Philanthropy,&rdquo; 2025).</p>
+      <hr />
+      <h2 id="implications-for-foundation-leaders">Implications for Foundation Leaders</h2>
+      <p>Grant management is the natural AI entry point. The workflows are document-heavy, the data is structured, and the time savings are directly measurable in hours returned to program work.</p>
+      <p>Start with due diligence and report synthesis. Grant Guardian and similar tools demonstrate that AI can handle financial analysis and data extraction at a quality level that supports program officer judgment.</p>
+      <p>Adopt a policy before scaling. The TAG Framework provides a governance structure that covers organizational readiness, ethical standards, and vendor evaluation.</p>
+      <p>Address the grantee gap. Foundations that use AI internally but do not support grantee adoption are widening a capacity divide. Flexible, multiyear funding that covers the full lifecycle of AI adoption is the standard grantees need.</p>
+      <p>Frame AI as capacity augmentation. The sector&rsquo;s cultural sensitivity around automation is real. AI in grant management should demonstrably return time to mission-focused work.</p>
+      <hr />
+      <p><em>Research produced by Dana Reeves, Senior Philanthropy Technology Analyst — Malaniru Inc, LLC</em>
+      <em>Research date: March 17, 2026</em></p>
+    </article>
+
+    <section class="cta-band" id="contact" aria-labelledby="cta-heading">
+      <h2 id="cta-heading">From AI curiosity to AI capability</h2>
+      <p>This research is the groundwork behind our AI Enablement service &mdash; a curated, white-glove Claude Cowork implementation tailored to your organization&rsquo;s workflow.</p>
+      <a class="btn" href="https://calendly.com/mark-malaniru/30min" target="_blank" rel="noopener">Book a discovery call</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Malaniru Inc, LLC &middot; Lafayette, Colorado &middot; AI Enablement</p>
+    <p><a href="philanthropy-ai-research.html">&larr; Back to Philanthropy &amp; AI Research</a> &middot; <a href="index.html">AI Enablement</a></p>
+  </footer>
+</body>
+</html>

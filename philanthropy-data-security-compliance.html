@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<!--
+  ============================================================================
+  Malaniru - Research article page (branded HTML)
+  Built by: Web (Morgan Shaw) - orchestrated by Claudia - Date: 2026-06-16
+  Project:  Malaniru_Marketing_Site
+  Source:   Website/src/content/research/philanthropy-data-security-compliance.md (published, copy-reviewed)
+  Purpose:  Standalone public article page linked from philanthropy-ai-research.html.
+            Replaces the non-resolving /topics/<slug>/research route with a local page.
+  STATUS:   Public marketing/thought-leadership page. robots noindex pre-launch.
+            Pricing omitted. Brand voice per brand-voice.md. Sources retained.
+  TECH:     Single self-contained HTML5 file. Embedded CSS. No JavaScript.
+            Brand tokens mirror the Live/ page set. WCAG AA. Mobile-first.
+  ============================================================================
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data and Security Compliance in Philanthropy - Malaniru</title>
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="A comprehensive analysis of the data security and compliance landscape facing foundations — regulatory obligations, cybersecurity threats, AI governance gaps, and a practical framework for remediation.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --navy:#0F1A2E;--navy-mid:#2A3F63;--copper:#C07830;--gold:#D4A853;
+      --off-white:#F4F1EC;--light-gray:#E8E6E1;--mid-gray:#8A8A96;--dark-text:#1C1C1C;
+      --font:"Inter","Helvetica Neue",Arial,sans-serif;
+    }
+    *{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:var(--font);background:var(--off-white);color:var(--dark-text);line-height:1.65;font-size:16px;-webkit-font-smoothing:antialiased;}
+    .skip-link{position:absolute;left:-999px;top:0;background:var(--gold);color:var(--navy);padding:10px 16px;font-weight:700;z-index:10;}
+    .skip-link:focus{left:8px;top:8px;}
+    a{color:var(--copper);}
+    /* Header */
+    header{background:var(--navy);color:var(--off-white);padding:48px 24px 52px;position:relative;overflow:hidden;}
+    header::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 85% 12%,rgba(192,120,48,0.20) 0%,rgba(15,26,46,0) 55%);pointer-events:none;}
+    .header-inner{max-width:760px;margin:0 auto;position:relative;z-index:1;}
+    .wordmark{font-weight:800;font-size:1.25rem;letter-spacing:0.02em;margin-bottom:30px;}
+    .wordmark .dot{color:var(--copper);}
+    .wordmark a{color:var(--off-white);text-decoration:none;transition:opacity .18s ease;}
+    .wordmark a:hover,.wordmark a:focus-visible{opacity:.85;outline:none;}
+    .eyebrow{display:inline-block;font-size:0.72rem;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;}
+    header h1{font-weight:800;font-size:clamp(1.8rem,4.6vw,2.6rem);line-height:1.14;letter-spacing:-0.01em;margin-bottom:16px;}
+    .byline{font-size:0.9rem;color:var(--light-gray);letter-spacing:0.01em;}
+    .byline .sep{color:var(--copper);margin:0 8px;}
+    .lede{font-size:1.08rem;color:var(--light-gray);max-width:66ch;margin-top:18px;}
+    .backlink{display:inline-block;margin-top:26px;color:var(--gold);font-weight:600;font-size:0.9rem;text-decoration:none;border-bottom:1px solid rgba(212,168,83,0.4);}
+    .backlink:hover,.backlink:focus-visible{border-bottom-color:var(--gold);outline:none;}
+    /* Article */
+    main{max-width:760px;margin:0 auto;padding:48px 24px 8px;}
+    .disclaimer{background:#fff;border:1px solid var(--light-gray);border-left:4px solid var(--copper);border-radius:8px;padding:14px 18px;font-size:0.9rem;color:var(--navy-mid);margin-bottom:34px;}
+    article{font-size:1.05rem;}
+    article h2{font-weight:800;font-size:1.5rem;color:var(--navy);line-height:1.22;letter-spacing:-0.01em;margin:42px 0 14px;}
+    article h3{font-weight:700;font-size:1.18rem;color:var(--navy-mid);line-height:1.25;margin:30px 0 10px;}
+    article h2 + p, article h3 + p{margin-top:0;}
+    article p{margin:0 0 18px;color:var(--dark-text);}
+    article ul,article ol{margin:0 0 18px;padding-left:24px;}
+    article li{margin-bottom:8px;}
+    article strong{font-weight:700;color:var(--navy);}
+    article em{font-style:italic;}
+    article a{color:var(--copper);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(192,120,48,0.35);transition:border-color .18s ease;}
+    article a:hover,article a:focus-visible{border-bottom-color:var(--copper);outline:none;}
+    article hr{border:none;border-top:1px solid var(--light-gray);margin:34px 0;}
+    article h2#sources, article h2#references{border-top:1px solid var(--light-gray);padding-top:30px;font-size:1.2rem;color:var(--navy-mid);}
+    /* sources list smaller */
+    article h2[id^="sources"] ~ ul li, article h3[id^="sources"] ~ ul li{font-size:0.95rem;color:var(--navy-mid);}
+    /* CTA */
+    .cta-band{background:var(--navy);color:var(--off-white);border-radius:12px;padding:42px 32px;text-align:center;margin:48px 0 8px;}
+    .cta-band h2{font-weight:800;font-size:clamp(1.4rem,3.4vw,1.9rem);margin-bottom:12px;letter-spacing:-0.01em;color:var(--off-white);}
+    .cta-band p{color:var(--light-gray);max-width:52ch;margin:0 auto 24px;}
+    .cta-band .btn{display:inline-block;background:var(--copper);color:#fff;font-weight:700;padding:13px 28px;border-radius:8px;text-decoration:none;transition:background .18s ease;}
+    .cta-band .btn:hover,.cta-band .btn:focus-visible{background:var(--gold);color:var(--navy);outline:none;}
+    /* Footer */
+    footer{max-width:760px;margin:16px auto 0;padding:24px;font-size:0.82rem;color:var(--mid-gray);border-top:1px solid var(--light-gray);}
+    footer p+p{margin-top:6px;}
+    footer a{color:var(--mid-gray);text-decoration:underline;}
+    @media (prefers-reduced-motion:reduce){*{transition:none!important;}}
+  
+    /* 2026-06-16: hide Book a discovery call CTA buttons (per Principal) */
+    a[href*="calendly.com"] { display: none !important; }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header>
+    <div class="header-inner">
+      <div class="wordmark"><a href="index.html">Malaniru<span class="dot">.</span></a></div>
+      <span class="eyebrow">AI Enablement &middot; Research &middot; Compliance</span>
+      <h1>Data and Security Compliance in Philanthropy</h1>
+      <p class="byline">By Marco Harris<span class="sep">&middot;</span>March 20, 2026</p>
+      <p class="lede">A comprehensive analysis of the data security and compliance landscape facing foundations — regulatory obligations, cybersecurity threats, AI governance gaps, and a practical framework for remediation.</p>
+      <a class="backlink" href="philanthropy-ai-research.html">&larr; All philanthropy &amp; AI research</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="disclaimer">This article is research and sector analysis &mdash; not legal advice. Organizations in regulated environments should have findings reviewed by qualified legal or compliance counsel before acting on them.</div>
+    <article>
+      <h2 id="executive-summary">Executive Summary</h2>
+      <p>Foundations handle some of the most sensitive categories of personal data in the nonprofit ecosystem — donor financials, grantee organization details, and in some cases beneficiary data involving vulnerable populations — yet the philanthropic sector&rsquo;s data security and compliance posture remains materially underdeveloped. The TAG 2024 State of Philanthropy Tech Survey found that only 45 percent of grantmakers have a data privacy policy and only 46 percent have a data retention and destruction policy (Source: TAG, 2024 State of Philanthropy Tech Survey, October 2024). Sixty percent of nonprofits report experiencing a cyberattack in the last two years (Source: Tardigrade Technology, &ldquo;Key Nonprofit Cybersecurity Statistics in 2025,&rdquo; 2025), and the sector experienced a 30 percent year-over-year increase in weekly cyberattacks in 2024.</p>
+      <p>At the same time, the regulatory landscape is tightening. Twenty U.S. states now have comprehensive privacy laws, with several — including Minnesota, Colorado, Delaware, Maryland, New Jersey, and Oregon — offering no broad exemption for nonprofit organizations (Source: Wagenmaker Law, &ldquo;New State Data Privacy Laws Affect Nonprofits,&rdquo; 2025). The EU AI Act becomes fully applicable in August 2026, adding a new compliance layer for foundations with international operations.</p>
+      <p>This report maps the data categories foundations handle, the regulatory frameworks that apply, the security threats the sector faces, and the practical compliance steps foundations should prioritize.</p>
+      <h2 id="1-data-categories-foundations-handle">1. Data Categories Foundations Handle</h2>
+      <p>Understanding compliance obligations starts with understanding what data a foundation actually collects, stores, and processes. Foundations typically handle six categories: donor data (names, financials, giving history), grantee data (organization details, personnel, financial statements), beneficiary data (health, demographic, and economic data about individuals served — the most sensitive category), board and governance data (financial disclosures, compensation), financial data (endowment, investments, vendor payments), and internal operational data (staff records, communications).</p>
+      <h2 id="2-the-regulatory-landscape">2. The Regulatory Landscape</h2>
+      <p><strong>IRS Compliance (990-PF).</strong> Private foundations file Form 990-PF annually, which includes detailed financial data, grant recipient lists, and officer compensation — all public record. Data handling strategies must account for this public/private boundary.</p>
+      <p><strong>State Privacy Laws.</strong> Twenty U.S. states have enacted comprehensive privacy laws. Colorado, Delaware, Maryland, Minnesota, New Jersey, and Oregon offer virtually no nonprofit exemptions (Source: Wagenmaker Law, 2025). Minnesota&rsquo;s Consumer Data Privacy Act delays nonprofit compliance to 2029, but the scope of preparation required is substantial (Source: Lathrop GPM, 2025).</p>
+      <p><strong>HIPAA.</strong> Health-focused foundations processing Protected Health Information through grantee reporting or direct service delivery may have Business Associate obligations (Source: BDO, &ldquo;U.S. Federal Privacy Landscape: HIPAA,&rdquo; 2025).</p>
+      <p><strong>PCI-DSS.</strong> Foundations accepting online donations face payment card industry compliance obligations regardless of organizational size.</p>
+      <p><strong>International Frameworks.</strong> The EU AI Act becomes fully applicable August 2, 2026. The EU Digital Omnibus package proposes targeted GDPR amendments (Source: White &amp; Case, 2025).</p>
+      <h2 id="3-cybersecurity-threats-facing-foundations">3. Cybersecurity Threats Facing Foundations</h2>
+      <p>Nonprofits were the second-most targeted sector for cyberattacks in 2024. Cloudflare&rsquo;s Project Galileo reported a 241 percent increase in cyberattacks against nonprofits between 2024 and 2025 (Source: Tardigrade Technology, 2025). Sixty-eight percent of breaches involved a human element (Source: Fortinet, 2025). The average breach cost for nonprofits reaches approximately $2 million. Ransomware was involved in 44 percent of breaches in 2025, up from 32 percent in 2024 (Source: VikingCloud, 2026).</p>
+      <p>Common security gaps for foundations with 3–30 staff include: shared logins and no MFA, no formal offboarding process, no data classification scheme, no vendor data audit, and no incident response plan.</p>
+      <h2 id="4-ai-specific-compliance-considerations">4. AI-Specific Compliance Considerations</h2>
+      <p>Eighty-one percent of foundations report some AI usage, but only 30 percent have an AI policy and just 9 percent have both a policy and an advisory committee (Source: TAG, 2024). Foundation staff are processing sensitive data through AI tools without governance in place. The Center for Effective Philanthropy identified the need to invest in human and technical infrastructure to support responsible AI use (Source: CEP, 2025).</p>
+      <h2 id="5-practical-compliance-framework">5. Practical Compliance Framework</h2>
+      <p><strong>Immediate priorities:</strong> Establish a data privacy policy, establish a data retention policy, enforce MFA on all systems, formalize system offboarding, and establish an AI acceptable use policy.</p>
+      <p><strong>Medium-term (3–6 months):</strong> Conduct a vendor data audit, implement data classification, develop an incident response plan, and assess state privacy law applicability with legal counsel.</p>
+      <p><strong>Longer-term (6–12 months):</strong> Security awareness training, formal risk assessment using NIST CSF, and AI governance committee for foundations actively using AI.</p>
+      <h2 id="sources">Sources</h2>
+      <ul>
+      <li>BDO, &ldquo;U.S. Federal Privacy Landscape for Nonprofit Organizations: HIPAA,&rdquo; 2025</li>
+      <li>BDO, &ldquo;The Crucial Role of Cybersecurity for Nonprofit Organizations in 2025,&rdquo; 2025</li>
+      <li>CEP, &ldquo;An AI Roadmap for Philanthropy in 2025,&rdquo; 2025</li>
+      <li>Fortinet, &ldquo;Cybersecurity Statistics 2025,&rdquo; 2025</li>
+      <li>Lathrop GPM, &ldquo;Get Ready for the New Minnesota Consumer Privacy Act,&rdquo; 2025</li>
+      <li>TAG, &ldquo;2024 State of Philanthropy Tech Survey,&rdquo; October 2024</li>
+      <li>Tardigrade Technology, &ldquo;Key Nonprofit Cybersecurity Statistics in 2025,&rdquo; 2025</li>
+      <li>VikingCloud, &ldquo;205 Cybersecurity Statistics for 2026,&rdquo; 2026</li>
+      <li>Wagenmaker Law, &ldquo;New State Data Privacy Laws Affect Nonprofits,&rdquo; 2025</li>
+      <li>White &amp; Case, &ldquo;Privacy and Cybersecurity 2025–2026,&rdquo; 2025</li>
+      </ul>
+      <p><em>This content is informational and does not constitute legal advice.</em></p>
+    </article>
+
+    <section class="cta-band" id="contact" aria-labelledby="cta-heading">
+      <h2 id="cta-heading">From AI curiosity to AI capability</h2>
+      <p>This research is the groundwork behind our AI Enablement service &mdash; a curated, white-glove Claude Cowork implementation tailored to your organization&rsquo;s workflow.</p>
+      <a class="btn" href="https://calendly.com/mark-malaniru/30min" target="_blank" rel="noopener">Book a discovery call</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Malaniru Inc, LLC &middot; Lafayette, Colorado &middot; AI Enablement</p>
+    <p><a href="philanthropy-ai-research.html">&larr; Back to Philanthropy &amp; AI Research</a> &middot; <a href="index.html">AI Enablement</a></p>
+  </footer>
+</body>
+</html>

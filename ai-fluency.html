@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<!--
+  ============================================================================
+  Malaniru — AI Fluency Training (branded HTML)
+  Built by: Claudia (orchestration) · Date: 2026-06-16
+  Project:  Malaniru_Marketing_Site
+  Source:   Projects/Philanthropy_io_Consultant_Enablement/Consultant_Curriculum/
+            Outputs/20260607-claudia-ai-fluency-guide2-module-content-output.md
+            (Guide 2 — General AI Fluency; companion facilitator guide + workbook)
+  Framework: Anthropic AI Fluency — the four competencies (Delegation,
+            Description, Discernment, Diligence). Credited in footer.
+
+  STATUS / FLAGS:
+  - PUBLIC marketing summary of the Hands-on AI Training pillar (AI Fluency).
+    Demonstrates the approach without reproducing the paid curriculum.
+  - CTA "Book a discovery call" is a PLACEHOLDER pending Marketing approval
+    (matches ai-enablement.html; same calendly link).
+  - PRICING intentionally omitted everywhere — remains [HUMAN REVIEW].
+  - COURSE LENGTH stated softly ("multi-session, over a few weeks"). Source
+    marks the exact session count as inferred (🔶), so no hard count is claimed.
+  - robots noindex/nofollow while pre-publication.
+  - Brand language: "hands-on training," "practitioner," "program,"
+    "multi-session." Avoids "certification / accredited / diploma / course
+    catalog" per brand-voice.md.
+
+  TECHNICAL:
+  - Single self-contained HTML5 file. Embedded CSS. No JavaScript.
+  - Brand tokens from _config/brand-voice.md. WCAG AA contrast. Mobile-first.
+  ============================================================================
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Fluency Training — Malaniru</title>
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="Hands-on AI fluency training for foundations and the professionals who serve them — building teams that move faster with AI and catch it when it's wrong. Built on Anthropic's four-competency AI Fluency framework.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    /* ---- Brand tokens (from _config/brand-voice.md) ---------------------- */
+    :root {
+      --navy:        #0F1A2E;
+      --navy-mid:    #2A3F63;
+      --copper:      #C07830;
+      --gold:        #D4A853;
+      --off-white:   #F4F1EC;
+      --light-gray:  #E8E6E1;
+      --mid-gray:    #8A8A96;
+      --dark-text:   #1C1C1C;
+      --font: "Inter", "Helvetica Neue", Arial, sans-serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: var(--font);
+      background: var(--off-white);
+      color: var(--dark-text);
+      line-height: 1.6;
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .skip-link {
+      position: absolute;
+      left: -999px;
+      top: 0;
+      background: var(--gold);
+      color: var(--navy);
+      padding: 10px 16px;
+      font-weight: 700;
+      z-index: 10;
+    }
+    .skip-link:focus { left: 8px; top: 8px; }
+
+    /* ---- Header / hero --------------------------------------------------- */
+    header {
+      background: var(--navy);
+      color: var(--off-white);
+      padding: 56px 24px 60px;
+      position: relative;
+      overflow: hidden;
+    }
+    header::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 85% 15%, rgba(192,120,48,0.20) 0%, rgba(15,26,46,0) 55%);
+      pointer-events: none;
+    }
+    .header-inner { max-width: 860px; margin: 0 auto; position: relative; z-index: 1; }
+
+    .wordmark {
+      font-weight: 800;
+      font-size: 1.25rem;
+      letter-spacing: 0.02em;
+      margin-bottom: 36px;
+    }
+    .wordmark .dot { color: var(--copper); }
+    .wordmark a {
+      color: var(--off-white);
+      text-decoration: none;
+      transition: opacity 0.18s ease;
+    }
+    .wordmark a:hover, .wordmark a:focus-visible { opacity: 0.85; outline: none; }
+
+    .eyebrow {
+      display: inline-block;
+      font-size: 0.74rem;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 16px;
+    }
+
+    header h1 {
+      font-weight: 800;
+      font-size: clamp(1.9rem, 5vw, 2.8rem);
+      line-height: 1.12;
+      letter-spacing: -0.01em;
+      margin-bottom: 18px;
+      max-width: 20ch;
+    }
+
+    header p.intro {
+      font-size: 1.05rem;
+      color: var(--light-gray);
+      max-width: 64ch;
+    }
+    header p.intro + p.intro { margin-top: 14px; }
+
+    .hero-cta {
+      display: inline-block;
+      margin-top: 30px;
+      background: var(--copper);
+      color: #fff;
+      font-weight: 700;
+      font-size: 0.98rem;
+      padding: 13px 26px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.18s ease;
+    }
+    .hero-cta:hover, .hero-cta:focus-visible { background: var(--gold); color: var(--navy); outline: none; }
+
+    /* ---- Content --------------------------------------------------------- */
+    main {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 56px 24px 24px;
+    }
+
+    .section-eyebrow {
+      display: block;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--copper);
+      margin-bottom: 10px;
+    }
+    .section-title {
+      font-weight: 800;
+      font-size: 1.6rem;
+      color: var(--navy);
+      line-height: 1.2;
+      margin-bottom: 14px;
+      letter-spacing: -0.01em;
+    }
+    .section-lead {
+      font-size: 1.05rem;
+      color: var(--dark-text);
+      max-width: 64ch;
+      margin-bottom: 30px;
+    }
+
+    /* ---- Verification ethic band ---------------------------------------- */
+    .ethic {
+      background: var(--navy);
+      color: var(--light-gray);
+      border-radius: 12px;
+      padding: 38px 34px;
+      margin-bottom: 48px;
+    }
+    .ethic .quote {
+      font-weight: 800;
+      font-size: clamp(1.4rem, 3.4vw, 1.9rem);
+      line-height: 1.25;
+      color: var(--off-white);
+      letter-spacing: -0.01em;
+      margin-bottom: 16px;
+    }
+    .ethic .quote span { color: var(--gold); }
+    .ethic p { color: var(--light-gray); max-width: 62ch; }
+    .ethic p + p { margin-top: 12px; }
+
+    /* ---- Competency cards ----------------------------------------------- */
+    .competency {
+      background: #fff;
+      border: 1px solid var(--light-gray);
+      border-radius: 12px;
+      padding: 30px 30px 26px;
+      margin-bottom: 22px;
+    }
+    .competency-head {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 18px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--light-gray);
+    }
+    .num {
+      flex-shrink: 0;
+      width: 42px;
+      height: 42px;
+      border-radius: 9px;
+      background: var(--navy);
+      color: var(--gold);
+      font-weight: 700;
+      font-size: 1.1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .competency-head h3 {
+      font-weight: 700;
+      font-size: 1.3rem;
+      color: var(--navy);
+      line-height: 1.2;
+    }
+    .question {
+      font-style: italic;
+      color: var(--navy-mid);
+      font-size: 1.02rem;
+      margin-bottom: 14px;
+    }
+    .competency .label {
+      display: block;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--copper);
+      margin-bottom: 5px;
+    }
+    .competency p.body { color: var(--dark-text); }
+
+    /* ---- Delivery list --------------------------------------------------- */
+    .delivery {
+      background: #fff;
+      border: 1px solid var(--light-gray);
+      border-radius: 12px;
+      padding: 14px 30px;
+      margin-bottom: 48px;
+    }
+    .delivery .row {
+      display: flex;
+      gap: 18px;
+      padding: 22px 0;
+      border-bottom: 1px solid var(--light-gray);
+    }
+    .delivery .row:last-child { border-bottom: none; }
+    .delivery .row .marker {
+      flex-shrink: 0;
+      width: 10px;
+      height: 10px;
+      margin-top: 8px;
+      border-radius: 50%;
+      background: var(--copper);
+    }
+    .delivery .row h4 {
+      font-weight: 700;
+      font-size: 1.05rem;
+      color: var(--navy);
+      margin-bottom: 4px;
+    }
+    .delivery .row p { color: var(--dark-text); }
+
+    /* ---- Takeaways ------------------------------------------------------- */
+    .takeaways {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 18px;
+      margin-bottom: 48px;
+    }
+    .takeaway {
+      background: var(--navy-mid);
+      color: var(--off-white);
+      border-radius: 12px;
+      padding: 24px 24px 22px;
+    }
+    .takeaway h4 {
+      font-weight: 700;
+      font-size: 1.05rem;
+      color: var(--gold);
+      margin-bottom: 8px;
+    }
+    .takeaway p { color: var(--light-gray); font-size: 0.96rem; }
+
+    /* ---- Prerequisite note ---------------------------------------------- */
+    .prereq {
+      background: #fff;
+      border: 1px solid var(--light-gray);
+      border-left: 4px solid var(--copper);
+      border-radius: 10px;
+      padding: 24px 28px;
+      margin-bottom: 48px;
+    }
+    .prereq h4 { font-weight: 700; color: var(--navy); margin-bottom: 6px; font-size: 1.05rem; }
+    .prereq p { color: var(--dark-text); }
+    .prereq a, .competency a, .section-lead a { color: var(--copper); font-weight: 600; }
+
+    /* ---- CTA band -------------------------------------------------------- */
+    .cta-band {
+      background: var(--navy);
+      color: var(--off-white);
+      border-radius: 12px;
+      padding: 44px 34px;
+      text-align: center;
+      margin-bottom: 8px;
+    }
+    .cta-band h2 {
+      font-weight: 800;
+      font-size: clamp(1.5rem, 3.6vw, 2rem);
+      margin-bottom: 12px;
+      letter-spacing: -0.01em;
+    }
+    .cta-band p { color: var(--light-gray); max-width: 52ch; margin: 0 auto 26px; }
+    .cta-band .btn {
+      display: inline-block;
+      background: var(--copper);
+      color: #fff;
+      font-weight: 700;
+      padding: 14px 30px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.18s ease;
+    }
+    .cta-band .btn:hover, .cta-band .btn:focus-visible { background: var(--gold); color: var(--navy); outline: none; }
+
+    /* ---- Footer ---------------------------------------------------------- */
+    footer {
+      max-width: 860px;
+      margin: 16px auto 0;
+      padding: 24px;
+      font-size: 0.82rem;
+      color: var(--mid-gray);
+      border-top: 1px solid var(--light-gray);
+    }
+    footer p + p { margin-top: 6px; }
+    footer a { color: var(--mid-gray); text-decoration: underline; }
+  
+    /* 2026-06-16: hide Book a discovery call CTA buttons (per Principal) */
+    a[href*="calendly.com"] { display: none !important; }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header>
+    <div class="header-inner">
+      <div class="wordmark"><a href="index.html">Malaniru<span class="dot">.</span></a></div>
+      <span class="eyebrow">Hands-On AI Training</span>
+      <h1>AI Fluency: Working With AI Without Trusting It</h1>
+      <p class="intro">
+        A practitioner training for foundations and the professionals who serve them.
+        It builds a working relationship with a tool that is genuinely useful and
+        genuinely unreliable — often at the same time — so your team moves faster with
+        AI and catches it when it's wrong.
+      </p>
+      <p class="intro">
+        Built on Anthropic's AI Fluency framework and taught entirely through your own
+        de-identified work — site visit memos, board books, due-diligence write-ups,
+        grantee correspondence — not generic exercises.
+      </p>
+      <a class="hero-cta" href="https://calendly.com/mark-malaniru/30min" target="_blank" rel="noopener">Book a discovery call</a>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- Verification ethic -->
+    <section class="ethic" aria-label="The standard the program runs on">
+      <p class="quote">A wrong answer is <span>three times worse</span> than no answer.</p>
+      <p>
+        That is the standard the whole program runs on. The most dangerous moment with
+        AI is the one right after it gives you a great result — fluent, confident, and
+        possibly wrong — because that is exactly when people stop checking.
+      </p>
+      <p>
+        This training builds the opposite habit: use AI for speed and for the shape of the
+        work, and verify every claim before it leaves your desk. What your team gains is a
+        working, skeptical fluency — one that knows exactly where the tool breaks and how
+        to catch it.
+      </p>
+    </section>
+
+    <!-- Four competencies -->
+    <section aria-labelledby="competencies-heading">
+      <span class="section-eyebrow">The Four Competencies</span>
+      <h2 class="section-title" id="competencies-heading">A framework for working with AI, taught in order</h2>
+      <p class="section-lead">
+        Anthropic's AI Fluency framework defines four competencies for working effectively
+        with AI. We teach them in sequence, because each one depends on the one before it —
+        and we weight the last two most heavily, since a confident-but-wrong output reaching
+        a client is the expensive failure this training exists to prevent.
+      </p>
+
+      <article class="competency">
+        <div class="competency-head"><span class="num" aria-hidden="true">1</span><h3>Delegation</h3></div>
+        <p class="question">Should AI do this at all — and what stays mine?</p>
+        <span class="label">What it builds</span>
+        <p class="body">
+          The most important AI decision is often the decision not to use it, or to use it
+          for only part of a task. Participants learn to split any job three ways: the model's
+          part (the form, the first draft, the reshaping), what stays strictly theirs (the
+          judgment, the relationship, the final call), and the return trip — the point where
+          the draft comes back for checking. A delegation with no return trip isn't delegation;
+          it's abdication.
+        </p>
+      </article>
+
+      <article class="competency">
+        <div class="competency-head"><span class="num" aria-hidden="true">2</span><h3>Description</h3></div>
+        <p class="question">How do I tell it clearly what I actually need?</p>
+        <span class="label">What it builds</span>
+        <p class="body">
+          A prompt is a delegation brief, not a magic incantation — and this cohort already
+          knows how to brief people. Participants learn to write clear, well-scoped instructions
+          with role, task, input, output spec, and guardrails, then to iterate specifically rather
+          than vaguely. The signature habit: tell the model to flag what it doesn't know rather than
+          fill the gap — turning its worst instinct, confident invention, into a usable signal.
+        </p>
+      </article>
+
+      <article class="competency">
+        <div class="competency-head"><span class="num" aria-hidden="true">3</span><h3>Discernment</h3></div>
+        <p class="question">Is this output actually good — or just confident?</p>
+        <span class="label">What it builds</span>
+        <p class="body">
+          Fluency is not accuracy. A correct answer and a confidently wrong one look identical on
+          the page, and the polish is the disguise. Participants learn to read past it — to inspect
+          facts, numbers, names, dates, and citations against a real source; to notice when the model
+          is simply agreeing with them; and to ask what an expert would have flagged that the output
+          didn't. This is the highest-value skill in the program, and it turns a professional's native
+          skepticism into a repeatable method.
+        </p>
+      </article>
+
+      <article class="competency">
+        <div class="competency-head"><span class="num" aria-hidden="true">4</span><h3>Diligence</h3></div>
+        <p class="question">Am I using this responsibly, in policy, and verifiably?</p>
+        <span class="label">What it builds</span>
+        <p class="body">
+          Diligence is what makes the other three safe to use on sensitive material. Participants
+          learn to keep every AI use inside their organization's data-handling rules, to be transparent
+          about where AI contributed, and to be able to show their work — accounting for what the AI did,
+          what was checked, and what was rejected. It is the competency that earns the right to use AI on
+          real client work at all.
+        </p>
+      </article>
+    </section>
+
+    <!-- How it's delivered -->
+    <section aria-labelledby="delivery-heading">
+      <span class="section-eyebrow">How It's Delivered</span>
+      <h2 class="section-title" id="delivery-heading">Practice-based, philanthropy-native, hands-on</h2>
+      <p class="section-lead">
+        Fluency develops through repeated practice, not a single intensive. The program is
+        structured around your team's real work and the verification habit that makes AI safe to
+        rely on.
+      </p>
+
+      <div class="delivery">
+        <div class="row">
+          <span class="marker" aria-hidden="true"></span>
+          <div>
+            <h4>Your work, not generic exercises</h4>
+            <p>Every example is a workflow your team already recognizes — site visit memos, board book prep, due-diligence write-ups, grantee correspondence, evaluation synthesis. Practice runs on your own de-identified material.</p>
+          </div>
+        </div>
+        <div class="row">
+          <span class="marker" aria-hidden="true"></span>
+          <div>
+            <h4>Multi-session, spaced over a few weeks</h4>
+            <p>Delivered across several working sessions with practice in between, so the habits set in rather than fading after a one-day workshop.</p>
+          </div>
+        </div>
+        <div class="row">
+          <span class="marker" aria-hidden="true"></span>
+          <div>
+            <h4>Tiered to the team</h4>
+            <p>Starts with the fundamentals everyone needs, builds to practitioner-level skill on real deliverables, with optional advanced depth for messy, multi-source data work.</p>
+          </div>
+        </div>
+        <div class="row">
+          <span class="marker" aria-hidden="true"></span>
+          <div>
+            <h4>The gate is a habit, not a quiz</h4>
+            <p>Participants advance by producing one verified piece of real work — a clean transformation checked against its source — not by passing a test. The demonstrated habit is the standard.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Takeaways -->
+    <section aria-labelledby="takeaways-heading">
+      <span class="section-eyebrow">What Your Team Walks Away With</span>
+      <h2 class="section-title" id="takeaways-heading">Faster on the form, sharper on the facts</h2>
+      <p class="section-lead">
+        The program is assessed on one habit: use AI fast and skeptically, and be able to prove
+        what you checked.
+      </p>
+      <div class="takeaways">
+        <div class="takeaway">
+          <h4>The verification log</h4>
+          <p>A simple, repeatable record of what the AI did, what was checked against which source, and what was accepted, corrected, or rejected. The proof and the habit in one artifact.</p>
+        </div>
+        <div class="takeaway">
+          <h4>A method for catching fabrication</h4>
+          <p>The ability to spot a subtly wrong number or an invented citation buried in otherwise-correct text — before it reaches a client.</p>
+        </div>
+        <div class="takeaway">
+          <h4>In-policy use from day one</h4>
+          <p>AI habits that respect data-handling rules by default, so speed never comes at the cost of a client relationship.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Prerequisite / cross-link -->
+    <div class="prereq">
+      <h4>Built on a governance foundation</h4>
+      <p>
+        This training assumes your team already knows which data may go where. We pair it with a
+        clear data-handling and governance foundation so AI use stays responsible from the first session.
+        <a href="policy-summary.html">See the Governance Policies Summary &rarr;</a>
+      </p>
+    </div>
+
+    <!-- CTA -->
+    <section class="cta-band" id="contact" aria-labelledby="cta-heading">
+      <h2 id="cta-heading">Make your team faster and harder to fool</h2>
+      <p>Talk through where AI fluency would help your organization most, and how a program would fit your workflows.</p>
+      <a class="btn" href="https://calendly.com/mark-malaniru/30min" target="_blank" rel="noopener">Book a discovery call</a>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Malaniru Inc, LLC &middot; Lafayette, Colorado &middot; Hands-on AI Training</p>
+    <p>The four-competency model is Anthropic's <a href="https://www.anthropic.com/ai-fluency/overview" target="_blank" rel="noopener">AI Fluency framework</a> (Delegation, Description, Discernment, Diligence).</p>
+  </footer>
+</body>
+</html>
