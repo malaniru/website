@@ -6,8 +6,13 @@
             ai-readiness-questionnaire.md
             security-compliance-questionnaire.md
             client-intake-merged.md  (Operational Assessment)
-  Scope: overview page — purpose, completion time, turnaround, and section
-         breakdown per questionnaire (not full question text).
+  Scope: INDEX page — purpose, completion time, turnaround, and section
+         breakdown per questionnaire. Each card now links out to its dedicated
+         fillable form page (intake-operational / intake-ai-readiness /
+         intake-security-compliance). Not full question text — the forms hold that.
+  2026-06-22 (Web/Morgan Shaw): converted from standalone overview to an index
+         that links to the three live form pages, per the Malaniru Marketing Site
+         build brief. Added "Begin →" CTAs; no other content changed.
   Same style system as policy-summary.html. Single self-contained HTML5 file.
   Embedded CSS. No JavaScript. Brand tokens from _config/brand-voice.md.
   WCAG AA contrast. Mobile-first. robots noindex while pre-publication.
@@ -242,10 +247,33 @@
     }
     a { color: var(--copper); }
 
+    /* ---- Begin CTA (index → form page) ---------------------------------- */
+    .begin-row {
+      margin-top: 22px;
+      padding-top: 20px;
+      border-top: 1px solid var(--light-gray);
+    }
+    a.begin {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 700;
+      font-size: 0.98rem;
+      color: #fff;
+      background: var(--copper);
+      text-decoration: none;
+      border-radius: 8px;
+      padding: 12px 22px;
+      transition: background 0.15s ease;
+    }
+    a.begin:hover, a.begin:focus-visible { background: #a96526; outline: none; }
+    a.begin .arrow { font-size: 1.1em; line-height: 1; }
+
     @media (max-width: 620px) {
       ol.sections { grid-template-columns: 1fr; }
+      a.begin { width: 100%; justify-content: center; }
     }
-  
+
     /* 2026-06-16: hide Book a discovery call CTA buttons (per Principal) */
     a[href*="calendly.com"] { display: none !important; }
   </style>
@@ -275,21 +303,24 @@
         <span class="chip"><strong>50&ndash;60</strong> min</span>
         <span class="chip">Turnaround <strong>5&ndash;7</strong> business days</span>
       </div>
-      <p class="purpose">A single new-client intake covering current state, operations, technology, governance, and goals. Feeds both your engagement plan and your Operational Assessment &mdash; a structured analysis of where you're strong, where gaps exist, and which gaps are the highest-impact opportunities.</p>
+      <p class="purpose">A single new-client intake covering current state, operations, technology, governance, and goals &mdash; written to fit any sector. A few early questions ask you to describe your own core work in your own words, so the assessment meets your organization where it is. Feeds both your engagement plan and your Operational Assessment &mdash; a structured analysis of where you're strong, where gaps exist, and which gaps are the highest-impact opportunities.</p>
       <span class="sections-label">Sections</span>
       <ol class="sections">
         <li>Your Organization</li>
-        <li>Grant Lifecycle &amp; Workflow</li>
+        <li>Core Operations &amp; Primary Workflow</li>
         <li>Technology &amp; Systems</li>
         <li>Data, Documents &amp; Knowledge Management</li>
         <li>Compliance &amp; Reporting</li>
-        <li>Impact Measurement &amp; Learning</li>
+        <li>Outcomes Measurement &amp; Learning</li>
         <li>Staff &amp; Organizational Readiness</li>
         <li>Process Maturity &amp; Change Readiness</li>
         <li>AI Awareness &amp; Appetite</li>
         <li>Business Continuity &amp; Risk</li>
         <li>Engagement Goals</li>
       </ol>
+      <div class="begin-row">
+        <a class="begin" href="intake-operational.html">Begin the Operational Assessment <span class="arrow" aria-hidden="true">&rarr;</span></a>
+      </div>
     </section>
 
     <!-- 2 — Security & Compliance -->
@@ -313,6 +344,10 @@
         <li>AI &amp; Emerging Technology (Security Lens)</li>
         <li>Closing</li>
       </ol>
+      <div class="begin-row">
+        <a class="begin" href="intake-security-compliance.html">Start a Security &amp; Compliance inquiry <span class="arrow" aria-hidden="true">&rarr;</span></a>
+        <p style="font-size:0.86rem;color:var(--mid-gray);margin-top:10px;">The first step is a short qualifying inquiry. The full review &mdash; including the sections above &mdash; is scoped during a follow-up call so sensitive details are never collected through a public form.</p>
+      </div>
     </section>
 
     <!-- 3 — AI Readiness -->
@@ -335,12 +370,15 @@
         <li>Vision &amp; Priorities</li>
         <li>Closing</li>
       </ol>
+      <div class="begin-row">
+        <a class="begin" href="intake-ai-readiness.html">Begin the AI Readiness Assessment <span class="arrow" aria-hidden="true">&rarr;</span></a>
+      </div>
     </section>
 
     <div class="process">
       <span class="sections-label">What happens next</span>
       <p>After you submit a questionnaire, your engagement team reviews your responses and may follow up with a brief call to clarify specific items. We then produce the corresponding deliverable &mdash; tailored to your organization's size, culture, resources, and goals. All responses are treated as confidential and are not shared outside your engagement team. Assessments are informational and do not constitute legal advice; findings should be reviewed by qualified counsel before implementation decisions.</p>
-      <p style="margin-top:14px;">These intake questionnaires are the first step of <a href="index.html#analysis">Analysis in the AI Enablement engagement &rarr;</a></p>
+      <p style="margin-top:14px;">These intake questionnaires are the first step of <a href="index.html">Analysis in the AI Enablement engagement &rarr;</a></p>
     </div>
 
   </main>

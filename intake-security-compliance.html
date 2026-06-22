@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<!--
+  ============================================================================
+  Malaniru — Security & Compliance Intake (QUALIFYING-ONLY form)
+  Project: Malaniru Marketing Site
+  Built by: Web persona (Morgan Shaw), 2026-06-22
+  Spec: Projects/Malaniru_Marketing_Site/Outputs/
+          20260622-claudia-html-questionnaire-forms-to-google-sheets-output.md
+  Posts to: Google Apps Script Web App  →  Sheet tab "Security_Compliance"
+
+  BUILD NOTES
+  - This is the QUALIFYING-ONLY public form. It deliberately does NOT render the
+    full 38-question Security & Compliance instrument. Per Principal sign-off
+    (2026-06-22), deep security-posture detail is gated to a post-call, scoped
+    intake — not collected through a public web form. Fields below are exactly
+    the qualifying set named in the build brief.
+  - Submit handler sends url-encoded data (URLSearchParams) with NO custom
+    Content-Type header → CORS "simple request" → no preflight. Do NOT change
+    this to JSON; it is the documented #1 failure mode for Apps Script backends.
+  - ENDPOINT and token are SET (2026-06-22): wired to the deployed Apps Script
+    /exec URL. Form is submission-ready (still noindex pre-launch).
+  - token value is SET (2026-06-22) and must match the SHARED_TOKEN constant
+    in the deployed Apps Script.
+  - Honeypot field "company_website" is visually hidden; real users leave empty.
+  - robots noindex,nofollow (pre-launch). No pricing. Calendly CTAs hidden.
+
+  ⚑ HUMAN REVIEW required before this form goes live (per spec): confirm what
+    this form may ask publicly, confirm consent/privacy language, confirm Drive
+    sharing on the responses Sheet is locked down. Pre-launch noindex is on.
+  ============================================================================
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Security &amp; Compliance Inquiry — Malaniru</title>
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="Start a Security & Compliance Review inquiry with Malaniru. A short qualifying form — detailed specifics are covered in a scoped call.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    /* ---- Brand tokens (from _config/brand-voice.md) ---------------------- */
+    :root {
+      --navy:        #0F1A2E;
+      --navy-mid:    #2A3F63;
+      --copper:      #C07830;
+      --gold:        #D4A853;
+      --off-white:   #F4F1EC;
+      --light-gray:  #E8E6E1;
+      --mid-gray:    #8A8A96;
+      --dark-text:   #1C1C1C;
+      --font: "Inter", "Helvetica Neue", Arial, sans-serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: var(--font);
+      background: var(--off-white);
+      color: var(--dark-text);
+      line-height: 1.6;
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ---- Header / hero --------------------------------------------------- */
+    header {
+      background: var(--navy);
+      color: var(--off-white);
+      padding: 56px 24px 60px;
+      position: relative;
+      overflow: hidden;
+    }
+    header::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 85% 15%, rgba(192,120,48,0.20) 0%, rgba(15,26,46,0) 55%);
+      pointer-events: none;
+    }
+    .header-inner { max-width: 760px; margin: 0 auto; position: relative; z-index: 1; }
+
+    .wordmark {
+      font-weight: 800;
+      font-size: 1.25rem;
+      letter-spacing: 0.02em;
+      margin-bottom: 36px;
+    }
+    .wordmark .dot { color: var(--copper); }
+    .wordmark a {
+      color: var(--off-white);
+      text-decoration: none;
+      transition: opacity 0.18s ease;
+    }
+    .wordmark a:hover, .wordmark a:focus-visible { opacity: 0.85; outline: none; }
+
+    .eyebrow {
+      display: inline-block;
+      font-size: 0.74rem;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 16px;
+    }
+
+    header h1 {
+      font-weight: 800;
+      font-size: clamp(1.9rem, 5vw, 2.8rem);
+      line-height: 1.12;
+      letter-spacing: -0.01em;
+      margin-bottom: 18px;
+      max-width: 20ch;
+    }
+
+    header p.intro {
+      font-size: 1.05rem;
+      color: var(--light-gray);
+      max-width: 64ch;
+    }
+    header .back {
+      display: inline-block;
+      margin-top: 22px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--gold);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(212,168,83,0.4);
+    }
+    header .back:hover, header .back:focus-visible { border-bottom-color: var(--gold); outline: none; }
+
+    /* ---- Content / form -------------------------------------------------- */
+    main {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 48px 24px 24px;
+    }
+
+    .card {
+      background: #fff;
+      border: 1px solid var(--light-gray);
+      border-radius: 12px;
+      padding: 30px 30px 28px;
+      margin-bottom: 26px;
+    }
+
+    fieldset { border: none; margin: 0 0 26px; padding: 0; }
+    fieldset:last-of-type { margin-bottom: 0; }
+    legend {
+      font-weight: 700;
+      font-size: 1.15rem;
+      color: var(--navy);
+      line-height: 1.25;
+      margin-bottom: 4px;
+      padding: 0;
+    }
+    .legend-note {
+      font-size: 0.92rem;
+      color: var(--mid-gray);
+      margin-bottom: 18px;
+    }
+
+    .field { margin-bottom: 20px; }
+    .field:last-child { margin-bottom: 0; }
+
+    label.q {
+      display: block;
+      font-weight: 600;
+      color: var(--dark-text);
+      margin-bottom: 8px;
+    }
+    .req { color: var(--copper); font-weight: 700; }
+    .help {
+      display: block;
+      font-size: 0.88rem;
+      color: var(--mid-gray);
+      margin-top: 6px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    select,
+    textarea {
+      width: 100%;
+      font-family: var(--font);
+      font-size: 1rem;
+      color: var(--dark-text);
+      background: var(--off-white);
+      border: 1px solid var(--light-gray);
+      border-radius: 8px;
+      padding: 11px 13px;
+      transition: border-color 0.15s ease, box-shadow 0.15s ease;
+    }
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    select:focus,
+    textarea:focus {
+      outline: none;
+      border-color: var(--copper);
+      box-shadow: 0 0 0 3px rgba(192,120,48,0.18);
+    }
+    textarea { min-height: 110px; resize: vertical; }
+    select { appearance: none; background-image: none; cursor: pointer; }
+
+    /* radio / checkbox groups */
+    .options { display: grid; gap: 9px; margin-top: 4px; }
+    .opt {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 0.98rem;
+      cursor: pointer;
+      padding: 2px 0;
+    }
+    .opt input { margin-top: 4px; flex-shrink: 0; width: 17px; height: 17px; accent-color: var(--copper); }
+
+    /* lead-in disclaimer callout */
+    .leadnote {
+      background: var(--navy);
+      color: var(--off-white);
+      border-radius: 12px;
+      border-left: 4px solid var(--gold);
+      padding: 20px 24px;
+      margin-bottom: 26px;
+    }
+    .leadnote strong { color: var(--gold); font-weight: 700; }
+    .leadnote p { font-size: 0.98rem; margin: 0; }
+    .leadnote p + p { margin-top: 8px; color: var(--light-gray); }
+
+    /* submit + status */
+    .consent {
+      font-size: 0.9rem;
+      color: var(--navy-mid);
+      background: var(--off-white);
+      border: 1px solid var(--light-gray);
+      border-left: 3px solid var(--copper);
+      border-radius: 8px;
+      padding: 13px 16px;
+      margin-bottom: 20px;
+    }
+    button[type="submit"] {
+      font-family: var(--font);
+      font-weight: 700;
+      font-size: 1rem;
+      color: #fff;
+      background: var(--copper);
+      border: none;
+      border-radius: 8px;
+      padding: 14px 28px;
+      cursor: pointer;
+      transition: background 0.15s ease;
+    }
+    button[type="submit"]:hover, button[type="submit"]:focus-visible {
+      background: #a96526;
+      outline: none;
+    }
+    button[type="submit"]:disabled { opacity: 0.6; cursor: default; }
+
+    #formMsg {
+      margin-top: 16px;
+      font-weight: 600;
+      min-height: 1.4em;
+    }
+    #formMsg.ok  { color: #2e6b34; }
+    #formMsg.err { color: #9a2b2b; }
+
+    footer {
+      max-width: 760px;
+      margin: 8px auto 0;
+      padding: 24px;
+      font-size: 0.82rem;
+      color: var(--mid-gray);
+      border-top: 1px solid var(--light-gray);
+    }
+    a { color: var(--copper); }
+
+    /* 2026-06-16: hide Book a discovery call CTA buttons (per Principal) */
+    a[href*="calendly.com"] { display: none !important; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <div class="wordmark"><a href="index.html">Malaniru<span class="dot">.</span></a></div>
+      <span class="eyebrow">Security &amp; Compliance Inquiry</span>
+      <h1>Start a Security &amp; Compliance Review</h1>
+      <p class="intro">
+        A few quick questions so we understand your situation and can respond well.
+        This is a short qualifying form &mdash; we cover the specifics in a scoped
+        call, not here. Please don't include confidential security details on this page.
+      </p>
+      <a class="back" href="questionnaires.html">&larr; Back to all questionnaires</a>
+    </div>
+  </header>
+
+  <main>
+    <div class="leadnote">
+      <p><strong>Want a more complete security analysis?</strong> This short form just helps us understand your situation. If you'd like a more complete security analysis, let's discuss it in a call &mdash; that's where we cover the detailed specifics.</p>
+      <p>Just submit below and let us know, or reach out at mark@malaniru.com to set up a time.</p>
+    </div>
+
+    <form id="intake" class="card" novalidate>
+      <!-- routing + anti-abuse (see Build Notes) -->
+      <input type="hidden" name="form" value="Security_Compliance">
+      <input type="hidden" name="token" value="bDIdoBSugVQdPkgE">
+      <input type="text" name="company_website" tabindex="-1" autocomplete="off"
+             style="position:absolute;left:-9999px" aria-hidden="true">
+
+      <fieldset>
+        <legend>About you</legend>
+        <div class="field">
+          <label class="q" for="Name">Your name <span class="req" aria-hidden="true">*</span></label>
+          <input type="text" id="Name" name="Name" autocomplete="name" required>
+        </div>
+        <div class="field">
+          <label class="q" for="Email">Work email <span class="req" aria-hidden="true">*</span></label>
+          <input type="email" id="Email" name="Email" autocomplete="email" required>
+        </div>
+        <div class="field">
+          <label class="q" for="Organization">Organization <span class="req" aria-hidden="true">*</span></label>
+          <input type="text" id="Organization" name="Organization" autocomplete="organization" required>
+        </div>
+        <div class="field">
+          <label class="q" for="Role">Role / title</label>
+          <input type="text" id="Role" name="Role" autocomplete="organization-title">
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Your organization</legend>
+        <div class="field">
+          <label class="q" for="Org_Type">Organization type</label>
+          <select id="Org_Type" name="Org_Type">
+            <option value="" selected>Select one…</option>
+            <option>Foundation</option>
+            <option>Nonprofit</option>
+            <option>For-profit</option>
+            <option>Government</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="field">
+          <label class="q" for="Staff_Size">Staff size</label>
+          <select id="Staff_Size" name="Staff_Size">
+            <option value="" selected>Select one…</option>
+            <option>1&ndash;10</option>
+            <option>11&ndash;50</option>
+            <option>51&ndash;200</option>
+            <option>200+</option>
+          </select>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>A few signals</legend>
+        <p class="legend-note">High-level only &mdash; we'll go deeper on a call.</p>
+
+        <div class="field">
+          <span class="q" id="lbl-regdata">Does your organization handle regulated or sensitive data?</span>
+          <div class="options" role="radiogroup" aria-labelledby="lbl-regdata">
+            <label class="opt"><input type="radio" name="Handles_Regulated_Data" value="Yes"> Yes</label>
+            <label class="opt"><input type="radio" name="Handles_Regulated_Data" value="No"> No</label>
+            <label class="opt"><input type="radio" name="Handles_Regulated_Data" value="Not sure"> Not sure</label>
+          </div>
+        </div>
+
+        <div class="field">
+          <span class="q" id="lbl-prompting">What's prompting this review?</span>
+          <div class="options" aria-labelledby="lbl-prompting">
+            <label class="opt"><input type="checkbox" name="Prompting_Review" value="Adopting AI tools"> Adopting AI tools</label>
+            <label class="opt"><input type="checkbox" name="Prompting_Review" value="Funder or board requirement"> Funder or board requirement</label>
+            <label class="opt"><input type="checkbox" name="Prompting_Review" value="Data-handling concern"> Data-handling concern</label>
+            <label class="opt"><input type="checkbox" name="Prompting_Review" value="Regulatory question"> Regulatory question</label>
+            <label class="opt"><input type="checkbox" name="Prompting_Review" value="Not sure"> Not sure</label>
+          </div>
+        </div>
+
+        <div class="field">
+          <span class="q" id="lbl-adoption">Where are you in AI adoption?</span>
+          <div class="options" role="radiogroup" aria-labelledby="lbl-adoption">
+            <label class="opt"><input type="radio" name="AI_Adoption_Stage" value="Not started"> Not started</label>
+            <label class="opt"><input type="radio" name="AI_Adoption_Stage" value="Exploring"> Exploring</label>
+            <label class="opt"><input type="radio" name="AI_Adoption_Stage" value="In use"> In use</label>
+            <label class="opt"><input type="radio" name="AI_Adoption_Stage" value="Scaling"> Scaling</label>
+          </div>
+        </div>
+
+        <div class="field">
+          <span class="q" id="lbl-timeline">Timeline</span>
+          <div class="options" role="radiogroup" aria-labelledby="lbl-timeline">
+            <label class="opt"><input type="radio" name="Timeline" value="Just exploring"> Just exploring</label>
+            <label class="opt"><input type="radio" name="Timeline" value="This quarter"> This quarter</label>
+            <label class="opt"><input type="radio" name="Timeline" value="Actively planning"> Actively planning</label>
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="q" for="Anything_Else">Anything else?</label>
+          <textarea id="Anything_Else" name="Anything_Else"></textarea>
+          <span class="help">Please don't include confidential security details here &mdash; we'll cover specifics in a scoped call.</span>
+        </div>
+      </fieldset>
+
+      <p class="consent">We use this only to respond to your inquiry and don't share it with third parties.</p>
+
+      <button type="submit">Submit inquiry</button>
+      <p id="formMsg" role="status" aria-live="polite"></p>
+    </form>
+  </main>
+
+  <footer>
+    &copy; 2026 Malaniru Inc, LLC &middot; Lafayette, Colorado &middot; All responses are treated as confidential.
+  </footer>
+
+  <script>
+    // ---- Submit handler -----------------------------------------------------
+    // CRITICAL: send url-encoded body, NO custom Content-Type header. This is a
+    // CORS "simple request" → no preflight → the Apps Script /exec endpoint can
+    // answer it. Sending JSON would trigger a preflight the backend can't answer
+    // and every submission would silently fail. Do not change this.
+    var ENDPOINT = 'https://script.google.com/macros/s/AKfycbxeJ00GVCGZ2coK_QlSJmy5TyrnqZa6PCNy5j4IsNdmlbJyBuUVuWBdCbYQOr0KPId5aQ/exec'; // wired to deployed Apps Script /exec (2026-06-22)
+    var formEl = document.getElementById('intake');
+    var msg = document.getElementById('formMsg');
+
+    formEl.addEventListener('submit', function (ev) {
+      ev.preventDefault();
+      msg.className = '';
+      if (ENDPOINT === 'PASTE_APPS_SCRIPT_EXEC_URL') {
+        msg.className = 'err';
+        msg.textContent = 'This form is not connected yet. Please email mark@malaniru.com.';
+        return;
+      }
+      var btn = formEl.querySelector('button[type="submit"]');
+      var data = new URLSearchParams(new FormData(formEl)); // url-encoded = simple request
+      data.append('_ua', navigator.userAgent);
+      data.append('_page', location.href);
+      btn.disabled = true;
+      msg.textContent = 'Sending…';
+
+      fetch(ENDPOINT, { method: 'POST', body: data }) // NO custom headers → no preflight
+        .then(function (r) { return r.json(); })
+        .then(function (res) {
+          if (res && res.ok) {
+            msg.className = 'ok';
+            msg.textContent = 'Thanks — we got it. We’ll be in touch shortly.';
+            formEl.reset();
+          } else {
+            msg.className = 'err';
+            msg.textContent = 'Something went wrong. Please email mark@malaniru.com.';
+          }
+        })
+        .catch(function () {
+          msg.className = 'err';
+          msg.textContent = 'Network error. Please email mark@malaniru.com.';
+        })
+        .then(function () { btn.disabled = false; });
+    });
+  </script>
+</body>
+</html>

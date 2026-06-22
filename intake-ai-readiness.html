@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<!--
+  ============================================================================
+  Malaniru — AI Readiness Assessment Intake (full form)
+  Project: Malaniru Marketing Site
+  Built by: Web persona (Morgan Shaw), 2026-06-22
+  Spec: Projects/Malaniru_Marketing_Site/Outputs/
+          20260622-claudia-html-questionnaire-forms-to-google-sheets-output.md
+  Question source: Projects/Philanthropy_io_Consultant_Enablement/Assets/
+          05-onboarding/ai-readiness-questionnaire.md  (37 questions, 8 sections)
+  Posts to: Google Apps Script Web App  →  Sheet tab "AI_Readiness"
+
+  BUILD NOTES
+  - Submit handler sends url-encoded data (URLSearchParams) with NO custom
+    Content-Type header → CORS "simple request" → no preflight. Do NOT change
+    this to JSON; it is the documented #1 failure mode for Apps Script backends.
+  - ENDPOINT and token are SET (2026-06-22): wired to the deployed Apps Script
+    /exec URL. Form is submission-ready (still noindex pre-launch).
+  - token value is SET (2026-06-22); must match deployed SHARED_TOKEN.
+  - Honeypot "company_website" is visually hidden. Each name= matches an
+    intended Google Sheet column header on the "AI_Readiness" tab.
+  - required is set only on contact basics (Name, Email, Organization).
+  - robots noindex,nofollow (pre-launch). No pricing. Calendly CTAs hidden.
+
+  ⚑ CONTENT FLAG for Marketing Director (sector neutralization):
+    Source is the Philanthropy.io foundation-specific instrument. Mandatory
+    substitutions applied to fit the sector-neutral Malaniru overview:
+    "Philanthropy.io" → "Malaniru/we"; "your foundation" → "your organization".
+    Foundation-specific examples (grantees, program officers, board) were kept
+    in substance — generalizing them is a Marketing content decision, not Web.
+  ============================================================================
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Readiness Assessment Intake — Malaniru</title>
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="The AI Readiness Assessment intake — current usage, data readiness, workflow mapping, governance, and vision. Feeds your AI Readiness Assessment.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy:        #0F1A2E;
+      --navy-mid:    #2A3F63;
+      --copper:      #C07830;
+      --gold:        #D4A853;
+      --off-white:   #F4F1EC;
+      --light-gray:  #E8E6E1;
+      --mid-gray:    #8A8A96;
+      --dark-text:   #1C1C1C;
+      --font: "Inter", "Helvetica Neue", Arial, sans-serif;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: var(--font); background: var(--off-white); color: var(--dark-text);
+      line-height: 1.6; font-size: 16px; -webkit-font-smoothing: antialiased;
+    }
+    header { background: var(--navy); color: var(--off-white); padding: 56px 24px 60px; position: relative; overflow: hidden; }
+    header::after {
+      content: ""; position: absolute; inset: 0;
+      background: radial-gradient(circle at 85% 15%, rgba(192,120,48,0.20) 0%, rgba(15,26,46,0) 55%);
+      pointer-events: none;
+    }
+    .header-inner { max-width: 760px; margin: 0 auto; position: relative; z-index: 1; }
+    .wordmark { font-weight: 800; font-size: 1.25rem; letter-spacing: 0.02em; margin-bottom: 36px; }
+    .wordmark .dot { color: var(--copper); }
+    .wordmark a { color: var(--off-white); text-decoration: none; transition: opacity 0.18s ease; }
+    .wordmark a:hover, .wordmark a:focus-visible { opacity: 0.85; outline: none; }
+    .eyebrow {
+      display: inline-block; font-size: 0.74rem; font-weight: 600; letter-spacing: 0.16em;
+      text-transform: uppercase; color: var(--gold); margin-bottom: 16px;
+    }
+    header h1 {
+      font-weight: 800; font-size: clamp(1.9rem, 5vw, 2.8rem); line-height: 1.12;
+      letter-spacing: -0.01em; margin-bottom: 18px; max-width: 20ch;
+    }
+    header p.intro { font-size: 1.05rem; color: var(--light-gray); max-width: 64ch; }
+    header .meta-line { margin-top: 16px; font-size: 0.92rem; color: var(--mid-gray); }
+    header .back {
+      display: inline-block; margin-top: 22px; font-size: 0.9rem; font-weight: 600;
+      color: var(--gold); text-decoration: none; border-bottom: 1px solid rgba(212,168,83,0.4);
+    }
+    header .back:hover, header .back:focus-visible { border-bottom-color: var(--gold); outline: none; }
+
+    main { max-width: 760px; margin: 0 auto; padding: 48px 24px 24px; }
+    .card { background: #fff; border: 1px solid var(--light-gray); border-radius: 12px; padding: 30px 30px 28px; margin-bottom: 26px; }
+    fieldset { border: none; margin: 0 0 14px; padding: 0; }
+    .sec-head {
+      display: flex; align-items: center; gap: 14px; margin: 30px 0 18px;
+      padding-top: 26px; border-top: 1px solid var(--light-gray);
+    }
+    .card > fieldset:first-of-type .sec-head { margin-top: 0; padding-top: 0; border-top: none; }
+    .num {
+      flex-shrink: 0; width: 38px; height: 38px; border-radius: 8px; background: var(--navy);
+      color: var(--gold); font-weight: 700; font-size: 1rem; display: flex; align-items: center; justify-content: center;
+    }
+    legend { padding: 0; }
+    .sec-head h2 { font-weight: 700; font-size: 1.22rem; color: var(--navy); line-height: 1.2; }
+    .field { margin-bottom: 20px; }
+    label.q, span.q { display: block; font-weight: 600; color: var(--dark-text); margin-bottom: 8px; }
+    .req { color: var(--copper); font-weight: 700; }
+    .help { display: block; font-size: 0.88rem; color: var(--mid-gray); margin-top: 6px; }
+    input[type="text"], input[type="email"], select, textarea {
+      width: 100%; font-family: var(--font); font-size: 1rem; color: var(--dark-text);
+      background: var(--off-white); border: 1px solid var(--light-gray); border-radius: 8px;
+      padding: 11px 13px; transition: border-color 0.15s ease, box-shadow 0.15s ease;
+    }
+    input:focus, select:focus, textarea:focus {
+      outline: none; border-color: var(--copper); box-shadow: 0 0 0 3px rgba(192,120,48,0.18);
+    }
+    textarea { min-height: 92px; resize: vertical; }
+    select { appearance: none; cursor: pointer; }
+    .options { display: grid; gap: 9px; margin-top: 4px; }
+    .opt { display: flex; align-items: flex-start; gap: 10px; font-size: 0.98rem; cursor: pointer; padding: 2px 0; }
+    .opt input { margin-top: 4px; flex-shrink: 0; width: 17px; height: 17px; accent-color: var(--copper); }
+    button[type="submit"] {
+      font-family: var(--font); font-weight: 700; font-size: 1rem; color: #fff; background: var(--copper);
+      border: none; border-radius: 8px; padding: 14px 28px; cursor: pointer; transition: background 0.15s ease;
+    }
+    button[type="submit"]:hover, button[type="submit"]:focus-visible { background: #a96526; outline: none; }
+    button[type="submit"]:disabled { opacity: 0.6; cursor: default; }
+    #formMsg { margin-top: 16px; font-weight: 600; min-height: 1.4em; }
+    #formMsg.ok { color: #2e6b34; } #formMsg.err { color: #9a2b2b; }
+    .note-confidential {
+      font-size: 0.9rem; color: var(--navy-mid); background: var(--off-white);
+      border: 1px solid var(--light-gray); border-left: 3px solid var(--copper);
+      border-radius: 8px; padding: 13px 16px; margin-bottom: 20px;
+    }
+    footer {
+      max-width: 760px; margin: 8px auto 0; padding: 24px; font-size: 0.82rem;
+      color: var(--mid-gray); border-top: 1px solid var(--light-gray);
+    }
+    a { color: var(--copper); }
+    a[href*="calendly.com"] { display: none !important; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <div class="wordmark"><a href="index.html">Malaniru<span class="dot">.</span></a></div>
+      <span class="eyebrow">AI Readiness Assessment</span>
+      <h1>AI Readiness Assessment Intake</h1>
+      <p class="intro">
+        AI adoption is a spectrum. Some organizations have staff using AI tools daily;
+        others haven't started. Both are fine &mdash; this assessment meets you where you
+        are and builds a path forward. If a question doesn't apply, write &ldquo;N/A.&rdquo;
+        If you're unsure, your honest uncertainty is useful; it tells us where to focus.
+      </p>
+      <p class="meta-line">Estimated completion: 30&ndash;40 minutes &middot; Turnaround: 5&ndash;7 business days</p>
+      <a class="back" href="questionnaires.html">&larr; Back to all questionnaires</a>
+    </div>
+  </header>
+
+  <main>
+    <form id="intake" class="card" novalidate>
+      <input type="hidden" name="form" value="AI_Readiness">
+      <input type="hidden" name="token" value="bDIdoBSugVQdPkgE">
+      <input type="text" name="company_website" tabindex="-1" autocomplete="off"
+             style="position:absolute;left:-9999px" aria-hidden="true">
+
+      <!-- Contact basics -->
+      <fieldset>
+        <div class="sec-head"><span class="num" aria-hidden="true">&middot;</span><legend><h2>Your contact details</h2></legend></div>
+        <div class="field">
+          <label class="q" for="Name">Your name <span class="req" aria-hidden="true">*</span></label>
+          <input type="text" id="Name" name="Name" autocomplete="name" required>
+        </div>
+        <div class="field">
+          <label class="q" for="Email">Work email <span class="req" aria-hidden="true">*</span></label>
+          <input type="email" id="Email" name="Email" autocomplete="email" required>
+        </div>
+        <div class="field">
+          <label class="q" for="Organization">Organization <span class="req" aria-hidden="true">*</span></label>
+          <input type="text" id="Organization" name="Organization" autocomplete="organization" required>
+        </div>
+        <div class="field">
+          <label class="q" for="Role">Role / title</label>
+          <input type="text" id="Role" name="Role" autocomplete="organization-title">
+        </div>
+      </fieldset>
+
+      <!-- Section 1 -->
+      <fieldset>
+        <div class="sec-head"><span class="num" aria-hidden="true">1</span><legend><h2>Current State — AI Awareness &amp; Usage</h2></legend></div>
+        <div class="field">
+          <label class="q" for="Leadership_Discussion">Has your leadership (executive director, board, senior staff) discussed AI adoption formally — board meetings, strategic planning, staff meetings? Describe the conversation and any conclusions.</label>
+          <textarea id="Leadership_Discussion" name="Leadership_Discussion"></textarea>
+        </div>
+        <div class="field">
+          <label class="q" for="Staff_AI_Work_Usage">Are any staff currently using AI tools (ChatGPT, Claude, Copilot, Gemini, others) for work? If so, who (by role), what tools, and for what purposes?</label>
+          <textarea id="Staff_AI_Work_Usage" name="Staff_AI_Work_Usage"></textarea>
+        </div>
+        <div class="field">
+          <label class="q" for="Staff_AI_Personal_Usage">Are any staff using AI tools for personal purposes that you're aware of? (This gauges overall familiarity, not to monitor personal use.)</label>
+          <textarea id="Staff_AI_Personal_Usage" name="Staff_AI_Personal_Usage"></textarea>
+        </div>
+        <div class="field">
+          <label class="q" for="AI_Training_Investment">Have you invested in any AI-related training, workshops, or educational resources for staff? Describe.</label>
+          <textarea id="AI_Training_Investment" name="AI_Training_Investment"></textarea>
+        </div>
+        <div class="field">
+          <span class="q">How would you describe your board's current attitude toward AI?</span>
+          <div class="options" role="radiogroup" aria-label="Board AI attitude">
+            <label class="opt"><input type="radio" name="Board_AI_Attitude" value="Enthusiastic"> Enthusiastic — actively encouraging exploration</label>
+            <label class="opt"><input type="radio" name="Board_AI_Attitude" value="Open"> Open — willing to consider if shown value</label>
+            <label class="opt"><input type="radio" name="Board_AI_Attitude" value="Cautious"> Cautious — concerned about risks and appropriateness</label>
+            <label class="opt"><input type="radio" name="Board_AI_Attitude" value="Skeptical"> Skeptical — unconvinced AI is relevant</label>
+            <label class="opt"><input type="radio" name="Board_AI_Attitude" value="Not discussed"> Haven't discussed it</label>
+          </div>
+        </div>
+      </fieldset>
+
+      <!-- Section 2 -->
+      <fieldset>
+        <div class="sec-head"><span class="num" aria-hidden="true">2</span><legend><h2>Data Readiness</h2></legend></div>
+        <div class="field">
+          <span class="q">How much of your institutional knowledge is digitized and organized (vs. in inboxes, staff memory, or paper)?</span>
+          <div class="options" role="radiogroup" aria-label="Knowledge digitization">
+            <label class="opt"><input type="radio" name="Knowledge_Digitization" value="Most digitized and organized"> Most is digitized and organized</label>
+            <label class="opt"><input type="radio" name="Knowledge_Digitization" value="Digitized but disorganized"> Much is digitized but not well-organized</label>
+            <label class="opt"><input type="radio" name="Knowledge_Digitization" value="A mix"> A mix — some digital, some paper, some in people's heads</label>
+            <label class="opt"><input type="radio" name="Knowledge_Digitization" value="Mostly analog/siloed"> Mostly analog or in individual silos</label>
+          </div>
+        </div>
+        <div class="field">
+          <label class="q" for="Searchable_Archive">Do you have a searchable archive of past work (e.g., applications, reports, evaluations)? Or would finding a record from three years ago mean digging through email or folders?</label>
+          <textarea id="Searchable_Archive" name="Searchable_Archive"></textarea>
+        </div>
+        <div class="field">
+          <label class="q" for="Document_Consistency">How consistent is the format and structure of your key documents? (e.g., do reports follow a template, or does each submitter use their own format?)</label>
+          <textarea id="Document_Consistency" name="Document_Consistency"></textarea>
+        </div>
+        <div class="field">
+          <label class="q" for="Knowledge_Base">Do you maintain an internal knowledge base, wiki, or reference library for policies, procedures, or program knowledge?</label>
+          <textarea id="Knowledge_Base" name="Knowledge_Base"></textarea>
+        </div>
+        <div class="field">
+          <span class="q">If a key staff member left tomorrow, how much institutional knowledge would leave with them?</span>
+          <div class="options" role="radiogroup" aria-label="Knowledge loss risk">
+            <label class="opt"><input type="radio" name="Knowledge_Loss_Risk" value="Very little"> Very little — most is documented</label>
+            <label class="opt"><input type="radio" name="Knowledge_Loss_Risk" value="Some"> Some — certain areas depend on specific people</label>
+            <label class="opt"><input type="radio" name="Knowledge_Loss_Risk" value="A lot"> A lot — several roles have knowledge that isn't written down</label>
+          </div>
+        </div>
+      </fieldset>
+
+      <!-- Section 3 -->
+      <fieldset>
+        <div class="sec-head"><span class="num" aria-hidden="true">3</span><legend><h2>Workflow Mapping — Where AI Could Help</h2></legend></div>
+        <div class="field">
+          <label class="q" for="Top_Time_Sinks">What are the top three tasks or workflows that consume the most staff time relative to their value? (These are your highest-impact AI candidates.)</label>
+          <textarea id="Top_Time_Sinks" name="Top_Time_Sinks"></textarea>
+        </div>
+        <div class="field">
+          <label class="q" for="Screening_Process">How do you currently handle initial screening or review of incoming work (e.g., applications)? Primarily manual reading, or any automated scoring/filtering?</label>
+          <textarea id="Screening_Process" name="Screening_Process"></textarea>
+        </div>
+        <div class="field">
+          <label class="q" for="Report_Synthesis">How do you synthesize reports? When someone needs to understand the collective progress of many counterparties (e.g., 20 grantees), what does that look like today?</label>
+          <textarea id="Report_Synthesis" name="Report_Synthesis"></textarea>
+        </div>
+        <div class="field">
+          <label class="q" for="Board_Packet_Prep">How are board/leadership meeting materials prepared? Describe the process from data gathering to final packet delivery.</label>
+          <textarea id="Board_Packet_Prep" name="Board_Packet_Prep"></textarea>
+        </div>
+        <div class="field">
+          <label class="q" for="Donor_Communications">How do you handle external communications (thank-you letters, impact updates, stewardship reports)? Templated, custom each time, or a mix?</label>
+          <textarea id="Donor_Communications" name="Donor_Communications"></textarea>
+        </div>
+        <div class="field">
+          <label class="q" for="Data_Analysis">Do you do any data analysis on your patterns (geographic distribution, demographic reach, area balance, outcomes)? If so, how? If not, would it be valuable?</label>
+          <textarea id="Data_Analysis" name="Data_Analysis"></textarea>
+        </div>
+        <div class="field">
+          <label class="q" for="Written_Content_Types">What types of written content do you produce regularly? (e.g., RFPs, guidelines, annual reports, blog posts, press releases, internal memos, correspondence)</label>
+          <textarea id="Written_Content_Types" name="Written_Content_Types"></textarea>
+        </div>
+      </fieldset>
+
+      <!-- Section 4 -->
+      <fieldset>
+        <div class="sec-head"><span class="num" aria-hidden="true">4</span><legend><h2>Governance &amp; Compliance Considerations</h2></legend></div>
+        <div class="field">
+          <label class="q" for="AI_No_Go_Workflows">Are there workflows where you believe AI should absolutely not be used — due to sensitivity, regulatory concerns, or organizational values? Which ones and why?</label>
+          <textarea id="AI_No_Go_Workflows" name="AI_No_Go_Workflows"></textarea>
+        </div>
+        <div class="field">
+          <label class="q" for="Regulated_Data">Do you handle data subject to specific regulations (HIPAA for health, FERPA for student, state privacy laws)? Which data types and which regulations?</label>
+          <textarea id="Regulated_Data" name="Regulated_Data"></textarea>
+        </div>
+        <div class="field">
+          <label class="q" for="Existing_Tech_Policies">Do you have existing policies or guidelines about technology use, data handling, or innovation that would affect AI adoption decisions?</label>
+          <textarea id="Existing_Tech_Policies" name="Existing_Tech_Policies"></textarea>
+        </div>
+        <div class="field">
+          <label class="q" for="AI_Biggest_Concern">What is your biggest concern about AI adoption — data privacy, accuracy and reliability, staff resistance, cost, mission alignment, or something else?</label>
+          <textarea id="AI_Biggest_Concern" name="AI_Biggest_Concern"></textarea>
+        </div>
+      </fieldset>
+
+      <!-- Section 5 -->
+      <fieldset>
+        <div class="sec-head"><span class="num" aria-hidden="true">5</span><legend><h2>Staff Readiness &amp; Change Management</h2></legend></div>
+        <div class="field">
+          <span class="q">How would you describe staff's overall openness to adopting new technology tools?</span>
+          <div class="options" role="radiogroup" aria-label="Staff openness">
+            <label class="opt"><input type="radio" name="Staff_Openness" value="Generally eager"> Generally eager</label>
+            <label class="opt"><input type="radio" name="Staff_Openness" value="Open but need value"> Open but need to see clear value</label>
+            <label class="opt"><input type="radio" name="Staff_Openness" value="Cautious"> Cautious — prefer proven tools</label>
+            <label class="opt"><input type="radio" name="Staff_Openness" value="Resistant"> Resistant — significant change management needed</label>
+          </div>
+        </div>
+        <div class="field">
+          <label class="q" for="Past_Adoption_Lessons">When you've introduced new tools or processes before, what made adoption successful — or what caused it to stall?</label>
+          <textarea id="Past_Adoption_Lessons" name="Past_Adoption_Lessons"></textarea>
+        </div>
+        <div class="field">
+          <label class="q" for="Early_Adopters">Are there specific staff (by role, not name) who are natural early adopters or technology champions? These are often key to a successful rollout.</label>
+          <textarea id="Early_Adopters" name="Early_Adopters"></textarea>
+        </div>
+        <div class="field">
+          <span class="q">What kind of training or support would staff need to feel confident using AI tools?</span>
+          <div class="options" role="radiogroup" aria-label="Training needs">
+            <label class="opt"><input type="radio" name="Training_Needs" value="Self-directed"> Self-directed tutorials and documentation</label>
+            <label class="opt"><input type="radio" name="Training_Needs" value="Live training"> Live training sessions with practice</label>
+            <label class="opt"><input type="radio" name="Training_Needs" value="Hands-on + ongoing"> Hands-on setup with ongoing support</label>
+            <label class="opt"><input type="radio" name="Training_Needs" value="Not sure"> I'm not sure — we've never introduced this kind of tool</label>
+          </div>
+        </div>
+        <div class="field">
+          <label class="q" for="AI_Concerns_People">Is there anyone on your team or board who has explicitly expressed concerns about AI? If so, what are their primary concerns?</label>
+          <textarea id="AI_Concerns_People" name="AI_Concerns_People"></textarea>
+        </div>
+      </fieldset>
+
+      <!-- Section 6 -->
+      <fieldset>
+        <div class="sec-head"><span class="num" aria-hidden="true">6</span><legend><h2>Strategic Alignment</h2></legend></div>
+        <div class="field">
+          <label class="q" for="Strategic_Plan_Period">What is your current strategic plan period (e.g., 2024–2027)? Does the plan reference technology, innovation, or operational efficiency as priorities?</label>
+          <textarea id="Strategic_Plan_Period" name="Strategic_Plan_Period"></textarea>
+        </div>
+        <div class="field">
+          <label class="q" for="Investment_Evaluation">How does your board evaluate operational investments? What does the approval process look like for a new tool or service engagement?</label>
+          <textarea id="Investment_Evaluation" name="Investment_Evaluation"></textarea>
+        </div>
+        <div class="field">
+          <label class="q" for="Success_Metric">What metric or outcome would convince your board that AI adoption was worthwhile? (e.g., hours saved per week, faster cycles, improved reporting quality, reduced time-to-decision)</label>
+          <textarea id="Success_Metric" name="Success_Metric"></textarea>
+        </div>
+        <div class="field">
+          <label class="q" for="Other_Initiatives">Are you currently exploring or implementing other operational improvements or technology initiatives? How does AI adoption fit alongside those priorities?</label>
+          <textarea id="Other_Initiatives" name="Other_Initiatives"></textarea>
+        </div>
+      </fieldset>
+
+      <!-- Section 7 -->
+      <fieldset>
+        <div class="sec-head"><span class="num" aria-hidden="true">7</span><legend><h2>Vision &amp; Priorities</h2></legend></div>
+        <div class="field">
+          <label class="q" for="One_Thing_Next_Month">If AI could help you with one thing starting next month, what would you choose?</label>
+          <textarea id="One_Thing_Next_Month" name="One_Thing_Next_Month"></textarea>
+        </div>
+        <div class="field">
+          <label class="q" for="Twelve_Month_Vision">Thinking 12 months out — if AI adoption went well, what would be different about how you operate?</label>
+          <textarea id="Twelve_Month_Vision" name="Twelve_Month_Vision"></textarea>
+        </div>
+        <div class="field">
+          <label class="q" for="Peer_Models">Are there peer organizations you look to as models for technology or operational excellence? Which ones?</label>
+          <textarea id="Peer_Models" name="Peer_Models"></textarea>
+        </div>
+        <div class="field">
+          <label class="q" for="Responsible_AI_Definition">What does &ldquo;responsible AI use&rdquo; mean to your organization? This helps us align recommendations with your values.</label>
+          <textarea id="Responsible_AI_Definition" name="Responsible_AI_Definition"></textarea>
+        </div>
+      </fieldset>
+
+      <!-- Section 8 -->
+      <fieldset>
+        <div class="sec-head"><span class="num" aria-hidden="true">8</span><legend><h2>Closing</h2></legend></div>
+        <div class="field">
+          <span class="q">On a scale of 1&ndash;5, how ready do you believe you are to begin AI adoption? (1 = not at all ready, 5 = ready to start tomorrow)</span>
+          <div class="options" role="radiogroup" aria-label="Readiness score">
+            <label class="opt"><input type="radio" name="Readiness_Score" value="1"> 1 — not at all ready</label>
+            <label class="opt"><input type="radio" name="Readiness_Score" value="2"> 2</label>
+            <label class="opt"><input type="radio" name="Readiness_Score" value="3"> 3</label>
+            <label class="opt"><input type="radio" name="Readiness_Score" value="4"> 4</label>
+            <label class="opt"><input type="radio" name="Readiness_Score" value="5"> 5 — ready to start tomorrow</label>
+          </div>
+        </div>
+        <div class="field">
+          <label class="q" for="Engagement_Success">What would success look like for this engagement? When you receive the AI Readiness Assessment, what do you hope it tells you or enables you to do?</label>
+          <textarea id="Engagement_Success" name="Engagement_Success"></textarea>
+        </div>
+        <div class="field">
+          <label class="q" for="Anything_Else">Anything else about your relationship with technology, AI, or operational improvement that would help us provide the most useful analysis?</label>
+          <textarea id="Anything_Else" name="Anything_Else"></textarea>
+        </div>
+      </fieldset>
+
+      <p class="note-confidential">All responses are treated as confidential and are not shared outside your engagement team. Assessments are informational and do not constitute legal advice.</p>
+
+      <button type="submit">Submit assessment</button>
+      <p id="formMsg" role="status" aria-live="polite"></p>
+    </form>
+  </main>
+
+  <footer>
+    &copy; 2026 Malaniru Inc, LLC &middot; Lafayette, Colorado &middot; AI Readiness Assessment intake
+  </footer>
+
+  <script>
+    // CRITICAL: url-encoded body, NO custom Content-Type header → CORS simple
+    // request → no preflight. Sending JSON would break every submission silently.
+    var ENDPOINT = 'https://script.google.com/macros/s/AKfycbxeJ00GVCGZ2coK_QlSJmy5TyrnqZa6PCNy5j4IsNdmlbJyBuUVuWBdCbYQOr0KPId5aQ/exec'; // wired to deployed Apps Script /exec (2026-06-22)
+    var formEl = document.getElementById('intake');
+    var msg = document.getElementById('formMsg');
+
+    formEl.addEventListener('submit', function (ev) {
+      ev.preventDefault();
+      msg.className = '';
+      if (ENDPOINT === 'PASTE_APPS_SCRIPT_EXEC_URL') {
+        msg.className = 'err';
+        msg.textContent = 'This form is not connected yet. Please email mark@malaniru.com.';
+        return;
+      }
+      var btn = formEl.querySelector('button[type="submit"]');
+      var data = new URLSearchParams(new FormData(formEl));
+      data.append('_ua', navigator.userAgent);
+      data.append('_page', location.href);
+      btn.disabled = true;
+      msg.textContent = 'Sending…';
+
+      fetch(ENDPOINT, { method: 'POST', body: data }) // NO custom headers → no preflight
+        .then(function (r) { return r.json(); })
+        .then(function (res) {
+          if (res && res.ok) {
+            msg.className = 'ok';
+            msg.textContent = 'Thanks — we got it. Your engagement team will be in touch.';
+            formEl.reset();
+          } else {
+            msg.className = 'err';
+            msg.textContent = 'Something went wrong. Please email mark@malaniru.com.';
+          }
+        })
+        .catch(function () {
+          msg.className = 'err';
+          msg.textContent = 'Network error. Please email mark@malaniru.com.';
+        })
+        .then(function () { btn.disabled = false; });
+    });
+  </script>
+</body>
+</html>

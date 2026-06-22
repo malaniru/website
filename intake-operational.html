@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<!--
+  ============================================================================
+  Malaniru — Operational Assessment Intake (full form)
+  Project: Malaniru Marketing Site
+  Built by: Web persona (Morgan Shaw)
+  Rebuilt: 2026-06-22 (v2.0 vertical-neutral source — see correction note below)
+
+  Question source (CORRECT, vertical-neutral):
+    Projects/Malaniru_Website_Launch/Outputs/
+      20260622-claudia-generic-operational-assessment-output.md  (v2.0, 63 Qs, 11 sections)
+    This source explicitly supersedes the v1.0 foundation-specific questionnaire.
+
+  Posts to: Google Apps Script Web App  →  Sheet tab "Operational"
+
+  ⚑ CORRECTION (2026-06-22): This form was previously built from the WRONG source —
+    the Philanthropy.io foundation-specific instrument (client-intake-merged.md, v1.0).
+    That left deep foundation-only questions (grant lifecycle, 990-PF, grantees,
+    endowment, board) in a form meant to be sector-neutral. This rebuild swaps the
+    body to the v2.0 vertical-neutral questions verbatim in substance. Open content
+    flag #3 (sector neutralization) is now RESOLVED. Architecture is unchanged.
+
+  BUILD NOTES
+  - Submit handler sends url-encoded data (URLSearchParams) with NO custom
+    Content-Type header → CORS "simple request" → no preflight. Do NOT change
+    this to JSON; it is the documented #1 failure mode for Apps Script backends.
+  - ENDPOINT and token are SET (2026-06-22): wired to the deployed Apps Script
+    /exec URL. Form is submission-ready (still noindex pre-launch).
+  - token value is SET (2026-06-22); must match the deployed Apps
+    Script SHARED_TOKEN. Honeypot "company_website" is visually hidden.
+  - Each name= attribute is intended to match a Google Sheet column header
+    on the "Operational" tab (script maps fields to columns by header name).
+  - required is set only on contact basics (Name, Email, Organization) plus a
+    couple of must-haves (Org_Name_Mission, Core_Workflow) — not every field.
+  - robots noindex,nofollow (pre-launch). No pricing. Calendly CTAs hidden.
+
+  ⚑ SHEET HEADER ROW — because the questions changed, the "Operational" tab's
+    header row must be re-created to match the new name= set BEFORE launch.
+    Final ordered list of name= column headers (excludes honeypot company_website;
+    _ua and _page are appended by the submit script):
+      form, Name, Email, Organization, Role,
+      Org_Name_Mission, Year_Established, Sector, Org_Structure, Staff_Count,
+      Annual_Budget, Geographic_Footprint, Primary_Audience, Service_Areas,
+      Core_Workflow, Core_System, System_Tenure_Satisfaction, Intake_Channel,
+      Decision_Process, Progress_Tracking, Submission_Method, Biggest_Bottleneck,
+      Primary_Tools, Systems_Integration, Internal_Comms, CRM_System,
+      Website_Maintenance, IT_Support,
+      Document_Storage, Document_Organization, Version_Control,
+      Institutional_Knowledge, Leadership_Materials_Prep, Data_Retention_Policy,
+      Sensitive_Data, Existing_Policies,
+      Required_Filings, Sector_Regulations, Other_Reporting, Audit_Prep,
+      Compliance_History,
+      Outcomes_Measurement, Taxonomy, Portfolio_Synthesis, Recurring_Report_Process,
+      Tech_Comfort, Recent_Tech_Adoption, Training_Process,
+      Time_Consuming_Workflows, Automation_Candidates,
+      SOPs, Staff_Onboarding, Turnover_Knowledge, Planning_Process, Recent_Migration,
+      AI_Leadership_Discussion, AI_Current_Usage, AI_Policy_Status,
+      Leadership_AI_Attitude, AI_Biggest_Concern,
+      Continuity_Plan, Cyber_Insurance, Breach_Response, Succession_Plan,
+      Engagement_Trigger, One_Change, Success_Definition, Constraints, Anything_Else,
+      _ua, _page
+  ============================================================================
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Operational Assessment Intake — Malaniru</title>
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="The Operational Assessment intake — current state, operations, technology, governance, and goals. Feeds your engagement plan and Operational Assessment.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy:        #0F1A2E;
+      --navy-mid:    #2A3F63;
+      --copper:      #C07830;
+      --gold:        #D4A853;
+      --off-white:   #F4F1EC;
+      --light-gray:  #E8E6E1;
+      --mid-gray:    #8A8A96;
+      --dark-text:   #1C1C1C;
+      --font: "Inter", "Helvetica Neue", Arial, sans-serif;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: var(--font);
+      background: var(--off-white);
+      color: var(--dark-text);
+      line-height: 1.6; font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+    }
+    header {
+      background: var(--navy); color: var(--off-white);
+      padding: 56px 24px 60px; position: relative; overflow: hidden;
+    }
+    header::after {
+      content: ""; position: absolute; inset: 0;
+      background: radial-gradient(circle at 85% 15%, rgba(192,120,48,0.20) 0%, rgba(15,26,46,0) 55%);
+      pointer-events: none;
+    }
+    .header-inner { max-width: 760px; margin: 0 auto; position: relative; z-index: 1; }
+    .wordmark { font-weight: 800; font-size: 1.25rem; letter-spacing: 0.02em; margin-bottom: 36px; }
+    .wordmark .dot { color: var(--copper); }
+    .wordmark a { color: var(--off-white); text-decoration: none; transition: opacity 0.18s ease; }
+    .wordmark a:hover, .wordmark a:focus-visible { opacity: 0.85; outline: none; }
+    .eyebrow {
+      display: inline-block; font-size: 0.74rem; font-weight: 600;
+      letter-spacing: 0.16em; text-transform: uppercase; color: var(--gold); margin-bottom: 16px;
+    }
+    header h1 {
+      font-weight: 800; font-size: clamp(1.9rem, 5vw, 2.8rem);
+      line-height: 1.12; letter-spacing: -0.01em; margin-bottom: 18px; max-width: 20ch;
+    }
+    header p.intro { font-size: 1.05rem; color: var(--light-gray); max-width: 64ch; }
+    header .meta-line { margin-top: 16px; font-size: 0.92rem; color: var(--mid-gray); }
+    header .back {
+      display: inline-block; margin-top: 22px; font-size: 0.9rem; font-weight: 600;
+      color: var(--gold); text-decoration: none; border-bottom: 1px solid rgba(212,168,83,0.4);
+    }
+    header .back:hover, header .back:focus-visible { border-bottom-color: var(--gold); outline: none; }
+
+    main { max-width: 760px; margin: 0 auto; padding: 48px 24px 24px; }
+    .card {
+      background: #fff; border: 1px solid var(--light-gray);
+      border-radius: 12px; padding: 30px 30px 28px; margin-bottom: 26px;
+    }
+    fieldset { border: none; margin: 0 0 14px; padding: 0; }
+    .sec-head {
+      display: flex; align-items: center; gap: 14px;
+      margin: 30px 0 18px; padding-top: 26px; border-top: 1px solid var(--light-gray);
+    }
+    .card > fieldset:first-of-type .sec-head { margin-top: 0; padding-top: 0; border-top: none; }
+    .num {
+      flex-shrink: 0; width: 38px; height: 38px; border-radius: 8px;
+      background: var(--navy); color: var(--gold); font-weight: 700; font-size: 1rem;
+      display: flex; align-items: center; justify-content: center;
+    }
+    legend { padding: 0; }
+    .sec-head h2 { font-weight: 700; font-size: 1.22rem; color: var(--navy); line-height: 1.2; }
+    .sec-intro { font-size: 0.92rem; color: var(--navy-mid); margin: -6px 0 16px; }
+
+    .field { margin-bottom: 20px; }
+    label.q, span.q {
+      display: block; font-weight: 600; color: var(--dark-text); margin-bottom: 8px;
+    }
+    .req { color: var(--copper); font-weight: 700; }
+    .help { display: block; font-size: 0.88rem; color: var(--mid-gray); margin-top: 6px; }
+
+    input[type="text"], input[type="email"], input[type="number"], select, textarea {
+      width: 100%; font-family: var(--font); font-size: 1rem; color: var(--dark-text);
+      background: var(--off-white); border: 1px solid var(--light-gray); border-radius: 8px;
+      padding: 11px 13px; transition: border-color 0.15s ease, box-shadow 0.15s ease;
+    }
+    input:focus, select:focus, textarea:focus {
+      outline: none; border-color: var(--copper); box-shadow: 0 0 0 3px rgba(192,120,48,0.18);
+    }
+    textarea { min-height: 92px; resize: vertical; }
+    select { appearance: none; cursor: pointer; }
+
+    .options { display: grid; gap: 9px; margin-top: 4px; }
+    .opt { display: flex; align-items: flex-start; gap: 10px; font-size: 0.98rem; cursor: pointer; padding: 2px 0; }
+    .opt input { margin-top: 4px; flex-shrink: 0; width: 17px; height: 17px; accent-color: var(--copper); }
+
+    button[type="submit"] {
+      font-family: var(--font); font-weight: 700; font-size: 1rem; color: #fff;
+      background: var(--copper); border: none; border-radius: 8px;
+      padding: 14px 28px; cursor: pointer; transition: background 0.15s ease;
+    }
+    button[type="submit"]:hover, button[type="submit"]:focus-visible { background: #a96526; outline: none; }
+    button[type="submit"]:disabled { opacity: 0.6; cursor: default; }
+    #formMsg { margin-top: 16px; font-weight: 600; min-height: 1.4em; }
+    #formMsg.ok { color: #2e6b34; } #formMsg.err { color: #9a2b2b; }
+
+    .note-confidential {
+      font-size: 0.9rem; color: var(--navy-mid); background: var(--off-white);
+      border: 1px solid var(--light-gray); border-left: 3px solid var(--copper);
+      border-radius: 8px; padding: 13px 16px; margin-bottom: 20px;
+    }
+    footer {
+      max-width: 760px; margin: 8px auto 0; padding: 24px; font-size: 0.82rem;
+      color: var(--mid-gray); border-top: 1px solid var(--light-gray);
+    }
+    a { color: var(--copper); }
+    a[href*="calendly.com"] { display: none !important; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <div class="wordmark"><a href="index.html">Malaniru<span class="dot">.</span></a></div>
+      <span class="eyebrow">Operational Assessment</span>
+      <h1>Operational Assessment Intake</h1>
+      <p class="intro">
+        This intake helps us understand your organization's current state &mdash; how you
+        work, what tools you use, where things run smoothly, and where they don't. We work
+        with organizations across many sectors, so this is built to meet you where you are.
+        There are no wrong answers. If a question doesn't apply, write &ldquo;N/A&rdquo; and move on.
+      </p>
+      <p class="meta-line">Estimated completion: 50&ndash;60 minutes &middot; Turnaround: 5&ndash;7 business days</p>
+      <a class="back" href="questionnaires.html">&larr; Back to all questionnaires</a>
+    </div>
+  </header>
+
+  <main>
+    <form id="intake" class="card" novalidate>
+      <input type="hidden" name="form" value="Operational">
+      <input type="hidden" name="token" value="bDIdoBSugVQdPkgE">
+      <input type="text" name="company_website" tabindex="-1" autocomplete="off"
+             style="position:absolute;left:-9999px" aria-hidden="true">
+
+      <!-- Contact basics -->
+      <fieldset>
+        <div class="sec-head"><span class="num" aria-hidden="true">&middot;</span><legend><h2>Your contact details</h2></legend></div>
+        <div class="field">
+          <label class="q" for="Name">Your name <span class="req" aria-hidden="true">*</span></label>
+          <input type="text" id="Name" name="Name" autocomplete="name" required>
+        </div>
+        <div class="field">
+          <label class="q" for="Email">Work email <span class="req" aria-hidden="true">*</span></label>
+          <input type="email" id="Email" name="Email" autocomplete="email" required>
+        </div>
+        <div class="field">
+          <label class="q" for="Organization">Organization <span class="req" aria-hidden="true">*</span></label>
+          <input type="text" id="Organization" name="Organization" autocomplete="organization" required>
+        </div>
+        <div class="field">
+          <label class="q" for="Role">Role / title</label>
+          <input type="text" id="Role" name="Role" autocomplete="organization-title">
+        </div>
+      </fieldset>
+
+      <!-- Section 1 -->
+      <fieldset>
+        <div class="sec-head"><span class="num" aria-hidden="true">1</span><legend><h2>Your Organization</h2></legend></div>
+        <div class="field">
+          <label class="q" for="Org_Name_Mission">Organization name and primary mission or purpose (one or two sentences). <span class="req" aria-hidden="true">*</span></label>
+          <textarea id="Org_Name_Mission" name="Org_Name_Mission" required></textarea>
+        </div>
+        <div class="field">
+          <label class="q" for="Year_Established">Year established</label>
+          <input type="text" id="Year_Established" name="Year_Established">
+        </div>
+        <div class="field">
+          <label class="q" for="Sector">What sector or industry best describes your organization?</label>
+          <select id="Sector" name="Sector">
+            <option value="">Select one…</option>
+            <option value="Nonprofit / foundation">Nonprofit / foundation</option>
+            <option value="Professional services">Professional services</option>
+            <option value="Healthcare">Healthcare</option>
+            <option value="Education">Education</option>
+            <option value="Financial services">Financial services</option>
+            <option value="Real estate">Real estate</option>
+            <option value="Manufacturing">Manufacturing</option>
+            <option value="Technology">Technology</option>
+            <option value="Retail">Retail</option>
+            <option value="Government / public sector">Government / public sector</option>
+            <option value="Other">Other (describe below)</option>
+          </select>
+          <span class="help">If none fit cleanly, choose &ldquo;Other&rdquo; and name it in your own terms in the next field or in Section 11.</span>
+        </div>
+        <div class="field">
+          <span class="q">How is your organization structured?</span>
+          <div class="options" role="radiogroup" aria-label="Organization structure">
+            <label class="opt"><input type="radio" name="Org_Structure" value="For-profit"> For-profit</label>
+            <label class="opt"><input type="radio" name="Org_Structure" value="Nonprofit"> Nonprofit</label>
+            <label class="opt"><input type="radio" name="Org_Structure" value="Public agency"> Public agency</label>
+            <label class="opt"><input type="radio" name="Org_Structure" value="Cooperative"> Cooperative</label>
+            <label class="opt"><input type="radio" name="Org_Structure" value="Sole proprietorship"> Sole proprietorship</label>
+            <label class="opt"><input type="radio" name="Org_Structure" value="Partnership"> Partnership</label>
+            <label class="opt"><input type="radio" name="Org_Structure" value="Other"> Other</label>
+          </div>
+        </div>
+        <div class="field">
+          <label class="q" for="Staff_Count">Number of full-time staff, and part-time or contract staff.</label>
+          <input type="text" id="Staff_Count" name="Staff_Count" placeholder="e.g., 8 FT, 3 PT/contract">
+        </div>
+        <div class="field">
+          <label class="q" for="Annual_Budget">Approximate annual operating budget or revenue.</label>
+          <input type="text" id="Annual_Budget" name="Annual_Budget">
+        </div>
+        <div class="field">
+          <span class="q">Geographic footprint</span>
+          <div class="options" role="radiogroup" aria-label="Geographic footprint">
+            <label class="opt"><input type="radio" name="Geographic_Footprint" value="Local"> Local</label>
+            <label class="opt"><input type="radio" name="Geographic_Footprint" value="Regional"> Regional</label>
+            <label class="opt"><input type="radio" name="Geographic_Footprint" value="National"> National</label>
+            <label class="opt"><input type="radio" name="Geographic_Footprint" value="International"> International</label>
+            <label class="opt"><input type="radio" name="Geographic_Footprint" value="Combination"> A combination</label>
+          </div>
+        </div>
+        <div class="field">
+          <label class="q" for="Primary_Audience">Who do you primarily serve or work with — customers, clients, members, grantees, patients, students, the general public, other organizations? Describe your primary audience or beneficiaries.</label>
+          <textarea id="Primary_Audience" name="Primary_Audience"></textarea>
+        </div>
+        <div class="field">
+          <label class="q" for="Service_Areas">What are your main lines of work or service areas? (List the two or three activities that consume the most organizational effort.)</label>
+          <textarea id="Service_Areas" name="Service_Areas"></textarea>
+        </div>
+      </fieldset>
+
+      <!-- Section 2 -->
+      <fieldset>
+        <div class="sec-head"><span class="num" aria-hidden="true">2</span><legend><h2>Core Operations &amp; Primary Workflow</h2></legend></div>
+        <p class="sec-intro">This section is intentionally open-ended. Rather than assume how your field works, we want you to walk us through your actual day-to-day operation. The more concretely you describe it, the more useful your assessment will be.</p>
+        <div class="field">
+          <label class="q" for="Core_Workflow">Describe your organization's core workflow — the primary, repeatable process that defines what you do, from beginning to end. (For example: a request comes in &rarr; it is reviewed &rarr; a decision is made &rarr; work is delivered &rarr; outcomes are tracked. Use whatever stages actually apply to you.) <span class="req" aria-hidden="true">*</span></label>
+          <textarea id="Core_Workflow" name="Core_Workflow" required></textarea>
+        </div>
+        <div class="field">
+          <label class="q" for="Core_System">What system or tool do you use to manage that core workflow? (An industry-specific platform, a CRM, a case- or project-management system, a custom database, spreadsheets, paper-based, or a combination.) If it has a name, please include it.</label>
+          <textarea id="Core_System" name="Core_System"></textarea>
+        </div>
+        <div class="field">
+          <label class="q" for="System_Tenure_Satisfaction">If you use a dedicated system for your core work, how long have you had it? Are you satisfied with it, or are you considering a change?</label>
+          <textarea id="System_Tenure_Satisfaction" name="System_Tenure_Satisfaction"></textarea>
+        </div>
+        <div class="field">
+          <label class="q" for="Intake_Channel">How does work typically enter your pipeline — inbound requests, referrals, applications, sales, recurring contracts, an intake portal, or another route?</label>
+          <textarea id="Intake_Channel" name="Intake_Channel"></textarea>
+        </div>
+        <div class="field">
+          <label class="q" for="Decision_Process">Walk us through how decisions or approvals are made in your core process: who is involved, how decisions are reached, and how long a typical cycle takes from start to completion.</label>
+          <textarea id="Decision_Process" name="Decision_Process"></textarea>
+        </div>
+        <div class="field">
+          <label class="q" for="Progress_Tracking">How do you currently track progress, obligations, and deadlines across active work? Is this automated, manual, or somewhere in between?</label>
+          <textarea id="Progress_Tracking" name="Progress_Tracking"></textarea>
+        </div>
+        <div class="field">
+          <label class="q" for="Submission_Method">How do the people you serve (or work with) submit information, updates, or deliverables to you — through a portal, by email, in a defined template, or in their own format?</label>
+          <textarea id="Submission_Method" name="Submission_Method"></textarea>
+        </div>
+        <div class="field">
+          <label class="q" for="Biggest_Bottleneck">What is the single biggest bottleneck or frustration in your current core workflow?</label>
+          <textarea id="Biggest_Bottleneck" name="Biggest_Bottleneck"></textarea>
+        </div>
+      </fieldset>
+
+      <!-- Section 3 -->
+      <fieldset>
+        <div class="sec-head"><span class="num" aria-hidden="true">3</span><legend><h2>Technology &amp; Systems</h2></legend></div>
+        <div class="field">
+          <label class="q" for="Primary_Tools">List the primary software tools your organization uses for daily operations (e.g., email platform, accounting/finance software, CRM or relationship-management system, project management, communication tools, file storage).</label>
+          <textarea id="Primary_Tools" name="Primary_Tools"></textarea>
+        </div>
+        <div class="field">
+          <span class="q">How well do your systems talk to each other?</span>
+          <div class="options" role="radiogroup" aria-label="Systems integration">
+            <label class="opt"><input type="radio" name="Systems_Integration" value="Well integrated"> Well integrated — data flows between systems with minimal manual work</label>
+            <label class="opt"><input type="radio" name="Systems_Integration" value="Partially integrated"> Partially integrated — some connections, but significant manual data transfer</label>
+            <label class="opt"><input type="radio" name="Systems_Integration" value="Not integrated"> Not integrated — each system is a standalone silo</label>
+            <label class="opt"><input type="radio" name="Systems_Integration" value="Not sure"> I'm not sure</label>
+          </div>
+        </div>
+        <div class="field">
+          <label class="q" for="Internal_Comms">How does your staff currently communicate internally — email, Slack/Teams, phone, other? Is there a preferred or mandated channel?</label>
+          <textarea id="Internal_Comms" name="Internal_Comms"></textarea>
+        </div>
+        <div class="field">
+          <label class="q" for="CRM_System">Does your organization use a CRM or relationship-management system to track the people, clients, members, or partners you work with? If so, which one, and how does it connect to your core workflow?</label>
+          <textarea id="CRM_System" name="CRM_System"></textarea>
+        </div>
+        <div class="field">
+          <label class="q" for="Website_Maintenance">Does your organization have a website? Who maintains it, and when was it last significantly updated?</label>
+          <textarea id="Website_Maintenance" name="Website_Maintenance"></textarea>
+        </div>
+        <div class="field">
+          <span class="q">How does your organization handle IT support?</span>
+          <div class="options" role="radiogroup" aria-label="IT support">
+            <label class="opt"><input type="radio" name="IT_Support" value="Internal staff"> Internal staff</label>
+            <label class="opt"><input type="radio" name="IT_Support" value="External contractor"> External contractor</label>
+            <label class="opt"><input type="radio" name="IT_Support" value="Managed service provider"> Managed service provider</label>
+            <label class="opt"><input type="radio" name="IT_Support" value="Ad hoc"> Ad hoc</label>
+          </div>
+        </div>
+      </fieldset>
+
+      <!-- Section 4 -->
+      <fieldset>
+        <div class="sec-head"><span class="num" aria-hidden="true">4</span><legend><h2>Data, Documents &amp; Knowledge Management</h2></legend></div>
+        <div class="field">
+          <label class="q" for="Document_Storage">Where does your organization primarily store its documents and files — cloud storage (Google Drive, OneDrive, SharePoint, Dropbox, Box), local servers, individual computers, or a combination?</label>
+          <textarea id="Document_Storage" name="Document_Storage"></textarea>
+        </div>
+        <div class="field">
+          <span class="q">How would you describe your document organization?</span>
+          <div class="options" role="radiogroup" aria-label="Document organization">
+            <label class="opt"><input type="radio" name="Document_Organization" value="Well-organized"> Well-organized with consistent naming and folder structure</label>
+            <label class="opt"><input type="radio" name="Document_Organization" value="Somewhat organized"> Somewhat organized but inconsistent across teams</label>
+            <label class="opt"><input type="radio" name="Document_Organization" value="Hard to find"> Difficult to find what we need</label>
+            <label class="opt"><input type="radio" name="Document_Organization" value="Other"> Other</label>
+          </div>
+        </div>
+        <div class="field">
+          <label class="q" for="Version_Control">How does your organization handle version control for important documents (contracts, agreements, board or leadership materials, policies)? Is there a formal process, or do staff manage this individually?</label>
+          <textarea id="Version_Control" name="Version_Control"></textarea>
+        </div>
+        <div class="field">
+          <label class="q" for="Institutional_Knowledge">Is institutional knowledge primarily held by specific individuals, or is it documented and accessible to the team? Give an example if possible.</label>
+          <textarea id="Institutional_Knowledge" name="Institutional_Knowledge"></textarea>
+        </div>
+        <div class="field">
+          <label class="q" for="Leadership_Materials_Prep">How do you currently prepare materials for leadership, board, or stakeholder meetings? Who is responsible, and how long does the process typically take?</label>
+          <textarea id="Leadership_Materials_Prep" name="Leadership_Materials_Prep"></textarea>
+        </div>
+        <div class="field">
+          <label class="q" for="Data_Retention_Policy">Does your organization have a data retention policy — rules about how long different types of data are kept and when they are deleted or archived?</label>
+          <textarea id="Data_Retention_Policy" name="Data_Retention_Policy"></textarea>
+        </div>
+        <div class="field">
+          <span class="q">What types of sensitive data does your organization handle? Check all that apply.</span>
+          <div class="options" aria-label="Sensitive data types">
+            <label class="opt"><input type="checkbox" name="Sensitive_Data" value="Customer/client/member contact info"> Customer, client, or member contact information</label>
+            <label class="opt"><input type="checkbox" name="Sensitive_Data" value="Financial information"> Financial information (payment details, account data, transaction history)</label>
+            <label class="opt"><input type="checkbox" name="Sensitive_Data" value="Partner/vendor financial statements"> Partner or vendor financial statements</label>
+            <label class="opt"><input type="checkbox" name="Sensitive_Data" value="Individual records for people served"> Individual records for the people you serve (case, beneficiary, or constituent data)</label>
+            <label class="opt"><input type="checkbox" name="Sensitive_Data" value="Health-related or medical data"> Health-related or medical data</label>
+            <label class="opt"><input type="checkbox" name="Sensitive_Data" value="Student or minor data"> Student or minor data</label>
+            <label class="opt"><input type="checkbox" name="Sensitive_Data" value="Board/executive financial disclosures"> Board member or executive financial disclosures</label>
+            <label class="opt"><input type="checkbox" name="Sensitive_Data" value="Employee/contractor PII"> Employee/contractor personal information (SSN, payroll)</label>
+            <label class="opt"><input type="checkbox" name="Sensitive_Data" value="Proprietary/confidential business data"> Proprietary, trade-secret, or confidential business data</label>
+            <label class="opt"><input type="checkbox" name="Sensitive_Data" value="Other"> Other</label>
+          </div>
+        </div>
+        <div class="field">
+          <span class="q">Does your organization have any of the following written policies? Check all that apply.</span>
+          <div class="options" aria-label="Existing policies">
+            <label class="opt"><input type="checkbox" name="Existing_Policies" value="Information security"> Information security policy</label>
+            <label class="opt"><input type="checkbox" name="Existing_Policies" value="Acceptable use"> Acceptable use policy (for technology)</label>
+            <label class="opt"><input type="checkbox" name="Existing_Policies" value="Data privacy"> Data privacy / data protection policy</label>
+            <label class="opt"><input type="checkbox" name="Existing_Policies" value="Document retention"> Document retention and destruction policy</label>
+            <label class="opt"><input type="checkbox" name="Existing_Policies" value="Conflict of interest"> Conflict of interest policy</label>
+            <label class="opt"><input type="checkbox" name="Existing_Policies" value="Whistleblower"> Whistleblower policy</label>
+            <label class="opt"><input type="checkbox" name="Existing_Policies" value="Incident response"> Incident response / data breach plan</label>
+            <label class="opt"><input type="checkbox" name="Existing_Policies" value="Vendor management"> Vendor management policy</label>
+            <label class="opt"><input type="checkbox" name="Existing_Policies" value="AI / emerging technology"> AI or emerging technology use policy</label>
+            <label class="opt"><input type="checkbox" name="Existing_Policies" value="None of the above"> None of the above</label>
+          </div>
+        </div>
+      </fieldset>
+
+      <!-- Section 5 -->
+      <fieldset>
+        <div class="sec-head"><span class="num" aria-hidden="true">5</span><legend><h2>Compliance &amp; Reporting</h2></legend></div>
+        <div class="field">
+          <label class="q" for="Required_Filings">What regulatory, tax, or licensing filings is your organization required to submit (for example: tax returns, industry-specific filings, annual reports, regulatory disclosures)? Who prepares them, and what is the process for ensuring accuracy?</label>
+          <textarea id="Required_Filings" name="Required_Filings"></textarea>
+        </div>
+        <div class="field">
+          <label class="q" for="Sector_Regulations">Is your organization subject to any sector-specific regulations or licensing requirements (e.g., HIPAA, financial regulations, charitable registration, professional licensing, data-privacy laws)? If so, how is compliance tracked?</label>
+          <textarea id="Sector_Regulations" name="Sector_Regulations"></textarea>
+        </div>
+        <div class="field">
+          <label class="q" for="Other_Reporting">What other reporting obligations does your organization have (regulatory bodies, funders or investors, board reports, public or member reporting)?</label>
+          <textarea id="Other_Reporting" name="Other_Reporting"></textarea>
+        </div>
+        <div class="field">
+          <label class="q" for="Audit_Prep">How long does your annual audit or financial review preparation typically take, and who coordinates it?</label>
+          <textarea id="Audit_Prep" name="Audit_Prep"></textarea>
+        </div>
+        <div class="field">
+          <label class="q" for="Compliance_History">Has your organization received any compliance inquiries, audit findings, or regulatory notices in the past three years?</label>
+          <textarea id="Compliance_History" name="Compliance_History"></textarea>
+        </div>
+      </fieldset>
+
+      <!-- Section 6 -->
+      <fieldset>
+        <div class="sec-head"><span class="num" aria-hidden="true">6</span><legend><h2>Outcomes Measurement &amp; Learning</h2></legend></div>
+        <div class="field">
+          <label class="q" for="Outcomes_Measurement">How does your organization currently measure the results or performance of its core work? What tools or methods do you use?</label>
+          <textarea id="Outcomes_Measurement" name="Outcomes_Measurement"></textarea>
+        </div>
+        <div class="field">
+          <label class="q" for="Taxonomy">Does your organization use a taxonomy or classification system to categorize your work (by service line, geography, population, project type, or strategy)? If so, describe it briefly.</label>
+          <textarea id="Taxonomy" name="Taxonomy"></textarea>
+        </div>
+        <div class="field">
+          <label class="q" for="Portfolio_Synthesis">When someone needs to understand the collective status or progress of a group of active projects, cases, or accounts, what does that process look like today?</label>
+          <textarea id="Portfolio_Synthesis" name="Portfolio_Synthesis"></textarea>
+        </div>
+        <div class="field">
+          <label class="q" for="Recurring_Report_Process">Does your organization produce a recurring performance, impact, or annual report? If so, describe the process — who writes it, where does the data come from, how long does it take?</label>
+          <textarea id="Recurring_Report_Process" name="Recurring_Report_Process"></textarea>
+        </div>
+      </fieldset>
+
+      <!-- Section 7 -->
+      <fieldset>
+        <div class="sec-head"><span class="num" aria-hidden="true">7</span><legend><h2>Staff &amp; Organizational Readiness</h2></legend></div>
+        <div class="field">
+          <span class="q">How would you rate your staff's overall comfort with technology?</span>
+          <div class="options" role="radiogroup" aria-label="Tech comfort">
+            <label class="opt"><input type="radio" name="Tech_Comfort" value="Very comfortable"> Very comfortable — staff readily adopt new tools</label>
+            <label class="opt"><input type="radio" name="Tech_Comfort" value="Moderately comfortable"> Moderately comfortable — some adapt quickly, others need support</label>
+            <label class="opt"><input type="radio" name="Tech_Comfort" value="Cautious"> Cautious — staff prefer familiar tools and processes</label>
+            <label class="opt"><input type="radio" name="Tech_Comfort" value="Varies by role"> Varies significantly by role</label>
+          </div>
+        </div>
+        <div class="field">
+          <label class="q" for="Recent_Tech_Adoption">Has your organization adopted any new technology tools in the past 12 months? If so, what, and how did the adoption go?</label>
+          <textarea id="Recent_Tech_Adoption" name="Recent_Tech_Adoption"></textarea>
+        </div>
+        <div class="field">
+          <label class="q" for="Training_Process">What training or onboarding process exists when your organization introduces a new tool or system?</label>
+          <textarea id="Training_Process" name="Training_Process"></textarea>
+        </div>
+        <div class="field">
+          <label class="q" for="Time_Consuming_Workflows">Which staff workflows consume the most time relative to their value?</label>
+          <textarea id="Time_Consuming_Workflows" name="Time_Consuming_Workflows"></textarea>
+        </div>
+        <div class="field">
+          <label class="q" for="Automation_Candidates">Are there tasks your staff currently handles manually that you suspect could be partially or fully automated? List the top two or three.</label>
+          <textarea id="Automation_Candidates" name="Automation_Candidates"></textarea>
+        </div>
+      </fieldset>
+
+      <!-- Section 8 -->
+      <fieldset>
+        <div class="sec-head"><span class="num" aria-hidden="true">8</span><legend><h2>Process Maturity &amp; Change Readiness</h2></legend></div>
+        <div class="field">
+          <label class="q" for="SOPs">Does your organization have documented standard operating procedures (SOPs) for key workflows like your core process, financial approvals, or onboarding new clients/partners/staff? If so, approximately how many, and when were they last updated?</label>
+          <textarea id="SOPs" name="SOPs"></textarea>
+        </div>
+        <div class="field">
+          <label class="q" for="Staff_Onboarding">How does your organization handle staff onboarding — is there a structured process with documentation, or is it primarily informal or mentor-based?</label>
+          <textarea id="Staff_Onboarding" name="Staff_Onboarding"></textarea>
+        </div>
+        <div class="field">
+          <label class="q" for="Turnover_Knowledge">How does your organization handle staff turnover for roles with significant institutional knowledge? Has this ever been a challenge?</label>
+          <textarea id="Turnover_Knowledge" name="Turnover_Knowledge"></textarea>
+        </div>
+        <div class="field">
+          <label class="q" for="Planning_Process">Does your organization have a formal annual planning or strategic planning process? How does it connect to day-to-day operations?</label>
+          <textarea id="Planning_Process" name="Planning_Process"></textarea>
+        </div>
+        <div class="field">
+          <label class="q" for="Recent_Migration">Has your organization recently migrated to a new system or tool (within the past two years)? If so, describe the experience — what went well, what was difficult?</label>
+          <textarea id="Recent_Migration" name="Recent_Migration"></textarea>
+        </div>
+      </fieldset>
+
+      <!-- Section 9 -->
+      <fieldset>
+        <div class="sec-head"><span class="num" aria-hidden="true">9</span><legend><h2>AI Awareness &amp; Appetite</h2></legend></div>
+        <div class="field">
+          <label class="q" for="AI_Leadership_Discussion">Has your organization's leadership discussed AI adoption in any formal capacity — board meetings, strategic planning sessions, staff meetings? If so, describe the conversation and any conclusions.</label>
+          <textarea id="AI_Leadership_Discussion" name="AI_Leadership_Discussion"></textarea>
+        </div>
+        <div class="field">
+          <label class="q" for="AI_Current_Usage">Are any staff members currently using AI tools (ChatGPT, Claude, Copilot, Gemini, or others) for work-related tasks? If so, who (by role) and for what purposes?</label>
+          <textarea id="AI_Current_Usage" name="AI_Current_Usage"></textarea>
+        </div>
+        <div class="field">
+          <span class="q">Does your organization have any guidelines or policies about staff use of AI tools?</span>
+          <div class="options" role="radiogroup" aria-label="AI policy status">
+            <label class="opt"><input type="radio" name="AI_Policy_Status" value="Written policy"> Yes, written policy</label>
+            <label class="opt"><input type="radio" name="AI_Policy_Status" value="Informal guidance"> Informal guidance</label>
+            <label class="opt"><input type="radio" name="AI_Policy_Status" value="No policy"> No policy — staff decide individually</label>
+            <label class="opt"><input type="radio" name="AI_Policy_Status" value="Not permitted"> AI use is not permitted</label>
+          </div>
+        </div>
+        <div class="field">
+          <span class="q">How would you describe your leadership's (or board's) current attitude toward AI?</span>
+          <div class="options" role="radiogroup" aria-label="Leadership AI attitude">
+            <label class="opt"><input type="radio" name="Leadership_AI_Attitude" value="Enthusiastic"> Enthusiastic — actively encouraging exploration</label>
+            <label class="opt"><input type="radio" name="Leadership_AI_Attitude" value="Open"> Open — willing to consider if shown value</label>
+            <label class="opt"><input type="radio" name="Leadership_AI_Attitude" value="Cautious"> Cautious — concerned about risks</label>
+            <label class="opt"><input type="radio" name="Leadership_AI_Attitude" value="Skeptical"> Skeptical — unconvinced AI is relevant</label>
+            <label class="opt"><input type="radio" name="Leadership_AI_Attitude" value="Not discussed"> Haven't discussed it</label>
+          </div>
+        </div>
+        <div class="field">
+          <label class="q" for="AI_Biggest_Concern">What is your biggest concern about AI — data privacy, accuracy, staff resistance, cost, mission or brand alignment, or something else?</label>
+          <textarea id="AI_Biggest_Concern" name="AI_Biggest_Concern"></textarea>
+        </div>
+      </fieldset>
+
+      <!-- Section 10 -->
+      <fieldset>
+        <div class="sec-head"><span class="num" aria-hidden="true">10</span><legend><h2>Business Continuity &amp; Risk</h2></legend></div>
+        <div class="field">
+          <label class="q" for="Continuity_Plan">Does your organization have a business continuity plan — a documented plan for maintaining operations during disruption (natural disaster, cyberattack, key staff departure)?</label>
+          <textarea id="Continuity_Plan" name="Continuity_Plan"></textarea>
+        </div>
+        <div class="field">
+          <span class="q">Does your organization carry cyber insurance?</span>
+          <div class="options" role="radiogroup" aria-label="Cyber insurance">
+            <label class="opt"><input type="radio" name="Cyber_Insurance" value="Yes"> Yes</label>
+            <label class="opt"><input type="radio" name="Cyber_Insurance" value="No"> No</label>
+            <label class="opt"><input type="radio" name="Cyber_Insurance" value="Not sure"> Not sure</label>
+          </div>
+        </div>
+        <div class="field">
+          <label class="q" for="Breach_Response">If your organization discovered tomorrow that sensitive data had been exposed, what would you do? Describe your process, or indicate if there is no defined process.</label>
+          <textarea id="Breach_Response" name="Breach_Response"></textarea>
+        </div>
+        <div class="field">
+          <label class="q" for="Succession_Plan">Does your organization have a succession plan or documented procedures for key roles?</label>
+          <textarea id="Succession_Plan" name="Succession_Plan"></textarea>
+        </div>
+      </fieldset>
+
+      <!-- Section 11 -->
+      <fieldset>
+        <div class="sec-head"><span class="num" aria-hidden="true">11</span><legend><h2>Engagement Goals</h2></legend></div>
+        <div class="field">
+          <label class="q" for="Engagement_Trigger">What prompted you to engage Malaniru at this time? Is there a specific challenge, transition, or opportunity driving the timing?</label>
+          <textarea id="Engagement_Trigger" name="Engagement_Trigger"></textarea>
+        </div>
+        <div class="field">
+          <label class="q" for="One_Change">If you could change one thing about your organization's operations or technology tomorrow, what would it be?</label>
+          <textarea id="One_Change" name="One_Change"></textarea>
+        </div>
+        <div class="field">
+          <label class="q" for="Success_Definition">What does success look like for this engagement? When our work together is complete, what do you hope is different?</label>
+          <textarea id="Success_Definition" name="Success_Definition"></textarea>
+        </div>
+        <div class="field">
+          <label class="q" for="Constraints">Are there any constraints we should know about — budget, timeline, approval cycles, staff capacity, upcoming transitions?</label>
+          <textarea id="Constraints" name="Constraints"></textarea>
+        </div>
+        <div class="field">
+          <label class="q" for="Anything_Else">Is there anything else about your organization that would help us serve you well from the start?</label>
+          <textarea id="Anything_Else" name="Anything_Else"></textarea>
+        </div>
+      </fieldset>
+
+      <p class="note-confidential">All responses are treated as confidential and are not shared outside your engagement team. Assessments are informational and do not constitute legal advice.</p>
+
+      <button type="submit">Submit assessment</button>
+      <p id="formMsg" role="status" aria-live="polite"></p>
+    </form>
+  </main>
+
+  <footer>
+    &copy; 2026 Malaniru Inc, LLC &middot; Lafayette, Colorado &middot; Operational Assessment intake
+  </footer>
+
+  <script>
+    // CRITICAL: url-encoded body, NO custom Content-Type header → CORS simple
+    // request → no preflight. Sending JSON would break every submission silently.
+    var ENDPOINT = 'https://script.google.com/macros/s/AKfycbxeJ00GVCGZ2coK_QlSJmy5TyrnqZa6PCNy5j4IsNdmlbJyBuUVuWBdCbYQOr0KPId5aQ/exec'; // wired to deployed Apps Script /exec (2026-06-22)
+    var formEl = document.getElementById('intake');
+    var msg = document.getElementById('formMsg');
+
+    formEl.addEventListener('submit', function (ev) {
+      ev.preventDefault();
+      msg.className = '';
+      if (ENDPOINT === 'PASTE_APPS_SCRIPT_EXEC_URL') {
+        msg.className = 'err';
+        msg.textContent = 'This form is not connected yet. Please email mark@malaniru.com.';
+        return;
+      }
+      var btn = formEl.querySelector('button[type="submit"]');
+      var data = new URLSearchParams(new FormData(formEl));
+      data.append('_ua', navigator.userAgent);
+      data.append('_page', location.href);
+      btn.disabled = true;
+      msg.textContent = 'Sending…';
+
+      fetch(ENDPOINT, { method: 'POST', body: data }) // NO custom headers → no preflight
+        .then(function (r) { return r.json(); })
+        .then(function (res) {
+          if (res && res.ok) {
+            msg.className = 'ok';
+            msg.textContent = 'Thanks — we got it. Your engagement team will be in touch.';
+            formEl.reset();
+          } else {
+            msg.className = 'err';
+            msg.textContent = 'Something went wrong. Please email mark@malaniru.com.';
+          }
+        })
+        .catch(function () {
+          msg.className = 'err';
+          msg.textContent = 'Network error. Please email mark@malaniru.com.';
+        })
+        .then(function () { btn.disabled = false; });
+    });
+  </script>
+</body>
+</html>
