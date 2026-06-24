@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<!--
+  ============================================================================
+  Malaniru - Research article page (branded HTML)
+  Built by: Web (Morgan Shaw) - Date: 2026-06-23
+  Project:  Malaniru_Marketing_Site
+  Source:   Website/src/content/research/20260429-daily-intelligence-briefing.md
+  Purpose:  Standalone public article page for a daily intelligence briefing,
+            linked from philanthropy-ai-research.html.
+  STATUS:   Public marketing page. robots noindex pre-launch (mirrors template).
+            Calendly CTA hidden via CSS (per Principal, as in template).
+  FIDELITY: Article body rendered VERBATIM from the approved markdown. No copy
+            edits, no reordered sections, no changed figures or heading levels.
+  FLAGS:    none.
+  TECH:     Single self-contained HTML5 file. Embedded CSS. No JavaScript.
+            Template-matched (philanthropy-ai-adoption.html). WCAG AA. Mobile-first.
+  ============================================================================
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daily Intelligence Briefing — Wednesday, April 29, 2026 - Malaniru</title>
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="Wednesday agentic AI briefing: Microsoft FY26 Q3 earnings tonight after market close, Musk v. Altman in Day 3 with Musk back on the stand, NVIDIA Nemotron 3 Nano Omni open multimodal release with Foxconn / Palantir / Oracle as named adopters, and the Affinity MCP server launch.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --navy:#0F1A2E;--navy-mid:#2A3F63;--copper:#C07830;--gold:#D4A853;
+      --off-white:#F4F1EC;--light-gray:#E8E6E1;--mid-gray:#8A8A96;--dark-text:#1C1C1C;
+      --font:"Inter","Helvetica Neue",Arial,sans-serif;
+    }
+    *{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:var(--font);background:var(--off-white);color:var(--dark-text);line-height:1.65;font-size:16px;-webkit-font-smoothing:antialiased;}
+    .skip-link{position:absolute;left:-999px;top:0;background:var(--gold);color:var(--navy);padding:10px 16px;font-weight:700;z-index:10;}
+    .skip-link:focus{left:8px;top:8px;}
+    a{color:var(--copper);}
+    /* Header */
+    header{background: linear-gradient(160deg, rgba(15,26,46,0.72) 0%, rgba(10,18,33,0.82) 100%), url('StockCake-Cosmic_Web_Complexity-1361288-standard-rot90ccw.jpg'); background-size: auto, 100% 100%; background-repeat: no-repeat, no-repeat; background-position: center, center;color:var(--off-white);padding:48px 24px 52px;position:relative;overflow:hidden;}
+    header::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 85% 12%,rgba(192,120,48,0.20) 0%,rgba(15,26,46,0) 55%);pointer-events:none;}
+    .header-inner{max-width:760px;margin:0 auto;position:relative;z-index:1;}
+    .wordmark{font-weight:800;font-size:1.25rem;letter-spacing:0.02em;margin-bottom:30px;}
+    .wordmark .dot{color:var(--copper);}
+    .wordmark a{color:var(--off-white);text-decoration:none;transition:opacity .18s ease;}
+    .wordmark a:hover,.wordmark a:focus-visible{opacity:.85;outline:none;}
+    .eyebrow{display:inline-block;font-size:0.72rem;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;}
+    header h1{font-weight:800;font-size:clamp(1.8rem,4.6vw,2.6rem);line-height:1.14;letter-spacing:-0.01em;margin-bottom:16px;}
+    .byline{font-size:0.9rem;color:var(--light-gray);letter-spacing:0.01em;}
+    .byline .sep{color:var(--copper);margin:0 8px;}
+    .lede{font-size:1.08rem;color:var(--light-gray);max-width:66ch;margin-top:18px;}
+    .backlink{display:inline-block;margin-top:26px;color:var(--gold);font-weight:600;font-size:0.9rem;text-decoration:none;border-bottom:1px solid rgba(212,168,83,0.4);}
+    .backlink:hover,.backlink:focus-visible{border-bottom-color:var(--gold);outline:none;}
+    /* Article */
+    main{max-width:760px;margin:0 auto;padding:48px 24px 8px;}
+    .disclaimer{background:#fff;border:1px solid var(--light-gray);border-left:4px solid var(--copper);border-radius:8px;padding:14px 18px;font-size:0.9rem;color:var(--navy-mid);margin-bottom:34px;}
+    article{font-size:1.05rem;}
+    article h2{font-weight:800;font-size:1.5rem;color:var(--navy);line-height:1.22;letter-spacing:-0.01em;margin:42px 0 14px;}
+    article h3{font-weight:700;font-size:1.18rem;color:var(--navy-mid);line-height:1.25;margin:30px 0 10px;}
+    article h2 + p, article h3 + p{margin-top:0;}
+    article p{margin:0 0 18px;color:var(--dark-text);}
+    article ul,article ol{margin:0 0 18px;padding-left:24px;}
+    article li{margin-bottom:8px;}
+    article strong{font-weight:700;color:var(--navy);}
+    article em{font-style:italic;}
+    article a{color:var(--copper);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(192,120,48,0.35);transition:border-color .18s ease;}
+    article a:hover,article a:focus-visible{border-bottom-color:var(--copper);outline:none;}
+    article hr{border:none;border-top:1px solid var(--light-gray);margin:34px 0;}
+    article h2#sources, article h2#references{border-top:1px solid var(--light-gray);padding-top:30px;font-size:1.2rem;color:var(--navy-mid);}
+    /* sources list smaller */
+    article h2[id^="sources"] ~ ul li, article h3[id^="sources"] ~ ul li{font-size:0.95rem;color:var(--navy-mid);}
+    /* tables */
+    article table{width:100%;border-collapse:collapse;margin:0 0 24px;font-size:0.95rem;}
+    article th,article td{border:1px solid var(--light-gray);padding:9px 12px;text-align:left;vertical-align:top;}
+    article thead th{background:var(--navy);color:var(--off-white);font-weight:700;}
+    article tbody tr:nth-child(even){background:#fff;}
+    article .table-wrap{overflow-x:auto;margin:0 0 24px;}
+    article .table-wrap table{margin:0;}
+    /* CTA */
+    .cta-band{background:var(--navy);color:var(--off-white);border-radius:12px;padding:42px 32px;text-align:center;margin:48px 0 8px;}
+    .cta-band h2{font-weight:800;font-size:clamp(1.4rem,3.4vw,1.9rem);margin-bottom:12px;letter-spacing:-0.01em;color:var(--off-white);}
+    .cta-band p{color:var(--light-gray);max-width:52ch;margin:0 auto 24px;}
+    .cta-band .btn{display:inline-block;background:var(--copper);color:#fff;font-weight:700;padding:13px 28px;border-radius:8px;text-decoration:none;transition:background .18s ease;}
+    .cta-band .btn:hover,.cta-band .btn:focus-visible{background:var(--gold);color:var(--navy);outline:none;}
+    /* Footer */
+    footer{max-width:760px;margin:16px auto 0;padding:24px;font-size:0.82rem;color:var(--mid-gray);border-top:1px solid var(--light-gray);}
+    footer p+p{margin-top:6px;}
+    footer a{color:var(--mid-gray);text-decoration:underline;}
+    @media (prefers-reduced-motion:reduce){*{transition:none!important;}}
+
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header>
+    <div class="header-inner">
+      <div class="wordmark"><a href="index.html">Malaniru<span class="dot">.</span></a></div>
+      <span class="eyebrow">AI Enablement &middot; Daily Intelligence Briefing</span>
+      <h1>Daily Intelligence Briefing — Wednesday, April 29, 2026</h1>
+      <p class="byline">By Marco Harris<span class="sep">&middot;</span>April 29, 2026</p>
+      <p class="lede">Wednesday agentic AI briefing: Microsoft FY26 Q3 earnings tonight after market close, Musk v. Altman in Day 3 with Musk back on the stand, NVIDIA Nemotron 3 Nano Omni open multimodal release with Foxconn / Palantir / Oracle as named adopters, and the Affinity MCP server launch.</p>
+      <a class="backlink" href="daily-intelligence-briefings.html">&larr; All daily intelligence briefings</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <article>
+      <p>Wednesday run — four daily sections only. No weekly sections (those run Saturday).</p>
+      <p>Continuity note: prior briefing on file is Tuesday, April 28, 2026. The April 28 cycle led with the 24-hour after-action read on the Microsoft–OpenAI restructure (Microsoft Copilot now formally multi-model with Anthropic Claude expansion, AGI-trigger clause removed), opening arguments in Musk v. Altman, the Google–Anthropic "trust anchor" SiliconAngle framing, and the Claude Code v2.1.121 release. Today's cycle picks up the Microsoft FY26 Q3 earnings print arriving tonight after market close, Day 3 of Musk v. Altman with Musk back on the stand, the NVIDIA Nemotron 3 Nano Omni open-multimodal release (shipped April 28, surfaced today with adoption-signal update), two further Claude Code increments (v2.1.122 / v2.1.123), and the Affinity MCP server launch — plus a deferred but operationally important note on the Microsoft Agent Governance Toolkit in the context of an active April AI-security-incident wave.</p>
+      <hr>
+      <h2 id="executive-summary">Executive Summary</h2>
+      <p>Tonight's Microsoft fiscal-year Q3 earnings call is the single most consequential pending data point for AI implementation planning this quarter — sell-side consensus is revenue ~$81.4B (+16.2% YoY), EPS ~$4.06, Azure +37–38% constant-currency, capex ~$35.2B (+~64.6% YoY), with full-year FY26 capex guidance reportedly tracking $110B–$120B (Source: tradingkey.com, "Microsoft 2026 Q3 Earnings Preview," April 27, 2026; Alphastreet, "Microsoft's Q3 FY2026 Earnings Test," April 2026; coindcx.com, April 2026). Sell-side consensus, not yet reported. Musk v. Altman is in Day 3 with Musk retaking the stand after a Tuesday session in which he framed OpenAI's founding as a counterweight to Google and reiterated the "smarter than any human as soon as next year" capability claim (Source: CNBC, "Musk v. Altman live updates: Musk to retake stand in day 3 of OpenAI trial," April 29, 2026; CNBC, "OpenAI trial day 2 takeaways," April 28, 2026; ABC7 San Francisco; NPR). NVIDIA Nemotron 3 Nano Omni shipped April 28 as a 30B-parameter / 3B-active mixture-of-experts open multimodal model with 256K context, lining up Foxconn, Palantir, and Oracle as named adopters and posting up-to-9x throughput claims on video/document workloads (vendor-reported) (Source: NVIDIA Blog, "NVIDIA Launches Nemotron 3 Nano Omni Model…," April 28, 2026; wccftech, April 2026; Hugging Face, April 2026). Claude Code shipped v2.1.122 yesterday and v2.1.123 today with Bedrock service-tier selection, PR-URL session resume across GitHub/GitLab/Bitbucket/GHE, and connector deduplication in <code>/mcp</code>. Affinity launched a hosted MCP server April 28 connecting its CRM to ChatGPT, Claude, Gemini, and Copilot — the second commercial-CRM MCP server to ship this month. No new frontier-lab base-model releases overnight; today's signal is earnings, courtroom, open-multimodal, and tooling.</p>
+      <hr>
+      <h2 id="1-ai-market-trends">1. AI Market Trends</h2>
+      <p><strong>Microsoft FY26 Q3 earnings — print tonight (after market close).</strong> Sell-side consensus across previewing outlets converges on ~$81.4B revenue (+16.2% YoY), ~$4.06 adjusted EPS, Azure +37–38% constant currency, and quarterly capex ~$35.2B (Source: tradingkey.com, "Microsoft 2026 Q3 Earnings Preview," April 27, 2026; Alphastreet, "Microsoft's Q3 FY2026 Earnings Test," April 2026; coindcx.com, April 2026; geekwire.com, April 2026). Full-year FY26 capex guidance is reportedly tracking $110B–$120B, a step-up from approximately $80B in FY25 (Source: 247wallst.com, "Microsoft Falls 4% as $110 Billion AI Bet…," April 23, 2026). The two prints that matter for client conversations are (a) Azure deceleration vs. re-acceleration — Q2 reported was 39%, Q3 management guidance was 37–38% — and (b) whether quarterly capex prints at or above the $35B mark and what that implies for full-year capex. This is a same-day pending event. Any setup and training language describing Microsoft's cloud-substrate trajectory should be frozen until the print lands and then updated Thursday morning with the actuals.</p>
+      <p><strong>Musk v. Altman — Day 3, Musk back on the stand.</strong> Per CNBC's live update, Musk retakes the stand Wednesday for a third day after a Tuesday session in which he (a) framed OpenAI's founding as a deliberate counterweight to Google after a personal disagreement with Larry Page over AI safety, (b) said he was "open to the idea of establishing a small for-profit subsidiary" but rejects the current structure in which the for-profit "takes the vast majority of the value away from the charity," and (c) reiterated his prediction that AI will be "smarter than any human as soon as next year" (Source: CNBC, "Musk v. Altman live updates: Musk to retake stand in day 3 of OpenAI trial," April 29, 2026; CNBC, "OpenAI trial day 2 takeaways," April 28, 2026; NPR, "Elon Musk testifies against OpenAI…," April 28, 2026; Newsweek, April 2026). Upcoming witnesses reportedly include Sam Altman, Greg Brockman, Microsoft CEO Satya Nadella, and several early OpenAI researchers and engineers (Source: CNN Business, April 28, 2026). Continue treating trial outcomes as information surface, not betting market. The Nadella deposition, in particular, is a watch-item — anything Microsoft's CEO says under oath about OpenAI's structure or the partnership economics is an exceptionally clean compliance-teaching artifact regardless of verdict.</p>
+      <p><strong>Open-multimodal frontier moves — NVIDIA Nemotron 3 Nano Omni.</strong> NVIDIA released Nemotron 3 Nano Omni on April 28, 2026 through Hugging Face, OpenRouter, build.nvidia.com, and 25+ partner platforms — a 30-billion-parameter model that activates only 3 billion parameters per token via a mixture-of-experts architecture, runs on a single GPU at ~25GB of RAM, supports a 256K context window, and unifies reasoning across video, audio, images, documents, and text (Source: NVIDIA Blog, April 28, 2026; NVIDIA Developer Blog, April 2026; Hugging Face, April 2026; OpenRouter Nemotron 3 Nano 30B A3B model card). Vendor-claimed throughput improvements: up to 9x higher vs. other open omni models on video and multi-document workloads, 7.4x system efficiency on multi-document, 9.2x system efficiency on video, and "topping six leaderboards" for document/video/audio understanding (Source: NVIDIA Blog, April 28, 2026; buildfastwithai.com, April 2026). Self-reported — independent third-party verification not yet available. Named adopters: Aible, Applied Scientific Intelligence, Eka Care, Foxconn, H Company, Palantir, Pyler, with Dell Technologies, Docusign, Infosys, K-Dense, Lila, Oracle, and Zefr evaluating (Source: NVIDIA Blog, April 28, 2026; wccftech, "NVIDIA Lines Up Foxconn, Palantir, and Oracle Behind Nemotron 3 Nano Omni…," April 2026). This is the first production-credible open multimodal release in the small-model class since DeepSeek V4 — and the first one explicitly architected for computer-use agents (NVIDIA cites a leap on the OSWorld benchmark for GUI navigation in preliminary evaluations).</p>
+      <p><strong>Affinity MCP server — second commercial CRM-to-AI bridge of April.</strong> On April 28, 2026, Affinity announced the launch of its hosted Model Context Protocol server, connecting the Affinity CRM to ChatGPT, Claude, Gemini, and Copilot via a single MCP endpoint (Source: Yahoo Finance, "Affinity Launches Model Context Protocol to Connect Relationship Intelligence to AI Tools for Private Capital," April 28, 2026; modelcontextprotocol.info, April 2026). The sector implication is straightforward: MCP has crossed from "experimental Anthropic protocol" to "default integration interface" for line-of-business SaaS — a transition aggregator coverage now describes as "de facto agent tool protocol" (Source: tokenmix.ai, "MCP Updates Changelog," 2026; sureprompts.com, "Model Context Protocol (MCP): The Complete 2026 Guide," 2026).</p>
+      <p><strong>What This Means for You.</strong> For your AI implementation policies, do not modify your Microsoft-related policy language until tonight's print lands; queue the Thursday-morning update window. For team training, the Nemotron 3 Nano Omni release is a high-value teaching artifact — it is the cleanest current example of an open, GPU-friendly, multimodal, computer-use-capable model and pairs naturally with existing Claude Code lessons to illustrate "frontier-closed for orchestration, open-multimodal for perception" as a deployable pattern. For compliance posture, the Affinity MCP launch is the right small example to add to a Q2 compliance-curriculum module on third-party MCP-server risk — when a CRM's MCP server lives outside the buyer's perimeter and connects to multiple frontier labs simultaneously, the data-egress question is no longer hypothetical.</p>
+      <hr>
+      <h2 id="2-top-10-ai-agents-three-lenses">2. Top 10 AI Agents — Three Lenses</h2>
+      <p>Rankings as of Wednesday, April 29, 2026. Movement noted relative to Tuesday, April 28.</p>
+      <h3 id="2a-relevance-for-claude-mcp-centered-work">2a. Relevance for Claude / MCP-Centered Work</h3>
+      <div class="table-wrap"><table>
+      <thead>
+      <tr>
+      <th>#</th>
+      <th>Agent</th>
+      <th>Why it ranks here</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>1</td>
+      <td>Claude Cowork (Opus 4.7)</td>
+      <td>Unchanged. Core delivery surface. (Source: Anthropic)</td>
+      </tr>
+      <tr>
+      <td>2</td>
+      <td>Claude Code (Opus 4.7)</td>
+      <td>Unchanged. v2.1.122 (April 28) and v2.1.123 (April 29) add <code>ANTHROPIC_BEDROCK_SERVICE_TIER</code>, PR-URL session resume across GitHub/GitLab/Bitbucket/GHE, and <code>/mcp</code> connector-deduplication hints (Source: GitHub anthropics/claude-code releases, April 28–29, 2026; claudefa.st, April 29, 2026).</td>
+      </tr>
+      <tr>
+      <td>3</td>
+      <td>Claude Mythos Preview (Project Glasswing)</td>
+      <td>Unchanged. (Source: red.anthropic.com)</td>
+      </tr>
+      <tr>
+      <td>4</td>
+      <td>Claude Design (Labs)</td>
+      <td>Unchanged. Pending Compliance review on Labs terms. (Source: TechCrunch, April 17, 2026)</td>
+      </tr>
+      <tr>
+      <td>5</td>
+      <td>Claude for Word</td>
+      <td>Unchanged.</td>
+      </tr>
+      <tr>
+      <td>6</td>
+      <td>Claude Managed Agents</td>
+      <td>Unchanged. Self-reported / aggregator-only pricing figure remains unverified.</td>
+      </tr>
+      <tr>
+      <td>7</td>
+      <td>Adobe CX Enterprise Coworker (MCP+A2A native)</td>
+      <td>Unchanged. GA "in the coming months" (Source: Adobe Press, April 20, 2026).</td>
+      </tr>
+      <tr>
+      <td>8</td>
+      <td>Moody's Agentic Solutions (in Claude)</td>
+      <td>Unchanged.</td>
+      </tr>
+      <tr>
+      <td>9</td>
+      <td>Lucidworks MCP Server</td>
+      <td>Unchanged.</td>
+      </tr>
+      <tr>
+      <td>10</td>
+      <td>Cursor Agent (Opus 4.7)</td>
+      <td>Unchanged. Cursor 3 (April 2) is the active product surface — Agents Window, Design Mode, multi-repo cloud agents (Source: cursor.com/blog/cursor-3, April 2026; InfoQ, April 2026).</td>
+      </tr>
+      </tbody>
+      </table></div>
+      <p>The Claude Code v2.1.122/123 increment is incremental; the PR-URL <code>/resume</code> feature is the single most operationally useful change for engineering Cowork patterns — it materially shortens the round-trip from "review a PR" to "open the exact session that produced it."</p>
+      <h3 id="2b-market-momentum-adoption-funding-developer-buzz">2b. Market Momentum (adoption, funding, developer buzz)</h3>
+      <div class="table-wrap"><table>
+      <thead>
+      <tr>
+      <th>#</th>
+      <th>Agent</th>
+      <th>Why it ranks here</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>1</td>
+      <td>Claude Opus 4.7</td>
+      <td>Unchanged at #1. Microsoft–Anthropic Copilot expansion continues to compound distribution (Source: stocktwits.com, April 27–28, 2026; ia.acs.org.au, April 2026).</td>
+      </tr>
+      <tr>
+      <td>2</td>
+      <td>OpenAI GPT-5.5 + Workspace Agents + Agents SDK</td>
+      <td>Unchanged. Trial governance overhang continues to be tracked but not yet a market mover (Source: blogs.microsoft.com, April 27, 2026; CNBC April 27–29, 2026).</td>
+      </tr>
+      <tr>
+      <td>3</td>
+      <td>NVIDIA Nemotron 3 Nano Omni</td>
+      <td>NEW ENTRANT — debuts at #3. Open multimodal, 30B/3B-active MoE, 256K context, GPU-friendly. Foxconn, Palantir, Oracle named adopters/evaluators on day one (Source: NVIDIA Blog, April 28, 2026; wccftech, April 2026; Hugging Face, April 2026).</td>
+      </tr>
+      <tr>
+      <td>4</td>
+      <td>DeepSeek V4 (Pro 1.6T / Flash 284B, open weights)</td>
+      <td>Down one to #4 — displaced by Nemotron 3 Nano Omni's adoption-signal day-one (Source: api-docs.deepseek.com, April 24, 2026; simonwillison.net, April 24, 2026).</td>
+      </tr>
+      <tr>
+      <td>5</td>
+      <td>Microsoft Copilot Agent Mode + Agent 365 (GA Friday May 1)</td>
+      <td>Down one to #5. Two days out, bundled into M365 E7 (Source: Microsoft Tech Community, April 2026; m365admin.handsontek.net).</td>
+      </tr>
+      <tr>
+      <td>6</td>
+      <td>Cursor Agent / Cursor 3</td>
+      <td>Down one to #6. $2B/$50B round still in talks; product cadence strong (Source: TechCrunch, April 17, 2026; Bloomberg, April 17, 2026; cursor.com/blog/cursor-3).</td>
+      </tr>
+      <tr>
+      <td>7</td>
+      <td>Adobe CX Enterprise Coworker</td>
+      <td>Down one to #7 (Source: Adobe Press, April 20, 2026).</td>
+      </tr>
+      <tr>
+      <td>8</td>
+      <td>Gemini Enterprise Agent Platform</td>
+      <td>Down one to #8. McKinsey Google Transformation Group + Google–Anthropic trust-anchor coverage (Source: googlecloudpresscorner.com, April 22, 2026; siliconangle.com, April 28, 2026).</td>
+      </tr>
+      <tr>
+      <td>9</td>
+      <td>Salesforce Agentforce (Google-integrated)</td>
+      <td>Down one to #9.</td>
+      </tr>
+      <tr>
+      <td>10</td>
+      <td>Cloudflare Agents</td>
+      <td>Down one to #10.</td>
+      </tr>
+      </tbody>
+      </table></div>
+      <p>Added: Nemotron 3 Nano Omni. Dropped: OpenClaw (sourcing debt — GitHub-stars figure never validated against primary trending data; removed pending verification).</p>
+      <h3 id="2c-capability-maturity-production-readiness-reliability-tool-use">2c. Capability &amp; Maturity (production readiness, reliability, tool use)</h3>
+      <div class="table-wrap"><table>
+      <thead>
+      <tr>
+      <th>#</th>
+      <th>Agent</th>
+      <th>Why it ranks here</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>1</td>
+      <td>Claude Opus 4.7</td>
+      <td>Unchanged. SWE-Bench Verified 87.6%, SWE-Bench Pro 64.3% leader. Vendor-reported on initial figures. (Source: Anthropic, April 16, 2026; marc0.dev SWE-bench leaderboard April 2026; codeant.ai SWE-bench leaderboard 2026)</td>
+      </tr>
+      <tr>
+      <td>2</td>
+      <td>OpenAI GPT-5.5 Pro</td>
+      <td>Unchanged. Vendor-claimed Terminal-Bench 2.0 82.7% / SWE-Bench Pro 58.6%. Self-reported. (Source: OpenAI; MacRumors, April 24, 2026)</td>
+      </tr>
+      <tr>
+      <td>3</td>
+      <td>DeepSeek V4-Pro (preview)</td>
+      <td>Unchanged. Open-weight at 1.6T params, 1M context. Self-reported benchmarks. Preview, not GA. (Source: simonwillison.net, April 24, 2026; Hugging Face)</td>
+      </tr>
+      <tr>
+      <td>4</td>
+      <td>Claude Sonnet 4.6</td>
+      <td>Unchanged.</td>
+      </tr>
+      <tr>
+      <td>5</td>
+      <td>Gemini 3.1 Pro</td>
+      <td>Unchanged.</td>
+      </tr>
+      <tr>
+      <td>6</td>
+      <td>Claude Cowork (GA, Opus 4.7)</td>
+      <td>Unchanged.</td>
+      </tr>
+      <tr>
+      <td>7</td>
+      <td>Microsoft Copilot Agent Mode + Agent 365</td>
+      <td>Unchanged. Agent 365 GA Friday May 1 (Source: Microsoft, "Microsoft Agent 365: The Control Plane for Agents").</td>
+      </tr>
+      <tr>
+      <td>8</td>
+      <td>Claude Mythos Preview</td>
+      <td>Unchanged. Self-reported / secondary.</td>
+      </tr>
+      <tr>
+      <td>9</td>
+      <td>Claude Code + /ultrareview</td>
+      <td>Stable at #9 with v2.1.122/123 today — Bedrock service-tier env var, PR-URL <code>/resume</code>, <code>/mcp</code> dedup hints (Source: GitHub anthropics/claude-code releases; claudefa.st, April 29, 2026).</td>
+      </tr>
+      <tr>
+      <td>10</td>
+      <td>NVIDIA Nemotron 3 Nano Omni (perception layer for agents)</td>
+      <td>NEW ENTRANT — debuts at #10. Production-class open multimodal model explicitly architected for computer-use agents; preliminary OSWorld GUI-navigation gains reported (Source: NVIDIA Developer Blog, April 2026; NVIDIA Blog, April 28, 2026). Preliminary, vendor-reported.</td>
+      </tr>
+      </tbody>
+      </table></div>
+      <p>Dropped from Capability: OpenAI Agents SDK (one cycle) — bumped by Nemotron 3 Nano Omni on the perception/multimodal axis. Will be reconsidered once an OpenAI multimodal-agent capability claim is published with independent verification.</p>
+      <h3 id="divergence-analysis">Divergence Analysis</h3>
+      <p><strong>Two divergences this cycle.</strong></p>
+      <p><strong>One — the open multimodal axis just opened a real second front.</strong> Until April 28, "open frontier" essentially meant "DeepSeek and a long tail." Nemotron 3 Nano Omni is the first production-credible open multimodal model that (a) is explicitly architected for computer-use agents, (b) ships day-one with a named adopter list dominated by enterprise infrastructure (Foxconn, Palantir, Oracle), and (c) runs on a single GPU at sub-prosumer hardware budgets. The closed-frontier narrative (Anthropic, OpenAI, Google) and the open-frontier narrative (DeepSeek, Nemotron) are now on different time-axes — the closed labs are quiet on capability this week, and the open multimodal axis just shipped a meaningful release. The implication is that the "vendor-neutral perception, vendor-anchored orchestration" architecture pattern should move from theoretical to recommended.</p>
+      <p><strong>Two — Microsoft's earnings tonight will reset the entire market read on the April 27 restructure.</strong> The Tuesday SiliconAngle "trust anchor" framing of Google–Anthropic and the 24-hour MSFT rebound are both provisional until tonight's print. Watch for two specific lines on the call: the capacity-allocation language (whether Microsoft characterizes Azure third-party-supply tightness as easing or persisting) and the Copilot-stack language (whether Microsoft formally describes the M365 Copilot lineup as multi-model, with Anthropic Claude named, in the prepared remarks). Both lines will determine whether the Wednesday-morning client message is "the restructure is net-positive at the operating-leverage level" or "the capex commitment continues to outrun the revenue ramp."</p>
+      <p><strong>What This Means for You.</strong> For your policies, two pending updates queue for Thursday morning: (a) post-earnings Microsoft talking points and (b) a Nemotron-3-Nano-Omni line item in the vendor-evaluation matrix as the recommended reference for "open, multimodal, on-device-capable, computer-use-ready." For training, the Nemotron release is a clean teaching artifact this week alongside existing Claude Code lessons. For compliance, the Friday Microsoft Agent 365 GA is now two days out — confirm any policy templates that assume Agent 365 as a control-plane reference are positioned for May 1 availability before EOD Thursday.</p>
+      <hr>
+      <h2 id="3-agentic-ai-advances-new-releases">3. Agentic AI Advances &amp; New Releases</h2>
+      <p><strong>NVIDIA Nemotron 3 Nano Omni — released April 28, 2026.</strong> 30B parameter / 3B active MoE; 256K context; unified multimodal across video, audio, images, documents, and text; available on Hugging Face, OpenRouter, build.nvidia.com, and 25+ partner platforms (Source: NVIDIA Blog, April 28, 2026; NVIDIA Developer Blog, April 2026; Hugging Face, April 2026; OpenRouter Nemotron 3 Nano 30B A3B model card). Benchmark figures self-reported.</p>
+      <p><strong>Claude Code v2.1.122 (April 28) and v2.1.123 (April 29).</strong> Notable items across the two releases: (a) <code>ANTHROPIC_BEDROCK_SERVICE_TIER</code> environment variable to select Bedrock service tier (default, flex, or priority) — sent as the <code>X-Amzn-Bedrock-Service-Tier</code> header; (b) pasting a PR URL into the <code>/resume</code> search box now finds the session that created the PR — supports GitHub, GitHub Enterprise, GitLab, and Bitbucket; (c) <code>/mcp</code> now surfaces claude.ai connectors that are hidden by a manually-added server with the same URL, with a hint to remove the duplicate (Source: GitHub anthropics/claude-code releases, April 28–29, 2026; claudefa.st, April 29, 2026; releasebot.io, April 2026).</p>
+      <p><strong>Affinity hosted MCP server — April 28, 2026.</strong> Connects Affinity's relationship-intelligence CRM to ChatGPT, Claude, Gemini, and Copilot via a single MCP endpoint; targets private-capital workflows (Source: Yahoo Finance, April 28, 2026; modelcontextprotocol.info, April 2026).</p>
+      <p><strong>Microsoft Agent 365 — GA Friday, May 1, 2026 (two days out).</strong> Bundled into Microsoft 365 E7; positioned as the enterprise control plane for autonomous agents (agent identity, policy enforcement, audit trail) (Source: techcommunity.microsoft.com; m365admin.handsontek.net; Microsoft, "Microsoft Agent 365: The Control Plane for Agents").</p>
+      <p><strong>Microsoft Q3 FY26 earnings — tonight, after market close.</strong> Sell-side consensus revenue ~$81.4B, EPS ~$4.06, Azure +37–38%, capex ~$35.2B (~+64.6% YoY); FY26 capex guidance reportedly $110B–$120B. Sell-side consensus, not yet reported. (Source: tradingkey.com, April 27, 2026; Alphastreet, April 2026; coindcx.com, April 2026; geekwire.com, April 2026.)</p>
+      <p><strong>MCP — adoption side, no protocol changes.</strong> No protocol-level changes since the April 8 maintainer-team expansion; the 2026 roadmap (stateless HTTP transport, Tasks primitive for long-running asynchronous operations, server discovery / registry, enterprise readiness) remains the active work program (Source: blog.modelcontextprotocol.io, April 8, 2026; modelcontextprotocol.io roadmap; thenewstack.io). The MCP Dev Summit North America (NYC, April 2026, ~1,200 attendees per aggregator coverage) is the largest in-person MCP gathering to date and is itself a maturity signal.</p>
+      <p><strong>No new frontier-lab base-model releases over the April 28–29 window.</strong> Anthropic, OpenAI, Google DeepMind, Meta, Mistral, xAI, and Cohere are quiet on the closed-frontier model-release axis since GPT-5.5 (April 23) and DeepSeek V4 preview (April 24). The open multimodal axis absorbed today's release momentum.</p>
+      <p><strong>What This Means for You.</strong> For your policies, the Claude Code v2.1.122/123 PR-URL <code>/resume</code> feature is a one-line update to your engineering runbook — the new shortcut is meaningfully time-saving in PR-review workflows. For team training, schedule an engineering training-module refresh that walks through Nemotron 3 Nano Omni alongside Claude as a "perception + orchestration" pattern. For compliance posture, the Affinity MCP launch is a small but useful illustration for a Q2 module on third-party MCP-server risk — when CRMs ship MCP endpoints, the data-residency and audit questions belong in the procurement checklist, not the post-deployment review.</p>
+      <hr>
+      <h2 id="4-overnight-release-monitor">4. Overnight Release Monitor</h2>
+      <p>Since the Tuesday (April 28) publish window:</p>
+      <ul>
+      <li>April 29 (today) — Claude Code v2.1.123. Adds <code>ANTHROPIC_BEDROCK_SERVICE_TIER</code>, PR-URL <code>/resume</code> for GitHub/GHE/GitLab/Bitbucket, <code>/mcp</code> connector-dedup hint. (Source: GitHub anthropics/claude-code releases; claudefa.st, April 29, 2026.)</li>
+      <li>April 29 (today) — Musk v. Altman, Day 3. Musk retakes the stand. Upcoming witnesses include Altman, Brockman, Nadella. (Source: CNBC, April 29, 2026.)</li>
+      <li>Tonight (April 29, after market close) — Microsoft FY26 Q3 earnings call. Sell-side consensus ~$81.4B revenue / $4.06 EPS / Azure +37–38% / capex ~$35.2B. Pending. (Source: tradingkey.com; Alphastreet; coindcx.com; geekwire.com — April 2026.)</li>
+      <li>April 28 (carried) — NVIDIA Nemotron 3 Nano Omni. 30B/3B-active MoE open multimodal; 256K context; named adopters Foxconn, Palantir, Oracle (evaluating). (Source: NVIDIA Blog, April 28, 2026; wccftech; Hugging Face; OpenRouter.) Benchmarks self-reported.</li>
+      <li>April 28 (carried) — Claude Code v2.1.122. Bedrock service-tier env var, PR-URL <code>/resume</code>, <code>/mcp</code> dedup hint. (Source: GitHub anthropics/claude-code releases; claudefa.st.)</li>
+      <li>April 28 (carried) — Affinity MCP server. CRM → ChatGPT/Claude/Gemini/Copilot via hosted MCP endpoint. (Source: Yahoo Finance, April 28, 2026; modelcontextprotocol.info.)</li>
+      <li>April 28 (carried) — Musk v. Altman, Day 2 testimony. Musk on the stand; "smarter than any human" capability claim repeated; framed OpenAI as Google counterweight. (Source: CNBC, April 28, 2026; ABC7 SF; NPR; Newsweek.)</li>
+      <li>April 27 (carried) — Microsoft–OpenAI partnership restructure. Multi-cloud OpenAI; Microsoft revenue-share-to-OpenAI ends; capped 2030 reverse share; AGI-trigger clause removed. (Source: blogs.microsoft.com; CNBC; Bloomberg; foreignpolicyjournal.com — April 27–28, 2026.)</li>
+      <li>April 27 (carried) — Anthropic Sydney office. Theo Hourmouzis appointed GM Australia &amp; New Zealand; fourth APAC office; Seoul next. (Source: anthropic.com/news; arnnet.com.au; capitalbrief.com.)</li>
+      <li>April 22 (carried) — McKinsey Google Transformation Group. (Source: googlecloudpresscorner.com; mckinsey.com; Bloomberg.)</li>
+      <li>AI security incident wave (carried, April 7+). Vercel breach via Context.ai (April 19), Mercor breach (April 2 disclosure), Delve customer incident (April 23) — and the Microsoft Agent Governance Toolkit (open-source runtime security; April 2 release) is the most useful primary defensive artifact available right now (Source: vercel.com/kb, April 2026; Fortune, April 2, 2026; TechCrunch, April 23, 2026; Microsoft Open Source Blog, April 2, 2026; helpnetsecurity.com, April 3, 2026).</li>
+      <li>No new material primary-source frontier-lab base-model releases identified from Anthropic, OpenAI, Google DeepMind, Meta, Mistral, xAI, or Cohere overnight.</li>
+      </ul>
+      <p><strong>What This Means for You.</strong> Tonight's Microsoft earnings is the binary: AI implementation policy messaging on Microsoft cloud-substrate optionality cannot be locked in until the call ends. Outside that, Wednesday's actionable cluster is Nemotron 3 Nano Omni (training and the vendor matrix), Affinity MCP (third-party-MCP risk module), and the Claude Code v2.1.122/123 PR-URL <code>/resume</code> feature (engineering runbook one-liner). The April-AI-security-incident wave plus the Microsoft Agent Governance Toolkit together constitute the cleanest current pairing for any conversation that opens with "should we deploy autonomous agents at all?" — the answer is yes, with named runtime governance, not unsupervised.</p>
+      <hr>
+      <h2 id="sources">Sources</h2>
+      <ul>
+      <li>247wallst.com, "Microsoft Falls 4% as $110 Billion AI Bet Forces Historic Employee Buyout," April 23, 2026. <a href="https://247wallst.com/investing/2026/04/23/microsoft-falls-4-as-110-billion-ai-bet-forces-historic-employee-buyout-what-investors-need-to-know/" target="_blank" rel="noopener">https://247wallst.com/investing/2026/04/23/microsoft-falls-4-as-110-billion-ai-bet-forces-historic-employee-buyout-what-investors-need-to-know/</a></li>
+      <li>ABC7 San Francisco, "Elon Musk v. Sam Altman live updates," April 28, 2026. <a href="https://abc7news.com/live-updates/elon-musk-sam-altman-live-updates-week-1-trial-could-alter-direction-artificial-intelligence/18968485/" target="_blank" rel="noopener">https://abc7news.com/live-updates/elon-musk-sam-altman-live-updates-week-1-trial-could-alter-direction-artificial-intelligence/18968485/</a></li>
+      <li>Adobe Press, "Adobe Unveils CX Enterprise Coworker," April 20, 2026. <a href="https://news.adobe.com/news/2026/04/adobe-unveils-cx-enterprise-coworker" target="_blank" rel="noopener">https://news.adobe.com/news/2026/04/adobe-unveils-cx-enterprise-coworker</a></li>
+      <li>Alphastreet, "Microsoft's Q3 FY2026 Earnings Test," April 2026. <a href="https://news.alphastreet.com/microsofts-q3-fy2026-earnings-test-will-azure-re-accelerate-or-extend-its-deceleration/" target="_blank" rel="noopener">https://news.alphastreet.com/microsofts-q3-fy2026-earnings-test-will-azure-re-accelerate-or-extend-its-deceleration/</a></li>
+      <li>buildfastwithai.com, "NVIDIA Nemotron 3 Nano Omni: Full Review, Benchmarks &amp; How to Run (2026)," April 2026. <a href="https://www.buildfastwithai.com/blogs/nvidia-nemotron-3-nano-omni-2026" target="_blank" rel="noopener">https://www.buildfastwithai.com/blogs/nvidia-nemotron-3-nano-omni-2026</a></li>
+      <li>claudefa.st, "Claude Code Changelog: All Release Notes (2026)," April 29, 2026. <a href="https://claudefa.st/blog/guide/changelog" target="_blank" rel="noopener">https://claudefa.st/blog/guide/changelog</a></li>
+      <li>CNBC, "Musk v. Altman live updates: Musk to retake stand in day 3 of OpenAI trial," April 29, 2026. <a href="https://www.cnbc.com/2026/04/29/musk-altman-live-updates-day-3-open-ai-trial.html" target="_blank" rel="noopener">https://www.cnbc.com/2026/04/29/musk-altman-live-updates-day-3-open-ai-trial.html</a></li>
+      <li>CNBC, "OpenAI trial day 2 takeaways: Musk testifies OpenAI was created as nonprofit to counter Google," April 28, 2026. <a href="https://www.cnbc.com/2026/04/28/openai-trial-elon-musk-sam-altman-live-updates.html" target="_blank" rel="noopener">https://www.cnbc.com/2026/04/28/openai-trial-elon-musk-sam-altman-live-updates.html</a></li>
+      <li>CNN Business, "Elon Musk testifies in a case that could change the path of AI," April 28, 2026. <a href="https://www.cnn.com/2026/04/28/tech/elon-musk-sam-altman-openai" target="_blank" rel="noopener">https://www.cnn.com/2026/04/28/tech/elon-musk-sam-altman-openai</a></li>
+      <li>coindcx.com, "Microsoft (MSFT) Q3 FY26 Earnings: Date, Expectations &amp; Key Watchpoints," April 2026. <a href="https://coindcx.com/blog/us-stock/microsoft-fy26-earnings-preview/" target="_blank" rel="noopener">https://coindcx.com/blog/us-stock/microsoft-fy26-earnings-preview/</a></li>
+      <li>cursor.com, "Meet the new Cursor (Cursor 3)," April 2, 2026. <a href="https://cursor.com/blog/cursor-3" target="_blank" rel="noopener">https://cursor.com/blog/cursor-3</a></li>
+      <li>Fortune, "Mercor confirms major cybersecurity breach," April 2, 2026. <a href="https://fortune.com/2026/04/02/mercor-ai-startup-security-incident-10-billion/" target="_blank" rel="noopener">https://fortune.com/2026/04/02/mercor-ai-startup-security-incident-10-billion/</a></li>
+      <li>foreignpolicyjournal.com, "Microsoft (MSFT) Stock Handed Boost as OpenAI Tears Up Exclusivity," April 28, 2026. <a href="https://www.foreignpolicyjournal.com/2026/04/28/microsoft-msft-stock-handed-boost-as-openai-tears-up-exclusivity-restructured-deal-opens-chatgpt-to-amazon-and-google-clouds/" target="_blank" rel="noopener">https://www.foreignpolicyjournal.com/2026/04/28/microsoft-msft-stock-handed-boost-as-openai-tears-up-exclusivity-restructured-deal-opens-chatgpt-to-amazon-and-google-clouds/</a></li>
+      <li>geekwire.com, "Microsoft earnings preview," April 2026. <a href="https://www.geekwire.com/2026/microsoft-earnings-preview-after-a-357-billion-wipeout-tech-giant-gets-another-chance/" target="_blank" rel="noopener">https://www.geekwire.com/2026/microsoft-earnings-preview-after-a-357-billion-wipeout-tech-giant-gets-another-chance/</a></li>
+      <li>GitHub, anthropics/claude-code releases, April 28–29, 2026. <a href="https://github.com/anthropics/claude-code/releases" target="_blank" rel="noopener">https://github.com/anthropics/claude-code/releases</a></li>
+      <li>googlecloudpresscorner.com, "McKinsey and Google Cloud Launch the McKinsey Google Transformation Group," April 22, 2026. <a href="https://www.googlecloudpresscorner.com/2026-04-22-McKinsey-and-Google-Cloud-Launch-the-McKinsey-Google-Transformation-Group-to-Scale-Enterprise-Impact-for-the-AI-era" target="_blank" rel="noopener">https://www.googlecloudpresscorner.com/2026-04-22-McKinsey-and-Google-Cloud-Launch-the-McKinsey-Google-Transformation-Group-to-Scale-Enterprise-Impact-for-the-AI-era</a></li>
+      <li>helpnetsecurity.com, "Microsoft releases open-source toolkit to govern autonomous AI agents," April 3, 2026. <a href="https://www.helpnetsecurity.com/2026/04/03/microsoft-ai-agent-governance-toolkit/" target="_blank" rel="noopener">https://www.helpnetsecurity.com/2026/04/03/microsoft-ai-agent-governance-toolkit/</a></li>
+      <li>Hugging Face, "Introducing NVIDIA Nemotron 3 Nano Omni," April 2026. <a href="https://huggingface.co/blog/nvidia/nemotron-3-nano-omni-multimodal-intelligence" target="_blank" rel="noopener">https://huggingface.co/blog/nvidia/nemotron-3-nano-omni-multimodal-intelligence</a></li>
+      <li>ia.acs.org.au, "Microsoft adds Anthropic's Claude to Copilot," April 2026. <a href="https://ia.acs.org.au/article/2026/microsoft-adds-anthropic-s-claude-to-copilot.html" target="_blank" rel="noopener">https://ia.acs.org.au/article/2026/microsoft-adds-anthropic-s-claude-to-copilot.html</a></li>
+      <li>InfoQ, "Cursor 3 Introduces Agent-First Interface," April 2026. <a href="https://www.infoq.com/news/2026/04/cursor-3-agent-first-interface/" target="_blank" rel="noopener">https://www.infoq.com/news/2026/04/cursor-3-agent-first-interface/</a></li>
+      <li>m365admin.handsontek.net, "Microsoft Agent 365 Generally Available May 1, 2026." <a href="https://m365admin.handsontek.net/microsoft-agent-365-generally-available-may-1-2026/" target="_blank" rel="noopener">https://m365admin.handsontek.net/microsoft-agent-365-generally-available-may-1-2026/</a></li>
+      <li>McKinsey, "McKinsey and Google Cloud launch the McKinsey Google Transformation Group," April 22, 2026. <a href="https://www.mckinsey.com/about-us/new-at-mckinsey-blog/mckinsey-and-google-cloud-launch-the-mckinsey-google-transformation-group-to-scale-enterprise-impact-for-the-ai-era" target="_blank" rel="noopener">https://www.mckinsey.com/about-us/new-at-mckinsey-blog/mckinsey-and-google-cloud-launch-the-mckinsey-google-transformation-group-to-scale-enterprise-impact-for-the-ai-era</a></li>
+      <li>Microsoft, "Microsoft Agent 365: The Control Plane for Agents." <a href="https://www.microsoft.com/en-us/microsoft-agent-365" target="_blank" rel="noopener">https://www.microsoft.com/en-us/microsoft-agent-365</a></li>
+      <li>Microsoft, "FY 2026 Q3 Earnings Conference Call." <a href="https://www.microsoft.com/en-us/investor/events/fy-2026/earnings-fy-2026-q3" target="_blank" rel="noopener">https://www.microsoft.com/en-us/investor/events/fy-2026/earnings-fy-2026-q3</a></li>
+      <li>Microsoft Open Source Blog, "Introducing the Agent Governance Toolkit," April 2, 2026. <a href="https://opensource.microsoft.com/blog/2026/04/02/introducing-the-agent-governance-toolkit-open-source-runtime-security-for-ai-agents/" target="_blank" rel="noopener">https://opensource.microsoft.com/blog/2026/04/02/introducing-the-agent-governance-toolkit-open-source-runtime-security-for-ai-agents/</a></li>
+      <li>Microsoft Tech Community, "Agent 365 will be generally available on May 1, 2026." <a href="https://techcommunity.microsoft.com/discussions/agent-365-discussions/agent-365-will-be-generally-available-on-may-1-2026/4500380" target="_blank" rel="noopener">https://techcommunity.microsoft.com/discussions/agent-365-discussions/agent-365-will-be-generally-available-on-may-1-2026/4500380</a></li>
+      <li>Model Context Protocol Blog, "Expanding the MCP Maintainer Team," April 8, 2026. <a href="https://blog.modelcontextprotocol.io/posts/2026-04-08-maintainer-update/" target="_blank" rel="noopener">https://blog.modelcontextprotocol.io/posts/2026-04-08-maintainer-update/</a></li>
+      <li>Newsweek, "Musk vs. Altman: Elon Says AI 'Smarter Than Humans' Next Year," April 2026. <a href="https://www.newsweek.com/elon-musk-vs-sam-altman-feud-explained-as-openai-trial-begins-11886815" target="_blank" rel="noopener">https://www.newsweek.com/elon-musk-vs-sam-altman-feud-explained-as-openai-trial-begins-11886815</a></li>
+      <li>NPR, "Elon Musk testifies against OpenAI," April 28, 2026. <a href="https://www.npr.org/2026/04/28/nx-s1-5801438/musk-altman-openai-trial-opening-statements" target="_blank" rel="noopener">https://www.npr.org/2026/04/28/nx-s1-5801438/musk-altman-openai-trial-opening-statements</a></li>
+      <li>NVIDIA Blog, "NVIDIA Launches Nemotron 3 Nano Omni Model," April 28, 2026. <a href="https://blogs.nvidia.com/blog/nemotron-3-nano-omni-multimodal-ai-agents/" target="_blank" rel="noopener">https://blogs.nvidia.com/blog/nemotron-3-nano-omni-multimodal-ai-agents/</a></li>
+      <li>NVIDIA Developer Blog, "NVIDIA Nemotron 3 Nano Omni Powers Multimodal Agent Reasoning," April 2026. <a href="https://developer.nvidia.com/blog/nvidia-nemotron-3-nano-omni-powers-multimodal-agent-reasoning-in-a-single-efficient-open-model/" target="_blank" rel="noopener">https://developer.nvidia.com/blog/nvidia-nemotron-3-nano-omni-powers-multimodal-agent-reasoning-in-a-single-efficient-open-model/</a></li>
+      <li>OpenRouter, "Nemotron 3 Nano 30B A3B." <a href="https://openrouter.ai/nvidia/nemotron-3-nano-30b-a3b:free" target="_blank" rel="noopener">https://openrouter.ai/nvidia/nemotron-3-nano-30b-a3b:free</a></li>
+      <li>siliconangle.com, "Google-Anthropic partnership stakes a claim on trust in AI," April 28, 2026. <a href="https://siliconangle.com/2026/04/28/google-anthropic-partnership-stakes-claim-trust-ai-googlecloudnext/" target="_blank" rel="noopener">https://siliconangle.com/2026/04/28/google-anthropic-partnership-stakes-claim-trust-ai-googlecloudnext/</a></li>
+      <li>siliconangle.com, "OpenAI and Microsoft revise the terms of their AI partnership," April 27, 2026. <a href="https://siliconangle.com/2026/04/27/openai-microsoft-revise-terms-ai-partnership/" target="_blank" rel="noopener">https://siliconangle.com/2026/04/27/openai-microsoft-revise-terms-ai-partnership/</a></li>
+      <li>simonwillison.net, "DeepSeek V4," April 24, 2026. <a href="https://simonwillison.net/2026/Apr/24/deepseek-v4/" target="_blank" rel="noopener">https://simonwillison.net/2026/Apr/24/deepseek-v4/</a></li>
+      <li>stocktwits.com, "Microsoft Loses Exclusive Access To OpenAI Models," April 27–28, 2026. <a href="https://stocktwits.com/news-articles/markets/equity/microsoft-loses-exclusive-license-openai-models-taps-anthropic-claude/cZBNAqiRePg" target="_blank" rel="noopener">https://stocktwits.com/news-articles/markets/equity/microsoft-loses-exclusive-license-openai-models-taps-anthropic-claude/cZBNAqiRePg</a></li>
+      <li>TechCrunch, "App host Vercel says it was hacked," April 20, 2026. <a href="https://techcrunch.com/2026/04/20/app-host-vercel-confirms-security-incident-says-customer-data-was-stolen-via-breach-at-context-ai/" target="_blank" rel="noopener">https://techcrunch.com/2026/04/20/app-host-vercel-confirms-security-incident-says-customer-data-was-stolen-via-breach-at-context-ai/</a></li>
+      <li>TechCrunch, "Another customer of troubled startup Delve suffered a big security incident," April 23, 2026. <a href="https://techcrunch.com/2026/04/23/another-customer-of-troubled-startup-delve-suffered-a-big-security-incident/" target="_blank" rel="noopener">https://techcrunch.com/2026/04/23/another-customer-of-troubled-startup-delve-suffered-a-big-security-incident/</a></li>
+      <li>TechCrunch, "Sources: Cursor in talks to raise $2B at $50B valuation," April 17, 2026. <a href="https://techcrunch.com/2026/04/17/sources-cursor-in-talks-to-raise-2b-at-50b-valuation-as-enterprise-growth-surges/" target="_blank" rel="noopener">https://techcrunch.com/2026/04/17/sources-cursor-in-talks-to-raise-2b-at-50b-valuation-as-enterprise-growth-surges/</a></li>
+      <li>thenewstack.io, "MCP's biggest growing pains for production use will soon be solved." <a href="https://thenewstack.io/model-context-protocol-roadmap-2026/" target="_blank" rel="noopener">https://thenewstack.io/model-context-protocol-roadmap-2026/</a></li>
+      <li>tokenmix.ai, "MCP Updates Changelog: Every Protocol Change Since 2024 (2026)," 2026. <a href="https://tokenmix.ai/blog/mcp-updates-changelog-every-protocol-change-2026" target="_blank" rel="noopener">https://tokenmix.ai/blog/mcp-updates-changelog-every-protocol-change-2026</a></li>
+      <li>tradingkey.com, "Microsoft 2026 Q3 Earnings Preview," April 27, 2026. <a href="https://www.tradingkey.com/analysis/stocks/us-stocks/261828809-microsoft-q3-2026-earnings-report-tradingkey" target="_blank" rel="noopener">https://www.tradingkey.com/analysis/stocks/us-stocks/261828809-microsoft-q3-2026-earnings-report-tradingkey</a></li>
+      <li>vercel.com, "Vercel April 2026 security incident," April 2026. <a href="https://vercel.com/kb/bulletin/vercel-april-2026-security-incident" target="_blank" rel="noopener">https://vercel.com/kb/bulletin/vercel-april-2026-security-incident</a></li>
+      <li>wccftech, "NVIDIA Lines Up Foxconn, Palantir, and Oracle Behind Nemotron 3 Nano Omni," April 2026. <a href="https://wccftech.com/nvidia-lines-up-foxconn-palantir-oracle-behind-nemotron-3-nano-omni-open-ai-model/" target="_blank" rel="noopener">https://wccftech.com/nvidia-lines-up-foxconn-palantir-oracle-behind-nemotron-3-nano-omni-open-ai-model/</a></li>
+      <li>Yahoo Finance, "Affinity Launches Model Context Protocol," April 28, 2026. <a href="https://finance.yahoo.com/sectors/technology/articles/affinity-launches-model-context-protocol-130500144.html" target="_blank" rel="noopener">https://finance.yahoo.com/sectors/technology/articles/affinity-launches-model-context-protocol-130500144.html</a></li>
+      </ul>
+    </article>
+
+    <section class="cta-band" id="contact" aria-labelledby="cta-heading">
+      <h2 id="cta-heading">From AI curiosity to AI capability</h2>
+      <p>This briefing is part of the field research behind our AI Enablement service &mdash; a curated, white-glove Claude Cowork implementation tailored to your organization&rsquo;s workflow.</p>
+      <a class="btn" href="https://calendly.com/mark-malaniru/30min" target="_blank" rel="noopener">Book a discovery call</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Malaniru Inc, LLC &middot; Lafayette, Colorado &middot; AI Enablement</p>
+    <p><a href="daily-intelligence-briefings.html">&larr; Back to Daily Intelligence Briefings</a> &middot; <a href="index.html">AI Enablement</a></p>
+      <nav class="mal-footernav" data-mal-footernav aria-label="Site" style="margin-top:0.7rem;font-size:0.82rem;line-height:1.9;">
+      <a href="about.html" style="color:#C07830;font-weight:700;text-decoration:none;">About</a> &middot;
+      <a href="pricing.html" style="color:#C07830;font-weight:700;text-decoration:none;">Pricing</a> &middot;
+      <a href="index.html" style="color:#C07830;font-weight:700;text-decoration:none;">AI Enablement</a>
+    </nav>
+  </footer>
+</body>
+</html>

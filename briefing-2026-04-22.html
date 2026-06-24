@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<!--
+  ============================================================================
+  Malaniru - Research article page (branded HTML)
+  Built by: Web (Morgan Shaw) - Date: 2026-06-23
+  Project:  Malaniru_Marketing_Site
+  Source:   Website/src/content/research/20260422-daily-intelligence-briefing.md
+  Purpose:  Standalone public article page for a daily intelligence briefing,
+            linked from philanthropy-ai-research.html.
+  STATUS:   Public marketing page. robots noindex pre-launch (mirrors template).
+            Calendly CTA hidden via CSS (per Principal, as in template).
+  FIDELITY: Article body rendered VERBATIM from the approved markdown. No copy
+            edits, no reordered sections, no changed figures or heading levels.
+  FLAGS:    none.
+  TECH:     Single self-contained HTML5 file. Embedded CSS. No JavaScript.
+            Template-matched (philanthropy-ai-adoption.html). WCAG AA. Mobile-first.
+  ============================================================================
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daily Intelligence Briefing — Wednesday, April 22, 2026 - Malaniru</title>
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="Anthropic&#x27;s Claude Code pricing experiment becomes the second opaque vendor change in two weeks; Google Cloud Next 2026 opens with agentic-cloud keynote; Q1 2026 venture capital hits $297B–$331B with ~80% to AI.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --navy:#0F1A2E;--navy-mid:#2A3F63;--copper:#C07830;--gold:#D4A853;
+      --off-white:#F4F1EC;--light-gray:#E8E6E1;--mid-gray:#8A8A96;--dark-text:#1C1C1C;
+      --font:"Inter","Helvetica Neue",Arial,sans-serif;
+    }
+    *{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:var(--font);background:var(--off-white);color:var(--dark-text);line-height:1.65;font-size:16px;-webkit-font-smoothing:antialiased;}
+    .skip-link{position:absolute;left:-999px;top:0;background:var(--gold);color:var(--navy);padding:10px 16px;font-weight:700;z-index:10;}
+    .skip-link:focus{left:8px;top:8px;}
+    a{color:var(--copper);}
+    /* Header */
+    header{background: linear-gradient(160deg, rgba(15,26,46,0.72) 0%, rgba(10,18,33,0.82) 100%), url('StockCake-Cosmic_Web_Complexity-1361288-standard-rot90ccw.jpg'); background-size: auto, 100% 100%; background-repeat: no-repeat, no-repeat; background-position: center, center;color:var(--off-white);padding:48px 24px 52px;position:relative;overflow:hidden;}
+    header::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 85% 12%,rgba(192,120,48,0.20) 0%,rgba(15,26,46,0) 55%);pointer-events:none;}
+    .header-inner{max-width:760px;margin:0 auto;position:relative;z-index:1;}
+    .wordmark{font-weight:800;font-size:1.25rem;letter-spacing:0.02em;margin-bottom:30px;}
+    .wordmark .dot{color:var(--copper);}
+    .wordmark a{color:var(--off-white);text-decoration:none;transition:opacity .18s ease;}
+    .wordmark a:hover,.wordmark a:focus-visible{opacity:.85;outline:none;}
+    .eyebrow{display:inline-block;font-size:0.72rem;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;}
+    header h1{font-weight:800;font-size:clamp(1.8rem,4.6vw,2.6rem);line-height:1.14;letter-spacing:-0.01em;margin-bottom:16px;}
+    .byline{font-size:0.9rem;color:var(--light-gray);letter-spacing:0.01em;}
+    .byline .sep{color:var(--copper);margin:0 8px;}
+    .lede{font-size:1.08rem;color:var(--light-gray);max-width:66ch;margin-top:18px;}
+    .backlink{display:inline-block;margin-top:26px;color:var(--gold);font-weight:600;font-size:0.9rem;text-decoration:none;border-bottom:1px solid rgba(212,168,83,0.4);}
+    .backlink:hover,.backlink:focus-visible{border-bottom-color:var(--gold);outline:none;}
+    /* Article */
+    main{max-width:760px;margin:0 auto;padding:48px 24px 8px;}
+    .disclaimer{background:#fff;border:1px solid var(--light-gray);border-left:4px solid var(--copper);border-radius:8px;padding:14px 18px;font-size:0.9rem;color:var(--navy-mid);margin-bottom:34px;}
+    article{font-size:1.05rem;}
+    article h2{font-weight:800;font-size:1.5rem;color:var(--navy);line-height:1.22;letter-spacing:-0.01em;margin:42px 0 14px;}
+    article h3{font-weight:700;font-size:1.18rem;color:var(--navy-mid);line-height:1.25;margin:30px 0 10px;}
+    article h2 + p, article h3 + p{margin-top:0;}
+    article p{margin:0 0 18px;color:var(--dark-text);}
+    article ul,article ol{margin:0 0 18px;padding-left:24px;}
+    article li{margin-bottom:8px;}
+    article strong{font-weight:700;color:var(--navy);}
+    article em{font-style:italic;}
+    article a{color:var(--copper);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(192,120,48,0.35);transition:border-color .18s ease;}
+    article a:hover,article a:focus-visible{border-bottom-color:var(--copper);outline:none;}
+    article hr{border:none;border-top:1px solid var(--light-gray);margin:34px 0;}
+    article h2#sources, article h2#references{border-top:1px solid var(--light-gray);padding-top:30px;font-size:1.2rem;color:var(--navy-mid);}
+    /* sources list smaller */
+    article h2[id^="sources"] ~ ul li, article h3[id^="sources"] ~ ul li{font-size:0.95rem;color:var(--navy-mid);}
+    /* tables */
+    article table{width:100%;border-collapse:collapse;margin:0 0 24px;font-size:0.95rem;}
+    article th,article td{border:1px solid var(--light-gray);padding:9px 12px;text-align:left;vertical-align:top;}
+    article thead th{background:var(--navy);color:var(--off-white);font-weight:700;}
+    article tbody tr:nth-child(even){background:#fff;}
+    article .table-wrap{overflow-x:auto;margin:0 0 24px;}
+    article .table-wrap table{margin:0;}
+    /* CTA */
+    .cta-band{background:var(--navy);color:var(--off-white);border-radius:12px;padding:42px 32px;text-align:center;margin:48px 0 8px;}
+    .cta-band h2{font-weight:800;font-size:clamp(1.4rem,3.4vw,1.9rem);margin-bottom:12px;letter-spacing:-0.01em;color:var(--off-white);}
+    .cta-band p{color:var(--light-gray);max-width:52ch;margin:0 auto 24px;}
+    .cta-band .btn{display:inline-block;background:var(--copper);color:#fff;font-weight:700;padding:13px 28px;border-radius:8px;text-decoration:none;transition:background .18s ease;}
+    .cta-band .btn:hover,.cta-band .btn:focus-visible{background:var(--gold);color:var(--navy);outline:none;}
+    /* Footer */
+    footer{max-width:760px;margin:16px auto 0;padding:24px;font-size:0.82rem;color:var(--mid-gray);border-top:1px solid var(--light-gray);}
+    footer p+p{margin-top:6px;}
+    footer a{color:var(--mid-gray);text-decoration:underline;}
+    @media (prefers-reduced-motion:reduce){*{transition:none!important;}}
+
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header>
+    <div class="header-inner">
+      <div class="wordmark"><a href="index.html">Malaniru<span class="dot">.</span></a></div>
+      <span class="eyebrow">AI Enablement &middot; Daily Intelligence Briefing</span>
+      <h1>Daily Intelligence Briefing — Wednesday, April 22, 2026</h1>
+      <p class="byline">By Marco Harris<span class="sep">&middot;</span>April 22, 2026</p>
+      <p class="lede">Anthropic&#x27;s Claude Code pricing experiment becomes the second opaque vendor change in two weeks; Google Cloud Next 2026 opens with agentic-cloud keynote; Q1 2026 venture capital hits $297B–$331B with ~80% to AI.</p>
+      <a class="backlink" href="daily-intelligence-briefings.html">&larr; All daily intelligence briefings</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <article>
+      <h2 id="executive-summary">Executive Summary</h2>
+      <p>Two developments dominate today. First, Anthropic spent the last 24 hours inside a Claude Code pricing controversy: on April 21 the public pricing and docs pages were quietly changed to remove Claude Code from the $20/month Pro tier and restrict it to Max (starting at $100/month); by April 22 head-of-growth Amol Avasare said the change was a "small test on ~2% of new prosumer signups" with "existing Pro and Max subscribers not affected," and the pricing page has been partially reverted. Second, Google Cloud Next 2026 opened this morning at Mandalay Bay with Thomas Kurian's "agentic cloud" keynote; TPU v7 Ironwood, Gemini 3.2, Agentspace, and the Agent2Agent Protocol are the announced focus. Separately, Crunchbase, TechCrunch, and KPMG published Q1 2026 venture data showing $297–331B in quarterly VC deployment with roughly 80% going to AI — the largest quarter on record, and a concentration story worth raising with clients. The Anthropic–Amazon $25B/$100B deal from Monday continues to reverberate, joined now by renewed coverage of the Anthropic–Alphabet–Broadcom TPU deal (3.5 GW capacity starting 2027) and Anthropic's disclosed $30B run-rate revenue.</p>
+      <hr>
+      <h2 id="1-ai-market-trends">1. AI Market Trends</h2>
+      <p><strong>Anthropic Claude Code pricing experiment — the communication, not the price, is the story.</strong> On April 21, Anthropic changed its public pricing page and Claude Code support documentation to show Claude Code as exclusive to the Max plan ($100/month) rather than available in Pro ($20/month). No press release, no changelog entry, no user email. Developer reaction was sharp — Simon Willison, The Register, Wheresyoured.at, and The New Stack all covered it within 24 hours. By April 22, Anthropic's head of growth Amol Avasare posted publicly that the change was "a small test on approximately 2% of new prosumer signups" and "existing Pro and Max subscribers aren't affected," and the pricing page has been partially reverted.</p>
+      <p>For client-facing posture this is the second material "opaque change" event from Anthropic in two weeks (the first being the effort-reduction parameter narrative from April 13–19). The price point itself is not the concern — the pattern of shipping significant changes without notifying existing users is. For any organization whose governance framework cites "vendor-side unannounced changes" as a risk, today's event is a second data point, not a one-off.</p>
+      <p><strong>Google Cloud Next 2026 opens today in Las Vegas — agentic cloud as theme.</strong> The conference runs April 22–24 at Mandalay Bay. Thomas Kurian's keynote started at 9 AM PT this morning. Expected — and in the case of Ironwood, already-announced — releases: TPU v7 "Ironwood" as the inference-era chip (Google confirms "first Google TPU for the age of inference," ~2× power efficiency over prior generation), Gemini 3.2 (contextual window expansion is the market-anticipated headline), Agentspace deployment demos, and Agent2Agent Protocol updates.</p>
+      <p><strong>Anthropic–Alphabet–Broadcom expanded TPU deal — 3.5 GW starting 2027.</strong> Bloomberg, CNBC, and TechCrunch confirmed in early April that Broadcom agreed to produce future generations of Google TPU chips and that Anthropic will use multiple gigawatts — specifically 3.5 GW — of next-generation TPUs starting in 2027. The Motley Fool ran renewed coverage today (April 22) reframing the deal alongside Monday's Amazon announcement. The combined Amazon + Alphabet + Broadcom compute footprint is the underlying story. Bloomberg also reported Anthropic run-rate revenue has surpassed $30B, up from ~$9B at end of 2025, and that 1,000+ customers now spend &gt;$1M/year on Anthropic (doubled in under two months).</p>
+      <p><strong>Q1 2026 venture capital closes at record $297–331B, roughly 80% to AI.</strong> Crunchbase reports $300B deployed into ~6,000 global startups in Q1 2026 — up over 150% quarter-over-quarter and year-over-year. KPMG's Venture Pulse reports a comparable $330.9B figure, up from $128.6B in Q4 2025. TechCrunch reports AI absorbed 80% of that quarter's funding — ~$242B. Four of the five largest venture rounds ever recorded closed in Q1 2026: OpenAI $122B, Anthropic $30B, xAI $20B, Waymo $16B — collectively $188B, or 65% of the quarter. Concentration is the story: four companies pulled 65% of global venture capital in a single quarter.</p>
+      <p><strong>Cursor raising $2B at &gt;$50B valuation.</strong> CNBC, Bloomberg, and TechCrunch confirmed on April 17–19 that Cursor is in active talks for a $2B round led by Andreessen Horowitz and Thrive, with Nvidia and Battery Ventures participating. Cursor's prior post-money valuation was $29.3B six months ago; the round has not formally closed as of April 22. Cursor is reported at &gt;$1B annualized revenue now, projecting $6B run-rate by year-end 2026.</p>
+      <p><strong>What This Means for You.</strong> Three implications.</p>
+      <p>For your AI implementation policies, the Anthropic Claude Code pricing experiment is the new pointer: policy language about "vendor unannounced changes" now has its second event in a fortnight. Implementation policy templates should include a named line item — "vendor pricing-tier changes, including experimental changes that may revert" — alongside the existing parameter-change clause. This is a Claude-specific pattern in 2026 and should be documented as such.</p>
+      <p>For team training, Google Cloud Next is the week's live curriculum event. If Gemini 3.2 ships with meaningfully expanded context, any training module on multi-model workflow triage needs a refresh within 60 days. No team should be given training content that positions Gemini as a "future" consideration — it is already in enterprise production.</p>
+      <p>For compliance posture, the Q1 VC concentration data sharpens the vendor-risk talking point. AI governance materials should name, explicitly, that 80% of Q1 global venture went to AI and 65% went to four companies. This is not a hype point — it is the underlying capital structure organizations are indirectly exposed to through their tech stacks.</p>
+      <hr>
+      <h2 id="2-top-10-ai-agents-three-lenses">2. Top 10 AI Agents — Three Lenses</h2>
+      <p>Rankings as of Wednesday, April 22, 2026. Movement noted relative to Tuesday, April 21.</p>
+      <h3 id="2a-relevance-for-claude-mcp-centered-work">2a. Relevance for Claude / MCP-Centered Work</h3>
+      <div class="table-wrap"><table>
+      <thead>
+      <tr>
+      <th>#</th>
+      <th>Agent</th>
+      <th>Why it ranks here</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>1</td>
+      <td>Claude Cowork (Opus 4.7)</td>
+      <td>Unchanged. Core Claude delivery surface. Today's pricing experiment does not affect Cowork; noted for monitoring.</td>
+      </tr>
+      <tr>
+      <td>2</td>
+      <td>Claude Code (Opus 4.7)</td>
+      <td>Unchanged rank, flagged. Subject of today's Pro-tier pricing experiment — watch closely through 30-day window.</td>
+      </tr>
+      <tr>
+      <td>3</td>
+      <td>Claude Design (Labs preview)</td>
+      <td>Unchanged. Still pending Compliance persona review on Labs-product terms.</td>
+      </tr>
+      <tr>
+      <td>4</td>
+      <td>Claude for Word</td>
+      <td>Unchanged.</td>
+      </tr>
+      <tr>
+      <td>5</td>
+      <td>Claude Managed Agents</td>
+      <td>Unchanged. Enterprise beta.</td>
+      </tr>
+      <tr>
+      <td>6</td>
+      <td>Claude Mythos Preview (Project Glasswing)</td>
+      <td>Unchanged. News cycle has cooled relative to Monday but remains material for Compliance case work.</td>
+      </tr>
+      <tr>
+      <td>7</td>
+      <td>Moody's Agentic Solutions (in Claude)</td>
+      <td>Unchanged.</td>
+      </tr>
+      <tr>
+      <td>8</td>
+      <td>Lucidworks MCP Server</td>
+      <td>Unchanged. AAIF Platinum-member momentum continues to lift the MCP-native tool tier.</td>
+      </tr>
+      <tr>
+      <td>9</td>
+      <td>Cursor Agent (Opus 4.7)</td>
+      <td>Unchanged rank, context. Funding round at $50B reframes Cursor as a platform, not a tool. Relevance for organizations adopting Claude rises modestly.</td>
+      </tr>
+      <tr>
+      <td>10</td>
+      <td>Salesforce Agentforce Vibes 2.0 (Headless 360)</td>
+      <td>Unchanged.</td>
+      </tr>
+      </tbody>
+      </table></div>
+      <p>No movement on the Claude/MCP relevance lens today. Today's events are signal changes, not rank changes — the Claude Code pricing event does not demote the tool; it sharpens the governance conversation around it.</p>
+      <h3 id="2b-market-momentum-adoption-funding-developer-buzz">2b. Market Momentum (adoption, funding, developer buzz)</h3>
+      <div class="table-wrap"><table>
+      <thead>
+      <tr>
+      <th>#</th>
+      <th>Agent</th>
+      <th>Why it ranks here</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>1</td>
+      <td>Claude Opus 4.7</td>
+      <td>Unchanged. Amazon $25B/$100B deal + Broadcom/Alphabet 3.5 GW deal + $30B run-rate disclosure keep Anthropic at top of the momentum cycle. The Claude Code pricing controversy is negative coverage but does not displace the capital story.</td>
+      </tr>
+      <tr>
+      <td>2</td>
+      <td>Gemini 3 / Gemini 3.2 (Google Cloud Next 2026)</td>
+      <td>Up seven to #2. Google Cloud Next opens today with agentic cloud as theme; TPU v7 Ironwood production and Gemini 3.2 headline. ~30,000 attendees.</td>
+      </tr>
+      <tr>
+      <td>3</td>
+      <td>Nvidia Agent Toolkit / Nemotron</td>
+      <td>Down one. Displaced from #2 by the Google Cloud Next cycle, not by any capability change.</td>
+      </tr>
+      <tr>
+      <td>4</td>
+      <td>Salesforce Headless 360 + Agentforce Vibes 2.0</td>
+      <td>Down one. Coverage cooling post-TDX.</td>
+      </tr>
+      <tr>
+      <td>5</td>
+      <td>Cloudflare Agents (Dynamic Workers, Mesh, Agent Memory, Unweight)</td>
+      <td>Unchanged.</td>
+      </tr>
+      <tr>
+      <td>6</td>
+      <td>OpenAI Agents SDK + Codex app</td>
+      <td>Down one.</td>
+      </tr>
+      <tr>
+      <td>7</td>
+      <td>Cursor Agent (Opus 4.7)</td>
+      <td>NEW at #7. $2B round at &gt;$50B valuation is the week's second-largest capital event after Amazon–Anthropic. Not yet closed.</td>
+      </tr>
+      <tr>
+      <td>8</td>
+      <td>Adobe CX Enterprise (April 20, Adobe Summit)</td>
+      <td>NEW at #8. Agentic CX platform, MCP endpoints exposed, partner list includes AWS/Anthropic/Google/IBM/Microsoft/NVIDIA/OpenAI. Day-one omnibus.</td>
+      </tr>
+      <tr>
+      <td>9</td>
+      <td>Databricks Unity AI Gateway</td>
+      <td>Down two.</td>
+      </tr>
+      <tr>
+      <td>10</td>
+      <td>Microsoft Agent Framework 1.0 (GA)</td>
+      <td>Down two.</td>
+      </tr>
+      </tbody>
+      </table></div>
+      <h3 id="2c-capability-maturity-production-readiness-reliability-tool-use">2c. Capability &amp; Maturity (production readiness, reliability, tool use)</h3>
+      <div class="table-wrap"><table>
+      <thead>
+      <tr>
+      <th>#</th>
+      <th>Agent</th>
+      <th>Why it ranks here</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>1</td>
+      <td>Claude Opus 4.7</td>
+      <td>Unchanged. Benchmarks self-reported, previously cited.</td>
+      </tr>
+      <tr>
+      <td>2</td>
+      <td>Claude Sonnet 4.6</td>
+      <td>Unchanged.</td>
+      </tr>
+      <tr>
+      <td>3</td>
+      <td>Claude Cowork (GA, Opus 4.7)</td>
+      <td>Unchanged.</td>
+      </tr>
+      <tr>
+      <td>4</td>
+      <td>Gemini 3 (and presumptive 3.2)</td>
+      <td>Up to #4. Primary public-benchmark leadership reported by third-party aggregators: SWE-bench Verified 78.8%, GPQA Diamond 94.3%, ARC-AGI-2 77.1% per BuildFastWithAI April 2026 compilation.</td>
+      </tr>
+      <tr>
+      <td>5</td>
+      <td>Claude Mythos Preview</td>
+      <td>Unchanged. Leaderboard-only / Project Glasswing-only surface.</td>
+      </tr>
+      <tr>
+      <td>6</td>
+      <td>Claude Code + /ultrareview</td>
+      <td>Unchanged.</td>
+      </tr>
+      <tr>
+      <td>7</td>
+      <td>Microsoft Agent Framework 1.0</td>
+      <td>Unchanged. 1.0 GA label is vendor framing; production maturity needs independent attestation over 30–60 days.</td>
+      </tr>
+      <tr>
+      <td>8</td>
+      <td>Claude Design (Labs preview)</td>
+      <td>Unchanged. Still Labs-gated.</td>
+      </tr>
+      <tr>
+      <td>9</td>
+      <td>Claude for Word</td>
+      <td>Unchanged.</td>
+      </tr>
+      <tr>
+      <td>10</td>
+      <td>OpenAI Agents SDK (sandboxed runtime)</td>
+      <td>Unchanged.</td>
+      </tr>
+      </tbody>
+      </table></div>
+      <h3 id="divergence-analysis">Divergence Analysis</h3>
+      <p>Two divergences worth flagging today.</p>
+      <p><strong>First, Gemini re-enters the Capability top 5 while Anthropic absorbs negative coverage.</strong> For most of Q1 the Capability conversation was effectively "Claude vs. Claude." Today's aggregator data places Gemini 3.x at the top of SWE-bench Verified, GPQA Diamond, and ARC-AGI-2. Separately, the Claude Code pricing story is the second consecutive week of negative Anthropic coverage. These are not causally connected, but they are occurring in the same news window. The posture is unchanged — Claude remains the delivery surface — but any policy or training document that was written as "Claude is the uncontested leader" should be softened to "Claude leads in the integrated-workflow tier; Gemini leads on specific public benchmarks; both results track within weeks."</p>
+      <p><strong>Second, capital is concentrating in the frontier-lab tier while news cycle is diffusing across platforms.</strong> The Q1 VC data puts 65% of global venture into four companies. Meanwhile today's news spans Google, Salesforce, Adobe, Databricks, Microsoft, Cursor, Anthropic — seven platforms. The divergence is that capital is concentrating upstream while developer-productivity momentum is diffusing downstream. This is the structural story I would brief a foundation board on this quarter.</p>
+      <hr>
+      <h2 id="3-agentic-ai-advances-new-releases">3. Agentic AI Advances &amp; New Releases</h2>
+      <p><strong>Adobe CX Enterprise (April 20, Adobe Summit).</strong> End-to-end agentic system for customer experience orchestration. Combines AI agents, agent skills, and MCP endpoints with Adobe Brand Intelligence (brand-signal reasoning engine) and Adobe Engagement Intelligence (decisioning engine). CX Enterprise Coworker — a cross-tool orchestrator that builds plans, executes campaigns, monitors against goals — ships "in the coming months." Partner list: AWS, Anthropic, Google Cloud, IBM, Microsoft, NVIDIA, OpenAI.</p>
+      <p><strong>Google Cloud Next 2026 opens today — keynote announcements pending primary-source reconciliation.</strong> Expected themes per pre-event coverage, to be reconciled tomorrow: TPU v7 Ironwood capacity expansion, Gemini 3.2 release, Agentspace deployment demos, Agent2Agent Protocol updates, Gemini Enterprise release-note cadence.</p>
+      <p><strong>MCP scale milestone — 97M monthly SDK downloads.</strong> MCP SDK downloads reached 97M/month by March 2026, up from 2M at launch in November 2024 — equivalent-scale adoption to React in 16 months vs. React's three years. Active MCP servers: ~10,000.</p>
+      <p><strong>MCP STDIO vulnerability disclosure — Anthropic response stands.</strong> Security researchers disclosed (April 16) a "critical, systemic" vulnerability in MCP allowing arbitrary command execution on vulnerable systems. Anthropic's public response: the STDIO execution model represents a secure default; sanitization is the developer's responsibility; the protocol will not be modified.</p>
+      <p><strong>Microsoft MAI-Image-2-Efficient.</strong> Lower-cost, faster image model positioned against Microsoft's prior MAI-Image line.</p>
+      <hr>
+      <h2 id="4-overnight-release-monitor">4. Overnight Release Monitor</h2>
+      <p>Since the Tuesday (April 21) briefing:</p>
+      <ul>
+      <li><strong>April 21 (late) — Anthropic Claude Code pricing-page and docs changed</strong>, moving Claude Code into Max-only; reverted in part by April 22 after developer backlash. Head of growth publicly framed as a 2%-of-new-signups experiment.</li>
+      <li><strong>April 21 — zMaticoo MCP implementation launched</strong> (PR Newswire release). Narrow commercial-data MCP server; low relevance for Claude/MCP work.</li>
+      <li><strong>April 22 (morning) — Google Cloud Next 2026 keynote (Thomas Kurian, 9 AM PT).</strong> Announcements in live publication cycle; reconcile tomorrow.</li>
+      <li><strong>April 22 — The Motley Fool renewed coverage</strong> of the Anthropic–Alphabet–Broadcom compute deal, pairing with Monday's Amazon–Anthropic announcement. No new primary disclosures.</li>
+      <li><strong>April 22 — No other primary-source frontier-lab release identified</strong> between the Monday coverage wave and this briefing publish window, outside the Claude Code pricing story and Google Cloud Next opening.</li>
+      </ul>
+      <hr>
+      <h2 id="sources">Sources</h2>
+      <ul>
+      <li>The Register, "Anthropic tests reaction to yanking Claude Code from Pro," April 22, 2026.</li>
+      <li>Simon Willison, "Is Claude Code going to cost $100/month? Probably not—it's all very confusing," April 22, 2026.</li>
+      <li>Wheresyoured.at, "[UPDATED] News: Anthropic (Briefly) Removes Claude Code From $20-A-Month 'Pro' Subscription Plan For New Users," April 2026.</li>
+      <li>The New Stack, "Anthropic is thinking about removing Claude Code from its cheapest plan," April 2026.</li>
+      <li>BizTech Magazine, "Google Cloud Next 2026: What To Expect With Agentic AI as a Major Theme," April 2026.</li>
+      <li>SiliconANGLE, "Google Cloud Next 2026 preview: The real story isn't AI — it's the control plane," April 20, 2026.</li>
+      <li>Google Cloud Blog, "Ironwood: The first Google TPU for the age of inference."</li>
+      <li>Adobe News, "Adobe Redefines Customer Experience Orchestration Vision in the Agentic AI Era with Introduction of CX Enterprise," April 20, 2026.</li>
+      <li>Diginomica, "Adobe Summit 2026 - Adobe gives CX an agentic makeover with the launch of CX Enterprise," April 2026.</li>
+      <li>MarTech, "Adobe rebrands Experience Cloud as 'CX Enterprise,' goes all-in on AI agents," April 2026.</li>
+      <li>CNBC, "Broadcom agrees to expanded chip deals with Google, Anthropic," April 6, 2026.</li>
+      <li>Bloomberg, "Anthropic Tops $30 Billion Run Rate, Seals Broadcom Deal," April 6, 2026.</li>
+      <li>TechCrunch, "Anthropic ups compute deal with Google and Broadcom amid skyrocketing demand," April 7, 2026.</li>
+      <li>The Motley Fool, "Anthropic Just Announced Huge News for Alphabet and Broadcom," April 22, 2026.</li>
+      <li>Crunchbase News, "Q1 2026 Shatters Venture Funding Records," April 2026.</li>
+      <li>KPMG Private Enterprise, "Global VC investment surges to record $330.9 billion in Q1'26," April 2026.</li>
+      <li>TechCrunch, "Startup funding shatters all records in Q1," April 1, 2026.</li>
+      <li>CNBC, "AI startup Cursor in talks to raise $2 billion funding round at valuation of over $50 billion," April 19, 2026.</li>
+      <li>Bloomberg, "Cursor In Talks to Raise $2 Billion at Over $50 Billion Value," April 17, 2026.</li>
+      <li>TechCrunch, "Sources: Cursor in talks to raise $2B+ at $50B valuation as enterprise growth surges," April 17, 2026.</li>
+      <li>The New Stack, "MCP's biggest growing pains for production use will soon be solved," 2026.</li>
+      <li>Model Context Protocol Blog, "The 2026 MCP Roadmap," 2026.</li>
+      <li>Infosecurity Magazine, "Systemic Flaw in MCP Protocol Could Expose 150 Million Downloads," April 2026.</li>
+      <li>BuildFastWithAI, "Best AI Models April 2026: Ranked by Benchmarks," April 2026.</li>
+      <li>VentureBeat, "Microsoft launches MAI-Image-2-Efficient," April 2026.</li>
+      </ul>
+    </article>
+
+    <section class="cta-band" id="contact" aria-labelledby="cta-heading">
+      <h2 id="cta-heading">From AI curiosity to AI capability</h2>
+      <p>This briefing is part of the field research behind our AI Enablement service &mdash; a curated, white-glove Claude Cowork implementation tailored to your organization&rsquo;s workflow.</p>
+      <a class="btn" href="https://calendly.com/mark-malaniru/30min" target="_blank" rel="noopener">Book a discovery call</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Malaniru Inc, LLC &middot; Lafayette, Colorado &middot; AI Enablement</p>
+    <p><a href="daily-intelligence-briefings.html">&larr; Back to Daily Intelligence Briefings</a> &middot; <a href="index.html">AI Enablement</a></p>
+      <nav class="mal-footernav" data-mal-footernav aria-label="Site" style="margin-top:0.7rem;font-size:0.82rem;line-height:1.9;">
+      <a href="about.html" style="color:#C07830;font-weight:700;text-decoration:none;">About</a> &middot;
+      <a href="pricing.html" style="color:#C07830;font-weight:700;text-decoration:none;">Pricing</a> &middot;
+      <a href="index.html" style="color:#C07830;font-weight:700;text-decoration:none;">AI Enablement</a>
+    </nav>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<!--
+  ============================================================================
+  Malaniru - Research article page (branded HTML)
+  Built by: Web (Morgan Shaw) - Date: 2026-06-23
+  Project:  Malaniru_Marketing_Site
+  Source:   Website/src/content/research/20260426-daily-intelligence-briefing.md
+  Purpose:  Standalone public article page for a daily intelligence briefing,
+            linked from philanthropy-ai-research.html.
+  STATUS:   Public marketing page. robots noindex pre-launch (mirrors template).
+            Calendly CTA hidden via CSS (per Principal, as in template).
+  FIDELITY: Article body rendered VERBATIM from the approved markdown. No copy
+            edits, no reordered sections, no changed figures or heading levels.
+  FLAGS:    none.
+  TECH:     Single self-contained HTML5 file. Embedded CSS. No JavaScript.
+            Template-matched (philanthropy-ai-adoption.html). WCAG AA. Mobile-first.
+  ============================================================================
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daily Intelligence Briefing — Sunday, April 26, 2026 - Malaniru</title>
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="Sunday agentic AI briefing: OpenAI Sora retired today, DeepSeek V4 specs firm up at 1.6T parameters with 1M context, Microsoft&#x27;s open-source Agent Governance Toolkit closes the OWASP gap, and Adobe ships an MCP-native enterprise CX platform.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --navy:#0F1A2E;--navy-mid:#2A3F63;--copper:#C07830;--gold:#D4A853;
+      --off-white:#F4F1EC;--light-gray:#E8E6E1;--mid-gray:#8A8A96;--dark-text:#1C1C1C;
+      --font:"Inter","Helvetica Neue",Arial,sans-serif;
+    }
+    *{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:var(--font);background:var(--off-white);color:var(--dark-text);line-height:1.65;font-size:16px;-webkit-font-smoothing:antialiased;}
+    .skip-link{position:absolute;left:-999px;top:0;background:var(--gold);color:var(--navy);padding:10px 16px;font-weight:700;z-index:10;}
+    .skip-link:focus{left:8px;top:8px;}
+    a{color:var(--copper);}
+    /* Header */
+    header{background: linear-gradient(160deg, rgba(15,26,46,0.72) 0%, rgba(10,18,33,0.82) 100%), url('StockCake-Cosmic_Web_Complexity-1361288-standard-rot90ccw.jpg'); background-size: auto, 100% 100%; background-repeat: no-repeat, no-repeat; background-position: center, center;color:var(--off-white);padding:48px 24px 52px;position:relative;overflow:hidden;}
+    header::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 85% 12%,rgba(192,120,48,0.20) 0%,rgba(15,26,46,0) 55%);pointer-events:none;}
+    .header-inner{max-width:760px;margin:0 auto;position:relative;z-index:1;}
+    .wordmark{font-weight:800;font-size:1.25rem;letter-spacing:0.02em;margin-bottom:30px;}
+    .wordmark .dot{color:var(--copper);}
+    .wordmark a{color:var(--off-white);text-decoration:none;transition:opacity .18s ease;}
+    .wordmark a:hover,.wordmark a:focus-visible{opacity:.85;outline:none;}
+    .eyebrow{display:inline-block;font-size:0.72rem;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;}
+    header h1{font-weight:800;font-size:clamp(1.8rem,4.6vw,2.6rem);line-height:1.14;letter-spacing:-0.01em;margin-bottom:16px;}
+    .byline{font-size:0.9rem;color:var(--light-gray);letter-spacing:0.01em;}
+    .byline .sep{color:var(--copper);margin:0 8px;}
+    .lede{font-size:1.08rem;color:var(--light-gray);max-width:66ch;margin-top:18px;}
+    .backlink{display:inline-block;margin-top:26px;color:var(--gold);font-weight:600;font-size:0.9rem;text-decoration:none;border-bottom:1px solid rgba(212,168,83,0.4);}
+    .backlink:hover,.backlink:focus-visible{border-bottom-color:var(--gold);outline:none;}
+    /* Article */
+    main{max-width:760px;margin:0 auto;padding:48px 24px 8px;}
+    .disclaimer{background:#fff;border:1px solid var(--light-gray);border-left:4px solid var(--copper);border-radius:8px;padding:14px 18px;font-size:0.9rem;color:var(--navy-mid);margin-bottom:34px;}
+    article{font-size:1.05rem;}
+    article h2{font-weight:800;font-size:1.5rem;color:var(--navy);line-height:1.22;letter-spacing:-0.01em;margin:42px 0 14px;}
+    article h3{font-weight:700;font-size:1.18rem;color:var(--navy-mid);line-height:1.25;margin:30px 0 10px;}
+    article h2 + p, article h3 + p{margin-top:0;}
+    article p{margin:0 0 18px;color:var(--dark-text);}
+    article ul,article ol{margin:0 0 18px;padding-left:24px;}
+    article li{margin-bottom:8px;}
+    article strong{font-weight:700;color:var(--navy);}
+    article em{font-style:italic;}
+    article a{color:var(--copper);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(192,120,48,0.35);transition:border-color .18s ease;}
+    article a:hover,article a:focus-visible{border-bottom-color:var(--copper);outline:none;}
+    article hr{border:none;border-top:1px solid var(--light-gray);margin:34px 0;}
+    article h2#sources, article h2#references{border-top:1px solid var(--light-gray);padding-top:30px;font-size:1.2rem;color:var(--navy-mid);}
+    /* sources list smaller */
+    article h2[id^="sources"] ~ ul li, article h3[id^="sources"] ~ ul li{font-size:0.95rem;color:var(--navy-mid);}
+    /* tables */
+    article table{width:100%;border-collapse:collapse;margin:0 0 24px;font-size:0.95rem;}
+    article th,article td{border:1px solid var(--light-gray);padding:9px 12px;text-align:left;vertical-align:top;}
+    article thead th{background:var(--navy);color:var(--off-white);font-weight:700;}
+    article tbody tr:nth-child(even){background:#fff;}
+    article .table-wrap{overflow-x:auto;margin:0 0 24px;}
+    article .table-wrap table{margin:0;}
+    /* CTA */
+    .cta-band{background:var(--navy);color:var(--off-white);border-radius:12px;padding:42px 32px;text-align:center;margin:48px 0 8px;}
+    .cta-band h2{font-weight:800;font-size:clamp(1.4rem,3.4vw,1.9rem);margin-bottom:12px;letter-spacing:-0.01em;color:var(--off-white);}
+    .cta-band p{color:var(--light-gray);max-width:52ch;margin:0 auto 24px;}
+    .cta-band .btn{display:inline-block;background:var(--copper);color:#fff;font-weight:700;padding:13px 28px;border-radius:8px;text-decoration:none;transition:background .18s ease;}
+    .cta-band .btn:hover,.cta-band .btn:focus-visible{background:var(--gold);color:var(--navy);outline:none;}
+    /* Footer */
+    footer{max-width:760px;margin:16px auto 0;padding:24px;font-size:0.82rem;color:var(--mid-gray);border-top:1px solid var(--light-gray);}
+    footer p+p{margin-top:6px;}
+    footer a{color:var(--mid-gray);text-decoration:underline;}
+    @media (prefers-reduced-motion:reduce){*{transition:none!important;}}
+
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header>
+    <div class="header-inner">
+      <div class="wordmark"><a href="index.html">Malaniru<span class="dot">.</span></a></div>
+      <span class="eyebrow">AI Enablement &middot; Daily Intelligence Briefing</span>
+      <h1>Daily Intelligence Briefing — Sunday, April 26, 2026</h1>
+      <p class="byline">By Marco Harris<span class="sep">&middot;</span>April 26, 2026</p>
+      <p class="lede">Sunday agentic AI briefing: OpenAI Sora retired today, DeepSeek V4 specs firm up at 1.6T parameters with 1M context, Microsoft&#x27;s open-source Agent Governance Toolkit closes the OWASP gap, and Adobe ships an MCP-native enterprise CX platform.</p>
+      <a class="backlink" href="daily-intelligence-briefings.html">&larr; All daily intelligence briefings</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <article>
+      <p>Sunday run — four daily sections only. No weekly sections (those run Saturday).</p>
+      <p>Continuity note: prior briefing on file is Saturday, April 25, 2026. The April 25 cycle covered Google's $40B Anthropic commitment, OpenAI GPT-5.5 ship, the Anthropic Claude Code post-mortem, Microsoft Copilot Agent Mode GA, and the DeepSeek V4 preview. Today's cycle tracks the 24-hour window from that publish.</p>
+      <h2 id="executive-summary">Executive Summary</h2>
+      <p>Today is the last day of public access to OpenAI Sora: the consumer web and app are scheduled to be discontinued on April 26, 2026, with the API following on September 24 (Source: OpenAI Help Center, "What to know about the Sora discontinuation"). The shutdown closes a product that, per OpenAI and reporting from the-decoder, had been burning roughly $1M/day in compute against an estimated $2.1M lifetime in-app revenue (self-reported figures via secondary reporting). DeepSeek V4 specifications firmed up over the weekend: V4-Pro at 1.6T parameters with a 1M-token context, V4-Flash at 284B parameters, both open-weighted on Hugging Face, with vendor-claimed math/coding benchmarks rivaling GPT-5.5 and Opus 4.7 (self-reported). Microsoft's Agent Governance Toolkit (open-source, MIT-licensed, shipped April 2) is now the only open-source toolkit explicitly mapping to 10-of-10 OWASP Agentic AI risks — a Compliance-relevant reference that was off the prior cycle's radar. Adobe's CX Enterprise Coworker (announced April 20 at Adobe Summit) is architected on MCP and Agent2Agent (A2A) as open-standard primitives — the highest-profile non-vendor-lab adoption of MCP in an enterprise SaaS launch this month. No new frontier-lab model releases since the Saturday cycle.</p>
+      <h2 id="1-ai-market-trends">1. AI Market Trends</h2>
+      <p><strong>Sora discontinuation effective today.</strong> Per OpenAI's published help-center notice, Sora web and app access ends April 26, 2026; the Sora API ends September 24, 2026 (Source: OpenAI Help Center, "What to know about the Sora discontinuation"; the-decoder, "OpenAI sets two-stage Sora shutdown with app closing April 2026 and API following in September"). Secondary reporting cites three drivers: ~$1M/day compute burn, MAU decline from a peak near 1M to under 500K by the shutdown announcement (March 24), and a lifetime in-app revenue of approximately $2.1M (self-reported / secondary — independent verification unavailable on the dollar figures). Stated strategic rationale: redirect compute toward enterprise and coding products (Source: TechCrunch, "Why OpenAI really shut down Sora," March 29, 2026; futurumgroup.com, "OpenAI Sora Discontinuation: What the End of a Platform Means for Enterprise AI Strategy"). This is the first major consumer-AI product retirement of the cycle. The signal is not video — it is the willingness of a frontier lab to retire a flagship product with named compute economics. Treat it as the canonical case study for client conversations about vendor product-lifecycle risk.</p>
+      <p><strong>DeepSeek V4 — specifications firm up.</strong> Over the April 24–26 window, additional reporting confirmed the V4 architecture: V4-Pro at 1.6 trillion parameters with a 1-million-token context window, V4-Flash at 284 billion parameters, both open-weighted under the DeepSeek collection on Hugging Face (Source: Let's Data Science, "DeepSeek Launches V4 Preview With Pro and Flash"; Geeky Gadgets, "Deepseek v4 Performance Analysis"; Hugging Face, deepseek-ai/DeepSeek-V4-Pro). The DeepSeek API documentation confirms a preview release on April 24 (Source: api-docs.deepseek.com, "DeepSeek V4 Preview Release," April 24, 2026). Vendor and third-party reporting cites IMOAnswerBench at 89.8 for V4-Pro versus Claude 75.3, Gemini 81.0, and GPT-5.4 at 91.4 (Source: Analytics India Magazine; Office Chai, "DeepSeek V4-Pro &amp; V4-Flash Benchmarks Pricing") (self-reported / aggregator-derived; independent verification unavailable). Open weights at 1.6T parameters with 1M context is a structural change. The compliance-and-sovereignty conversation for foundation clients now has a credible open-source frontier alternative, not just a near-frontier one.</p>
+      <p><strong>Anthropic primary-side capital structure — second derivative.</strong> Per CNBC's April 24 reporting, Google's $10B initial Anthropic investment values the company at $350B with up to $30B more contingent on milestones, layered on Amazon's earlier $5B-now / up-to-$20B-milestone structure (Source: CNBC, "Google to invest up to $40 billion in Anthropic," April 24, 2026; Cryptopolitan, "Google commits $40 billion investment to Claude AI developer Anthropic"). Reuters/CNBC cite Anthropic's annualized revenue run-rate at $30B in April 2026, surpassing OpenAI's stated $24–25B (self-reported by both companies; independent verification unavailable). The combined $65B+ in named primary-side commitments from two hyperscalers and a $30B run-rate now rest on ten-figure subsidies; that is a different financial structure from a conventional venture-funded growth story. Setup risk language should treat dual-hyperscaler dependency as a named concentration risk and surface a cloud-substrate diversification question for organizations with multi-year deployment horizons.</p>
+      <p><strong>Adobe CX Enterprise Coworker — MCP-native enterprise SaaS.</strong> Announced at Adobe Summit on April 20, generally available "in the coming months" (Source: Adobe Press, "Adobe Unveils CX Enterprise Coworker," April 20, 2026; CX Today, "Adobe CX Enterprise Coworker: Agentic AI Meets Enterprise CX"). Adobe's announcement specifically cites Model Context Protocol (MCP) and Agent2Agent (A2A) as the open-standard primitives the architecture is built on — the most consequential non-vendor-lab adoption of MCP in a flagship enterprise launch this month. This matters for Policies and Training more than for client deployment timing. MCP went from "Anthropic-led protocol" to "Adobe production architecture" inside one month; client-facing materials that still describe MCP as emerging or vendor-specific are stale.</p>
+      <p><strong>What this means for you.</strong> For your AI implementation policies, the Sora retirement is the highest-quality recent artifact for vendor product-lifecycle language: it shows a frontier lab willing to retire a named flagship product on a 30-day notice with a defined data-deletion clock. Implementation policy templates should include a "vendor product retirement clause" requiring 90-day minimum notice and a defined data-portability / export window — Sora's actual notice is the cleanest precedent. For team training, DeepSeek V4 changes the open-source curriculum from "near-frontier alternative" to "credible frontier alternative on math and coding" — an organization with sovereignty preferences and access to GPU compute now has a real open-weight option for non-PII workloads. For compliance posture, the Adobe MCP/A2A architecture story should be the headline case in any policy that describes MCP as the integration substrate; "MCP is now used by Adobe in production CX" is more persuasive than benchmarks.</p>
+      <h2 id="2-top-10-ai-agents-three-lenses">2. Top 10 AI Agents — Three Lenses</h2>
+      <p>Rankings as of Sunday, April 26, 2026. Movement noted relative to Saturday, April 25.</p>
+      <h3 id="2a-relevance-for-claude-mcp-centered-work">2a. Relevance for Claude / MCP-Centered Work</h3>
+      <div class="table-wrap"><table>
+      <thead>
+      <tr>
+      <th>#</th>
+      <th>Agent</th>
+      <th>Why it ranks here</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>1</td>
+      <td>Claude Cowork (Opus 4.7)</td>
+      <td>Unchanged. Core delivery surface. (Source: Anthropic)</td>
+      </tr>
+      <tr>
+      <td>2</td>
+      <td>Claude Code (Opus 4.7)</td>
+      <td>Unchanged. Stabilized state per April 23 post-mortem. (Source: Anthropic engineering blog, April 23, 2026)</td>
+      </tr>
+      <tr>
+      <td>3</td>
+      <td>Claude Mythos Preview (Project Glasswing)</td>
+      <td>Unchanged. (Source: Anthropic)</td>
+      </tr>
+      <tr>
+      <td>4</td>
+      <td>Claude Design (Labs)</td>
+      <td>Unchanged. Pending Compliance review on Labs terms.</td>
+      </tr>
+      <tr>
+      <td>5</td>
+      <td>Claude for Word</td>
+      <td>Unchanged.</td>
+      </tr>
+      <tr>
+      <td>6</td>
+      <td>Claude Managed Agents</td>
+      <td>Unchanged. Hosted long-horizon agent service in enterprise beta.</td>
+      </tr>
+      <tr>
+      <td>7</td>
+      <td>Adobe CX Enterprise Coworker (MCP+A2A native)</td>
+      <td>NEW at #7. MCP-native architecture in a flagship enterprise SaaS launch — direct relevance to Claude/MCP-centered work. Watch-list item until GA timing firms up.</td>
+      </tr>
+      <tr>
+      <td>8</td>
+      <td>Moody's Agentic Solutions (in Claude)</td>
+      <td>Unchanged.</td>
+      </tr>
+      <tr>
+      <td>9</td>
+      <td>Lucidworks MCP Server</td>
+      <td>Unchanged.</td>
+      </tr>
+      <tr>
+      <td>10</td>
+      <td>Cursor Agent (Opus 4.7)</td>
+      <td>Unchanged. xAI option deal at $60B and pending $2B round add cycle volatility.</td>
+      </tr>
+      </tbody>
+      </table></div>
+      <p>Dropped from Relevance: Salesforce Agentforce (Gemini-integrated) — moved to Momentum board only.</p>
+      <h3 id="2b-market-momentum-adoption-funding-developer-buzz">2b. Market Momentum (adoption, funding, developer buzz)</h3>
+      <div class="table-wrap"><table>
+      <thead>
+      <tr>
+      <th>#</th>
+      <th>Agent</th>
+      <th>Why it ranks here</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>1</td>
+      <td>Claude Opus 4.7</td>
+      <td>Unchanged. Reinforced by Google $40B + Amazon $25B combined commitments.</td>
+      </tr>
+      <tr>
+      <td>2</td>
+      <td>OpenAI GPT-5.5 + Workspace Agents + Agents SDK</td>
+      <td>Unchanged. Self-reported coding leadership (Terminal-Bench 82.7%, SWE-Bench Pro 58.6%).</td>
+      </tr>
+      <tr>
+      <td>3</td>
+      <td>DeepSeek V4 (Pro 1.6T / Flash 284B, open weights)</td>
+      <td>Up three to #3. Spec details and Hugging Face availability firm up the open-weight frontier story. (Benchmarks self-reported.)</td>
+      </tr>
+      <tr>
+      <td>4</td>
+      <td>Microsoft Copilot Agent Mode + Agent 365 (GA May 1)</td>
+      <td>Unchanged.</td>
+      </tr>
+      <tr>
+      <td>5</td>
+      <td>Gemini Enterprise Agent Platform</td>
+      <td>Unchanged. Today's Google-AI story is the $40B Anthropic structure.</td>
+      </tr>
+      <tr>
+      <td>6</td>
+      <td>Adobe CX Enterprise Coworker</td>
+      <td>NEW at #6. Adobe Summit launch (April 20); MCP/A2A-native; GA "in the coming months."</td>
+      </tr>
+      <tr>
+      <td>7</td>
+      <td>Salesforce Agentforce (Google-integrated)</td>
+      <td>Down two.</td>
+      </tr>
+      <tr>
+      <td>8</td>
+      <td>Cloudflare Agents</td>
+      <td>Unchanged.</td>
+      </tr>
+      <tr>
+      <td>9</td>
+      <td>Cursor Agent (Opus 4.7)</td>
+      <td>Unchanged.</td>
+      </tr>
+      <tr>
+      <td>10</td>
+      <td>OpenClaw (open-source agent framework)</td>
+      <td>NEW at #10 — watch. Multiple sources report ~347K GitHub stars and a peak velocity of ~12K stars/day in April 2026 (Source: thesoogroup.com; Clawbot Blog) — figures are widely repeated in industry blogs but not yet verified against GitHub primary trending data. Flag for verification before quoting in client material.</td>
+      </tr>
+      </tbody>
+      </table></div>
+      <h3 id="2c-capability-maturity-production-readiness-reliability-tool-use">2c. Capability &amp; Maturity (production readiness, reliability, tool use)</h3>
+      <div class="table-wrap"><table>
+      <thead>
+      <tr>
+      <th>#</th>
+      <th>Agent</th>
+      <th>Why it ranks here</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>1</td>
+      <td>Claude Opus 4.7</td>
+      <td>Unchanged. SWE-bench Verified leader at 87.6% per Rapid Claw 2026 scorecard (aggregator-based).</td>
+      </tr>
+      <tr>
+      <td>2</td>
+      <td>OpenAI GPT-5.5 Pro</td>
+      <td>Unchanged. Vendor-claimed Terminal-Bench 2.0 82.7% / SWE-Bench Pro 58.6% (self-reported).</td>
+      </tr>
+      <tr>
+      <td>3</td>
+      <td>DeepSeek V4-Pro (preview)</td>
+      <td>NEW at #3. Open-weight at 1.6T params, 1M context. Vendor-claimed math/coding parity with GPT-5.4 and Opus 4.7 (self-reported). Caveat: preview, not GA.</td>
+      </tr>
+      <tr>
+      <td>4</td>
+      <td>Claude Sonnet 4.6</td>
+      <td>Down one. GAIA 74.6% per Rapid Claw scorecard (aggregator-based).</td>
+      </tr>
+      <tr>
+      <td>5</td>
+      <td>Gemini 3.1 Pro</td>
+      <td>Down one. SWE-bench Verified 80.6% — figures from prior cycle, no fresh capability disclosure today (self-reported / aggregator-based).</td>
+      </tr>
+      <tr>
+      <td>6</td>
+      <td>Claude Cowork (GA, Opus 4.7)</td>
+      <td>Unchanged.</td>
+      </tr>
+      <tr>
+      <td>7</td>
+      <td>Microsoft Copilot Agent Mode</td>
+      <td>Unchanged. GA across Word/Excel/PowerPoint April 22.</td>
+      </tr>
+      <tr>
+      <td>8</td>
+      <td>Claude Mythos Preview</td>
+      <td>Unchanged. Production-deployed in Microsoft SDL pipeline.</td>
+      </tr>
+      <tr>
+      <td>9</td>
+      <td>Claude Code + /ultrareview</td>
+      <td>Unchanged — stabilized by April 23 post-mortem.</td>
+      </tr>
+      <tr>
+      <td>10</td>
+      <td>OpenAI Agents SDK (sandboxed runtime)</td>
+      <td>Unchanged.</td>
+      </tr>
+      </tbody>
+      </table></div>
+      <h3 id="divergence-analysis">Divergence Analysis</h3>
+      <p>Three divergences this cycle.</p>
+      <p><strong>One — open-weight frontier is on the Capability board.</strong> Yesterday's Capability list had four production surfaces (Claude, Gemini, OpenAI, Microsoft). DeepSeek V4-Pro entering at #3 changes the conversation: with 1.6T parameters, 1M context, and vendor-claimed parity on math and coding, an open-weight model is now plausibly inside the top three on capability. The caveats — preview status, self-reported benchmarks, no production deployment data — matter. But the geometry of "frontier capability requires closed weights" is no longer settled.</p>
+      <p><strong>Two — Adobe drops onto two of three lenses simultaneously.</strong> CX Enterprise Coworker is the first non-Anthropic, non-Google, non-OpenAI, non-Microsoft entry to appear on both the Claude/MCP relevance lens and Market Momentum at the same time. The reason is the architecture choice (MCP + A2A), not the buyer count or the GA date. Track for the next 60 days; if Adobe ships GA on schedule with the open-standard primitives intact, it is the strongest evidence to date that MCP is moving from protocol to platform.</p>
+      <p><strong>Three — OpenClaw on the Momentum board with a verification asterisk.</strong> Multiple industry-blog sources cite OpenClaw as the fastest-growing AI agent framework on GitHub in April 2026 (~347K stars). The source set is industry-blog and community-aggregator rather than GitHub primary trending data, and the "OpenClaw" name shares a namespace with an older 1990s gaming project. The capability is consistent with the open-source-frontier story (DeepSeek V4 + OpenClaw on the same Sunday) but should be verified against primary GitHub telemetry before being cited externally.</p>
+      <p><strong>What this means for you.</strong> For your policies, the four-production-surface picture from Saturday is now five-plus-one — five with credible production claims (Claude, GPT-5.5, Gemini, Microsoft Copilot Agent Mode, DeepSeek V4) and one watch-list (Adobe CX Enterprise Coworker pre-GA). The vendor-evaluation rubric should formally acknowledge five primary surfaces; the differentiation continues to be drawn on governance, cost, ecosystem, and license terms — not raw capability. For training, the open-source frontier reaching credible parity on math and coding is the most consequential curriculum update of the month for organizations with sovereignty or open-deployment preferences. For compliance, the DeepSeek V4 license terms remain the highest-priority review item; the Microsoft Agent Governance Toolkit (Section 3) is now also a named open-source reference for organizations building OWASP-mapped agent runtime controls.</p>
+      <h2 id="3-agentic-ai-advances-new-releases">3. Agentic AI Advances &amp; New Releases</h2>
+      <p><strong>Microsoft Agent Governance Toolkit (April 2 ship — added to today's briefing because it materially affects compliance/governance positioning).</strong> Open-source, MIT-licensed; the first toolkit explicitly mapping to 10-of-10 OWASP Agentic Top 10 risks with deterministic, sub-millisecond policy enforcement (Source: Microsoft Open Source Blog, "Introducing the Agent Governance Toolkit," April 2, 2026; InfoWorld, "Microsoft's new Agent Governance Toolkit targets top OWASP risks for AI agents"; GitHub, microsoft/agent-governance-toolkit). The Agent OS package is a stateless policy engine with a stated p99 latency below 0.1ms (self-reported on the latency figure). Framework-agnostic, integrating with LangChain (callback handlers), CrewAI (task decorators), Google ADK (plugin system), and Microsoft Agent Framework (middleware). Available in Python, TypeScript, Rust, Go, and .NET. Microsoft has stated intent to move governance to a foundation home over time. This was off the Saturday cycle. It belongs in any foundation AI governance toolkit as a named open-source reference for OWASP-mapped agent runtime controls — particularly for foundation clients running LangChain or CrewAI in production.</p>
+      <p><strong>DeepSeek V4 — specification details (April 24 preview).</strong> V4-Pro at 1.6T parameters, 1M-token context; V4-Flash at 284B parameters. Open-weight on Hugging Face under the DeepSeek collection. Vendor-claimed and aggregator-cited benchmarks: IMOAnswerBench V4-Pro 89.8 (Claude 75.3, Gemini 81.0, GPT-5.4 91.4); leads all open models on world knowledge except Gemini-3.1-Pro; rivals top closed-source on math/STEM/coding (self-reported / aggregator-derived). Preview, not GA. (Source: api-docs.deepseek.com, "DeepSeek V4 Preview Release," April 24, 2026; Analytics India Magazine; Office Chai; Geeky Gadgets.)</p>
+      <p><strong>Adobe CX Enterprise Coworker (April 20 announcement).</strong> Built on MCP and A2A as open-standard primitives; designed to coordinate marketing-workflow agents toward defined business goals. GA window: "in the coming months." (Source: Adobe Press, "Adobe Unveils CX Enterprise Coworker," April 20, 2026; CX Today; CMSWire; MarTech, "Adobe rebrands Experience Cloud as 'CX Enterprise,' goes all-in on AI agents.")</p>
+      <p><strong>OpenAI Sora retirement (effective today, April 26).</strong> Web/app discontinued April 26; API discontinued September 24. Data export window via sora.chatgpt.com/exports/me; data deleted permanently after the deadlines. Stated reasons (per secondary reporting): compute economics, MAU decline, copyright friction, strategic redirect to enterprise/coding products. (Source: OpenAI Help Center; the-decoder; TechCrunch, March 29, 2026.) Self-reported / secondary on the unit economics.</p>
+      <p><strong>MCP — no new protocol updates this cycle.</strong> Saturday's brief covered the maintainer-team expansion (Den Delimarsky to Lead Maintainer, Clare Liguori to Core, April 8) and the 2026 roadmap (transport scalability, governance maturation, enterprise readiness, broader extensions ecosystem). Today's signal is adoption-side rather than protocol-side: Adobe's MCP-native architecture in CX Enterprise Coworker is the most consequential MCP adoption story of the month, even though it's not an MCP-spec change. (Source: blog.modelcontextprotocol.io, "The 2026 MCP Roadmap"; Adobe Press, April 20, 2026.)</p>
+      <p><strong>No new frontier-lab model releases since the Saturday cycle.</strong> No new public release identified from Anthropic, OpenAI, Google DeepMind, Meta, Mistral, xAI, or Cohere over the April 25–26 window. Treat as a quiet 24 hours on the model-release axis; the active stories are the Sora deletion clock and the V4 architecture firming up.</p>
+      <p><strong>What this means for you.</strong> For your policies, the Microsoft Agent Governance Toolkit is the single highest-quality named open-source reference for AI implementation policies that need to point at OWASP-mapped runtime controls — particularly for teams running LangChain or CrewAI. Add it by name to your AI deliverables template. For team training, the Adobe MCP-native architecture story is the cleanest "MCP in production" case study for training modules; replace any older MCP teaching examples with this one. For compliance posture, the Sora retirement is the canonical vendor product-retirement case for conversations about portability, data export, and lifecycle risk — and the Microsoft Agent Governance Toolkit's sub-ms latency claim should be flagged as self-reported until independent benchmarks are available.</p>
+      <h2 id="4-overnight-release-monitor">4. Overnight Release Monitor</h2>
+      <p>Since the Saturday (April 25) publish window:</p>
+      <ul>
+      <li>April 26 — Sora discontinuation effective today. Web/app access ends; API ends September 24. Data deletion clock starts. (Source: OpenAI Help Center; the-decoder.)</li>
+      <li>April 24–26 — DeepSeek V4 specification details firmed up. V4-Pro 1.6T / V4-Flash 284B, 1M context, open weights on Hugging Face. (Source: Hugging Face deepseek-ai/DeepSeek-V4-Pro; Analytics India Magazine; Geeky Gadgets.)</li>
+      <li>April 20 (carried forward) — Adobe CX Enterprise Coworker. MCP/A2A-native enterprise CX agent platform; GA "in the coming months." (Source: Adobe Press; CX Today.) Carried because the MCP-native architecture material is directly relevant to a Claude/MCP-centered approach.</li>
+      <li>April 2 (carried forward) — Microsoft Agent Governance Toolkit. Open-source MIT; 10/10 OWASP Agentic Top 10 coverage; LangChain / CrewAI / Google ADK / Microsoft Agent Framework integrations. Carried because it materially upgrades Compliance positioning. (Source: Microsoft Open Source Blog; InfoWorld; GitHub.)</li>
+      <li>No new material primary-source releases identified from Anthropic, OpenAI, Google DeepMind, Meta, Mistral, xAI, or Cohere overnight. The April 25→26 window is a quiet model-release window.</li>
+      </ul>
+      <p><strong>What this means for you.</strong> Sunday's pace is structurally different from the Thursday–Saturday concentration — no new frontier release in the overnight window. For your policies, that gives a one-cycle opening to fold the Microsoft Agent Governance Toolkit and Adobe CX Enterprise Coworker into your AI template language without competing-priority noise. For training, the Sora retirement is a teachable artifact today specifically because it's the news of record on a quiet day — use it before it becomes background. For compliance, the absence of a frontier release means the open backlog (DeepSeek V4 license terms, Microsoft Agent 365 May 1 GA, EU AI Act August 2 enforcement clock) is unchanged; no new items added overnight.</p>
+      <h2 id="sources">Sources</h2>
+      <ul>
+      <li>Adobe Press, "Adobe Unveils CX Enterprise Coworker to Build Agentic-Enabled Workflows for Customer Experience Orchestration," April 20, 2026. <a href="https://news.adobe.com/news/2026/04/adobe-unveils-cx-enterprise-coworker" target="_blank" rel="noopener">https://news.adobe.com/news/2026/04/adobe-unveils-cx-enterprise-coworker</a></li>
+      <li>Adobe Press, "Adobe Summit: Adobe Redefines Customer Experience Orchestration Vision in the Agentic AI Era with Introduction of CX Enterprise," April 2026. <a href="https://news.adobe.com/news/2026/04/adobe-redefines-custome-experience" target="_blank" rel="noopener">https://news.adobe.com/news/2026/04/adobe-redefines-custome-experience</a></li>
+      <li>Analytics India Magazine, "DeepSeek Releases V4 Pro, Challenging OpenAI, Anthropic on Key Benchmarks," April 2026. <a href="https://analyticsindiamag.com/ai-news/deepseek-releases-v4-pro-challenging-openai-anthropic-on-key-benchmarks" target="_blank" rel="noopener">https://analyticsindiamag.com/ai-news/deepseek-releases-v4-pro-challenging-openai-anthropic-on-key-benchmarks</a></li>
+      <li>Anthropic, "An update on recent Claude Code quality reports," April 23, 2026. <a href="https://www.anthropic.com/engineering/april-23-postmortem" target="_blank" rel="noopener">https://www.anthropic.com/engineering/april-23-postmortem</a></li>
+      <li>Anthropic, "Introducing Claude Opus 4.7," April 16, 2026. <a href="https://www.anthropic.com/news/claude-opus-4-7" target="_blank" rel="noopener">https://www.anthropic.com/news/claude-opus-4-7</a></li>
+      <li>api-docs.deepseek.com, "DeepSeek V4 Preview Release," April 24, 2026. <a href="https://api-docs.deepseek.com/news/news260424" target="_blank" rel="noopener">https://api-docs.deepseek.com/news/news260424</a></li>
+      <li>Bloomberg, "DeepSeek Unveils Newest Flagship AI Model a Year after Upending Silicon Valley," April 24, 2026. <a href="https://www.bloomberg.com/news/articles/2026-04-24/deepseek-unveils-newest-flagship-a-year-after-ai-breakthrough" target="_blank" rel="noopener">https://www.bloomberg.com/news/articles/2026-04-24/deepseek-unveils-newest-flagship-a-year-after-ai-breakthrough</a></li>
+      <li>Bloomberg, "Google Plans to Invest Up to $40 Billion in Anthropic," April 24, 2026. <a href="https://www.bloomberg.com/news/articles/2026-04-24/google-plans-to-invest-up-to-40-billion-in-anthropic" target="_blank" rel="noopener">https://www.bloomberg.com/news/articles/2026-04-24/google-plans-to-invest-up-to-40-billion-in-anthropic</a></li>
+      <li>Clawbot Blog, "OpenClaw: The Rise of an Open-Source AI Agent Framework (April 2026 Update)." <a href="https://www.clawbot.blog/blog/openclaw-the-rise-of-an-open-source-ai-agent-framework-april-2026-update/" target="_blank" rel="noopener">https://www.clawbot.blog/blog/openclaw-the-rise-of-an-open-source-ai-agent-framework-april-2026-update/</a></li>
+      <li>CMSWire, "Adobe Doubles Down on Agentic AI at Summit 2026," April 2026. <a href="https://www.cmswire.com/customer-experience/adobe-doubles-down-on-agentic-ai-but-the-hard-work-may-be-operating-model/" target="_blank" rel="noopener">https://www.cmswire.com/customer-experience/adobe-doubles-down-on-agentic-ai-but-the-hard-work-may-be-operating-model/</a></li>
+      <li>CNBC, "AI startup Cursor in talks to raise $2 billion funding round at valuation of over $50 billion," April 19, 2026. <a href="https://www.cnbc.com/2026/04/19/cursor-ai-2-billion-funding-round.html" target="_blank" rel="noopener">https://www.cnbc.com/2026/04/19/cursor-ai-2-billion-funding-round.html</a></li>
+      <li>CNBC, "Amazon to invest up to another $25 billion in Anthropic as part of AI infrastructure deal," April 20, 2026. <a href="https://www.cnbc.com/2026/04/20/amazon-invest-up-to-25-billion-in-anthropic-part-of-ai-infrastructure.html" target="_blank" rel="noopener">https://www.cnbc.com/2026/04/20/amazon-invest-up-to-25-billion-in-anthropic-part-of-ai-infrastructure.html</a></li>
+      <li>CNBC, "China's DeepSeek releases preview of long-awaited V4 model as AI race intensifies," April 24, 2026. <a href="https://www.cnbc.com/2026/04/24/deepseek-v4-llm-preview-open-source-ai-competition-china.html" target="_blank" rel="noopener">https://www.cnbc.com/2026/04/24/deepseek-v4-llm-preview-open-source-ai-competition-china.html</a></li>
+      <li>CNBC, "Google to invest up to $40 billion in Anthropic as search giant spreads its AI bets," April 24, 2026. <a href="https://www.cnbc.com/2026/04/24/google-to-invest-up-to-40-billion-in-anthropic-as-search-giant-spreads-its-ai-bets.html" target="_blank" rel="noopener">https://www.cnbc.com/2026/04/24/google-to-invest-up-to-40-billion-in-anthropic-as-search-giant-spreads-its-ai-bets.html</a></li>
+      <li>CNBC, "OpenAI announces GPT-5.5, its latest artificial intelligence model," April 23, 2026. <a href="https://www.cnbc.com/2026/04/23/openai-announces-latest-artificial-intelligence-model.html" target="_blank" rel="noopener">https://www.cnbc.com/2026/04/23/openai-announces-latest-artificial-intelligence-model.html</a></li>
+      <li>Cryptopolitan, "Google commits $40 billion investment to Claude AI developer Anthropic," April 2026. <a href="https://www.cryptopolitan.com/google-commits-40-billion-investment-to-claude-ai-developer-anthropic/" target="_blank" rel="noopener">https://www.cryptopolitan.com/google-commits-40-billion-investment-to-claude-ai-developer-anthropic/</a></li>
+      <li>CX Today, "Adobe CX Enterprise Coworker: Agentic AI Meets Enterprise CX," April 2026. <a href="https://www.cxtoday.com/ai-automation-in-cx/adobe-cx-enterprise-coworker-what-does-it-mean-for-the-future-of-enterprise-cx/" target="_blank" rel="noopener">https://www.cxtoday.com/ai-automation-in-cx/adobe-cx-enterprise-coworker-what-does-it-mean-for-the-future-of-enterprise-cx/</a></li>
+      <li>Futurum Group, "OpenAI Sora Discontinuation: What the End of a Platform Means for Enterprise AI Strategy," April 2026. <a href="https://futurumgroup.com/insights/openai-sora-discontinuation-what-the-end-of-a-platform-means-for-enterprise-ai-strategy/" target="_blank" rel="noopener">https://futurumgroup.com/insights/openai-sora-discontinuation-what-the-end-of-a-platform-means-for-enterprise-ai-strategy/</a></li>
+      <li>Geeky Gadgets, "Deepseek v4 Performance Analysis: Does It Beat Kimi K2.6 and Qwen 3.6 Plus?" April 2026. <a href="https://www.geeky-gadgets.com/open-source-deepseek-v4-limitations/" target="_blank" rel="noopener">https://www.geeky-gadgets.com/open-source-deepseek-v4-limitations/</a></li>
+      <li>GitHub, microsoft/agent-governance-toolkit. <a href="https://github.com/microsoft/agent-governance-toolkit" target="_blank" rel="noopener">https://github.com/microsoft/agent-governance-toolkit</a></li>
+      <li>Help Net Security, "Microsoft releases open-source toolkit to govern autonomous AI agents," April 3, 2026. <a href="https://www.helpnetsecurity.com/2026/04/03/microsoft-ai-agent-governance-toolkit/" target="_blank" rel="noopener">https://www.helpnetsecurity.com/2026/04/03/microsoft-ai-agent-governance-toolkit/</a></li>
+      <li>Hugging Face, deepseek-ai/DeepSeek-V4-Pro. <a href="https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro" target="_blank" rel="noopener">https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro</a></li>
+      <li>InfoWorld, "Microsoft's new Agent Governance Toolkit targets top OWASP risks for AI agents," April 2026. <a href="https://www.infoworld.com/article/4155591/microsofts-new-agent-governance-toolkit-targets-top-owasp-risks-for-ai-agents.html" target="_blank" rel="noopener">https://www.infoworld.com/article/4155591/microsofts-new-agent-governance-toolkit-targets-top-owasp-risks-for-ai-agents.html</a></li>
+      <li>Let's Data Science, "DeepSeek Launches V4 Preview With Pro and Flash," April 2026. <a href="https://letsdatascience.com/news/deepseek-launches-v4-preview-with-pro-and-flash-343285ec" target="_blank" rel="noopener">https://letsdatascience.com/news/deepseek-launches-v4-preview-with-pro-and-flash-343285ec</a></li>
+      <li>MacRumors, "OpenAI Debuts GPT-5.5 Claiming Agentic Coding and Research Gains," April 24, 2026. <a href="https://www.macrumors.com/2026/04/24/openai-gpt-5-5-research-gains/" target="_blank" rel="noopener">https://www.macrumors.com/2026/04/24/openai-gpt-5-5-research-gains/</a></li>
+      <li>MarTech, "Adobe rebrands Experience Cloud as 'CX Enterprise,' goes all-in on AI agents," April 2026. <a href="https://martech.org/adobe-rebrands-experience-cloud-as-cx-enterprise-goes-all-in-on-ai-agents/" target="_blank" rel="noopener">https://martech.org/adobe-rebrands-experience-cloud-as-cx-enterprise-goes-all-in-on-ai-agents/</a></li>
+      <li>Microsoft Open Source Blog, "Introducing the Agent Governance Toolkit: Open-source runtime security for AI agents," April 2, 2026. <a href="https://opensource.microsoft.com/blog/2026/04/02/introducing-the-agent-governance-toolkit-open-source-runtime-security-for-ai-agents/" target="_blank" rel="noopener">https://opensource.microsoft.com/blog/2026/04/02/introducing-the-agent-governance-toolkit-open-source-runtime-security-for-ai-agents/</a></li>
+      <li>Model Context Protocol Blog, "The 2026 MCP Roadmap." <a href="https://blog.modelcontextprotocol.io/posts/2026-mcp-roadmap/" target="_blank" rel="noopener">https://blog.modelcontextprotocol.io/posts/2026-mcp-roadmap/</a></li>
+      <li>Office Chai, "DeepSeek Releases DeepSeek V4-Pro &amp; V4-Flash," April 2026. <a href="https://officechai.com/ai/deepseek-v4-pro-deepseek-v4-flash-benchmarks-pricing/" target="_blank" rel="noopener">https://officechai.com/ai/deepseek-v4-pro-deepseek-v4-flash-benchmarks-pricing/</a></li>
+      <li>OpenAI Help Center, "What to know about the Sora discontinuation." <a href="https://help.openai.com/en/articles/20001152-what-to-know-about-the-sora-discontinuation" target="_blank" rel="noopener">https://help.openai.com/en/articles/20001152-what-to-know-about-the-sora-discontinuation</a></li>
+      <li>OpenAI, "Introducing GPT-5.5," April 23, 2026. <a href="https://openai.com/index/introducing-gpt-5-5/" target="_blank" rel="noopener">https://openai.com/index/introducing-gpt-5-5/</a></li>
+      <li>Rapid Claw, "AI Agent Framework Scorecard 2026." <a href="https://rapidclaw.dev/blog/ai-agent-benchmarks-2026" target="_blank" rel="noopener">https://rapidclaw.dev/blog/ai-agent-benchmarks-2026</a></li>
+      <li>Redmondmag, "Microsoft Expands Copilot's Agentic Capabilities in Office, Unveils AI Agent Builder Certification," April 23, 2026. <a href="https://redmondmag.com/articles/2026/04/23/microsoft-expands-copilot-agentic-capabilities.aspx" target="_blank" rel="noopener">https://redmondmag.com/articles/2026/04/23/microsoft-expands-copilot-agentic-capabilities.aspx</a></li>
+      <li>TechCrunch, "Anthropic launches Claude Design, a new product for creating quick visuals," April 17, 2026. <a href="https://techcrunch.com/2026/04/17/anthropic-launches-claude-design-a-new-product-for-creating-quick-visuals/" target="_blank" rel="noopener">https://techcrunch.com/2026/04/17/anthropic-launches-claude-design-a-new-product-for-creating-quick-visuals/</a></li>
+      <li>TechCrunch, "Google to invest up to $40B in Anthropic in cash and compute," April 24, 2026. <a href="https://techcrunch.com/2026/04/24/google-to-invest-up-to-40b-in-anthropic-in-cash-and-compute/" target="_blank" rel="noopener">https://techcrunch.com/2026/04/24/google-to-invest-up-to-40b-in-anthropic-in-cash-and-compute/</a></li>
+      <li>TechCrunch, "Why OpenAI really shut down Sora," March 29, 2026. <a href="https://techcrunch.com/2026/03/29/why-openai-really-shut-down-sora/" target="_blank" rel="noopener">https://techcrunch.com/2026/03/29/why-openai-really-shut-down-sora/</a></li>
+      <li>the-decoder, "OpenAI sets two-stage Sora shutdown with app closing April 2026 and API following in September." <a href="https://the-decoder.com/openai-sets-two-stage-sora-shutdown-with-app-closing-april-2026-and-api-following-in-september/" target="_blank" rel="noopener">https://the-decoder.com/openai-sets-two-stage-sora-shutdown-with-app-closing-april-2026-and-api-following-in-september/</a></li>
+      <li>The SOO Group, "OpenClaw Becomes GitHub's Fastest-Growing Project with 302K Stars." <a href="https://thesoogroup.com/blog/openclaw-github-phenomenon-autonomous-agent-framework" target="_blank" rel="noopener">https://thesoogroup.com/blog/openclaw-github-phenomenon-autonomous-agent-framework</a></li>
+      <li>Virtualization Review, "Google Cloud Next '26: Gemini Enterprise Agent Platform Leads AI-Centric News," April 24, 2026. <a href="https://virtualizationreview.com/articles/2026/04/24/google-cloud-next-26-gemini-enterprise-agent-platform-leads-ai-centric-news.aspx" target="_blank" rel="noopener">https://virtualizationreview.com/articles/2026/04/24/google-cloud-next-26-gemini-enterprise-agent-platform-leads-ai-centric-news.aspx</a></li>
+      <li>Windows News, "Microsoft Copilot Agent Mode Now GA in Word, Excel, and PowerPoint." <a href="https://windowsnews.ai/article/microsoft-copilot-agent-mode-now-ga-in-word-excel-and-powerpoint.415032" target="_blank" rel="noopener">https://windowsnews.ai/article/microsoft-copilot-agent-mode-now-ga-in-word-excel-and-powerpoint.415032</a></li>
+      </ul>
+    </article>
+
+    <section class="cta-band" id="contact" aria-labelledby="cta-heading">
+      <h2 id="cta-heading">From AI curiosity to AI capability</h2>
+      <p>This briefing is part of the field research behind our AI Enablement service &mdash; a curated, white-glove Claude Cowork implementation tailored to your organization&rsquo;s workflow.</p>
+      <a class="btn" href="https://calendly.com/mark-malaniru/30min" target="_blank" rel="noopener">Book a discovery call</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Malaniru Inc, LLC &middot; Lafayette, Colorado &middot; AI Enablement</p>
+    <p><a href="daily-intelligence-briefings.html">&larr; Back to Daily Intelligence Briefings</a> &middot; <a href="index.html">AI Enablement</a></p>
+      <nav class="mal-footernav" data-mal-footernav aria-label="Site" style="margin-top:0.7rem;font-size:0.82rem;line-height:1.9;">
+      <a href="about.html" style="color:#C07830;font-weight:700;text-decoration:none;">About</a> &middot;
+      <a href="pricing.html" style="color:#C07830;font-weight:700;text-decoration:none;">Pricing</a> &middot;
+      <a href="index.html" style="color:#C07830;font-weight:700;text-decoration:none;">AI Enablement</a>
+    </nav>
+  </footer>
+</body>
+</html>

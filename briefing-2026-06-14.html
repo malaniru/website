@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<!--
+  ============================================================================
+  Malaniru - Research article page (branded HTML)
+  Built by: Web (Morgan Shaw) - Date: 2026-06-23
+  Project:  Malaniru_Marketing_Site
+  Source:   Website/src/content/research/20260614-daily-intelligence-briefing.md
+  Purpose:  Standalone public article page for a daily intelligence briefing,
+            linked from philanthropy-ai-research.html.
+  STATUS:   Public marketing page. robots noindex pre-launch (mirrors template).
+            Calendly CTA hidden via CSS (per Principal, as in template).
+  FIDELITY: Article body rendered VERBATIM from the approved markdown. No copy
+            edits, no reordered sections, no changed figures or heading levels.
+  FLAGS:    none.
+  TECH:     Single self-contained HTML5 file. Embedded CSS. No JavaScript.
+            Template-matched (philanthropy-ai-adoption.html). WCAG AA. Mobile-first.
+  ============================================================================
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daily Intelligence Briefing — June 14, 2026: One Day to the June 15 Deadline - Malaniru</title>
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="The Claude June 15 changes are now one day out — and a separate Agent SDK credit must be claimed before the date. Plus the resolved Opus migration target, a new open-weight agentic coder, and the day&#x27;s agentic AI landscape for foundation leaders.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --navy:#0F1A2E;--navy-mid:#2A3F63;--copper:#C07830;--gold:#D4A853;
+      --off-white:#F4F1EC;--light-gray:#E8E6E1;--mid-gray:#8A8A96;--dark-text:#1C1C1C;
+      --font:"Inter","Helvetica Neue",Arial,sans-serif;
+    }
+    *{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:var(--font);background:var(--off-white);color:var(--dark-text);line-height:1.65;font-size:16px;-webkit-font-smoothing:antialiased;}
+    .skip-link{position:absolute;left:-999px;top:0;background:var(--gold);color:var(--navy);padding:10px 16px;font-weight:700;z-index:10;}
+    .skip-link:focus{left:8px;top:8px;}
+    a{color:var(--copper);}
+    /* Header */
+    header{background: linear-gradient(160deg, rgba(15,26,46,0.72) 0%, rgba(10,18,33,0.82) 100%), url('StockCake-Cosmic_Web_Complexity-1361288-standard-rot90ccw.jpg'); background-size: auto, 100% 100%; background-repeat: no-repeat, no-repeat; background-position: center, center;color:var(--off-white);padding:48px 24px 52px;position:relative;overflow:hidden;}
+    header::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 85% 12%,rgba(192,120,48,0.20) 0%,rgba(15,26,46,0) 55%);pointer-events:none;}
+    .header-inner{max-width:760px;margin:0 auto;position:relative;z-index:1;}
+    .wordmark{font-weight:800;font-size:1.25rem;letter-spacing:0.02em;margin-bottom:30px;}
+    .wordmark .dot{color:var(--copper);}
+    .wordmark a{color:var(--off-white);text-decoration:none;transition:opacity .18s ease;}
+    .wordmark a:hover,.wordmark a:focus-visible{opacity:.85;outline:none;}
+    .eyebrow{display:inline-block;font-size:0.72rem;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;}
+    header h1{font-weight:800;font-size:clamp(1.8rem,4.6vw,2.6rem);line-height:1.14;letter-spacing:-0.01em;margin-bottom:16px;}
+    .byline{font-size:0.9rem;color:var(--light-gray);letter-spacing:0.01em;}
+    .byline .sep{color:var(--copper);margin:0 8px;}
+    .lede{font-size:1.08rem;color:var(--light-gray);max-width:66ch;margin-top:18px;}
+    .backlink{display:inline-block;margin-top:26px;color:var(--gold);font-weight:600;font-size:0.9rem;text-decoration:none;border-bottom:1px solid rgba(212,168,83,0.4);}
+    .backlink:hover,.backlink:focus-visible{border-bottom-color:var(--gold);outline:none;}
+    /* Article */
+    main{max-width:760px;margin:0 auto;padding:48px 24px 8px;}
+    .disclaimer{background:#fff;border:1px solid var(--light-gray);border-left:4px solid var(--copper);border-radius:8px;padding:14px 18px;font-size:0.9rem;color:var(--navy-mid);margin-bottom:34px;}
+    article{font-size:1.05rem;}
+    article h2{font-weight:800;font-size:1.5rem;color:var(--navy);line-height:1.22;letter-spacing:-0.01em;margin:42px 0 14px;}
+    article h3{font-weight:700;font-size:1.18rem;color:var(--navy-mid);line-height:1.25;margin:30px 0 10px;}
+    article h2 + p, article h3 + p{margin-top:0;}
+    article p{margin:0 0 18px;color:var(--dark-text);}
+    article ul,article ol{margin:0 0 18px;padding-left:24px;}
+    article li{margin-bottom:8px;}
+    article strong{font-weight:700;color:var(--navy);}
+    article em{font-style:italic;}
+    article a{color:var(--copper);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(192,120,48,0.35);transition:border-color .18s ease;}
+    article a:hover,article a:focus-visible{border-bottom-color:var(--copper);outline:none;}
+    article hr{border:none;border-top:1px solid var(--light-gray);margin:34px 0;}
+    article h2#sources, article h2#references{border-top:1px solid var(--light-gray);padding-top:30px;font-size:1.2rem;color:var(--navy-mid);}
+    /* sources list smaller */
+    article h2[id^="sources"] ~ ul li, article h3[id^="sources"] ~ ul li{font-size:0.95rem;color:var(--navy-mid);}
+    /* tables */
+    article table{width:100%;border-collapse:collapse;margin:0 0 24px;font-size:0.95rem;}
+    article th,article td{border:1px solid var(--light-gray);padding:9px 12px;text-align:left;vertical-align:top;}
+    article thead th{background:var(--navy);color:var(--off-white);font-weight:700;}
+    article tbody tr:nth-child(even){background:#fff;}
+    article .table-wrap{overflow-x:auto;margin:0 0 24px;}
+    article .table-wrap table{margin:0;}
+    /* CTA */
+    .cta-band{background:var(--navy);color:var(--off-white);border-radius:12px;padding:42px 32px;text-align:center;margin:48px 0 8px;}
+    .cta-band h2{font-weight:800;font-size:clamp(1.4rem,3.4vw,1.9rem);margin-bottom:12px;letter-spacing:-0.01em;color:var(--off-white);}
+    .cta-band p{color:var(--light-gray);max-width:52ch;margin:0 auto 24px;}
+    .cta-band .btn{display:inline-block;background:var(--copper);color:#fff;font-weight:700;padding:13px 28px;border-radius:8px;text-decoration:none;transition:background .18s ease;}
+    .cta-band .btn:hover,.cta-band .btn:focus-visible{background:var(--gold);color:var(--navy);outline:none;}
+    /* Footer */
+    footer{max-width:760px;margin:16px auto 0;padding:24px;font-size:0.82rem;color:var(--mid-gray);border-top:1px solid var(--light-gray);}
+    footer p+p{margin-top:6px;}
+    footer a{color:var(--mid-gray);text-decoration:underline;}
+    @media (prefers-reduced-motion:reduce){*{transition:none!important;}}
+
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header>
+    <div class="header-inner">
+      <div class="wordmark"><a href="index.html">Malaniru<span class="dot">.</span></a></div>
+      <span class="eyebrow">AI Enablement &middot; Daily Intelligence Briefing</span>
+      <h1>Daily Intelligence Briefing — June 14, 2026: One Day to the June 15 Deadline</h1>
+      <p class="byline">By Marco Harris<span class="sep">&middot;</span>June 14, 2026</p>
+      <p class="lede">The Claude June 15 changes are now one day out — and a separate Agent SDK credit must be claimed before the date. Plus the resolved Opus migration target, a new open-weight agentic coder, and the day&#x27;s agentic AI landscape for foundation leaders.</p>
+      <a class="backlink" href="daily-intelligence-briefings.html">&larr; All daily intelligence briefings</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <article>
+      <p>The dominant item today is a countdown, not a launch. The June 15 changes are now one day out: Anthropic moves Agent SDK usage off the subscription pool onto a separate metered credit, and retires the two original Claude 4 models from the API. The operational wrinkle that firmed up today — and the thing most teams will miss — is that the new Agent SDK credit must be explicitly claimed before June 15, or scheduled agents can stall.</p>
+      <h2 id="ai-market-trends">AI Market Trends</h2>
+      <p><strong>The June 15 deadline is now a one-day countdown, and a new action item surfaced.</strong> Tomorrow, Anthropic moves Claude Agent SDK usage, headless <code>claude -p</code>, Claude Code GitHub Actions, and third-party apps authenticating through the Agent SDK off the subscription usage pool and onto a separate monthly dollar credit ($20 Pro / $100 Max 5x / $200 Max 20x), metered at standard API rates, per user, with no rollover. The same day, <code>claude-sonnet-4-20250514</code> and <code>claude-opus-4-20250514</code> retire from the API, after which calls to those IDs return an error. The detail that firmed up today and is easy to miss: the new Agent SDK credit must be explicitly claimed once before June 15 — if it isn't, and usage credits aren't separately enabled, Agent SDK requests can stop until the credit refreshes. The interactive pool — Claude.ai, interactive Claude Code, and Claude Cowork — remains explicitly unaffected.</p>
+      <p><strong>The migration-target ambiguity is now resolvable at the primary source.</strong> For a week, outlets disagreed on whether to migrate retiring Opus 4 workloads to Opus 4.7 or the current flagship. Anthropic's official model-deprecations page settles it: for the June 15 deprecations, the documented default replacements are <code>claude-sonnet-4-5</code> and <code>claude-opus-4-5</code>, with <code>claude-opus-4-7</code> suggested for complex or agentic workloads, while Opus 4.8 is the current flagship. The action item is unchanged in spirit but now has an authoritative answer: read the deprecation page, don't trust a single outlet.</p>
+      <p><strong>A new open-weight entrant landed: Kimi K2.7-Code.</strong> Moonshot AI released Kimi K2.7-Code on June 12 — an open-weight, coding-and-agent-focused model, 1 trillion total / ~32B active parameters (mixture-of-experts), weights on Hugging Face under a Modified MIT license permitting commercial use with attribution. Vendor-reported gains over the prior K2.6 include double-digit improvements on the lab's own coding benchmarks and roughly 30% lower thinking-token usage; those figures are self-reported and await independent verification. It is not a frontier launch from a top-three lab, but it is the most substantive new model in the window and matters as open-weight agentic tooling.</p>
+      <p>The capital backdrop is unchanged: Anthropic's confidential S-1 (filed June 1) still anchors the reported ~$965B valuation / ~$47B annualized revenue picture sourced to trade-press coverage of the filing — not audited.</p>
+      <p><strong>What this means for foundations and small organizations.</strong> The June 15 action is now a same-day-tomorrow checklist: confirm no workflow calls the retiring model IDs; migrate any that do, using the official deprecation page to pick the exact replacement; claim the Agent SDK credit for anyone running scheduled agents; and audit for hard-coded temperature/top_p on the newest Opus. The billing split is a budgeting-and-governance question for clients running scheduled agents — interactive use is unaffected, which stays the reassuring lead for any client note. Kimi K2.7-Code is a clean teaching example of the open-weight-versus-frontier tradeoff: capable and commercially licensable, but its benchmark gains are self-reported.</p>
+      <h2 id="top-ai-agents-three-lenses">Top AI Agents — Three Lenses</h2>
+      <p>Rankings as of Sunday, June 14, 2026. Boards are stable run-over-run on products; this run's movement is the one-day June 15 countdown and the Kimi K2.7-Code entry (open-weight, watch-list).</p>
+      <p><strong>Relevance for Claude / MCP-Centered Work:</strong> Claude Cowork leads — the core delivery surface, explicitly unaffected by the June 15 split. Claude Managed Agents (public beta) follow as the productizable governed-automation primitive. Claude Fable 5 ranks third — strongest tested frontier, 95% SWE-bench Verified independently confirmed, Pro headline still vendor-reported, and free to trial through June 22. Claude Code plus the Agent SDK come fourth — the Agent SDK moves to a separate metered pool tomorrow, and the credit must be claimed first. MCP-based connectors round out the top five, with the final spec landing July 28.</p>
+      <p><strong>Market Momentum:</strong> Anthropic holds the top spot on four-front momentum (Claude Corps, Fable 5, Managed Agents, IPO process). OpenAI follows (GPT-5.5 broadly deployed; GPT-5.6 unannounced but trade-rumored for June). Google's Gemini 3.5 line ranks third on I/O afterglow, with Pro still pending. New this run: Moonshot Kimi K2.7-Code enters on strong open-source buzz. NVIDIA's Nemotron 3 Ultra rounds out the five.</p>
+      <p><strong>Capability and Maturity:</strong> Claude Fable 5 leads the tested suites. Claude Opus 4.8 — the current GA flagship and our reference tier — comes second. GPT-5.5 / Codex follow as production-grade and broadly deployed. NVIDIA Nemotron 3 Ultra and Gemini 3.5 Flash round out the list.</p>
+      <p>The standing divergence — capability leadership versus verification confidence on Fable 5 — is unchanged: one headline number (95% SWE-bench Verified) is independently confirmed; the most-cited one (80.3% SWE-bench Pro) is not, with Epoch AI still pending. The new wrinkle is an open-weight-versus-frontier divergence: Kimi K2.7-Code scores high on momentum but enters the capability lens only provisionally, because every benchmark gain is self-reported. The same "cite the verified number, not the loudest one" discipline applies. The near-term board-mover to watch remains Gemini 3.5 Pro reaching general availability.</p>
+      <h2 id="agentic-ai-advances-and-new-releases">Agentic AI Advances and New Releases</h2>
+      <p><strong>Kimi K2.7-Code (Moonshot) — new, June 12.</strong> Open-weight, coding-and-agent-focused successor to K2.6; 1T total / ~32B active parameters; weights on Hugging Face under a Modified MIT license permitting commercial use with attribution; available via Moonshot's Kimi APIs. Headline benchmark gains and a claimed ~30% reduction in thinking-token usage are self-reported on the lab's own suites. Significance: a commercially licensable open-weight agentic coder, useful as a teaching contrast, not yet a production recommendation.</p>
+      <p><strong>June 15 billing split plus confirmed Claude 4 retirement (one day out).</strong> Agent SDK / <code>claude -p</code> / GitHub Actions move to a separate credit pool that must be claimed before June 15; the two original Claude 4 model IDs retire from the API; temperature/top_p support drops on the newest Opus. Migration targets are documented on Anthropic's deprecation page. The interactive pool — Claude.ai, interactive Claude Code, Claude Cowork — is explicitly unchanged.</p>
+      <p><strong>Fable 5 — verification unchanged, free-trial window added.</strong> No change to the verification picture: 95% SWE-bench Verified independently confirmed, 80.3% SWE-bench Pro still vendor-reported, Epoch AI pending. New commercial detail: Fable 5 is free to use through June 22 via several access channels. One low-quality outlet claimed Fable 5 was "discontinued" — this is unverified and contradicted by multiple active-access reports; we disregard it.</p>
+      <p><strong>Ecosystem context (not frontier launches).</strong> Fivetran's 2026 Agentic AI Readiness Index finds only ~15% of organizations "fully ready" even as a majority report investing heavily — a useful demand-side data point. MetaMask's Agent Wallet and Huawei's HarmonyOS 7 "agent-friendly" architecture also surfaced. Treat all three as ecosystem signal, not directly relevant tooling.</p>
+      <p>Carry items: the MCP final specification lands July 28 (release candidate public, breaking changes included); Gemini 3.5 Pro is still pre-GA; GPT-5.6 is unannounced, with trade rumor pointing to June.</p>
+      <p><strong>What this means for foundations.</strong> The concrete tomorrow action is the June 15 checklist. For training, Kimi K2.7-Code and the Fivetran "15% fully ready" figure pair into one honest narrative: capable tools are proliferating faster than organizational readiness, and the gap is governance and skill, not model access. For policy, the open-weight option expanding strengthens the case that an AI implementation policy should name which model tiers are approved for which data, rather than assuming a single vendor.</p>
+      <h2 id="overnight-release-monitor">Overnight Release Monitor</h2>
+      <p>Covering June 13–14: one new model in the window — Kimi K2.7-Code (Moonshot, open-weight). No new frontier-class GA launch from Anthropic, OpenAI, Google, Meta, Mistral, or xAI. June 15 is now one day out, and the Agent SDK credit must be claimed before the date — the run's most material change. The Opus migration target is resolved at the primary source. Fable 5 is free through June 22; the "discontinued" claim is unverified and disregarded. Claude Corps applications close July 17. Carry items unchanged: MCP final spec July 28; Gemini 3.5 Pro (no committed date); GPT-5.6 (unannounced); OpenAI workspace agents free to July 6; EU AI Act August 2 transparency obligations.</p>
+      <p>One action before Monday opens: close the June 15 readiness checklist tonight or first thing tomorrow — migrate any retiring model IDs using the official deprecation page, claim the Agent SDK credit for any scheduled-agent client, audit temperature/top_p usage, and send the client billing note led by "Claude Cowork and interactive use are unchanged." Everything else is monitor-and-hold.</p>
+      <h2 id="sources">Sources</h2>
+      <ul>
+      <li>Enterprise DNA, "Two Claude Deadlines Hit June 15: What AI Builders Must Do," June 2026. <a href="https://enterprisedna.co/resources/news/anthropic-claude-june-15-retirements-billing-2026/" target="_blank" rel="noopener">https://enterprisedna.co/resources/news/anthropic-claude-june-15-retirements-billing-2026/</a></li>
+      <li>UsageBox, "Anthropic's June 15 Double Hit," 2026. <a href="https://usagebox.com/articles/anthropic-june-15-agent-sdk-credit-split-claude-4-retirement" target="_blank" rel="noopener">https://usagebox.com/articles/anthropic-june-15-agent-sdk-credit-split-claude-4-retirement</a></li>
+      <li>CoderSera, "Anthropic's June 15 Billing Change," 2026. <a href="https://codersera.com/blog/anthropic-june-2026-billing-change-claude-code/" target="_blank" rel="noopener">https://codersera.com/blog/anthropic-june-2026-billing-change-claude-code/</a></li>
+      <li>Anthropic, "Model deprecations," Claude API Docs, 2026. <a href="https://platform.claude.com/docs/en/about-claude/model-deprecations" target="_blank" rel="noopener">https://platform.claude.com/docs/en/about-claude/model-deprecations</a></li>
+      <li>MindStudio, "Claude Sonnet 4 and Opus 4 Deprecation," 2026. <a href="https://www.mindstudio.ai/blog/claude-sonnet-4-opus-4-deprecation-migration-guide" target="_blank" rel="noopener">https://www.mindstudio.ai/blog/claude-sonnet-4-opus-4-deprecation-migration-guide</a></li>
+      <li>vals.ai, "SWE-bench Verified," 2026. <a href="https://www.vals.ai/benchmarks/swebench" target="_blank" rel="noopener">https://www.vals.ai/benchmarks/swebench</a></li>
+      <li>Tech Jacks Solutions, "Claude Fable 5's SWE-Bench Pro Score Is Contested," June 2026. <a href="https://techjacksolutions.com/ai-brief/claude-fable-5s-swe-bench-pro-score-is-contested-what-indepe/" target="_blank" rel="noopener">https://techjacksolutions.com/ai-brief/claude-fable-5s-swe-bench-pro-score-is-contested-what-indepe/</a></li>
+      <li>CryptoBriefing, "Kimi AI releases open-source K2.7 Code model," June 2026. <a href="https://cryptobriefing.com/kimi-k2-7-code-open-source-release/" target="_blank" rel="noopener">https://cryptobriefing.com/kimi-k2-7-code-open-source-release/</a></li>
+      <li>Kimi (Moonshot AI), "Kimi K2.7 Code: Open-Source Agentic Coding Model," 2026. <a href="https://www.kimi.com/resources/kimi-k2-7-code" target="_blank" rel="noopener">https://www.kimi.com/resources/kimi-k2-7-code</a></li>
+      <li>Anthropic, "Introducing Claude Corps," June 2026. <a href="https://www.anthropic.com/news/claude-corps" target="_blank" rel="noopener">https://www.anthropic.com/news/claude-corps</a></li>
+      <li>Model Context Protocol Blog, "The 2026-07-28 MCP Specification Release Candidate," 2026. <a href="https://blog.modelcontextprotocol.io/posts/2026-07-28-release-candidate/" target="_blank" rel="noopener">https://blog.modelcontextprotocol.io/posts/2026-07-28-release-candidate/</a></li>
+      <li>llm-stats.com, "AI Updates Today (June 2026)," accessed June 14, 2026. <a href="https://llm-stats.com/llm-updates" target="_blank" rel="noopener">https://llm-stats.com/llm-updates</a></li>
+      </ul>
+    </article>
+
+    <section class="cta-band" id="contact" aria-labelledby="cta-heading">
+      <h2 id="cta-heading">From AI curiosity to AI capability</h2>
+      <p>This briefing is part of the field research behind our AI Enablement service &mdash; a curated, white-glove Claude Cowork implementation tailored to your organization&rsquo;s workflow.</p>
+      <a class="btn" href="https://calendly.com/mark-malaniru/30min" target="_blank" rel="noopener">Book a discovery call</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Malaniru Inc, LLC &middot; Lafayette, Colorado &middot; AI Enablement</p>
+    <p><a href="daily-intelligence-briefings.html">&larr; Back to Daily Intelligence Briefings</a> &middot; <a href="index.html">AI Enablement</a></p>
+      <nav class="mal-footernav" data-mal-footernav aria-label="Site" style="margin-top:0.7rem;font-size:0.82rem;line-height:1.9;">
+      <a href="about.html" style="color:#C07830;font-weight:700;text-decoration:none;">About</a> &middot;
+      <a href="pricing.html" style="color:#C07830;font-weight:700;text-decoration:none;">Pricing</a> &middot;
+      <a href="index.html" style="color:#C07830;font-weight:700;text-decoration:none;">AI Enablement</a>
+    </nav>
+  </footer>
+</body>
+</html>

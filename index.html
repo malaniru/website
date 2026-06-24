@@ -190,8 +190,12 @@
     /* ---- Hero ----------------------------------------------------------- */
     .hero {
       background:
-        radial-gradient(900px 500px at 80% -10%, rgba(192,120,48,0.20), transparent 60%),
-        linear-gradient(160deg, var(--color-navy) 0%, var(--color-navy-deep) 100%);
+        radial-gradient(900px 500px at 80% -10%, rgba(192,120,48,0.80), transparent 20%),
+        linear-gradient(160deg, rgba(15,26,46,0.80) 0%, rgba(10,18,33,0.80) 100%), 
+      url('StockCake-Cosmic_Web_Complexity-1361288-standard-rot90ccw.jpg');
+      background-size: 100%, auto;
+      background-repeat: no-repeat, no-repeat, no-repeat;
+      background-position: center, center, center;
       color: var(--color-off-white);
       padding-block: var(--space-6);
     }
@@ -487,8 +491,6 @@
       * { transition: none !important; }
     }
   
-    /* 2026-06-16: hide Book a discovery call CTA buttons (per Principal) */
-    a[href*="calendly.com"] { display: none !important; }
     /* 2026-06-16: horizontal page links at the bottom of the header */
     .hero__links {
       display: flex;
@@ -513,8 +515,8 @@
       <a class="btn" href="https://calendly.com/mark-malaniru/30min" target="_blank" rel="noopener">Book a discovery call</a>
       <!-- 2026-06-16 (Web/Morgan Shaw): footer page links duplicated here, aligned horizontally. -->
       <nav class="hero__links" aria-label="Related pages">
+        <a class="policy-link" href="daily-intelligence-briefings.html">Daily Intelligence Briefings &rarr;</a>
         <a class="policy-link" href="philanthropy-ai-research.html">Philanthropy &amp; AI Research &rarr;</a>
-        <a class="policy-link" href="sources.html">Sources &amp; Citations Index &rarr;</a>
       </nav>
     </div>
   </header>
@@ -529,7 +531,7 @@
           <h2 id="service-heading">One guided adoption motion, five working parts</h2>
         </div>
         <div class="service__prose">
-          <p>The offering generalizes a package first proven in the philanthropy and foundations vertical so it can be adapted into any vertical &mdash; professional services, nonprofits, small enterprise &mdash; with a predictable delivery motion. Underneath the name, the service is the same five-part package every time.</p>
+          <p>The offering is a package that can be adapted into any vertical &mdash; professional services, nonprofits, small enterprise &mdash; with a predictable delivery motion. Underneath the name, the service is the same five-part package every time.</p>
           <!-- 2026-06-16 (Web/Morgan Shaw): in-section cross-links removed per Principal; links now live in header + footer. -->
         </div>
 
@@ -687,8 +689,12 @@
   <footer class="site-footer">
     <div class="container">
       <p><strong>Malaniru Inc, LLC</strong> &middot; From curious to capable. &middot; AI enablement you keep.</p>
-      <p><a class="policy-link" href="philanthropy-ai-research.html">Philanthropy &amp; AI Research &rarr;</a></p>
-      <p><a class="policy-link" href="sources.html">Sources &amp; Citations Index &rarr;</a></p>
+      <nav class="hero__links" data-mal-footernav aria-label="Related pages">
+        <a class="policy-link" href="about.html">About &rarr;</a>
+        <a class="policy-link" href="pricing.html">Pricing &rarr;</a>
+        <a class="policy-link" href="daily-intelligence-briefings.html">Daily Intelligence Briefings &rarr;</a>
+        <a class="policy-link" href="philanthropy-ai-research.html">Philanthropy &amp; AI Research &rarr;</a>
+      </nav>
     </div>
   </footer>
 

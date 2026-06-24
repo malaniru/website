@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<!--
+  ============================================================================
+  Malaniru — Daily Intelligence Briefings (branded HTML listing page)
+  Built by: Web (Morgan Shaw) · Date: 2026-06-23
+  Project:  Malaniru_Marketing_Site
+  Purpose:  Standalone index of the 42 daily-intelligence-briefing articles,
+            split out from philanthropy-ai-research.html so each content type
+            (research reports vs. daily briefings) has its own page, linked
+            side-by-side from index.html.
+  STATUS:   Public marketing page. robots noindex pre-launch (mirrors siblings).
+            Calendly CTA hidden via CSS (per Principal).
+  TECH:     Single self-contained HTML5 file. Embedded CSS (identical token set
+            and component classes as philanthropy-ai-research.html). No JS.
+            WCAG AA. Mobile-first. Cards newest-first.
+  ============================================================================
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daily Intelligence Briefings — Malaniru</title>
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="Malaniru's running daily read on the AI market — model releases, agentic tooling, funding, and the governance signals that matter for organizations adopting AI. 42 briefings, every figure sourced.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    /* ---- Brand tokens (from _config/brand-voice.md) ---------------------- */
+    :root {
+      --navy:        #0F1A2E;
+      --navy-mid:    #2A3F63;
+      --copper:      #C07830;
+      --gold:        #D4A853;
+      --off-white:   #F4F1EC;
+      --light-gray:  #E8E6E1;
+      --mid-gray:    #8A8A96;
+      --dark-text:   #1C1C1C;
+      --font: "Inter", "Helvetica Neue", Arial, sans-serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: var(--font);
+      background: var(--off-white);
+      color: var(--dark-text);
+      line-height: 1.6;
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .skip-link {
+      position: absolute;
+      left: -999px;
+      top: 0;
+      background: var(--gold);
+      color: var(--navy);
+      padding: 10px 16px;
+      font-weight: 700;
+      z-index: 10;
+    }
+    .skip-link:focus { left: 8px; top: 8px; }
+
+    /* ---- Header / hero --------------------------------------------------- */
+    header {
+      background: linear-gradient(160deg, rgba(15,26,46,0.72) 0%, rgba(10,18,33,0.82) 100%), url('StockCake-Cosmic_Web_Complexity-1361288-standard-rot90ccw.jpg'); background-size: auto, 100% 100%; background-repeat: no-repeat, no-repeat; background-position: center, center;
+      color: var(--off-white);
+      padding: 56px 24px 60px;
+      position: relative;
+      overflow: hidden;
+    }
+    header::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 85% 15%, rgba(192,120,48,0.20) 0%, rgba(15,26,46,0) 55%);
+      pointer-events: none;
+    }
+    .header-inner { max-width: 960px; margin: 0 auto; position: relative; z-index: 1; }
+
+    .wordmark {
+      font-weight: 800;
+      font-size: 1.25rem;
+      letter-spacing: 0.02em;
+      margin-bottom: 36px;
+    }
+    .wordmark .dot { color: var(--copper); }
+    .wordmark a {
+      color: var(--off-white);
+      text-decoration: none;
+      transition: opacity 0.18s ease;
+    }
+    .wordmark a:hover, .wordmark a:focus-visible { opacity: 0.85; outline: none; }
+
+    .eyebrow {
+      display: inline-block;
+      font-size: 0.74rem;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 16px;
+    }
+
+    header h1 {
+      font-weight: 800;
+      font-size: clamp(1.9rem, 5vw, 2.8rem);
+      line-height: 1.12;
+      letter-spacing: -0.01em;
+      margin-bottom: 18px;
+      max-width: 22ch;
+    }
+
+    header p.intro {
+      font-size: 1.05rem;
+      color: var(--light-gray);
+      max-width: 66ch;
+    }
+    header p.intro + p.intro { margin-top: 14px; }
+
+    .hero-cta {
+      display: inline-block;
+      margin-top: 30px;
+      background: var(--copper);
+      color: #fff;
+      font-weight: 700;
+      font-size: 0.98rem;
+      padding: 13px 26px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.18s ease;
+    }
+    .hero-cta:hover, .hero-cta:focus-visible { background: var(--gold); color: var(--navy); outline: none; }
+
+    /* ---- Content --------------------------------------------------------- */
+    main {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 56px 24px 24px;
+    }
+
+    .section-eyebrow {
+      display: block;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--copper);
+      margin-bottom: 10px;
+    }
+    .section-title {
+      font-weight: 800;
+      font-size: 1.6rem;
+      color: var(--navy);
+      line-height: 1.2;
+      margin-bottom: 14px;
+      letter-spacing: -0.01em;
+    }
+    .section-lead {
+      font-size: 1.05rem;
+      color: var(--dark-text);
+      max-width: 68ch;
+      margin-bottom: 30px;
+    }
+
+    /* ---- Research card grid --------------------------------------------- */
+    .research-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      margin-bottom: 12px;
+    }
+    .research-card {
+      display: flex;
+      flex-direction: column;
+      background: #fff;
+      border: 1px solid var(--light-gray);
+      border-top: 4px solid var(--copper);
+      border-radius: 12px;
+      padding: 26px 26px 22px;
+    }
+    .research-card .card-eyebrow {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--copper);
+      margin-bottom: 10px;
+    }
+    .research-card h3 {
+      font-weight: 700;
+      font-size: 1.18rem;
+      color: var(--navy);
+      line-height: 1.25;
+      margin-bottom: 12px;
+    }
+    .research-card p {
+      color: var(--dark-text);
+      font-size: 0.97rem;
+      margin-bottom: 18px;
+    }
+    .research-card .read-link {
+      margin-top: auto;
+      align-self: flex-start;
+      color: var(--copper);
+      font-weight: 600;
+      font-size: 0.92rem;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(192,120,48,0.35);
+      transition: border-color 0.18s ease;
+    }
+    .research-card .read-link:hover,
+    .research-card .read-link:focus-visible { border-bottom-color: var(--copper); outline: none; }
+
+    /* ---- Methodology / trust note --------------------------------------- */
+    .ethic {
+      background: var(--navy);
+      color: var(--light-gray);
+      border-radius: 12px;
+      padding: 34px 32px;
+      margin: 40px 0 48px;
+    }
+    .ethic .quote {
+      font-weight: 800;
+      font-size: clamp(1.3rem, 3.2vw, 1.75rem);
+      line-height: 1.28;
+      color: var(--off-white);
+      letter-spacing: -0.01em;
+      margin-bottom: 16px;
+    }
+    .ethic .quote span { color: var(--gold); }
+    .ethic p { color: var(--light-gray); max-width: 66ch; }
+    .ethic p + p { margin-top: 12px; }
+
+    /* ---- Further reading ------------------------------------------------- */
+    .further { margin-top: 8px; }
+    .reading-note {
+      font-size: 0.95rem;
+      color: var(--navy-mid);
+      max-width: 68ch;
+      margin-bottom: 28px;
+    }
+    .reading-group { margin-bottom: 26px; }
+    .reading-group h3 {
+      font-weight: 700;
+      font-size: 1.02rem;
+      color: var(--navy);
+      margin-bottom: 12px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--light-gray);
+    }
+    .reading-group ul { list-style: none; }
+    .reading-group li { margin-bottom: 9px; padding-left: 18px; position: relative; }
+    .reading-group li::before {
+      content: "\2197";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: var(--copper);
+      font-weight: 700;
+    }
+    .reading-group a {
+      color: var(--dark-text);
+      text-decoration: none;
+      font-weight: 600;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.18s ease, color 0.18s ease;
+    }
+    .reading-group a:hover, .reading-group a:focus-visible {
+      color: var(--navy);
+      border-bottom-color: var(--copper);
+      outline: none;
+    }
+    .reading-group .src { color: var(--mid-gray); font-weight: 400; font-size: 0.9rem; }
+
+    /* ---- Cross-link note ------------------------------------------------- */
+    .prereq {
+      background: #fff;
+      border: 1px solid var(--light-gray);
+      border-left: 4px solid var(--copper);
+      border-radius: 10px;
+      padding: 24px 28px;
+      margin: 40px 0 48px;
+    }
+    .prereq h4 { font-weight: 700; color: var(--navy); margin-bottom: 6px; font-size: 1.05rem; }
+    .prereq p { color: var(--dark-text); }
+    .prereq a { color: var(--copper); font-weight: 600; }
+
+    /* ---- CTA band -------------------------------------------------------- */
+    .cta-band {
+      background: var(--navy);
+      color: var(--off-white);
+      border-radius: 12px;
+      padding: 44px 34px;
+      text-align: center;
+      margin-bottom: 8px;
+    }
+    .cta-band h2 {
+      font-weight: 800;
+      font-size: clamp(1.5rem, 3.6vw, 2rem);
+      margin-bottom: 12px;
+      letter-spacing: -0.01em;
+    }
+    .cta-band p { color: var(--light-gray); max-width: 54ch; margin: 0 auto 26px; }
+    .cta-band .btn {
+      display: inline-block;
+      background: var(--copper);
+      color: #fff;
+      font-weight: 700;
+      padding: 14px 30px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.18s ease;
+    }
+    .cta-band .btn:hover, .cta-band .btn:focus-visible { background: var(--gold); color: var(--navy); outline: none; }
+
+    /* ---- Footer ---------------------------------------------------------- */
+    footer {
+      max-width: 960px;
+      margin: 16px auto 0;
+      padding: 24px;
+      font-size: 0.82rem;
+      color: var(--mid-gray);
+      border-top: 1px solid var(--light-gray);
+    }
+    footer p + p { margin-top: 6px; }
+    footer a { color: var(--mid-gray); text-decoration: underline; }
+
+    @media (prefers-reduced-motion: reduce) {
+      * { transition: none !important; }
+    }
+  
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header>
+    <div class="header-inner">
+      <div class="wordmark"><a href="index.html">Malaniru<span class="dot">.</span></a></div>
+      <span class="eyebrow">AI Enablement &middot; Daily Intelligence</span>
+      <h1>Daily Intelligence Briefings</h1>
+      <p class="intro">
+        Our running daily read on the AI market &mdash; model releases, agentic tooling,
+        funding, acquisitions, and the governance signals that matter for organizations
+        adopting AI. Each briefing is sourced; self-reported and directional claims are
+        labeled as such.
+      </p>
+      <p class="intro">
+        Looking for our long-form sector research instead?
+        <a class="backlink" href="philanthropy-ai-research.html" style="margin-top:10px">Philanthropy &amp; AI Research &rarr;</a>
+      </p>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ===================== BRIEFINGS ===================== -->
+    <section aria-labelledby="briefings-heading">
+      <span class="section-eyebrow">Daily Intelligence</span>
+      <h2 class="section-title" id="briefings-heading">Every briefing, newest first</h2>
+      <p class="section-lead">
+        42 daily intelligence briefings. Each opens as a standalone article with the full
+        write-up, rankings, and sources.
+      </p>
+
+      <div class="research-grid">
+
+        <article class="research-card">
+          <span class="card-eyebrow">Daily Briefing</span>
+          <h3>Daily Intelligence Briefing — June 23, 2026</h3>
+          <p>Claude suffers a live outage affecting Cowork, Code, and the API; Fable 5 moves to paid usage credits at double Opus 4.8's price. The week's lesson: single-source dependency, not frontier risk. Plus SpaceX–Cursor, OpenAI–Astral, and the converging GPT-5.6 / Gemini 3.5 Pro calendar.</p>
+          <a class="read-link" href="briefing-2026-06-23.html">Read the briefing &rarr;</a>
+        </article>
+
+        <article class="research-card">
+          <span class="card-eyebrow">Daily Briefing</span>
+          <h3>Daily Intelligence Briefing — June 21, 2026</h3>
+          <p>Day 9 of the Fable 5 suspension with no restore date. The Anthropic–OpenAI partner-network race fully joins ($100M vs $150M). A Black Duck study quantifies the AI-code governance gap: 97% adoption, one-third with full governance. No new frontier model shipped over the weekend.</p>
+          <a class="read-link" href="briefing-2026-06-21.html">Read the briefing &rarr;</a>
+        </article>
+
+        <article class="research-card">
+          <span class="card-eyebrow">Daily Briefing</span>
+          <h3>Daily Intelligence Briefing — June 19, 2026: Day 7 of the Fable 5 Blackout, and Grok 4.3 Ships to Bedrock</h3>
+          <p>A week into the US export-control suspension, Claude Fable 5 and Mythos 5 remain offline with no restore date, and the week's hopeful '48-hour' rumor lapsed without a return. xAI's Grok 4.3 reached GA on Amazon Bedrock — the only new shipping event in the window. Opus 4.8 stays the reliable flagship. Plus GPT-5.6 still unannounced, Gemini 3.5 Pro odds softening, and why availability is now a governance variable.</p>
+          <a class="read-link" href="briefing-2026-06-19.html">Read the briefing &rarr;</a>
+        </article>
+
+        <article class="research-card">
+          <span class="card-eyebrow">Daily Briefing</span>
+          <h3>Daily Intelligence Briefing — June 18, 2026: A Frontier Model Went Dark in Three Days</h3>
+          <p>A US government export-control directive forced Anthropic to suspend Claude Fable 5 and Mythos 5 worldwide, days after launch — and they remain offline. The reliable flagship reverts to Opus 4.8. Plus GPT-5.6 nearing, Gemini 3.5 Pro still pre-GA, and what model-continuity planning now means for foundation leaders.</p>
+          <a class="read-link" href="briefing-2026-06-18.html">Read the briefing &rarr;</a>
+        </article>
+
+        <article class="research-card">
+          <span class="card-eyebrow">Daily Briefing</span>
+          <h3>Daily Intelligence Briefing — June 15, 2026: The Deadline Is Today</h3>
+          <p>The Claude June 15 changes are no longer a countdown — the Agent SDK billing split and Claude 4 API retirement take effect today, moving the action from preparation to verification. Plus Fable 5's free window, a steady watch list, and the day's agentic AI landscape for foundation leaders.</p>
+          <a class="read-link" href="briefing-2026-06-15.html">Read the briefing &rarr;</a>
+        </article>
+
+        <article class="research-card">
+          <span class="card-eyebrow">Daily Briefing</span>
+          <h3>Daily Intelligence Briefing — June 14, 2026: One Day to the June 15 Deadline</h3>
+          <p>The Claude June 15 changes are now one day out — and a separate Agent SDK credit must be claimed before the date. Plus the resolved Opus migration target, a new open-weight agentic coder, and the day's agentic AI landscape for foundation leaders.</p>
+          <a class="read-link" href="briefing-2026-06-14.html">Read the briefing &rarr;</a>
+        </article>
+
+        <article class="research-card">
+          <span class="card-eyebrow">Daily Briefing</span>
+          <h3>Daily Intelligence Briefing — June 13, 2026: Verify the Number, Not the Headline</h3>
+          <p>Fable 5's top benchmark gets independent confirmation while its loudest number stays vendor-reported, the June 15 Claude 4 retirement is now confirmed, and foundation AI funding accelerates — the day's agentic AI landscape for foundation leaders.</p>
+          <a class="read-link" href="briefing-2026-06-13.html">Read the briefing &rarr;</a>
+        </article>
+
+        <article class="research-card">
+          <span class="card-eyebrow">Daily Briefing</span>
+          <h3>Daily Intelligence Briefing — June 12, 2026: Anthropic's $150M Move Into Nonprofits</h3>
+          <p>Claude Corps puts 1,000 paid AI fellows inside 400+ nonprofits, the June 15 billing split nears, and Fable 5 stays free through June 22 — the day's agentic AI landscape, read for foundation leaders.</p>
+          <a class="read-link" href="briefing-2026-06-12.html">Read the briefing &rarr;</a>
+        </article>
+
+        <article class="research-card">
+          <span class="card-eyebrow">Daily Briefing</span>
+          <h3>Daily Intelligence Briefing — June 11, 2026: Agents Go on Autopilot</h3>
+          <p>Claude Managed Agents enter public beta with cron scheduling and credential vaults, Claude lands inside Apple's Foundation Models framework, and independent benchmarks for Fable 5 arrive with a scaffold caveat.</p>
+          <a class="read-link" href="briefing-2026-06-11.html">Read the briefing &rarr;</a>
+        </article>
+
+        <article class="research-card">
+          <span class="card-eyebrow">Daily Briefing</span>
+          <h3>Daily Intelligence Briefing — June 9, 2026: A quiet model week, a loud compliance calendar</h3>
+          <p>No new frontier model shipped this week. The items that matter are dates: the EU AI Act's August 2 high-risk deadline, a resolved Claude outage, and the near-term MCP and billing changes.</p>
+          <a class="read-link" href="briefing-2026-06-09.html">Read the briefing &rarr;</a>
+        </article>
+
+        <article class="research-card">
+          <span class="card-eyebrow">Daily Briefing</span>
+          <h3>Daily Intelligence Briefing — June 7, 2026</h3>
+          <p>Anthropic formalizes the Claude Partner Network with a tiered Services Track and Partner Hub; a June 5 platform outage raises reliability questions; Gemini 3.5 Pro and GPT-5.6 remain pre-release.</p>
+          <a class="read-link" href="briefing-2026-06-07.html">Read the briefing &rarr;</a>
+        </article>
+
+        <article class="research-card">
+          <span class="card-eyebrow">Daily Briefing</span>
+          <h3>Daily Intelligence Briefing — Wednesday, June 3, 2026</h3>
+          <p>The frontier stayed still this week, but the commercial layer moved: Anthropic filed confidentially for an IPO, expanded its Mythos security preview to ~200 organizations, and changed how agent usage is billed — prompting an immediate OpenAI counter-offer.</p>
+          <a class="read-link" href="briefing-2026-06-03.html">Read the briefing &rarr;</a>
+        </article>
+
+        <article class="research-card">
+          <span class="card-eyebrow">Daily Briefing</span>
+          <h3>Daily Intelligence Briefing — Friday, May 29, 2026</h3>
+          <p>An extended catch-up edition covering the May 22–29 window, defined by a single day: Anthropic closed a $65B Series H at a $965B valuation and shipped Claude Opus 4.8 — leading the model launch with a claim about honesty rather than raw benchmark supremacy.</p>
+          <a class="read-link" href="briefing-2026-05-29.html">Read the briefing &rarr;</a>
+        </article>
+
+        <article class="research-card">
+          <span class="card-eyebrow">Daily Briefing</span>
+          <h3>Daily Intelligence Briefing — Thursday, May 21, 2026</h3>
+          <p>The week the AI race shifted from capability to distribution: KPMG becomes the second Big-4 firm to embed Claude Cowork, Google I/O ships Gemini 3.5 Flash and the Spark agent, and the CAISI pre-deployment evaluation regime is confirmed across all five US frontier labs.</p>
+          <a class="read-link" href="briefing-2026-05-21.html">Read the briefing &rarr;</a>
+        </article>
+
+        <article class="research-card">
+          <span class="card-eyebrow">Daily Briefing</span>
+          <h3>Daily Intelligence Briefing — Monday, May 18, 2026</h3>
+          <p>CAISI pre-deployment evaluation regime reportedly finalized with all five frontier labs; Google I/O opens tomorrow with Gemini 4.0 expected; Anthropic raise repriced to $30B at $900B+; EU AI Act transparency obligations reportedly shift to December 2, 2026.</p>
+          <a class="read-link" href="briefing-2026-05-18.html">Read the briefing &rarr;</a>
+        </article>
+
+        <article class="research-card">
+          <span class="card-eyebrow">Daily Briefing</span>
+          <h3>Daily Intelligence Briefing — Sunday, May 17, 2026</h3>
+          <p>Anthropic × Gates Foundation $200M partnership, expanded PwC alliance, Agent SDK billing restructure (effective June 15), Claude Code Routines, OpenAI Codex on mobile, and the SWE-bench Pro / CyberGym capability split.</p>
+          <a class="read-link" href="briefing-2026-05-17.html">Read the briefing &rarr;</a>
+        </article>
+
+        <article class="research-card">
+          <span class="card-eyebrow">Daily Briefing</span>
+          <h3>Daily Agentic AI Intelligence Briefing — May 13, 2026</h3>
+          <p>Anthropic ships Claude for Legal (12 plugins, 20+ MCP connectors, four named law firms, access-to-justice arm), AWS makes Claude Platform on AWS generally available, SAP Sapphire 2026 unveils the Autonomous Enterprise with Claude as primary reasoning engine, OpenAI launches the $4B Deployment Company with the Tomoro acquisition, and Anthropic is reportedly in talks for $50B at a $900B valuation.</p>
+          <a class="read-link" href="briefing-2026-05-13.html">Read the briefing &rarr;</a>
+        </article>
+
+        <article class="research-card">
+          <span class="card-eyebrow">Daily Briefing</span>
+          <h3>Daily Agentic AI Intelligence Briefing — May 9, 2026</h3>
+          <p>Anthropic publishes 'Teaching Claude why' tracing agentic-misalignment behaviors to internet pre-training text, Snyk launches Evo by Snyk embedding Claude for per-asset agent governance, Coder Agents ship in beta as a self-hosted alternative, and the agent-governance market resolves into five distinct categories.</p>
+          <a class="read-link" href="briefing-2026-05-09.html">Read the briefing &rarr;</a>
+        </article>
+
+        <article class="research-card">
+          <span class="card-eyebrow">Daily Briefing</span>
+          <h3>Daily Agentic AI Intelligence Briefing — May 8, 2026</h3>
+          <p>The EU Digital Omnibus on AI closes six days early, Anthropic publishes Natural Language Autoencoders, OpenAI ships a realtime voice cluster, AWS MCP Server hits GA, and Microsoft Agent 365 reaches general availability at $15 per user per month.</p>
+          <a class="read-link" href="briefing-2026-05-08.html">Read the briefing &rarr;</a>
+        </article>
+
+        <article class="research-card">
+          <span class="card-eyebrow">Daily Briefing</span>
+          <h3>Daily Agentic AI Intelligence Briefing — May 7, 2026</h3>
+          <p>Anthropic's SpaceX–Colossus 1 compute deal, the 17x API growth disclosure at Code with Claude, ServiceNow Project Arc, OpenAI GPT-5.5 Instant, and the EU AI Act trilogue countdown reshape the agentic AI landscape this week.</p>
+          <a class="read-link" href="briefing-2026-05-07.html">Read the briefing &rarr;</a>
+        </article>
+
+        <article class="research-card">
+          <span class="card-eyebrow">Daily Briefing</span>
+          <h3>Daily Intelligence Briefing — Tuesday, May 5, 2026</h3>
+          <p>Tuesday agentic AI briefing: Microsoft repositions Agent 365 + Microsoft 365 E7 as an 'agent-first operating layer' and releases the 2026 Work Trend Index (78% weekly knowledge-worker AI-agent use, vendor-survey caveat). SAP acquires Prior Labs with €1B+ commitment to build a Europe-headquartered frontier lab for Tabular Foundation Models. Musk v. Altman week 2: Brockman discloses ~$30B stake and financial entanglements with Altman; OpenAI reveals settlement message. EU AI Act Digital Omnibus next trilogue May 13 — Annex I conformity assessment is the open issue. Anthropic $50B / ~$900B round still in talks.</p>
+          <a class="read-link" href="briefing-2026-05-05.html">Read the briefing &rarr;</a>
+        </article>
+
+        <article class="research-card">
+          <span class="card-eyebrow">Daily Briefing</span>
+          <h3>Daily Intelligence Briefing — Monday, May 4, 2026</h3>
+          <p>Monday agentic AI briefing: Anthropic and OpenAI both announce enterprise-services joint ventures the same day — Anthropic's $1.5B vehicle with Blackstone, Hellman &amp; Friedman, and Goldman Sachs; OpenAI's $10B Deployment Company with TPG, Brookfield, Bain, and Advent. Anthropic in talks for $50B raise at $900B valuation. Microsoft 365 E7 Frontier Suite GA. NIST CAISI evaluates DeepSeek V4 Pro. Cursor Security Review and SDK in beta. Musk v. Altman week 2 begins with Brockman testifying.</p>
+          <a class="read-link" href="briefing-2026-05-04.html">Read the briefing &rarr;</a>
+        </article>
+
+        <article class="research-card">
+          <span class="card-eyebrow">Daily Briefing</span>
+          <h3>Daily Intelligence Briefing — Saturday, May 2, 2026</h3>
+          <p>Saturday agentic AI briefing: Microsoft FY26 Q3 actuals beat consensus (Azure +40%, AI ARR $37B, FY26 capex ~$190B), Microsoft Agent 365 reaches GA, Anthropic launches Claude Security public beta, OpenAI announces GPT-5.5-Cyber, Musk v. Altman week 1 closes without verdict, plus weekly sections on Foundation &amp; Philanthropy AI Adoption (Humanity AI $500M coalition) and Data &amp; Security Regulations.</p>
+          <a class="read-link" href="briefing-2026-05-02.html">Read the briefing &rarr;</a>
+        </article>
+
+        <article class="research-card">
+          <span class="card-eyebrow">Daily Briefing</span>
+          <h3>Daily Intelligence Briefing — Wednesday, April 29, 2026</h3>
+          <p>Wednesday agentic AI briefing: Microsoft FY26 Q3 earnings tonight after market close, Musk v. Altman in Day 3 with Musk back on the stand, NVIDIA Nemotron 3 Nano Omni open multimodal release with Foxconn / Palantir / Oracle as named adopters, and the Affinity MCP server launch.</p>
+          <a class="read-link" href="briefing-2026-04-29.html">Read the briefing &rarr;</a>
+        </article>
+
+        <article class="research-card">
+          <span class="card-eyebrow">Daily Briefing</span>
+          <h3>Daily Intelligence Briefing — Tuesday, April 28, 2026</h3>
+          <p>Tuesday agentic AI briefing: 24-hour read on the Microsoft–OpenAI restructure (Microsoft Copilot is now formally multi-model with Claude), Musk v. Altman opening arguments begin, Claude Code v2.1.121 ships, and Microsoft Q3 earnings drop tomorrow.</p>
+          <a class="read-link" href="briefing-2026-04-28.html">Read the briefing &rarr;</a>
+        </article>
+
+        <article class="research-card">
+          <span class="card-eyebrow">Daily Briefing</span>
+          <h3>Daily Intelligence Briefing — Monday, April 27, 2026</h3>
+          <p>Monday agentic AI briefing: Microsoft and OpenAI restructure their partnership to non-exclusive, OpenAI gains multi-cloud distribution, Microsoft Agent 365 GA arrives May 1, and the integrator channel becomes a primary competitive axis.</p>
+          <a class="read-link" href="briefing-2026-04-27.html">Read the briefing &rarr;</a>
+        </article>
+
+        <article class="research-card">
+          <span class="card-eyebrow">Daily Briefing</span>
+          <h3>Daily Intelligence Briefing — Sunday, April 26, 2026</h3>
+          <p>Sunday agentic AI briefing: OpenAI Sora retired today, DeepSeek V4 specs firm up at 1.6T parameters with 1M context, Microsoft's open-source Agent Governance Toolkit closes the OWASP gap, and Adobe ships an MCP-native enterprise CX platform.</p>
+          <a class="read-link" href="briefing-2026-04-26.html">Read the briefing &rarr;</a>
+        </article>
+
+        <article class="research-card">
+          <span class="card-eyebrow">Daily Briefing</span>
+          <h3>Daily Intelligence Briefing — Saturday, April 25, 2026</h3>
+          <p>Saturday agentic AI intelligence briefing: Google's $40B Anthropic commitment, OpenAI GPT-5.5, Microsoft Copilot Agent Mode GA, the Humanity AI $500M foundation initiative, and the EU AI Act August 2 enforcement clock.</p>
+          <a class="read-link" href="briefing-2026-04-25.html">Read the briefing &rarr;</a>
+        </article>
+
+        <article class="research-card">
+          <span class="card-eyebrow">Daily Briefing</span>
+          <h3>Daily Intelligence Briefing — Thursday, April 23, 2026</h3>
+          <p>Anthropic crosses ~$1T implied secondary-market valuation and overtakes OpenAI; Google Cloud Next '26 consolidates Vertex AI into Gemini Enterprise Agent Platform with A2A v1.0 in production at 150 orgs; Microsoft integrates Claude Mythos into its Security Development Lifecycle the same day Sullivan &amp; Cromwell warns bank CEOs about it; OpenAI ships Workspace Agents.</p>
+          <a class="read-link" href="briefing-2026-04-23.html">Read the briefing &rarr;</a>
+        </article>
+
+        <article class="research-card">
+          <span class="card-eyebrow">Daily Briefing</span>
+          <h3>Daily Intelligence Briefing — Wednesday, April 22, 2026</h3>
+          <p>Anthropic's Claude Code pricing experiment becomes the second opaque vendor change in two weeks; Google Cloud Next 2026 opens with agentic-cloud keynote; Q1 2026 venture capital hits $297B–$331B with ~80% to AI.</p>
+          <a class="read-link" href="briefing-2026-04-22.html">Read the briefing &rarr;</a>
+        </article>
+
+        <article class="research-card">
+          <span class="card-eyebrow">Daily Briefing</span>
+          <h3>Daily Intelligence Briefing — Tuesday, April 21, 2026</h3>
+          <p>Amazon's $25B Anthropic commitment and a first-party reliability acknowledgement reframe the week; MCP moves to foundation governance; enterprise agent frameworks ship parallel updates.</p>
+          <a class="read-link" href="briefing-2026-04-21.html">Read the briefing &rarr;</a>
+        </article>
+
+        <article class="research-card">
+          <span class="card-eyebrow">Daily Briefing</span>
+          <h3>Daily Intelligence Briefing — Sunday, April 19, 2026</h3>
+          <p>Anthropic manages a three-front weekend — the Claude effort backlash enters its second week, the MCP STDIO disclosure remains unpatched, and Dario Amodei meets the White House — while Nvidia and Cloudflare consolidate the agentic infrastructure stack.</p>
+          <a class="read-link" href="briefing-2026-04-19.html">Read the briefing &rarr;</a>
+        </article>
+
+        <article class="research-card">
+          <span class="card-eyebrow">Daily Briefing</span>
+          <h3>Daily Intelligence Briefing — Saturday, April 18, 2026</h3>
+          <p>Anthropic extends its launch week with Claude Design, reshaping the application-layer competitive picture — while OX Security's MCP disclosure sharpens the vendor governance conversation heading into the June 30 Colorado AI Act deadline.</p>
+          <a class="read-link" href="briefing-2026-04-18.html">Read the briefing &rarr;</a>
+        </article>
+
+        <article class="research-card">
+          <span class="card-eyebrow">Daily Briefing</span>
+          <h3>Daily Intelligence Briefing — Friday, April 17, 2026</h3>
+          <p>Claude Opus 4.7 ships with benchmark-leading performance and tripled vision — but lands in Anthropic's most turbulent week of 2026, raising governance questions across pricing, identity verification, and platform reliability.</p>
+          <a class="read-link" href="briefing-2026-04-17.html">Read the briefing &rarr;</a>
+        </article>
+
+        <article class="research-card">
+          <span class="card-eyebrow">Daily Briefing</span>
+          <h3>Daily Intelligence Briefing — Thursday, April 16, 2026</h3>
+          <p>Anthropic's most friction-dense 24 hours of 2026: major outage, enterprise pricing shift to usage-based billing, identity verification rollout, and ongoing performance backlash — plus what it means for governed AI adoption.</p>
+          <a class="read-link" href="briefing-2026-04-16.html">Read the briefing &rarr;</a>
+        </article>
+
+        <article class="research-card">
+          <span class="card-eyebrow">Daily Briefing</span>
+          <h3>Daily Agentic AI Intelligence Briefing — April 15, 2026</h3>
+          <p>Claude Code Routines launches autonomous cloud automation; mainstream coverage of the Claude performance backlash confirms an undisclosed March 3 default-effort change; Conway leak exposes the always-on agent platform beneath it all.</p>
+          <a class="read-link" href="briefing-2026-04-15.html">Read the briefing &rarr;</a>
+        </article>
+
+        <article class="research-card">
+          <span class="card-eyebrow">Daily Briefing</span>
+          <h3>Daily Agentic AI Intelligence Briefing — April 13, 2026</h3>
+          <p>Anthropic dominates HumanX conference sentiment; OutSystems quantifies the AI governance gap at 94% sprawl concern, 12% centralized management; Claude Mythos Preview triggers emergency banking meetings.</p>
+          <a class="read-link" href="briefing-2026-04-13.html">Read the briefing &rarr;</a>
+        </article>
+
+        <article class="research-card">
+          <span class="card-eyebrow">Daily Briefing</span>
+          <h3>Daily Intelligence Briefing — April 11, 2026</h3>
+          <p>CoreWeave–Anthropic multi-year compute deal, Claude for Word public beta completes Office integration, Anthropic explores custom silicon, and the Saturday weekly sections on foundation AI adoption and data/security regulation.</p>
+          <a class="read-link" href="briefing-2026-04-11.html">Read the briefing &rarr;</a>
+        </article>
+
+        <article class="research-card">
+          <span class="card-eyebrow">Daily Briefing</span>
+          <h3>Daily Intelligence Briefing — April 10, 2026</h3>
+          <p>Claude Cowork goes generally available with an enterprise control plane. Managed Agents expands. Moody's ships a native MCP app inside Claude. Microsoft Agent Framework 1.0 lands with full MCP support.</p>
+          <a class="read-link" href="briefing-2026-04-10.html">Read the briefing &rarr;</a>
+        </article>
+
+        <article class="research-card">
+          <span class="card-eyebrow">Daily Briefing</span>
+          <h3>Daily Intelligence Briefing — April 9, 2026</h3>
+          <p>Anthropic launches Claude Managed Agents, revenue crosses $30B run rate, and OutSystems data confirms the enterprise governance gap at 94% concern.</p>
+          <a class="read-link" href="briefing-2026-04-09.html">Read the briefing &rarr;</a>
+        </article>
+
+        <article class="research-card">
+          <span class="card-eyebrow">Daily Briefing</span>
+          <h3>Daily Agentic AI Intelligence Briefing — April 8, 2026</h3>
+          <p>Anthropic's Mythos model and Project Glasswing, the Claude Code source leak, enterprise LLM market share shifts, EY's global agentic AI rollout, and Microsoft's Agent Governance Toolkit reshape the agentic AI landscape.</p>
+          <a class="read-link" href="briefing-2026-04-08.html">Read the briefing &rarr;</a>
+        </article>
+
+        <article class="research-card">
+          <span class="card-eyebrow">Daily Briefing</span>
+          <h3>Daily Intelligence Briefing — April 7, 2026</h3>
+          <p>Q1 2026 shatters venture records at $300B with 80% flowing to AI. AWS ships DevOps and Security agents to GA. Anthropic enforces third-party harness restrictions. Agentic AI rankings across three lenses.</p>
+          <a class="read-link" href="briefing-2026-04-07.html">Read the briefing &rarr;</a>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ===================== METHODOLOGY / TRUST ===================== -->
+    <section class="ethic" aria-label="How we source this research">
+      <p class="quote">We treat a <span>wrong answer as worse than no answer.</span></p>
+      <p>
+        Every briefing draws on named sources &mdash; primary announcements, reputable trade
+        press, and sector research. Vendor and self-reported figures are labeled as such, and
+        claims we can't source are flagged rather than stated as fact.
+      </p>
+    </section>
+
+    <!-- ===================== CLOSING CTA ===================== -->
+    <section class="cta-band" id="contact" aria-labelledby="cta-heading">
+      <h2 id="cta-heading">From AI curiosity to AI capability</h2>
+      <p>A curated, white-glove Claude Cowork implementation, tailored to your organization's workflow.</p>
+      <a class="btn" href="https://calendly.com/mark-malaniru/30min" target="_blank" rel="noopener">Book a discovery call</a>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Malaniru Inc, LLC &middot; Lafayette, Colorado &middot; AI Enablement</p>
+    <p><a href="philanthropy-ai-research.html">Philanthropy &amp; AI Research &rarr;</a> &middot; <a href="index.html">Back to AI Enablement &rarr;</a></p>
+      <nav class="mal-footernav" data-mal-footernav aria-label="Site" style="margin-top:0.7rem;font-size:0.82rem;line-height:1.9;">
+      <a href="about.html" style="color:#C07830;font-weight:700;text-decoration:none;">About</a> &middot;
+      <a href="pricing.html" style="color:#C07830;font-weight:700;text-decoration:none;">Pricing</a> &middot;
+      <a href="index.html" style="color:#C07830;font-weight:700;text-decoration:none;">AI Enablement</a>
+    </nav>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<!--
+  ============================================================================
+  Malaniru - Research article page (branded HTML)
+  Built by: Web (Morgan Shaw) - Date: 2026-06-23
+  Project:  Malaniru_Marketing_Site
+  Source:   Website/src/content/research/20260621-daily-intelligence-briefing.md
+  Purpose:  Standalone public article page for a daily intelligence briefing,
+            linked from philanthropy-ai-research.html.
+  STATUS:   Public marketing page. robots noindex pre-launch (mirrors template).
+            Calendly CTA hidden via CSS (per Principal, as in template).
+  FIDELITY: Article body rendered VERBATIM from the approved markdown. No copy
+            edits, no reordered sections, no changed figures or heading levels.
+  FLAGS:    header H1 uses the article's own title line ("Daily Intelligence Briefing — Sunday, June 21, 2026"); frontmatter title ("Daily Intelligence Briefing — June 21, 2026") used for <title> tag/listing.
+  TECH:     Single self-contained HTML5 file. Embedded CSS. No JavaScript.
+            Template-matched (philanthropy-ai-adoption.html). WCAG AA. Mobile-first.
+  ============================================================================
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daily Intelligence Briefing — June 21, 2026 - Malaniru</title>
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="Day 9 of the Fable 5 suspension with no restore date. The Anthropic–OpenAI partner-network race fully joins ($100M vs $150M). A Black Duck study quantifies the AI-code governance gap: 97% adoption, one-third with full governance. No new frontier model shipped over the weekend.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --navy:#0F1A2E;--navy-mid:#2A3F63;--copper:#C07830;--gold:#D4A853;
+      --off-white:#F4F1EC;--light-gray:#E8E6E1;--mid-gray:#8A8A96;--dark-text:#1C1C1C;
+      --font:"Inter","Helvetica Neue",Arial,sans-serif;
+    }
+    *{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:var(--font);background:var(--off-white);color:var(--dark-text);line-height:1.65;font-size:16px;-webkit-font-smoothing:antialiased;}
+    .skip-link{position:absolute;left:-999px;top:0;background:var(--gold);color:var(--navy);padding:10px 16px;font-weight:700;z-index:10;}
+    .skip-link:focus{left:8px;top:8px;}
+    a{color:var(--copper);}
+    /* Header */
+    header{background: linear-gradient(160deg, rgba(15,26,46,0.72) 0%, rgba(10,18,33,0.82) 100%), url('StockCake-Cosmic_Web_Complexity-1361288-standard-rot90ccw.jpg'); background-size: auto, 100% 100%; background-repeat: no-repeat, no-repeat; background-position: center, center;color:var(--off-white);padding:48px 24px 52px;position:relative;overflow:hidden;}
+    header::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 85% 12%,rgba(192,120,48,0.20) 0%,rgba(15,26,46,0) 55%);pointer-events:none;}
+    .header-inner{max-width:760px;margin:0 auto;position:relative;z-index:1;}
+    .wordmark{font-weight:800;font-size:1.25rem;letter-spacing:0.02em;margin-bottom:30px;}
+    .wordmark .dot{color:var(--copper);}
+    .wordmark a{color:var(--off-white);text-decoration:none;transition:opacity .18s ease;}
+    .wordmark a:hover,.wordmark a:focus-visible{opacity:.85;outline:none;}
+    .eyebrow{display:inline-block;font-size:0.72rem;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;}
+    header h1{font-weight:800;font-size:clamp(1.8rem,4.6vw,2.6rem);line-height:1.14;letter-spacing:-0.01em;margin-bottom:16px;}
+    .byline{font-size:0.9rem;color:var(--light-gray);letter-spacing:0.01em;}
+    .byline .sep{color:var(--copper);margin:0 8px;}
+    .lede{font-size:1.08rem;color:var(--light-gray);max-width:66ch;margin-top:18px;}
+    .backlink{display:inline-block;margin-top:26px;color:var(--gold);font-weight:600;font-size:0.9rem;text-decoration:none;border-bottom:1px solid rgba(212,168,83,0.4);}
+    .backlink:hover,.backlink:focus-visible{border-bottom-color:var(--gold);outline:none;}
+    /* Article */
+    main{max-width:760px;margin:0 auto;padding:48px 24px 8px;}
+    .disclaimer{background:#fff;border:1px solid var(--light-gray);border-left:4px solid var(--copper);border-radius:8px;padding:14px 18px;font-size:0.9rem;color:var(--navy-mid);margin-bottom:34px;}
+    article{font-size:1.05rem;}
+    article h2{font-weight:800;font-size:1.5rem;color:var(--navy);line-height:1.22;letter-spacing:-0.01em;margin:42px 0 14px;}
+    article h3{font-weight:700;font-size:1.18rem;color:var(--navy-mid);line-height:1.25;margin:30px 0 10px;}
+    article h2 + p, article h3 + p{margin-top:0;}
+    article p{margin:0 0 18px;color:var(--dark-text);}
+    article ul,article ol{margin:0 0 18px;padding-left:24px;}
+    article li{margin-bottom:8px;}
+    article strong{font-weight:700;color:var(--navy);}
+    article em{font-style:italic;}
+    article a{color:var(--copper);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(192,120,48,0.35);transition:border-color .18s ease;}
+    article a:hover,article a:focus-visible{border-bottom-color:var(--copper);outline:none;}
+    article hr{border:none;border-top:1px solid var(--light-gray);margin:34px 0;}
+    article h2#sources, article h2#references{border-top:1px solid var(--light-gray);padding-top:30px;font-size:1.2rem;color:var(--navy-mid);}
+    /* sources list smaller */
+    article h2[id^="sources"] ~ ul li, article h3[id^="sources"] ~ ul li{font-size:0.95rem;color:var(--navy-mid);}
+    /* tables */
+    article table{width:100%;border-collapse:collapse;margin:0 0 24px;font-size:0.95rem;}
+    article th,article td{border:1px solid var(--light-gray);padding:9px 12px;text-align:left;vertical-align:top;}
+    article thead th{background:var(--navy);color:var(--off-white);font-weight:700;}
+    article tbody tr:nth-child(even){background:#fff;}
+    article .table-wrap{overflow-x:auto;margin:0 0 24px;}
+    article .table-wrap table{margin:0;}
+    /* CTA */
+    .cta-band{background:var(--navy);color:var(--off-white);border-radius:12px;padding:42px 32px;text-align:center;margin:48px 0 8px;}
+    .cta-band h2{font-weight:800;font-size:clamp(1.4rem,3.4vw,1.9rem);margin-bottom:12px;letter-spacing:-0.01em;color:var(--off-white);}
+    .cta-band p{color:var(--light-gray);max-width:52ch;margin:0 auto 24px;}
+    .cta-band .btn{display:inline-block;background:var(--copper);color:#fff;font-weight:700;padding:13px 28px;border-radius:8px;text-decoration:none;transition:background .18s ease;}
+    .cta-band .btn:hover,.cta-band .btn:focus-visible{background:var(--gold);color:var(--navy);outline:none;}
+    /* Footer */
+    footer{max-width:760px;margin:16px auto 0;padding:24px;font-size:0.82rem;color:var(--mid-gray);border-top:1px solid var(--light-gray);}
+    footer p+p{margin-top:6px;}
+    footer a{color:var(--mid-gray);text-decoration:underline;}
+    @media (prefers-reduced-motion:reduce){*{transition:none!important;}}
+
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header>
+    <div class="header-inner">
+      <div class="wordmark"><a href="index.html">Malaniru<span class="dot">.</span></a></div>
+      <span class="eyebrow">AI Enablement &middot; Daily Intelligence Briefing</span>
+      <h1>Daily Intelligence Briefing — Sunday, June 21, 2026</h1>
+      <p class="byline">By Marco Harris<span class="sep">&middot;</span>June 21, 2026</p>
+      <p class="lede">Day 9 of the Fable 5 suspension with no restore date. The Anthropic–OpenAI partner-network race fully joins ($100M vs $150M). A Black Duck study quantifies the AI-code governance gap: 97% adoption, one-third with full governance. No new frontier model shipped over the weekend.</p>
+      <a class="backlink" href="daily-intelligence-briefings.html">&larr; All daily intelligence briefings</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <article>
+      <h2 id="executive-summary">Executive Summary</h2>
+      <p>Nine days into the suspension, Claude Fable 5 and Mythos 5 remain offline worldwide with no confirmed restore date; the refund-processing window closed June 20 and the paid free-trial window closes June 22, while the White House's "eliminate all jailbreaks" precondition is one cybersecurity researchers call technically unachievable. Opus 4.8 and Sonnet 4.6 are unaffected and remain the reference tiers. The most strategically relevant development of the weekend is the partner-network arms race: OpenAI launched a $150M Partner Network on June 14 targeting 300,000 certified consultants by year-end, directly answering Anthropic's $100M Claude Partner Network from June 3. On the governance front, a Black Duck study reports 97% developer adoption of AI coding tools but only about one-third of organizations with full governance frameworks. No new frontier-class model shipped over the weekend; GPT-5.6 is still unannounced with a market expectation around June 23, and Gemini 3.5 Pro remains in limited Vertex preview with nine days left in Google's June window.</p>
+      <h2 id="1-ai-market-trends">1. AI Market Trends</h2>
+      <p>The story of the weekend is enterprise structure, not model capability. Three threads matter.</p>
+      <p>First, the partner-network race is now a two-front contest. On June 14, OpenAI launched its first formal global partner program, backed by $150M and targeting 300,000 certified consultants by December 31, 2026. That answers Anthropic's Claude Partner Network, announced June 3 with a $100M commitment, which Anthropic says drew over 40,000 firm applications and 10,000-plus already-certified consultants. Both vendors are racing to lock in implementation capacity ahead of expected IPOs.</p>
+      <p>Second, the Korea enterprise wave. Around the June 17–18 Seoul office opening, Anthropic disclosed deployments at NAVER (Claude Code org-wide), Nexon, Samsung SDS (Claude Cowork and Claude Code across Samsung Electronics), LG CNS, and Hanwha (via AWS Bedrock), alongside reported metrics of 6x Claude Code weekly-active growth in Korea over four months. Notably, these run on Opus 4.8 and Sonnet 4.6 — the available tiers — not Fable 5.</p>
+      <p>Third, the backdrop. A Reuters Institute figure cited this weekend puts Claude at roughly 8.2% of global chatbot web visits and 12.5% in the US. Anthropic's confidential IPO filing from June 1 remains the financial context, with reported valuation and revenue figures sourced from trade press rather than audited disclosures.</p>
+      <p><strong>What This Means for You.</strong> The partner-network race is the most important item this week for anyone choosing or being an implementation partner. Two vendor ecosystems now formally rank and certify implementation firms — if you select a partner, you can read their standing against these programs rather than guessing, and "10,000 consultants already Claude-certified" sets a visible credentialing bar. And the Korea wave is a useful proof point that serious enterprises are deploying Claude Cowork and Code on the available, stable tiers — the conservative posture worth defaulting to.</p>
+      <h2 id="2-top-10-ai-agents-three-lenses">2. Top 10 AI Agents — Three Lenses</h2>
+      <p>Rankings as of Sunday, June 21, 2026. No new model entrants this run; the boards are shaped by availability and distribution. Fable 5 stays on the watch line (offline Day 9). Mythos 5 stays gated and unscored.</p>
+      <h3 id="lens-a-relevance-for-claude-mcp-centered-work">Lens A — Relevance for Claude / MCP-Centered Work</h3>
+      <div class="table-wrap"><table>
+      <thead>
+      <tr>
+      <th>Rank</th>
+      <th>Agent / Platform</th>
+      <th>Justification</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>1</td>
+      <td>Claude Cowork</td>
+      <td>Core delivery surface; runs on Opus 4.8, fully available; now deploying at Samsung Electronics scale.</td>
+      </tr>
+      <tr>
+      <td>2</td>
+      <td>Claude Opus 4.8 / Sonnet 4.6</td>
+      <td>Reliable flagship and workhorse tiers; unaffected by the Fable 5 / Mythos 5 suspension.</td>
+      </tr>
+      <tr>
+      <td>3</td>
+      <td>Claude Managed Agents (public beta)</td>
+      <td>Cron schedules, credential vaults, private MCP servers; the productizable governed-automation primitive.</td>
+      </tr>
+      <tr>
+      <td>4</td>
+      <td>Claude Code + Agent SDK</td>
+      <td>Primary agentic build tool; reported 63% developer adoption; Agent SDK on a metered credit pool since the June 15 billing split.</td>
+      </tr>
+      <tr>
+      <td>5</td>
+      <td>MCP-based connectors (cross-vendor)</td>
+      <td>Universal interop; final spec lands July 28 with breaking changes; stewarded under the Linux Foundation's Agentic AI Foundation.</td>
+      </tr>
+      </tbody>
+      </table></div>
+      <p><em>(Watch line: Claude Fable 5 — offline since June 12 under US export-control directive, Day 9; restoration "within days" per Anthropic's Chris Ciauri on June 18, unconfirmed three days later.)</em></p>
+      <h3 id="lens-b-market-momentum-adoption-funding-buzz">Lens B — Market Momentum (adoption / funding / buzz)</h3>
+      <div class="table-wrap"><table>
+      <thead>
+      <tr>
+      <th>Rank</th>
+      <th>Agent / Platform</th>
+      <th>Justification</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>1</td>
+      <td>Anthropic</td>
+      <td>Dominant news share; Fable 5 recall is contested-negative attention, but the Korea wave and $100M partner program are genuine momentum.</td>
+      </tr>
+      <tr>
+      <td>2</td>
+      <td>OpenAI</td>
+      <td>$150M / 300k-consultant partner program (June 14); GPT-5.6 market window around June 23; officially unannounced.</td>
+      </tr>
+      <tr>
+      <td>3</td>
+      <td>xAI Grok 4.3</td>
+      <td>Bedrock GA at $1.25/$2.50 per M tokens; Grok Build plugin marketplace and Agent Dashboard; SpaceX–Cursor $60B filing adds coding-market intrigue.</td>
+      </tr>
+      <tr>
+      <td>4</td>
+      <td>Google Gemini 3.5</td>
+      <td>Nine days left in June window; Pro still limited Vertex preview.</td>
+      </tr>
+      <tr>
+      <td>5</td>
+      <td>DeepSeek V4 preview</td>
+      <td>1.6T-param MoE trained on Huawei Ascend; "best open-source option" but not frontier-competitive per CFR.</td>
+      </tr>
+      </tbody>
+      </table></div>
+      <h3 id="lens-c-capability-maturity-production-readiness">Lens C — Capability &amp; Maturity (production readiness)</h3>
+      <div class="table-wrap"><table>
+      <thead>
+      <tr>
+      <th>Rank</th>
+      <th>Agent / Model</th>
+      <th>Justification</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>1</td>
+      <td>Claude Opus 4.8</td>
+      <td>Production-proven, available, agentic-optimized. Reference tier.</td>
+      </tr>
+      <tr>
+      <td>2</td>
+      <td>GPT-5.5 / Codex</td>
+      <td>Shipped, production-grade; GPT-5.5 Instant now ChatGPT default.</td>
+      </tr>
+      <tr>
+      <td>3</td>
+      <td>xAI Grok 4.3</td>
+      <td>GA on Bedrock; enterprise-ready channel; independent benchmarks still maturing.</td>
+      </tr>
+      <tr>
+      <td>4</td>
+      <td>Gemini 3.5 Flash</td>
+      <td>Shipped; Pro variant still pre-GA.</td>
+      </tr>
+      <tr>
+      <td>5</td>
+      <td>DeepSeek V4-Pro (preview)</td>
+      <td>Open-source leader, but preview-stage and below US frontier closed models per DeepSeek's own paper.</td>
+      </tr>
+      </tbody>
+      </table></div>
+      <p><em>(Not ranked: Claude Fable 5 — capability-leading on vendor suites but undeployable under government directive, Day 9.)</em></p>
+      <h3 id="divergence-analysis">Divergence Analysis</h3>
+      <p>The availability axis still dominates: Fable 5 may lead on published benchmarks yet scores zero in Lens C because you cannot call it. The more interesting divergence this run is distribution versus capability. The agents climbing Lens B are doing so on ecosystem moves — partner networks, marketplaces, cloud-channel availability — not on raw capability gains. No model meaningfully advanced the frontier this week; what advanced was the enterprise plumbing around the models. That validates the view that the implementation layer, not the model layer, is where durable value sits.</p>
+      <p><strong>What This Means for You.</strong> Hold your reference architecture on Opus 4.8 and Sonnet 4.6. The week's pattern — capability flat, distribution accelerating — is the clearest argument yet that you do not need the newest model; you need a governed, available, well-integrated one.</p>
+      <h2 id="3-agentic-ai-advances-new-releases">3. Agentic AI Advances &amp; New Releases</h2>
+      <p>No new frontier-class model shipped over the weekend. The genuinely new structural items are distribution and governance, not models.</p>
+      <p><strong>OpenAI Partner Network — launched June 14.</strong> $150M, targeting 300,000 certified consultants by December 31, 2026, focused on Codex, the GPT-5.5 enterprise API, and the new Sites and Annotations products. Explicitly competitive with the Claude Partner Network.</p>
+      <p><strong>Black Duck AI-coding governance study — June 2026.</strong> 97% of developers now use AI coding tools; only about one-third of organizations have full governance frameworks. GitHub Copilot leads adoption; Claude Code reported around 63%. This is the most directly relevant data point of the week for the governance thesis.</p>
+      <p><strong>Grok 4.3 enterprise push.</strong> Now GA on Bedrock at $1.25 / $2.50 per M tokens, plus the Grok Build plugin marketplace and a terminal Agent Dashboard for parallel coding sessions. The low-hallucination headline remains a vendor claim.</p>
+      <p><strong>DeepSeek V4 preview.</strong> A 1.6T-parameter MoE model trained on Huawei Ascend silicon rather than NVIDIA — strategically notable for US–China chip dynamics; open-source but not frontier-competitive per CFR and DeepSeek's own technical report.</p>
+      <p>Carry items: MCP final specification lands July 28 with breaking changes; GPT-5.6 still pre-announcement with a market expectation around June 23; Gemini 3.5 Pro still in limited Vertex preview with nine days left in June; the June 15 billing split and Claude 4 API retirement are now live; EU AI Act transparency obligations apply August 2.</p>
+      <p><strong>What This Means for You.</strong> The "97% adoption, one-third governance" split quantifies the exact gap most organizations face — nearly everyone is using AI coding tools, while only about a third have full governance frameworks — and it is sourced enough to cite with a vendor-study caveat. The deployment surface keeps being shaped from two directions — US export control and EU transparency. Treat Grok 4.3's marketplace and DeepSeek's Huawei milestone alongside the discipline that a vendor accuracy claim is a hypothesis, not a finding.</p>
+      <h2 id="4-overnight-daily-release-monitor">4. Overnight / Daily Release Monitor</h2>
+      <p>Covering roughly June 19–21:</p>
+      <ul>
+      <li>No new frontier-class model from OpenAI, Google, Anthropic, Meta, Mistral, or xAI in the window.</li>
+      <li>Fable 5 / Mythos 5 remain suspended, Day 9. June 20 refund window closed; June 22 paid free-trial window closes; White House "zero jailbreaks" precondition called technically unachievable by researchers.</li>
+      <li>Anthropic Seoul office and Korea enterprise wave (NAVER, Samsung SDS, LG CNS, Nexon, Hanwha) confirmed around June 17–18; an MOU with Korea's Ministry of Science and ICT establishes a government channel.</li>
+      <li>OpenAI Partner Network ($150M, June 14) versus Claude Partner Network ($100M, June 3) — the partner-ecosystem race is now fully joined.</li>
+      <li>Adjacent macro items: FERC issued June 18 "show cause" grid orders for AI data centers; SpaceX filed a $60B Cursor acquisition on June 16; Amazon dropped the Guadagnino "Artificial" film.</li>
+      <li>Carry, unchanged: GPT-5.6 expected around June 23; Gemini 3.5 Pro pre-GA; MCP final spec July 28; EU AI Act transparency August 2; Claude Corps Cohort 1 applications close July 17.</li>
+      </ul>
+      <p><strong>What This Means for You.</strong> Two things to consider. First, if you are tracking the Anthropic model suspension internally, the one-line status is: still down at Day 9, no confirmed date, refund window closed, Opus 4.8 / Sonnet 4.6 / Cowork unaffected. Second, the partner-network landscape deserves a look this week — with both OpenAI and Anthropic now formally ranking and certifying implementation firms, choose your posture toward these programs deliberately rather than by default, whether you are selecting a partner or are one.</p>
+      <h2 id="sources">Sources</h2>
+      <ul>
+      <li>Anthropic, "Anthropic invests $100 million into the Claude Partner Network," June 3, 2026. <a href="https://www.anthropic.com/news/claude-partner-network" target="_blank" rel="noopener">https://www.anthropic.com/news/claude-partner-network</a></li>
+      <li>Anthropic, "Statement on Fable 5 and Mythos 5 Suspension," June 2026. <a href="https://www.anthropic.com/news/fable-mythos-access" target="_blank" rel="noopener">https://www.anthropic.com/news/fable-mythos-access</a></li>
+      <li>Build Fast with AI, "AI News Today — June 21, 2026: 16 Biggest Stories," June 2026. <a href="https://www.buildfastwithai.com/blogs/ai-news-today-june-21-2026" target="_blank" rel="noopener">https://www.buildfastwithai.com/blogs/ai-news-today-june-21-2026</a></li>
+      <li>TechTimes, "GPT-5.6: OpenAI Chief Scientist Calls It a Meaningful Leap," June 16, 2026. <a href="https://www.techtimes.com/articles/318492/20260616/gpt-56-openai-chief-scientist-calls-it-meaningful-leap-june-launch-nears.htm" target="_blank" rel="noopener">https://www.techtimes.com/articles/318492/20260616/gpt-56-openai-chief-scientist-calls-it-meaningful-leap-june-launch-nears.htm</a></li>
+      <li>Growwing Assistant, "Gemini 3.5 Pro Release Date June 2026," June 19, 2026. <a href="https://growwingassistant.com/ai-news/gemini-3-5-pro-release-date-june-2026-every-confirmed-spec-pricing-when-it-drops/" target="_blank" rel="noopener">https://growwingassistant.com/ai-news/gemini-3-5-pro-release-date-june-2026-every-confirmed-spec-pricing-when-it-drops/</a></li>
+      <li>CFR, "DeepSeek V4 Signals a New Phase in the U.S.–China AI Rivalry," June 2026. <a href="https://www.cfr.org/articles/deepseek-v4-signals-a-new-phase-in-the-u-s-china-ai-rivalry" target="_blank" rel="noopener">https://www.cfr.org/articles/deepseek-v4-signals-a-new-phase-in-the-u-s-china-ai-rivalry</a></li>
+      <li>Model Context Protocol Blog, "The 2026-07-28 MCP Specification Release Candidate," 2026. <a href="https://blog.modelcontextprotocol.io/posts/2026-07-28-release-candidate/" target="_blank" rel="noopener">https://blog.modelcontextprotocol.io/posts/2026-07-28-release-candidate/</a></li>
+      </ul>
+      <p><em>Note: Items sourced via secondary aggregators are pending primary confirmation. Vendor benchmarks and self-reported figures are flagged as such. Future-dated items (July 28 MCP spec, August 2 EU AI Act transparency, July 17 Claude Corps deadline) are scheduled, not delivered. Reported Anthropic valuation and revenue figures trace to trade-press coverage of the confidential filing and are not audited.</em></p>
+    </article>
+
+    <section class="cta-band" id="contact" aria-labelledby="cta-heading">
+      <h2 id="cta-heading">From AI curiosity to AI capability</h2>
+      <p>This briefing is part of the field research behind our AI Enablement service &mdash; a curated, white-glove Claude Cowork implementation tailored to your organization&rsquo;s workflow.</p>
+      <a class="btn" href="https://calendly.com/mark-malaniru/30min" target="_blank" rel="noopener">Book a discovery call</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Malaniru Inc, LLC &middot; Lafayette, Colorado &middot; AI Enablement</p>
+    <p><a href="daily-intelligence-briefings.html">&larr; Back to Daily Intelligence Briefings</a> &middot; <a href="index.html">AI Enablement</a></p>
+      <nav class="mal-footernav" data-mal-footernav aria-label="Site" style="margin-top:0.7rem;font-size:0.82rem;line-height:1.9;">
+      <a href="about.html" style="color:#C07830;font-weight:700;text-decoration:none;">About</a> &middot;
+      <a href="pricing.html" style="color:#C07830;font-weight:700;text-decoration:none;">Pricing</a> &middot;
+      <a href="index.html" style="color:#C07830;font-weight:700;text-decoration:none;">AI Enablement</a>
+    </nav>
+  </footer>
+</body>
+</html>

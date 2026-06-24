@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<!--
+  ============================================================================
+  Malaniru - Research article page (branded HTML)
+  Built by: Web (Morgan Shaw) - Date: 2026-06-23
+  Project:  Malaniru_Marketing_Site
+  Source:   Website/src/content/research/20260613-daily-intelligence-briefing.md
+  Purpose:  Standalone public article page for a daily intelligence briefing,
+            linked from philanthropy-ai-research.html.
+  STATUS:   Public marketing page. robots noindex pre-launch (mirrors template).
+            Calendly CTA hidden via CSS (per Principal, as in template).
+  FIDELITY: Article body rendered VERBATIM from the approved markdown. No copy
+            edits, no reordered sections, no changed figures or heading levels.
+  FLAGS:    none.
+  TECH:     Single self-contained HTML5 file. Embedded CSS. No JavaScript.
+            Template-matched (philanthropy-ai-adoption.html). WCAG AA. Mobile-first.
+  ============================================================================
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daily Intelligence Briefing — June 13, 2026: Verify the Number, Not the Headline - Malaniru</title>
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="Fable 5&#x27;s top benchmark gets independent confirmation while its loudest number stays vendor-reported, the June 15 Claude 4 retirement is now confirmed, and foundation AI funding accelerates — the day&#x27;s agentic AI landscape for foundation leaders.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --navy:#0F1A2E;--navy-mid:#2A3F63;--copper:#C07830;--gold:#D4A853;
+      --off-white:#F4F1EC;--light-gray:#E8E6E1;--mid-gray:#8A8A96;--dark-text:#1C1C1C;
+      --font:"Inter","Helvetica Neue",Arial,sans-serif;
+    }
+    *{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:var(--font);background:var(--off-white);color:var(--dark-text);line-height:1.65;font-size:16px;-webkit-font-smoothing:antialiased;}
+    .skip-link{position:absolute;left:-999px;top:0;background:var(--gold);color:var(--navy);padding:10px 16px;font-weight:700;z-index:10;}
+    .skip-link:focus{left:8px;top:8px;}
+    a{color:var(--copper);}
+    /* Header */
+    header{background: linear-gradient(160deg, rgba(15,26,46,0.72) 0%, rgba(10,18,33,0.82) 100%), url('StockCake-Cosmic_Web_Complexity-1361288-standard-rot90ccw.jpg'); background-size: auto, 100% 100%; background-repeat: no-repeat, no-repeat; background-position: center, center;color:var(--off-white);padding:48px 24px 52px;position:relative;overflow:hidden;}
+    header::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 85% 12%,rgba(192,120,48,0.20) 0%,rgba(15,26,46,0) 55%);pointer-events:none;}
+    .header-inner{max-width:760px;margin:0 auto;position:relative;z-index:1;}
+    .wordmark{font-weight:800;font-size:1.25rem;letter-spacing:0.02em;margin-bottom:30px;}
+    .wordmark .dot{color:var(--copper);}
+    .wordmark a{color:var(--off-white);text-decoration:none;transition:opacity .18s ease;}
+    .wordmark a:hover,.wordmark a:focus-visible{opacity:.85;outline:none;}
+    .eyebrow{display:inline-block;font-size:0.72rem;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;}
+    header h1{font-weight:800;font-size:clamp(1.8rem,4.6vw,2.6rem);line-height:1.14;letter-spacing:-0.01em;margin-bottom:16px;}
+    .byline{font-size:0.9rem;color:var(--light-gray);letter-spacing:0.01em;}
+    .byline .sep{color:var(--copper);margin:0 8px;}
+    .lede{font-size:1.08rem;color:var(--light-gray);max-width:66ch;margin-top:18px;}
+    .backlink{display:inline-block;margin-top:26px;color:var(--gold);font-weight:600;font-size:0.9rem;text-decoration:none;border-bottom:1px solid rgba(212,168,83,0.4);}
+    .backlink:hover,.backlink:focus-visible{border-bottom-color:var(--gold);outline:none;}
+    /* Article */
+    main{max-width:760px;margin:0 auto;padding:48px 24px 8px;}
+    .disclaimer{background:#fff;border:1px solid var(--light-gray);border-left:4px solid var(--copper);border-radius:8px;padding:14px 18px;font-size:0.9rem;color:var(--navy-mid);margin-bottom:34px;}
+    article{font-size:1.05rem;}
+    article h2{font-weight:800;font-size:1.5rem;color:var(--navy);line-height:1.22;letter-spacing:-0.01em;margin:42px 0 14px;}
+    article h3{font-weight:700;font-size:1.18rem;color:var(--navy-mid);line-height:1.25;margin:30px 0 10px;}
+    article h2 + p, article h3 + p{margin-top:0;}
+    article p{margin:0 0 18px;color:var(--dark-text);}
+    article ul,article ol{margin:0 0 18px;padding-left:24px;}
+    article li{margin-bottom:8px;}
+    article strong{font-weight:700;color:var(--navy);}
+    article em{font-style:italic;}
+    article a{color:var(--copper);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(192,120,48,0.35);transition:border-color .18s ease;}
+    article a:hover,article a:focus-visible{border-bottom-color:var(--copper);outline:none;}
+    article hr{border:none;border-top:1px solid var(--light-gray);margin:34px 0;}
+    article h2#sources, article h2#references{border-top:1px solid var(--light-gray);padding-top:30px;font-size:1.2rem;color:var(--navy-mid);}
+    /* sources list smaller */
+    article h2[id^="sources"] ~ ul li, article h3[id^="sources"] ~ ul li{font-size:0.95rem;color:var(--navy-mid);}
+    /* tables */
+    article table{width:100%;border-collapse:collapse;margin:0 0 24px;font-size:0.95rem;}
+    article th,article td{border:1px solid var(--light-gray);padding:9px 12px;text-align:left;vertical-align:top;}
+    article thead th{background:var(--navy);color:var(--off-white);font-weight:700;}
+    article tbody tr:nth-child(even){background:#fff;}
+    article .table-wrap{overflow-x:auto;margin:0 0 24px;}
+    article .table-wrap table{margin:0;}
+    /* CTA */
+    .cta-band{background:var(--navy);color:var(--off-white);border-radius:12px;padding:42px 32px;text-align:center;margin:48px 0 8px;}
+    .cta-band h2{font-weight:800;font-size:clamp(1.4rem,3.4vw,1.9rem);margin-bottom:12px;letter-spacing:-0.01em;color:var(--off-white);}
+    .cta-band p{color:var(--light-gray);max-width:52ch;margin:0 auto 24px;}
+    .cta-band .btn{display:inline-block;background:var(--copper);color:#fff;font-weight:700;padding:13px 28px;border-radius:8px;text-decoration:none;transition:background .18s ease;}
+    .cta-band .btn:hover,.cta-band .btn:focus-visible{background:var(--gold);color:var(--navy);outline:none;}
+    /* Footer */
+    footer{max-width:760px;margin:16px auto 0;padding:24px;font-size:0.82rem;color:var(--mid-gray);border-top:1px solid var(--light-gray);}
+    footer p+p{margin-top:6px;}
+    footer a{color:var(--mid-gray);text-decoration:underline;}
+    @media (prefers-reduced-motion:reduce){*{transition:none!important;}}
+
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header>
+    <div class="header-inner">
+      <div class="wordmark"><a href="index.html">Malaniru<span class="dot">.</span></a></div>
+      <span class="eyebrow">AI Enablement &middot; Daily Intelligence Briefing</span>
+      <h1>Daily Intelligence Briefing — June 13, 2026: Verify the Number, Not the Headline</h1>
+      <p class="byline">By Marco Harris<span class="sep">&middot;</span>June 13, 2026</p>
+      <p class="lede">Fable 5&#x27;s top benchmark gets independent confirmation while its loudest number stays vendor-reported, the June 15 Claude 4 retirement is now confirmed, and foundation AI funding accelerates — the day&#x27;s agentic AI landscape for foundation leaders.</p>
+      <a class="backlink" href="daily-intelligence-briefings.html">&larr; All daily intelligence briefings</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <article>
+      <p>No new frontier model shipped overnight. The consequential movement this run is in verification and deadlines — exactly the kind of detail that separates a careful AI decision from a hasty one.</p>
+      <h2 id="the-june-15-deadline-is-now-confirmed-and-specified">The June 15 deadline is now confirmed and specified</h2>
+      <p>Two days out, the June 15 changes are fully detailed. Anthropic moves Agent SDK, <code>claude -p</code>, GitHub Actions, and third-party agent usage onto a separate metered credit pool, and retires two original Claude 4 models from the API — <code>claude-sonnet-4-20250514</code> and <code>claude-opus-4-20250514</code>. After that date, calls to those model IDs return an error. A same-day change drops <code>temperature</code>/<code>top_p</code> support on the newest Opus, which can break code even after a clean model-name swap.</p>
+      <p>This was a single-source caveat a day ago; it is now confirmed across multiple outlets. That changes the practical posture from "verify" to "migrate now." One detail still needs care: outlets disagree on the exact Opus replacement model, so confirm the precise replacement ID against Anthropic's official model-deprecations page before changing any configuration. Interactive use — Claude.ai, interactive Claude Code, and Claude Cowork — is explicitly unaffected.</p>
+      <h2 id="fable-5s-verification-gap-narrowed">Fable 5's verification gap narrowed</h2>
+      <p>Claude Fable 5, the strongest model on most tested suites, now has independent confirmation of its 95% SWE-bench Verified score from the evaluator vals.ai. Its more frequently quoted 80.3% on SWE-bench Pro remains vendor-reported — produced on Anthropic's own scaffolding — with an independent evaluation from Epoch AI still pending as of mid-June.</p>
+      <p>The takeaway is unchanged in direction but stronger in degree: Fable 5 is genuinely the tested leader on at least one independently confirmed suite, and the specific Pro number is still the contested one. The defensible statement is the precise one: independently verified on SWE-bench Verified, vendor-reported on SWE-bench Pro.</p>
+      <h2 id="claude-corps-named-hosts-and-a-third-partner">Claude Corps: named hosts and a third partner</h2>
+      <p>The $150 million, 1,000-fellow program now has named first-year hosts including RAINN, Goodwill Industries International, Code for America, Year Up United, the YMCA of Greater Charlotte, and the Montgomery County Food Bank — among more than 400 in total. Social Finance is confirmed as the third partner, alongside Anthropic as funder and strategist and CodePath as employer of record, leading measurement and evaluation and building a vehicle to scale the program. Applications for the 100-fellow first cohort, which starts in October 2026, close July 17, with rolling applications for January and August 2027 cohorts.</p>
+      <p>For organizations whose work is grantmaking and the broader nonprofit sector, this remains the most strategically significant item in weeks. The peers of these named hosts are now primed buyers who want the outcome without waiting on a fellowship slot.</p>
+      <h2 id="the-competitive-backdrop">The competitive backdrop</h2>
+      <p>Gemini 3.5 Pro is still pre-GA, with Sundar Pichai's "wait another month" the most concrete guidance; the 2-million-token, Deep Think model remains in limited Vertex preview. GPT-5.6 is unannounced officially, though trade rumor points to "later this month." Google has wired its consumer agent Gemini Spark to MCP and shipped Antigravity 2.0, its agentic coding tool — continued evidence that MCP is becoming cross-vendor table stakes. OpenAI extended its workspace-agent free period to July 6. The MCP final specification lands July 28 with breaking changes included.</p>
+      <h2 id="weekly-view-foundation-and-philanthropy-ai-adoption">Weekly view: foundation and philanthropy AI adoption</h2>
+      <p>Adoption is now mainstream in the sector. Roughly two-thirds of nonprofits report using AI in some capacity, and foundations have shifted from cautious observation to active investment in AI as a force multiplier for social impact, per the Center for Effective Philanthropy's "AI With Purpose."</p>
+      <p>The large pooled-fund vehicles are deploying, not just announced. Humanity AI — a $500 million initiative from ten major foundations including MacArthur, Ford, Omidyar Network, Mellon, and Packard — begins pooled-fund grantmaking in 2026. The Patrick J. McGovern Foundation committed $75.8 million across 149 grants in 2025 for AI in climate resilience, health equity, crisis response, and digital literacy. (These dollar figures are announced or secondary-sourced; verify against primary foundation reporting before citing externally.)</p>
+      <p>The gap worth watching is between funded enthusiasm and governance maturity. Foundations are buying AI capability faster than they are templating who may deploy it, where credentials live, and what data models may touch.</p>
+      <h2 id="weekly-view-data-and-security-regulations">Weekly view: data and security regulations</h2>
+      <p>The next hard EU AI Act deadline is August 2, 2026. On that date, the Act's transparency rules under Article 50 take effect, including obligations for generative and general-purpose AI to mark machine-readable synthetic outputs across modalities and for GPAI providers to maintain technical documentation of training and testing. The Act remains in active implementation — the Commission issued draft transparency guidelines in May 2026 and a draft content-marking Code of Practice in December 2025 — so treat the specifics as evolving, not settled.</p>
+      <p>A timing nuance matters: GPAI models already on the market before August 2, 2025 have until August 2, 2027 to comply, while newer models face the nearer timeline. Most US foundation and small-organization clients are not direct GPAI providers, so these obligations land indirectly — through vendor selection and through any synthetic content they publish. The practical move is to build the habit of labeling AI-generated media now, and to ask AI vendors whether their documentation and content-marking posture is EU-AI-Act-aligned.</p>
+      <hr>
+      <p>This briefing is internal strategic intelligence adapted for publication. Items drawn from vendor benchmarks, secondary reporting, or scheduled-but-undelivered events are noted as such. Figures attributed to confidential filings or company announcements are reported, not independently audited. This is market and regulatory information, not legal advice.</p>
+    </article>
+
+    <section class="cta-band" id="contact" aria-labelledby="cta-heading">
+      <h2 id="cta-heading">From AI curiosity to AI capability</h2>
+      <p>This briefing is part of the field research behind our AI Enablement service &mdash; a curated, white-glove Claude Cowork implementation tailored to your organization&rsquo;s workflow.</p>
+      <a class="btn" href="https://calendly.com/mark-malaniru/30min" target="_blank" rel="noopener">Book a discovery call</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Malaniru Inc, LLC &middot; Lafayette, Colorado &middot; AI Enablement</p>
+    <p><a href="daily-intelligence-briefings.html">&larr; Back to Daily Intelligence Briefings</a> &middot; <a href="index.html">AI Enablement</a></p>
+      <nav class="mal-footernav" data-mal-footernav aria-label="Site" style="margin-top:0.7rem;font-size:0.82rem;line-height:1.9;">
+      <a href="about.html" style="color:#C07830;font-weight:700;text-decoration:none;">About</a> &middot;
+      <a href="pricing.html" style="color:#C07830;font-weight:700;text-decoration:none;">Pricing</a> &middot;
+      <a href="index.html" style="color:#C07830;font-weight:700;text-decoration:none;">AI Enablement</a>
+    </nav>
+  </footer>
+</body>
+</html>

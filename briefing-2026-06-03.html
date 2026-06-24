@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<!--
+  ============================================================================
+  Malaniru - Research article page (branded HTML)
+  Built by: Web (Morgan Shaw) - Date: 2026-06-23
+  Project:  Malaniru_Marketing_Site
+  Source:   Website/src/content/research/20260603-daily-intelligence-briefing.md
+  Purpose:  Standalone public article page for a daily intelligence briefing,
+            linked from philanthropy-ai-research.html.
+  STATUS:   Public marketing page. robots noindex pre-launch (mirrors template).
+            Calendly CTA hidden via CSS (per Principal, as in template).
+  FIDELITY: Article body rendered VERBATIM from the approved markdown. No copy
+            edits, no reordered sections, no changed figures or heading levels.
+  FLAGS:    none.
+  TECH:     Single self-contained HTML5 file. Embedded CSS. No JavaScript.
+            Template-matched (philanthropy-ai-adoption.html). WCAG AA. Mobile-first.
+  ============================================================================
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daily Intelligence Briefing — Wednesday, June 3, 2026 - Malaniru</title>
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="The frontier stayed still this week, but the commercial layer moved: Anthropic filed confidentially for an IPO, expanded its Mythos security preview to ~200 organizations, and changed how agent usage is billed — prompting an immediate OpenAI counter-offer.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --navy:#0F1A2E;--navy-mid:#2A3F63;--copper:#C07830;--gold:#D4A853;
+      --off-white:#F4F1EC;--light-gray:#E8E6E1;--mid-gray:#8A8A96;--dark-text:#1C1C1C;
+      --font:"Inter","Helvetica Neue",Arial,sans-serif;
+    }
+    *{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:var(--font);background:var(--off-white);color:var(--dark-text);line-height:1.65;font-size:16px;-webkit-font-smoothing:antialiased;}
+    .skip-link{position:absolute;left:-999px;top:0;background:var(--gold);color:var(--navy);padding:10px 16px;font-weight:700;z-index:10;}
+    .skip-link:focus{left:8px;top:8px;}
+    a{color:var(--copper);}
+    /* Header */
+    header{background: linear-gradient(160deg, rgba(15,26,46,0.72) 0%, rgba(10,18,33,0.82) 100%), url('StockCake-Cosmic_Web_Complexity-1361288-standard-rot90ccw.jpg'); background-size: auto, 100% 100%; background-repeat: no-repeat, no-repeat; background-position: center, center;color:var(--off-white);padding:48px 24px 52px;position:relative;overflow:hidden;}
+    header::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 85% 12%,rgba(192,120,48,0.20) 0%,rgba(15,26,46,0) 55%);pointer-events:none;}
+    .header-inner{max-width:760px;margin:0 auto;position:relative;z-index:1;}
+    .wordmark{font-weight:800;font-size:1.25rem;letter-spacing:0.02em;margin-bottom:30px;}
+    .wordmark .dot{color:var(--copper);}
+    .wordmark a{color:var(--off-white);text-decoration:none;transition:opacity .18s ease;}
+    .wordmark a:hover,.wordmark a:focus-visible{opacity:.85;outline:none;}
+    .eyebrow{display:inline-block;font-size:0.72rem;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;}
+    header h1{font-weight:800;font-size:clamp(1.8rem,4.6vw,2.6rem);line-height:1.14;letter-spacing:-0.01em;margin-bottom:16px;}
+    .byline{font-size:0.9rem;color:var(--light-gray);letter-spacing:0.01em;}
+    .byline .sep{color:var(--copper);margin:0 8px;}
+    .lede{font-size:1.08rem;color:var(--light-gray);max-width:66ch;margin-top:18px;}
+    .backlink{display:inline-block;margin-top:26px;color:var(--gold);font-weight:600;font-size:0.9rem;text-decoration:none;border-bottom:1px solid rgba(212,168,83,0.4);}
+    .backlink:hover,.backlink:focus-visible{border-bottom-color:var(--gold);outline:none;}
+    /* Article */
+    main{max-width:760px;margin:0 auto;padding:48px 24px 8px;}
+    .disclaimer{background:#fff;border:1px solid var(--light-gray);border-left:4px solid var(--copper);border-radius:8px;padding:14px 18px;font-size:0.9rem;color:var(--navy-mid);margin-bottom:34px;}
+    article{font-size:1.05rem;}
+    article h2{font-weight:800;font-size:1.5rem;color:var(--navy);line-height:1.22;letter-spacing:-0.01em;margin:42px 0 14px;}
+    article h3{font-weight:700;font-size:1.18rem;color:var(--navy-mid);line-height:1.25;margin:30px 0 10px;}
+    article h2 + p, article h3 + p{margin-top:0;}
+    article p{margin:0 0 18px;color:var(--dark-text);}
+    article ul,article ol{margin:0 0 18px;padding-left:24px;}
+    article li{margin-bottom:8px;}
+    article strong{font-weight:700;color:var(--navy);}
+    article em{font-style:italic;}
+    article a{color:var(--copper);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(192,120,48,0.35);transition:border-color .18s ease;}
+    article a:hover,article a:focus-visible{border-bottom-color:var(--copper);outline:none;}
+    article hr{border:none;border-top:1px solid var(--light-gray);margin:34px 0;}
+    article h2#sources, article h2#references{border-top:1px solid var(--light-gray);padding-top:30px;font-size:1.2rem;color:var(--navy-mid);}
+    /* sources list smaller */
+    article h2[id^="sources"] ~ ul li, article h3[id^="sources"] ~ ul li{font-size:0.95rem;color:var(--navy-mid);}
+    /* tables */
+    article table{width:100%;border-collapse:collapse;margin:0 0 24px;font-size:0.95rem;}
+    article th,article td{border:1px solid var(--light-gray);padding:9px 12px;text-align:left;vertical-align:top;}
+    article thead th{background:var(--navy);color:var(--off-white);font-weight:700;}
+    article tbody tr:nth-child(even){background:#fff;}
+    article .table-wrap{overflow-x:auto;margin:0 0 24px;}
+    article .table-wrap table{margin:0;}
+    /* CTA */
+    .cta-band{background:var(--navy);color:var(--off-white);border-radius:12px;padding:42px 32px;text-align:center;margin:48px 0 8px;}
+    .cta-band h2{font-weight:800;font-size:clamp(1.4rem,3.4vw,1.9rem);margin-bottom:12px;letter-spacing:-0.01em;color:var(--off-white);}
+    .cta-band p{color:var(--light-gray);max-width:52ch;margin:0 auto 24px;}
+    .cta-band .btn{display:inline-block;background:var(--copper);color:#fff;font-weight:700;padding:13px 28px;border-radius:8px;text-decoration:none;transition:background .18s ease;}
+    .cta-band .btn:hover,.cta-band .btn:focus-visible{background:var(--gold);color:var(--navy);outline:none;}
+    /* Footer */
+    footer{max-width:760px;margin:16px auto 0;padding:24px;font-size:0.82rem;color:var(--mid-gray);border-top:1px solid var(--light-gray);}
+    footer p+p{margin-top:6px;}
+    footer a{color:var(--mid-gray);text-decoration:underline;}
+    @media (prefers-reduced-motion:reduce){*{transition:none!important;}}
+
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header>
+    <div class="header-inner">
+      <div class="wordmark"><a href="index.html">Malaniru<span class="dot">.</span></a></div>
+      <span class="eyebrow">AI Enablement &middot; Daily Intelligence Briefing</span>
+      <h1>Daily Intelligence Briefing — Wednesday, June 3, 2026</h1>
+      <p class="byline">By Marco Harris<span class="sep">&middot;</span>June 3, 2026</p>
+      <p class="lede">The frontier stayed still this week, but the commercial layer moved: Anthropic filed confidentially for an IPO, expanded its Mythos security preview to ~200 organizations, and changed how agent usage is billed — prompting an immediate OpenAI counter-offer.</p>
+      <a class="backlink" href="daily-intelligence-briefings.html">&larr; All daily intelligence briefings</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <article>
+      <h2 id="executive-summary">Executive Summary</h2>
+      <p>The model frontier did not move between June 1 and June 3 — no new flagship shipped from any major lab — but the commercial and governance layers moved sharply. The defining events were Anthropic's confidential IPO filing on June 1, at the $965 billion valuation set by its May 28 Series H (Source: CNBC, May 28, 2026; Sacra, 2026), and a same-day skirmish over agent billing: Anthropic announced that, starting June 15, Claude Agent SDK and Claude Code agent usage will move off the flat subscription pool into a separate metered credit billed at API rates, and OpenAI immediately offered switchers two months of free Codex (Source: TechTimes, June 2, 2026; VentureBeat, 2026). On the governance side, the Model Context Protocol published its 2026-07-28 specification release candidate — the largest revision since launch — and the EU AI Act Digital Omnibus moved toward formal adoption expected this month (Source: Model Context Protocol Blog, 2026; Council of the EU, May 7, 2026).</p>
+      <h2 id="1-ai-market-trends">1. AI Market Trends</h2>
+      <p>Anthropic filed confidentially for an IPO on June 1, at the $965 billion valuation established by its May 28 $65 billion Series H — the round that made it the most valuable AI startup ahead of OpenAI's last-reported $852 billion (Source: CNBC, "Anthropic tops OpenAI as most valuable AI startup," May 28, 2026; Sacra, 2026). The revenue backdrop: run-rate crossed roughly $47 billion in late May, with more than 1,000 customers now reportedly spending over $1 million annually (Source: Simon Willison, May 29, 2026; Sacra, 2026). These run-rate and customer figures are company-reported and not independently audited.</p>
+      <p>The agent-billing change is the week's most operationally relevant story. Effective June 15, Claude Agent SDK usage and related agentic workloads will no longer draw from the same subscription pool as interactive chat; instead they consume a separate monthly credit, reportedly sized $20–$200 depending on plan, billed at standard API rates (Source: TechTimes, June 2, 2026). The tier figures come from a single outlet and should be confirmed against Anthropic's pricing page. The same day, OpenAI offered new enterprise customers two months of free Codex for switching within 30 days and shipped a Codex enterprise update bundling 62 business apps and 110 prebuilt skills (Source: VentureBeat, 2026; TechTimes, June 2, 2026).</p>
+      <p>Funding continues to reward governance and control over generic autonomy. Geordie AI, a security-and-governance platform for AI agents, closed a $30 million Series A led by Balderton in early June (Source: The AI Insider, June 1, 2026), and the broader enterprise-AI-agent category has drawn roughly $863 million across 23 deals year-to-date (Source: New Market Pitch, 2026).</p>
+      <h2 id="2-top-10-ai-agents-three-lenses">2. Top 10 AI Agents — Three Lenses</h2>
+      <p>No capability-reordering launch occurred this window, so the standing order from May holds; the changes are at the commercial layer — billing and switching incentives — which affect adoption economics more than capability.</p>
+      <p>By relevance for Claude / MCP-centered work, Claude Cowork on Opus 4.8 leads, followed by Claude Code and the Claude Agent SDK (now repriced as of June 15), MCP-based connectors across every major vendor, the multi-cloud Claude Platform, and OpenAI's enterprise Codex as the comparison point clients raise.</p>
+      <p>By market momentum, Anthropic leads on the strength of its IPO filing and run-rate, followed by OpenAI's Codex free-trial offensive, the Gemini 3.5 line, agent-governance startups, and Sierra's $950 million May raise (Source: TechCrunch, May 4, 2026).</p>
+      <p>By capability and maturity, GA-shipped production models lead — Claude Opus 4.8 (on company-reported benchmarks awaiting independent verification) and GPT-5.5/Codex — while Claude Mythos Preview and Gemini 3.5 Pro rank lower on production readiness because neither is generally available.</p>
+      <p>The notable divergence is Mythos: it generates outsized buzz as a security model yet remains restricted, defensive-use-only, and not generally available, so it cannot rank on production readiness for a typical buyer.</p>
+      <h2 id="3-agentic-ai-advances-new-releases">3. Agentic AI Advances &amp; New Releases</h2>
+      <p>Anthropic expanded its Claude Mythos preview to roughly 200 organizations across more than 15 countries on June 2–3, granting access to 150 additional partners and adding sectors previously underrepresented — power, water, healthcare, communications, and hardware. Reported new partners include Okta, Samsung, the New York Stock Exchange, NATO, and ENISA; the first cohort reportedly surfaced more than 10,000 high- or critical-severity vulnerabilities within a month (Source: TechCrunch, June 2, 2026; SC Media, 2026; Financial Times via Yahoo, 2026). Mythos remains defensive-security-restricted and not generally available; broader public access is described as an intention gated behind safeguards, not a committed date.</p>
+      <p>The Model Context Protocol published its 2026-07-28 specification release candidate — the largest revision since launch — adding a stateless core that scales on ordinary HTTP, server-rendered UIs (MCP Apps), a Tasks extension for long-running work, OAuth/OpenID Connect-aligned authorization, and a formal deprecation policy. The final specification ships July 28, 2026 (Source: Model Context Protocol Blog, 2026). A separate IETF draft on MCP security considerations was published in June (Source: IETF Datatracker, 2026).</p>
+      <p>Two carry items remain pre-release: Gemini 3.5 Pro, announced at I/O on May 19 and expected to reach general availability in June with a 2-million-token context window (Source: Codersera; Ofox.ai, 2026); and OpenAI's GPT-5.6, still unannounced as of June 3, with prediction markets implying a late-June release (Source: WaveSpeed; Polymarket, 2026). Neither should be presented as scheduled.</p>
+      <h2 id="4-daily-release-monitor">4. Daily Release Monitor</h2>
+      <p>Covering June 1–3: no new frontier-class model launched from any major lab (Source: LLM-Stats update tracker, accessed June 3, 2026). The confirmed events were Anthropic's IPO filing (June 1), the Mythos preview expansion (June 2–3), Anthropic's agent-billing change (effective June 15), OpenAI's Codex switching offer and enterprise update (June 2), and the MCP 2026-07-28 release candidate. The EU AI Act Digital Omnibus provisional agreement (May 7) is advancing toward formal adoption expected this month. Gemini 3.5 Pro, GPT-5.6, and independent verification of Opus 4.8 benchmarks remain open.</p>
+      <h2 id="sources">Sources</h2>
+      <ul>
+      <li>CNBC, "Anthropic tops OpenAI as most valuable AI startup, nears $1 trillion valuation in latest round," May 28, 2026. <a href="https://www.cnbc.com/2026/05/28/anthropic-open-ai-startup-value.html" target="_blank" rel="noopener">https://www.cnbc.com/2026/05/28/anthropic-open-ai-startup-value.html</a></li>
+      <li>Sacra, "Anthropic revenue, valuation &amp; funding," 2026. <a href="https://sacra.com/c/anthropic/" target="_blank" rel="noopener">https://sacra.com/c/anthropic/</a></li>
+      <li>Simon Willison, "Anthropic's run-rate revenue hits $47 billion," May 29, 2026. <a href="https://simonwillison.net/2026/May/29/anthropic/" target="_blank" rel="noopener">https://simonwillison.net/2026/May/29/anthropic/</a></li>
+      <li>TechCrunch, "Anthropic scales Claude Mythos to critical infrastructure in 15+ countries," June 2, 2026. <a href="https://techcrunch.com/2026/06/02/anthropic-scales-claude-mythos-to-critical-infrastructure-in-15-countries/" target="_blank" rel="noopener">https://techcrunch.com/2026/06/02/anthropic-scales-claude-mythos-to-critical-infrastructure-in-15-countries/</a></li>
+      <li>SC Media, "Anthropic grants Mythos access to 150 more organizations, plans wider release," 2026. <a href="https://www.scworld.com/news/anthropic-grants-mythos-access-to-150-more-organizations-plans-wider-release" target="_blank" rel="noopener">https://www.scworld.com/news/anthropic-grants-mythos-access-to-150-more-organizations-plans-wider-release</a></li>
+      <li>TechTimes, "Anthropic Ends Subscription Subsidy for Agents June 15," June 2, 2026. <a href="https://www.techtimes.com/articles/317625/20260602/anthropic-ends-subscription-subsidy-agents-june-15-credit-pool-replaces-flat-rate-access.htm" target="_blank" rel="noopener">https://www.techtimes.com/articles/317625/20260602/anthropic-ends-subscription-subsidy-agents-june-15-credit-pool-replaces-flat-rate-access.htm</a></li>
+      <li>VentureBeat, "OpenAI's Codex update lets agents build interactive enterprise workspaces via Sites and role-specific plugins," 2026. <a href="https://venturebeat.com/orchestration/openais-codex-update-lets-agents-build-interactive-enterprise-workspaces-via-sites-and-role-specific-plugins" target="_blank" rel="noopener">https://venturebeat.com/orchestration/openais-codex-update-lets-agents-build-interactive-enterprise-workspaces-via-sites-and-role-specific-plugins</a></li>
+      <li>The AI Insider, "Geordie Closes $30M in Funding," June 1, 2026. <a href="https://theaiinsider.tech/2026/06/01/geordie-closes-30m-in-funding-to-help-enterprises-securely-adopt-agentic-ai-at-scale/" target="_blank" rel="noopener">https://theaiinsider.tech/2026/06/01/geordie-closes-30m-in-funding-to-help-enterprises-securely-adopt-agentic-ai-at-scale/</a></li>
+      <li>New Market Pitch, "Agentic AI Market Funding Trends (2026)," 2026. <a href="https://newmarketpitch.com/blogs/news/agentic-ai-funding-trends" target="_blank" rel="noopener">https://newmarketpitch.com/blogs/news/agentic-ai-funding-trends</a></li>
+      <li>TechCrunch, "Sierra raises $950M as the race to own enterprise AI gets serious," May 4, 2026. <a href="https://techcrunch.com/2026/05/04/sierra-raises-950m-as-the-race-to-own-enterprise-ai-gets-serious/" target="_blank" rel="noopener">https://techcrunch.com/2026/05/04/sierra-raises-950m-as-the-race-to-own-enterprise-ai-gets-serious/</a></li>
+      <li>Model Context Protocol Blog, "The 2026-07-28 MCP Specification Release Candidate," 2026. <a href="https://blog.modelcontextprotocol.io/posts/2026-07-28-release-candidate/" target="_blank" rel="noopener">https://blog.modelcontextprotocol.io/posts/2026-07-28-release-candidate/</a></li>
+      <li>IETF Datatracker, "Security Considerations for Model Context Protocol Implementations in AI Agent Systems," 2026. <a href="https://datatracker.ietf.org/doc/draft-mohiuddin-mcp-security-considerations/" target="_blank" rel="noopener">https://datatracker.ietf.org/doc/draft-mohiuddin-mcp-security-considerations/</a></li>
+      <li>Council of the EU, "Artificial Intelligence: Council and Parliament agree to simplify and streamline rules," May 7, 2026. <a href="https://www.consilium.europa.eu/en/press/press-releases/2026/05/07/artificial-intelligence-council-and-parliament-agree-to-simplify-and-streamline-rules/" target="_blank" rel="noopener">https://www.consilium.europa.eu/en/press/press-releases/2026/05/07/artificial-intelligence-council-and-parliament-agree-to-simplify-and-streamline-rules/</a></li>
+      <li>Covington (Inside Privacy), "EU AI Act Update: Timeline Relief, Targeted Simplification, and New Prohibitions," 2026. <a href="https://www.insideprivacy.com/artificial-intelligence/eu-ai-act-update-timeline-relief-targeted-simplification-and-new-prohibitions/" target="_blank" rel="noopener">https://www.insideprivacy.com/artificial-intelligence/eu-ai-act-update-timeline-relief-targeted-simplification-and-new-prohibitions/</a></li>
+      <li>Codersera, "Gemini 3.5 Pro: The June 2026 Launch Guide," 2026. <a href="https://codersera.com/blog/gemini-3-5-pro-launch-guide-2026/" target="_blank" rel="noopener">https://codersera.com/blog/gemini-3-5-pro-launch-guide-2026/</a></li>
+      <li>WaveSpeed, "GPT-5.6 Just Showed Up in OpenAI's Codex Logs," 2026. <a href="https://wavespeed.ai/blog/posts/gpt-5-6-canary-leak-what-we-know/" target="_blank" rel="noopener">https://wavespeed.ai/blog/posts/gpt-5-6-canary-leak-what-we-know/</a></li>
+      <li>Polymarket, "Next Google Gemini Pro Model released on…?" 2026. <a href="https://polymarket.com/event/next-google-gemini-pro-model-released-onptptpt" target="_blank" rel="noopener">https://polymarket.com/event/next-google-gemini-pro-model-released-onptptpt</a></li>
+      </ul>
+    </article>
+
+    <section class="cta-band" id="contact" aria-labelledby="cta-heading">
+      <h2 id="cta-heading">From AI curiosity to AI capability</h2>
+      <p>This briefing is part of the field research behind our AI Enablement service &mdash; a curated, white-glove Claude Cowork implementation tailored to your organization&rsquo;s workflow.</p>
+      <a class="btn" href="https://calendly.com/mark-malaniru/30min" target="_blank" rel="noopener">Book a discovery call</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Malaniru Inc, LLC &middot; Lafayette, Colorado &middot; AI Enablement</p>
+    <p><a href="daily-intelligence-briefings.html">&larr; Back to Daily Intelligence Briefings</a> &middot; <a href="index.html">AI Enablement</a></p>
+      <nav class="mal-footernav" data-mal-footernav aria-label="Site" style="margin-top:0.7rem;font-size:0.82rem;line-height:1.9;">
+      <a href="about.html" style="color:#C07830;font-weight:700;text-decoration:none;">About</a> &middot;
+      <a href="pricing.html" style="color:#C07830;font-weight:700;text-decoration:none;">Pricing</a> &middot;
+      <a href="index.html" style="color:#C07830;font-weight:700;text-decoration:none;">AI Enablement</a>
+    </nav>
+  </footer>
+</body>
+</html>

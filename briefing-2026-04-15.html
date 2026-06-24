@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<!--
+  ============================================================================
+  Malaniru - Research article page (branded HTML)
+  Built by: Web (Morgan Shaw) - Date: 2026-06-23
+  Project:  Malaniru_Marketing_Site
+  Source:   Website/src/content/research/20260415-daily-intelligence-briefing.md
+  Purpose:  Standalone public article page for a daily intelligence briefing,
+            linked from philanthropy-ai-research.html.
+  STATUS:   Public marketing page. robots noindex pre-launch (mirrors template).
+            Calendly CTA hidden via CSS (per Principal, as in template).
+  FIDELITY: Article body rendered VERBATIM from the approved markdown. No copy
+            edits, no reordered sections, no changed figures or heading levels.
+  FLAGS:    header H1 uses the article's own title line ("Daily Intelligence Briefing — Wednesday, April 15, 2026"); frontmatter title ("Daily Agentic AI Intelligence Briefing — April 15, 2026") used for <title> tag/listing.
+  TECH:     Single self-contained HTML5 file. Embedded CSS. No JavaScript.
+            Template-matched (philanthropy-ai-adoption.html). WCAG AA. Mobile-first.
+  ============================================================================
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daily Agentic AI Intelligence Briefing — April 15, 2026 - Malaniru</title>
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="Claude Code Routines launches autonomous cloud automation; mainstream coverage of the Claude performance backlash confirms an undisclosed March 3 default-effort change; Conway leak exposes the always-on agent platform beneath it all.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --navy:#0F1A2E;--navy-mid:#2A3F63;--copper:#C07830;--gold:#D4A853;
+      --off-white:#F4F1EC;--light-gray:#E8E6E1;--mid-gray:#8A8A96;--dark-text:#1C1C1C;
+      --font:"Inter","Helvetica Neue",Arial,sans-serif;
+    }
+    *{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:var(--font);background:var(--off-white);color:var(--dark-text);line-height:1.65;font-size:16px;-webkit-font-smoothing:antialiased;}
+    .skip-link{position:absolute;left:-999px;top:0;background:var(--gold);color:var(--navy);padding:10px 16px;font-weight:700;z-index:10;}
+    .skip-link:focus{left:8px;top:8px;}
+    a{color:var(--copper);}
+    /* Header */
+    header{background: linear-gradient(160deg, rgba(15,26,46,0.72) 0%, rgba(10,18,33,0.82) 100%), url('StockCake-Cosmic_Web_Complexity-1361288-standard-rot90ccw.jpg'); background-size: auto, 100% 100%; background-repeat: no-repeat, no-repeat; background-position: center, center;color:var(--off-white);padding:48px 24px 52px;position:relative;overflow:hidden;}
+    header::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 85% 12%,rgba(192,120,48,0.20) 0%,rgba(15,26,46,0) 55%);pointer-events:none;}
+    .header-inner{max-width:760px;margin:0 auto;position:relative;z-index:1;}
+    .wordmark{font-weight:800;font-size:1.25rem;letter-spacing:0.02em;margin-bottom:30px;}
+    .wordmark .dot{color:var(--copper);}
+    .wordmark a{color:var(--off-white);text-decoration:none;transition:opacity .18s ease;}
+    .wordmark a:hover,.wordmark a:focus-visible{opacity:.85;outline:none;}
+    .eyebrow{display:inline-block;font-size:0.72rem;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;}
+    header h1{font-weight:800;font-size:clamp(1.8rem,4.6vw,2.6rem);line-height:1.14;letter-spacing:-0.01em;margin-bottom:16px;}
+    .byline{font-size:0.9rem;color:var(--light-gray);letter-spacing:0.01em;}
+    .byline .sep{color:var(--copper);margin:0 8px;}
+    .lede{font-size:1.08rem;color:var(--light-gray);max-width:66ch;margin-top:18px;}
+    .backlink{display:inline-block;margin-top:26px;color:var(--gold);font-weight:600;font-size:0.9rem;text-decoration:none;border-bottom:1px solid rgba(212,168,83,0.4);}
+    .backlink:hover,.backlink:focus-visible{border-bottom-color:var(--gold);outline:none;}
+    /* Article */
+    main{max-width:760px;margin:0 auto;padding:48px 24px 8px;}
+    .disclaimer{background:#fff;border:1px solid var(--light-gray);border-left:4px solid var(--copper);border-radius:8px;padding:14px 18px;font-size:0.9rem;color:var(--navy-mid);margin-bottom:34px;}
+    article{font-size:1.05rem;}
+    article h2{font-weight:800;font-size:1.5rem;color:var(--navy);line-height:1.22;letter-spacing:-0.01em;margin:42px 0 14px;}
+    article h3{font-weight:700;font-size:1.18rem;color:var(--navy-mid);line-height:1.25;margin:30px 0 10px;}
+    article h2 + p, article h3 + p{margin-top:0;}
+    article p{margin:0 0 18px;color:var(--dark-text);}
+    article ul,article ol{margin:0 0 18px;padding-left:24px;}
+    article li{margin-bottom:8px;}
+    article strong{font-weight:700;color:var(--navy);}
+    article em{font-style:italic;}
+    article a{color:var(--copper);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(192,120,48,0.35);transition:border-color .18s ease;}
+    article a:hover,article a:focus-visible{border-bottom-color:var(--copper);outline:none;}
+    article hr{border:none;border-top:1px solid var(--light-gray);margin:34px 0;}
+    article h2#sources, article h2#references{border-top:1px solid var(--light-gray);padding-top:30px;font-size:1.2rem;color:var(--navy-mid);}
+    /* sources list smaller */
+    article h2[id^="sources"] ~ ul li, article h3[id^="sources"] ~ ul li{font-size:0.95rem;color:var(--navy-mid);}
+    /* tables */
+    article table{width:100%;border-collapse:collapse;margin:0 0 24px;font-size:0.95rem;}
+    article th,article td{border:1px solid var(--light-gray);padding:9px 12px;text-align:left;vertical-align:top;}
+    article thead th{background:var(--navy);color:var(--off-white);font-weight:700;}
+    article tbody tr:nth-child(even){background:#fff;}
+    article .table-wrap{overflow-x:auto;margin:0 0 24px;}
+    article .table-wrap table{margin:0;}
+    /* CTA */
+    .cta-band{background:var(--navy);color:var(--off-white);border-radius:12px;padding:42px 32px;text-align:center;margin:48px 0 8px;}
+    .cta-band h2{font-weight:800;font-size:clamp(1.4rem,3.4vw,1.9rem);margin-bottom:12px;letter-spacing:-0.01em;color:var(--off-white);}
+    .cta-band p{color:var(--light-gray);max-width:52ch;margin:0 auto 24px;}
+    .cta-band .btn{display:inline-block;background:var(--copper);color:#fff;font-weight:700;padding:13px 28px;border-radius:8px;text-decoration:none;transition:background .18s ease;}
+    .cta-band .btn:hover,.cta-band .btn:focus-visible{background:var(--gold);color:var(--navy);outline:none;}
+    /* Footer */
+    footer{max-width:760px;margin:16px auto 0;padding:24px;font-size:0.82rem;color:var(--mid-gray);border-top:1px solid var(--light-gray);}
+    footer p+p{margin-top:6px;}
+    footer a{color:var(--mid-gray);text-decoration:underline;}
+    @media (prefers-reduced-motion:reduce){*{transition:none!important;}}
+
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header>
+    <div class="header-inner">
+      <div class="wordmark"><a href="index.html">Malaniru<span class="dot">.</span></a></div>
+      <span class="eyebrow">AI Enablement &middot; Daily Intelligence Briefing</span>
+      <h1>Daily Intelligence Briefing — Wednesday, April 15, 2026</h1>
+      <p class="byline">By Marco Harris<span class="sep">&middot;</span>April 15, 2026</p>
+      <p class="lede">Claude Code Routines launches autonomous cloud automation; mainstream coverage of the Claude performance backlash confirms an undisclosed March 3 default-effort change; Conway leak exposes the always-on agent platform beneath it all.</p>
+      <a class="backlink" href="daily-intelligence-briefings.html">&larr; All daily intelligence briefings</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <article>
+      <h2 id="executive-summary">Executive Summary</h2>
+      <p>Two signals define this midweek briefing: Anthropic is shipping harder than it is explaining, and the market is starting to notice. On April 14, Anthropic released Claude Code Routines — scheduled and webhook-triggered automation that runs in Anthropic's cloud with the laptop closed — and a redesigned Claude Code desktop experience. The same day, a wave of prolific-user backlash over perceived Claude performance regressions boiled over into mainstream coverage (Fortune, VentureBeat, The Register), with Boris Cherny confirming a default "effort" reduction to medium on March 3 that was not broadly communicated. Leaked source from early April has also surfaced "Conway," an internal always-on agent platform that appears to be the scaffolding beneath Routines. For organizations adopting AI, the through-line is governance: Anthropic's capability curve is steepening, while its change-communication practices are being publicly questioned. That is the exact tension to plan for — turning capability into governed, auditable, trainable workflows.</p>
+      <hr>
+      <h2 id="1-ai-market-trends">1. AI Market Trends</h2>
+      <p><strong>Claude Code Routines launches, opening the cron-and-webhook era for Claude.</strong> On April 14, 2026, Anthropic opened research preview access to Routines across all paid plans (Pro, Max, Team, Enterprise). A Routine bundles a prompt, one or more repositories, and connectors into a saved configuration that runs on Anthropic cloud infrastructure via three trigger types: scheduled (hourly, daily, weekdays, weekly — minimum one-hour interval), API (dedicated HTTPS endpoint with bearer-token auth), and GitHub webhooks (pull request, push, issue, check run, workflow run, discussion, release, merge queue). The feature ships alongside a redesigned Claude Code desktop UI. (Source: Anthropic, "Introducing routines in Claude Code," April 14, 2026; Claude Code Docs, April 14, 2026; SiliconANGLE, April 14, 2026; 9to5Mac, April 14, 2026; The Register, April 14, 2026)</p>
+      <p><strong>Claude performance backlash goes mainstream; Anthropic confirms undisclosed "effort" change.</strong> Fortune, VentureBeat, The Register, and AOL all filed stories between April 13 and April 14 documenting heavy-user complaints that Claude is following instructions less reliably, taking inappropriate shortcuts, and making more mistakes on complex workflows. Boris Cherny (lead, Claude Code) acknowledged that Anthropic reduced the default "effort" setting from high to medium on March 3 and that the full reasoning trace is no longer visible to users. Cherny framed the change as a response to feedback that Claude consumed too many tokens per task; critics characterized it as an undisclosed performance downgrade attributable to compute scarcity. A widely circulated analysis claimed a 67% drop in Claude Code quality, which Anthropic disputes and has not been independently reproduced. (Source: Fortune, April 14, 2026; VentureBeat, April 13, 2026; The Register, April 13, 2026)</p>
+      <p><strong>Conway leak reveals always-on agent platform beneath Anthropic's roadmap.</strong> Roughly 512,000 lines of Claude Code source code were accidentally published to a public registry in early April, exposing an internal platform named "Conway" — an always-on agent layer that keeps Claude responsive to external triggers (webhooks, scheduled events, browser automation via Chrome) rather than waiting for user input. Conway supports a custom extension format and an "Extensions" area for custom tools, UI tabs, and context handlers. Anthropic has not officially confirmed Conway, and there is no announced public release date. The feature overlap with Routines is substantial, suggesting Conway is the architectural substrate. (Source: Dataconomy, April 3, 2026; Testingcatalog, April 2026; MindStudio, April 2026)</p>
+      <p><strong>Agentic AI funding: $2.66B across 44 rounds in 2026 YTD; 142.6% YoY growth.</strong> Tracxn reports that agentic AI companies have raised $2.66 billion across 44 rounds so far in 2026, a 142.6% increase in funding versus 2025. Replit is the highest-funded pure-play at $922M. Top investors by count: Y Combinator, Accel, Andreessen Horowitz. Separately, BCG estimates a $200 billion agentic AI opportunity for tech service providers through 2030. (Source: Tracxn, accessed April 15, 2026; BCG, 2026; OneReach.ai, 2026)</p>
+      <p><strong>Enterprise adoption concentration: telecom (48%), retail/CPG (47%), financial services leading.</strong> More than 40% of large enterprises report scaling agentic AI implementation, with telecom and retail/CPG leading adoption rates. Financial services AI spend is projected at $97B by 2027. (Source: OneReach.ai, 2026; NVIDIA State of AI Report 2026)</p>
+      <p><strong>What This Means for You.</strong> Routines is the most material shipping signal of the week for AI implementation policy. Scheduled and webhook-triggered Claude execution changes the governance surface area materially — organizations that previously thought of Claude as an interactive assistant now need policies for autonomous executions: audit logging, approval gates for automated workflows, connector permission scoping, and failure-mode playbooks. The Fortune / VentureBeat coverage is uncomfortable but instructive: it reinforces that AI adoption requires change-management discipline, not just procurement. "Your vendor changed the default effort level and didn't tell users" is a concrete training point — staff need to know how to detect and adapt to model behavior shifts. And the Conway leak is a reminder that vendor-side capability roadmaps outpace disclosure; governance frameworks must assume capability expansion between contract renewals.</p>
+      <hr>
+      <h2 id="2-top-10-ai-agents-three-lenses">2. Top 10 AI Agents — Three Lenses</h2>
+      <p>Rankings as of April 15, 2026. Changes from April 13 noted where applicable.</p>
+      <h3 id="2a-relevance-for-claude-mcp-centered-work">2a. Relevance for Claude / MCP-Centered Work</h3>
+      <div class="table-wrap"><table>
+      <thead>
+      <tr>
+      <th>#</th>
+      <th>Agent</th>
+      <th>Why it ranks here</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>1</td>
+      <td>Claude Cowork</td>
+      <td>Unchanged. HumanX sentiment dominance continues to frame prospect conversations.</td>
+      </tr>
+      <tr>
+      <td>2</td>
+      <td>Claude Code (with Routines)</td>
+      <td>Up from #3. Routines launch on April 14 materially expands Claude Code's relevance beyond developer workflows into scheduled business automation.</td>
+      </tr>
+      <tr>
+      <td>3</td>
+      <td>Claude for Word</td>
+      <td>Down one. Still the single most relevant feature for foundation documentation workflows.</td>
+      </tr>
+      <tr>
+      <td>4</td>
+      <td>Claude Managed Agents</td>
+      <td>Unchanged. Enterprise beta continues.</td>
+      </tr>
+      <tr>
+      <td>5</td>
+      <td>Claude Mythos Preview (Project Glasswing)</td>
+      <td>Unchanged. Restricted access; compliance/governance relevance only.</td>
+      </tr>
+      <tr>
+      <td>6</td>
+      <td>Moody's Agentic Solutions (in Claude)</td>
+      <td>Unchanged.</td>
+      </tr>
+      <tr>
+      <td>7</td>
+      <td>Microsoft Agent Framework 1.0</td>
+      <td>Unchanged. Production-ready .NET/Python release.</td>
+      </tr>
+      <tr>
+      <td>8</td>
+      <td>Zoom MCP Connector (in Cowork)</td>
+      <td>Unchanged.</td>
+      </tr>
+      <tr>
+      <td>9</td>
+      <td>Lucidworks MCP Server</td>
+      <td>Unchanged.</td>
+      </tr>
+      <tr>
+      <td>10</td>
+      <td>Cursor Agent</td>
+      <td>Unchanged.</td>
+      </tr>
+      </tbody>
+      </table></div>
+      <h3 id="2b-market-momentum">2b. Market Momentum</h3>
+      <div class="table-wrap"><table>
+      <thead>
+      <tr>
+      <th>#</th>
+      <th>Agent</th>
+      <th>Why it ranks here</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>1</td>
+      <td>Claude Cowork</td>
+      <td>Unchanged.</td>
+      </tr>
+      <tr>
+      <td>2</td>
+      <td>Claude Code</td>
+      <td>Unchanged. Routines launch and redesigned desktop drove coverage across SiliconANGLE, 9to5Mac, The Register on April 14.</td>
+      </tr>
+      <tr>
+      <td>3</td>
+      <td>Claude Managed Agents</td>
+      <td>Unchanged.</td>
+      </tr>
+      <tr>
+      <td>4</td>
+      <td>OpenAI ChatGPT / AgentKit</td>
+      <td>Unchanged.</td>
+      </tr>
+      <tr>
+      <td>5</td>
+      <td>Google Gemini Robotics-ER 1.6</td>
+      <td>NEW ENTRY. April 14 release — improved visual and spatial reasoning for embodied robotics, including a Boston Dynamics Spot collaboration.</td>
+      </tr>
+      <tr>
+      <td>6</td>
+      <td>Oracle Fusion Agentic Applications</td>
+      <td>Down one.</td>
+      </tr>
+      <tr>
+      <td>7</td>
+      <td>Kore.ai Enterprise AI Platform</td>
+      <td>Down one.</td>
+      </tr>
+      <tr>
+      <td>8</td>
+      <td>Microsoft Agent Framework 1.0</td>
+      <td>Unchanged.</td>
+      </tr>
+      <tr>
+      <td>9</td>
+      <td>Z.ai GLM-5.1 (open source)</td>
+      <td>NEW ENTRY. April 14 MIT-license release; ranked #1 among open-source models on SWE-Bench Pro per Z.ai.</td>
+      </tr>
+      <tr>
+      <td>10</td>
+      <td>Replit Agent</td>
+      <td>Re-entry. $922M cumulative funding per Tracxn's April 2026 tracker.</td>
+      </tr>
+      </tbody>
+      </table></div>
+      <h3 id="2c-capability-maturity">2c. Capability &amp; Maturity</h3>
+      <div class="table-wrap"><table>
+      <thead>
+      <tr>
+      <th>#</th>
+      <th>Agent</th>
+      <th>Why it ranks here</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>1</td>
+      <td>Claude Opus 4.6</td>
+      <td>Unchanged on benchmarks; public effort-reduction confirmation introduces reliability questions.</td>
+      </tr>
+      <tr>
+      <td>2</td>
+      <td>Claude Sonnet 4.6</td>
+      <td>Unchanged.</td>
+      </tr>
+      <tr>
+      <td>3</td>
+      <td>Claude Cowork (GA)</td>
+      <td>Unchanged.</td>
+      </tr>
+      <tr>
+      <td>4</td>
+      <td>Claude Mythos Preview</td>
+      <td>Unchanged. Restricted to Project Glasswing.</td>
+      </tr>
+      <tr>
+      <td>5</td>
+      <td>Claude Code + Routines</td>
+      <td>Up one. Routines moves Claude Code into production automation substrate.</td>
+      </tr>
+      <tr>
+      <td>6</td>
+      <td>Claude for Word</td>
+      <td>Unchanged.</td>
+      </tr>
+      <tr>
+      <td>7</td>
+      <td>GPT-5.5-Codex</td>
+      <td>Stable.</td>
+      </tr>
+      <tr>
+      <td>8</td>
+      <td>GPT-5.4</td>
+      <td>Stable.</td>
+      </tr>
+      <tr>
+      <td>9</td>
+      <td>Microsoft Agent Framework 1.0</td>
+      <td>Up one. Production-ready .NET and Python release.</td>
+      </tr>
+      <tr>
+      <td>10</td>
+      <td>Gemini Robotics-ER 1.6</td>
+      <td>NEW ENTRY.</td>
+      </tr>
+      </tbody>
+      </table></div>
+      <h3 id="divergence-analysis">Divergence Analysis</h3>
+      <p>The sharpest divergence this cycle is internal to Anthropic. On Capability, Claude sits at four of the top five positions; on Relevance, at five of the top six. On Momentum, Cowork and Code still lead, but the Fortune / VentureBeat performance coverage complicates a pure "momentum up and to the right" narrative. Read charitably, this is the expected growing pain of a vendor whose product surface area is expanding faster than its communication cadence. Read skeptically, it suggests compute pressure is forcing trade-offs that are being absorbed by end users without warning.</p>
+      <p><strong>What This Means for You.</strong> The Routines launch is directly actionable this week: any organization with repetitive Claude workflows (review, report synthesis, routine drafting) can now schedule those workflows. Before doing so, they need a Routines-specific addition to their AI implementation policy — who can create Routines, what connectors they may use, how audit logs are retained, and what happens when a scheduled Routine fails silently. A single-page policy addendum covering those questions is enough to get started.</p>
+      <hr>
+      <h2 id="3-agentic-ai-advances-new-releases">3. Agentic AI Advances &amp; New Releases</h2>
+      <p><strong>Claude Code Routines (April 14, 2026).</strong> Three trigger types, one-hour minimum cadence, all paid plans. Ships with redesigned Claude Code desktop. (Source: Anthropic, April 14, 2026)</p>
+      <p><strong>Google Gemini Robotics-ER 1.6 (April 14, 2026).</strong> Embodied-reasoning model update. Key demonstration: Boston Dynamics Spot robot reading pressure gauges in industrial facility inspections by combining spatial reasoning with code execution. (Source: DeepMind)</p>
+      <p><strong>Z.ai GLM-5.1 open-source release (April 14, 2026).</strong> MIT license. Ranked #1 among open-source models on SWE-Bench Pro per Z.ai's announcement; independent reproduction pending. (Source: Z.ai)</p>
+      <p><strong>Runway Characters for video calls (April 14, 2026).</strong> AI avatars can now join Zoom, Google Meet, or Teams by pasting a meeting link. (Source: Runway)</p>
+      <p><strong>Microsoft Agent Framework 1.0 (April 3, 2026 — continued coverage).</strong> Production-ready release for .NET and Python with multi-provider model support and cross-runtime interoperability via A2A and MCP. (Source: Visual Studio Magazine, April 6, 2026)</p>
+      <p><strong>Hermes Agent (Nous Research, April 14, 2026).</strong> Self-improving open-source agent with MCP integration for ticketing, monitoring, documentation, and communication platforms. (Source: Petronella Cybersecurity News, April 14, 2026)</p>
+      <p><strong>New MCP Authorization Specification (April 2026).</strong> Updated authorization spec aligning MCP with OAuth 2.1 resource indicators, addressing enterprise identity and per-resource scoping concerns.</p>
+      <hr>
+      <h2 id="4-overnight-release-monitor">4. Overnight Release Monitor</h2>
+      <p>Since the April 13 briefing, the following items crossed the wire:</p>
+      <ul>
+      <li><strong>April 14 — Anthropic:</strong> Claude Code Routines research preview + redesigned desktop app.</li>
+      <li><strong>April 14 — Google DeepMind:</strong> Gemini Robotics-ER 1.6.</li>
+      <li><strong>April 14 — Z.ai:</strong> GLM-5.1 open source (MIT).</li>
+      <li><strong>April 14 — Runway:</strong> Characters joins Zoom / Meet / Teams calls.</li>
+      <li><strong>April 14 — Fortune / VentureBeat / The Register:</strong> Mainstream coverage of the Claude performance-decline user backlash and Anthropic's confirmed default-effort change from March 3.</li>
+      <li><strong>April 14 — Nous Research:</strong> Hermes Agent public guide.</li>
+      <li><strong>Continuing:</strong> Conway leak analysis.</li>
+      </ul>
+      <p>No overnight drops between April 14 and April 15 morning that change the rankings.</p>
+      <hr>
+      <h2 id="sources">Sources</h2>
+      <ul>
+      <li>Anthropic, "Introducing routines in Claude Code," April 14, 2026.</li>
+      <li>Claude Code Docs, "Automate work with routines," April 14, 2026.</li>
+      <li>SiliconANGLE, "Anthropic's Claude Code gets automated 'routines' and a desktop makeover," April 14, 2026.</li>
+      <li>9to5Mac, "Anthropic adds repeatable routines feature to Claude Code," April 14, 2026.</li>
+      <li>The Register, "Claude Code routines promise mildly clever cron jobs," April 14, 2026.</li>
+      <li>Fortune, "Anthropic is facing a wave of user backlash over reports of performance issues with its Claude AI chatbot," April 14, 2026.</li>
+      <li>VentureBeat, "Is Anthropic 'nerfing' Claude?" April 13, 2026.</li>
+      <li>The Register, "Claude is getting worse, according to Claude," April 13, 2026.</li>
+      <li>Dataconomy, "Anthropic Tests Conway As A Persistent Agent Platform For Claude," April 3, 2026.</li>
+      <li>Tracxn, "Agentic AI — 2026 Market &amp; Investments Trends," accessed April 15, 2026.</li>
+      <li>BCG, "The $200 Billion Agentic AI Opportunity for Tech Service Providers," 2026.</li>
+      <li>jls42.org, "Claude Code routines, Gemini Robotics-ER 1.6, GLM-5.1 open source," April 14, 2026.</li>
+      <li>Visual Studio Magazine, "Microsoft Ships Production-Ready Agent Framework 1.0," April 6, 2026.</li>
+      <li>Petronella Cybersecurity News, "Hermes Agent: The Self-Improving AI Agent," April 14, 2026.</li>
+      </ul>
+    </article>
+
+    <section class="cta-band" id="contact" aria-labelledby="cta-heading">
+      <h2 id="cta-heading">From AI curiosity to AI capability</h2>
+      <p>This briefing is part of the field research behind our AI Enablement service &mdash; a curated, white-glove Claude Cowork implementation tailored to your organization&rsquo;s workflow.</p>
+      <a class="btn" href="https://calendly.com/mark-malaniru/30min" target="_blank" rel="noopener">Book a discovery call</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Malaniru Inc, LLC &middot; Lafayette, Colorado &middot; AI Enablement</p>
+    <p><a href="daily-intelligence-briefings.html">&larr; Back to Daily Intelligence Briefings</a> &middot; <a href="index.html">AI Enablement</a></p>
+      <nav class="mal-footernav" data-mal-footernav aria-label="Site" style="margin-top:0.7rem;font-size:0.82rem;line-height:1.9;">
+      <a href="about.html" style="color:#C07830;font-weight:700;text-decoration:none;">About</a> &middot;
+      <a href="pricing.html" style="color:#C07830;font-weight:700;text-decoration:none;">Pricing</a> &middot;
+      <a href="index.html" style="color:#C07830;font-weight:700;text-decoration:none;">AI Enablement</a>
+    </nav>
+  </footer>
+</body>
+</html>

@@ -92,7 +92,7 @@
 
     /* ---- Header / hero --------------------------------------------------- */
     header {
-      background: var(--navy);
+      background: linear-gradient(160deg, rgba(15,26,46,0.72) 0%, rgba(10,18,33,0.82) 100%), url('StockCake-Cosmic_Web_Complexity-1361288-standard-rot90ccw.jpg'); background-size: auto, 100% 100%; background-repeat: no-repeat, no-repeat; background-position: center, center;
       color: var(--off-white);
       padding: 56px 24px 60px;
       position: relative;
@@ -360,8 +360,6 @@
       * { transition: none !important; }
     }
   
-    /* 2026-06-16: hide Book a discovery call CTA buttons (per Principal) */
-    a[href*="calendly.com"] { display: none !important; }
   </style>
 </head>
 <body>
@@ -449,6 +447,7 @@
 
       </div>
     </section>
+
 
     <!-- ===================== METHODOLOGY / TRUST ===================== -->
     <section class="ethic" aria-label="How we source this research">
@@ -574,6 +573,11 @@
   <footer>
     <p>&copy; 2026 Malaniru Inc, LLC &middot; Lafayette, Colorado &middot; AI Enablement</p>
     <p>Part of Malaniru's guided AI adoption path. <a href="index.html">Back to AI Enablement &rarr;</a></p>
+      <nav class="mal-footernav" data-mal-footernav aria-label="Site" style="margin-top:0.7rem;font-size:0.82rem;line-height:1.9;">
+      <a href="about.html" style="color:#C07830;font-weight:700;text-decoration:none;">About</a> &middot;
+      <a href="pricing.html" style="color:#C07830;font-weight:700;text-decoration:none;">Pricing</a> &middot;
+      <a href="index.html" style="color:#C07830;font-weight:700;text-decoration:none;">AI Enablement</a>
+    </nav>
   </footer>
 </body>
 </html>

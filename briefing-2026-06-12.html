@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<!--
+  ============================================================================
+  Malaniru - Research article page (branded HTML)
+  Built by: Web (Morgan Shaw) - Date: 2026-06-23
+  Project:  Malaniru_Marketing_Site
+  Source:   Website/src/content/research/20260612-daily-intelligence-briefing.md
+  Purpose:  Standalone public article page for a daily intelligence briefing,
+            linked from philanthropy-ai-research.html.
+  STATUS:   Public marketing page. robots noindex pre-launch (mirrors template).
+            Calendly CTA hidden via CSS (per Principal, as in template).
+  FIDELITY: Article body rendered VERBATIM from the approved markdown. No copy
+            edits, no reordered sections, no changed figures or heading levels.
+  FLAGS:    none.
+  TECH:     Single self-contained HTML5 file. Embedded CSS. No JavaScript.
+            Template-matched (philanthropy-ai-adoption.html). WCAG AA. Mobile-first.
+  ============================================================================
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daily Intelligence Briefing — June 12, 2026: Anthropic&#x27;s $150M Move Into Nonprofits - Malaniru</title>
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="Claude Corps puts 1,000 paid AI fellows inside 400+ nonprofits, the June 15 billing split nears, and Fable 5 stays free through June 22 — the day&#x27;s agentic AI landscape, read for foundation leaders.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --navy:#0F1A2E;--navy-mid:#2A3F63;--copper:#C07830;--gold:#D4A853;
+      --off-white:#F4F1EC;--light-gray:#E8E6E1;--mid-gray:#8A8A96;--dark-text:#1C1C1C;
+      --font:"Inter","Helvetica Neue",Arial,sans-serif;
+    }
+    *{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:var(--font);background:var(--off-white);color:var(--dark-text);line-height:1.65;font-size:16px;-webkit-font-smoothing:antialiased;}
+    .skip-link{position:absolute;left:-999px;top:0;background:var(--gold);color:var(--navy);padding:10px 16px;font-weight:700;z-index:10;}
+    .skip-link:focus{left:8px;top:8px;}
+    a{color:var(--copper);}
+    /* Header */
+    header{background: linear-gradient(160deg, rgba(15,26,46,0.72) 0%, rgba(10,18,33,0.82) 100%), url('StockCake-Cosmic_Web_Complexity-1361288-standard-rot90ccw.jpg'); background-size: auto, 100% 100%; background-repeat: no-repeat, no-repeat; background-position: center, center;color:var(--off-white);padding:48px 24px 52px;position:relative;overflow:hidden;}
+    header::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 85% 12%,rgba(192,120,48,0.20) 0%,rgba(15,26,46,0) 55%);pointer-events:none;}
+    .header-inner{max-width:760px;margin:0 auto;position:relative;z-index:1;}
+    .wordmark{font-weight:800;font-size:1.25rem;letter-spacing:0.02em;margin-bottom:30px;}
+    .wordmark .dot{color:var(--copper);}
+    .wordmark a{color:var(--off-white);text-decoration:none;transition:opacity .18s ease;}
+    .wordmark a:hover,.wordmark a:focus-visible{opacity:.85;outline:none;}
+    .eyebrow{display:inline-block;font-size:0.72rem;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;}
+    header h1{font-weight:800;font-size:clamp(1.8rem,4.6vw,2.6rem);line-height:1.14;letter-spacing:-0.01em;margin-bottom:16px;}
+    .byline{font-size:0.9rem;color:var(--light-gray);letter-spacing:0.01em;}
+    .byline .sep{color:var(--copper);margin:0 8px;}
+    .lede{font-size:1.08rem;color:var(--light-gray);max-width:66ch;margin-top:18px;}
+    .backlink{display:inline-block;margin-top:26px;color:var(--gold);font-weight:600;font-size:0.9rem;text-decoration:none;border-bottom:1px solid rgba(212,168,83,0.4);}
+    .backlink:hover,.backlink:focus-visible{border-bottom-color:var(--gold);outline:none;}
+    /* Article */
+    main{max-width:760px;margin:0 auto;padding:48px 24px 8px;}
+    .disclaimer{background:#fff;border:1px solid var(--light-gray);border-left:4px solid var(--copper);border-radius:8px;padding:14px 18px;font-size:0.9rem;color:var(--navy-mid);margin-bottom:34px;}
+    article{font-size:1.05rem;}
+    article h2{font-weight:800;font-size:1.5rem;color:var(--navy);line-height:1.22;letter-spacing:-0.01em;margin:42px 0 14px;}
+    article h3{font-weight:700;font-size:1.18rem;color:var(--navy-mid);line-height:1.25;margin:30px 0 10px;}
+    article h2 + p, article h3 + p{margin-top:0;}
+    article p{margin:0 0 18px;color:var(--dark-text);}
+    article ul,article ol{margin:0 0 18px;padding-left:24px;}
+    article li{margin-bottom:8px;}
+    article strong{font-weight:700;color:var(--navy);}
+    article em{font-style:italic;}
+    article a{color:var(--copper);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(192,120,48,0.35);transition:border-color .18s ease;}
+    article a:hover,article a:focus-visible{border-bottom-color:var(--copper);outline:none;}
+    article hr{border:none;border-top:1px solid var(--light-gray);margin:34px 0;}
+    article h2#sources, article h2#references{border-top:1px solid var(--light-gray);padding-top:30px;font-size:1.2rem;color:var(--navy-mid);}
+    /* sources list smaller */
+    article h2[id^="sources"] ~ ul li, article h3[id^="sources"] ~ ul li{font-size:0.95rem;color:var(--navy-mid);}
+    /* tables */
+    article table{width:100%;border-collapse:collapse;margin:0 0 24px;font-size:0.95rem;}
+    article th,article td{border:1px solid var(--light-gray);padding:9px 12px;text-align:left;vertical-align:top;}
+    article thead th{background:var(--navy);color:var(--off-white);font-weight:700;}
+    article tbody tr:nth-child(even){background:#fff;}
+    article .table-wrap{overflow-x:auto;margin:0 0 24px;}
+    article .table-wrap table{margin:0;}
+    /* CTA */
+    .cta-band{background:var(--navy);color:var(--off-white);border-radius:12px;padding:42px 32px;text-align:center;margin:48px 0 8px;}
+    .cta-band h2{font-weight:800;font-size:clamp(1.4rem,3.4vw,1.9rem);margin-bottom:12px;letter-spacing:-0.01em;color:var(--off-white);}
+    .cta-band p{color:var(--light-gray);max-width:52ch;margin:0 auto 24px;}
+    .cta-band .btn{display:inline-block;background:var(--copper);color:#fff;font-weight:700;padding:13px 28px;border-radius:8px;text-decoration:none;transition:background .18s ease;}
+    .cta-band .btn:hover,.cta-band .btn:focus-visible{background:var(--gold);color:var(--navy);outline:none;}
+    /* Footer */
+    footer{max-width:760px;margin:16px auto 0;padding:24px;font-size:0.82rem;color:var(--mid-gray);border-top:1px solid var(--light-gray);}
+    footer p+p{margin-top:6px;}
+    footer a{color:var(--mid-gray);text-decoration:underline;}
+    @media (prefers-reduced-motion:reduce){*{transition:none!important;}}
+
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header>
+    <div class="header-inner">
+      <div class="wordmark"><a href="index.html">Malaniru<span class="dot">.</span></a></div>
+      <span class="eyebrow">AI Enablement &middot; Daily Intelligence Briefing</span>
+      <h1>Daily Intelligence Briefing — June 12, 2026: Anthropic&#x27;s $150M Move Into Nonprofits</h1>
+      <p class="byline">By Marco Harris<span class="sep">&middot;</span>June 12, 2026</p>
+      <p class="lede">Claude Corps puts 1,000 paid AI fellows inside 400+ nonprofits, the June 15 billing split nears, and Fable 5 stays free through June 22 — the day&#x27;s agentic AI landscape, read for foundation leaders.</p>
+      <a class="backlink" href="daily-intelligence-briefings.html">&larr; All daily intelligence briefings</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <article>
+      <p>The defining development this week is distribution, not capability. Anthropic announced <strong>Claude Corps</strong>, a $150 million program that embeds 1,000 paid, Claude-trained fellows inside more than 400 US nonprofits for 12 months, with each host receiving a $10,000 grant plus free Claude credits. The first 100-fellow cohort starts in October 2026 and applications close July 17. For organizations whose primary work is grantmaking and the broader nonprofit sector, this is the most strategically significant item in weeks: it validates the market and seeds a cohort of in-house AI champions who will reshape buyer expectations.</p>
+      <h2 id="1-ai-market-trends">1. AI Market Trends</h2>
+      <p><strong>Claude Corps points straight at the philanthropy sector.</strong> Anthropic committed $150 million to place 1,000 fellows inside 400+ US nonprofits. Fellows are paid $85,000 plus benefits and a token budget for a 12-month placement; eligibility requires only US work authorization, age 18 or older, and no more than two years of full-time experience — no degree required. Each host organization receives a $10,000 grant and free Claude credits. The program is funded and steered by Anthropic and implemented by education nonprofit CodePath as employer of record, with fellows getting intensive onboarding plus roughly five hours per week of ongoing training. The first cohort of 100 starts October 2026; later cohorts follow in January and August 2027; applications close July 17.</p>
+      <p>Read the strategic signal carefully. This is Anthropic buying distribution and goodwill in the exact sector foundations occupy. It is not a competing consultancy — fellows are embedded staff, not an implementation agency — but it changes the field. Hundreds of nonprofits will have a trained, on-site Claude advocate by late 2026, raising baseline AI literacy and, with it, buyer sophistication.</p>
+      <p>The capital backdrop is unchanged: Anthropic's confidential S-1 (June 1) sits atop a reported $65B raise, roughly $965B valuation, and $47B annualized revenue — figures reported by trade press citing the filing, not audited disclosures. Claude Fable 5 remains the tested-capability leader and is free to use through June 22 across several channels, per multiple trackers.</p>
+      <p><strong>What this means for foundation leaders:</strong> the nonprofits getting fellows will not need outside onboarding, but the many that applied and were not selected — plus the 400 hosts' peer organizations — are now primed buyers who want the capability without a 12-month fellowship. The outcome Claude Corps delivers, a trained and governed Claude workflow, is available now for organizations that want it immediately.</p>
+      <h2 id="2-the-agent-landscape">2. The Agent Landscape</h2>
+      <p>Claude Cowork remains the core delivery surface and is explicitly unaffected by the June 15 billing change. Claude Managed Agents — in public beta with cron scheduling, credential vaults, and private MCP server connectivity — is the productizable primitive to watch, turning agents into governed, scheduled infrastructure. Claude Fable 5 leads tested benchmark suites but carries a methodology caveat: its headline 80.3% SWE-bench Pro figure uses Anthropic's own scaffold, and standardized third-party leaderboards report different numbers. The direction is independently supported; the exact figure is contested.</p>
+      <p>On the competitive board, Google's Gemini 3.5 Pro remains pre-GA with a June target and no committed date, and OpenAI's GPT-5.6 is unannounced. The near-term event most likely to move the field is Gemini 3.5 Pro's general availability.</p>
+      <p>The clearest movement this week is in the ecosystem layer, which capability benchmarks don't capture. Claude Corps generates enormous relevance to the nonprofit AI-buyer landscape and real momentum, yet ships no model — a reminder that, for implementation work, who gets trained on Claude can matter more than which model tops a leaderboard.</p>
+      <h2 id="3-advances-and-new-releases">3. Advances and New Releases</h2>
+      <p>Beyond Claude Corps, the practitioner-relevant items are a free Fable 5 access window through June 22 (promotional — confirm per channel before relying on it), and the June 15 Agent SDK billing split, now three days out. The Agent SDK, <code>claude -p</code>, and GitHub Actions move to a separate metered credit pool; the interactive pool — Claude.ai, interactive Claude Code, and Claude Cowork — is explicitly unchanged. Trade press additionally frames June 15 as carrying a Claude 4-class model retirement, which should be confirmed against Anthropic's official deprecation page before acting.</p>
+      <p>Carry items hold: the MCP final specification lands July 28 with a stateless core and breaking changes; Gemini 3.5 Pro and GPT-5.6 remain pending; and the EU AI Act's August 2 transparency obligations stay on the calendar.</p>
+      <h2 id="4-the-bottom-line">4. The Bottom Line</h2>
+      <p>Two concrete actions follow from this week. First, organizations should build a position relative to Claude Corps: Anthropic is investing in nonprofit AI capability, and the same outcome — a trained, governed Claude workflow — is available now for the organizations that want it without waiting on a fellowship slot. Second, anyone running Claude Code or the Agent SDK should close out a June 15 readiness check before the date: the interactive experience and Claude Cowork are unchanged, but agent and programmatic usage move to a separate credit pool, and any model retiring that day should be confirmed and migrated off.</p>
+      <p>The deeper lesson is the one a governance-minded buyer already knows. A capable, trained individual accelerates AI adoption. Governance — documented rules for who can deploy, where credentials live, and what data the tools may touch — is what makes that adoption safe to scale. They are not the same job, and the organizations that do both will be the ones that hold up.</p>
+      <hr>
+      <h2 id="sources">Sources</h2>
+      <ul>
+      <li>Anthropic, "Introducing Claude Corps," June 2026. <a href="https://www.anthropic.com/news/claude-corps" target="_blank" rel="noopener">https://www.anthropic.com/news/claude-corps</a></li>
+      <li>The Register, "Anthropic hires 1,000 fellows to push Claude into nonprofits," June 11, 2026. <a href="https://www.theregister.com/ai-and-ml/2026/06/11/anthropic-hires-1000-fellows-to-push-claude-into-nonprofits/" target="_blank" rel="noopener">https://www.theregister.com/ai-and-ml/2026/06/11/anthropic-hires-1000-fellows-to-push-claude-into-nonprofits/</a></li>
+      <li>The Next Web, "Anthropic is spending $150 million to embed 1,000 AI fellows inside nonprofits," June 2026. <a href="https://thenextweb.com/news/anthropic-claude-corps-150m-nonprofit-fellowship" target="_blank" rel="noopener">https://thenextweb.com/news/anthropic-claude-corps-150m-nonprofit-fellowship</a></li>
+      <li>CBS News, "Claude maker Anthropic files for IPO," June 2026. <a href="https://www.cbsnews.com/news/anthropic-ipo-confidential-filing-claude-ai/" target="_blank" rel="noopener">https://www.cbsnews.com/news/anthropic-ipo-confidential-filing-claude-ai/</a></li>
+      <li>Morph, "Claude Benchmarks (2026): Fable 5 Hits 95% SWE-bench Verified," 2026. <a href="https://www.morphllm.com/claude-benchmarks" target="_blank" rel="noopener">https://www.morphllm.com/claude-benchmarks</a></li>
+      <li>TechTimes, "Anthropic Ends Subscription Subsidy for Agents June 15," June 2, 2026. <a href="https://www.techtimes.com/articles/317625/20260602/anthropic-ends-subscription-subsidy-agents-june-15-credit-pool-replaces-flat-rate-access.htm" target="_blank" rel="noopener">https://www.techtimes.com/articles/317625/20260602/anthropic-ends-subscription-subsidy-agents-june-15-credit-pool-replaces-flat-rate-access.htm</a></li>
+      <li>Model Context Protocol Blog, "The 2026-07-28 MCP Specification Release Candidate," 2026. <a href="https://blog.modelcontextprotocol.io/posts/2026-07-28-release-candidate/" target="_blank" rel="noopener">https://blog.modelcontextprotocol.io/posts/2026-07-28-release-candidate/</a></li>
+      </ul>
+    </article>
+
+    <section class="cta-band" id="contact" aria-labelledby="cta-heading">
+      <h2 id="cta-heading">From AI curiosity to AI capability</h2>
+      <p>This briefing is part of the field research behind our AI Enablement service &mdash; a curated, white-glove Claude Cowork implementation tailored to your organization&rsquo;s workflow.</p>
+      <a class="btn" href="https://calendly.com/mark-malaniru/30min" target="_blank" rel="noopener">Book a discovery call</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Malaniru Inc, LLC &middot; Lafayette, Colorado &middot; AI Enablement</p>
+    <p><a href="daily-intelligence-briefings.html">&larr; Back to Daily Intelligence Briefings</a> &middot; <a href="index.html">AI Enablement</a></p>
+      <nav class="mal-footernav" data-mal-footernav aria-label="Site" style="margin-top:0.7rem;font-size:0.82rem;line-height:1.9;">
+      <a href="about.html" style="color:#C07830;font-weight:700;text-decoration:none;">About</a> &middot;
+      <a href="pricing.html" style="color:#C07830;font-weight:700;text-decoration:none;">Pricing</a> &middot;
+      <a href="index.html" style="color:#C07830;font-weight:700;text-decoration:none;">AI Enablement</a>
+    </nav>
+  </footer>
+</body>
+</html>

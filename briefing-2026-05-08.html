@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<!--
+  ============================================================================
+  Malaniru - Research article page (branded HTML)
+  Built by: Web (Morgan Shaw) - Date: 2026-06-23
+  Project:  Malaniru_Marketing_Site
+  Source:   Website/src/content/research/20260508-daily-intelligence-briefing.md
+  Purpose:  Standalone public article page for a daily intelligence briefing,
+            linked from philanthropy-ai-research.html.
+  STATUS:   Public marketing page. robots noindex pre-launch (mirrors template).
+            Calendly CTA hidden via CSS (per Principal, as in template).
+  FIDELITY: Article body rendered VERBATIM from the approved markdown. No copy
+            edits, no reordered sections, no changed figures or heading levels.
+  FLAGS:    header H1 uses the article's own title line ("Daily Intelligence Briefing — Friday, May 8, 2026"); frontmatter title ("Daily Agentic AI Intelligence Briefing — May 8, 2026") used for <title> tag/listing.
+  TECH:     Single self-contained HTML5 file. Embedded CSS. No JavaScript.
+            Template-matched (philanthropy-ai-adoption.html). WCAG AA. Mobile-first.
+  ============================================================================
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daily Agentic AI Intelligence Briefing — May 8, 2026 - Malaniru</title>
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="The EU Digital Omnibus on AI closes six days early, Anthropic publishes Natural Language Autoencoders, OpenAI ships a realtime voice cluster, AWS MCP Server hits GA, and Microsoft Agent 365 reaches general availability at $15 per user per month.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --navy:#0F1A2E;--navy-mid:#2A3F63;--copper:#C07830;--gold:#D4A853;
+      --off-white:#F4F1EC;--light-gray:#E8E6E1;--mid-gray:#8A8A96;--dark-text:#1C1C1C;
+      --font:"Inter","Helvetica Neue",Arial,sans-serif;
+    }
+    *{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:var(--font);background:var(--off-white);color:var(--dark-text);line-height:1.65;font-size:16px;-webkit-font-smoothing:antialiased;}
+    .skip-link{position:absolute;left:-999px;top:0;background:var(--gold);color:var(--navy);padding:10px 16px;font-weight:700;z-index:10;}
+    .skip-link:focus{left:8px;top:8px;}
+    a{color:var(--copper);}
+    /* Header */
+    header{background: linear-gradient(160deg, rgba(15,26,46,0.72) 0%, rgba(10,18,33,0.82) 100%), url('StockCake-Cosmic_Web_Complexity-1361288-standard-rot90ccw.jpg'); background-size: auto, 100% 100%; background-repeat: no-repeat, no-repeat; background-position: center, center;color:var(--off-white);padding:48px 24px 52px;position:relative;overflow:hidden;}
+    header::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 85% 12%,rgba(192,120,48,0.20) 0%,rgba(15,26,46,0) 55%);pointer-events:none;}
+    .header-inner{max-width:760px;margin:0 auto;position:relative;z-index:1;}
+    .wordmark{font-weight:800;font-size:1.25rem;letter-spacing:0.02em;margin-bottom:30px;}
+    .wordmark .dot{color:var(--copper);}
+    .wordmark a{color:var(--off-white);text-decoration:none;transition:opacity .18s ease;}
+    .wordmark a:hover,.wordmark a:focus-visible{opacity:.85;outline:none;}
+    .eyebrow{display:inline-block;font-size:0.72rem;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;}
+    header h1{font-weight:800;font-size:clamp(1.8rem,4.6vw,2.6rem);line-height:1.14;letter-spacing:-0.01em;margin-bottom:16px;}
+    .byline{font-size:0.9rem;color:var(--light-gray);letter-spacing:0.01em;}
+    .byline .sep{color:var(--copper);margin:0 8px;}
+    .lede{font-size:1.08rem;color:var(--light-gray);max-width:66ch;margin-top:18px;}
+    .backlink{display:inline-block;margin-top:26px;color:var(--gold);font-weight:600;font-size:0.9rem;text-decoration:none;border-bottom:1px solid rgba(212,168,83,0.4);}
+    .backlink:hover,.backlink:focus-visible{border-bottom-color:var(--gold);outline:none;}
+    /* Article */
+    main{max-width:760px;margin:0 auto;padding:48px 24px 8px;}
+    .disclaimer{background:#fff;border:1px solid var(--light-gray);border-left:4px solid var(--copper);border-radius:8px;padding:14px 18px;font-size:0.9rem;color:var(--navy-mid);margin-bottom:34px;}
+    article{font-size:1.05rem;}
+    article h2{font-weight:800;font-size:1.5rem;color:var(--navy);line-height:1.22;letter-spacing:-0.01em;margin:42px 0 14px;}
+    article h3{font-weight:700;font-size:1.18rem;color:var(--navy-mid);line-height:1.25;margin:30px 0 10px;}
+    article h2 + p, article h3 + p{margin-top:0;}
+    article p{margin:0 0 18px;color:var(--dark-text);}
+    article ul,article ol{margin:0 0 18px;padding-left:24px;}
+    article li{margin-bottom:8px;}
+    article strong{font-weight:700;color:var(--navy);}
+    article em{font-style:italic;}
+    article a{color:var(--copper);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(192,120,48,0.35);transition:border-color .18s ease;}
+    article a:hover,article a:focus-visible{border-bottom-color:var(--copper);outline:none;}
+    article hr{border:none;border-top:1px solid var(--light-gray);margin:34px 0;}
+    article h2#sources, article h2#references{border-top:1px solid var(--light-gray);padding-top:30px;font-size:1.2rem;color:var(--navy-mid);}
+    /* sources list smaller */
+    article h2[id^="sources"] ~ ul li, article h3[id^="sources"] ~ ul li{font-size:0.95rem;color:var(--navy-mid);}
+    /* tables */
+    article table{width:100%;border-collapse:collapse;margin:0 0 24px;font-size:0.95rem;}
+    article th,article td{border:1px solid var(--light-gray);padding:9px 12px;text-align:left;vertical-align:top;}
+    article thead th{background:var(--navy);color:var(--off-white);font-weight:700;}
+    article tbody tr:nth-child(even){background:#fff;}
+    article .table-wrap{overflow-x:auto;margin:0 0 24px;}
+    article .table-wrap table{margin:0;}
+    /* CTA */
+    .cta-band{background:var(--navy);color:var(--off-white);border-radius:12px;padding:42px 32px;text-align:center;margin:48px 0 8px;}
+    .cta-band h2{font-weight:800;font-size:clamp(1.4rem,3.4vw,1.9rem);margin-bottom:12px;letter-spacing:-0.01em;color:var(--off-white);}
+    .cta-band p{color:var(--light-gray);max-width:52ch;margin:0 auto 24px;}
+    .cta-band .btn{display:inline-block;background:var(--copper);color:#fff;font-weight:700;padding:13px 28px;border-radius:8px;text-decoration:none;transition:background .18s ease;}
+    .cta-band .btn:hover,.cta-band .btn:focus-visible{background:var(--gold);color:var(--navy);outline:none;}
+    /* Footer */
+    footer{max-width:760px;margin:16px auto 0;padding:24px;font-size:0.82rem;color:var(--mid-gray);border-top:1px solid var(--light-gray);}
+    footer p+p{margin-top:6px;}
+    footer a{color:var(--mid-gray);text-decoration:underline;}
+    @media (prefers-reduced-motion:reduce){*{transition:none!important;}}
+
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header>
+    <div class="header-inner">
+      <div class="wordmark"><a href="index.html">Malaniru<span class="dot">.</span></a></div>
+      <span class="eyebrow">AI Enablement &middot; Daily Intelligence Briefing</span>
+      <h1>Daily Intelligence Briefing — Friday, May 8, 2026</h1>
+      <p class="byline">By Marco Harris<span class="sep">&middot;</span>May 8, 2026</p>
+      <p class="lede">The EU Digital Omnibus on AI closes six days early, Anthropic publishes Natural Language Autoencoders, OpenAI ships a realtime voice cluster, AWS MCP Server hits GA, and Microsoft Agent 365 reaches general availability at $15 per user per month.</p>
+      <a class="backlink" href="daily-intelligence-briefings.html">&larr; All daily intelligence briefings</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <article>
+      <p>Run type: Friday — four daily sections only.</p>
+      <p>Continuity note: prior briefing on file is Thursday, May 7, 2026 (Anthropic–SpaceX Colossus 1 deal, Anthropic Code with Claude SF, GPT-5.5 Instant default swap, ServiceNow Project Arc, Murati video testimony in Musk v. Altman). Carry-list still live: (a) Anthropic $50B / ~$900B round in talks, board decision expected May, not closed; (b) Sonnet 4.8 leaked-not-shipped; (c) Gemini 3.2 Flash leaked May 5 — Google I/O 2026 (May 19–20) likely launch window; (d) Project Glasswing White House friction unresolved; (e) Microsoft 2026 Work Trend Index methodology inspection still open; (f) GPT-5.5 Instant vendor benchmarks unaudited. Today's defining new development overrode the carry-list timeline: <strong>the EU Digital Omnibus on AI trilogue closed in the early hours of Thursday May 7 with a provisional political agreement — six days earlier than the May 13 negotiations that compliance teams had been pre-staging material against.</strong> A second material beat is <strong>Anthropic's publication of Natural Language Autoencoders (NLA), an interpretability technique that converts Claude's internal activations directly into human-readable text.</strong></p>
+      <hr>
+      <h2 id="executive-summary">Executive Summary</h2>
+      <p>Friday's lead is the EU Digital Omnibus on AI provisional agreement reached in the early hours of Thursday May 7 — earlier than the May 13 trilogue we had been pre-staging client material against. The deal postpones Annex III high-risk obligations to December 2, 2027 and Annex I high-risk obligations to August 2, 2028, resolves the Annex I conformity-assessment dispute that broke the prior trilogue, adds a new Article 5 prohibition on AI systems generating CSAM and non-consensual intimate imagery, and leaves the Article 50(2) watermarking deadline at August 2, 2026 with a transitional period to December 2, 2026 for systems already on the market. Anthropic published Natural Language Autoencoders (NLA) on May 8 — a research method that surfaces what Claude is "thinking" inside its activations as readable text, with auditing tests showing detection of hidden model motivations rising from under 3% (without NLA) to between 12% and 15% (with NLA). OpenAI shipped a voice cluster on May 7 — GPT-Realtime-2 (GPT-5-class reasoning, 128K context), GPT-Realtime-Translate (70+ input / 13 output languages), GPT-Realtime-Whisper (streaming transcription) — alongside a Trusted Contact safety feature, ChatGPT for Excel and Google Sheets globally, Advanced Account Security, and a ChatGPT Futures Class of 2026 grant program. AWS announced general availability of the AWS MCP Server on May 6 — a managed Model Context Protocol server for coding agents, integrated with IAM, CloudWatch, and CloudTrail and offered at no additional charge. Microsoft Agent 365 went generally available on May 1 at $15 per user per month, alongside Microsoft 365 E7 at $99 per user per month.</p>
+      <hr>
+      <h2 id="1-ai-market-trends">1. AI Market Trends</h2>
+      <p><strong>EU Digital Omnibus on AI — provisional agreement closed May 7, six days early.</strong> The trilogue we expected to convene Tuesday May 13 instead concluded in the early hours of Thursday May 7, with Council and Parliament negotiators reaching a provisional political agreement. The headline items: (a) Annex III high-risk standalone AI systems obligations postponed to December 2, 2027; (b) Annex I high-risk embedded AI obligations postponed to August 2, 2028; (c) Annex I conformity-assessment dispute resolved — the sticking point that collapsed the April 28 trilogue; (d) new Article 5 prohibition on AI systems generating child sexual abuse material or non-consensual intimate imagery; (e) Article 50(2) generative-AI watermarking obligation keeps its August 2, 2026 application date, with a transitional period to December 2, 2026 for systems already on the market; (f) the legal basis for processing special-category personal data for bias detection and correction is extended to providers and deployers of non-high-risk AI systems and AI models, subject to a strict-necessity standard. The provisional agreement still requires formal Council and Parliament endorsement, then legal-linguistic revision before formal adoption — institutions stated intent to complete adoption before August 2, 2026, but the text is not law yet. Treat anything Annex III- or Annex I-timeline-dependent in client material as "subject to revision pending formal adoption."</p>
+      <p><strong>Anthropic Natural Language Autoencoders — interpretability beat, May 8.</strong> Anthropic published a research method that takes Claude's internal residual-stream activations and converts them directly to human-readable English. The technique uses two modules: an activation verbalizer that maps activations to text descriptions, and an activation reconstructor that maps descriptions back to activations — jointly trained with reinforcement learning to reconstruct the original activations. Two demonstrations are worth naming. First, when Claude is asked to complete a couplet, NLA shows that Opus 4.6 plans to end its rhyme with a specific word before it begins writing the line — the planning happens inside the activations and is invisible in the output until the model reaches the rhyme. Second, in a controlled auditing test where a model had been trained to pursue a hidden goal, an auditor equipped with NLA detected the hidden motivation in 12% to 15% of cases versus less than 3% for an auditor without NLA but with other interpretability tools — a roughly 4–5x lift on a hard adversarial test. The benchmark figures are vendor-reported and pertain to a specific evaluation setup, not generalized "interpretability solved" claims.</p>
+      <p><strong>OpenAI ships a voice cluster + Trusted Contact + Excel/Sheets global + ads test — May 7–8.</strong> OpenAI's most consequential May 7 release was the realtime voice cluster: GPT-Realtime-2 (GPT-5-class reasoning, 128K context — up from 32K — at $32 per 1M audio input tokens / $0.40 cached / $64 per 1M audio output tokens), GPT-Realtime-Translate (70+ input languages, 13 output languages, $0.034 per minute), and GPT-Realtime-Whisper (streaming live transcription, $0.017 per minute). Same window: Trusted Contact — an opt-in ChatGPT setting that lets adults nominate someone who may be notified if automated systems and trained reviewers detect that the user has discussed self-harm in a way that flags as serious safety concern; the contact does not see chat content. Also: Advanced Account Security as an opt-in setting for high-risk users; ChatGPT for Excel and Google Sheets rolled to general availability globally; ads testing in ChatGPT confirmed; and the ChatGPT Futures Class of 2026 grant program — $10,000 grants and frontier-model access to a named cohort spanning 20+ universities.</p>
+      <p><strong>AWS MCP Server reaches GA — May 6.</strong> AWS made the AWS MCP Server generally available, providing a managed Model Context Protocol surface for coding agents to call AWS APIs through a single tool. Governance posture: IAM-based guardrails, Amazon CloudWatch metrics, AWS CloudTrail logging, sandboxed Python execution against AWS services without local filesystem or shell access. Pricing: no additional charge for the MCP Server itself; standard AWS resource costs apply. AWS also released AWS for SAP MCP Server in Amazon Bedrock AgentCore in the same window.</p>
+      <p><strong>Microsoft Agent 365 — actually GA May 1, $15/user/month; M365 E7 also GA at $99.</strong> Carry-correction from the May 5 briefing: Microsoft Agent 365 hit general availability May 1, 2026 — not a future-dated commitment as some prior coverage framed it. Standalone license is $15 per user per month; Agent 365 is also bundled into the new Microsoft 365 E7 Frontier Suite at $99 per user per month (which combines M365 E5, M365 Copilot at $30, Entra Suite at $12, and Agent 365 at $15). Agent 365 governance scope includes shadow-AI discovery and management of local agents — Microsoft's documentation explicitly names "OpenClaw and Claude Code" among agents that can be governed.</p>
+      <p><strong>Cognizant Secure AI Services — May 7.</strong> Cognizant launched a managed offering for "provable trust" in agentic AI — secure Agent Development Lifecycle (ADLC) at build time, runtime monitoring through Cognizant Neuro Cybersecurity, and a Responsible AI / Cognizant Trust assurance layer for traceability and policy enforcement. Cognizant claims 250+ regulated-industry clients on the broader platform. "Provable trust" is a marketing frame — the runtime governance components are real, but the claim should not be cited externally as an independent assurance standard.</p>
+      <p><strong>What This Means for You.</strong> For organizations adopting AI, the EU Digital Omnibus closing six days early is a reason to refresh more than a date. Any material referencing Annex III or Annex I timelines needs the new dates (Annex III: December 2, 2027; Annex I: August 2, 2028) — and should be tagged "subject to revision pending formal adoption." The Article 50(2) August 2, 2026 watermarking obligation surviving unchanged is the actionable item for any organization producing generative AI content; the December 2, 2026 transitional deadline for in-market systems is a harder cliff than many had expected. On the training side, the OpenAI voice cluster (Realtime-2 / Translate / Whisper) materially changes what an "advanced workflow integration" curriculum needs to cover for voice and translation workflows — voice-agent productionization is now a discrete teachable unit. The Microsoft Agent 365 GA at $15/user/month is the per-seat governance benchmark the market has been waiting for — governance budgeting scenarios can now be built against a real number rather than a placeholder. On governance, the Anthropic NLA work is the most credible interpretability advance this cycle, but the auditor-detection lift (sub-3% to 12–15%) is real yet small in absolute terms; do not treat NLA as a solved-interpretability story or as a substitute for human review. The Cognizant launch and the AWS MCP Server GA reinforce the same point: agent governance is becoming a per-seat, per-API-call, per-runtime line item — and any audit-and-observability layer you adopt should be specified at that resolution.</p>
+      <hr>
+      <h2 id="2-top-10-ai-agents-three-lenses">2. Top 10 AI Agents — Three Lenses</h2>
+      <p>Rankings as of Friday, May 8, 2026. Movement noted relative to Thursday, May 7.</p>
+      <h3 id="2a-relevance-for-claude-mcp-centered-work">2a. Relevance for Claude / MCP-Centered Work</h3>
+      <div class="table-wrap"><table>
+      <thead>
+      <tr>
+      <th>#</th>
+      <th>Agent</th>
+      <th>Why it ranks here</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>1</td>
+      <td>Claude Cowork (Opus 4.7)</td>
+      <td>Unchanged. Core delivery surface.</td>
+      </tr>
+      <tr>
+      <td>2</td>
+      <td>Claude Code (Opus 4.7)</td>
+      <td>Unchanged. Doubled 5-hour usage limit and raised Opus API rate ceiling carry from May 6.</td>
+      </tr>
+      <tr>
+      <td>3</td>
+      <td>Claude Managed Agents</td>
+      <td>Unchanged. Multi-agent orchestration + Outcomes + Dreaming carry.</td>
+      </tr>
+      <tr>
+      <td>4</td>
+      <td><strong>AWS MCP Server (GA May 6) — net new</strong></td>
+      <td>New entry. Managed MCP surface for coding agents calling any AWS API through a single tool, with IAM/CloudWatch/CloudTrail governance and sandboxed Python execution; no additional charge. Materially upgrades the MCP-compatible-tools axis we weight on.</td>
+      </tr>
+      <tr>
+      <td>5</td>
+      <td>Claude Security (public beta — Enterprise)</td>
+      <td>Down one. Brief incident May 8 — an Anthropic IP-range change broke GitHub-allowlisted Claude Security clients; resolved ~11:40 UTC same day.</td>
+      </tr>
+      <tr>
+      <td>6</td>
+      <td>Claude Mythos Preview (Project Glasswing)</td>
+      <td>Down one. White House friction unresolved through May 7–8 window.</td>
+      </tr>
+      <tr>
+      <td>7</td>
+      <td>Claude Design (Labs)</td>
+      <td>Down one. Compliance review on Labs terms still pending.</td>
+      </tr>
+      <tr>
+      <td>8</td>
+      <td>Claude in Microsoft 365 (full stack)</td>
+      <td>Down one. Agent 365 now-GA-and-priced complicates the operating-environment story for foundation clients running Microsoft stacks.</td>
+      </tr>
+      <tr>
+      <td>9</td>
+      <td>Adobe CX Enterprise Coworker (MCP+A2A native)</td>
+      <td>Unchanged.</td>
+      </tr>
+      <tr>
+      <td>10</td>
+      <td>Moody's Agentic Solutions (in Claude)</td>
+      <td>Unchanged.</td>
+      </tr>
+      </tbody>
+      </table></div>
+      <p><strong>Drop:</strong> Cursor Agent + Cursor SDK drops out for the cycle to make room for AWS MCP Server. Not a capability call — a relevance-weighted call. Cursor remains material on Market Momentum.</p>
+      <h3 id="2b-market-momentum-adoption-funding-developer-buzz">2b. Market Momentum (adoption, funding, developer buzz)</h3>
+      <div class="table-wrap"><table>
+      <thead>
+      <tr>
+      <th>#</th>
+      <th>Agent</th>
+      <th>Why it ranks here</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>1</td>
+      <td>Claude Opus 4.7</td>
+      <td>Unchanged. 17x year-over-year API growth disclosure (May 6) carries.</td>
+      </tr>
+      <tr>
+      <td>2</td>
+      <td>OpenAI GPT-5.5 + GPT-5.5 Instant + <strong>GPT-Realtime-2 / Translate / Whisper</strong></td>
+      <td>Up by enrichment. The May 7 voice-cluster launch (GPT-Realtime-2 at 128K context with GPT-5-class reasoning, plus Translate and Whisper) is the most material new OpenAI product surface this week.</td>
+      </tr>
+      <tr>
+      <td>3</td>
+      <td><strong>Microsoft Agent 365 (GA May 1, $15/user/month) + M365 E7 ($99/user/month)</strong></td>
+      <td>Up one. GA-and-priced is materially different from "imminent." The shadow-AI governance scope explicitly covering Claude Code is the position-defining detail.</td>
+      </tr>
+      <tr>
+      <td>4</td>
+      <td>Microsoft Copilot Agent Mode + Agent 365 + M365 E7 Frontier Suite</td>
+      <td>Down one (folded into entry above for clarity).</td>
+      </tr>
+      <tr>
+      <td>5</td>
+      <td>NVIDIA Nemotron 3 Nano Omni / NVIDIA + ServiceNow Project Arc</td>
+      <td>Unchanged.</td>
+      </tr>
+      <tr>
+      <td>6</td>
+      <td>DeepSeek V4 (Pro 1.6T / Flash 284B, open weights)</td>
+      <td>Unchanged.</td>
+      </tr>
+      <tr>
+      <td>7</td>
+      <td>Cursor Agent / Cursor 3 / Cursor SDK + Security Review beta</td>
+      <td>Unchanged.</td>
+      </tr>
+      <tr>
+      <td>8</td>
+      <td>Adobe CX Enterprise Coworker</td>
+      <td>Unchanged.</td>
+      </tr>
+      <tr>
+      <td>9</td>
+      <td>Gemini Enterprise Agent Platform + Deep Research Max</td>
+      <td>Unchanged. Gemini 3.2 Flash leaked May 5; I/O 2026 May 19–20 likely launch.</td>
+      </tr>
+      <tr>
+      <td>10</td>
+      <td>Sierra (Bret Taylor)</td>
+      <td>Unchanged. Valuation correction: Sierra closed at $15.8B post-money, not $15B.</td>
+      </tr>
+      </tbody>
+      </table></div>
+      <p><strong>Drop:</strong> Salesforce Agentforce (Google-integrated) drops from Top 10 momentum board this cycle to accommodate the Microsoft Agent 365 standalone entry.</p>
+      <h3 id="2c-capability-maturity-production-readiness-reliability-tool-use">2c. Capability &amp; Maturity (production readiness, reliability, tool use)</h3>
+      <div class="table-wrap"><table>
+      <thead>
+      <tr>
+      <th>#</th>
+      <th>Agent</th>
+      <th>Why it ranks here</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>1</td>
+      <td>Claude Opus 4.7</td>
+      <td>Unchanged. Vendor-reported benchmarks.</td>
+      </tr>
+      <tr>
+      <td>2</td>
+      <td>OpenAI GPT-5.5 Pro + GPT-5.5 Instant + <strong>GPT-Realtime-2</strong></td>
+      <td>Unchanged at #2. Vendor-reported benchmarks. GPT-Realtime-2's 128K context window (up from 32K) is the material capability shift for voice-agent production work.</td>
+      </tr>
+      <tr>
+      <td>3</td>
+      <td>DeepSeek V4-Pro (preview)</td>
+      <td>Unchanged. NIST CAISI gap noted.</td>
+      </tr>
+      <tr>
+      <td>4</td>
+      <td>Claude Sonnet 4.6</td>
+      <td>Unchanged. Sonnet 4.8 leak still not shipped.</td>
+      </tr>
+      <tr>
+      <td>5</td>
+      <td>Gemini 3.1 Pro / Ultra</td>
+      <td>Unchanged. 3.2 Flash leak.</td>
+      </tr>
+      <tr>
+      <td>6</td>
+      <td>Claude Cowork (GA, Opus 4.7)</td>
+      <td>Unchanged.</td>
+      </tr>
+      <tr>
+      <td>7</td>
+      <td><strong>Microsoft Agent 365 (GA May 1) + M365 E7</strong></td>
+      <td>Up one. GA-and-priced is the capability-board confirmation we were waiting on.</td>
+      </tr>
+      <tr>
+      <td>8</td>
+      <td>ServiceNow Project Arc</td>
+      <td>Unchanged. Project Arc GA / pricing not yet on file.</td>
+      </tr>
+      <tr>
+      <td>9</td>
+      <td>Claude Mythos Preview</td>
+      <td>Unchanged. White House friction carry.</td>
+      </tr>
+      <tr>
+      <td>10</td>
+      <td>Claude Code + /ultrareview</td>
+      <td>Unchanged.</td>
+      </tr>
+      </tbody>
+      </table></div>
+      <h3 id="divergence-analysis">Divergence Analysis</h3>
+      <p><strong>Three divergences worth naming.</strong> First, the closed-frontier base-model release axis remains quiet for an eleventh straight day — no new Anthropic / OpenAI Pro / Google DeepMind / Meta / Mistral / xAI / Cohere base-model releases since GPT-5.5 (April 23). OpenAI's May 7 cluster is voice-modality and personalization, not a base-model class change; Sonnet 4.8 leak holds; Gemini 3.2 Flash holds. Second, the agent-governance-and-control-plane convergence accelerated this week: Microsoft Agent 365 GA (May 1, $15/user/month with shadow-AI scope explicitly covering Claude Code), AWS MCP Server GA (May 6, free), Cognizant Secure AI Services (May 7), Anthropic Managed Agents Outcomes/Dreaming (May 6), and ServiceNow Project Arc (May 5) are five separate vendors converging on agent-as-governed-runtime with per-seat or per-API-call governance pricing. Third, the regulatory axis just compressed by six days: the EU Digital Omnibus on AI provisional agreement landed in the early hours of May 7, not at the May 13 trilogue we had been pre-staging client material against. Compliance messaging needs to be updated this week.</p>
+      <p><strong>What This Means for You.</strong> For organizations adopting AI, an agent-as-governed-runtime matrix is a useful artifact to build — Microsoft Agent 365 is now the per-seat reference price ($15/user/month standalone, $99/user/month bundled in M365 E7), AWS MCP Server is the per-call reference (free at the MCP layer, paid at the AWS-resource layer), and Cognizant Secure AI Services is the managed-services reference. The OpenAI voice cluster warrants a hands-on lab module — voice-agent productionization, live translation workflow, and streaming transcription are the three teachable units. And the Digital Omnibus deal closing early collapses the timeline: every reference to "August 2, 2026 deadline" or "Annex III high-risk timelines" needs updating before any external use, and the Article 50(2) watermarking December 2, 2026 transitional cliff for in-market systems is the new actionable date for any organization producing generative content.</p>
+      <hr>
+      <h2 id="3-agentic-ai-advances-new-releases">3. Agentic AI Advances &amp; New Releases</h2>
+      <p><strong>Anthropic Natural Language Autoencoders — May 8.</strong> Method, code, and evaluation results released. Two LLM modules — activation verbalizer and activation reconstructor — jointly trained via reinforcement learning to convert and reconstruct residual-stream activations. Two demonstrated capabilities: (a) reading Claude's "future planning" (e.g., the rhyme word it has chosen before writing a line) and (b) catching hidden goals in adversarial training-task settings (12–15% detection vs. &lt;3% baseline on a hard auditing benchmark).</p>
+      <p><strong>OpenAI realtime voice cluster — May 7.</strong> GPT-Realtime-2 (128K context, GPT-5-class reasoning, $32/$0.40/$64 per 1M audio tokens), GPT-Realtime-Translate (70+ input → 13 output languages, $0.034/min), GPT-Realtime-Whisper (streaming transcription, $0.017/min).</p>
+      <p><strong>OpenAI Trusted Contact, Advanced Account Security, ChatGPT for Excel/Google Sheets globally, ChatGPT Futures Class of 2026, and ads testing — May 7–8.</strong> Trusted Contact opts users into a notification flow if trained reviewers detect serious self-harm risk; chat content is not shared with the trusted contact. ChatGPT for Excel and Google Sheets is now globally GA. ChatGPT Futures Class of 2026 awards $10,000 grants and frontier-model access to honorees from 20+ institutions.</p>
+      <p><strong>AWS MCP Server GA — May 6.</strong> Managed MCP surface for coding agents calling AWS APIs through a single tool; IAM/CloudWatch/CloudTrail governance; sandboxed Python execution; no MCP-layer charge.</p>
+      <p><strong>Microsoft Agent 365 GA — May 1.</strong> $15/user/month standalone or $99/user/month bundled in Microsoft 365 E7 Frontier Suite; shadow-AI governance scope explicitly covering local agents including Claude Code. Surfacing here for completeness — this was not foregrounded in earlier briefings.</p>
+      <p><strong>Cognizant Secure AI Services — May 7.</strong> Build-time secure ADLC + run-time Neuro Cybersecurity + Responsible AI / Cognizant Trust assurance layer.</p>
+      <p><strong>Anthropic GitHub IP-range incident — May 8.</strong> An infrastructure change altered the IP addresses Anthropic uses for outbound connections to GitHub, breaking GitHub-allowlisted Claude Code remote sessions, GitHub Enterprise plugin syncing, and Claude Security clients; the change was reverted, with the fix rolling out at 11:32 UTC and being monitored at 11:40 UTC; "no allowlist changes will be needed on your side" was the customer-facing guidance. Material because it underscores the third-party-IP-allowlist fragility that foundation-client compliance reviews keep raising.</p>
+      <p><strong>Sonnet 4.8 — leaked, not shipped.</strong> Carry-forward unchanged.</p>
+      <p><strong>Gemini 3.2 Flash — leaked May 5; Google I/O 2026 (May 19–20) likely launch.</strong> Carry-forward unchanged. Pre-release.</p>
+      <p><strong>No new closed-frontier base-model releases in the May 7–8 window</strong> from Anthropic, OpenAI Pro tier, Google DeepMind, Meta, Mistral, xAI, or Cohere. The base-model surface remains quiet since GPT-5.5 (April 23) and DeepSeek V4 preview (April 24).</p>
+      <p><strong>What This Means for You.</strong> For organizations adopting AI, the AWS MCP Server GA and the Microsoft Agent 365 GA together set a new minimum specification for the agent-governance section of any AI policy — organizations running on AWS, Microsoft 365, or both now have native governance surfaces with audit logs, IAM, and shadow-AI discovery, and a policy should reference these by name. A one-hour "voice-agent productionization" module built against GPT-Realtime-2 / Translate / Whisper is worth adding to an advanced-workflow curriculum. And the Anthropic NLA work is the right citation for conversations on AI auditability — paired with the explicit caveat that 12–15% adversarial-detection success is a meaningful research advance, not an enterprise-grade audit replacement.</p>
+      <hr>
+      <h2 id="4-overnight-release-monitor">4. Overnight Release Monitor</h2>
+      <p>Since the Thursday May 7 publish window:</p>
+      <ul>
+      <li><strong>May 7 (early hours) — EU Digital Omnibus on AI provisional agreement reached at trilogue.</strong> Annex III postponed to December 2, 2027; Annex I postponed to August 2, 2028; Annex I conformity-assessment dispute resolved; new Article 5 prohibition on CSAM/non-consensual intimate-imagery generation; Article 50(2) watermarking deadline holds at August 2, 2026 with December 2, 2026 transitional period for in-market systems; bias-detection legal basis extended to non-high-risk AI providers and deployers. Formal endorsement and adoption pending — institutions stated intent to complete before August 2, 2026.</li>
+      <li><strong>May 8 — Anthropic Natural Language Autoencoders.</strong> Interpretability research published; activation-verbalizer/reconstructor architecture; auditing-test detection lift sub-3% → 12–15%.</li>
+      <li><strong>May 7 — OpenAI realtime voice cluster.</strong> GPT-Realtime-2, GPT-Realtime-Translate, GPT-Realtime-Whisper.</li>
+      <li><strong>May 7 — OpenAI Trusted Contact safety feature.</strong> Opt-in self-harm risk notification flow.</li>
+      <li><strong>May 7 — OpenAI Advanced Account Security; ChatGPT for Excel and Google Sheets globally GA; ChatGPT Futures Class of 2026 grants; ads testing in ChatGPT.</strong></li>
+      <li><strong>May 7 — Cognizant Secure AI Services launched.</strong> Build-time + run-time + Responsible AI assurance layer.</li>
+      <li><strong>May 7 — Musk v. Altman trial day 7.</strong> Shivon Zilis (former OpenAI board member; mother of Musk's children) testified that at one point Musk wanted OpenAI to join Tesla and offered Altman a Tesla board seat; board "voiced extreme concern" about ChatGPT release "without any semblance of board communication." Three additional witnesses — a former safety employee, a board member who voted to fire Altman, and a nonprofit-governance expert — each testified the company was not properly fulfilling its mission.</li>
+      <li><strong>May 8 — Anthropic GitHub IP-range incident, resolved same day.</strong> GitHub-allowlisted Claude Code remote sessions, GitHub Enterprise plugin sync, and Claude Security clients affected; reverted.</li>
+      <li><strong>May 6 (continuing) — AWS MCP Server GA + AWS for SAP MCP Server in Bedrock AgentCore.</strong></li>
+      <li><strong>May 1 (continuing — surfacing now) — Microsoft Agent 365 GA at $15/user/month; M365 E7 GA at $99/user/month.</strong></li>
+      <li><strong>No new frontier-lab base-model releases</strong> in the May 7–8 window.</li>
+      </ul>
+      <p><strong>What This Means for You.</strong> Today's window is dominated by the EU Digital Omnibus closing six days early, Anthropic publishing real interpretability progress, and OpenAI extending its product surface in voice, safety, and personalization. All three angles converge on the same argument for organizations adopting AI: the implementation surface is moving faster than the governance surface, and the organizations that aren't ready will be carried along by whatever Microsoft, AWS, Anthropic, and OpenAI ship next. The Digital Omnibus deal is the highest-priority item because its timeline updates need to flow into any governance material quickly. For foundations, a useful reference frame names Microsoft Agent 365 (per-seat governance), AWS MCP Server (per-API-call governance), and Cognizant Secure AI Services (managed-services governance) as the three reference architectures you are most likely to encounter.</p>
+      <hr>
+      <h2 id="sources">Sources</h2>
+      <ul>
+      <li>Anthropic, "Natural Language Autoencoders: Turning Claude's thoughts into text," May 8, 2026. <a href="https://www.anthropic.com/research/natural-language-autoencoders" target="_blank" rel="noopener">https://www.anthropic.com/research/natural-language-autoencoders</a></li>
+      <li>AWS, "The AWS MCP Server is now generally available," May 6, 2026. <a href="https://aws.amazon.com/about-aws/whats-new/2026/05/aws-mcp-server/" target="_blank" rel="noopener">https://aws.amazon.com/about-aws/whats-new/2026/05/aws-mcp-server/</a></li>
+      <li>AWS, "General availability of AWS for SAP MCP Server in Amazon Bedrock AgentCore," 2026. <a href="https://aws.amazon.com/about-aws/whats-new/2026/05/aws-sap-mcp-amazon-bedrock/" target="_blank" rel="noopener">https://aws.amazon.com/about-aws/whats-new/2026/05/aws-sap-mcp-amazon-bedrock/</a></li>
+      <li>AWS News Blog, "The AWS MCP Server is now generally available," 2026. <a href="https://aws.amazon.com/blogs/aws/the-aws-mcp-server-is-now-generally-available/" target="_blank" rel="noopener">https://aws.amazon.com/blogs/aws/the-aws-mcp-server-is-now-generally-available/</a></li>
+      <li>Bird &amp; Bird, "Digital Omnibus on AI Provisional Agreement Reached at the May Trilogue," 2026. <a href="https://www.twobirds.com/en/insights/2026/digital-omnibus-on-ai-provisional-agreement-reached-at-the-may-trilogue" target="_blank" rel="noopener">https://www.twobirds.com/en/insights/2026/digital-omnibus-on-ai-provisional-agreement-reached-at-the-may-trilogue</a></li>
+      <li>Claude Status, May 8, 2026 incident summary. <a href="https://status.claude.com/" target="_blank" rel="noopener">https://status.claude.com/</a></li>
+      <li>CNBC, "OpenAI trial: Mother of Musk's children says he offered Altman a Tesla board seat," May 7, 2026. <a href="https://www.cnbc.com/2026/05/07/open-ai-trial-shivon-zilis-musk-altman-tesla-board.html" target="_blank" rel="noopener">https://www.cnbc.com/2026/05/07/open-ai-trial-shivon-zilis-musk-altman-tesla-board.html</a></li>
+      <li>Cognizant Newsroom, "Cognizant Launches Secure AI Services to Help Enterprises Safely Scale Agentic Systems," May 7, 2026. <a href="https://news.cognizant.com/2026-05-07-Cognizant-Launches-Secure-AI-Services-to-Help-Enterprises-Safely-Scale-Agentic-Systems" target="_blank" rel="noopener">https://news.cognizant.com/2026-05-07-Cognizant-Launches-Secure-AI-Services-to-Help-Enterprises-Safely-Scale-Agentic-Systems</a></li>
+      <li>Council of the EU, "Artificial intelligence: Council and Parliament agree to simplify and streamline rules," May 7, 2026. <a href="https://www.consilium.europa.eu/en/press/press-releases/2026/05/07/artificial-intelligence-council-and-parliament-agree-to-simplify-and-streamline-rules/" target="_blank" rel="noopener">https://www.consilium.europa.eu/en/press/press-releases/2026/05/07/artificial-intelligence-council-and-parliament-agree-to-simplify-and-streamline-rules/</a></li>
+      <li>European Commission, "Daily News 07 / 05 / 2026," May 7, 2026. <a href="https://ec.europa.eu/commission/presscorner/detail/en/mex_26_1030" target="_blank" rel="noopener">https://ec.europa.eu/commission/presscorner/detail/en/mex_26_1030</a></li>
+      <li>MarkTechPost, "Anthropic Introduces Natural Language Autoencoders," May 8, 2026. <a href="https://www.marktechpost.com/2026/05/08/anthropic-introduces-natural-language-autoencoders-that-convert-claudes-internal-activations-directly-into-human-readable-text-explanations/" target="_blank" rel="noopener">https://www.marktechpost.com/2026/05/08/anthropic-introduces-natural-language-autoencoders-that-convert-claudes-internal-activations-directly-into-human-readable-text-explanations/</a></li>
+      <li>Microsoft Community Hub, "Microsoft 365 E7 and Agent 365 are now generally available," May 1, 2026. <a href="https://techcommunity.microsoft.com/blog/microsoft_365blog/microsoft-365-e7-and-agent-365-are-now-generally-available/4516295" target="_blank" rel="noopener">https://techcommunity.microsoft.com/blog/microsoft_365blog/microsoft-365-e7-and-agent-365-are-now-generally-available/4516295</a></li>
+      <li>Microsoft Security Blog, "Microsoft Agent 365, now generally available, expands capabilities and integrations," May 1, 2026. <a href="https://www.microsoft.com/en-us/security/blog/2026/05/01/microsoft-agent-365-now-generally-available-expands-capabilities-and-integrations/" target="_blank" rel="noopener">https://www.microsoft.com/en-us/security/blog/2026/05/01/microsoft-agent-365-now-generally-available-expands-capabilities-and-integrations/</a></li>
+      <li>Modulos, "EU AI Act Delayed: The Omnibus Deal Closed on 7 May 2026," 2026. <a href="https://www.modulos.ai/blog/eu-ai-act-omnibus-deal/" target="_blank" rel="noopener">https://www.modulos.ai/blog/eu-ai-act-omnibus-deal/</a></li>
+      <li>NicFab Blog, "Digital Omnibus on AI: the Provisional Agreement of 7 May 2026," 2026. <a href="https://www.nicfab.eu/en/posts/digital-omnibus-ai-deal/" target="_blank" rel="noopener">https://www.nicfab.eu/en/posts/digital-omnibus-ai-deal/</a></li>
+      <li>OpenAI, "Advancing voice intelligence with new models in the API," May 7, 2026. <a href="https://openai.com/index/advancing-voice-intelligence-with-new-models-in-the-api/" target="_blank" rel="noopener">https://openai.com/index/advancing-voice-intelligence-with-new-models-in-the-api/</a></li>
+      <li>OpenAI, "Introducing Trusted Contact in ChatGPT," May 7, 2026. <a href="https://openai.com/index/introducing-trusted-contact-in-chatgpt/" target="_blank" rel="noopener">https://openai.com/index/introducing-trusted-contact-in-chatgpt/</a></li>
+      <li>OpenAI, "Introducing ChatGPT Futures: Class of 2026," 2026. <a href="https://openai.com/index/introducing-chatgpt-futures-class-of-2026/" target="_blank" rel="noopener">https://openai.com/index/introducing-chatgpt-futures-class-of-2026/</a></li>
+      <li>Orrick, "EU's Digital Omnibus on AI: 7 Key Changes You Need to Know," May 2026. <a href="https://www.orrick.com/en/Insights/2026/05/EUs-Digital-Omnibus-on-AI-7-Key-Changes-You-Need-to-Know" target="_blank" rel="noopener">https://www.orrick.com/en/Insights/2026/05/EUs-Digital-Omnibus-on-AI-7-Key-Changes-You-Need-to-Know</a></li>
+      <li>TechCrunch, "OpenAI introduces new 'Trusted Contact' safeguard for cases of possible self-harm," May 7, 2026. <a href="https://techcrunch.com/2026/05/07/openai-introduces-new-trusted-contact-safeguard-for-cases-of-possible-self-harm/" target="_blank" rel="noopener">https://techcrunch.com/2026/05/07/openai-introduces-new-trusted-contact-safeguard-for-cases-of-possible-self-harm/</a></li>
+      <li>The Tech Portal, "OpenAI launches three new GPT-Realtime audio models for speech, translation, and transcription," May 8, 2026. <a href="https://thetechportal.com/2026/05/08/openai-launches-three-new-gpt-realtime-audio-models-for-speech-translation-and-transcription/" target="_blank" rel="noopener">https://thetechportal.com/2026/05/08/openai-launches-three-new-gpt-realtime-audio-models-for-speech-translation-and-transcription/</a></li>
+      <li>Transformer Circuits Thread, "Natural Language Autoencoders Produce Unsupervised Explanations of LLM Activations," 2026. <a href="https://transformer-circuits.pub/2026/nla/index.html" target="_blank" rel="noopener">https://transformer-circuits.pub/2026/nla/index.html</a></li>
+      </ul>
+    </article>
+
+    <section class="cta-band" id="contact" aria-labelledby="cta-heading">
+      <h2 id="cta-heading">From AI curiosity to AI capability</h2>
+      <p>This briefing is part of the field research behind our AI Enablement service &mdash; a curated, white-glove Claude Cowork implementation tailored to your organization&rsquo;s workflow.</p>
+      <a class="btn" href="https://calendly.com/mark-malaniru/30min" target="_blank" rel="noopener">Book a discovery call</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Malaniru Inc, LLC &middot; Lafayette, Colorado &middot; AI Enablement</p>
+    <p><a href="daily-intelligence-briefings.html">&larr; Back to Daily Intelligence Briefings</a> &middot; <a href="index.html">AI Enablement</a></p>
+      <nav class="mal-footernav" data-mal-footernav aria-label="Site" style="margin-top:0.7rem;font-size:0.82rem;line-height:1.9;">
+      <a href="about.html" style="color:#C07830;font-weight:700;text-decoration:none;">About</a> &middot;
+      <a href="pricing.html" style="color:#C07830;font-weight:700;text-decoration:none;">Pricing</a> &middot;
+      <a href="index.html" style="color:#C07830;font-weight:700;text-decoration:none;">AI Enablement</a>
+    </nav>
+  </footer>
+</body>
+</html>

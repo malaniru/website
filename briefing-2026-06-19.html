@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<!--
+  ============================================================================
+  Malaniru - Research article page (branded HTML)
+  Built by: Web (Morgan Shaw) - Date: 2026-06-23
+  Project:  Malaniru_Marketing_Site
+  Source:   Website/src/content/research/20260619-daily-intelligence-briefing.md
+  Purpose:  Standalone public article page for a daily intelligence briefing,
+            linked from philanthropy-ai-research.html.
+  STATUS:   Public marketing page. robots noindex pre-launch (mirrors template).
+            Calendly CTA hidden via CSS (per Principal, as in template).
+  FIDELITY: Article body rendered VERBATIM from the approved markdown. No copy
+            edits, no reordered sections, no changed figures or heading levels.
+  FLAGS:    none.
+  TECH:     Single self-contained HTML5 file. Embedded CSS. No JavaScript.
+            Template-matched (philanthropy-ai-adoption.html). WCAG AA. Mobile-first.
+  ============================================================================
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daily Intelligence Briefing — June 19, 2026: Day 7 of the Fable 5 Blackout, and Grok 4.3 Ships to Bedrock - Malaniru</title>
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="A week into the US export-control suspension, Claude Fable 5 and Mythos 5 remain offline with no restore date, and the week&#x27;s hopeful &#x27;48-hour&#x27; rumor lapsed without a return. xAI&#x27;s Grok 4.3 reached GA on Amazon Bedrock — the only new shipping event in the window. Opus 4.8 stays the reliable flagship. Plus GPT-5.6 still unannounced, Gemini 3.5 Pro odds softening, and why availability is now a governance variable.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --navy:#0F1A2E;--navy-mid:#2A3F63;--copper:#C07830;--gold:#D4A853;
+      --off-white:#F4F1EC;--light-gray:#E8E6E1;--mid-gray:#8A8A96;--dark-text:#1C1C1C;
+      --font:"Inter","Helvetica Neue",Arial,sans-serif;
+    }
+    *{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:var(--font);background:var(--off-white);color:var(--dark-text);line-height:1.65;font-size:16px;-webkit-font-smoothing:antialiased;}
+    .skip-link{position:absolute;left:-999px;top:0;background:var(--gold);color:var(--navy);padding:10px 16px;font-weight:700;z-index:10;}
+    .skip-link:focus{left:8px;top:8px;}
+    a{color:var(--copper);}
+    /* Header */
+    header{background: linear-gradient(160deg, rgba(15,26,46,0.72) 0%, rgba(10,18,33,0.82) 100%), url('StockCake-Cosmic_Web_Complexity-1361288-standard-rot90ccw.jpg'); background-size: auto, 100% 100%; background-repeat: no-repeat, no-repeat; background-position: center, center;color:var(--off-white);padding:48px 24px 52px;position:relative;overflow:hidden;}
+    header::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 85% 12%,rgba(192,120,48,0.20) 0%,rgba(15,26,46,0) 55%);pointer-events:none;}
+    .header-inner{max-width:760px;margin:0 auto;position:relative;z-index:1;}
+    .wordmark{font-weight:800;font-size:1.25rem;letter-spacing:0.02em;margin-bottom:30px;}
+    .wordmark .dot{color:var(--copper);}
+    .wordmark a{color:var(--off-white);text-decoration:none;transition:opacity .18s ease;}
+    .wordmark a:hover,.wordmark a:focus-visible{opacity:.85;outline:none;}
+    .eyebrow{display:inline-block;font-size:0.72rem;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;}
+    header h1{font-weight:800;font-size:clamp(1.8rem,4.6vw,2.6rem);line-height:1.14;letter-spacing:-0.01em;margin-bottom:16px;}
+    .byline{font-size:0.9rem;color:var(--light-gray);letter-spacing:0.01em;}
+    .byline .sep{color:var(--copper);margin:0 8px;}
+    .lede{font-size:1.08rem;color:var(--light-gray);max-width:66ch;margin-top:18px;}
+    .backlink{display:inline-block;margin-top:26px;color:var(--gold);font-weight:600;font-size:0.9rem;text-decoration:none;border-bottom:1px solid rgba(212,168,83,0.4);}
+    .backlink:hover,.backlink:focus-visible{border-bottom-color:var(--gold);outline:none;}
+    /* Article */
+    main{max-width:760px;margin:0 auto;padding:48px 24px 8px;}
+    .disclaimer{background:#fff;border:1px solid var(--light-gray);border-left:4px solid var(--copper);border-radius:8px;padding:14px 18px;font-size:0.9rem;color:var(--navy-mid);margin-bottom:34px;}
+    article{font-size:1.05rem;}
+    article h2{font-weight:800;font-size:1.5rem;color:var(--navy);line-height:1.22;letter-spacing:-0.01em;margin:42px 0 14px;}
+    article h3{font-weight:700;font-size:1.18rem;color:var(--navy-mid);line-height:1.25;margin:30px 0 10px;}
+    article h2 + p, article h3 + p{margin-top:0;}
+    article p{margin:0 0 18px;color:var(--dark-text);}
+    article ul,article ol{margin:0 0 18px;padding-left:24px;}
+    article li{margin-bottom:8px;}
+    article strong{font-weight:700;color:var(--navy);}
+    article em{font-style:italic;}
+    article a{color:var(--copper);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(192,120,48,0.35);transition:border-color .18s ease;}
+    article a:hover,article a:focus-visible{border-bottom-color:var(--copper);outline:none;}
+    article hr{border:none;border-top:1px solid var(--light-gray);margin:34px 0;}
+    article h2#sources, article h2#references{border-top:1px solid var(--light-gray);padding-top:30px;font-size:1.2rem;color:var(--navy-mid);}
+    /* sources list smaller */
+    article h2[id^="sources"] ~ ul li, article h3[id^="sources"] ~ ul li{font-size:0.95rem;color:var(--navy-mid);}
+    /* tables */
+    article table{width:100%;border-collapse:collapse;margin:0 0 24px;font-size:0.95rem;}
+    article th,article td{border:1px solid var(--light-gray);padding:9px 12px;text-align:left;vertical-align:top;}
+    article thead th{background:var(--navy);color:var(--off-white);font-weight:700;}
+    article tbody tr:nth-child(even){background:#fff;}
+    article .table-wrap{overflow-x:auto;margin:0 0 24px;}
+    article .table-wrap table{margin:0;}
+    /* CTA */
+    .cta-band{background:var(--navy);color:var(--off-white);border-radius:12px;padding:42px 32px;text-align:center;margin:48px 0 8px;}
+    .cta-band h2{font-weight:800;font-size:clamp(1.4rem,3.4vw,1.9rem);margin-bottom:12px;letter-spacing:-0.01em;color:var(--off-white);}
+    .cta-band p{color:var(--light-gray);max-width:52ch;margin:0 auto 24px;}
+    .cta-band .btn{display:inline-block;background:var(--copper);color:#fff;font-weight:700;padding:13px 28px;border-radius:8px;text-decoration:none;transition:background .18s ease;}
+    .cta-band .btn:hover,.cta-band .btn:focus-visible{background:var(--gold);color:var(--navy);outline:none;}
+    /* Footer */
+    footer{max-width:760px;margin:16px auto 0;padding:24px;font-size:0.82rem;color:var(--mid-gray);border-top:1px solid var(--light-gray);}
+    footer p+p{margin-top:6px;}
+    footer a{color:var(--mid-gray);text-decoration:underline;}
+    @media (prefers-reduced-motion:reduce){*{transition:none!important;}}
+
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header>
+    <div class="header-inner">
+      <div class="wordmark"><a href="index.html">Malaniru<span class="dot">.</span></a></div>
+      <span class="eyebrow">AI Enablement &middot; Daily Intelligence Briefing</span>
+      <h1>Daily Intelligence Briefing — June 19, 2026: Day 7 of the Fable 5 Blackout, and Grok 4.3 Ships to Bedrock</h1>
+      <p class="byline">By Marco Harris<span class="sep">&middot;</span>June 19, 2026</p>
+      <p class="lede">A week into the US export-control suspension, Claude Fable 5 and Mythos 5 remain offline with no restore date, and the week&#x27;s hopeful &#x27;48-hour&#x27; rumor lapsed without a return. xAI&#x27;s Grok 4.3 reached GA on Amazon Bedrock — the only new shipping event in the window. Opus 4.8 stays the reliable flagship. Plus GPT-5.6 still unannounced, Gemini 3.5 Pro odds softening, and why availability is now a governance variable.</p>
+      <a class="backlink" href="daily-intelligence-briefings.html">&larr; All daily intelligence briefings</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <article>
+      <p>Seven days into the suspension, Claude Fable 5 and Mythos 5 remain offline for all customers under the June 12 US export-control directive, with still no confirmed restore date. The most-circulated optimistic signal of the week — a June 16 "access back in 48 hours" post on X from a non-Anthropic account — has now expired without a return, a clean reminder that prediction-market odds and social rumor are not the same as a vendor commitment. Opus 4.8 remains unaffected and is the reliable reference tier, unchanged. The single genuinely new release since the last briefing is xAI Grok 4.3, now generally available on Amazon Bedrock with a 1M-token context window and configurable reasoning levels — notable as enterprise-channel availability, though its "lowest hallucination rate among frontier models" headline is a vendor claim. GPT-5.6 stays officially unannounced with a June 22–28 prediction-market window, and Gemini 3.5 Pro is still in limited Vertex preview, its "by June 30" GA odds softening to roughly 50–55%. The most structurally relevant item this week is not a model at all: Anthropic's Claude Partner Network now includes a tiered Services Track and a Partner Hub directory that rank implementation firms by depth of deployment.</p>
+      <h2 id="1-ai-market-trends">1. AI Market Trends</h2>
+      <p>The Fable 5 suspension is now a week old, and the information environment around it is the story. As of this morning — Day 7 — there is no official restoration of Fable 5 or Mythos 5, and Anthropic's most concrete public statement remains the June 17/18 Seoul remarks that access should return "in the coming days," with no date attached. What changed since the last briefing is the rumor cycle: on June 16 a non-Anthropic account on X posted that access would be restored within 48 hours, the claim propagated across forums and prediction markets and briefly moved implied odds, and 48 hours later nothing had been restored. Reporting also suggests US-side signals have been less conciliatory than some earlier administration comments implied, which argues against pricing a near-certain quick return. Prediction markets currently weight restoration at roughly 57% before July 1, around 67% before July 10, and around 75% before July 17 — market-implied, not fact.</p>
+      <p>For organizations adopting AI, this strengthens rather than changes the guidance from earlier in the week. An AI implementation policy should name, for each class of work, an approved primary model and an approved fallback — so that the disappearance of any single model degrades a workflow gracefully instead of halting it. A week of real downtime is the case study. The export-control dimension also matters for any organization with foreign-national staff or cross-border operations, where model access can be conditioned on nationality by government order. And for teams building AI literacy, the cleanest lesson of the week is information hygiene: a viral "48 hours" post is not a restore date.</p>
+      <h2 id="2-top-10-ai-agents-three-lenses">2. Top 10 AI Agents — Three Lenses</h2>
+      <p>Rankings as of Friday, June 19, 2026. The material change this run: xAI Grok 4.3 enters the boards on its June 18 Bedrock GA, and Fable 5 remains on the watch line, offline at Day 7. Mythos 5 stays gated and unscored.</p>
+      <h3 id="relevance-for-claude-mcp-centered-work">Relevance for Claude / MCP-Centered Work</h3>
+      <div class="table-wrap"><table>
+      <thead>
+      <tr>
+      <th>Rank</th>
+      <th>Agent / Platform</th>
+      <th>Justification</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>1</td>
+      <td>Claude Cowork</td>
+      <td>Core delivery surface; runs on the interactive subscription pool and on Opus 4.8, which is fully available.</td>
+      </tr>
+      <tr>
+      <td>2</td>
+      <td>Claude Opus 4.8</td>
+      <td>Reliable flagship; explicitly unaffected by the Fable 5 / Mythos 5 suspension; the top capability tier deployable today.</td>
+      </tr>
+      <tr>
+      <td>3</td>
+      <td>Claude Managed Agents (public beta)</td>
+      <td>Cron schedules, credential vaults, and private MCP servers; the productizable governed-automation primitive.</td>
+      </tr>
+      <tr>
+      <td>4</td>
+      <td>Claude Code + Agent SDK</td>
+      <td>Primary agentic build tool; Agent SDK on a separate metered credit pool since the June 15 billing split.</td>
+      </tr>
+      <tr>
+      <td>5</td>
+      <td>MCP-based connectors (cross-vendor)</td>
+      <td>Universal interop; final spec lands July 28 with breaking changes; now stewarded under the Linux Foundation's Agentic AI Foundation.</td>
+      </tr>
+      </tbody>
+      </table></div>
+      <p>Watch line: Claude Fable 5 — offline since June 12 under US export-control directive, Day 7; return "expected in coming days" but unconfirmed.</p>
+      <h3 id="market-momentum-adoption-funding-buzz">Market Momentum (adoption / funding / buzz)</h3>
+      <div class="table-wrap"><table>
+      <thead>
+      <tr>
+      <th>Rank</th>
+      <th>Agent / Platform</th>
+      <th>Justification</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>1</td>
+      <td>Anthropic (Fable 5 saga + TCS + Seoul + Partner Network)</td>
+      <td>Still dominant news share, though the Fable 5 recall is contested-negative attention. The TCS 50,000-seat partnership and new Partner Network Services Track are genuine enterprise momentum.</td>
+      </tr>
+      <tr>
+      <td>2</td>
+      <td>OpenAI (GPT-5.6 trailed for June)</td>
+      <td>June 16 "meaningful leap" framing plus a prediction-market window of June 22–28; officially unannounced.</td>
+      </tr>
+      <tr>
+      <td>3</td>
+      <td>xAI Grok 4.3 (Bedrock GA Jun 18)</td>
+      <td>Fresh enterprise-channel availability; 1M context, configurable reasoning, low-hallucination vendor claim. New entrant to watch.</td>
+      </tr>
+      <tr>
+      <td>4</td>
+      <td>Google Gemini 3.5 (Flash GA; Pro pending)</td>
+      <td>Past its "next month" I/O promise; Pro still limited Vertex preview, GA odds softening to roughly 50–55% by June 30.</td>
+      </tr>
+      <tr>
+      <td>5</td>
+      <td>Moonshot Kimi K2.7-Code (Jun 12)</td>
+      <td>Open-weight roughly 1T-param agentic coder; commercial-friendly license; sustained open-source buzz.</td>
+      </tr>
+      </tbody>
+      </table></div>
+      <h3 id="capability-maturity-production-readiness">Capability &amp; Maturity (production readiness)</h3>
+      <div class="table-wrap"><table>
+      <thead>
+      <tr>
+      <th>Rank</th>
+      <th>Agent / Model</th>
+      <th>Justification</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>1</td>
+      <td>Claude Opus 4.8</td>
+      <td>Production-proven, available, agentic-optimized. The reliable reference tier.</td>
+      </tr>
+      <tr>
+      <td>2</td>
+      <td>GPT-5.5 / Codex</td>
+      <td>Shipped, production-grade, broad enterprise deployment.</td>
+      </tr>
+      <tr>
+      <td>3</td>
+      <td>xAI Grok 4.3</td>
+      <td>Shipped to GA on Bedrock June 18; enterprise-ready channel, configurable reasoning; independent benchmarks still maturing.</td>
+      </tr>
+      <tr>
+      <td>4</td>
+      <td>Gemini 3.5 Flash</td>
+      <td>Shipped; Pro variant still pre-GA.</td>
+      </tr>
+      <tr>
+      <td>5</td>
+      <td>NVIDIA Nemotron 3 Ultra</td>
+      <td>Shipped June 4; open-weight, agentic-optimized.</td>
+      </tr>
+      </tbody>
+      </table></div>
+      <p>Not ranked: Claude Fable 5 — capability-leading on vendor suites but undeployable under government directive at Day 7. Zero access is zero on a production board.</p>
+      <h3 id="divergence-analysis">Divergence Analysis</h3>
+      <p>The availability axis still dominates: Fable 5 may lead on published benchmarks yet scores nothing on a production board because you cannot call it. The new wrinkle this run is xAI Grok 4.3 entering through the enterprise channel — the only model that actually shipped into a major cloud marketplace in the window, a different kind of momentum than GPT-5.6's rumor cycle or Gemini 3.5 Pro's slipping promise. Real availability earns Grok a maturity slot, but its headline quality claim is vendor-reported and not independently verified, so it does not yet displace the proven tiers. The most likely near-term board-mover remains GPT-5.6 over Gemini 3.5 Pro, whose GA odds have softened.</p>
+      <h2 id="3-agentic-ai-advances-new-releases">3. Agentic AI Advances &amp; New Releases</h2>
+      <p>xAI Grok 4.3 reached general availability on Amazon Bedrock on June 18 — the one clearly new shipping event since the last briefing. It is now available to AWS customers with a 1M-token context window and configurable reasoning effort (none, low, medium, high), positioned for agent-building and long-document workflows. xAI's claim that it achieves "the lowest hallucination rate among frontier models" is a vendor claim with no independent verification yet. The meaningful signal is channel, not benchmark: a frontier-class model reaching Bedrock GA matters most for organizations already standardized on AWS.</p>
+      <p>Fable 5 and Mythos 5 remain suspended at Day 7. GPT-5.6 is still pre-announcement, with no official system card or API model string and a June 22–28 market window. Gemini 3.5 Pro remains in limited Vertex preview, its "by June 30" GA odds now roughly 50–55%. Carry items hold: the MCP final specification lands July 28 with breaking changes and is now stewarded by the Linux Foundation's Agentic AI Foundation; Moonshot's open-weight Kimi K2.7-Code (June 12) is a licensable teaching contrast rather than a production recommendation; the June 15 billing split and Claude 4 API retirement are now several days live, with interactive surfaces unaffected; and EU AI Act transparency obligations apply August 2, still under active implementation guidance.</p>
+      <h2 id="4-overnight-daily-release-monitor">4. Overnight / Daily Release Monitor</h2>
+      <p>Covering roughly June 18–19: xAI Grok 4.3 went GA on Amazon Bedrock. No new frontier-class GA model arrived from OpenAI, Google, Anthropic, Meta, or Mistral. Fable 5 and Mythos 5 remain suspended at Day 7, and the June 16 "48-hour" rumor lapsed without a return. Anthropic's Claude Partner Network expansion remains live — a tiered Services Track ranking consulting firms by depth of Claude deployment, plus a Partner Hub directory for finding implementation partners. Carry items unchanged: GPT-5.6 window June 22–28; Gemini 3.5 Pro pre-GA; MCP final spec July 28; EU AI Act transparency August 2; Claude Corps Cohort 1 applications close July 17.</p>
+      <p>The practical takeaway: if a client-facing status note went out last week, a one-line refresh is warranted — still down at Day 7, no confirmed date, Opus 4.8 and Claude Cowork unaffected. And the Partner Network Services Track deserves a strategic look, because a public, tiered ranking of Claude implementation firms is directly adjacent to where boutique implementation practices compete.</p>
+      <h2 id="sources">Sources</h2>
+      <ul>
+      <li>Korea JoongAng Daily, "Anthropic confident of re-enabling Mythos, Fable 5 access in coming days, executive says," June 18, 2026. <a href="https://www.koreajoongangdaily.com/business/anthropic-confident-of-reenabling-mythos-fable-5-access-in-coming-days-executive/12727522" target="_blank" rel="noopener">https://www.koreajoongangdaily.com/business/anthropic-confident-of-reenabling-mythos-fable-5-access-in-coming-days-executive/12727522</a></li>
+      <li>TechTimes, "Fable 5 Export Ban Day Six: Anthropic Opens Seoul Office, Vows Models Back in Days," June 18, 2026. <a href="https://www.techtimes.com/articles/318668/20260618/fable-5-export-ban-day-six-anthropic-opens-seoul-office-vows-models-back-days.htm" target="_blank" rel="noopener">https://www.techtimes.com/articles/318668/20260618/fable-5-export-ban-day-six-anthropic-opens-seoul-office-vows-models-back-days.htm</a></li>
+      <li>pasqualepillitteri.it, "When Will Claude Fable 5 Return? The 48-Hour Rumor and the Facts," June 2026. <a href="https://pasqualepillitteri.it/en/news/5180/claude-fable-5-when-will-it-return" target="_blank" rel="noopener">https://pasqualepillitteri.it/en/news/5180/claude-fable-5-when-will-it-return</a></li>
+      <li>Greenberg Traurig LLP, "AI Company Anthropic Suspends Access to Claude Fable 5, Claude Mythos 5 Following US Export Control Directive," June 2026. <a href="https://www.gtlaw.com/en/insights/2026/6/ai-company-anthropic-suspends-access-to-claude-fable-5-claude-mythos-5-following-us-export-control-directive" target="_blank" rel="noopener">https://www.gtlaw.com/en/insights/2026/6/ai-company-anthropic-suspends-access-to-claude-fable-5-claude-mythos-5-following-us-export-control-directive</a></li>
+      <li>Releasebot, "xAI Release Notes — June 2026 Latest Updates," accessed June 19, 2026. <a href="https://releasebot.io/updates/xai" target="_blank" rel="noopener">https://releasebot.io/updates/xai</a></li>
+      <li>Geeky Gadgets, "What to Expect from OpenAI's GPT-5.6 Release in June 2026," 2026. <a href="https://www.geeky-gadgets.com/gpt-5-6-june-2026-release/" target="_blank" rel="noopener">https://www.geeky-gadgets.com/gpt-5-6-june-2026-release/</a></li>
+      <li>WaveSpeed, "Gemini 3.5 Pro Is Coming Next Month — What the Flash Release Already Tells Us," 2026. <a href="https://wavespeed.ai/blog/posts/gemini-3-5-pro-coming-next-month/" target="_blank" rel="noopener">https://wavespeed.ai/blog/posts/gemini-3-5-pro-coming-next-month/</a></li>
+      <li>Quartz, "Anthropic is launching a Services Track and Partner Hub to push Claude deeper into the enterprise," June 3, 2026. <a href="https://qz.com/anthropic-claude-partner-network-services-track-hub-enterprise-060326" target="_blank" rel="noopener">https://qz.com/anthropic-claude-partner-network-services-track-hub-enterprise-060326</a></li>
+      <li>Model Context Protocol Blog, "The 2026-07-28 MCP Specification Release Candidate," 2026. <a href="https://blog.modelcontextprotocol.io/posts/2026-07-28-release-candidate/" target="_blank" rel="noopener">https://blog.modelcontextprotocol.io/posts/2026-07-28-release-candidate/</a></li>
+      </ul>
+    </article>
+
+    <section class="cta-band" id="contact" aria-labelledby="cta-heading">
+      <h2 id="cta-heading">From AI curiosity to AI capability</h2>
+      <p>This briefing is part of the field research behind our AI Enablement service &mdash; a curated, white-glove Claude Cowork implementation tailored to your organization&rsquo;s workflow.</p>
+      <a class="btn" href="https://calendly.com/mark-malaniru/30min" target="_blank" rel="noopener">Book a discovery call</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Malaniru Inc, LLC &middot; Lafayette, Colorado &middot; AI Enablement</p>
+    <p><a href="daily-intelligence-briefings.html">&larr; Back to Daily Intelligence Briefings</a> &middot; <a href="index.html">AI Enablement</a></p>
+      <nav class="mal-footernav" data-mal-footernav aria-label="Site" style="margin-top:0.7rem;font-size:0.82rem;line-height:1.9;">
+      <a href="about.html" style="color:#C07830;font-weight:700;text-decoration:none;">About</a> &middot;
+      <a href="pricing.html" style="color:#C07830;font-weight:700;text-decoration:none;">Pricing</a> &middot;
+      <a href="index.html" style="color:#C07830;font-weight:700;text-decoration:none;">AI Enablement</a>
+    </nav>
+  </footer>
+</body>
+</html>

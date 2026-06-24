@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<!--
+  ============================================================================
+  Malaniru - Research article page (branded HTML)
+  Built by: Web (Morgan Shaw) - Date: 2026-06-23
+  Project:  Malaniru_Marketing_Site
+  Source:   Website/src/content/research/20260615-daily-intelligence-briefing.md
+  Purpose:  Standalone public article page for a daily intelligence briefing,
+            linked from philanthropy-ai-research.html.
+  STATUS:   Public marketing page. robots noindex pre-launch (mirrors template).
+            Calendly CTA hidden via CSS (per Principal, as in template).
+  FIDELITY: Article body rendered VERBATIM from the approved markdown. No copy
+            edits, no reordered sections, no changed figures or heading levels.
+  FLAGS:    none.
+  TECH:     Single self-contained HTML5 file. Embedded CSS. No JavaScript.
+            Template-matched (philanthropy-ai-adoption.html). WCAG AA. Mobile-first.
+  ============================================================================
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daily Intelligence Briefing — June 15, 2026: The Deadline Is Today - Malaniru</title>
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="The Claude June 15 changes are no longer a countdown — the Agent SDK billing split and Claude 4 API retirement take effect today, moving the action from preparation to verification. Plus Fable 5&#x27;s free window, a steady watch list, and the day&#x27;s agentic AI landscape for foundation leaders.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --navy:#0F1A2E;--navy-mid:#2A3F63;--copper:#C07830;--gold:#D4A853;
+      --off-white:#F4F1EC;--light-gray:#E8E6E1;--mid-gray:#8A8A96;--dark-text:#1C1C1C;
+      --font:"Inter","Helvetica Neue",Arial,sans-serif;
+    }
+    *{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:var(--font);background:var(--off-white);color:var(--dark-text);line-height:1.65;font-size:16px;-webkit-font-smoothing:antialiased;}
+    .skip-link{position:absolute;left:-999px;top:0;background:var(--gold);color:var(--navy);padding:10px 16px;font-weight:700;z-index:10;}
+    .skip-link:focus{left:8px;top:8px;}
+    a{color:var(--copper);}
+    /* Header */
+    header{background: linear-gradient(160deg, rgba(15,26,46,0.72) 0%, rgba(10,18,33,0.82) 100%), url('StockCake-Cosmic_Web_Complexity-1361288-standard-rot90ccw.jpg'); background-size: auto, 100% 100%; background-repeat: no-repeat, no-repeat; background-position: center, center;color:var(--off-white);padding:48px 24px 52px;position:relative;overflow:hidden;}
+    header::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 85% 12%,rgba(192,120,48,0.20) 0%,rgba(15,26,46,0) 55%);pointer-events:none;}
+    .header-inner{max-width:760px;margin:0 auto;position:relative;z-index:1;}
+    .wordmark{font-weight:800;font-size:1.25rem;letter-spacing:0.02em;margin-bottom:30px;}
+    .wordmark .dot{color:var(--copper);}
+    .wordmark a{color:var(--off-white);text-decoration:none;transition:opacity .18s ease;}
+    .wordmark a:hover,.wordmark a:focus-visible{opacity:.85;outline:none;}
+    .eyebrow{display:inline-block;font-size:0.72rem;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;}
+    header h1{font-weight:800;font-size:clamp(1.8rem,4.6vw,2.6rem);line-height:1.14;letter-spacing:-0.01em;margin-bottom:16px;}
+    .byline{font-size:0.9rem;color:var(--light-gray);letter-spacing:0.01em;}
+    .byline .sep{color:var(--copper);margin:0 8px;}
+    .lede{font-size:1.08rem;color:var(--light-gray);max-width:66ch;margin-top:18px;}
+    .backlink{display:inline-block;margin-top:26px;color:var(--gold);font-weight:600;font-size:0.9rem;text-decoration:none;border-bottom:1px solid rgba(212,168,83,0.4);}
+    .backlink:hover,.backlink:focus-visible{border-bottom-color:var(--gold);outline:none;}
+    /* Article */
+    main{max-width:760px;margin:0 auto;padding:48px 24px 8px;}
+    .disclaimer{background:#fff;border:1px solid var(--light-gray);border-left:4px solid var(--copper);border-radius:8px;padding:14px 18px;font-size:0.9rem;color:var(--navy-mid);margin-bottom:34px;}
+    article{font-size:1.05rem;}
+    article h2{font-weight:800;font-size:1.5rem;color:var(--navy);line-height:1.22;letter-spacing:-0.01em;margin:42px 0 14px;}
+    article h3{font-weight:700;font-size:1.18rem;color:var(--navy-mid);line-height:1.25;margin:30px 0 10px;}
+    article h2 + p, article h3 + p{margin-top:0;}
+    article p{margin:0 0 18px;color:var(--dark-text);}
+    article ul,article ol{margin:0 0 18px;padding-left:24px;}
+    article li{margin-bottom:8px;}
+    article strong{font-weight:700;color:var(--navy);}
+    article em{font-style:italic;}
+    article a{color:var(--copper);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(192,120,48,0.35);transition:border-color .18s ease;}
+    article a:hover,article a:focus-visible{border-bottom-color:var(--copper);outline:none;}
+    article hr{border:none;border-top:1px solid var(--light-gray);margin:34px 0;}
+    article h2#sources, article h2#references{border-top:1px solid var(--light-gray);padding-top:30px;font-size:1.2rem;color:var(--navy-mid);}
+    /* sources list smaller */
+    article h2[id^="sources"] ~ ul li, article h3[id^="sources"] ~ ul li{font-size:0.95rem;color:var(--navy-mid);}
+    /* tables */
+    article table{width:100%;border-collapse:collapse;margin:0 0 24px;font-size:0.95rem;}
+    article th,article td{border:1px solid var(--light-gray);padding:9px 12px;text-align:left;vertical-align:top;}
+    article thead th{background:var(--navy);color:var(--off-white);font-weight:700;}
+    article tbody tr:nth-child(even){background:#fff;}
+    article .table-wrap{overflow-x:auto;margin:0 0 24px;}
+    article .table-wrap table{margin:0;}
+    /* CTA */
+    .cta-band{background:var(--navy);color:var(--off-white);border-radius:12px;padding:42px 32px;text-align:center;margin:48px 0 8px;}
+    .cta-band h2{font-weight:800;font-size:clamp(1.4rem,3.4vw,1.9rem);margin-bottom:12px;letter-spacing:-0.01em;color:var(--off-white);}
+    .cta-band p{color:var(--light-gray);max-width:52ch;margin:0 auto 24px;}
+    .cta-band .btn{display:inline-block;background:var(--copper);color:#fff;font-weight:700;padding:13px 28px;border-radius:8px;text-decoration:none;transition:background .18s ease;}
+    .cta-band .btn:hover,.cta-band .btn:focus-visible{background:var(--gold);color:var(--navy);outline:none;}
+    /* Footer */
+    footer{max-width:760px;margin:16px auto 0;padding:24px;font-size:0.82rem;color:var(--mid-gray);border-top:1px solid var(--light-gray);}
+    footer p+p{margin-top:6px;}
+    footer a{color:var(--mid-gray);text-decoration:underline;}
+    @media (prefers-reduced-motion:reduce){*{transition:none!important;}}
+
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header>
+    <div class="header-inner">
+      <div class="wordmark"><a href="index.html">Malaniru<span class="dot">.</span></a></div>
+      <span class="eyebrow">AI Enablement &middot; Daily Intelligence Briefing</span>
+      <h1>Daily Intelligence Briefing — June 15, 2026: The Deadline Is Today</h1>
+      <p class="byline">By Marco Harris<span class="sep">&middot;</span>June 15, 2026</p>
+      <p class="lede">The Claude June 15 changes are no longer a countdown — the Agent SDK billing split and Claude 4 API retirement take effect today, moving the action from preparation to verification. Plus Fable 5&#x27;s free window, a steady watch list, and the day&#x27;s agentic AI landscape for foundation leaders.</p>
+      <a class="backlink" href="daily-intelligence-briefings.html">&larr; All daily intelligence briefings</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <article>
+      <p>Today is the deadline, not the warning. Effective June 15, Anthropic moves Claude Agent SDK usage — along with headless <code>claude -p</code>, Claude Code GitHub Actions, and third-party agent frameworks — off the subscription pool onto a separate metered credit, and retires the two original Claude 4 model IDs from the API with no grace period. The interactive pool — Claude.ai, interactive Claude Code, and Claude Cowork — stays on subscription limits and is explicitly unaffected, which remains the reassuring lead for any client note.</p>
+      <p>The relevant action shifts from preparation to confirmation: verify no workflow still calls <code>claude-sonnet-4-20250514</code> or <code>claude-opus-4-20250514</code>, confirm the Agent SDK credit was claimed for any scheduled-agent client, and watch for silent agent stalls today. A scheduled agent that loses its budget doesn't fail loudly — it goes quiet. A retired model ID doesn't warn you — the next call simply fails.</p>
+      <h2 id="the-capability-picture">The capability picture</h2>
+      <p>On capability, the Fable 5 verification split is unchanged. Its 80.3% SWE-bench Pro headline is the vendor's own published figure and still lacks independent confirmation, while the model is free to trial through June 22 across Pro, Max, Team, and seat-based Enterprise. Cite that number as vendor-reported, and pair it with the no-cost trial as a clean way to let a curious client form their own view.</p>
+      <p>The watch list is steady. Gemini 3.5 Pro remains pre-GA, with prediction markets weighting late June and no official date. GPT-5.6 is widely trailed for June on OpenAI's six-week cadence but remains officially unannounced. Moonshot's open-weight Kimi K2.7-Code (June 12, roughly 1 trillion total / 32 billion active parameters) stays a watch-list option pending independent benchmarks — its headline gains are self-reported on the lab's own suites. No new frontier-class general-availability model landed overnight.</p>
+      <h2 id="what-this-means-for-foundation-leaders">What this means for foundation leaders</h2>
+      <p>The pattern underneath the deadline is the story worth telling: capable AI tools are arriving faster than most organizations can govern them. In two weeks the field saw Fable 5, Kimi K2.7-Code, and continued movement across the stack. The gating constraint for most teams isn't access to a better model — it's knowing which models run where, under what budget, on whose data.</p>
+      <p>That gap between adoption and governance is the real work. A billing deadline is simply the version of it that arrives with a date attached. For organizations weighing AI adoption, the durable lesson is to keep an inventory of where AI runs unattended and a simple policy naming which model tiers are approved for which data classes.</p>
+      <h2 id="strategic-relevance">Strategic relevance</h2>
+      <p>Claude Corps holds as the most strategically significant philanthropy-sector item: Cohort 1 applications close July 17 (11:59 pm PT), with fellows starting October 19, across rolling October 2026, January 2027, and August 2027 cohorts. Future-dated carry items are unchanged: the MCP final specification lands July 28, and EU AI Act transparency obligations apply August 2 — both scheduled, not yet delivered.</p>
+      <hr>
+      <h3 id="sources">Sources</h3>
+      <ul>
+      <li>Enterprise DNA, "Two Claude Deadlines Hit June 15: What AI Builders Must Do," 2026. <a href="https://enterprisedna.co/resources/news/anthropic-claude-june-15-retirements-billing-2026/" target="_blank" rel="noopener">https://enterprisedna.co/resources/news/anthropic-claude-june-15-retirements-billing-2026/</a></li>
+      <li>CoderSera, "Anthropic's June 15 Billing Change," 2026. <a href="https://codersera.com/blog/anthropic-june-2026-billing-change-claude-code/" target="_blank" rel="noopener">https://codersera.com/blog/anthropic-june-2026-billing-change-claude-code/</a></li>
+      <li>Anthropic, "Model deprecations," 2026. <a href="https://platform.claude.com/docs/en/about-claude/model-deprecations" target="_blank" rel="noopener">https://platform.claude.com/docs/en/about-claude/model-deprecations</a></li>
+      <li>Morph, "SWE-bench Pro Leaderboard (2026)," 2026. <a href="https://www.morphllm.com/swe-bench-pro" target="_blank" rel="noopener">https://www.morphllm.com/swe-bench-pro</a></li>
+      <li>Vellum, "Claude Fable 5 &amp; Mythos 5 Full Benchmark Breakdown," 2026. <a href="https://www.vellum.ai/blog/claude-fable-5-and-mythos-5-benchmarks-explained" target="_blank" rel="noopener">https://www.vellum.ai/blog/claude-fable-5-and-mythos-5-benchmarks-explained</a></li>
+      <li>Abhishek Gautam, "Claude Fable 5 Free Until June 22," 2026. <a href="https://www.abhs.in/blog/claude-fable-5-free-until-june-22-github-copilot-bedrock-api-access-2026" target="_blank" rel="noopener">https://www.abhs.in/blog/claude-fable-5-free-until-june-22-github-copilot-bedrock-api-access-2026</a></li>
+      <li>CryptoBriefing, "Kimi releases open-source K2.7 Code model," June 2026. <a href="https://cryptobriefing.com/kimi-k2-7-code-open-source-release/" target="_blank" rel="noopener">https://cryptobriefing.com/kimi-k2-7-code-open-source-release/</a></li>
+      <li>TechTimes, "Google Gemini 3.5 Pro Nears June Launch," June 6, 2026. <a href="https://www.techtimes.com/articles/317919/20260606/google-gemini-35-pro-nears-june-launch-2-million-token-context-deep-think-reasoning.htm" target="_blank" rel="noopener">https://www.techtimes.com/articles/317919/20260606/google-gemini-35-pro-nears-june-launch-2-million-token-context-deep-think-reasoning.htm</a></li>
+      <li>Geeky Gadgets, "What to Expect from OpenAI's GPT-5.6 Release in June 2026," 2026. <a href="https://www.geeky-gadgets.com/gpt-5-6-june-2026-release/" target="_blank" rel="noopener">https://www.geeky-gadgets.com/gpt-5-6-june-2026-release/</a></li>
+      <li>Anthropic, "Introducing Claude Corps," June 2026. <a href="https://www.anthropic.com/news/claude-corps" target="_blank" rel="noopener">https://www.anthropic.com/news/claude-corps</a></li>
+      <li>Model Context Protocol Blog, "The 2026-07-28 MCP Specification Release Candidate," 2026. <a href="https://blog.modelcontextprotocol.io/posts/2026-07-28-release-candidate/" target="_blank" rel="noopener">https://blog.modelcontextprotocol.io/posts/2026-07-28-release-candidate/</a></li>
+      </ul>
+      <p><em>Research date: 2026-06-15. Figures flagged as vendor-published (e.g., Fable 5's 80.3% SWE-bench Pro) are not independently confirmed. Future-dated items (July 28 MCP spec, August 2 EU AI Act transparency) are scheduled, not delivered.</em></p>
+    </article>
+
+    <section class="cta-band" id="contact" aria-labelledby="cta-heading">
+      <h2 id="cta-heading">From AI curiosity to AI capability</h2>
+      <p>This briefing is part of the field research behind our AI Enablement service &mdash; a curated, white-glove Claude Cowork implementation tailored to your organization&rsquo;s workflow.</p>
+      <a class="btn" href="https://calendly.com/mark-malaniru/30min" target="_blank" rel="noopener">Book a discovery call</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Malaniru Inc, LLC &middot; Lafayette, Colorado &middot; AI Enablement</p>
+    <p><a href="daily-intelligence-briefings.html">&larr; Back to Daily Intelligence Briefings</a> &middot; <a href="index.html">AI Enablement</a></p>
+      <nav class="mal-footernav" data-mal-footernav aria-label="Site" style="margin-top:0.7rem;font-size:0.82rem;line-height:1.9;">
+      <a href="about.html" style="color:#C07830;font-weight:700;text-decoration:none;">About</a> &middot;
+      <a href="pricing.html" style="color:#C07830;font-weight:700;text-decoration:none;">Pricing</a> &middot;
+      <a href="index.html" style="color:#C07830;font-weight:700;text-decoration:none;">AI Enablement</a>
+    </nav>
+  </footer>
+</body>
+</html>

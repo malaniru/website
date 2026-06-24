@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<!--
+  ============================================================================
+  About Malaniru — marketing site page
+  Built by: Claudia (prompt-builder) · Date: 2026-06-23
+  Source: _config/about-me.md + brand-voice.md. Depth: professional + light color
+  (approved by Principal 2026-06-23). Design system mirrors index.html brand tokens.
+  Footer carries the standard site nav (About · Pricing · AI Enablement).
+  Pre-launch posture: noindex (matches index.html).
+  ============================================================================
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — Malaniru</title>
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="Malaniru is a boutique, fully remote AI implementation agency that builds and maintains Claude Cowork environments for professionals and small organizations — with honest guidance on what agentic AI can and can't do.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --color-navy:        #0F1A2E;
+      --color-navy-mid:    #2A3F63;
+      --color-copper:      #C07830;
+      --color-gold:        #D4A853;
+      --color-off-white:   #F4F1EC;
+      --color-light-gray:  #E8E6E1;
+      --color-mid-gray:    #8A8A96;
+      --color-dark-text:   #1C1C1C;
+      --color-navy-deep:   #0A1322;
+      --color-copper-soft: #D89A5C;
+      --color-on-navy-muted: #C3CBD9;
+      --font-sans: "Inter", "Helvetica Neue", Arial, sans-serif;
+      --space-1: 0.5rem; --space-2: 1rem; --space-3: 1.5rem;
+      --space-4: 2rem; --space-5: 3rem; --space-6: 4.5rem;
+      --radius: 10px; --radius-lg: 16px; --maxw: 1120px; --transition: 180ms ease;
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0; font-family: var(--font-sans); font-size: 16px; line-height: 1.6;
+      color: var(--color-dark-text); background: var(--color-off-white);
+      -webkit-font-smoothing: antialiased;
+    }
+    h1, h2, h3 { font-weight: 800; line-height: 1.15; margin: 0 0 var(--space-2); }
+    p { margin: 0 0 var(--space-2); }
+    a { color: inherit; }
+    .container { width: 100%; max-width: var(--maxw); margin-inline: auto; padding-inline: var(--space-3); }
+    .container--narrow { max-width: 800px; }
+
+    .skip-link {
+      position: absolute; left: -999px; top: 0; background: var(--color-copper);
+      color: var(--color-navy); padding: var(--space-1) var(--space-2);
+      font-weight: 700; z-index: 100; border-radius: 0 0 var(--radius) 0;
+    }
+    .skip-link:focus { left: 0; }
+    :focus-visible { outline: 3px solid var(--color-gold); outline-offset: 3px; border-radius: 4px; }
+
+    .btn {
+      display: inline-block; font-weight: 700; font-size: 1.05rem; letter-spacing: 0.01em;
+      text-decoration: none; padding: 0.9rem 1.8rem; border-radius: var(--radius);
+      background: var(--color-copper); color: var(--color-navy); border: 2px solid var(--color-copper);
+      transition: background var(--transition), border-color var(--transition), transform var(--transition);
+    }
+    .btn:hover, .btn:focus-visible { background: var(--color-gold); border-color: var(--color-gold); }
+    .btn:active { transform: translateY(1px); }
+
+    section { padding-block: var(--space-6); }
+    .section-label {
+      display: inline-block; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.14em;
+      text-transform: uppercase; color: var(--color-copper); margin-bottom: var(--space-2);
+    }
+    .section-head { max-width: 64ch; margin-bottom: var(--space-4); }
+    .section-head h2 { font-size: clamp(1.6rem, 4vw, 2.4rem); color: var(--color-navy); }
+
+    /* Hero */
+    .hero {
+      background:
+        radial-gradient(900px 500px at 80% -10%, rgba(192,120,48,0.20), transparent 60%),
+        linear-gradient(160deg, rgba(15,26,46,0.72) 0%, rgba(10,18,33,0.82) 100%),
+        url('StockCake-Cosmic_Web_Complexity-1361288-standard-rot90ccw.jpg');
+      background-size: auto, auto, 100% 100%;
+      background-repeat: no-repeat, no-repeat, no-repeat;
+      background-position: center, center, center;
+      color: var(--color-off-white); padding-block: var(--space-6);
+    }
+    .hero__inner { max-width: 760px; }
+    .hero__eyebrow {
+      color: var(--color-gold); font-weight: 600; letter-spacing: 0.16em;
+      text-transform: uppercase; font-size: 0.82rem; margin-bottom: var(--space-2);
+    }
+    .hero h1 { font-size: clamp(2.2rem, 6vw, 3.4rem); color: var(--color-off-white); margin-bottom: var(--space-2); }
+    .hero__lede { font-size: 1.12rem; color: var(--color-on-navy-muted); max-width: 62ch; margin-bottom: 0; }
+
+    /* Prose */
+    .prose { max-width: 68ch; }
+    .prose p { font-size: 1.06rem; }
+    .prose h2 { font-size: clamp(1.4rem, 3.4vw, 2rem); color: var(--color-navy); margin-top: var(--space-4); }
+    .prose strong { color: var(--color-navy); }
+
+    /* Fact strip */
+    .facts {
+      list-style: none; margin: var(--space-4) 0 0; padding: 0;
+      display: grid; gap: var(--space-2); grid-template-columns: 1fr;
+    }
+    .fact {
+      background: var(--color-navy); color: var(--color-off-white);
+      border-radius: var(--radius); padding: var(--space-3); border-left: 5px solid var(--color-copper);
+    }
+    .fact h3 { font-size: 1rem; color: var(--color-gold); margin-bottom: 0.3rem; }
+    .fact p { margin: 0; font-size: 0.96rem; color: var(--color-on-navy-muted); }
+    @media (min-width: 760px) { .facts { grid-template-columns: repeat(2, 1fr); gap: var(--space-2); } }
+
+    .meta-line { color: var(--color-mid-gray); font-size: 0.92rem; margin-top: var(--space-4); }
+
+    /* Closing CTA */
+    .cta-band {
+      background:
+        radial-gradient(700px 400px at 20% 120%, rgba(212,168,83,0.22), transparent 60%),
+        linear-gradient(150deg, var(--color-navy-mid) 0%, var(--color-navy) 100%);
+      color: var(--color-off-white); text-align: center;
+    }
+    .cta-band h2 { font-size: clamp(1.7rem, 4.5vw, 2.4rem); color: var(--color-off-white); }
+    .cta-band p { color: var(--color-on-navy-muted); max-width: 52ch; margin-inline: auto; margin-bottom: var(--space-4); font-size: 1.08rem; }
+
+    /* Footer (light, matches site convention) */
+    footer {
+      max-width: 960px; margin: 16px auto 0; padding: 24px; font-size: 0.82rem;
+      color: var(--color-mid-gray); border-top: 1px solid var(--color-light-gray); text-align: center;
+    }
+    footer p + p { margin-top: 6px; }
+
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="hero">
+    <div class="container hero__inner">
+      <p class="hero__eyebrow">Malaniru — White-glove AI implementation</p>
+      <h1>About Malaniru</h1>
+      <p class="hero__lede">A boutique, fully remote AI implementation agency that builds and maintains Claude Cowork environments for professionals and small organizations nationwide — with honest guidance on what agentic AI can and can&rsquo;t do for the work in front of you.</p>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <section class="container container--narrow">
+      <div class="prose">
+        <span class="section-label">Who we are</span>
+        <p>Malaniru guides professionals from AI curiosity to AI capability with a curated, white-glove Claude Cowork implementation tailored to their actual workflow. The work is hands-on: assess where an organization stands, put governance in place, build the team&rsquo;s real skill with the tools, and leave behind a working environment plus the documented practices to run it.</p>
+        <p>Alongside client delivery, Malaniru curates and publishes practitioner-level content on agentic AI &mdash; what holds up under real use, and what doesn&rsquo;t. The goal is straightforward: help people make informed decisions about AI adoption without the hype, including the decision not to adopt something.</p>
+
+        <h2>Who runs it</h2>
+        <p>Malaniru is led by <strong>Mark Andrew Harris</strong>, Principal. Mark brings 26 years in data analysis and software development &mdash; application and mobile development, data analysis, SQL, and Excel across the full stack, and a long habit of translating between the technical and the practical for people who don&rsquo;t live in code.</p>
+        <p>On the leadership side, he has run engineering teams at the team-lead, manager, and director levels &mdash; managing 15+ developers across concurrent projects, scaling teams from a handful to twenty-plus, and serving as Product Owner and Solution Architect. That background shapes how Malaniru is built: small, deliberate, and accountable for what it ships.</p>
+        <p>The path here wasn&rsquo;t a straight line. A US Coast Guard veteran with hands-on operational experience before a long career in software, Mark brings an operational discipline and a tolerance for real-world constraints that show up in how engagements are scoped and run &mdash; practical over theoretical, every time.</p>
+
+        <h2>Where we focus</h2>
+        <p>Malaniru&rsquo;s primary vertical is the philanthropic sector &mdash; grantmaking foundations and the organizations that serve them. The compliance, data migration, and workflow challenges in that space are a strong fit for what agentic AI actually does well, and for the careful, human-in-the-loop approach Malaniru takes to deploying it. The firm also draws on prior experience across enterprise software, real estate and mortgage technology, and agency web development.</p>
+
+        <ul class="facts">
+          <li class="fact">
+            <h3>Boutique by design</h3>
+            <p>Selective clientele, high standards, and engagements sized to the organization &mdash; not enterprise over-engineering.</p>
+          </li>
+          <li class="fact">
+            <h3>Accuracy first</h3>
+            <p>A wrong answer is worse than no answer. Every deliverable is built to flag uncertainty rather than paper over it.</p>
+          </li>
+          <li class="fact">
+            <h3>Human in the loop</h3>
+            <p>AI handles the routine; people keep control of anything that matters. Irreversible actions always get human review.</p>
+          </li>
+          <li class="fact">
+            <h3>You keep the capability</h3>
+            <p>Every engagement leaves behind a documented environment and the practices to run it &mdash; not a dependency on us.</p>
+          </li>
+        </ul>
+
+        <p class="meta-line"><strong style="color:var(--color-navy);">Malaniru Inc, LLC</strong> &middot; a Colorado limited liability company &middot; Lafayette, Colorado &middot; fully remote, serving clients nationwide.</p>
+      </div>
+    </section>
+
+    <section class="cta-band" id="contact" aria-labelledby="cta-heading">
+      <div class="container">
+        <h2 id="cta-heading">From AI curiosity to AI capability</h2>
+        <p>Start with a short, no-cost conversation about where AI would actually help &mdash; and where it wouldn&rsquo;t.</p>
+        <a class="btn" href="https://calendly.com/mark-malaniru/30min" target="_blank" rel="noopener">Book a discovery call</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Malaniru Inc, LLC &middot; Lafayette, Colorado &middot; About</p>
+    <nav class="mal-footernav" data-mal-footernav aria-label="Site" style="margin-top:0.7rem;font-size:0.82rem;line-height:1.9;">
+      <a href="about.html" style="color:#C07830;font-weight:700;text-decoration:none;">About</a> &middot;
+      <a href="pricing.html" style="color:#C07830;font-weight:700;text-decoration:none;">Pricing</a> &middot;
+      <a href="index.html" style="color:#C07830;font-weight:700;text-decoration:none;">AI Enablement</a>
+    </nav>
+  </footer>
+
+</body>
+</html>

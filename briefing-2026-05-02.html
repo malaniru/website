@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<!--
+  ============================================================================
+  Malaniru - Research article page (branded HTML)
+  Built by: Web (Morgan Shaw) - Date: 2026-06-23
+  Project:  Malaniru_Marketing_Site
+  Source:   Website/src/content/research/20260502-daily-intelligence-briefing.md
+  Purpose:  Standalone public article page for a daily intelligence briefing,
+            linked from philanthropy-ai-research.html.
+  STATUS:   Public marketing page. robots noindex pre-launch (mirrors template).
+            Calendly CTA hidden via CSS (per Principal, as in template).
+  FIDELITY: Article body rendered VERBATIM from the approved markdown. No copy
+            edits, no reordered sections, no changed figures or heading levels.
+  FLAGS:    none.
+  TECH:     Single self-contained HTML5 file. Embedded CSS. No JavaScript.
+            Template-matched (philanthropy-ai-adoption.html). WCAG AA. Mobile-first.
+  ============================================================================
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daily Intelligence Briefing — Saturday, May 2, 2026 - Malaniru</title>
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="Saturday agentic AI briefing: Microsoft FY26 Q3 actuals beat consensus (Azure +40%, AI ARR $37B, FY26 capex ~$190B), Microsoft Agent 365 reaches GA, Anthropic launches Claude Security public beta, OpenAI announces GPT-5.5-Cyber, Musk v. Altman week 1 closes without verdict, plus weekly sections on Foundation &amp; Philanthropy AI Adoption (Humanity AI $500M coalition) and Data &amp; Security Regulations.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --navy:#0F1A2E;--navy-mid:#2A3F63;--copper:#C07830;--gold:#D4A853;
+      --off-white:#F4F1EC;--light-gray:#E8E6E1;--mid-gray:#8A8A96;--dark-text:#1C1C1C;
+      --font:"Inter","Helvetica Neue",Arial,sans-serif;
+    }
+    *{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:var(--font);background:var(--off-white);color:var(--dark-text);line-height:1.65;font-size:16px;-webkit-font-smoothing:antialiased;}
+    .skip-link{position:absolute;left:-999px;top:0;background:var(--gold);color:var(--navy);padding:10px 16px;font-weight:700;z-index:10;}
+    .skip-link:focus{left:8px;top:8px;}
+    a{color:var(--copper);}
+    /* Header */
+    header{background: linear-gradient(160deg, rgba(15,26,46,0.72) 0%, rgba(10,18,33,0.82) 100%), url('StockCake-Cosmic_Web_Complexity-1361288-standard-rot90ccw.jpg'); background-size: auto, 100% 100%; background-repeat: no-repeat, no-repeat; background-position: center, center;color:var(--off-white);padding:48px 24px 52px;position:relative;overflow:hidden;}
+    header::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 85% 12%,rgba(192,120,48,0.20) 0%,rgba(15,26,46,0) 55%);pointer-events:none;}
+    .header-inner{max-width:760px;margin:0 auto;position:relative;z-index:1;}
+    .wordmark{font-weight:800;font-size:1.25rem;letter-spacing:0.02em;margin-bottom:30px;}
+    .wordmark .dot{color:var(--copper);}
+    .wordmark a{color:var(--off-white);text-decoration:none;transition:opacity .18s ease;}
+    .wordmark a:hover,.wordmark a:focus-visible{opacity:.85;outline:none;}
+    .eyebrow{display:inline-block;font-size:0.72rem;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;}
+    header h1{font-weight:800;font-size:clamp(1.8rem,4.6vw,2.6rem);line-height:1.14;letter-spacing:-0.01em;margin-bottom:16px;}
+    .byline{font-size:0.9rem;color:var(--light-gray);letter-spacing:0.01em;}
+    .byline .sep{color:var(--copper);margin:0 8px;}
+    .lede{font-size:1.08rem;color:var(--light-gray);max-width:66ch;margin-top:18px;}
+    .backlink{display:inline-block;margin-top:26px;color:var(--gold);font-weight:600;font-size:0.9rem;text-decoration:none;border-bottom:1px solid rgba(212,168,83,0.4);}
+    .backlink:hover,.backlink:focus-visible{border-bottom-color:var(--gold);outline:none;}
+    /* Article */
+    main{max-width:760px;margin:0 auto;padding:48px 24px 8px;}
+    .disclaimer{background:#fff;border:1px solid var(--light-gray);border-left:4px solid var(--copper);border-radius:8px;padding:14px 18px;font-size:0.9rem;color:var(--navy-mid);margin-bottom:34px;}
+    article{font-size:1.05rem;}
+    article h2{font-weight:800;font-size:1.5rem;color:var(--navy);line-height:1.22;letter-spacing:-0.01em;margin:42px 0 14px;}
+    article h3{font-weight:700;font-size:1.18rem;color:var(--navy-mid);line-height:1.25;margin:30px 0 10px;}
+    article h2 + p, article h3 + p{margin-top:0;}
+    article p{margin:0 0 18px;color:var(--dark-text);}
+    article ul,article ol{margin:0 0 18px;padding-left:24px;}
+    article li{margin-bottom:8px;}
+    article strong{font-weight:700;color:var(--navy);}
+    article em{font-style:italic;}
+    article a{color:var(--copper);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(192,120,48,0.35);transition:border-color .18s ease;}
+    article a:hover,article a:focus-visible{border-bottom-color:var(--copper);outline:none;}
+    article hr{border:none;border-top:1px solid var(--light-gray);margin:34px 0;}
+    article h2#sources, article h2#references{border-top:1px solid var(--light-gray);padding-top:30px;font-size:1.2rem;color:var(--navy-mid);}
+    /* sources list smaller */
+    article h2[id^="sources"] ~ ul li, article h3[id^="sources"] ~ ul li{font-size:0.95rem;color:var(--navy-mid);}
+    /* tables */
+    article table{width:100%;border-collapse:collapse;margin:0 0 24px;font-size:0.95rem;}
+    article th,article td{border:1px solid var(--light-gray);padding:9px 12px;text-align:left;vertical-align:top;}
+    article thead th{background:var(--navy);color:var(--off-white);font-weight:700;}
+    article tbody tr:nth-child(even){background:#fff;}
+    article .table-wrap{overflow-x:auto;margin:0 0 24px;}
+    article .table-wrap table{margin:0;}
+    /* CTA */
+    .cta-band{background:var(--navy);color:var(--off-white);border-radius:12px;padding:42px 32px;text-align:center;margin:48px 0 8px;}
+    .cta-band h2{font-weight:800;font-size:clamp(1.4rem,3.4vw,1.9rem);margin-bottom:12px;letter-spacing:-0.01em;color:var(--off-white);}
+    .cta-band p{color:var(--light-gray);max-width:52ch;margin:0 auto 24px;}
+    .cta-band .btn{display:inline-block;background:var(--copper);color:#fff;font-weight:700;padding:13px 28px;border-radius:8px;text-decoration:none;transition:background .18s ease;}
+    .cta-band .btn:hover,.cta-band .btn:focus-visible{background:var(--gold);color:var(--navy);outline:none;}
+    /* Footer */
+    footer{max-width:760px;margin:16px auto 0;padding:24px;font-size:0.82rem;color:var(--mid-gray);border-top:1px solid var(--light-gray);}
+    footer p+p{margin-top:6px;}
+    footer a{color:var(--mid-gray);text-decoration:underline;}
+    @media (prefers-reduced-motion:reduce){*{transition:none!important;}}
+
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header>
+    <div class="header-inner">
+      <div class="wordmark"><a href="index.html">Malaniru<span class="dot">.</span></a></div>
+      <span class="eyebrow">AI Enablement &middot; Daily Intelligence Briefing</span>
+      <h1>Daily Intelligence Briefing — Saturday, May 2, 2026</h1>
+      <p class="byline">By Marco Harris<span class="sep">&middot;</span>May 2, 2026</p>
+      <p class="lede">Saturday agentic AI briefing: Microsoft FY26 Q3 actuals beat consensus (Azure +40%, AI ARR $37B, FY26 capex ~$190B), Microsoft Agent 365 reaches GA, Anthropic launches Claude Security public beta, OpenAI announces GPT-5.5-Cyber, Musk v. Altman week 1 closes without verdict, plus weekly sections on Foundation &amp; Philanthropy AI Adoption (Humanity AI $500M coalition) and Data &amp; Security Regulations.</p>
+      <a class="backlink" href="daily-intelligence-briefings.html">&larr; All daily intelligence briefings</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <article>
+      <p>Run type: Saturday — four daily sections plus two weekly sections (Foundation &amp; Philanthropy AI Adoption; Data &amp; Security Regulations).</p>
+      <p>Continuity note: prior briefing on file is Wednesday, April 29, 2026. The April 29 cycle queued three pending data points for this window — (a) Microsoft FY26 Q3 earnings (printed Wednesday after market close), (b) Microsoft Agent 365 GA (shipped Friday May 1), and (c) Musk v. Altman trial progression (week 1 closed Thursday, courtroom dark Friday). Each landed; this Saturday briefing carries the actuals. Two material new items emerged in the same window: <strong>Anthropic Claude Security public beta</strong> (May 1) and <strong>OpenAI GPT-5.5-Cyber</strong> (announced April 30) — back-to-back commercial moves into the AI-cybersecurity tooling space.</p>
+      <hr>
+      <h2 id="executive-summary">Executive Summary</h2>
+      <p>Microsoft's FY26 Q3 print arrived stronger than the sell-side consensus the April 29 briefing flagged: <strong>$82.9B revenue (+18% YoY), Azure +40%, AI ARR ~$37B (+123% YoY), and full-FY26 capex now guided to ~$190B</strong> — well above the $110–$120B aggregator-derived range we carried Wednesday (Source: Microsoft FY26 Q3 Press Release, April 29, 2026; CNBC, April 29, 2026; Yahoo Finance, April 29, 2026). <strong>Microsoft Agent 365 reached general availability Friday, May 1</strong>, with bundled inclusion in M365 E5 (Source: Microsoft Security Blog, May 1, 2026; Microsoft Learn). <strong>Anthropic launched Claude Security in public beta to Enterprise customers on May 1</strong>, powered by Opus 4.7 — codebase vulnerability scanning with patch generation (Source: SiliconAngle, April 30, 2026; The New Stack, May 2026). <strong>OpenAI's GPT-5.5-Cyber</strong> was announced by Sam Altman on April 30 as a restricted variant for "critical cyber defenders" — announcement-only; access restrictions and primary OpenAI documentation pending (Source: arnav.au, May 1, 2026). <strong>Musk v. Altman week 1 closed Thursday with no verdict</strong>; the trial is split into liability and remedies phases, with the liability phase expected to conclude by May 21 and the jury verdict advisory only (Source: CNBC, May 2, 2026; MIT Technology Review, May 1, 2026).</p>
+      <hr>
+      <h2 id="1-ai-market-trends">1. AI Market Trends</h2>
+      <p><strong>Microsoft FY26 Q3 — actuals beat the consensus the April 29 briefing carried.</strong> Revenue was <strong>$82.9B (+18% YoY, +15% constant currency)</strong>, ahead of the $81.4B consensus we tracked Wednesday. Diluted EPS came in at <strong>$4.27 GAAP (+23%)</strong>, also ahead of $4.06 consensus. <strong>Azure grew 40%</strong>, above the 37–38% sell-side range and a re-acceleration from Q2's 39%. <strong>Microsoft Cloud revenue was $54.5B (+29%)</strong>, with <strong>commercial remaining performance obligation (RPO) up 99% to $627B</strong> — the single sharpest leading indicator on the call. The AI business <strong>surpassed $37B in annualized run-rate, +123% YoY</strong>. On capex, Microsoft signaled <strong>~$190B for full FY26</strong> with Q4 capex <strong>above $40B</strong>, a step-up from the $110–$120B aggregator-derived range we carried Wednesday (Source: Microsoft FY26 Q3 Press Release, April 29, 2026; CNBC, April 29, 2026; Yahoo Finance, April 29, 2026). The two-line takeaway for client conversations: <strong>Azure re-accelerated</strong> and <strong>the capex curve is steeper than the Street modeled three weeks ago</strong>. The first reads positive for cloud-substrate optionality. The second sharpens the per-token unit-economics question for any client modeling Microsoft-hosted inference into 2027.</p>
+      <p><strong>Musk v. Altman — week 1 closes without verdict; trial bifurcated.</strong> Musk testified more than seven hours across three days, finishing Thursday. The court was dark Friday. Judge Yvonne Gonzalez Rogers split the trial into a <strong>liability phase</strong> (jury verdict advisory only — final decision by the judge) and a <strong>remedies phase</strong>; she expects the liability phase to close by <strong>May 21</strong> (Source: CNBC, May 2, 2026; MIT Technology Review, May 1, 2026). Two notable testimony beats: Musk reiterated his "AI smarter than any human as soon as next year" claim and <strong>acknowledged xAI's models distill from OpenAI's</strong> — a concession the trade press flagged as material to subsequent IP and licensing arguments (Source: MIT Technology Review, May 1, 2026).</p>
+      <p><strong>Frontier-lab cybersecurity tooling — two commercial moves in 48 hours.</strong> <strong>Anthropic shipped Claude Security in public beta to Claude Enterprise customers on May 1</strong>, powered by Opus 4.7. The product scans entire codebases for vulnerabilities and generates targeted patches; it includes scheduled and targeted scans, audit-system integration, and triaged-finding tracking (Source: SiliconAngle, April 30, 2026; The New Stack, May 2026; DevOps.com, May 2026). In parallel, <strong>OpenAI announced GPT-5.5-Cyber on April 30</strong> — a restricted variant of GPT-5.5 tuned for cybersecurity operations, shipped to "critical cyber defenders" within days of the announcement (Source: arnav.au, May 1, 2026 — announcement-only). The two releases sit alongside <strong>Project Glasswing</strong>, where Anthropic disclosed Mythos Preview has identified thousands of zero-day vulnerabilities (including a 27-year-old flaw in OpenBSD) across major operating systems and browsers (Source: Schneier on Security, April 2026; Anthropic Glasswing). Reporting indicates a small group of unauthorized users obtained Mythos access through a private forum, and the <strong>White House has opposed Anthropic's plan to expand Glasswing to ~70 additional organizations on national-security and compute-availability grounds</strong> (Source: Bloomberg via aggregator, May 1, 2026 — aggregator-summarized).</p>
+      <p><strong>AI funding — three new billion-plus rounds since April 22.</strong> <strong>AMI Labs (Yann LeCun's post-Meta venture) launched with a $1.03B seed at $3.5B pre-money</strong> (backers: Bezos Expeditions, Nvidia, Samsung, Temasek, Toyota Ventures). <strong>Reflection AI is in talks for $2.5B at $25B pre-money</strong> — flagged as potentially the largest open-source AI funding round in history. <strong>David Silver's Ineffable Intelligence raised a $1.1B seed</strong>. Q1 2026 global venture funding hit <strong>$300B across 6,000 startups</strong>, an all-time record, with the four frontier labs (OpenAI, Anthropic, xAI, Waymo) collectively absorbing $188B — <strong>65% of global Q1 venture investment</strong> (Source: Crunchbase News, "Q1 2026 Shatters Venture Funding Records," 2026; Crunchbase News, "Sector Snapshot: Foundational AI Q1," 2026).</p>
+      <p><strong>What This Means for You.</strong> For organizations adopting AI, three updates are worth absorbing this week. First, the Microsoft cloud-substrate picture has sharpened: <strong>Azure grew 40%, AI ARR is now ~$37B (+123% YoY), and full-FY26 capex is guided to ~$190B</strong> — steeper than the Street modeled three weeks ago, which sharpens the per-token unit-economics question for anyone modeling Microsoft-hosted inference into 2027. Second, <strong>Microsoft Agent 365 reached GA (May 1)</strong> and is worth naming in any AI policy that covers agent identity, audit trail, and shadow-agent discovery. Third, the <strong>Anthropic Claude Security beta</strong> is a near-term option for any organization whose codebase-vulnerability workflow has been AI-curious. The two cybersecurity tools (Claude Security beta, GPT-5.5-Cyber announcement) plus Project Glasswing together illustrate the <strong>defensive use of frontier models</strong> — a useful frame for internal training on where AI strengthens security workflows. And the <strong>White House friction over Glasswing expansion</strong> is itself instructive: AI capability is now consequential enough that frontier-lab commercial decisions are being negotiated against US national-security review.</p>
+      <hr>
+      <h2 id="2-top-10-ai-agents-three-lenses">2. Top 10 AI Agents — Three Lenses</h2>
+      <p>Rankings as of Saturday, May 2, 2026. Movement noted relative to Wednesday, April 29.</p>
+      <h3 id="2a-relevance-for-claude-mcp-centered-work">2a. Relevance for Claude / MCP-Centered Work</h3>
+      <div class="table-wrap"><table>
+      <thead>
+      <tr>
+      <th>#</th>
+      <th>Agent</th>
+      <th>Why it ranks here</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>1</td>
+      <td>Claude Cowork (Opus 4.7)</td>
+      <td>Unchanged. Core delivery surface.</td>
+      </tr>
+      <tr>
+      <td>2</td>
+      <td>Claude Code (Opus 4.7)</td>
+      <td>Unchanged. <strong>v2.1.126 (May 1)</strong> adds gateway <code>/v1/models</code> discovery via <code>ANTHROPIC_BASE_URL</code>, plus fixes for Bedrock SigV4 auth, MCP tool schema validation, sub-agent file access, and <code>/resume</code> tab-completion.</td>
+      </tr>
+      <tr>
+      <td>3</td>
+      <td><strong>Claude Security (public beta — Enterprise)</strong></td>
+      <td><strong>NEW ENTRANT — debuts at #3.</strong> Powered by Opus 4.7. Codebase vulnerability scanning with patch generation; audit-system integration; scheduled scans.</td>
+      </tr>
+      <tr>
+      <td>4</td>
+      <td>Claude Mythos Preview (Project Glasswing)</td>
+      <td>Down one to #4. White House opposition to Glasswing expansion is a near-term distribution constraint.</td>
+      </tr>
+      <tr>
+      <td>5</td>
+      <td>Claude Design (Labs)</td>
+      <td>Down one to #5. Compliance review on Labs terms still pending.</td>
+      </tr>
+      <tr>
+      <td>6</td>
+      <td>Claude for Word</td>
+      <td>Down one to #6.</td>
+      </tr>
+      <tr>
+      <td>7</td>
+      <td>Claude Managed Agents</td>
+      <td>Unchanged.</td>
+      </tr>
+      <tr>
+      <td>8</td>
+      <td>Adobe CX Enterprise Coworker (MCP+A2A native)</td>
+      <td>Unchanged. GA "in the coming months."</td>
+      </tr>
+      <tr>
+      <td>9</td>
+      <td>Moody's Agentic Solutions (in Claude)</td>
+      <td>Unchanged.</td>
+      </tr>
+      <tr>
+      <td>10</td>
+      <td>Cursor Agent (Opus 4.7)</td>
+      <td>Down one to #10. Cursor 3 surface remains current.</td>
+      </tr>
+      <tr>
+      <td>—</td>
+      <td>Lucidworks MCP Server</td>
+      <td>Dropped from list — bumped one cycle by Claude Security debut.</td>
+      </tr>
+      </tbody>
+      </table></div>
+      <h3 id="2b-market-momentum-adoption-funding-developer-buzz">2b. Market Momentum (adoption, funding, developer buzz)</h3>
+      <div class="table-wrap"><table>
+      <thead>
+      <tr>
+      <th>#</th>
+      <th>Agent</th>
+      <th>Why it ranks here</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>1</td>
+      <td>Claude Opus 4.7</td>
+      <td>Unchanged at #1. May 1 Glasswing partner expansion (AWS, Apple, Broadcom, Cisco, CrowdStrike, Google, JPMorgan, Linux Foundation, Microsoft, NVIDIA, Palo Alto Networks) and Claude Security beta compound enterprise pull.</td>
+      </tr>
+      <tr>
+      <td>2</td>
+      <td>OpenAI GPT-5.5 + GPT-5.5-Cyber + Workspace Agents</td>
+      <td>Unchanged at #2. <strong>GPT-5.5-Cyber announcement (April 30)</strong> is a real distribution beat in the security-tooling channel.</td>
+      </tr>
+      <tr>
+      <td>3</td>
+      <td>NVIDIA Nemotron 3 Nano Omni</td>
+      <td>Unchanged at #3. Nemotron family downloads now reportedly &gt;50M cumulative (vendor-reported).</td>
+      </tr>
+      <tr>
+      <td>4</td>
+      <td>DeepSeek V4 (Pro 1.6T / Flash 284B, open weights)</td>
+      <td>Unchanged at #4.</td>
+      </tr>
+      <tr>
+      <td>5</td>
+      <td>Microsoft Copilot Agent Mode + <strong>Agent 365 (now GA, May 1)</strong></td>
+      <td>Unchanged at #5. <strong>GA milestone landed Friday</strong>, included in M365 E5.</td>
+      </tr>
+      <tr>
+      <td>6</td>
+      <td>Cursor Agent / Cursor 3</td>
+      <td>Unchanged at #6.</td>
+      </tr>
+      <tr>
+      <td>7</td>
+      <td>Adobe CX Enterprise Coworker</td>
+      <td>Unchanged at #7.</td>
+      </tr>
+      <tr>
+      <td>8</td>
+      <td>Gemini Enterprise Agent Platform + Deep Research Max</td>
+      <td>Unchanged at #8. Deep Research Max (autonomous research agent on Gemini 3.1 Pro, with MCP support) is the active distribution beat.</td>
+      </tr>
+      <tr>
+      <td>9</td>
+      <td>Salesforce Agentforce (Google-integrated)</td>
+      <td>Unchanged at #9.</td>
+      </tr>
+      <tr>
+      <td>10</td>
+      <td>Cloudflare Agents</td>
+      <td>Unchanged at #10.</td>
+      </tr>
+      </tbody>
+      </table></div>
+      <p>The narrative line is <strong>frontier labs pivoting commercial energy into cybersecurity-tooling distribution</strong> (Claude Security beta, GPT-5.5-Cyber, Glasswing) rather than into new closed-base-model releases.</p>
+      <h3 id="2c-capability-maturity-production-readiness-reliability-tool-use">2c. Capability &amp; Maturity (production readiness, reliability, tool use)</h3>
+      <div class="table-wrap"><table>
+      <thead>
+      <tr>
+      <th>#</th>
+      <th>Agent</th>
+      <th>Why it ranks here</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>1</td>
+      <td>Claude Opus 4.7</td>
+      <td>Unchanged. SWE-Bench Verified 87.6%, SWE-Bench Pro 64.3% leader (vendor-reported).</td>
+      </tr>
+      <tr>
+      <td>2</td>
+      <td>OpenAI GPT-5.5 Pro</td>
+      <td>Unchanged. Vendor-claimed Terminal-Bench 2.0 82.7% / SWE-Bench Pro 58.6%.</td>
+      </tr>
+      <tr>
+      <td>3</td>
+      <td>DeepSeek V4-Pro (preview)</td>
+      <td>Unchanged. Open-weight at 1.6T params, 1M context. Preview, not GA.</td>
+      </tr>
+      <tr>
+      <td>4</td>
+      <td>Claude Sonnet 4.6</td>
+      <td>Unchanged.</td>
+      </tr>
+      <tr>
+      <td>5</td>
+      <td>Gemini 3.1 Pro</td>
+      <td>Unchanged. Powers Deep Research Max with MCP support.</td>
+      </tr>
+      <tr>
+      <td>6</td>
+      <td>Claude Cowork (GA, Opus 4.7)</td>
+      <td>Unchanged.</td>
+      </tr>
+      <tr>
+      <td>7</td>
+      <td><strong>Microsoft Agent 365 (now GA)</strong></td>
+      <td>Up two to #7. <strong>GA shipped May 1</strong> with control-plane integration into Entra ID, Purview, Intune, and Defender; local-agent discovery on Windows endpoints. June 2026 brings runtime blocking and alerts via Intune/Defender public preview.</td>
+      </tr>
+      <tr>
+      <td>8</td>
+      <td>Claude Mythos Preview</td>
+      <td>Down one to #8. White House friction on expansion.</td>
+      </tr>
+      <tr>
+      <td>9</td>
+      <td>Claude Code + /ultrareview</td>
+      <td>Down one to #9. v2.1.126 stability bump.</td>
+      </tr>
+      <tr>
+      <td>10</td>
+      <td>NVIDIA Nemotron 3 Nano Omni (perception layer)</td>
+      <td>Unchanged. Preliminary OSWorld GUI-navigation gains remain vendor-reported.</td>
+      </tr>
+      </tbody>
+      </table></div>
+      <h3 id="divergence-analysis">Divergence Analysis</h3>
+      <p>The closed-frontier base-model release axis is unusually quiet — no new Anthropic / OpenAI / Google DeepMind / Meta / Mistral / xAI / Cohere base-model releases since GPT-5.5 (April 23) and DeepSeek V4 preview (April 24). The commercial distribution axis, however, is loud: <strong>two cybersecurity tools and one control plane shipped in 48 hours</strong> (Claude Security beta May 1, GPT-5.5-Cyber announcement April 30, Microsoft Agent 365 GA May 1). The signal is that <strong>frontier labs are pivoting near-term commercial energy from base-model releases to specialized vertical tools and governance surfaces</strong>. For a boutique implementation approach, this is a favorable cycle — the <strong>specialized tool / governance surface</strong> is exactly the layer where implementation work generates the most leverage relative to base-model capability bets.</p>
+      <p><strong>What This Means for You.</strong> For organizations adopting AI, Microsoft Agent 365 now belongs in the control-plane reference set when standing up agent governance (it was pending GA), and the Claude Security beta is worth considering for any engineering team with a current vulnerability-scanning gap. GPT-5.5-Cyber and Claude Security together make "AI-defensive workflow patterns" a concrete topic for hands-on team upskilling. And the White House Glasswing friction is a reminder that the regulatory surface for frontier-AI commercial expansion is moving quickly — keep compliance thinking current with it.</p>
+      <hr>
+      <h2 id="3-agentic-ai-advances-new-releases">3. Agentic AI Advances &amp; New Releases</h2>
+      <p><strong>Anthropic Claude Security — public beta to Claude Enterprise, May 1, 2026.</strong> Powered by Opus 4.7. Initially released in research preview as Claude Code Security in February. Capabilities at GA-beta: scheduled and targeted codebase scans, integration with audit systems, triaged-finding tracking, automated patch generation. Built-in safeguards detect and block requests indicating prohibited cybersecurity uses (Source: SiliconAngle April 30, 2026; The New Stack May 2026; DevOps.com May 2026; Infosecurity Magazine).</p>
+      <p><strong>Microsoft Agent 365 — General Availability, May 1, 2026.</strong> Commercial pricing per user, included in Microsoft 365 E5 and in M365 E3 with the Advanced Compliance add-on. Integrates Entra ID (agent identity), Purview (data governance), Intune (endpoint management), and Defender (threat detection). GA capabilities: discovery and management of locally running AI agents on Windows endpoints, control plane for cloud agents across Azure and multicloud, shadow-agent detection. <strong>Public preview in June 2026:</strong> context mapping, policy-based controls, runtime blocking and alerts via Intune/Defender (Source: Microsoft Security Blog, May 1, 2026; Microsoft Learn; m365admin.handsontek.net).</p>
+      <p><strong>OpenAI GPT-5.5-Cyber — announced April 30, 2026.</strong> Restricted variant of GPT-5.5 tuned for cybersecurity operations; distribution limited to "critical cyber defenders." Announced via Sam Altman X post; primary OpenAI documentation, eligibility criteria, and pricing not yet published as of the research date (Source: arnav.au, May 1, 2026 — announcement-only; independent third-party verification unavailable).</p>
+      <p><strong>Claude Code v2.1.126 — May 1, 2026.</strong> <code>/model</code> picker now lists models from the gateway's <code>/v1/models</code> endpoint when <code>ANTHROPIC_BASE_URL</code> points at an Anthropic-compatible gateway. Bug fixes: <code>--setting-sources</code>, Bedrock SigV4 authentication, worktree cleanup, MCP tools, sub-agent file access, sandboxed Bash commands, MCP tool schema validation, RemoteTrigger tool, terminal display tearing in iTerm2 + tmux, <code>@</code> file suggestion in non-git directories, LSP diagnostics after edits, <code>/resume</code> tab-completion, <code>/context</code> grid rendering, <code>/clear</code> dropping session names (Source: claudefa.st changelog, May 2026; Releasebot.io, May 2026).</p>
+      <p><strong>Project Glasswing — partner expansion friction (May 1, 2026).</strong> Mythos Preview disclosure: thousands of zero-day vulnerabilities identified across every major operating system and major web browser, including a 27-year-old flaw in OpenBSD. Anthropic committed up to $100M in usage credits for Mythos Preview across these efforts plus $4M direct donations to open-source security organizations. Reporting indicates the White House opposes Anthropic's plan to expand Glasswing to ~70 additional organizations on national-security and compute-availability grounds; a small group of unauthorized users reportedly obtained access through a private forum (Source: Schneier on Security, April 2026; Bloomberg via aggregator, May 1, 2026 — aggregator-summarized).</p>
+      <p><strong>MCP — 2026 roadmap focus, no protocol changes since April 8.</strong> Four roadmap priority areas remain active: transport evolution and scalability (Streamable HTTP, MCP Server Cards via <code>.well-known</code> URLs); agent communication (Tasks primitive lifecycle semantics, retry semantics); governance maturation (Contributor Ladder SEP, delegation model, public WG charters); enterprise readiness (audit trails, SSO-integrated auth, gateway behavior, configuration portability) (Source: blog.modelcontextprotocol.io, "The 2026 MCP Roadmap"; modelcontextprotocol.io/development/roadmap; thenewstack.io, "MCP roadmap 2026").</p>
+      <p><strong>No new frontier-lab base-model releases over the April 30–May 2 window.</strong> Anthropic, OpenAI, Google DeepMind, Meta, Mistral, xAI, and Cohere are quiet on the closed-frontier base-model axis since GPT-5.5 (April 23) and DeepSeek V4 preview (April 24).</p>
+      <p><strong>What This Means for You.</strong> For organizations adopting AI, Microsoft Agent 365 GA belongs in your agent-governance control-plane reference set, and Claude Security beta is worth evaluating wherever there is a codebase-vulnerability gap. Pairing Claude Security with the Microsoft Agent Governance Toolkit gives a practical two-surface starting point for defensive AI work in hands-on training. On the governance side, MCP enterprise-readiness work (audit trails, SSO, configuration portability) is now near-term enough that any third-party-MCP-server risk assessment can reference the roadmap explicitly.</p>
+      <hr>
+      <h2 id="4-overnight-release-monitor">4. Overnight Release Monitor</h2>
+      <p>Since the Wednesday (April 29) publish window:</p>
+      <ul>
+      <li><strong>April 29 (PM) — Microsoft FY26 Q3 actuals.</strong> Revenue $82.9B (+18%), Azure +40%, AI ARR ~$37B (+123%), FY26 capex now ~$190B; Q4 capex &gt;$40B (Source: Microsoft, April 29, 2026; CNBC, Yahoo Finance).</li>
+      <li><strong>April 30 — OpenAI GPT-5.5-Cyber announcement.</strong> Restricted variant of GPT-5.5 for cybersecurity operations; distribution to "critical cyber defenders" (Source: arnav.au, May 1, 2026).</li>
+      <li><strong>May 1 — Microsoft Agent 365 GA.</strong> Included in M365 E5; Entra ID / Purview / Intune / Defender integration; local-agent discovery on Windows; cloud-agent control plane (Source: Microsoft Security Blog, May 1, 2026; Microsoft Learn).</li>
+      <li><strong>May 1 — Anthropic Claude Security public beta.</strong> Opus 4.7-powered codebase vulnerability scanning with patch generation; Claude Enterprise customers (Source: SiliconAngle, April 30, 2026; The New Stack, May 2026).</li>
+      <li><strong>May 1 — Claude Code v2.1.126.</strong> Gateway <code>/v1/models</code> discovery via <code>ANTHROPIC_BASE_URL</code>; multiple fixes (Source: claudefa.st changelog, May 2026).</li>
+      <li><strong>May 1 — Project Glasswing partner-expansion friction.</strong> White House reportedly opposes scaling to ~70 additional organizations; unauthorized-access incident via private forum reported (Source: Bloomberg via aggregator, May 1, 2026).</li>
+      <li><strong>April 30–May 1 — Musk v. Altman week 1 closed.</strong> Musk testified ~7 hours over 3 days, finishing Thursday; courtroom dark Friday; trial bifurcated into liability (advisory jury verdict by May 21) and remedies phases (Source: CNBC, May 2, 2026; MIT Technology Review, May 1, 2026).</li>
+      <li><strong>No new material primary-source frontier-lab base-model releases identified between April 30 and May 2.</strong></li>
+      </ul>
+      <p><strong>What This Means for You.</strong> For organizations adopting AI, this week's commercial-distribution cluster — Agent 365 GA, Claude Security beta, GPT-5.5-Cyber announcement, Glasswing expansion — is collectively the single most actionable update set in the trailing two weeks. The defensive-AI-tooling thesis now has commercial product on both sides of the Anthropic-OpenAI line. Any AI policy built on the prior "should we deploy autonomous agents at all?" framing is worth revisiting this week to reflect the now-commercially-available defensive layer — the answer is more clearly "yes, with named runtime governance" than it was even seven days ago.</p>
+      <hr>
+      <h2 id="5-foundation-philanthropy-ai-adoption-weekly-saturday">5. Foundation &amp; Philanthropy AI Adoption (Weekly — Saturday)</h2>
+      <p><strong>Humanity AI — $500M, five-year, ten-foundation initiative.</strong> A coalition of ten foundations — <strong>Doris Duke, Ford, Lumina, Kapor, MacArthur, Mellon, Mozilla, Omidyar Network, Packard, and Siegel Family Endowment</strong> — committed $500M over five years to a pooled fund focused on a "people-centered future for AI." <strong>Rockefeller Philanthropy Advisors serves as fiscal sponsor and pooled-fund manager</strong>; an Executive Director hire is the first staffing step. Grants begin in <strong>2026</strong>. Focus areas: arts, labor and work, democracy, education, and security (Source: MacArthur Foundation Press, 2026; Mellon Foundation, 2026; Omidyar Network, 2026; The NonProfit Times, 2026; Philanthropy News Digest, 2026).</p>
+      <p><strong>The grantmaking-capacity gap remains the binding constraint.</strong> A 2025 Center for Effective Philanthropy study found <strong>nearly 90% of foundations don't yet offer AI implementation support to grantees</strong> (Source: Center for Effective Philanthropy, "AI With Purpose," 2025). The KPMG Foundation has committed $6M specifically to help nonprofits integrate AI into operations (Source: charitableadvisors.com, 2026). The disconnect — abundant top-of-funnel capital announcements, persistent operational support gap at the grantee level — is exactly the wedge a boutique implementation practice fills.</p>
+      <p><strong>OpenAI Foundation parallel track.</strong> OpenAI Foundation's $1B grant pledge (March 2026) and the People-First AI Fund ($50M to nonprofits) are operating outside the Humanity AI pool but on adjacent themes (Source: applyingai.com, March 2026; openai.com/index/people-first-ai-fund). The relationship between OpenAI Foundation grantmaking and the Humanity AI pool is not formally coordinated — verify positioning before any client material treats them as a single field.</p>
+      <p><strong>What This Means for You.</strong> Humanity AI is the most consequential single signal for foundations and nonprofits thinking about AI governance this quarter. Three near-term implications for organizations in this space: (a) the operational gap the CEP report flags is on the grantee-support side — abundant top-of-funnel capital, persistent lack of implementation support — so foundations should plan for how grantees will actually deploy, not just fund; (b) named governance frameworks are the right entry point, because Humanity AI grant cycles will require them before grantees can deploy; (c) timing matters — RPA is staffing the Executive Director role now and grants begin in 2026, meaning the <strong>next 60–90 days are the inflection window</strong> for coalition staff and prospective grantees to get governance foundations in place.</p>
+      <hr>
+      <h2 id="6-data-security-regulations-weekly-saturday">6. Data &amp; Security Regulations (Weekly — Saturday)</h2>
+      <p><strong>EU AI Act — GPAI obligations live; Annex III high-risk deadline August 2, 2026; Digital Omnibus may delay.</strong> Status as of May 2: <strong>GPAI provider obligations have been in force since August 2, 2025</strong> (private "black-box" dossier, public training-data summary, customer model card, EU copyright compliance). GPAI models classed as posing <strong>systemic risk</strong> must additionally perform adversarial testing, log and report serious incidents, and disclose energy-efficiency metrics. <strong>The August 2, 2026 deadline</strong> for Annex III high-risk AI systems (employment, credit, education, law enforcement) is binding <strong>unless</strong> the European Commission's late-2025 <strong>"Digital Omnibus" package</strong> advances and postpones high-risk obligations to December 2027 (Source: European Commission Digital Strategy; artificialintelligenceact.eu Implementation Timeline; Legal Nodes, 2026; Software Improvement Group, January 2026; K&amp;L Gates, January 2026). The Digital Omnibus extension is <strong>not confirmed</strong> — prudent compliance planning treats August 2, 2026 as binding.</p>
+      <p><strong>California CCPA 2026 ADMT regulations — effective January 1, 2026.</strong> New rules require <strong>comprehensive privacy risk assessments</strong> before processing that presents a "significant risk" to consumer privacy. <strong>Automated Decision-Making Technology (ADMT) rules</strong> apply when automated systems materially influence significant decisions in employment, lending, housing, healthcare, or education — businesses may need to provide notice and offer opt-out. <strong>Penalties: $200 per consumer per day plus enforcement expenses.</strong> Mandatory independent <strong>cybersecurity audits</strong> for businesses meeting revenue/data-volume thresholds — phased first certifications due April 1, 2028–2030 by size (Source: BakerHostetler, "California Privacy in 2026," 2026; OneTrust, "CCPA in 2026," 2026; California Privacy Protection Agency Regulations; BDO, 2026).</p>
+      <p><strong>State privacy law expansion — 20 US states with comprehensive laws as of March 2026.</strong> <strong>Indiana, Kentucky, and Rhode Island</strong> took effect in 2026, adding new assessment, notice, and transparency obligations. Every additional state adds complexity for any client running national workflows on AI-augmented intake or decisioning (Source: O'Melveny, "2026 Data Security and Privacy Compliance Checklist," 2026; Axiom Law, 2026).</p>
+      <p><strong>AI agent security incident wave — sustained.</strong> The April-2026 cluster (Vercel via Context.ai April 19; Mercor / LiteLLM supply-chain disclosure April 2; Delve customer incident April 23) has been joined by reporting that <strong>88% of organizations report confirmed or suspected AI agent security incidents in the trailing 12 months — 92.7% in healthcare</strong> (Source: TrendMicro, "The Vercel Breach: OAuth Supply Chain Attack," 2026; AGAT Software, 2026; Help Net Security, March 2026). The 88% / 92.7% figures are vendor-survey-reported — independent academic verification not located. Treat as directional, not as a primary statistic.</p>
+      <p><strong>What This Means for You.</strong> For organizations adopting AI, three compliance updates are worth absorbing this week. First, the <strong>California CCPA ADMT framework</strong> is the right anchor for any organization running employment, lending, education, healthcare, or housing decisions through AI — penalty exposure is <strong>$200 per consumer per day</strong> plus enforcement expenses, and the risk-assessment obligation is <strong>already binding</strong>. Second, the <strong>EU AI Act August 2, 2026 deadline</strong> for Annex III high-risk systems is the right forward-looking anchor for anyone with EU customers or operations — the Digital Omnibus extension cannot be assumed. Third, the <strong>AI agent security incident wave plus the recently-shipped defensive tooling</strong> (Claude Security beta, Agent 365 GA, GPT-5.5-Cyber) form a coherent arc: risk is real, mitigation is now commercially available, and governance is the operational layer that connects them. A foundation's AI governance posture should reference all three regulatory threads explicitly.</p>
+      <hr>
+      <h2 id="sources">Sources</h2>
+      <ul>
+      <li>AGAT Software, "AI Agent Security In 2026: What Enterprises Are Getting Wrong," 2026. <a href="https://agatsoftware.com/blog/ai-agent-security-enterprise-2026/" target="_blank" rel="noopener">https://agatsoftware.com/blog/ai-agent-security-enterprise-2026/</a></li>
+      <li>Anthropic, "Project Glasswing: Securing critical software for the AI era." <a href="https://www.anthropic.com/glasswing" target="_blank" rel="noopener">https://www.anthropic.com/glasswing</a></li>
+      <li>arnav.au, "OpenAI GPT-5.5-Cyber Rollout in 2026," May 1, 2026. <a href="https://arnav.au/2026/05/01/openai-gpt-5-5-cyber-rollout-in-2026/" target="_blank" rel="noopener">https://arnav.au/2026/05/01/openai-gpt-5-5-cyber-rollout-in-2026/</a></li>
+      <li>Axiom Law, "State Privacy Laws: 2026 Changes &amp; Compliance," 2026. <a href="https://www.axiomlaw.com/blog/state-privacy-laws" target="_blank" rel="noopener">https://www.axiomlaw.com/blog/state-privacy-laws</a></li>
+      <li>BakerHostetler, "California Privacy in 2026: Regulations, Enforcement, AI and More," 2026. <a href="https://www.bakerlaw.com/insights/california-privacy-in-2026-regulations-enforcement-ai-and-more/" target="_blank" rel="noopener">https://www.bakerlaw.com/insights/california-privacy-in-2026-regulations-enforcement-ai-and-more/</a></li>
+      <li>BDO, "California Consumer Privacy Act (CCPA): Key 2026 Impacts," 2026. <a href="https://www.bdo.com/insights/industries/technology/california-consumer-privacy-act-ccpa-key-2026-impacts-for-technology-companies" target="_blank" rel="noopener">https://www.bdo.com/insights/industries/technology/california-consumer-privacy-act-ccpa-key-2026-impacts-for-technology-companies</a></li>
+      <li>Center for Effective Philanthropy, "AI With Purpose," 2025. <a href="https://cep.org/report-backpacks/ai-with-purpose-how-foundations-and-nonprofits-are-thinking-about-and-using-artificial-intelligence/" target="_blank" rel="noopener">https://cep.org/report-backpacks/ai-with-purpose-how-foundations-and-nonprofits-are-thinking-about-and-using-artificial-intelligence/</a></li>
+      <li>charitableadvisors.com, "The AI Questions Foundations Will Ask In 2026," 2026. <a href="https://charitableadvisors.com/the-ai-questions-foundations-will-ask-in-2026-and-why-thats-good-news/" target="_blank" rel="noopener">https://charitableadvisors.com/the-ai-questions-foundations-will-ask-in-2026-and-why-thats-good-news/</a></li>
+      <li>claudefa.st, "Claude Code Changelog," May 2026. <a href="https://claudefa.st/blog/guide/changelog" target="_blank" rel="noopener">https://claudefa.st/blog/guide/changelog</a></li>
+      <li>CNBC, "Microsoft (MSFT) Q3 earnings report 2026," April 29, 2026. <a href="https://www.cnbc.com/2026/04/29/microsoft-msft-q3-earnings-report-2026.html" target="_blank" rel="noopener">https://www.cnbc.com/2026/04/29/microsoft-msft-q3-earnings-report-2026.html</a></li>
+      <li>CNBC, "Musk testimony dominated first week Musk v. Altman trial in Oakland," May 2, 2026. <a href="https://www.cnbc.com/2026/05/02/musk-testimony-dominated-first-week-musk-v-altman-trial-in-oakland.html" target="_blank" rel="noopener">https://www.cnbc.com/2026/05/02/musk-testimony-dominated-first-week-musk-v-altman-trial-in-oakland.html</a></li>
+      <li>CNBC, "OpenAI lawsuit updates: trial day 4," April 30, 2026. <a href="https://www.cnbc.com/2026/04/30/openai-trial-elon-musk-sam-altman-live-updates.html" target="_blank" rel="noopener">https://www.cnbc.com/2026/04/30/openai-trial-elon-musk-sam-altman-live-updates.html</a></li>
+      <li>Crunchbase News, "Q1 2026 Shatters Venture Funding Records," 2026. <a href="https://news.crunchbase.com/venture/record-breaking-funding-ai-global-q1-2026/" target="_blank" rel="noopener">https://news.crunchbase.com/venture/record-breaking-funding-ai-global-q1-2026/</a></li>
+      <li>Crunchbase News, "Sector Snapshot: Foundational AI Q1," 2026. <a href="https://news.crunchbase.com/venture/foundational-ai-startup-funding-doubled-openai-anthropic-xai-q1-2026/" target="_blank" rel="noopener">https://news.crunchbase.com/venture/foundational-ai-startup-funding-doubled-openai-anthropic-xai-q1-2026/</a></li>
+      <li>DevOps.com, "Anthropic Brings AI-Powered Security Scanning to Enterprise Teams With Claude Security," May 2026. <a href="https://devops.com/anthropic-brings-ai-powered-security-scanning-to-enterprise-teams-with-claude-security/" target="_blank" rel="noopener">https://devops.com/anthropic-brings-ai-powered-security-scanning-to-enterprise-teams-with-claude-security/</a></li>
+      <li>European Commission, "AI Act." <a href="https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" target="_blank" rel="noopener">https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai</a></li>
+      <li>artificialintelligenceact.eu, "Implementation Timeline." <a href="https://artificialintelligenceact.eu/implementation-timeline/" target="_blank" rel="noopener">https://artificialintelligenceact.eu/implementation-timeline/</a></li>
+      <li>Help Net Security, "AI went from assistant to autonomous actor," March 2026. <a href="https://www.helpnetsecurity.com/2026/03/03/enterprise-ai-agent-security-2026/" target="_blank" rel="noopener">https://www.helpnetsecurity.com/2026/03/03/enterprise-ai-agent-security-2026/</a></li>
+      <li>K&amp;L Gates, "EU and Luxembourg Update," January 2026. <a href="https://www.klgates.com/EU-and-Luxembourg-Update-on-the-European-Harmonised-Rules-on-Artificial-IntelligenceRecent-Developments-1-20-2026" target="_blank" rel="noopener">https://www.klgates.com/EU-and-Luxembourg-Update-on-the-European-Harmonised-Rules-on-Artificial-IntelligenceRecent-Developments-1-20-2026</a></li>
+      <li>Legal Nodes, "EU AI Act 2026 Updates," 2026. <a href="https://www.legalnodes.com/article/eu-ai-act-2026-updates-compliance-requirements-and-business-risks" target="_blank" rel="noopener">https://www.legalnodes.com/article/eu-ai-act-2026-updates-compliance-requirements-and-business-risks</a></li>
+      <li>MacArthur Foundation, "Humanity AI Commits $500 Million," 2026. <a href="https://www.macfound.org/press/press-releases/humanity-ai-commits-500-million-to-build-a-people-centered-future-for-ai" target="_blank" rel="noopener">https://www.macfound.org/press/press-releases/humanity-ai-commits-500-million-to-build-a-people-centered-future-for-ai</a></li>
+      <li>m365admin.handsontek.net, "Microsoft Agent 365 Generally Available May 1, 2026." <a href="https://m365admin.handsontek.net/microsoft-agent-365-generally-available-may-1-2026/" target="_blank" rel="noopener">https://m365admin.handsontek.net/microsoft-agent-365-generally-available-may-1-2026/</a></li>
+      <li>Mellon Foundation, "Humanity AI Commits $500M," 2026. <a href="https://www.mellon.org/news/humanity-ai-commits-500m-build-people-centered-future-ai" target="_blank" rel="noopener">https://www.mellon.org/news/humanity-ai-commits-500m-build-people-centered-future-ai</a></li>
+      <li>Microsoft, "FY26 Q3 Press Release / Earnings," April 29, 2026. <a href="https://www.microsoft.com/en-us/investor/earnings/fy-2026-q3/press-release-webcast" target="_blank" rel="noopener">https://www.microsoft.com/en-us/investor/earnings/fy-2026-q3/press-release-webcast</a></li>
+      <li>Microsoft Learn, "Microsoft Agent 365 overview." <a href="https://learn.microsoft.com/en-us/microsoft-agent-365/overview" target="_blank" rel="noopener">https://learn.microsoft.com/en-us/microsoft-agent-365/overview</a></li>
+      <li>Microsoft Security Blog, "Microsoft Agent 365, now generally available," May 1, 2026. <a href="https://www.microsoft.com/en-us/security/blog/2026/05/01/microsoft-agent-365-now-generally-available-expands-capabilities-and-integrations/" target="_blank" rel="noopener">https://www.microsoft.com/en-us/security/blog/2026/05/01/microsoft-agent-365-now-generally-available-expands-capabilities-and-integrations/</a></li>
+      <li>MIT Technology Review, "Musk v. Altman week 1," May 1, 2026. <a href="https://www.technologyreview.com/2026/05/01/1136800/musk-v-altman-week-1-musk-says-he-was-duped-warns-ai-could-kill-us-all-and-admits-that-xai-distills-openais-models/" target="_blank" rel="noopener">https://www.technologyreview.com/2026/05/01/1136800/musk-v-altman-week-1-musk-says-he-was-duped-warns-ai-could-kill-us-all-and-admits-that-xai-distills-openais-models/</a></li>
+      <li>modelcontextprotocol.io, "Roadmap." <a href="https://modelcontextprotocol.io/development/roadmap" target="_blank" rel="noopener">https://modelcontextprotocol.io/development/roadmap</a></li>
+      <li>modelcontextprotocol.io Blog, "The 2026 MCP Roadmap." <a href="https://blog.modelcontextprotocol.io/posts/2026-mcp-roadmap/" target="_blank" rel="noopener">https://blog.modelcontextprotocol.io/posts/2026-mcp-roadmap/</a></li>
+      <li>NonProfit Times, "10 Funders, $500 Million Targeting AI and Humanity," 2026. <a href="https://thenonprofittimes.com/npt_articles/10-funders-500-million-targeting-ai-and-humanity/" target="_blank" rel="noopener">https://thenonprofittimes.com/npt_articles/10-funders-500-million-targeting-ai-and-humanity/</a></li>
+      <li>O'Melveny, "2026 Data Security and Privacy Compliance Checklist," 2026. <a href="https://www.omm.com/insights/alerts-publications/2026-data-security-and-privacy-compliance-checklist-key-us-state-law-updates-ai-rules-coppa-changes-and-global-data-protection-risks/" target="_blank" rel="noopener">https://www.omm.com/insights/alerts-publications/2026-data-security-and-privacy-compliance-checklist-key-us-state-law-updates-ai-rules-coppa-changes-and-global-data-protection-risks/</a></li>
+      <li>Omidyar Network, "Humanity AI launches $500 million commitment," 2026. <a href="https://omidyar.com/update/humanity-ai/" target="_blank" rel="noopener">https://omidyar.com/update/humanity-ai/</a></li>
+      <li>OneTrust, "CCPA in 2026," 2026. <a href="https://www.onetrust.com/blog/ccpa-in-2026-whats-changing-in-consent-consumer-rights-and-ai-governance/" target="_blank" rel="noopener">https://www.onetrust.com/blog/ccpa-in-2026-whats-changing-in-consent-consumer-rights-and-ai-governance/</a></li>
+      <li>Philanthropy News Digest, "Foundations launch $500 million initiative," 2026. <a href="https://philanthropynewsdigest.org/news/foundations-launch-500-million-initiative-for-human-centered-ai-tech" target="_blank" rel="noopener">https://philanthropynewsdigest.org/news/foundations-launch-500-million-initiative-for-human-centered-ai-tech</a></li>
+      <li>Releasebot.io, "Claude Code Updates by Anthropic - May 2026." <a href="https://releasebot.io/updates/anthropic/claude-code" target="_blank" rel="noopener">https://releasebot.io/updates/anthropic/claude-code</a></li>
+      <li>Schneier on Security, "On Anthropic's Mythos Preview and Project Glasswing," April 2026. <a href="https://www.schneier.com/blog/archives/2026/04/on-anthropics-mythos-preview-and-project-glasswing.html" target="_blank" rel="noopener">https://www.schneier.com/blog/archives/2026/04/on-anthropics-mythos-preview-and-project-glasswing.html</a></li>
+      <li>SiliconAngle, "Anthropic announces Claude Security public beta," April 30, 2026. <a href="https://siliconangle.com/2026/04/30/anthropic-announces-claude-security-public-beta-find-fix-software-vulnerabilities/" target="_blank" rel="noopener">https://siliconangle.com/2026/04/30/anthropic-announces-claude-security-public-beta-find-fix-software-vulnerabilities/</a></li>
+      <li>Software Improvement Group, "EU AI Act Summary," January 2026. <a href="https://www.softwareimprovementgroup.com/blog/eu-ai-act-summary/" target="_blank" rel="noopener">https://www.softwareimprovementgroup.com/blog/eu-ai-act-summary/</a></li>
+      <li>The New Stack, "Anthropic's Claude Security emerges from closed preview," May 2026. <a href="https://thenewstack.io/anthropics-claude-security-beta/" target="_blank" rel="noopener">https://thenewstack.io/anthropics-claude-security-beta/</a></li>
+      <li>TrendMicro, "The Vercel Breach: OAuth Supply Chain Attack," April 2026. <a href="https://www.trendmicro.com/en_us/research/26/d/vercel-breach-oauth-supply-chain.html" target="_blank" rel="noopener">https://www.trendmicro.com/en_us/research/26/d/vercel-breach-oauth-supply-chain.html</a></li>
+      <li>Yahoo Finance, "Microsoft Q3 2026 earnings beat on cloud and AI growth," April 29, 2026. <a href="https://finance.yahoo.com/markets/stocks/articles/microsoft-q3-2026-earnings-beat-205308206.html" target="_blank" rel="noopener">https://finance.yahoo.com/markets/stocks/articles/microsoft-q3-2026-earnings-beat-205308206.html</a></li>
+      </ul>
+    </article>
+
+    <section class="cta-band" id="contact" aria-labelledby="cta-heading">
+      <h2 id="cta-heading">From AI curiosity to AI capability</h2>
+      <p>This briefing is part of the field research behind our AI Enablement service &mdash; a curated, white-glove Claude Cowork implementation tailored to your organization&rsquo;s workflow.</p>
+      <a class="btn" href="https://calendly.com/mark-malaniru/30min" target="_blank" rel="noopener">Book a discovery call</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Malaniru Inc, LLC &middot; Lafayette, Colorado &middot; AI Enablement</p>
+    <p><a href="daily-intelligence-briefings.html">&larr; Back to Daily Intelligence Briefings</a> &middot; <a href="index.html">AI Enablement</a></p>
+      <nav class="mal-footernav" data-mal-footernav aria-label="Site" style="margin-top:0.7rem;font-size:0.82rem;line-height:1.9;">
+      <a href="about.html" style="color:#C07830;font-weight:700;text-decoration:none;">About</a> &middot;
+      <a href="pricing.html" style="color:#C07830;font-weight:700;text-decoration:none;">Pricing</a> &middot;
+      <a href="index.html" style="color:#C07830;font-weight:700;text-decoration:none;">AI Enablement</a>
+    </nav>
+  </footer>
+</body>
+</html>

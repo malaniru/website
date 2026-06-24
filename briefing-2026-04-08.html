@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<!--
+  ============================================================================
+  Malaniru - Research article page (branded HTML)
+  Built by: Web (Morgan Shaw) - Date: 2026-06-23
+  Project:  Malaniru_Marketing_Site
+  Source:   Website/src/content/research/20260408-daily-intelligence-briefing.md
+  Purpose:  Standalone public article page for a daily intelligence briefing,
+            linked from philanthropy-ai-research.html.
+  STATUS:   Public marketing page. robots noindex pre-launch (mirrors template).
+            Calendly CTA hidden via CSS (per Principal, as in template).
+  FIDELITY: Article body rendered VERBATIM from the approved markdown. No copy
+            edits, no reordered sections, no changed figures or heading levels.
+  FLAGS:    header H1 uses the article's own title line ("Daily Intelligence Briefing — Wednesday, April 8, 2026"); frontmatter title ("Daily Agentic AI Intelligence Briefing — April 8, 2026") used for <title> tag/listing.
+  TECH:     Single self-contained HTML5 file. Embedded CSS. No JavaScript.
+            Template-matched (philanthropy-ai-adoption.html). WCAG AA. Mobile-first.
+  ============================================================================
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daily Agentic AI Intelligence Briefing — April 8, 2026 - Malaniru</title>
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="Anthropic&#x27;s Mythos model and Project Glasswing, the Claude Code source leak, enterprise LLM market share shifts, EY&#x27;s global agentic AI rollout, and Microsoft&#x27;s Agent Governance Toolkit reshape the agentic AI landscape.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --navy:#0F1A2E;--navy-mid:#2A3F63;--copper:#C07830;--gold:#D4A853;
+      --off-white:#F4F1EC;--light-gray:#E8E6E1;--mid-gray:#8A8A96;--dark-text:#1C1C1C;
+      --font:"Inter","Helvetica Neue",Arial,sans-serif;
+    }
+    *{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:var(--font);background:var(--off-white);color:var(--dark-text);line-height:1.65;font-size:16px;-webkit-font-smoothing:antialiased;}
+    .skip-link{position:absolute;left:-999px;top:0;background:var(--gold);color:var(--navy);padding:10px 16px;font-weight:700;z-index:10;}
+    .skip-link:focus{left:8px;top:8px;}
+    a{color:var(--copper);}
+    /* Header */
+    header{background: linear-gradient(160deg, rgba(15,26,46,0.72) 0%, rgba(10,18,33,0.82) 100%), url('StockCake-Cosmic_Web_Complexity-1361288-standard-rot90ccw.jpg'); background-size: auto, 100% 100%; background-repeat: no-repeat, no-repeat; background-position: center, center;color:var(--off-white);padding:48px 24px 52px;position:relative;overflow:hidden;}
+    header::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 85% 12%,rgba(192,120,48,0.20) 0%,rgba(15,26,46,0) 55%);pointer-events:none;}
+    .header-inner{max-width:760px;margin:0 auto;position:relative;z-index:1;}
+    .wordmark{font-weight:800;font-size:1.25rem;letter-spacing:0.02em;margin-bottom:30px;}
+    .wordmark .dot{color:var(--copper);}
+    .wordmark a{color:var(--off-white);text-decoration:none;transition:opacity .18s ease;}
+    .wordmark a:hover,.wordmark a:focus-visible{opacity:.85;outline:none;}
+    .eyebrow{display:inline-block;font-size:0.72rem;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;}
+    header h1{font-weight:800;font-size:clamp(1.8rem,4.6vw,2.6rem);line-height:1.14;letter-spacing:-0.01em;margin-bottom:16px;}
+    .byline{font-size:0.9rem;color:var(--light-gray);letter-spacing:0.01em;}
+    .byline .sep{color:var(--copper);margin:0 8px;}
+    .lede{font-size:1.08rem;color:var(--light-gray);max-width:66ch;margin-top:18px;}
+    .backlink{display:inline-block;margin-top:26px;color:var(--gold);font-weight:600;font-size:0.9rem;text-decoration:none;border-bottom:1px solid rgba(212,168,83,0.4);}
+    .backlink:hover,.backlink:focus-visible{border-bottom-color:var(--gold);outline:none;}
+    /* Article */
+    main{max-width:760px;margin:0 auto;padding:48px 24px 8px;}
+    .disclaimer{background:#fff;border:1px solid var(--light-gray);border-left:4px solid var(--copper);border-radius:8px;padding:14px 18px;font-size:0.9rem;color:var(--navy-mid);margin-bottom:34px;}
+    article{font-size:1.05rem;}
+    article h2{font-weight:800;font-size:1.5rem;color:var(--navy);line-height:1.22;letter-spacing:-0.01em;margin:42px 0 14px;}
+    article h3{font-weight:700;font-size:1.18rem;color:var(--navy-mid);line-height:1.25;margin:30px 0 10px;}
+    article h2 + p, article h3 + p{margin-top:0;}
+    article p{margin:0 0 18px;color:var(--dark-text);}
+    article ul,article ol{margin:0 0 18px;padding-left:24px;}
+    article li{margin-bottom:8px;}
+    article strong{font-weight:700;color:var(--navy);}
+    article em{font-style:italic;}
+    article a{color:var(--copper);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(192,120,48,0.35);transition:border-color .18s ease;}
+    article a:hover,article a:focus-visible{border-bottom-color:var(--copper);outline:none;}
+    article hr{border:none;border-top:1px solid var(--light-gray);margin:34px 0;}
+    article h2#sources, article h2#references{border-top:1px solid var(--light-gray);padding-top:30px;font-size:1.2rem;color:var(--navy-mid);}
+    /* sources list smaller */
+    article h2[id^="sources"] ~ ul li, article h3[id^="sources"] ~ ul li{font-size:0.95rem;color:var(--navy-mid);}
+    /* tables */
+    article table{width:100%;border-collapse:collapse;margin:0 0 24px;font-size:0.95rem;}
+    article th,article td{border:1px solid var(--light-gray);padding:9px 12px;text-align:left;vertical-align:top;}
+    article thead th{background:var(--navy);color:var(--off-white);font-weight:700;}
+    article tbody tr:nth-child(even){background:#fff;}
+    article .table-wrap{overflow-x:auto;margin:0 0 24px;}
+    article .table-wrap table{margin:0;}
+    /* CTA */
+    .cta-band{background:var(--navy);color:var(--off-white);border-radius:12px;padding:42px 32px;text-align:center;margin:48px 0 8px;}
+    .cta-band h2{font-weight:800;font-size:clamp(1.4rem,3.4vw,1.9rem);margin-bottom:12px;letter-spacing:-0.01em;color:var(--off-white);}
+    .cta-band p{color:var(--light-gray);max-width:52ch;margin:0 auto 24px;}
+    .cta-band .btn{display:inline-block;background:var(--copper);color:#fff;font-weight:700;padding:13px 28px;border-radius:8px;text-decoration:none;transition:background .18s ease;}
+    .cta-band .btn:hover,.cta-band .btn:focus-visible{background:var(--gold);color:var(--navy);outline:none;}
+    /* Footer */
+    footer{max-width:760px;margin:16px auto 0;padding:24px;font-size:0.82rem;color:var(--mid-gray);border-top:1px solid var(--light-gray);}
+    footer p+p{margin-top:6px;}
+    footer a{color:var(--mid-gray);text-decoration:underline;}
+    @media (prefers-reduced-motion:reduce){*{transition:none!important;}}
+
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header>
+    <div class="header-inner">
+      <div class="wordmark"><a href="index.html">Malaniru<span class="dot">.</span></a></div>
+      <span class="eyebrow">AI Enablement &middot; Daily Intelligence Briefing</span>
+      <h1>Daily Intelligence Briefing — Wednesday, April 8, 2026</h1>
+      <p class="byline">By Marco Harris<span class="sep">&middot;</span>April 8, 2026</p>
+      <p class="lede">Anthropic&#x27;s Mythos model and Project Glasswing, the Claude Code source leak, enterprise LLM market share shifts, EY&#x27;s global agentic AI rollout, and Microsoft&#x27;s Agent Governance Toolkit reshape the agentic AI landscape.</p>
+      <a class="backlink" href="daily-intelligence-briefings.html">&larr; All daily intelligence briefings</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <article>
+      <p>Run type: Daily (Wednesday — no weekly sections)</p>
+      <hr>
+      <h2 id="executive-summary">Executive Summary</h2>
+      <p>Anthropic dropped the biggest product news of the week: Mythos, a restricted-access frontier model deployed through Project Glasswing for defensive cybersecurity, with 12 partners including Apple, Amazon, Microsoft, and CrowdStrike — and a claim of "thousands of zero-day vulnerabilities" discovered in its first weeks of operation. Separately, an accidental npm source map leak exposed Claude Code's full 512,000-line TypeScript codebase, revealing unreleased features including an autonomous daemon mode codenamed KAIROS. On the competitive front, Anthropic now holds 40% of enterprise LLM API spend per Menlo Ventures, overtaking OpenAI (27%) for the first time — while OpenAI, Anthropic, and Google have begun sharing adversarial distillation intelligence through the Frontier Model Forum to counter Chinese model-copying operations. EY's global rollout of agentic AI across 130,000 audit professionals and Microsoft's open-source Agent Governance Toolkit (covering all 10 OWASP agentic risks) signal that enterprise governance infrastructure is catching up to deployment velocity.</p>
+      <hr>
+      <h2 id="1-ai-market-trends">1. AI Market Trends</h2>
+      <p><strong>Anthropic takes 40% of enterprise LLM API spend.</strong> Menlo Ventures' latest enterprise LLM market report confirms Anthropic now commands 40% of enterprise LLM API spend, up from 24% last year and 12% in 2023. OpenAI's share dropped to 27% from 50% in 2023. Google rose to 21% from 7% in 2023. Together, the three account for 88% of enterprise LLM API usage. Anthropic's code generation share is even more dominant at 42%, more than double OpenAI's 21%. (Source: Menlo Ventures, Enterprise LLM Market Report, via Yahoo Finance, April 2026)</p>
+      <p><strong>Frontier labs unite against Chinese adversarial distillation.</strong> OpenAI, Anthropic, and Google have begun sharing threat intelligence through the Frontier Model Forum to detect and counter adversarial distillation attempts by Chinese competitors. Anthropic documented 16 million exchanges from DeepSeek, Moonshot AI, and MiniMax — with DeepSeek deploying the most technically sophisticated methods, including using Claude to build censorship capabilities. This is modeled on cybersecurity-style threat intelligence sharing: when one lab detects an attack pattern, it flags it for the others. (Source: Bloomberg, April 6, 2026; Japan Times, April 7, 2026)</p>
+      <p><strong>EY launches agentic AI across 130,000 audit professionals globally.</strong> EY announced the global rollout of enterprise-scale agentic AI in Assurance, embedding a multi-agent framework (built on Microsoft Azure, Foundry, and Fabric) into EY Canvas — the platform that processes 1.4 trillion lines of journal entry data per year. The rollout covers 130,000 professionals across 160,000 engagements in more than 150 countries. The stated goal: move from statistical sampling toward 100% population testing, with full end-to-end AI audit support by 2028. (Source: EY Newsroom, April 7, 2026; Bloomberg Tax; CPA Practice Advisor; Accountancy Age)</p>
+      <p><strong>Enterprise AI adoption at 88%; agentic AI forecasted at 40% of business apps by year-end.</strong> Updated survey data puts regular enterprise AI use at 88%, up from 78% in the prior period. Separately, forecasts project 40% of business applications will employ AI agents by end of 2026, up from under 5% in 2025. Automation Anywhere reports AI agents now auto-resolve over 80% of IT support requests, cutting ITSM costs by up to 50%. The 40% forecast and Automation Anywhere figure are vendor-adjacent — treat as directional, not confirmed. (Source: TechCrunch; Automation Anywhere, via AI Agent Store, April 2026)</p>
+      <p><strong>What This Means for You.</strong> The Anthropic market share data — 40% of enterprise LLM API spend, up from 24% a year ago — signals that the enterprise AI market is consolidating around a small set of frontier providers, which matters for how organizations plan vendor relationships. The EY announcement is a leading indicator for regulated sectors: if the Big Four are deploying agentic AI in audit across 130,000 professionals, boards in adjacent fields will face questions about their own AI governance posture within 12–18 months. The Frontier Model Forum anti-distillation effort reinforces a broader point: organizations need to understand not just how they use AI models, but how those models are protected upstream. Today's data gives organizations adopting AI fresh context for policy, training, and compliance conversations alike.</p>
+      <hr>
+      <h2 id="2-top-10-ai-agents-three-lenses">2. Top 10 AI Agents — Three Lenses</h2>
+      <p>Rankings as of April 8, 2026. Changes from April 7 noted where applicable.</p>
+      <h3 id="relevance-for-claude-mcp-centered-work">Relevance for Claude / MCP-Centered Work</h3>
+      <div class="table-wrap"><table>
+      <thead>
+      <tr>
+      <th>#</th>
+      <th>Agent</th>
+      <th>Why it ranks here</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>1</td>
+      <td>Claude Code</td>
+      <td>Unchanged. Core Claude/MCP stack; Channels extends distribution.</td>
+      </tr>
+      <tr>
+      <td>2</td>
+      <td>Claude Cowork</td>
+      <td>Unchanged. Primary delivery environment for all client engagements.</td>
+      </tr>
+      <tr>
+      <td>3</td>
+      <td>Anthropic Mythos (restricted)</td>
+      <td>NEW. Not deployable in production, but Project Glasswing partnerships reshape the compliance conversation.</td>
+      </tr>
+      <tr>
+      <td>4</td>
+      <td>Cursor Agent</td>
+      <td>Unchanged. MCP-aware; relevant to engineering-adjacent clients.</td>
+      </tr>
+      <tr>
+      <td>5</td>
+      <td>Microsoft Agent Governance Toolkit</td>
+      <td>NEW. Open-source governance layer covering all 10 OWASP agentic risks. Directly relevant to AI governance policy work as a reference implementation.</td>
+      </tr>
+      <tr>
+      <td>6</td>
+      <td>AWS DevOps Agent</td>
+      <td>Stable. GA with enterprise SLAs; relevant to AWS-workload clients.</td>
+      </tr>
+      <tr>
+      <td>7</td>
+      <td>AWS Security Agent</td>
+      <td>Stable. Continuous pen testing; relevant to compliance/governance work.</td>
+      </tr>
+      <tr>
+      <td>8</td>
+      <td>OpenAI AgentKit</td>
+      <td>Down one. MCP connector registry; relevant for clients with OpenAI infrastructure.</td>
+      </tr>
+      <tr>
+      <td>9</td>
+      <td>NousResearch Hermes Agent</td>
+      <td>NEW. Open-source self-improving agent with persistent memory, 40+ skills, multi-platform support. Worth tracking as open-source alternative.</td>
+      </tr>
+      <tr>
+      <td>10</td>
+      <td>LangGraph</td>
+      <td>Down one. Durable execution + HITL; recommended when Claude-native isn't possible.</td>
+      </tr>
+      </tbody>
+      </table></div>
+      <h3 id="market-momentum-adoption-funding-developer-buzz">Market Momentum (adoption, funding, developer buzz)</h3>
+      <div class="table-wrap"><table>
+      <thead>
+      <tr>
+      <th>#</th>
+      <th>Agent</th>
+      <th>Why it ranks here</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>1</td>
+      <td>OpenAI ChatGPT / AgentKit</td>
+      <td>Unchanged. $122B raise; Codex enterprise expansion with pay-as-you-go seats.</td>
+      </tr>
+      <tr>
+      <td>2</td>
+      <td>Anthropic Mythos / Project Glasswing</td>
+      <td>NEW. Dominating news cycle — Apple, Amazon, Microsoft, CrowdStrike among 12 partners; 40 orgs with preview access.</td>
+      </tr>
+      <tr>
+      <td>3</td>
+      <td>Claude Code</td>
+      <td>Down one. Source code leak generated significant developer attention; KAIROS daemon mode reveal drove speculation.</td>
+      </tr>
+      <tr>
+      <td>4</td>
+      <td>Replit Agent</td>
+      <td>Stable. $9B valuation; strongest SMB coding agent platform.</td>
+      </tr>
+      <tr>
+      <td>5</td>
+      <td>EY Agentic AI (Assurance)</td>
+      <td>NEW. 130,000 professionals, 160,000 engagements, 150+ countries — largest single enterprise agentic deployment announced to date.</td>
+      </tr>
+      <tr>
+      <td>6</td>
+      <td>Cursor</td>
+      <td>Down one. Multi-agent platform evolution continues.</td>
+      </tr>
+      <tr>
+      <td>7</td>
+      <td>Microsoft Agent Governance Toolkit</td>
+      <td>NEW. 9,500+ tests, OWASP-complete coverage, MIT license — generating developer and security community attention.</td>
+      </tr>
+      <tr>
+      <td>8</td>
+      <td>Gemini 3.1 Flash-Lite</td>
+      <td>NEW. Efficiency play: 2.5x faster response, $0.25/M input tokens.</td>
+      </tr>
+      <tr>
+      <td>9</td>
+      <td>NousResearch Hermes Agent</td>
+      <td>NEW. Open-source self-improving agent; v0.7.0 shipped April 3.</td>
+      </tr>
+      <tr>
+      <td>10</td>
+      <td>Grok 4.20 (xAI)</td>
+      <td>Down two. $20B Q1 raise sustains position, but momentum fading as Mythos and EY dominate news cycle.</td>
+      </tr>
+      </tbody>
+      </table></div>
+      <h3 id="capability-and-maturity-production-readiness-reliability-tool-use">Capability and Maturity (production readiness, reliability, tool use)</h3>
+      <div class="table-wrap"><table>
+      <thead>
+      <tr>
+      <th>#</th>
+      <th>Agent</th>
+      <th>Why it ranks here</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>1</td>
+      <td>Claude Opus 4.6</td>
+      <td>Unchanged. 80.8% SWE-bench Verified; leads real-world work evals.</td>
+      </tr>
+      <tr>
+      <td>2</td>
+      <td>Claude Sonnet 4.6</td>
+      <td>Unchanged. 79.6% SWE-bench Verified; 1M-token context; leads GDPval-AA Elo.</td>
+      </tr>
+      <tr>
+      <td>3</td>
+      <td>Anthropic Mythos (restricted)</td>
+      <td>NEW. Described as "one of its most powerful" models. Thousands of zero-day discoveries suggest frontier-class capability on security tasks.</td>
+      </tr>
+      <tr>
+      <td>4</td>
+      <td>GPT-5.3-Codex</td>
+      <td>Stable. Leads SWE-Bench Pro at 56.8%.</td>
+      </tr>
+      <tr>
+      <td>5</td>
+      <td>GPT-5.4</td>
+      <td>Stable. 75% OSWorld-V (above 72.4% human baseline); 1M-token context; native computer use.</td>
+      </tr>
+      <tr>
+      <td>6</td>
+      <td>Gemini 3.1 Pro</td>
+      <td>Stable. 78.4% Terminal-Bench 2.0; leading on 13/16 benchmarks.</td>
+      </tr>
+      <tr>
+      <td>7</td>
+      <td>Claude Code</td>
+      <td>Down one (Mythos insertion). Inherits Opus/Sonnet reliability; MCP result persistence up to 500K chars.</td>
+      </tr>
+      <tr>
+      <td>8</td>
+      <td>AWS DevOps Agent</td>
+      <td>Stable. Enterprise SLAs; up to 75% MTTR reduction.</td>
+      </tr>
+      <tr>
+      <td>9</td>
+      <td>AWS Security Agent</td>
+      <td>Stable. Context-aware continuous pen testing.</td>
+      </tr>
+      <tr>
+      <td>10</td>
+      <td>Microsoft Agent Governance Toolkit</td>
+      <td>NEW on maturity grounds. 9,500+ tests, continuous fuzzing, SLSA provenance, sub-0.1ms p99 latency.</td>
+      </tr>
+      </tbody>
+      </table></div>
+      <h3 id="divergence-analysis">Divergence Analysis</h3>
+      <p>Mythos is the major divergence driver this cycle. It enters Momentum at #2 (press coverage is enormous), Capability at #3 (the zero-day claim signals frontier-class capability), but sits at #3 on the Claude/MCP relevance lens because it is not deployable — you cannot build production solutions on it. The relevance is indirect: it reshapes the compliance and security conversation organizations are having.</p>
+      <p>The Claude Code source leak creates an unusual Momentum dynamic — developer attention spiked, but it's incident-driven, not product-driven. The KAIROS revelation (autonomous daemon mode) is the substantive signal: if Anthropic ships a background agent capability, it would fundamentally change how AI implementation work gets delivered.</p>
+      <p>Microsoft's Agent Governance Toolkit enters all three tables — a rare debut. It is not an agent but a governance layer for agents, which makes it uniquely relevant to AI governance policy work.</p>
+      <p>EY enters Momentum only — the deployment is massive but the underlying technology is not novel. The signal is market validation: the largest professional services firm in the world is betting its audit practice on agentic AI.</p>
+      <p><strong>What This Means for You.</strong> Three new governance- and security-oriented entries in a single cycle is unusual. The common thread: governance and security infrastructure is maturing faster than expected. Microsoft's Agent Governance Toolkit is a concrete open-source reference organizations can study when implementing their own AI governance policies. Mythos illustrates why AI governance matters even for organizations that aren't deploying frontier models. And the EY rollout is proof that agentic AI in regulated workflows is no longer experimental.</p>
+      <hr>
+      <h2 id="3-agentic-ai-advances-and-new-releases">3. Agentic AI Advances and New Releases</h2>
+      <p><strong>Anthropic — Mythos model preview and Project Glasswing (April 7).</strong> Anthropic released a restricted preview of Mythos, described in a leaked internal memo as "one of its most powerful" models. The model is deployed exclusively through Project Glasswing, a defensive cybersecurity initiative with 12 partner organizations: Amazon, Apple, Broadcom, Cisco, CrowdStrike, the Linux Foundation, Microsoft, and Palo Alto Networks among them. Forty organizations total have preview access. Mythos identified "thousands of zero-day vulnerabilities, many of them critical" — some one to two decades old — in both first-party and open-source software. Anthropic is limiting access specifically because the model's vulnerability-finding capability could be exploited by bad actors. No general availability planned; Anthropic says it will deploy Mythos-class models at scale "when new safeguards are in place." (Source: TechCrunch, April 7, 2026; CNBC; Fortune; CrowdStrike blog; Anthropic; SiliconANGLE; 9to5Mac; Simon Willison)</p>
+      <p><strong>Anthropic — Claude Code source leak (March 31, covered April 7).</strong> An Anthropic employee inadvertently included a 59.8MB JavaScript source map file in version 2.1.88 of the @anthropic-ai/claude-code npm package. Within hours, the ~512,000-line TypeScript codebase was mirrored across GitHub and analyzed by thousands. Key revelations: KAIROS, an unreleased autonomous daemon mode; internal model codenames (Capybara = Claude 4.6 variant, Fennec = Opus 4.6, Numbat = unreleased model in testing); and "Undercover Mode," which prevents the AI from leaking internal identifiers. Security note: a separate supply-chain attack on the axios npm package occurred hours before the leak. (Source: VentureBeat; The Hacker News; DEV Community; NotebookCheck; The Register)</p>
+      <p><strong>Claude outages (April 6–8).</strong> Claude experienced a major platform outage on April 7, with renewed connectivity issues on April 8. Users reported login failures, chat errors, and degraded performance. No post-incident review published yet. (Source: IBTimes Australia; TechRadar)</p>
+      <p><strong>Microsoft — Agent Governance Toolkit (April 2).</strong> Microsoft released an open-source (MIT license) toolkit for runtime security governance of autonomous AI agents. First toolkit to address all 10 OWASP agentic AI risks with deterministic, sub-millisecond policy enforcement. Available for Python, Rust, TypeScript, Go, and .NET, with native hooks for LangChain, CrewAI, Google ADK, and Microsoft Agent Framework. Ships with 9,500+ tests and continuous fuzzing. Microsoft intends to move the project to a foundation for community governance. (Source: Microsoft Open Source Blog, April 2, 2026; InfoWorld; CSO Online; Help Net Security)</p>
+      <p><strong>NousResearch — Hermes Agent v0.7.0 (April 3).</strong> NousResearch shipped "The Resilience Release" — an open-source self-improving agent with persistent memory, 40+ bundled skills, and multi-platform support (Telegram, Discord, Slack, WhatsApp, CLI). New in v0.7.0: pluggable memory providers, credential pool rotation, Camofox anti-detection browser, and deep security fixes across 168 PRs. (Source: NousResearch GitHub; AIToolly)</p>
+      <p><strong>OpenAI — Codex enterprise expansion.</strong> OpenAI expanded ChatGPT Business and Enterprise with Codex-only seats on pay-as-you-go pricing, no rate limits, and token-based billing. Also lowered ChatGPT Business annual pricing. (Source: OpenAI; Releasebot)</p>
+      <p><strong>Google — Gemini 3.1 Flash-Lite.</strong> Google introduced Gemini 3.1 Flash-Lite with 2.5x faster response times, priced at $0.25 per million input tokens. (Source: Google; LLM Stats)</p>
+      <p><strong>Frontier Model Forum — Anti-distillation cooperation (April 6–7).</strong> The intelligence-sharing mechanism is modeled on cybersecurity ISACs, with pattern detection shared across labs in near-real-time. (Source: Bloomberg; Japan Times; Business Standard)</p>
+      <p><strong>What This Means for You.</strong> Mythos is not a tool most organizations will deploy, but its result carries a clear message: frontier AI models are finding critical vulnerabilities — some one to two decades old — that human auditors missed for decades, which means AI governance is not optional. The Claude Code leak revealed KAIROS, an unreleased autonomous daemon mode; if Anthropic ships a persistent background agent, the way organizations build on Claude gains a new capability layer worth watching. The Agent Governance Toolkit is immediately actionable as a reference implementation for organizations drafting their own AI governance policies.</p>
+      <hr>
+      <h2 id="4-overnight-release-monitor">4. Overnight Release Monitor</h2>
+      <p>Scanning for material releases between Tuesday evening (April 7) and Wednesday morning (April 8):</p>
+      <ul>
+      <li><strong>Anthropic Mythos / Project Glasswing (April 7):</strong> Partner announcements from CrowdStrike and 9to5Mac (Apple involvement) published through Tuesday evening and into Wednesday.</li>
+      <li><strong>Claude outage (April 8):</strong> IBTimes Australia reported renewed connectivity issues. No post-incident review yet.</li>
+      <li><strong>No new frontier model releases overnight.</strong> OpenAI, Google, Meta, Microsoft, and xAI had no material model drops in this window.</li>
+      <li><strong>NousResearch Hermes Agent coverage:</strong> AIToolly published a detailed breakdown on April 8, suggesting continued developer community interest.</li>
+      <li><strong>MCP ecosystem:</strong> No protocol-level changes in the overnight window.</li>
+      </ul>
+      <p><strong>What This Means for You.</strong> The Mythos/Glasswing story will likely generate questions this week — particularly within security-conscious organizations. It is worth having a clear position ready on what it does and does not change for your AI use. The Claude outage on April 6–8 is a useful reminder to set realistic uptime expectations and build graceful fallbacks into any workflow that depends on a single provider.</p>
+      <hr>
+      <h2 id="sources">Sources</h2>
+      <ul>
+      <li><a href="https://finance.yahoo.com/news/enterprise-llm-spend-reaches-8-130000140.html" target="_blank" rel="noopener">Menlo Ventures — Enterprise LLM Market Report (via Yahoo Finance)</a></li>
+      <li><a href="https://www.bloomberg.com/news/articles/2026-04-06/openai-anthropic-google-unite-to-combat-model-copying-in-china" target="_blank" rel="noopener">Bloomberg — OpenAI, Anthropic, Google Unite to Combat Model Copying in China</a></li>
+      <li><a href="https://www.japantimes.co.jp/business/2026/04/07/tech/openai-anthropic-google-china-copy/" target="_blank" rel="noopener">Japan Times — Frontier labs cooperate against Chinese model cloning</a></li>
+      <li><a href="https://www.ey.com/en_us/newsroom/2026/04/ey-launches-enterprise-scale-agentic-ai-to-redefine-the-audit-experience-for-the-ai-era" target="_blank" rel="noopener">EY Newsroom — Enterprise-scale agentic AI in Assurance</a></li>
+      <li><a href="https://news.bloombergtax.com/financial-accounting/ey-weaves-advanced-ai-into-corporate-financial-audits-globally" target="_blank" rel="noopener">Bloomberg Tax — EY Weaves AI Into Corporate Financial Audits</a></li>
+      <li><a href="https://techcrunch.com/2026/04/07/anthropic-mythos-ai-model-preview-security/" target="_blank" rel="noopener">TechCrunch — Anthropic Mythos model preview</a></li>
+      <li><a href="https://www.cnbc.com/2026/04/07/anthropic-claude-mythos-ai-hackers-cyberattacks.html" target="_blank" rel="noopener">CNBC — Anthropic limits Mythos rollout</a></li>
+      <li><a href="https://fortune.com/2026/04/07/anthropic-claude-mythos-model-project-glasswing-cybersecurity/" target="_blank" rel="noopener">Fortune — Anthropic early access to Mythos</a></li>
+      <li><a href="https://www.crowdstrike.com/en-us/blog/crowdstrike-founding-member-anthropic-mythos-frontier-model-to-secure-ai/" target="_blank" rel="noopener">CrowdStrike — Mythos Frontier Model partnership</a></li>
+      <li><a href="https://9to5mac.com/2026/04/07/anthropic-unveils-powerful-mythos-ai-model-working-with-apple-in-cybersecurity-initiative/" target="_blank" rel="noopener">9to5Mac — Anthropic Mythos with Apple</a></li>
+      <li><a href="https://siliconangle.com/2026/04/07/anthropic-debuts-project-glasswing-initiative-will-leverage-powerful-mythos-model-reinforce-software-security/" target="_blank" rel="noopener">SiliconANGLE — Project Glasswing</a></li>
+      <li><a href="https://venturebeat.com/technology/claude-codes-source-code-appears-to-have-leaked-heres-what-we-know" target="_blank" rel="noopener">VentureBeat — Claude Code source code leak</a></li>
+      <li><a href="https://thehackernews.com/2026/04/claude-code-tleaked-via-npm-packaging.html" target="_blank" rel="noopener">The Hacker News — Claude Code leaked via npm</a></li>
+      <li><a href="https://www.ibtimes.com.au/claude-ai-down-again-april-8-2026-anthropic-outage-hits-users-after-yesterdays-major-incident-1865761" target="_blank" rel="noopener">IBTimes Australia — Claude outage April 8</a></li>
+      <li><a href="https://opensource.microsoft.com/blog/2026/04/02/introducing-the-agent-governance-toolkit-open-source-runtime-security-for-ai-agents/" target="_blank" rel="noopener">Microsoft Open Source Blog — Agent Governance Toolkit</a></li>
+      <li><a href="https://www.infoworld.com/article/4155591/microsofts-new-agent-governance-toolkit-targets-top-owasp-risks-for-ai-agents.html" target="_blank" rel="noopener">InfoWorld — Agent Governance Toolkit and OWASP risks</a></li>
+      <li><a href="https://github.com/NousResearch/hermes-agent/releases/tag/v2026.4.3" target="_blank" rel="noopener">NousResearch — Hermes Agent v0.7.0</a></li>
+      <li><a href="https://epoch.ai/benchmarks/swe-bench-verified/" target="_blank" rel="noopener">Epoch AI — SWE-Bench Verified leaderboard</a></li>
+      <li><a href="https://lmcouncil.ai/benchmarks" target="_blank" rel="noopener">LM Council benchmarks — April 2026</a></li>
+      </ul>
+    </article>
+
+    <section class="cta-band" id="contact" aria-labelledby="cta-heading">
+      <h2 id="cta-heading">From AI curiosity to AI capability</h2>
+      <p>This briefing is part of the field research behind our AI Enablement service &mdash; a curated, white-glove Claude Cowork implementation tailored to your organization&rsquo;s workflow.</p>
+      <a class="btn" href="https://calendly.com/mark-malaniru/30min" target="_blank" rel="noopener">Book a discovery call</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Malaniru Inc, LLC &middot; Lafayette, Colorado &middot; AI Enablement</p>
+    <p><a href="daily-intelligence-briefings.html">&larr; Back to Daily Intelligence Briefings</a> &middot; <a href="index.html">AI Enablement</a></p>
+      <nav class="mal-footernav" data-mal-footernav aria-label="Site" style="margin-top:0.7rem;font-size:0.82rem;line-height:1.9;">
+      <a href="about.html" style="color:#C07830;font-weight:700;text-decoration:none;">About</a> &middot;
+      <a href="pricing.html" style="color:#C07830;font-weight:700;text-decoration:none;">Pricing</a> &middot;
+      <a href="index.html" style="color:#C07830;font-weight:700;text-decoration:none;">AI Enablement</a>
+    </nav>
+  </footer>
+</body>
+</html>

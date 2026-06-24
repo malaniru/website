@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<!--
+  ============================================================================
+  Pricing — marketing site page
+  Built by: Claudia (prompt-builder) · Date: 2026-06-23
+  ----------------------------------------------------------------------------
+  PRICING NOTE: figures supplied directly by the Principal (Mark Harris) in the
+  INPUT.MD CONTEXT on 2026-06-23 and approved for publication "exactly as given."
+  This supersedes the prior standing flag [HUMAN REVIEW — pricing not finalized]
+  that appears in brand-voice.md / persona files. If pricing changes, update here
+  and revisit that flag.
+  Tiers: 15-min intro $0 · Working Session + Gap Analysis $500 (introductory) ·
+  Custom Engagements from $5,000.
+  Design system mirrors index.html brand tokens. Pre-launch posture: noindex.
+  ============================================================================
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pricing — Malaniru</title>
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="Simple ways to start with Malaniru: a free 15-minute intro call, a $500 working session and gap analysis, and custom white-glove AI implementation engagements from $5,000.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --color-navy:        #0F1A2E;
+      --color-navy-mid:    #2A3F63;
+      --color-copper:      #C07830;
+      --color-gold:        #D4A853;
+      --color-off-white:   #F4F1EC;
+      --color-light-gray:  #E8E6E1;
+      --color-mid-gray:    #8A8A96;
+      --color-dark-text:   #1C1C1C;
+      --color-navy-deep:   #0A1322;
+      --color-copper-soft: #D89A5C;
+      --color-on-navy-muted: #C3CBD9;
+      --font-sans: "Inter", "Helvetica Neue", Arial, sans-serif;
+      --space-1: 0.5rem; --space-2: 1rem; --space-3: 1.5rem;
+      --space-4: 2rem; --space-5: 3rem; --space-6: 4.5rem;
+      --radius: 10px; --radius-lg: 16px; --maxw: 1120px; --transition: 180ms ease;
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0; font-family: var(--font-sans); font-size: 16px; line-height: 1.6;
+      color: var(--color-dark-text); background: var(--color-off-white);
+      -webkit-font-smoothing: antialiased;
+    }
+    h1, h2, h3 { font-weight: 800; line-height: 1.15; margin: 0 0 var(--space-2); }
+    p { margin: 0 0 var(--space-2); }
+    a { color: inherit; }
+    .container { width: 100%; max-width: var(--maxw); margin-inline: auto; padding-inline: var(--space-3); }
+
+    .skip-link {
+      position: absolute; left: -999px; top: 0; background: var(--color-copper);
+      color: var(--color-navy); padding: var(--space-1) var(--space-2);
+      font-weight: 700; z-index: 100; border-radius: 0 0 var(--radius) 0;
+    }
+    .skip-link:focus { left: 0; }
+    :focus-visible { outline: 3px solid var(--color-gold); outline-offset: 3px; border-radius: 4px; }
+
+    .btn {
+      display: inline-block; font-weight: 700; font-size: 1.02rem; letter-spacing: 0.01em;
+      text-decoration: none; padding: 0.85rem 1.6rem; border-radius: var(--radius);
+      background: var(--color-copper); color: var(--color-navy); border: 2px solid var(--color-copper);
+      transition: background var(--transition), border-color var(--transition), transform var(--transition);
+    }
+    .btn:hover, .btn:focus-visible { background: var(--color-gold); border-color: var(--color-gold); }
+    .btn:active { transform: translateY(1px); }
+    .btn--ghost { background: transparent; color: var(--color-navy); border-color: var(--color-navy-mid); }
+    .btn--ghost:hover, .btn--ghost:focus-visible { background: var(--color-navy); color: var(--color-off-white); border-color: var(--color-navy); }
+
+    section { padding-block: var(--space-6); }
+    .section-label {
+      display: inline-block; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.14em;
+      text-transform: uppercase; color: var(--color-copper); margin-bottom: var(--space-2);
+    }
+
+    /* Hero */
+    .hero {
+      background:
+        radial-gradient(900px 500px at 80% -10%, rgba(192,120,48,0.20), transparent 60%),
+        linear-gradient(160deg, rgba(15,26,46,0.72) 0%, rgba(10,18,33,0.82) 100%),
+        url('StockCake-Cosmic_Web_Complexity-1361288-standard-rot90ccw.jpg');
+      background-size: auto, auto, 100% 100%;
+      background-repeat: no-repeat, no-repeat, no-repeat;
+      background-position: center, center, center;
+      color: var(--color-off-white); padding-block: var(--space-6);
+    }
+    .hero__inner { max-width: 760px; }
+    .hero__eyebrow {
+      color: var(--color-gold); font-weight: 600; letter-spacing: 0.16em;
+      text-transform: uppercase; font-size: 0.82rem; margin-bottom: var(--space-2);
+    }
+    .hero h1 { font-size: clamp(2.2rem, 6vw, 3.4rem); color: var(--color-off-white); margin-bottom: var(--space-2); }
+    .hero__lede { font-size: 1.12rem; color: var(--color-on-navy-muted); max-width: 60ch; margin-bottom: 0; }
+
+    /* Pricing grid */
+    .tiers {
+      list-style: none; margin: 0; padding: 0;
+      display: grid; gap: var(--space-3); grid-template-columns: 1fr; align-items: stretch;
+    }
+    @media (min-width: 900px) { .tiers { grid-template-columns: repeat(3, 1fr); gap: var(--space-3); } }
+
+    .tier {
+      display: flex; flex-direction: column;
+      background: #fff; border: 1px solid var(--color-light-gray);
+      border-radius: var(--radius-lg); padding: var(--space-4);
+      box-shadow: 0 1px 2px rgba(15,26,46,0.04);
+    }
+    .tier--featured {
+      background: var(--color-navy); color: var(--color-off-white);
+      border-color: var(--color-copper); position: relative;
+    }
+    .tier__badge {
+      position: absolute; top: -0.8rem; left: var(--space-4);
+      background: var(--color-copper); color: var(--color-navy);
+      font-size: 0.72rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase;
+      padding: 0.3rem 0.7rem; border-radius: 999px;
+    }
+    .tier__name { font-size: 1.15rem; color: var(--color-navy); margin-bottom: 0.4rem; }
+    .tier--featured .tier__name { color: var(--color-gold); }
+    .tier__price { font-size: 2.4rem; font-weight: 800; color: var(--color-navy); line-height: 1; margin-bottom: 0.2rem; font-variant-numeric: tabular-nums; }
+    .tier--featured .tier__price { color: var(--color-off-white); }
+    .tier__price small { font-size: 0.85rem; font-weight: 600; color: var(--color-mid-gray); display: block; margin-top: 0.4rem; letter-spacing: 0.02em; }
+    .tier--featured .tier__price small { color: var(--color-copper-soft); }
+    .tier__desc { color: var(--color-dark-text); font-size: 0.98rem; margin-bottom: var(--space-3); }
+    .tier--featured .tier__desc { color: var(--color-on-navy-muted); }
+
+    .tier__list { list-style: none; margin: 0 0 var(--space-4); padding: 0; }
+    .tier__list li { position: relative; padding-left: 1.5rem; margin-bottom: 0.55rem; font-size: 0.95rem; }
+    .tier__list li::before {
+      content: "\2713"; position: absolute; left: 0; top: 0;
+      color: var(--color-copper); font-weight: 800;
+    }
+    .tier--featured .tier__list li::before { color: var(--color-gold); }
+    .tier__cta { margin-top: auto; }
+    .tier__cta .btn { width: 100%; text-align: center; }
+
+    /* What's included / journey note */
+    .note {
+      background: var(--color-off-white); border-left: 5px solid var(--color-copper);
+      border-radius: var(--radius); padding: var(--space-3) var(--space-4);
+      max-width: 70ch; margin-top: var(--space-5); color: var(--color-dark-text); font-size: 0.98rem;
+    }
+    .note strong { color: var(--color-navy); }
+
+    /* Closing CTA */
+    .cta-band {
+      background:
+        radial-gradient(700px 400px at 20% 120%, rgba(212,168,83,0.22), transparent 60%),
+        linear-gradient(150deg, var(--color-navy-mid) 0%, var(--color-navy) 100%);
+      color: var(--color-off-white); text-align: center;
+    }
+    .cta-band h2 { font-size: clamp(1.7rem, 4.5vw, 2.4rem); color: var(--color-off-white); }
+    .cta-band p { color: var(--color-on-navy-muted); max-width: 52ch; margin-inline: auto; margin-bottom: var(--space-4); font-size: 1.08rem; }
+
+    /* Footer */
+    footer {
+      max-width: 960px; margin: 16px auto 0; padding: 24px; font-size: 0.82rem;
+      color: var(--color-mid-gray); border-top: 1px solid var(--color-light-gray); text-align: center;
+    }
+    footer p + p { margin-top: 6px; }
+
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="hero">
+    <div class="container hero__inner">
+      <p class="hero__eyebrow">Malaniru — White-glove AI implementation</p>
+      <h1>Pricing</h1>
+      <p class="hero__lede">Three simple ways to start &mdash; from a no-cost conversation to a full, tailored implementation. Every engagement is sized to your organization, not the other way around.</p>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <section class="container">
+      <ol class="tiers">
+
+        <li class="tier">
+          <h2 class="tier__name">Intro Call</h2>
+          <p class="tier__price">$0<small>15-minute introductory call</small></p>
+          <p class="tier__desc">A short, no-pressure conversation to understand your workflow and see whether AI is worth pursuing for your organization.</p>
+          <ul class="tier__list">
+            <li>Quick fit check, no preparation needed</li>
+            <li>An honest read on where AI would &mdash; and wouldn&rsquo;t &mdash; help</li>
+            <li>Clear next step, or a friendly &ldquo;not yet&rdquo;</li>
+          </ul>
+          <div class="tier__cta">
+            <a class="btn btn--ghost" href="https://calendly.com/mark-malaniru/30min" target="_blank" rel="noopener">Book the intro call</a>
+          </div>
+        </li>
+
+        <li class="tier tier--featured">
+          <span class="tier__badge">Introductory offer</span>
+          <h2 class="tier__name">Working Session + Gap Analysis</h2>
+          <p class="tier__price">$500<small>fixed-price engagement</small></p>
+          <p class="tier__desc">A focused working session paired with a written gap analysis: where your organization actually stands today and the highest-value next steps to take.</p>
+          <ul class="tier__list">
+            <li>Hands-on working session on your real workflow</li>
+            <li>Gap analysis against a practical AI-readiness model</li>
+            <li>Prioritized recommendations you can act on with or without us</li>
+            <li>Credited toward a custom engagement if you proceed</li>
+          </ul>
+          <div class="tier__cta">
+            <a class="btn" href="https://calendly.com/mark-malaniru/30min" target="_blank" rel="noopener">Start with a gap analysis</a>
+          </div>
+        </li>
+
+        <li class="tier">
+          <h2 class="tier__name">Custom Engagements</h2>
+          <p class="tier__price">From $5,000<small>scoped to your organization</small></p>
+          <p class="tier__desc">A curated, white-glove Claude Cowork implementation tailored to your workflow &mdash; the full guided adoption motion, end to end.</p>
+          <ul class="tier__list">
+            <li>Analysis, governance policies, AI awareness</li>
+            <li>Hands-on, workflow-specific training</li>
+            <li>Documented SOPs and a working environment you keep</li>
+            <li>Optional ongoing optimization and support</li>
+          </ul>
+          <div class="tier__cta">
+            <a class="btn btn--ghost" href="https://calendly.com/mark-malaniru/30min" target="_blank" rel="noopener">Discuss a custom scope</a>
+          </div>
+        </li>
+
+      </ol>
+
+      <p class="note"><strong>How the steps connect.</strong> Most engagements start with the intro call, move into a working session and gap analysis to map the ground, then &mdash; where it makes sense &mdash; into a custom implementation. The $500 working session is credited toward a custom engagement if you decide to move forward, so the early step is never wasted. Final scope and price for a custom engagement depend on your size, systems, and goals; you&rsquo;ll always see them in writing before anything begins.</p>
+    </section>
+
+    <section class="cta-band" id="contact" aria-labelledby="cta-heading">
+      <div class="container">
+        <h2 id="cta-heading">Not sure where you fit?</h2>
+        <p>Start with the free intro call. We&rsquo;ll point you to the right next step &mdash; even if that step isn&rsquo;t with us.</p>
+        <a class="btn" href="https://calendly.com/mark-malaniru/30min" target="_blank" rel="noopener">Book a discovery call</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Malaniru Inc, LLC &middot; Lafayette, Colorado &middot; Pricing</p>
+    <nav class="mal-footernav" data-mal-footernav aria-label="Site" style="margin-top:0.7rem;font-size:0.82rem;line-height:1.9;">
+      <a href="about.html" style="color:#C07830;font-weight:700;text-decoration:none;">About</a> &middot;
+      <a href="pricing.html" style="color:#C07830;font-weight:700;text-decoration:none;">Pricing</a> &middot;
+      <a href="index.html" style="color:#C07830;font-weight:700;text-decoration:none;">AI Enablement</a>
+    </nav>
+  </footer>
+
+</body>
+</html>
