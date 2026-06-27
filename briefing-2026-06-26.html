@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<!--
+  Malaniru - Daily Intelligence Briefing (branded HTML)
+  Built by: web-publish-briefing component (backfill) - Date: 2026-06-27
+  Source:   Website/src/content/research/20260626-daily-intelligence-briefing.md
+  FIDELITY: Body rendered VERBATIM from the published markdown. No copy edits.
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daily Intelligence Briefing — Friday, June 26, 2026 - Malaniru</title>
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.malaniru.com/briefing-2026-06-26">
+  <meta name="description" content="Anthropic codifies government-ID and facial-biometric verification for some consumer Claude users, effective July 8 — reported as the first major US frontier lab to do so, with business tiers exempt. The same date is now read as the likely US-first restoration path for Fable 5, which remains suspended. Claude Design plus Canva ships as the run&#x27;s one genuinely new release. GPT-5.6 and Gemini 3.5 Pro stay July-bound. Opus 4.8 and Sonnet 4.6 remain the stable reference tiers.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --navy:#0F1A2E;--navy-mid:#2A3F63;--copper:#C07830;--gold:#D4A853;
+      --off-white:#F4F1EC;--light-gray:#E8E6E1;--mid-gray:#8A8A96;--dark-text:#1C1C1C;
+      --font:"Inter","Helvetica Neue",Arial,sans-serif;
+    }
+    *{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:var(--font);background:var(--off-white);color:var(--dark-text);line-height:1.65;font-size:16px;-webkit-font-smoothing:antialiased;}
+    .skip-link{position:absolute;left:-999px;top:0;background:var(--gold);color:var(--navy);padding:10px 16px;font-weight:700;z-index:10;}
+    .skip-link:focus{left:8px;top:8px;}
+    a{color:var(--copper);}
+    /* Header */
+    header{background: linear-gradient(160deg, rgba(15,26,46,0.72) 0%, rgba(10,18,33,0.82) 100%), url('StockCake-Cosmic_Web_Complexity-1361288-standard-rot90ccw.jpg'); background-size: auto, 100% 100%; background-repeat: no-repeat, no-repeat; background-position: center, center;color:var(--off-white);padding:48px 24px 52px;position:relative;overflow:hidden;}
+    header::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 85% 12%,rgba(192,120,48,0.20) 0%,rgba(15,26,46,0) 55%);pointer-events:none;}
+    .header-inner{max-width:760px;margin:0 auto;position:relative;z-index:1;}
+    .wordmark{font-weight:800;font-size:1.25rem;letter-spacing:0.02em;margin-bottom:30px;}
+    .wordmark .dot{color:var(--copper);}
+    .wordmark a{color:var(--off-white);text-decoration:none;transition:opacity .18s ease;}
+    .wordmark a:hover,.wordmark a:focus-visible{opacity:.85;outline:none;}
+    .eyebrow{display:inline-block;font-size:0.72rem;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;}
+    header h1{font-weight:800;font-size:clamp(1.8rem,4.6vw,2.6rem);line-height:1.14;letter-spacing:-0.01em;margin-bottom:16px;}
+    .byline{font-size:0.9rem;color:var(--light-gray);letter-spacing:0.01em;}
+    .byline .sep{color:var(--copper);margin:0 8px;}
+    .lede{font-size:1.08rem;color:var(--light-gray);max-width:66ch;margin-top:18px;}
+    .backlink{display:inline-block;margin-top:26px;color:var(--gold);font-weight:600;font-size:0.9rem;text-decoration:none;border-bottom:1px solid rgba(212,168,83,0.4);}
+    .backlink:hover,.backlink:focus-visible{border-bottom-color:var(--gold);outline:none;}
+    /* Article */
+    main{max-width:760px;margin:0 auto;padding:48px 24px 8px;}
+    .disclaimer{background:#fff;border:1px solid var(--light-gray);border-left:4px solid var(--copper);border-radius:8px;padding:14px 18px;font-size:0.9rem;color:var(--navy-mid);margin-bottom:34px;}
+    article{font-size:1.05rem;}
+    article h2{font-weight:800;font-size:1.5rem;color:var(--navy);line-height:1.22;letter-spacing:-0.01em;margin:42px 0 14px;}
+    article h3{font-weight:700;font-size:1.18rem;color:var(--navy-mid);line-height:1.25;margin:30px 0 10px;}
+    article h2 + p, article h3 + p{margin-top:0;}
+    article p{margin:0 0 18px;color:var(--dark-text);}
+    article ul,article ol{margin:0 0 18px;padding-left:24px;}
+    article li{margin-bottom:8px;}
+    article strong{font-weight:700;color:var(--navy);}
+    article em{font-style:italic;}
+    article a{color:var(--copper);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(192,120,48,0.35);transition:border-color .18s ease;}
+    article a:hover,article a:focus-visible{border-bottom-color:var(--copper);outline:none;}
+    article hr{border:none;border-top:1px solid var(--light-gray);margin:34px 0;}
+    article h2#sources, article h2#references{border-top:1px solid var(--light-gray);padding-top:30px;font-size:1.2rem;color:var(--navy-mid);}
+    /* sources list smaller */
+    article h2[id^="sources"] ~ ul li, article h3[id^="sources"] ~ ul li{font-size:0.95rem;color:var(--navy-mid);}
+    /* tables */
+    article table{width:100%;border-collapse:collapse;margin:0 0 24px;font-size:0.95rem;}
+    article th,article td{border:1px solid var(--light-gray);padding:9px 12px;text-align:left;vertical-align:top;}
+    article thead th{background:var(--navy);color:var(--off-white);font-weight:700;}
+    article tbody tr:nth-child(even){background:#fff;}
+    article .table-wrap{overflow-x:auto;margin:0 0 24px;}
+    article .table-wrap table{margin:0;}
+    /* CTA */
+    .cta-band{background:var(--navy);color:var(--off-white);border-radius:12px;padding:42px 32px;text-align:center;margin:48px 0 8px;}
+    .cta-band h2{font-weight:800;font-size:clamp(1.4rem,3.4vw,1.9rem);margin-bottom:12px;letter-spacing:-0.01em;color:var(--off-white);}
+    .cta-band p{color:var(--light-gray);max-width:52ch;margin:0 auto 24px;}
+    .cta-band .btn{display:inline-block;background:var(--copper);color:#fff;font-weight:700;padding:13px 28px;border-radius:8px;text-decoration:none;transition:background .18s ease;}
+    .cta-band .btn:hover,.cta-band .btn:focus-visible{background:var(--gold);color:var(--navy);outline:none;}
+    /* Footer */
+    footer{max-width:760px;margin:16px auto 0;padding:24px;font-size:0.82rem;color:var(--mid-gray);border-top:1px solid var(--light-gray);}
+    footer p+p{margin-top:6px;}
+    footer a{color:var(--mid-gray);text-decoration:underline;}
+    @media (prefers-reduced-motion:reduce){*{transition:none!important;}}
+
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header>
+    <div class="header-inner">
+      <div class="wordmark"><a href="index.html">Malaniru<span class="dot">.</span></a></div>
+      <span class="eyebrow">AI Enablement &middot; Daily Intelligence Briefing</span>
+      <h1>Daily Intelligence Briefing — Friday, June 26, 2026</h1>
+      <p class="byline">By Marco Harris<span class="sep">&middot;</span>June 26, 2026</p>
+      <p class="lede">Anthropic codifies government-ID and facial-biometric verification for some consumer Claude users, effective July 8 — reported as the first major US frontier lab to do so, with business tiers exempt. The same date is now read as the likely US-first restoration path for Fable 5, which remains suspended. Claude Design plus Canva ships as the run&#x27;s one genuinely new release. GPT-5.6 and Gemini 3.5 Pro stay July-bound. Opus 4.8 and Sonnet 4.6 remain the stable reference tiers.</p>
+      <a class="backlink" href="daily-intelligence-briefings.html">&larr; All daily intelligence briefings</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <article>
+      <h2 id="executive-summary">Executive Summary</h2>
+      <p>The most significant development this run is Anthropic's codification of identity verification — a government-issued photo ID, a live selfie, and a facial-geometry scan that some consumer Claude users (Free, Pro, Max) may be required to complete starting July 8, 2026, with Team, Enterprise, and API plans exempt and the biometric data held by a third-party vendor, Persona, rather than by Anthropic (Source: TechCrunch; TechTimes; Anthropic Help Center, June 2026). Several outlets report this as the first time a major US frontier lab has written biometric identity collection into its consumer privacy policy (Source: TechCrunch, June 22, 2026). The same July 8 date is now widely read as the likely US-first restoration mechanism for Fable 5, which remains suspended today, even as restoration odds reportedly firmed after Anthropic dispatched chief compute officer Tom Brown and policy chief Sarah Heck to Washington (Source: TechTimes; explainx.ai, June 2026). On the shipped-product side, the Claude Design plus Canva update — importable design systems, WYSIWYG canvas editing, two-way design-sync with Claude Code, PDF and PPTX export — is the run's one genuinely new, generally useful release (Source: Anthropic; Canva Newsroom, June 2026). Opus 4.8 and Sonnet 4.6 remain the stable, available reference tiers. Carry items hold: GPT-5.6 and Gemini 3.5 Pro both still slated for July and officially unannounced; the MCP final specification on July 28; EU AI Act transparency obligations on August 2; and Anthropic's IPO targeting an October Nasdaq listing.</p>
+      <h2 id="1-ai-market-trends">1. AI Market Trends</h2>
+      <p>The story today is identity and access governance — who gets to use a frontier model, and proven how.</p>
+      <p><strong>Anthropic codifies ID and biometric verification.</strong> Anthropic has updated its consumer privacy policy to allow it to require, from flagged users, a government-issued photo ID (passport, driver's license, state ID, or national identity card), a selfie photo or video, and a facial-geometry template before granting or maintaining access. The policy takes effect July 8, 2026 and applies to Claude Free, Pro, and Max; Team, Enterprise, and API customers are exempt. The verification is operated by a third party, Persona, which holds the ID and selfie images — Anthropic states it does not copy or store those images itself but can access verification records through Persona's platform, for example to review an appeal (Source: TechCrunch, "Anthropic says Claude may want to see your ID," June 22, 2026; TechTimes, June 21, 2026; Anthropic Help Center, "Identity verification on Claude," 2026). Several outlets frame this as the first time a major US frontier lab has codified this level of biometric identity collection in a consumer privacy policy; OpenAI, Google, and Meta do not currently require government ID or biometrics from consumer users as a standard enforcement mechanism (Source: TechCrunch; Cybernews; MLQ News, June 2026). One precision point: the exact triggers that flag a user for verification are not fully published — treat "who gets asked, and when" as unconfirmed pending Anthropic's own documentation.</p>
+      <p><strong>The through-line to last week's distillation story.</strong> This is not an isolated policy change. Read alongside the June 24 Alibaba and Qwen distillation accusation (28.8 million exchanges across roughly 25,000 fraudulent accounts — an allegation, not adjudicated), the ID-verification policy reads as account-integrity enforcement hardening into identity proof. The same enforcement logic — stop fraudulent and circumventing accounts at scale — connects the accusation to the verification mechanism. This linkage is a reasonable inference from the timing and stated rationale, not a confirmed causal chain.</p>
+      <p><strong>The broader signal.</strong> Frontier access is moving from "sign up with an email" toward proof-of-identity, conditioned by geography and government directive. For organizations adopting AI, the practical lesson is that access itself is now a governed variable — subject to verification steps, regional rules, and vendor enforcement that can change the terms of use for individual staff members with little notice.</p>
+      <p><strong>What This Means for You.</strong> The cleanest lesson is that the plan tier a workflow runs on is now a governance decision, not just a procurement detail. A consumer plan (Free, Pro, Max) may subject a user to biometric verification administered by a third-party processor; a business plan (Team, Enterprise, API) is exempt. If staff are using personal consumer accounts for organizational work — a common, quiet pattern — that work flows through an account the organization does not govern, under terms that can change. Document which tier each workflow uses and what the identity-and-access terms commit you to, and keep production work on stable, available models such as Opus 4.8 and Sonnet 4.6 on governed business plans.</p>
+      <h2 id="2-top-10-ai-agents-three-lenses">2. Top 10 AI Agents — Three Lenses</h2>
+      <p>Rankings as of Friday, June 26, 2026. Material change this run: the ID-verification policy (an access-governance event, not an agent-capability change), the firming-but-unconfirmed Fable 5 restoration signal, and the shipped Claude Design plus Canva update. GPT-5.6 and Gemini 3.5 Pro remain pre-GA and July-slated.</p>
+      <h3 id="2a-relevance-for-claude-mcp-centered-work">2a. Relevance for Claude / MCP-Centered Work</h3>
+      <div class="table-wrap"><table>
+      <thead>
+      <tr>
+      <th>Rank</th>
+      <th>Agent / Platform</th>
+      <th>Justification</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>1</td>
+      <td>Claude Cowork</td>
+      <td>Core delivery surface; runs on the interactive pool and Opus 4.8. Stable and available.</td>
+      </tr>
+      <tr>
+      <td>2</td>
+      <td>Claude Opus 4.8 / Sonnet 4.6</td>
+      <td>Stable flagship and workhorse tiers; unaffected by the export-control suspension and the new ID-verification policy (business tiers exempt). The top tier deployable today.</td>
+      </tr>
+      <tr>
+      <td>3</td>
+      <td>Claude Code + Agent SDK</td>
+      <td>Primary agentic build tool; broad developer adoption. Now a handoff target for Claude Design's design-sync.</td>
+      </tr>
+      <tr>
+      <td>4</td>
+      <td>MCP-based connectors (cross-vendor)</td>
+      <td>Universal interop; final spec lands July 28 with breaking changes (stateless core, Tasks, MCP Apps, authorization hardening); validation window underway (Source: Model Context Protocol Blog, 2026).</td>
+      </tr>
+      <tr>
+      <td>5</td>
+      <td>Claude Design + Canva (shipped update)</td>
+      <td>Importable design systems, WYSIWYG canvas editing, two-way design-sync with Claude Code, PDF and PPTX export; Canva integration brings drafts into editable Canva designs (Source: Anthropic; Canva Newsroom, June 2026). A productizable design-to-code surface worth hands-on evaluation.</td>
+      </tr>
+      </tbody>
+      </table></div>
+      <p>Watch line: Claude Fable 5 — reported still suspended worldwide, with July 8 ID verification now read as the likely US-first restoration mechanism; re-enters as a deployment candidate only on confirmed restoration and published terms. Mythos 5 stays gated and unscored.</p>
+      <h3 id="2b-market-momentum-adoption-funding-buzz">2b. Market Momentum (adoption / funding / buzz)</h3>
+      <div class="table-wrap"><table>
+      <thead>
+      <tr>
+      <th>Rank</th>
+      <th>Agent / Platform</th>
+      <th>Justification</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>1</td>
+      <td>Anthropic (ID policy + Fable 5 limbo + IPO)</td>
+      <td>Dominant news share — ID-verification "first," Fable 5 restoration watch, distillation accusation aftermath, October IPO at a $965B last-round valuation (Source: Fortune, June 1, 2026).</td>
+      </tr>
+      <tr>
+      <td>2</td>
+      <td>OpenAI (GPT-5.6 slipping)</td>
+      <td>GPT-5.6 still July-most-likely and officially unannounced; prediction markets now tracking a "by July 13" window. Dominant US coding-agent incumbent via GPT-5.5 and Codex.</td>
+      </tr>
+      <tr>
+      <td>3</td>
+      <td>Google Gemini / Google Cloud</td>
+      <td>Gemini 3.5 Pro reportedly delayed to July (Google declined to comment); Flash shipped and in production.</td>
+      </tr>
+      <tr>
+      <td>4</td>
+      <td>Canva / Anthropic Labs (Claude Design)</td>
+      <td>Fresh buzz on the shipped Claude Design plus Canva integration — design-to-code and HTML-import-to-Canva is a real new distribution surface (Source: The Next Web; Canva Newsroom, June 2026).</td>
+      </tr>
+      <tr>
+      <td>5</td>
+      <td>Open-weight challengers (GLM, Qwen, MiniMax)</td>
+      <td>Continue riding single-source-dependency backlash; rising enterprise evaluation interest.</td>
+      </tr>
+      </tbody>
+      </table></div>
+      <h3 id="2c-capability-maturity-production-readiness">2c. Capability &amp; Maturity (production readiness)</h3>
+      <div class="table-wrap"><table>
+      <thead>
+      <tr>
+      <th>Rank</th>
+      <th>Agent / Model</th>
+      <th>Justification</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>1</td>
+      <td>Claude Opus 4.8</td>
+      <td>Production-proven, available, agentic-optimized, cost-stable. The reliable reference tier.</td>
+      </tr>
+      <tr>
+      <td>2</td>
+      <td>GPT-5.5 / Codex</td>
+      <td>Shipped, production-grade, broad enterprise deployment.</td>
+      </tr>
+      <tr>
+      <td>3</td>
+      <td>Gemini 3.5 Flash</td>
+      <td>Flash shipped and in production; Pro still pre-GA (delayed to July).</td>
+      </tr>
+      <tr>
+      <td>4</td>
+      <td>Open-weight frontier (GLM-5.2 / Qwen)</td>
+      <td>Self-hostable, improving; below US closed-frontier on independent benchmarks.</td>
+      </tr>
+      <tr>
+      <td>5</td>
+      <td>Claude Fable 5</td>
+      <td>Capability-leading (claimed 80.3% SWE-bench Pro — self-reported), but not deployable — still suspended worldwide. Scored low on availability, not capability.</td>
+      </tr>
+      </tbody>
+      </table></div>
+      <p>Not ranked as deployable: GPT-5.6 and Gemini 3.5 Pro — both pre-GA and July-slated. Fable 5 and Mythos 5 — suspended.</p>
+      <h3 id="divergence-analysis">Divergence Analysis</h3>
+      <p>The dominant divergence this run shifts from capability versus controllability to capability versus eligibility. Last week's theme was that the most capable model (Fable 5) was the one you couldn't run because of export control. This week sharpens it: access to frontier models is increasingly conditioned on who you can prove you are and which plan tier you hold. The ID-verification policy and the Fable-5-via-July-8 reading are the same mechanism viewed from two angles — identity proof as the gate. The second divergence remains announced versus shipped: GPT-5.6 and Gemini 3.5 Pro have now both been July-bound for multiple runs without landing, while the genuinely shipped item this week is a design tool, not a frontier model. The near-term board-movers to watch remain GPT-5.6, Gemini 3.5 Pro GA, and any confirmed Fable 5 restoration on or after July 8.</p>
+      <p><strong>What This Means for You.</strong> The difference between a consumer plan now subject to biometric verification and a business plan that is exempt is exactly the kind of governance distinction most teams don't know to ask about. Keep reference architecture on stable, available models such as Opus 4.8 and Sonnet 4.6, on governed business-tier plans, and treat the repeated July slippage of GPT-5.6 and Gemini 3.5 Pro as a reason not to build any roadmap around an unshipped model.</p>
+      <h2 id="3-agentic-ai-advances-new-releases">3. Agentic AI Advances &amp; New Releases</h2>
+      <p>Genuinely new structural items since the June 25 briefing:</p>
+      <p><strong>Anthropic ID-verification policy (effective July 8, 2026).</strong> Beyond the market-trend framing, the structural significance is that a frontier lab is now codifying biometric identity collection as a standard enforcement tool for consumer tiers, operated through a third-party processor (Persona). It elevates identity-and-access governance from a procurement footnote to a documented data-handling decision (Source: TechCrunch; TechTimes; Cybernews; Anthropic Help Center, June 2026). Exact verification triggers are not fully published.</p>
+      <p><strong>Claude Design plus Canva update (shipped, June 2026).</strong> Claude Design moved from novelty generator toward workflow product: importable design systems (generated screens inherit a team's colors, type, spacing, and component vocabulary rather than generic defaults), real WYSIWYG canvas editing, two-way design-sync with Claude Code, PDF and PPTX export, and desktop support on all paid plans. Canva's parallel announcement brings Claude Design drafts into fully editable Canva designs and adds HTML importing to its drag-and-drop editor (Source: Anthropic, "Introducing Claude Design by Anthropic Labs"; Canva Newsroom; The Next Web, June 2026). Self-reported productivity framing is anecdotal and not independently measured.</p>
+      <p><strong>Fable 5 restoration signal (unconfirmed).</strong> Multiple outlets report Anthropic sent chief compute officer Tom Brown and policy chief Sarah Heck to Washington for in-person talks framed as a "crisis negotiation," and that restoration odds firmed, with the July 8 ID-verification date read as the likely structured pathway for a US-first restoration without lifting the broader Commerce Department export-control directive (invoked June 12 under the Export Control Reform Act of 2018) (Source: TechTimes; explainx.ai; WinCentral, June 2026). Restoration odds and the "next week" framing are market-implied and social-signal-driven; as of today Fable 5 remains suspended with no confirmed restore date.</p>
+      <p><strong>MCP final-spec contents (carry, firm).</strong> The July 28 release candidate's headline changes are unchanged from prior runs: a stateless protocol core, an Extensions framework, Tasks (server-directed long-running calls), MCP Apps (sandboxed interactive HTML UIs), authorization hardening, and a formal deprecation policy. Breaking changes; validation window underway (Source: Model Context Protocol Blog, "2026-07-28 Release Candidate").</p>
+      <p><strong>Carry items (scheduled or unchanged):</strong></p>
+      <ul>
+      <li>GPT-5.6 — still July-most-likely, officially unannounced; prediction markets now tracking a "released by July 13" question; rumored ~1.5M-token context and an alignment fix (Source: Manifold Markets; TechTimes, June 2026).</li>
+      <li>Gemini 3.5 Pro — reportedly delayed to July; Google declined to comment; 2M context, Deep Think; still Vertex preview (Source: CryptoBriefing; Investing.com; Analytics Insight, June 2026).</li>
+      <li>MCP final specification — July 28, 2026 — release candidate public; breaking changes; stewarded by the Linux Foundation's Agentic AI Foundation (Source: Model Context Protocol Blog).</li>
+      <li>EU AI Act — transparency obligations apply August 2, 2026; still under active implementation guidance.</li>
+      <li>Anthropic IPO — confidential June 1 filing; targeting an October Nasdaq listing, more than $60B raise, $965B last-round valuation; share price, count, and date not set (Source: Fortune, June 1, 2026; figures not audited).</li>
+      <li>Distillation accusation (carry from June 25) — Anthropic's allegation that Alibaba and Qwen operators ran 28.8 million exchanges across roughly 25,000 fraudulent accounts; allegation, not adjudicated.</li>
+      </ul>
+      <p><strong>What This Means for You.</strong> Identity, access, and authorization are now first-order governance topics — addressed at both the vendor-policy layer (ID verification) and the protocol layer (MCP authorization hardening). The shipped Claude Design plus Canva update is worth genuine hands-on evaluation for any team that produces visual or design work, since it reads an existing design system rather than generating generic output; evaluate its data-handling posture before adopting it for sensitive material. As always, vendor capability and productivity claims are hypotheses until independently verified.</p>
+      <h2 id="4-overnight-daily-release-monitor">4. Overnight / Daily Release Monitor</h2>
+      <p>Covering roughly June 25–26 since the June 25 publish:</p>
+      <ul>
+      <li>Anthropic ID-verification policy reaffirmed (effective July 8) — government ID plus selfie plus facial-geometry scan for some Free, Pro, and Max users; Team, Enterprise, and API exempt; data held by Persona (Source: TechCrunch; TechTimes; Anthropic Help Center, June 2026). Reported as the first major US frontier lab to codify biometric verification in consumer policy.</li>
+      <li>Claude Design plus Canva update shipped — design systems, WYSIWYG editing, two-way design-sync with Claude Code, PDF and PPTX export, Canva integration (Source: Anthropic; Canva Newsroom, June 2026).</li>
+      <li>Fable 5 restoration signal — Tom Brown and Sarah Heck dispatched to Washington; odds reportedly firmed; July 8 read as likely US-first restoration mechanism. Still suspended today (Source: TechTimes; explainx.ai, June 2026).</li>
+      <li>No new frontier-class GA model shipped in the window. GPT-5.6 and Gemini 3.5 Pro both remain July-slated and unannounced (Source: Manifold Markets; CryptoBriefing, June 2026).</li>
+      <li>Carry, unchanged: MCP final spec July 28; EU AI Act transparency August 2; Anthropic IPO process proceeding from the June 1 confidential filing (figures not audited); distillation accusation (allegation, not adjudicated).</li>
+      </ul>
+      <p><strong>What This Means for You.</strong> One practical step: confirm which plan tier your team's AI work actually runs on. The July 8 ID-verification policy is a concrete illustration that how a model is accessed — which plan, which verification, which third-party processor — is a governance question, and that business-tier plans carry a materially different posture than consumer ones. Everything else is monitor-and-hold: Fable 5 remains unavailable, and the two July frontier releases stay hypotheses.</p>
+      <h2 id="sources">Sources</h2>
+      <ul>
+      <li>TechCrunch, "Anthropic says Claude may want to see your ID," June 22, 2026. https://techcrunch.com/2026/06/22/anthropic-says-claude-may-want-to-see-your-id/</li>
+      <li>TechTimes, "Claude Identity Verification Starts July 8: What Facial Data Anthropic Collects," June 21, 2026. https://www.techtimes.com/articles/318778/20260621/claude-identity-verification-starts-july-8-what-facial-data-anthropic-collects.htm</li>
+      <li>Anthropic Help Center, "Identity verification on Claude," 2026. https://support.claude.com/en/articles/14328960-identity-verification-on-claude</li>
+      <li>Cybernews, "Anthropic updates privacy policy, includes ID verification for Claude users," June 2026. https://cybernews.com/ai-news/anthropic-privacy-policy-id-verification/</li>
+      <li>MLQ News, "Anthropic Updates Privacy Policy to Require Government ID and Facial Biometrics From Some Claude Users," June 2026. https://mlq.ai/news/anthropic-updates-privacy-policy-to-require-government-id-and-facial-biometrics-from-some-claude-users/</li>
+      <li>PYMNTS, "Claude Users Could Face New ID Checks, Anthropic Says," June 2026. https://www.pymnts.com/cybersecurity/fraud-prevention/2026/claude-users-could-face-new-id-checks-anthropic-says/</li>
+      <li>Anthropic, "Introducing Claude Design by Anthropic Labs," June 2026. https://www.anthropic.com/news/claude-design-anthropic-labs</li>
+      <li>Canva Newsroom, "Introducing Canva in Claude Design by Anthropic Labs," June 2026. https://www.canva.com/newsroom/news/canva-claude-design/</li>
+      <li>The Next Web, "Canva and Anthropic launch Claude Design for AI-powered visual creation," June 2026. https://thenextweb.com/news/canva-anthropic-claude-design-ai-powered-visual-suite</li>
+      <li>explainx.ai, "Is Fable 5 Back? Anthropic Says Zero Traffic (June 25, 2026)," June 25, 2026. https://explainx.ai/blog/is-fable-5-back-2026</li>
+      <li>TechTimes, "Claude Fable 5 Resurfaces in Android App as NSA Breach Testimony Reshapes Ban," June 21, 2026. https://www.techtimes.com/articles/318783/20260621/claude-fable-5-resurfaces-android-app-nsa-breach-testimony-reshapes-ban.htm</li>
+      <li>WinCentral, "Claude Fable 5 Shows Signs of U.S. Relaunch After Global Shutdown," June 2026. https://thewincentral.com/claude-fable-5-us-relaunch-signs-after-shutdown/</li>
+      <li>Manifold Markets, "GPT-5.6 released by July 13?," June 2026. https://manifold.markets/predyx_markets/gpt56-released-by-july-13</li>
+      <li>CryptoBriefing, "Google delays Gemini 3.5 Pro launch to July 2026," June 2026. https://cryptobriefing.com/google-delays-gemini-35-pro-launch-to-july-2026/</li>
+      <li>Investing.com, "Google delays Gemini 3.5 Pro model release to July - Insider," June 2026. https://www.investing.com/news/stock-market-news/google-delays-gemini-35-pro-model-release-to-july--insider-93CH-4758816</li>
+      <li>Model Context Protocol Blog, "The 2026-07-28 MCP Specification Release Candidate," 2026. https://blog.modelcontextprotocol.io/posts/2026-07-28-release-candidate/</li>
+      <li>Fortune, "Anthropic confidentially files for IPO after raising $65 billion at a $965 billion valuation," June 1, 2026. https://fortune.com/2026/06/01/anthropic-confidentially-files-ipo-965-billion-valuation/</li>
+      </ul>
+      <p><em>Research date: 2026-06-26. Items described as reported, market-implied, or self-reported should be verified before acting on them. Future-dated items (ID policy July 8, GPT-5.6 and Gemini 3.5 Pro around July, MCP July 28, EU AI Act August 2, Anthropic IPO October) are scheduled or expected, not delivered.</em></p>
+    </article>
+
+    <section class="cta-band" id="contact" aria-labelledby="cta-heading">
+      <h2 id="cta-heading">From AI curiosity to AI capability</h2>
+      <p>This briefing is part of the field research behind our AI Enablement service &mdash; a curated, white-glove Claude Cowork implementation tailored to your organization&rsquo;s workflow.</p>
+      <a class="btn" href="https://calendly.com/mark-malaniru/30min" target="_blank" rel="noopener">Book a discovery call</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Malaniru Inc, LLC &middot; Lafayette, Colorado &middot; AI Enablement</p>
+    <p><a href="daily-intelligence-briefings.html">&larr; Back to Daily Intelligence Briefings</a> &middot; <a href="index.html">AI Enablement</a></p>
+      <nav class="mal-footernav" data-mal-footernav aria-label="Site" style="margin-top:0.7rem;font-size:0.82rem;line-height:1.9;">
+      <a href="about.html" style="color:#C07830;font-weight:700;text-decoration:none;">About</a> &middot;
+      <a href="pricing.html" style="color:#C07830;font-weight:700;text-decoration:none;">Pricing</a> &middot;
+      <a href="index.html" style="color:#C07830;font-weight:700;text-decoration:none;">AI Enablement</a>
+    </nav>
+  </footer>
+</body>
+</html>

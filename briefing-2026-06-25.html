@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<!--
+  Malaniru - Daily Intelligence Briefing (branded HTML)
+  Built by: web-publish-briefing component (backfill) - Date: 2026-06-27
+  Source:   Website/src/content/research/20260625-daily-intelligence-briefing.md
+  FIDELITY: Body rendered VERBATIM from the published markdown. No copy edits.
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daily Intelligence Briefing — Thursday, June 25, 2026 - Malaniru</title>
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.malaniru.com/briefing-2026-06-25">
+  <meta name="description" content="Anthropic accuses Alibaba&#x27;s Qwen lab of the largest known distillation attack on Claude. A continuity correction: Fable 5 is reported still suspended worldwide, contradicting last week&#x27;s &#x27;returned and metered&#x27; framing. GPT-5.6 and Gemini 3.5 Pro both slip toward July. Plus Claude Tag on Slack and the firming MCP July-28 spec.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --navy:#0F1A2E;--navy-mid:#2A3F63;--copper:#C07830;--gold:#D4A853;
+      --off-white:#F4F1EC;--light-gray:#E8E6E1;--mid-gray:#8A8A96;--dark-text:#1C1C1C;
+      --font:"Inter","Helvetica Neue",Arial,sans-serif;
+    }
+    *{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:var(--font);background:var(--off-white);color:var(--dark-text);line-height:1.65;font-size:16px;-webkit-font-smoothing:antialiased;}
+    .skip-link{position:absolute;left:-999px;top:0;background:var(--gold);color:var(--navy);padding:10px 16px;font-weight:700;z-index:10;}
+    .skip-link:focus{left:8px;top:8px;}
+    a{color:var(--copper);}
+    /* Header */
+    header{background: linear-gradient(160deg, rgba(15,26,46,0.72) 0%, rgba(10,18,33,0.82) 100%), url('StockCake-Cosmic_Web_Complexity-1361288-standard-rot90ccw.jpg'); background-size: auto, 100% 100%; background-repeat: no-repeat, no-repeat; background-position: center, center;color:var(--off-white);padding:48px 24px 52px;position:relative;overflow:hidden;}
+    header::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 85% 12%,rgba(192,120,48,0.20) 0%,rgba(15,26,46,0) 55%);pointer-events:none;}
+    .header-inner{max-width:760px;margin:0 auto;position:relative;z-index:1;}
+    .wordmark{font-weight:800;font-size:1.25rem;letter-spacing:0.02em;margin-bottom:30px;}
+    .wordmark .dot{color:var(--copper);}
+    .wordmark a{color:var(--off-white);text-decoration:none;transition:opacity .18s ease;}
+    .wordmark a:hover,.wordmark a:focus-visible{opacity:.85;outline:none;}
+    .eyebrow{display:inline-block;font-size:0.72rem;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;}
+    header h1{font-weight:800;font-size:clamp(1.8rem,4.6vw,2.6rem);line-height:1.14;letter-spacing:-0.01em;margin-bottom:16px;}
+    .byline{font-size:0.9rem;color:var(--light-gray);letter-spacing:0.01em;}
+    .byline .sep{color:var(--copper);margin:0 8px;}
+    .lede{font-size:1.08rem;color:var(--light-gray);max-width:66ch;margin-top:18px;}
+    .backlink{display:inline-block;margin-top:26px;color:var(--gold);font-weight:600;font-size:0.9rem;text-decoration:none;border-bottom:1px solid rgba(212,168,83,0.4);}
+    .backlink:hover,.backlink:focus-visible{border-bottom-color:var(--gold);outline:none;}
+    /* Article */
+    main{max-width:760px;margin:0 auto;padding:48px 24px 8px;}
+    .disclaimer{background:#fff;border:1px solid var(--light-gray);border-left:4px solid var(--copper);border-radius:8px;padding:14px 18px;font-size:0.9rem;color:var(--navy-mid);margin-bottom:34px;}
+    article{font-size:1.05rem;}
+    article h2{font-weight:800;font-size:1.5rem;color:var(--navy);line-height:1.22;letter-spacing:-0.01em;margin:42px 0 14px;}
+    article h3{font-weight:700;font-size:1.18rem;color:var(--navy-mid);line-height:1.25;margin:30px 0 10px;}
+    article h2 + p, article h3 + p{margin-top:0;}
+    article p{margin:0 0 18px;color:var(--dark-text);}
+    article ul,article ol{margin:0 0 18px;padding-left:24px;}
+    article li{margin-bottom:8px;}
+    article strong{font-weight:700;color:var(--navy);}
+    article em{font-style:italic;}
+    article a{color:var(--copper);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(192,120,48,0.35);transition:border-color .18s ease;}
+    article a:hover,article a:focus-visible{border-bottom-color:var(--copper);outline:none;}
+    article hr{border:none;border-top:1px solid var(--light-gray);margin:34px 0;}
+    article h2#sources, article h2#references{border-top:1px solid var(--light-gray);padding-top:30px;font-size:1.2rem;color:var(--navy-mid);}
+    /* sources list smaller */
+    article h2[id^="sources"] ~ ul li, article h3[id^="sources"] ~ ul li{font-size:0.95rem;color:var(--navy-mid);}
+    /* tables */
+    article table{width:100%;border-collapse:collapse;margin:0 0 24px;font-size:0.95rem;}
+    article th,article td{border:1px solid var(--light-gray);padding:9px 12px;text-align:left;vertical-align:top;}
+    article thead th{background:var(--navy);color:var(--off-white);font-weight:700;}
+    article tbody tr:nth-child(even){background:#fff;}
+    article .table-wrap{overflow-x:auto;margin:0 0 24px;}
+    article .table-wrap table{margin:0;}
+    /* CTA */
+    .cta-band{background:var(--navy);color:var(--off-white);border-radius:12px;padding:42px 32px;text-align:center;margin:48px 0 8px;}
+    .cta-band h2{font-weight:800;font-size:clamp(1.4rem,3.4vw,1.9rem);margin-bottom:12px;letter-spacing:-0.01em;color:var(--off-white);}
+    .cta-band p{color:var(--light-gray);max-width:52ch;margin:0 auto 24px;}
+    .cta-band .btn{display:inline-block;background:var(--copper);color:#fff;font-weight:700;padding:13px 28px;border-radius:8px;text-decoration:none;transition:background .18s ease;}
+    .cta-band .btn:hover,.cta-band .btn:focus-visible{background:var(--gold);color:var(--navy);outline:none;}
+    /* Footer */
+    footer{max-width:760px;margin:16px auto 0;padding:24px;font-size:0.82rem;color:var(--mid-gray);border-top:1px solid var(--light-gray);}
+    footer p+p{margin-top:6px;}
+    footer a{color:var(--mid-gray);text-decoration:underline;}
+    @media (prefers-reduced-motion:reduce){*{transition:none!important;}}
+
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header>
+    <div class="header-inner">
+      <div class="wordmark"><a href="index.html">Malaniru<span class="dot">.</span></a></div>
+      <span class="eyebrow">AI Enablement &middot; Daily Intelligence Briefing</span>
+      <h1>Daily Intelligence Briefing — Thursday, June 25, 2026</h1>
+      <p class="byline">By Marco Harris<span class="sep">&middot;</span>June 25, 2026</p>
+      <p class="lede">Anthropic accuses Alibaba&#x27;s Qwen lab of the largest known distillation attack on Claude. A continuity correction: Fable 5 is reported still suspended worldwide, contradicting last week&#x27;s &#x27;returned and metered&#x27; framing. GPT-5.6 and Gemini 3.5 Pro both slip toward July. Plus Claude Tag on Slack and the firming MCP July-28 spec.</p>
+      <a class="backlink" href="daily-intelligence-briefings.html">&larr; All daily intelligence briefings</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <article>
+      <h2 id="executive-summary">Executive Summary</h2>
+      <p>The most significant development this run is Anthropic's public accusation that operators affiliated with Alibaba's Qwen AI lab ran a coordinated "adversarial distillation" campaign against Claude — 28.8 million exchanges across roughly 25,000 fraudulent accounts between April 22 and June 5, disclosed via a letter to the US Senate Banking Committee and White House and surfaced in the press June 24 (Source: CNBC; Bloomberg, June 24, 2026). A continuity correction is warranted: contrary to last week's briefing, several June 24–25 sources report Fable 5 and Mythos 5 remain offline globally under the June 12 export-control directive, with no confirmed restoration and only unverified chatter about staging back into Claude Code. The frontier-release calendar has slipped: prediction-market odds for a GPT-5.6 launch in the June 22–28 window collapsed from roughly 83% to 18%, and Gemini 3.5 Pro has reportedly been pushed to July — neither is generally available today (Source: TechTimes; Startup Fortune, June 2026). Opus 4.8 and Sonnet 4.6 remain the stable, available reference tiers. Carry items hold: the MCP final specification on July 28, EU AI Act transparency obligations on August 2, and Anthropic's IPO targeting an October Nasdaq listing at a $965B last-round valuation.</p>
+      <h2 id="1-ai-market-trends">1. AI Market Trends</h2>
+      <p>The story today is model security and intellectual-property protection — the "your data and capabilities can leak" problem.</p>
+      <p><strong>The Anthropic–Alibaba distillation accusation.</strong> Anthropic sent a letter, dated June 10 and surfaced publicly June 24, to US Senate Banking Committee Chair Tim Scott, Ranking Member Elizabeth Warren, and White House officials, accusing operators affiliated with Alibaba's Qwen AI lab of "brazenly" and "illicitly" attempting to extract Claude's capabilities in what it called "the largest known distillation attack on Anthropic to date." Anthropic alleges roughly 28.8 million exchanges through about 25,000 fraudulent accounts between April 22 and June 5, 2026, targeting Claude's software-engineering and agentic-reasoning capabilities and circumventing rules that prohibit access from inside China (Source: CNBC; Bloomberg, June 24, 2026). "Adversarial distillation" is the technique of repeatedly prompting a frontier model to harvest its reasoning patterns and outputs, then using that corpus to train a competing model. Important framing: this is one company's allegation in a letter to policymakers, not a court finding — treat it as a serious, sourced claim under active dispute, not settled fact.</p>
+      <p><strong>The continuity correction on Fable 5.</strong> Last week's briefing reported that Fable 5 had returned around June 18 and moved to paid usage credits. Multiple June 24–25 sources contradict that. As of June 24–25, reporting indicates Fable 5 and Mythos 5 remain offline for all users under the June 12 US export-control directive, with no official restoration date — the most specific public statement remains a June 17 "very confident that in the coming days" remark that has not been followed by a confirmed restoration. Unverified posts claim Fable 5 is staging back into Claude Code for some users, but absent confirmation the safe operating assumption is still suspended (Source: explainx.ai, June 24, 2026). The "metered billing" detail from last week's run should be treated as unconfirmed until pricing is published on a restored model.</p>
+      <p><strong>The broader signal.</strong> Both stories point the same direction: frontier capability is now a national-security and IP-control asset, governed by export rules, account-integrity enforcement, and government correspondence — not just by terms of service. For organizations adopting AI, the practical lesson is that single-vendor frontier access can be interrupted by forces entirely outside a buyer's control.</p>
+      <p><strong>What This Means for You.</strong> This week is a clean, real-world illustration of two governance exposures at once: the risk that your prompts and outputs feed someone else's model, and the risk that a vendor's enforcement actions or a government directive disrupts your access. The takeaway for any AI plan is to assume model substitution rather than permanence — document a fallback, and don't let one frontier model become load-bearing infrastructure. Keep production work on models that are stable and available today, such as Opus 4.8 and Sonnet 4.6, and treat frontier-tier models (Fable 5, GPT-5.6, Gemini 3.5 Pro) as evaluation targets, not dependencies.</p>
+      <h2 id="2-top-10-ai-agents-three-lenses">2. Top 10 AI Agents — Three Lenses</h2>
+      <p>Rankings as of Thursday, June 25, 2026. Material change this run: the Alibaba distillation accusation (an ecosystem and security event, not an agent-capability change), confirmation that Fable 5 and Mythos 5 remain suspended, and slippage of GPT-5.6 and Gemini 3.5 Pro toward July. New surface this week: Claude Tag on Slack (beta, Enterprise and Team) and Claude via Apple's Foundation Models framework.</p>
+      <h3 id="2a-relevance-for-claude-mcp-centered-work">2a. Relevance for Claude / MCP-Centered Work</h3>
+      <div class="table-wrap"><table>
+      <thead>
+      <tr>
+      <th>Rank</th>
+      <th>Agent / Platform</th>
+      <th>Justification</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>1</td>
+      <td>Claude Cowork</td>
+      <td>Core delivery surface; runs on the interactive pool and Opus 4.8. Stable today following the June 23 outage.</td>
+      </tr>
+      <tr>
+      <td>2</td>
+      <td>Claude Opus 4.8 / Sonnet 4.6</td>
+      <td>Stable flagship and workhorse tiers; unaffected by the export-control suspension and available. The top tier that can be reliably deployed.</td>
+      </tr>
+      <tr>
+      <td>3</td>
+      <td>Claude Code + Agent SDK</td>
+      <td>Primary agentic build tool; broad developer adoption. Recovered from the June 23 disruption.</td>
+      </tr>
+      <tr>
+      <td>4</td>
+      <td>MCP-based connectors (cross-vendor)</td>
+      <td>Universal interop; final spec lands July 28 with breaking changes (stateless core, Tasks, MCP Apps, authorization hardening); ten-week validation window underway.</td>
+      </tr>
+      <tr>
+      <td>5</td>
+      <td>Claude Managed Agents + Claude Tag (Slack)</td>
+      <td>Cron, credential vaults, and private MCP servers, now joined by Claude Tag — a beta Slack workspace for @Claude tagging, task delegation, and async handling for Enterprise and Team.</td>
+      </tr>
+      </tbody>
+      </table></div>
+      <p><em>(Watch line: Claude Fable 5 — reported still suspended worldwide under the June 12 export-control directive; re-enters as a deployment candidate only on confirmed restoration and published pricing. Mythos 5 stays gated, unscored.)</em></p>
+      <h3 id="2b-market-momentum-adoption-funding-buzz">2b. Market Momentum (adoption / funding / buzz)</h3>
+      <div class="table-wrap"><table>
+      <thead>
+      <tr>
+      <th>Rank</th>
+      <th>Agent / Platform</th>
+      <th>Justification</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>1</td>
+      <td>Anthropic (Alibaba accusation + IPO + Fable 5 limbo)</td>
+      <td>Dominant news share, much of it contested. IPO targeting October at a $965B last-round valuation is genuine structural momentum.</td>
+      </tr>
+      <tr>
+      <td>2</td>
+      <td>Alibaba Qwen</td>
+      <td>High buzz this week as the subject of Anthropic's distillation accusation — negative-contested attention, not a capability endorsement.</td>
+      </tr>
+      <tr>
+      <td>3</td>
+      <td>OpenAI (GPT-5.6 slipping)</td>
+      <td>GPT-5.6 launch odds for June 22–28 collapsed from ~83% to ~18%; now most likely July. Still the dominant US coding-agent incumbent via GPT-5.5/Codex.</td>
+      </tr>
+      <tr>
+      <td>4</td>
+      <td>Google Gemini / Google Cloud</td>
+      <td>Gemini 3.5 Pro reportedly pushed to July; Google Cloud's $750M partner-ecosystem commitment is real distribution momentum.</td>
+      </tr>
+      <tr>
+      <td>5</td>
+      <td>Open-weight challengers (GLM, MiniMax, Qwen)</td>
+      <td>Continue riding the single-source-dependency backlash; rising enterprise evaluation interest.</td>
+      </tr>
+      </tbody>
+      </table></div>
+      <h3 id="2c-capability-maturity-production-readiness">2c. Capability &amp; Maturity (production readiness)</h3>
+      <div class="table-wrap"><table>
+      <thead>
+      <tr>
+      <th>Rank</th>
+      <th>Agent / Model</th>
+      <th>Justification</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>1</td>
+      <td>Claude Opus 4.8</td>
+      <td>Production-proven, available, agentic-optimized, cost-stable. The reference tier.</td>
+      </tr>
+      <tr>
+      <td>2</td>
+      <td>GPT-5.5 / Codex</td>
+      <td>Shipped, production-grade, broad enterprise deployment.</td>
+      </tr>
+      <tr>
+      <td>3</td>
+      <td>Gemini 3.5 Flash</td>
+      <td>Flash shipped and in production; Pro still pre-GA (Vertex preview, slipping to July).</td>
+      </tr>
+      <tr>
+      <td>4</td>
+      <td>Open-weight frontier (GLM-5.2 / Qwen)</td>
+      <td>Self-hostable, improving; below US closed-frontier on independent benchmarks.</td>
+      </tr>
+      <tr>
+      <td>5</td>
+      <td>Claude Fable 5</td>
+      <td>Capability-leading (claimed 80.3% SWE-bench Pro — self-reported), but not deployable; reported still suspended worldwide. Scored low on availability, not capability.</td>
+      </tr>
+      </tbody>
+      </table></div>
+      <p><em>(Not ranked as deployable: GPT-5.6 and Gemini 3.5 Pro — both pre-GA and slipping toward July. Fable 5 and Mythos 5 — suspended.)</em></p>
+      <h3 id="divergence-analysis">Divergence Analysis</h3>
+      <p>The dominant divergence this run is capability versus controllability. Fable 5 is, on self-reported benchmarks, the most capable model in the field — and it is the one model on this board you cannot use, because it sits at the intersection of export control and a contested security environment. The Alibaba accusation deepens the theme: the frontier is now governed by who can access and protect capability, not only who can build it. The second divergence is announced versus shipped — the two releases the calendar pointed at this week, GPT-5.6 and Gemini 3.5 Pro, both slipped, a reminder that vendor and market-implied timelines are hypotheses, not commitments. The near-term board-movers to watch remain GPT-5.6 and Gemini 3.5 Pro general availability, now both more likely in July, plus any confirmed Fable 5 restoration.</p>
+      <p><strong>What This Means for You.</strong> The practical conclusion is that you don't need the newest or most capable model — you need a governed, available, well-integrated, cost-predictable one, with a documented fallback. The repeated slippage of GPT-5.6 and Gemini 3.5 Pro is a concrete argument against building any roadmap around an unshipped model. Hold your reference architecture on tiers that are available today.</p>
+      <h2 id="3-agentic-ai-advances-new-releases">3. Agentic AI Advances &amp; New Releases</h2>
+      <p>Genuinely new structural items since the June 23 briefing:</p>
+      <p><strong>Anthropic's Alibaba distillation accusation (disclosed June 24).</strong> Beyond the market framing above, the technical substance matters: this is the highest-profile public allegation to date of adversarial distillation at scale against a frontier lab, with specific numbers (28.8M exchanges, ~25,000 accounts, April 22–June 5). It elevates account-integrity and abuse-detection from a back-office vendor concern to a board-level governance topic (Source: CNBC; Bloomberg; Cybersecurity News, June 24, 2026).</p>
+      <p><strong>Claude Tag on Slack (beta).</strong> Anthropic launched a beta team workspace that lets users tag @Claude into Slack channels to delegate tasks, connect tools, data, and codebases, and receive proactive and async updates — bringing multiplayer collaboration and context memory to Enterprise and Team customers (Source: Releasebot, June 2026).</p>
+      <p><strong>Claude via Apple Foundation Models framework.</strong> Reporting indicates Claude support through Apple's Foundation Models framework on iOS 27, iPadOS 27, macOS 27, visionOS 27, and watchOS 27 is arriving this week (Source: Releasebot, June 2026; exact availability date unconfirmed — verify before acting).</p>
+      <p><strong>MCP final-spec contents firming up.</strong> The July 28 release candidate's headline changes are now well-described: a stateless protocol core, an Extensions framework, Tasks (server-directed long-running calls via tasks/get, tasks/update, tasks/cancel), MCP Apps (servers ship sandboxed interactive HTML interfaces that hosts prefetch and security-review), authorization hardening, and a formal deprecation policy. Breaking changes; roughly a ten-week validation window for SDK maintainers (Source: Model Context Protocol Blog, "2026-07-28 Release Candidate").</p>
+      <p><strong>Google Cloud $750M agentic-AI partner program.</strong> Google Cloud is committing roughly three-quarters of a billion dollars in resources and incentives to its ~120,000-member partner ecosystem to accelerate customer agentic-AI adoption (Source: Cloud Wars, 2026).</p>
+      <p><strong>Agentic-AI funding concentration (2026 YTD).</strong> North America has captured roughly $863M across 23 deals year-to-date, about 82% of capital and 79% of deals, with the largest checks flowing to vertical workflow agents, agent execution and control infrastructure, and companies with credible enterprise distribution (Source: New Market Pitch, Agentic AI Funding Trends 2026).</p>
+      <p><strong>Carry items (scheduled or unchanged):</strong></p>
+      <ul>
+      <li>GPT-5.6 — slipped; June 22–28 launch odds collapsed from ~83% to ~18%, now most likely July; rumored ~1.5M-token context and an alignment fix. Not officially announced (Source: TechTimes, June 21, 2026).</li>
+      <li>Gemini 3.5 Pro — reportedly pushed to July; 2M context, Deep Think; still Vertex preview (Source: Startup Fortune; Swisher Post, June 2026).</li>
+      <li>MCP final specification — July 28, 2026; release candidate public; breaking changes; stewarded by the Linux Foundation's Agentic AI Foundation (Source: Model Context Protocol Blog).</li>
+      <li>EU AI Act — transparency obligations apply August 2, 2026; still under active implementation guidance (verify before acting).</li>
+      <li>Anthropic IPO — confidential June 1 filing; targeting an October Nasdaq listing, a raise of more than $60B, and a $965B last-round valuation; share price, count, and date not set (Source: Fortune, June 1, 2026; figures not audited).</li>
+      <li>Fivetran 15% production-ready / Gartner +139% agent spend — unchanged market-sizing pair, both self-reported indices.</li>
+      </ul>
+      <p><strong>What This Means for You.</strong> The Alibaba accusation plus MCP's authorization hardening point the same way: access governance and abuse-detection are now first-order concerns, and the protocol layer itself is moving to address them. Claude Tag on Slack is worth hands-on evaluation if your team lives in Slack — but understand its governance posture before adopting it. The funding-concentration data, where vertical workflow and control infrastructure win the checks, signals that the durable value is in governed execution, not another horizontal tool. As always, treat vendor capability and benchmark claims as hypotheses until independently verified.</p>
+      <h2 id="4-overnight-daily-release-monitor">4. Overnight / Daily Release Monitor</h2>
+      <p>Covering roughly June 23–25 since the June 23 publish:</p>
+      <ul>
+      <li>Anthropic accuses Alibaba/Qwen of largest known distillation attack (disclosed June 24) — 28.8M exchanges, ~25,000 fraudulent accounts, April 22–June 5; letter to Senate Banking Committee and White House (Source: CNBC; Bloomberg, June 24, 2026). An allegation, not adjudicated.</li>
+      <li>Continuity correction: Fable 5 and Mythos 5 reported still suspended worldwide as of June 24–25 with no confirmed restoration — contradicting the June 23 "returned and metered" framing; unverified reports of staging back into Claude Code (Source: explainx.ai, June 24–25, 2026).</li>
+      <li>Claude Tag on Slack (beta) — Enterprise and Team @Claude tagging, delegation, async updates (Source: Releasebot, June 2026).</li>
+      <li>Claude via Apple Foundation Models framework — reported arriving this week on iOS, iPadOS, macOS, visionOS, and watchOS 27 (Source: Releasebot, June 2026; date unconfirmed).</li>
+      <li>No new frontier-class generally available model shipped in the window. GPT-5.6 and Gemini 3.5 Pro both slipped toward July (Source: TechTimes; Startup Fortune, June 2026).</li>
+      <li>Adjacent macro items (context, not core): Google Cloud $750M agentic partner program; agentic-AI funding concentration (North America ~$863M across 23 deals YTD); an Anthropic engineering-culture story (Fortune, June 23); a consumer-fraud report of euro-denominated fraudulent charges on a Claude account (ABC7, June 2026, anecdotal).</li>
+      <li>Carry, unchanged: MCP final spec July 28; EU AI Act transparency August 2; Anthropic IPO process proceeding from the June 1 confidential filing (figures not audited).</li>
+      </ul>
+      <p><strong>What This Means for You.</strong> Two actions today. First, if any guidance you issued earlier this week treated Fable 5 as "available but metered," walk it back — the safe, current assumption is that Fable 5 remains unavailable; recheck any cost or capability scenario that relied on it. Second, the Alibaba accusation is a ready-made illustration for any access-governance conversation: what you send to a model, and how a vendor polices access to it, are governance questions, not procurement footnotes. Everything else is monitor-and-hold.</p>
+      <h2 id="sources">Sources</h2>
+      <ul>
+      <li>CNBC, "Anthropic accuses Alibaba of 'brazenly' and 'illicitly' extracting AI capabilities," June 24, 2026. https://www.cnbc.com/2026/06/24/anthropic-alibaba-distillation-campaign.html</li>
+      <li>Bloomberg, "Anthropic Accuses Alibaba of 'Illicitly' Accessing AI Models," June 24, 2026. https://www.bloomberg.com/news/articles/2026-06-24/anthropic-accuses-alibaba-of-illicitly-accessing-its-ai-models</li>
+      <li>Cybersecurity News, "Anthropic Accuses Alibaba of 'Illicitly' Accessing Its Claude AI Models in Largest Known Distillation Attack," June 2026. https://cybersecuritynews.com/anthropic-accuses-alibaba/</li>
+      <li>Business Today, "Anthropic accuses Alibaba of largest ever attempt to extract Claude AI capabilities," June 25, 2026. https://www.businesstoday.in/technology/artificial-intelligence/story/anthropic-accuses-alibaba-of-largest-ever-attempt-to-extract-claude-ai-capabilities-539087-2026-06-25</li>
+      <li>explainx.ai, "Is Fable 5 Back? No — Status &amp; Alternatives (June 24, 2026)," June 24, 2026. https://explainx.ai/blog/is-fable-5-back-2026</li>
+      <li>chatslide.ai, "Is Claude Fable 5 Available? Status, Suspension &amp; Use Cases (2026)," 2026. https://www.chatslide.ai/guides/where-to-use-anthropic-claude-fable-5</li>
+      <li>Anthropic, "Claude Fable 5 and Claude Mythos 5," June 2026. https://www.anthropic.com/news/claude-fable-5-mythos-5</li>
+      <li>TechTimes, "GPT-5.6 Launch Window Starts Monday: Alignment Fix and 1.5M Token Context Inside," June 21, 2026. https://www.techtimes.com/articles/318799/20260621/gpt-56-launch-window-starts-monday-alignment-fix-15m-token-context-inside.htm</li>
+      <li>Startup Fortune, "Google delays Gemini 3.5 Pro to July as talent exodus deepens pressure," June 2026. https://startupfortune.com/google-delays-gemini-35-pro-to-july-as-talent-exodus-deepens-the-pressure-on-its-ai-ambitions/</li>
+      <li>Swisher Post, "Gemini 3.5 Pro still missing its June launch window," June 2026. https://www.swisherpost.com/technology/gemini-3-5-pro-june-launch-delay/</li>
+      <li>Model Context Protocol Blog, "The 2026-07-28 MCP Specification Release Candidate," 2026. https://blog.modelcontextprotocol.io/posts/2026-07-28-release-candidate/</li>
+      <li>Cloud Wars, "Agentic AI Wars: Will Microsoft, AWS Match Google Cloud's $750 Million Ecosystem Investment?," 2026. https://cloudwars.com/innovation-leadership/agentic-ai-wars-will-microsoft-aws-match-google-clouds-750-million-ecosystem-investment/</li>
+      <li>New Market Pitch, "Agentic AI Market Funding Trends (2026)," 2026. https://newmarketpitch.com/blogs/news/agentic-ai-funding-trends</li>
+      <li>Releasebot, "Claude Updates by Anthropic — June 2026," June 2026. https://releasebot.io/updates/anthropic/claude</li>
+      <li>Fortune, "Anthropic confidentially files for IPO after raising $65 billion at a $965 billion valuation," June 1, 2026. https://fortune.com/2026/06/01/anthropic-confidentially-files-ipo-965-billion-valuation/</li>
+      </ul>
+      <hr />
+      <p><em>Research date: 2026-06-25. Items described as reported, alleged, rumored, or self-reported should be verified before being acted on. The Alibaba distillation figures originate from Anthropic's own letter and are characterized as an allegation throughout. Future-dated items (GPT-5.6 and Gemini 3.5 Pro now expected ~July, MCP July 28, EU AI Act August 2, Anthropic IPO October) are expected or scheduled, not delivered.</em></p>
+    </article>
+
+    <section class="cta-band" id="contact" aria-labelledby="cta-heading">
+      <h2 id="cta-heading">From AI curiosity to AI capability</h2>
+      <p>This briefing is part of the field research behind our AI Enablement service &mdash; a curated, white-glove Claude Cowork implementation tailored to your organization&rsquo;s workflow.</p>
+      <a class="btn" href="https://calendly.com/mark-malaniru/30min" target="_blank" rel="noopener">Book a discovery call</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Malaniru Inc, LLC &middot; Lafayette, Colorado &middot; AI Enablement</p>
+    <p><a href="daily-intelligence-briefings.html">&larr; Back to Daily Intelligence Briefings</a> &middot; <a href="index.html">AI Enablement</a></p>
+      <nav class="mal-footernav" data-mal-footernav aria-label="Site" style="margin-top:0.7rem;font-size:0.82rem;line-height:1.9;">
+      <a href="about.html" style="color:#C07830;font-weight:700;text-decoration:none;">About</a> &middot;
+      <a href="pricing.html" style="color:#C07830;font-weight:700;text-decoration:none;">Pricing</a> &middot;
+      <a href="index.html" style="color:#C07830;font-weight:700;text-decoration:none;">AI Enablement</a>
+    </nav>
+  </footer>
+</body>
+</html>
