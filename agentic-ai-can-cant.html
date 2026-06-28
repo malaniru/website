@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<!--
+  Malaniru - Research article (branded HTML)
+  Built by: publish_research_page.py - Date: 2026-06-28
+  Source:   Website/src/content/research/agentic-ai-can-cant.md  (published, copy-reviewed)
+  Slug:     agentic-ai-can-cant   Source-hash: da3c696bf3d2
+  FIDELITY: Body rendered VERBATIM from the source markdown. No copy edits.
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>What Agentic AI Can and Can&#x27;t Do — Right Now - Malaniru</title>
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.malaniru.com/agentic-ai-can-cant">
+  <meta name="description" content="A capability assessment of agentic AI across operations, data analysis, research, and technology. The honest line between what agents reliably do today and what they don&#x27;t.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --navy:#0F1A2E;--navy-mid:#2A3F63;--copper:#C07830;--gold:#D4A853;
+      --off-white:#F4F1EC;--light-gray:#E8E6E1;--mid-gray:#8A8A96;--dark-text:#1C1C1C;
+      --font:"Inter","Helvetica Neue",Arial,sans-serif;
+    }
+    *{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:var(--font);background:var(--off-white);color:var(--dark-text);line-height:1.65;font-size:16px;-webkit-font-smoothing:antialiased;}
+    .skip-link{position:absolute;left:-999px;top:0;background:var(--gold);color:var(--navy);padding:10px 16px;font-weight:700;z-index:10;}
+    .skip-link:focus{left:8px;top:8px;}
+    a{color:var(--copper);}
+    /* Header */
+    header{background: linear-gradient(160deg, rgba(15,26,46,0.72) 0%, rgba(10,18,33,0.82) 100%), url('StockCake-Cosmic_Web_Complexity-1361288-standard-rot90ccw.jpg'); background-size: auto, 100% 100%; background-repeat: no-repeat, no-repeat; background-position: center, center;color:var(--off-white);padding:48px 24px 52px;position:relative;overflow:hidden;}
+    header::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 85% 12%,rgba(192,120,48,0.20) 0%,rgba(15,26,46,0) 55%);pointer-events:none;}
+    .header-inner{max-width:760px;margin:0 auto;position:relative;z-index:1;}
+    .wordmark{font-weight:800;font-size:1.25rem;letter-spacing:0.02em;margin-bottom:30px;}
+    .wordmark .dot{color:var(--copper);}
+    .wordmark a{color:var(--off-white);text-decoration:none;transition:opacity .18s ease;}
+    .wordmark a:hover,.wordmark a:focus-visible{opacity:.85;outline:none;}
+    .eyebrow{display:inline-block;font-size:0.72rem;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;}
+    header h1{font-weight:800;font-size:clamp(1.8rem,4.6vw,2.6rem);line-height:1.14;letter-spacing:-0.01em;margin-bottom:16px;}
+    .byline{font-size:0.9rem;color:var(--light-gray);letter-spacing:0.01em;}
+    .byline .sep{color:var(--copper);margin:0 8px;}
+    .lede{font-size:1.08rem;color:var(--light-gray);max-width:66ch;margin-top:18px;}
+    .backlink{display:inline-block;margin-top:26px;color:var(--gold);font-weight:600;font-size:0.9rem;text-decoration:none;border-bottom:1px solid rgba(212,168,83,0.4);}
+    .backlink:hover,.backlink:focus-visible{border-bottom-color:var(--gold);outline:none;}
+    /* Article */
+    main{max-width:760px;margin:0 auto;padding:48px 24px 8px;}
+    .disclaimer{background:#fff;border:1px solid var(--light-gray);border-left:4px solid var(--copper);border-radius:8px;padding:14px 18px;font-size:0.9rem;color:var(--navy-mid);margin-bottom:34px;}
+    article{font-size:1.05rem;}
+    article h2{font-weight:800;font-size:1.5rem;color:var(--navy);line-height:1.22;letter-spacing:-0.01em;margin:42px 0 14px;}
+    article h3{font-weight:700;font-size:1.18rem;color:var(--navy-mid);line-height:1.25;margin:30px 0 10px;}
+    article h2 + p, article h3 + p{margin-top:0;}
+    article p{margin:0 0 18px;color:var(--dark-text);}
+    article ul,article ol{margin:0 0 18px;padding-left:24px;}
+    article li{margin-bottom:8px;}
+    article strong{font-weight:700;color:var(--navy);}
+    article em{font-style:italic;}
+    article a{color:var(--copper);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(192,120,48,0.35);transition:border-color .18s ease;}
+    article a:hover,article a:focus-visible{border-bottom-color:var(--copper);outline:none;}
+    article hr{border:none;border-top:1px solid var(--light-gray);margin:34px 0;}
+    article h2#sources, article h2#references{border-top:1px solid var(--light-gray);padding-top:30px;font-size:1.2rem;color:var(--navy-mid);}
+    /* sources list smaller */
+    article h2[id^="sources"] ~ ul li, article h3[id^="sources"] ~ ul li{font-size:0.95rem;color:var(--navy-mid);}
+    /* CTA */
+    .cta-band{background:var(--navy);color:var(--off-white);border-radius:12px;padding:42px 32px;text-align:center;margin:48px 0 8px;}
+    .cta-band h2{font-weight:800;font-size:clamp(1.4rem,3.4vw,1.9rem);margin-bottom:12px;letter-spacing:-0.01em;color:var(--off-white);}
+    .cta-band p{color:var(--light-gray);max-width:52ch;margin:0 auto 24px;}
+    .cta-band .btn{display:inline-block;background:var(--copper);color:#fff;font-weight:700;padding:13px 28px;border-radius:8px;text-decoration:none;transition:background .18s ease;}
+    .cta-band .btn:hover,.cta-band .btn:focus-visible{background:var(--gold);color:var(--navy);outline:none;}
+    /* Footer */
+    footer{max-width:760px;margin:16px auto 0;padding:24px;font-size:0.82rem;color:var(--mid-gray);border-top:1px solid var(--light-gray);}
+    footer p+p{margin-top:6px;}
+    footer a{color:var(--mid-gray);text-decoration:underline;}
+    @media (prefers-reduced-motion:reduce){*{transition:none!important;}}
+  
+  
+    /* ===== Canonical site header — standardized 2026-06-24 (Web / Morgan Shaw) ===== */
+    .hero{
+      position: relative;
+      background:
+        radial-gradient(900px 500px at 80% -10%, rgba(192,120,48,0.80), transparent 20%),
+        linear-gradient(160deg, rgba(15,26,46,0.82) 0%, rgba(10,18,33,0.90) 100%),
+        url('StockCake-Cosmic_Web_Complexity-1361288-standard-rot90ccw.jpg');
+      background-size: cover, cover, cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      color: var(--color-off-white, #F4F1EC);
+      padding-block: 4.5rem;
+    }
+    .hero .container, .hero__inner{
+      width:100%; max-width:1120px; margin-inline:auto; padding-inline:1.5rem;
+    }
+    .hero .container.hero__inner{ max-width:820px; }
+    .hero .wordmark{ font-weight:800; font-size:1.25rem; letter-spacing:0.02em; margin:0 0 2rem; }
+    .hero .wordmark a{ color:var(--color-off-white,#F4F1EC); text-decoration:none; transition:opacity .18s ease; }
+    .hero .wordmark a:hover,.hero .wordmark a:focus-visible{ opacity:.85; outline:none; }
+    .hero .wordmark .dot{ color:var(--color-copper,#C07830); }
+    .hero .hero__eyebrow,.hero .eyebrow{
+      display:inline-block; color:var(--color-gold,#D4A853); font-weight:600;
+      letter-spacing:0.16em; text-transform:uppercase; font-size:0.8rem; margin:0 0 1rem;
+    }
+    .hero h1{ font-size:clamp(2.1rem,6vw,3.6rem); line-height:1.12;
+      color:var(--color-off-white,#F4F1EC); margin:0 0 1rem; max-width:24ch; }
+    .hero .hero__tagline{ font-size:clamp(1.15rem,3vw,1.5rem); font-weight:600;
+      color:var(--color-copper-soft,#D89A5C); margin:0 0 1.25rem; }
+    .hero .byline{ color:var(--color-on-navy-muted,#C3CBD9); font-size:0.95rem; margin:0 0 1rem; }
+    .hero .hero__lede{ font-size:1.1rem; color:var(--color-on-navy-muted,#C3CBD9);
+      max-width:64ch; margin:0 0 1.75rem; }
+    .hero .btn{
+      display:inline-block; font-weight:700; font-size:1rem; text-decoration:none;
+      padding:0.85rem 1.7rem; border-radius:10px; background:var(--color-copper,#C07830);
+      color:#fff; transition:background .18s ease,color .18s ease;
+    }
+    .hero .btn:hover,.hero .btn:focus-visible{ background:var(--color-gold,#D4A853); color:var(--color-navy,#0F1A2E); outline:none; }
+    .hero .hero__links{ display:flex; flex-wrap:wrap; align-items:center; gap:1.5rem; margin-top:2rem; }
+    .hero .hero__links a.policy-link{
+      margin:0; color:var(--color-gold,#D4A853); font-weight:600; font-size:0.9rem;
+      text-decoration:none; border-bottom:1px solid rgba(212,168,83,0.4); transition:border-color .18s ease;
+    }
+    .hero .hero__links a.policy-link:hover,.hero .hero__links a.policy-link:focus-visible{
+      border-bottom-color:var(--color-gold,#D4A853); outline:none;
+    }
+    /* ===== end canonical header ===== */
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+    <header class="hero">
+    <div class="container hero__inner">
+      <div class="wordmark"><a href="index.html">Malaniru<span class="dot">.</span></a></div>
+      <p class="hero__eyebrow">AI Enablement · Research · Governance</p>
+      <h1>What Agentic AI Can and Can&#x27;t Do — Right Now</h1>
+      <p class="byline">By Marco Harris<span class="sep">·</span>June 28, 2026</p>
+      <p class="hero__lede">A capability assessment of agentic AI across operations, data analysis, research, and technology. The honest line between what agents reliably do today and what they don&#x27;t.</p>
+      <a class="btn" href="https://calendly.com/mark-malaniru/30min" target="_blank" rel="noopener">Book a discovery call</a>
+      <nav class="hero__links" aria-label="Site sections">
+        <a class="policy-link" href="pricing.html">Pricing &rarr;</a>
+        <a class="policy-link" href="research.html">Research &rarr;</a>
+        <a class="policy-link" href="daily-intelligence-briefings.html">Daily Intelligence Briefings &rarr;</a>
+        <a class="policy-link" href="philanthropy-ai-research.html">Philanthropy &amp; AI Research &rarr;</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    
+    <article>
+      <h2 id="the-honest-answer-is-bounded-not-binary">The honest answer is bounded, not binary</h2>
+      <p>The honest answer to "what can agentic AI do right now" is bounded, not binary. As of mid-2026, agents are genuinely strong at short-horizon, well-specified, tool-using tasks where success can be checked — and genuinely unreliable at long-horizon autonomy, self-verification, and operating inside messy production environments. The single best predictor of whether an agent will succeed is not the model's intelligence but the length and structure of the task.</p>
+      <p>Two data points anchor the whole picture. Agents now solve a large majority of <em>bounded</em> benchmark tasks, yet roughly 95% of enterprise generative-AI pilots still fail to produce measurable profit impact (Source: MIT NANDA, <em>The GenAI Divide: State of AI in Business 2025</em>, Aug 2025). The gap between those two facts is the entire story. Capability is rising fast; the bottleneck has moved from the model to the workflow, the data, and the governance around it. This assessment runs across four lenses — operations, data analysis, research, and technology — and flags where the ground is likely to shift within 30–60 days.</p>
+      <h2 id="the-core-pattern-task-length-predicts-success">The core pattern: task length predicts success</h2>
+      <p>Before the four lenses, one finding cuts across all of them. METR, a nonprofit evaluation lab, measured the "task-completion time horizon" — the length of task (measured by how long it takes a human professional) that an agent can finish at a given reliability. The metric has doubled roughly every 7 months over 2019–2025, and the trend <em>accelerated</em> to roughly every 4 months over 2024–2025 (Source: METR, <em>Measuring AI Ability to Complete Long Tasks</em>, Mar 19 2025, metr.org). In concrete terms, frontier agents in that study had a 50%-reliability horizon of around 50 minutes to roughly two hours of human-equivalent work.</p>
+      <p>The corollary is the operative limit. In the same body of work, agents succeed on close to 100% of tasks that take a human under four minutes, and on under 10% of tasks that take a human more than four hours — task duration is the strongest single predictor of failure. The practical reading for anyone evaluating a tool: an agent that looks magical in a two-minute demo is being shown at the easy end of its own reliability curve. The question that matters is how long the <em>real</em> task is.</p>
+      <p>Extrapolations from this curve — "week-long autonomous workflows within a few years" — are projections, not facts. They assume the trend holds, which is not guaranteed. Treat them as scenario planning, not roadmap.</p>
+      <h2 id="lens-1-operations">Lens 1 — Operations</h2>
+      <p><strong>What it can do.</strong> Agents are credible today at discrete, repeatable operational steps: drafting and routing communications, triaging inbound requests, summarizing documents, updating records across connected tools, and executing multi-step workflows where each step is checkable. On structured computer-use benchmarks, agents have closed most of the gap to humans. Stanford's AI Index 2026 reports agent success on OSWorld (real operating-system tasks) rising from roughly 12% to 66.3%, and on WebArena (autonomous web tasks) from about 15% to 74.3% — within a few points of human performance on <em>structured</em> tasks (Source: Stanford HAI AI Index 2026, via secondary coverage including IEEE Spectrum; exact figures to be verified against the primary report).</p>
+      <p><strong>What it can't do — yet.</strong> Turn those same agents loose on real operations and the success rate collapses. MIT's NANDA initiative, drawing on 150 leader interviews, a 350-employee survey, and 300 public deployments, found about 5% of enterprise AI pilots achieve rapid revenue impact while the vast majority stall (Source: MIT NANDA, <em>The GenAI Divide</em>, Aug 2025). MIT's diagnosis is worth internalizing: the cause is "not technological, but organizational" — a <em>learning gap</em>, the inability to integrate agents into existing workflows, approval hierarchies, and data. The failure mode is architectural, not algorithmic. Pilots run on clean data with relaxed governance; production means system integration, audit logging of every action, approval enforcement, and reliability at transaction volume.</p>
+      <p>Two operational limits are concrete and current. First, long-session degradation: frontier models can become overly optimistic in extended workflows, proceeding confidently when they should stop and verify, unless given external memory scaffolding. Second, stale data: an agent reasoning over out-of-date or inconsistent records produces confident, wrong decisions — the agent has no independent way to know the data is stale.</p>
+      <p><strong>The market's own verdict.</strong> Gartner predicts over 40% of agentic AI projects will be canceled by end of 2027, citing escalating cost, unclear value, and inadequate risk controls (Source: Gartner press release, Jun 25 2025). Gartner also flags "agent washing" — vendors rebranding chatbots and robotic process automation as agents — estimating only roughly 130 of thousands of self-described agentic vendors are the real thing. Deployment remains early: the AI Index puts actual agent deployment near 17%, with security cited as the top barrier to scaling.</p>
+      <p><strong>What this means for you:</strong> agents are ready to <em>assist</em> inside well-instrumented, checkable workflows. They are not ready to <em>own</em> an operational process end-to-end without human approval gates, fresh data, and audit logging. If you are adopting AI in operations, instrument the workflow first and keep a person on the approval step.</p>
+      <h2 id="lens-2-data-analysis">Lens 2 — Data analysis</h2>
+      <p><strong>What it can do.</strong> Natural-language-to-SQL is now table stakes — effectively every serious vendor can translate a plain-English question into SQL or Python. Agents can clean messy columns, fill missing values, classify or tag rows, build pivot tables, and generate charts, compressing time-to-first-insight from days to minutes on well-formed datasets. For exploratory analysis on a known, clean table, this is real productivity.</p>
+      <p><strong>What it can't do reliably.</strong> The limits cluster around scale, governance, and the gap between "ran a query" and "understood the data." Spreadsheet copilots cannot dependably apply a prompt across thousands of rows — for example, classifying an entire column — and perform far better on structured, step-by-step tasks than on bulk transformations. Vendor accuracy claims are marketing until proven: some tools advertise "99.9% accuracy across data sources," but that is self-reported and not independently benchmarked. And agents act before they understand — the most damaging database errors come from agents executing before grasping table relationships, permissions, cardinality, and query workload. Tools without a semantic layer also lack row-level security, audit trails, and consistency between sessions.</p>
+      <p><strong>What this means for you:</strong> trustworthy for accelerating analysis a competent human will <em>review</em>, on data the human already understands. Not trustworthy as an unsupervised analyst on unfamiliar schemas, at column-scale, or anywhere the output feeds a decision without a human checking the query logic.</p>
+      <h2 id="lens-3-research">Lens 3 — Research</h2>
+      <p><strong>What it can do.</strong> "Deep research" agents — which plan a query, browse multiple sources, and synthesize a cited report — are one of the more impressive current capabilities. They genuinely compress hours of source-gathering into minutes and, with live search grounding, can produce well-structured, mostly-sourced syntheses.</p>
+      <p><strong>What it can't do reliably.</strong> Citation fidelity is the documented weak point, and it is the failure mode that matters most for any organization whose credibility depends on being right. On the DRBench evaluation framework, deep-research citation accuracy ranged from about 78% to about 94%, with citation accuracy the worst-performing task family across frontier systems — average hallucination rate around 12.4% even with extended reasoning enabled (Source: DRBench results reported in 2026 hallucination surveys; verify against the primary paper before external citation). Older and general-purpose models are far worse on bibliographies specifically, so any AI-generated reference list must be assumed to contain invented or misattributed sources until each one is checked. Mitigation works but is not free: multi-layer verification and retrieval grounding can drive hallucination toward the low single digits, and extended thinking roughly halves it — but these are added scaffolding, not default behavior.</p>
+      <p><strong>What this means for you:</strong> excellent for <em>finding</em> and <em>first-draft synthesis</em>; unsafe for <em>final fact</em>. Every citation, figure, and quote an agent produces must be verified against the primary source before it leaves the building.</p>
+      <h2 id="lens-4-technology-software-computer-use">Lens 4 — Technology (software &amp; computer use)</h2>
+      <p><strong>What it can do.</strong> This is the strongest domain, which is unsurprising — coding tasks are verifiable (the test passes or it doesn't), making them ideal for training and measuring agents. On SWE-bench Verified, performance climbed from under 2% (2023) to above 80% in late-2025/early-2026 vendor-reported results (Source: SWE-bench leaderboard coverage, 2026; top figures are vendor-reported). The AI Index reports agents resolving cybersecurity challenge tasks 93% of the time, up from about 15% in 2024. For scoped engineering work — writing a function, fixing a well-described bug, scaffolding a service, translating between languages — agents are now a serious productivity multiplier for developers who review the output.</p>
+      <p><strong>What it can't do reliably.</strong> The same time-horizon ceiling applies, harder. Agents excel at bounded coding tasks and degrade sharply as tasks lengthen, span more of a codebase, or require holding intent across many steps. A passing test suite is not the same as correct, secure, maintainable code that fits an existing architecture. And computer-use agents, while strong on <em>structured</em> tasks, are far less reliable on the unstructured, novel, or visually ambiguous interfaces that fill real software.</p>
+      <p><strong>What this means for you:</strong> the best current case for agents — provided a human engineer stays in the loop to review, test, and own the result. The further a task drifts from "short, specified, and verifiable," the more the reliability drops.</p>
+      <h2 id="the-can-cant-line-drawn-plainly">The CAN / CAN'T line, drawn plainly</h2>
+      <p><strong>Agentic AI can, right now, reliably:</strong> handle short-horizon tasks (minutes, not hours); operate inside well-specified, structured workflows; use tools and APIs to act, not just advise; accelerate work a competent human will review; and excel where success is automatically checkable (code that compiles, queries that run).</p>
+      <p><strong>Agentic AI cannot yet reliably:</strong> own long-horizon work autonomously; verify its own correctness — it does not reliably know when it's wrong; operate on stale, fragmented, or unfamiliar data without producing confident errors; produce citations and facts safe to publish unchecked; or move from a clean pilot to messy production without governance, audit logging, and human approval gates.</p>
+      <p>The throughline: 2026 agents are powerful assistants and unreliable owners. Value comes from designing the <em>system around</em> the agent — fresh data, narrow scope, verification layers, human checkpoints — not from trusting the agent alone. MIT's 95% and Gartner's 40% are not indictments of the technology's capability; they are indictments of deploying capable agents into environments built for neither agents nor accountability.</p>
+      <h2 id="what-to-watch-likely-to-shift-within-3060-days">What to watch (likely to shift within 30–60 days)</h2>
+      <p>The time-horizon figures are moving fast; the 50-minute-to-2-hour horizons cited here are from early-to-mid 2025 measurements and will likely be revised upward. The benchmark numbers (OSWorld, WebArena, Terminal-Bench, SWE-bench) are reported here via secondary coverage of the Stanford AI Index 2026 and vendor leaderboards — verify exact figures against primary sources before relying on them. Deep-research citation-accuracy frameworks are new and evolving month to month. The structural findings, however, are stable: "task length predicts success" and "the bottleneck is workflow, data, and governance, not the model" are robust across MIT, Gartner, and METR, and are unlikely to flip even as the specific numbers move.</p>
+      <h2 id="sources">Sources</h2>
+      <ul>
+      <li>MIT NANDA Initiative, <em>The GenAI Divide: State of AI in Business 2025</em>, Aug 2025.</li>
+      <li>METR, <em>Measuring AI Ability to Complete Long Tasks</em>, Mar 19 2025, metr.org.</li>
+      <li>Gartner, <em>Gartner Predicts Over 40% of Agentic AI Projects Will Be Canceled by End of 2027</em>, Jun 25 2025.</li>
+      <li>Stanford HAI, <em>AI Index Report 2026</em> (via secondary coverage including IEEE Spectrum) — primary figures to be verified.</li>
+      <li>DRBench deep-research evaluation, reported in 2026 hallucination-rate surveys — benchmark-dependent.</li>
+      <li>SWE-bench Verified leaderboard coverage, 2026 — top scores vendor-reported.</li>
+      </ul>
+    </article>
+
+    <section class="cta-band" id="contact" aria-labelledby="cta-heading">
+      <h2 id="cta-heading">From AI curiosity to AI capability</h2>
+      <p>This research is the groundwork behind our AI Enablement service &mdash; a curated, white-glove Claude Cowork implementation tailored to your organization&rsquo;s workflow.</p>
+      <a class="btn" href="https://calendly.com/mark-malaniru/30min" target="_blank" rel="noopener">Book a discovery call</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Malaniru Inc, LLC &middot; Lafayette, Colorado &middot; AI Enablement</p>
+    <p><a href="research.html">&larr; Back to Research</a> &middot; <a href="index.html">AI Enablement</a></p>
+      <nav class="mal-footernav" data-mal-footernav aria-label="Site" style="margin-top:0.7rem;font-size:0.82rem;line-height:1.9;">
+      <a href="about.html" style="color:#C07830;font-weight:700;text-decoration:none;">About</a> &middot;
+      <a href="pricing.html" style="color:#C07830;font-weight:700;text-decoration:none;">Pricing</a> &middot;
+      <a href="index.html" style="color:#C07830;font-weight:700;text-decoration:none;">AI Enablement</a>
+    </nav>
+  </footer>
+</body>
+</html>
