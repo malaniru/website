@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<!--
+  Malaniru - Research article (branded HTML)
+  Built by: publish_research_page.py - Date: 2026-06-30
+  Source:   Website/src/content/research/cowork-mcp-explained.md  (published, copy-reviewed)
+  Slug:     cowork-mcp-explained   Source-hash: a0bf9d0ef7d4
+  FIDELITY: Body rendered VERBATIM from the source markdown. No copy edits.
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Claude Cowork and MCP, Explained: What They Are, How They Work, and What a Small Organization Actually Gets - Malaniru</title>
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.malaniru.com/cowork-mcp-explained">
+  <meta name="description" content="A plain-language, hype-free explainer on Claude Cowork and the Model Context Protocol — what each one is, how they fit together, and the realistic value and cost for a small organization.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --navy:#0F1A2E;--navy-mid:#2A3F63;--copper:#C07830;--gold:#D4A853;
+      --off-white:#F4F1EC;--light-gray:#E8E6E1;--mid-gray:#8A8A96;--dark-text:#1C1C1C;
+      --font:"Inter","Helvetica Neue",Arial,sans-serif;
+    }
+    *{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:var(--font);background:var(--off-white);color:var(--dark-text);line-height:1.65;font-size:16px;-webkit-font-smoothing:antialiased;}
+    .skip-link{position:absolute;left:-999px;top:0;background:var(--gold);color:var(--navy);padding:10px 16px;font-weight:700;z-index:10;}
+    .skip-link:focus{left:8px;top:8px;}
+    a{color:var(--copper);}
+    /* Header */
+    header{background: linear-gradient(160deg, rgba(15,26,46,0.72) 0%, rgba(10,18,33,0.82) 100%), url('StockCake-Cosmic_Web_Complexity-1361288-standard-rot90ccw.jpg'); background-size: auto, 100% 100%; background-repeat: no-repeat, no-repeat; background-position: center, center;color:var(--off-white);padding:48px 24px 52px;position:relative;overflow:hidden;}
+    header::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 85% 12%,rgba(192,120,48,0.20) 0%,rgba(15,26,46,0) 55%);pointer-events:none;}
+    .header-inner{max-width:760px;margin:0 auto;position:relative;z-index:1;}
+    .wordmark{font-weight:800;font-size:1.25rem;letter-spacing:0.02em;margin-bottom:30px;}
+    .wordmark .dot{color:var(--copper);}
+    .wordmark a{color:var(--off-white);text-decoration:none;transition:opacity .18s ease;}
+    .wordmark a:hover,.wordmark a:focus-visible{opacity:.85;outline:none;}
+    .eyebrow{display:inline-block;font-size:0.72rem;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;}
+    header h1{font-weight:800;font-size:clamp(1.8rem,4.6vw,2.6rem);line-height:1.14;letter-spacing:-0.01em;margin-bottom:16px;}
+    .byline{font-size:0.9rem;color:var(--light-gray);letter-spacing:0.01em;}
+    .byline .sep{color:var(--copper);margin:0 8px;}
+    .lede{font-size:1.08rem;color:var(--light-gray);max-width:66ch;margin-top:18px;}
+    .backlink{display:inline-block;margin-top:26px;color:var(--gold);font-weight:600;font-size:0.9rem;text-decoration:none;border-bottom:1px solid rgba(212,168,83,0.4);}
+    .backlink:hover,.backlink:focus-visible{border-bottom-color:var(--gold);outline:none;}
+    /* Article */
+    main{max-width:760px;margin:0 auto;padding:48px 24px 8px;}
+    .disclaimer{background:#fff;border:1px solid var(--light-gray);border-left:4px solid var(--copper);border-radius:8px;padding:14px 18px;font-size:0.9rem;color:var(--navy-mid);margin-bottom:34px;}
+    article{font-size:1.05rem;}
+    article h2{font-weight:800;font-size:1.5rem;color:var(--navy);line-height:1.22;letter-spacing:-0.01em;margin:42px 0 14px;}
+    article h3{font-weight:700;font-size:1.18rem;color:var(--navy-mid);line-height:1.25;margin:30px 0 10px;}
+    article h2 + p, article h3 + p{margin-top:0;}
+    article p{margin:0 0 18px;color:var(--dark-text);}
+    article ul,article ol{margin:0 0 18px;padding-left:24px;}
+    article li{margin-bottom:8px;}
+    article strong{font-weight:700;color:var(--navy);}
+    article em{font-style:italic;}
+    article a{color:var(--copper);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(192,120,48,0.35);transition:border-color .18s ease;}
+    article a:hover,article a:focus-visible{border-bottom-color:var(--copper);outline:none;}
+    article hr{border:none;border-top:1px solid var(--light-gray);margin:34px 0;}
+    article h2#sources, article h2#references{border-top:1px solid var(--light-gray);padding-top:30px;font-size:1.2rem;color:var(--navy-mid);}
+    /* sources list smaller */
+    article h2[id^="sources"] ~ ul li, article h3[id^="sources"] ~ ul li{font-size:0.95rem;color:var(--navy-mid);}
+    /* CTA */
+    .cta-band{background:var(--navy);color:var(--off-white);border-radius:12px;padding:42px 32px;text-align:center;margin:48px 0 8px;}
+    .cta-band h2{font-weight:800;font-size:clamp(1.4rem,3.4vw,1.9rem);margin-bottom:12px;letter-spacing:-0.01em;color:var(--off-white);}
+    .cta-band p{color:var(--light-gray);max-width:52ch;margin:0 auto 24px;}
+    .cta-band .btn{display:inline-block;background:var(--copper);color:#fff;font-weight:700;padding:13px 28px;border-radius:8px;text-decoration:none;transition:background .18s ease;}
+    .cta-band .btn:hover,.cta-band .btn:focus-visible{background:var(--gold);color:var(--navy);outline:none;}
+    /* Footer */
+    footer{max-width:760px;margin:16px auto 0;padding:24px;font-size:0.82rem;color:var(--mid-gray);border-top:1px solid var(--light-gray);}
+    footer p+p{margin-top:6px;}
+    footer a{color:var(--mid-gray);text-decoration:underline;}
+    @media (prefers-reduced-motion:reduce){*{transition:none!important;}}
+  
+  
+    /* ===== Canonical site header — standardized 2026-06-24 (Web / Morgan Shaw) ===== */
+    .hero{
+      position: relative;
+      background:
+        radial-gradient(900px 500px at 80% -10%, rgba(192,120,48,0.80), transparent 20%),
+        linear-gradient(160deg, rgba(15,26,46,0.82) 0%, rgba(10,18,33,0.90) 100%),
+        url('StockCake-Cosmic_Web_Complexity-1361288-standard-rot90ccw.jpg');
+      background-size: cover, cover, cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      color: var(--color-off-white, #F4F1EC);
+      padding-block: 4.5rem;
+    }
+    .hero .container, .hero__inner{
+      width:100%; max-width:1120px; margin-inline:auto; padding-inline:1.5rem;
+    }
+    .hero .container.hero__inner{ max-width:820px; }
+    .hero .wordmark{ font-weight:800; font-size:1.25rem; letter-spacing:0.02em; margin:0 0 2rem; }
+    .hero .wordmark a{ color:var(--color-off-white,#F4F1EC); text-decoration:none; transition:opacity .18s ease; }
+    .hero .wordmark a:hover,.hero .wordmark a:focus-visible{ opacity:.85; outline:none; }
+    .hero .wordmark .dot{ color:var(--color-copper,#C07830); }
+    .hero .hero__eyebrow,.hero .eyebrow{
+      display:inline-block; color:var(--color-gold,#D4A853); font-weight:600;
+      letter-spacing:0.16em; text-transform:uppercase; font-size:0.8rem; margin:0 0 1rem;
+    }
+    .hero h1{ font-size:clamp(2.1rem,6vw,3.6rem); line-height:1.12;
+      color:var(--color-off-white,#F4F1EC); margin:0 0 1rem; max-width:24ch; }
+    .hero .hero__tagline{ font-size:clamp(1.15rem,3vw,1.5rem); font-weight:600;
+      color:var(--color-copper-soft,#D89A5C); margin:0 0 1.25rem; }
+    .hero .byline{ color:var(--color-on-navy-muted,#C3CBD9); font-size:0.95rem; margin:0 0 1rem; }
+    .hero .hero__lede{ font-size:1.1rem; color:var(--color-on-navy-muted,#C3CBD9);
+      max-width:64ch; margin:0 0 1.75rem; }
+    .hero .btn{
+      display:inline-block; font-weight:700; font-size:1rem; text-decoration:none;
+      padding:0.85rem 1.7rem; border-radius:10px; background:var(--color-copper,#C07830);
+      color:#fff; transition:background .18s ease,color .18s ease;
+    }
+    .hero .btn:hover,.hero .btn:focus-visible{ background:var(--color-gold,#D4A853); color:var(--color-navy,#0F1A2E); outline:none; }
+    .hero .hero__links{ display:flex; flex-wrap:wrap; align-items:center; gap:1.5rem; margin-top:2rem; }
+    .hero .hero__links a.policy-link{
+      margin:0; color:var(--color-gold,#D4A853); font-weight:600; font-size:0.9rem;
+      text-decoration:none; border-bottom:1px solid rgba(212,168,83,0.4); transition:border-color .18s ease;
+    }
+    .hero .hero__links a.policy-link:hover,.hero .hero__links a.policy-link:focus-visible{
+      border-bottom-color:var(--color-gold,#D4A853); outline:none;
+    }
+    /* ===== end canonical header ===== */
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+    <header class="hero">
+    <div class="container hero__inner">
+      <div class="wordmark"><a href="index.html">Malaniru<span class="dot">.</span></a></div>
+      <p class="hero__eyebrow">AI Enablement · Research · Governance</p>
+      <h1>Claude Cowork and MCP, Explained: What They Are, How They Work, and What a Small Organization Actually Gets</h1>
+      <p class="byline">By Marco Harris<span class="sep">·</span>June 30, 2026</p>
+      <p class="hero__lede">A plain-language, hype-free explainer on Claude Cowork and the Model Context Protocol — what each one is, how they fit together, and the realistic value and cost for a small organization.</p>
+      <a class="btn" href="https://calendly.com/mark-malaniru/30min" target="_blank" rel="noopener">Book a discovery call</a>
+      <nav class="hero__links" aria-label="Site sections">
+        <a class="policy-link" href="pricing.html">Pricing &rarr;</a>
+        <a class="policy-link" href="research.html">Research &rarr;</a>
+        <a class="policy-link" href="daily-intelligence-briefings.html">Daily Intelligence Briefings &rarr;</a>
+        <a class="policy-link" href="philanthropy-ai-research.html">Philanthropy &amp; AI Research &rarr;</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    
+    <article>
+      <p>Two Anthropic technologies are worth a small organization's attention right now, and they are easy to confuse. Claude Cowork is a desktop application feature that turns Claude into an agent that does multi-step work on your own computer: reading and writing your files, running code in an isolated space, and producing finished deliverables. The Model Context Protocol (MCP) is the open plumbing that lets any AI application connect to outside tools and data through one standard interface instead of dozens of custom integrations. Cowork is the worker; MCP is how the worker reaches your other systems. Both are real, shipping, and documented by Anthropic. The honest caveat is that Cowork is explicitly a research preview with agentic risks, requires a paid plan and the desktop app, and consumes more usage than ordinary chat. So the question for a small organization is not "is this impressive" but "which specific, repeatable task is it worth pointing at."</p>
+      <blockquote>
+      <p><strong>A note on timing:</strong> Claude Cowork is a research preview and is changing quickly. Feature availability, plan tiers, and limits described here are current as of June 30, 2026 and are likely to shift over the next month or two. Verify against Anthropic's support documentation before relying on any specific capability.</p>
+      </blockquote>
+      <h2 id="what-claude-cowork-is">What Claude Cowork is</h2>
+      <p>Claude Cowork brings the agentic architecture that powers Claude Code — Anthropic's command-line coding agent — into the Claude Desktop app, aimed at knowledge work rather than coding, and without opening a terminal. The shift it represents is from conversation to execution. Instead of answering one prompt at a time, Claude takes on a complex, multi-step task and carries it to completion. You describe an outcome, step away, and come back to finished work: formatted documents, organized files, synthesized research.</p>
+      <p>Anthropic positions the audience deliberately as non-developers — researchers, analysts, operations, legal, and finance staff whose work is time-consuming but not technically complex. That framing matters for a small organization, because the design intent is people who would never touch a developer tool.</p>
+      <p>What it can actually do, per Anthropic's documentation, includes direct local file access (reading and writing without manual uploads), sub-agent coordination (breaking work into parallel subtasks), professional outputs such as Excel files with working formulas and PowerPoint decks, long-running tasks that survive context limits, scheduled tasks that run on a cadence, and "projects" — persistent workspaces with their own files, instructions, and memory.</p>
+      <p>How it runs is the part to internalize. Cowork executes directly on your computer. When you start a task, Claude analyzes the request and forms a plan, breaks it into subtasks when needed, runs code and shell commands inside an isolated virtual machine on your machine, coordinates parallel workstreams, and delivers outputs to your file system. The code Claude writes runs in a sandbox separate from your operating system, but Claude can still make real changes to the actual files in folders you connect.</p>
+      <p>The guardrails reflect that. Permissions mirror ordinary chat: you control which connections Claude can use and how often they ask, and you control internet access. Cowork adds a permission-mode selector. "Ask before acting" pauses for your approval on each action. "Act without asking" is faster but riskier, and Anthropic recommends it only when you are actively supervising and working with trusted files. In both modes, Claude requires explicit permission before permanently deleting any file.</p>
+      <p>The honest limitations matter as much as the capabilities. Anthropic states plainly that Cowork "has unique risks due to its agentic nature and internet access." Memory persists only within projects, not across standalone sessions. Sessions cannot be shared. It requires the desktop app on macOS, Windows, or Linux (beta) and will not run on the web. The desktop app must stay open with the computer awake, or active tasks stop. And Cowork consumes more of your usage allocation than chatting, because multi-step tasks are compute-intensive. It is available on paid Claude plans (Pro, Max, Team, and Enterprise).</p>
+      <h2 id="what-mcp-is">What MCP is</h2>
+      <p>The Model Context Protocol is an open standard, introduced by Anthropic in November 2024, for connecting AI applications to external systems — tools, data sources, and other software. The widely used analogy, Anthropic's own, is that MCP is "a USB-C port for AI applications": one standardized connector instead of a different custom cable for every device.</p>
+      <p>The problem it solves is real. Before a standard existed, every pairing of an AI tool with a data source needed its own bespoke integration, a combinatorial problem that does not scale. MCP replaces fragmented one-off integrations with a single protocol that any client and any server can speak.</p>
+      <p>How it works, briefly: developers either expose their data through an MCP server or build an AI application that acts as an MCP client connecting to those servers. A server can offer three kinds of primitive — Tools (executable functions the model can call to take an action), Resources (file-like structured data the model can read), and Prompts (predefined templates that guide an interaction). The practical takeaway for a non-developer is that a "connector" you click to install is, underneath, an MCP server doing this work.</p>
+      <p>Why it matters that MCP won: the standard moved from one vendor's idea to a cross-industry default within about a year. By its first anniversary Anthropic reported more than 10,000 active public MCP servers, adoption across ChatGPT, Cursor, Gemini, Microsoft Copilot, and Visual Studio Code, and over 97 million monthly SDK downloads across Python and TypeScript. Independent reporting tracks the same arc, with OpenAI adopting MCP across its tooling in March 2025 and Google confirming Gemini support in April 2025.</p>
+      <p>The governance story should reassure a cautious buyer. On December 9, 2025, Anthropic donated MCP to the Agentic AI Foundation, a directed fund under the Linux Foundation, co-founded by Anthropic, Block, and OpenAI, with support from Google, Microsoft, AWS, Cloudflare, and Bloomberg. MCP's existing community governance model stays unchanged. For a small organization, the signal is that the standard your integrations depend on is now vendor-neutral and stewarded by the same foundation behind Linux, Kubernetes, and Node.js, rather than controlled by any single AI company.</p>
+      <h2 id="how-the-pieces-fit-together">How the pieces fit together</h2>
+      <p>This is where most explanations get muddy, so here is the clean version. MCP is the transport — the standardized connection between Claude and an external system. Connectors are pre-packaged MCP servers that link Claude to a data source; web connectors run on the provider's cloud, while desktop connectors install and run on your local machine. Anthropic's Claude connector directory lists more than 75 connectors powered by MCP. Skills are instructions that tell Claude how to perform a task to your standard. Plugins are the package — they bundle skills, connectors, and sub-agents into a single installable unit that customizes Claude for a role, team, or company.</p>
+      <p>A useful mental model: MCP is the wiring, connectors are the outlets, skills are the know-how, plugins are the kit you install, and Cowork is the worker who uses all of it on your machine.</p>
+      <h2 id="what-this-means-for-you">What this means for you</h2>
+      <p>Stripped of hype, here is the realistic value and the realistic cost. Cowork is strongest at bounded, repeatable, multi-step tasks that are tedious but not judgment-heavy: organizing and renaming files in bulk, turning a folder of receipts into a formatted expense report, synthesizing research across many sources, extracting themes and action items from meeting transcripts, and generating spreadsheets with working formulas or slide decks from rough notes. The scheduled-tasks feature means a recurring chore can run on a cadence rather than being re-prompted each time. MCP, meanwhile, is what lets that work reach into the tools you already use without a developer building a custom bridge for each one.</p>
+      <p>The costs and limits are equally concrete. It is a research preview with explicitly stated agentic risks; this is not yet a set-and-forget production system. It needs a paid plan and the desktop app, and the machine must stay awake and the app open while it works. It consumes more usage than chat, so you can hit limits faster than you expect. And because Claude takes real actions on real files, the "Ask before acting" mode and reviewing planned actions on sensitive files are not optional habits.</p>
+      <p>The most underappreciated point is the governance one. A small organization adopting AI tools rightly worries about lock-in. Because MCP is now a Linux Foundation standard adopted by every major AI provider, the connectors you build or buy today are far less likely to be stranded by one vendor's roadmap. That lowers the risk of committing, which, for a risk-averse buyer, is often the deciding factor.</p>
+      <p>So the right first move is not a platform-wide rollout. It is to pick one tedious, well-defined, repeatable task — the kind your team groans about every week — run it in Cowork's "Ask before acting" mode on a copy of the relevant files, and judge the finished deliverable on its merits. The technology is real and the standard underneath it is now durable. The discipline that separates value from disappointment is scoping narrowly, supervising early, and documenting what you let the agent touch.</p>
+      <h2 id="sources">Sources</h2>
+      <ul>
+      <li>Anthropic, "Get started with Claude Cowork," Claude Help Center (updated June 2026). https://support.claude.com/en/articles/13345190-get-started-with-claude-cowork</li>
+      <li>Anthropic, "Claude Cowork," product page (2026). https://claude.com/product/cowork</li>
+      <li>Anthropic, "Donating the Model Context Protocol and establishing the Agentic AI Foundation" (Dec 9, 2025). https://www.anthropic.com/news/donating-the-model-context-protocol-and-establishing-of-the-agentic-ai-foundation</li>
+      <li>Anthropic, "Introducing the Model Context Protocol" (Nov 2024). https://www.anthropic.com/news/model-context-protocol</li>
+      <li>Anthropic, "What is the Model Context Protocol (MCP)?," developer docs. https://docs.anthropic.com/en/docs/agents-and-tools/mcp</li>
+      <li>The New Stack, "Why the Model Context Protocol Won" (2025). https://thenewstack.io/why-the-model-context-protocol-won/</li>
+      <li>Tygart Media, "Claude Skills vs MCP vs Connectors vs Plugins (2026)." https://tygartmedia.com/claude-skills-vs-mcp-vs-connectors-vs-plugins/</li>
+      </ul>
+    </article>
+
+    <section class="cta-band" id="contact" aria-labelledby="cta-heading">
+      <h2 id="cta-heading">From AI curiosity to AI capability</h2>
+      <p>This research is the groundwork behind our AI Enablement service &mdash; a curated, white-glove Claude Cowork implementation tailored to your organization&rsquo;s workflow.</p>
+      <a class="btn" href="https://calendly.com/mark-malaniru/30min" target="_blank" rel="noopener">Book a discovery call</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Malaniru Inc, LLC &middot; Lafayette, Colorado &middot; AI Enablement</p>
+    <p><a href="research.html">&larr; Back to Research</a> &middot; <a href="index.html">AI Enablement</a></p>
+      <nav class="mal-footernav" data-mal-footernav aria-label="Site" style="margin-top:0.7rem;font-size:0.82rem;line-height:1.9;">
+      <a href="about.html" style="color:#C07830;font-weight:700;text-decoration:none;">About</a> &middot;
+      <a href="pricing.html" style="color:#C07830;font-weight:700;text-decoration:none;">Pricing</a> &middot;
+      <a href="index.html" style="color:#C07830;font-weight:700;text-decoration:none;">AI Enablement</a>
+    </nav>
+  </footer>
+</body>
+</html>
