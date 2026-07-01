@@ -1,39 +1,28 @@
 <!DOCTYPE html>
 <!--
   ============================================================================
-  Malaniru — Building SOPs (branded HTML detail page)
-  Built by: Claudia (orchestration) · Date: 2026-06-16
-  Project:  Malaniru_Website_Launch
-  Source:   Projects/Malaniru_Website_Launch/Outputs/
-            20260616-claudia-sops-summary-output.md
-  Purpose:  Detail page for the "05 SOPs" service card and the
-            "Thoughtful Use (Building SOPs)" path step on ai-enablement.html.
-            Two ideas: what an SOP is, and how a set of prompts becomes one.
-
-  STATUS / FLAGS:
-  - PUBLIC marketing summary of the SOP/Thoughtful-Use stage. Explains the
-    approach without reproducing the paid methodology.
-  - CTA "Book a discovery call" is a PLACEHOLDER pending Marketing approval
-    (matches ai-enablement.html / ai-fluency.html; same calendly link).
-  - PRICING intentionally omitted everywhere — remains [HUMAN REVIEW].
-  - robots noindex/nofollow while pre-publication.
-  - Brand language per brand-voice.md. No certification/accreditation terms,
-    no guaranteed-outcome or compliance claims, no "Not X, Not Y" pattern.
-
-  TECHNICAL:
-  - Single self-contained HTML5 file. Embedded CSS. No JavaScript.
-  - Brand tokens + component classes mirror ai-fluency.html for consistency.
-  - WCAG AA contrast. Mobile-first.
+  Malaniru — Daily Intelligence Briefings (branded HTML listing page)
+  Built by: Web (Morgan Shaw) · Date: 2026-06-23
+  Project:  Malaniru_Marketing_Site
+  Purpose:  Standalone index of the 42 daily-intelligence-briefing articles,
+            split out from philanthropy-ai-research.html so each content type
+            (research reports vs. daily briefings) has its own page, linked
+            side-by-side from index.html.
+  STATUS:   Public marketing page. robots noindex pre-launch (mirrors siblings).
+            Calendly CTA hidden via CSS (per Principal).
+  TECH:     Single self-contained HTML5 file. Embedded CSS (identical token set
+            and component classes as philanthropy-ai-research.html). No JS.
+            WCAG AA. Mobile-first. Cards newest-first.
   ============================================================================
 -->
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Building SOPs — Malaniru</title>
-  <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://www.malaniru.com/building-sops">
-  <meta name="description" content="How Malaniru turns a team's working AI prompts into documented, repeatable standard operating procedures — the step that makes AI gains durable when people are busy, staff change, and the founder isn't in the room.">
+  <title>Weekly Compliance &amp; Security Research — Malaniru</title>
+  <meta name="robots" content="noindex, follow">
+  <link rel="canonical" href="https://www.malaniru.com/weekly-compliance-security-research">
+  <meta name="description" content="Malaniru's weekly read on the compliance, data-protection, and security questions organizations face as they adopt AI. First article coming soon.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -90,7 +79,7 @@
         radial-gradient(circle at 85% 15%, rgba(192,120,48,0.20) 0%, rgba(15,26,46,0) 55%);
       pointer-events: none;
     }
-    .header-inner { max-width: 860px; margin: 0 auto; position: relative; z-index: 1; }
+    .header-inner { max-width: 960px; margin: 0 auto; position: relative; z-index: 1; }
 
     .wordmark {
       font-weight: 800;
@@ -122,13 +111,13 @@
       line-height: 1.12;
       letter-spacing: -0.01em;
       margin-bottom: 18px;
-      max-width: 20ch;
+      max-width: 22ch;
     }
 
     header p.intro {
       font-size: 1.05rem;
       color: var(--light-gray);
-      max-width: 64ch;
+      max-width: 66ch;
     }
     header p.intro + p.intro { margin-top: 14px; }
 
@@ -148,7 +137,7 @@
 
     /* ---- Content --------------------------------------------------------- */
     main {
-      max-width: 860px;
+      max-width: 960px;
       margin: 0 auto;
       padding: 56px 24px 24px;
     }
@@ -173,103 +162,119 @@
     .section-lead {
       font-size: 1.05rem;
       color: var(--dark-text);
-      max-width: 64ch;
+      max-width: 68ch;
       margin-bottom: 30px;
     }
-    .section-lead + .section-lead { margin-top: -16px; }
 
-    /* ---- Definition band ------------------------------------------------- */
+    /* ---- Research card grid --------------------------------------------- */
+    .research-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      margin-bottom: 12px;
+    }
+    .research-card {
+      display: flex;
+      flex-direction: column;
+      background: #fff;
+      border: 1px solid var(--light-gray);
+      border-top: 4px solid var(--copper);
+      border-radius: 12px;
+      padding: 26px 26px 22px;
+    }
+    .research-card .card-eyebrow {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--copper);
+      margin-bottom: 10px;
+    }
+    .research-card h3 {
+      font-weight: 700;
+      font-size: 1.18rem;
+      color: var(--navy);
+      line-height: 1.25;
+      margin-bottom: 12px;
+    }
+    .research-card p {
+      color: var(--dark-text);
+      font-size: 0.97rem;
+      margin-bottom: 18px;
+    }
+    .research-card .read-link {
+      margin-top: auto;
+      align-self: flex-start;
+      color: var(--copper);
+      font-weight: 600;
+      font-size: 0.92rem;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(192,120,48,0.35);
+      transition: border-color 0.18s ease;
+    }
+    .research-card .read-link:hover,
+    .research-card .read-link:focus-visible { border-bottom-color: var(--copper); outline: none; }
+
+    /* ---- Methodology / trust note --------------------------------------- */
     .ethic {
       background: var(--navy);
       color: var(--light-gray);
       border-radius: 12px;
-      padding: 38px 34px;
-      margin-bottom: 48px;
+      padding: 34px 32px;
+      margin: 40px 0 48px;
     }
     .ethic .quote {
       font-weight: 800;
-      font-size: clamp(1.4rem, 3.4vw, 1.9rem);
-      line-height: 1.25;
+      font-size: clamp(1.3rem, 3.2vw, 1.75rem);
+      line-height: 1.28;
       color: var(--off-white);
       letter-spacing: -0.01em;
       margin-bottom: 16px;
     }
     .ethic .quote span { color: var(--gold); }
-    .ethic p { color: var(--light-gray); max-width: 62ch; }
+    .ethic p { color: var(--light-gray); max-width: 66ch; }
     .ethic p + p { margin-top: 12px; }
 
-    /* ---- Stage cards ----------------------------------------------------- */
-    .competency {
-      background: #fff;
-      border: 1px solid var(--light-gray);
-      border-radius: 12px;
-      padding: 30px 30px 26px;
-      margin-bottom: 22px;
+    /* ---- Further reading ------------------------------------------------- */
+    .further { margin-top: 8px; }
+    .reading-note {
+      font-size: 0.95rem;
+      color: var(--navy-mid);
+      max-width: 68ch;
+      margin-bottom: 28px;
     }
-    .competency-head {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-      margin-bottom: 18px;
-      padding-bottom: 16px;
+    .reading-group { margin-bottom: 26px; }
+    .reading-group h3 {
+      font-weight: 700;
+      font-size: 1.02rem;
+      color: var(--navy);
+      margin-bottom: 12px;
+      padding-bottom: 8px;
       border-bottom: 1px solid var(--light-gray);
     }
-    .num {
-      flex-shrink: 0;
-      width: 42px;
-      height: 42px;
-      border-radius: 9px;
-      background: var(--navy);
-      color: var(--gold);
-      font-weight: 700;
-      font-size: 1.1rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .competency-head h3 {
-      font-weight: 700;
-      font-size: 1.3rem;
-      color: var(--navy);
-      line-height: 1.2;
-    }
-    .question {
-      font-style: italic;
-      color: var(--navy-mid);
-      font-size: 1.02rem;
-      margin-bottom: 14px;
-    }
-    .competency .label {
-      display: block;
-      font-size: 0.72rem;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
+    .reading-group ul { list-style: none; }
+    .reading-group li { margin-bottom: 9px; padding-left: 18px; position: relative; }
+    .reading-group li::before {
+      content: "\2197";
+      position: absolute;
+      left: 0;
+      top: 0;
       color: var(--copper);
-      margin-bottom: 5px;
-    }
-    .competency p.body { color: var(--dark-text); }
-
-    /* ---- Takeaways ------------------------------------------------------- */
-    .takeaways {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 18px;
-      margin-bottom: 48px;
-    }
-    .takeaway {
-      background: var(--navy-mid);
-      color: var(--off-white);
-      border-radius: 12px;
-      padding: 24px 24px 22px;
-    }
-    .takeaway h4 {
       font-weight: 700;
-      font-size: 1.05rem;
-      color: var(--gold);
-      margin-bottom: 8px;
     }
-    .takeaway p { color: var(--light-gray); font-size: 0.96rem; }
+    .reading-group a {
+      color: var(--dark-text);
+      text-decoration: none;
+      font-weight: 600;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.18s ease, color 0.18s ease;
+    }
+    .reading-group a:hover, .reading-group a:focus-visible {
+      color: var(--navy);
+      border-bottom-color: var(--copper);
+      outline: none;
+    }
+    .reading-group .src { color: var(--mid-gray); font-weight: 400; font-size: 0.9rem; }
 
     /* ---- Cross-link note ------------------------------------------------- */
     .prereq {
@@ -278,11 +283,11 @@
       border-left: 4px solid var(--copper);
       border-radius: 10px;
       padding: 24px 28px;
-      margin-bottom: 48px;
+      margin: 40px 0 48px;
     }
     .prereq h4 { font-weight: 700; color: var(--navy); margin-bottom: 6px; font-size: 1.05rem; }
     .prereq p { color: var(--dark-text); }
-    .prereq a, .competency a, .section-lead a { color: var(--copper); font-weight: 600; }
+    .prereq a { color: var(--copper); font-weight: 600; }
 
     /* ---- CTA band -------------------------------------------------------- */
     .cta-band {
@@ -299,7 +304,7 @@
       margin-bottom: 12px;
       letter-spacing: -0.01em;
     }
-    .cta-band p { color: var(--light-gray); max-width: 52ch; margin: 0 auto 26px; }
+    .cta-band p { color: var(--light-gray); max-width: 54ch; margin: 0 auto 26px; }
     .cta-band .btn {
       display: inline-block;
       background: var(--copper);
@@ -314,7 +319,7 @@
 
     /* ---- Footer ---------------------------------------------------------- */
     footer {
-      max-width: 860px;
+      max-width: 960px;
       margin: 16px auto 0;
       padding: 24px;
       font-size: 0.82rem;
@@ -323,6 +328,11 @@
     }
     footer p + p { margin-top: 6px; }
     footer a { color: var(--mid-gray); text-decoration: underline; }
+
+    @media (prefers-reduced-motion: reduce) {
+      * { transition: none !important; }
+    }
+  
   
     /* ===== Canonical site header — standardized 2026-06-24 (Web / Morgan Shaw) ===== */
     .hero{
@@ -410,14 +420,10 @@
     <header class="hero">
     <div class="container hero__inner">
       <div class="wordmark"><a href="index.html">Malaniru<span class="dot">.</span></a></div>
-      <p class="hero__eyebrow">AI Enablement · Step 4 — Thoughtful Use</p>
-      <h1>Building SOPs: Making the Gains Durable</h1>
-      <p class="hero__lede">The last step of the adoption path turns the team's hard-won AI know-how into
-        documented, repeatable procedures — so the capability belongs to the
-        organization, not to whoever happens to be in the room.</p>
-      <p class="hero__lede">It is also the most natural step, because by this point the team has already built
-        the raw material: prompts that work. A standard operating procedure is what those
-        prompts become once they're written down, checked, and made repeatable.</p>
+      <p class="hero__eyebrow">AI Enablement · Research</p>
+      <h1>Weekly Compliance &amp; Security Research</h1>
+      <p class="hero__lede">A weekly read on the compliance, data-protection, and security questions that follow organizations into AI adoption &mdash; what the obligations are, where the risk sits, and how responsible teams stay ahead of them. Research, not legal advice.</p>
+      
       <a class="btn" href="https://calendly.com/mark-malaniru/30min" target="_blank" rel="noopener">Book a discovery call</a>
       <nav class="hero__links" aria-label="Site sections">
         <a class="policy-link" href="pricing.html">Pricing &rarr;</a>
@@ -435,147 +441,18 @@
   </header>
 
   <main id="main">
-
-    <!-- What is an SOP -->
-    <section class="ethic" aria-label="What a standard operating procedure is">
-      <p class="quote">An SOP turns <span>one person's knowledge</span> into something the whole team can follow.</p>
-      <p>
-        A standard operating procedure is a written record of how a particular piece of work
-        actually gets done &mdash; the steps, the order they happen in, the inputs they depend on,
-        and the checks that confirm the result is right before it leaves the building.
-      </p>
-      <p>
-        Most small organizations run on undocumented procedure. The work gets done because a few
-        experienced people know how, hold the context, and quietly fill the gaps. That works until
-        someone is on vacation, a role turns over, the volume doubles, or the founder isn't in the
-        room. The capability was never the organization's &mdash; it belonged to a person, and it
-        left when their attention did.
-      </p>
-    </section>
-
-    <section aria-labelledby="why-heading">
-      <span class="section-eyebrow">Why It Matters</span>
-      <h2 class="section-title" id="why-heading">Repeatable, consistent, and improvable</h2>
-      <p class="section-lead">
-        An SOP closes that gap. It makes a procedure repeatable by anyone with the right access,
-        consistent from one run to the next, and improvable over time &mdash; because a written
-        process can be reviewed and corrected in a way that a habit cannot.
-      </p>
-      <p class="section-lead">
-        In an AI-enabled workflow it carries one more thing: it records where a human has to look
-        before the work is considered done. That review checkpoint is part of the procedure, not an
-        afterthought to it.
-      </p>
-    </section>
-
-    <!-- From prompts to SOPs -->
-    <section aria-labelledby="path-heading">
-      <span class="section-eyebrow">From Prompts to SOPs</span>
-      <h2 class="section-title" id="path-heading">How a set of prompts becomes an SOP</h2>
-      <p class="section-lead">
-        When a team starts using AI in earnest, the first durable thing they build is rarely a policy
-        or a tool. It's a prompt that works &mdash; a carefully worded instruction that reliably turns
-        a known input into the output someone needs: the grant summary in the right format, the intake
-        email triaged the way the team would triage it, the report section drafted the way the
-        organization actually writes. A good prompt is a procedure in disguise. Turning it into an SOP
-        happens in four deliberate stages.
-      </p>
-
-      <article class="competency">
-        <div class="competency-head"><span class="num" aria-hidden="true">1</span><h3>Capture what works</h3></div>
-        <p class="question">Which prompts reliably produce the right result?</p>
-        <span class="label">What it does</span>
-        <p class="body">
-          A prompt that produced the right result gets written down, named, and stored where the team
-          can find it &mdash; rather than reconstructed from memory each time. This is the moment a
-          lucky one-off becomes a reusable asset.
-        </p>
-      </article>
-
-      <article class="competency">
-        <div class="competency-head"><span class="num" aria-hidden="true">2</span><h3>Write the procedure around it</h3></div>
-        <p class="question">What does this prompt need to run, and in what order?</p>
-        <span class="label">What it does</span>
-        <p class="body">
-          The procedure is written around the prompt: what input it expects and in what form, which
-          prompt to run and in what order when a task takes more than one, and what a correct result
-          looks like. The prompt is the engine; the SOP is the operating manual that says how and when
-          to use it.
-        </p>
-      </article>
-
-      <article class="competency">
-        <div class="competency-head"><span class="num" aria-hidden="true">3</span><h3>Make the human checkpoint explicit</h3></div>
-        <p class="question">Who reviews the output, and what are they checking for?</p>
-        <span class="label">What it does</span>
-        <p class="body">
-          The SOP states plainly who reviews the AI's output, what they are checking for, and which
-          decisions are never handed to the model at all. This is the line between a procedure that
-          scales safely and one that quietly compounds errors &mdash; a wrong answer that goes out
-          unreviewed is worse than no answer.
-        </p>
-      </article>
-
-      <article class="competency">
-        <div class="competency-head"><span class="num" aria-hidden="true">4</span><h3>Keep it alive</h3></div>
-        <p class="question">Does this procedure still describe reality?</p>
-        <span class="label">What it does</span>
-        <p class="body">
-          Models change, the work changes, and a prompt that was reliable six months ago may need
-          adjusting. An SOP reviewed on a cadence stays trustworthy; one written once and forgotten
-          slowly stops describing the work it's supposed to govern.
-        </p>
-      </article>
-    </section>
-
-    <!-- Takeaways -->
-    <section aria-labelledby="durable-heading">
-      <span class="section-eyebrow">Why This Is The Last Step</span>
-      <h2 class="section-title" id="durable-heading">Capability that stays with the organization</h2>
-      <p class="section-lead">
-        The result is that the team's hard-won knowledge &mdash; the wording, the judgment, the
-        sequence that took real effort to get right &mdash; stops being personal and becomes
-        organizational. That is what makes the gains from AI adoption durable rather than temporary.
-      </p>
-      <div class="takeaways">
-        <div class="takeaway">
-          <h4>When people are busy</h4>
-          <p>The procedure runs the same way under pressure as it does on a quiet day, because it doesn't depend on anyone holding the whole process in their head.</p>
-        </div>
-        <div class="takeaway">
-          <h4>When staff change</h4>
-          <p>The capability stays when someone leaves. A new team member follows the documented procedure instead of relearning it from scratch.</p>
-        </div>
-        <div class="takeaway">
-          <h4>When the founder isn't in the room</h4>
-          <p>The work no longer waits on one person's attention. The organization owns the know-how, with the review checkpoints built in.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Cross-link -->
-    <div class="prereq">
-      <h4>Where this sits in the path</h4>
-      <p>
-        Building SOPs is the fourth step, and it depends on the three before it: governed policy,
-        responsible use, and hands-on workflow integration. The SOPs document the workflows your team
-        learns to run in their own configured environment.
-        <a href="workspace.html">Explore the Workspace &rarr;</a>
-      </p>
+    <div class="container" style="max-width:760px;padding-block:clamp(3rem,8vw,6rem);text-align:center;">
+      <span style="display:inline-block;font-size:0.78rem;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--color-copper,#C07830);border:1px solid rgba(192,120,48,0.4);border-radius:999px;padding:6px 15px;margin-bottom:1.4rem;">Coming soon</span>
+      <h2 style="font-size:clamp(1.7rem,4vw,2.4rem);color:var(--color-navy,#0F1A2E);margin:0 0 1rem;">The first article is on the way</h2>
+      <p style="font-size:1.08rem;color:#41506B;max-width:60ch;margin:0 auto 1.6rem;">We&rsquo;re building a weekly briefing on the compliance, data-governance, and security questions that matter as small organizations adopt AI &mdash; sourced, practical, and labeled where a claim is directional. Check back shortly for the first edition.</p>
+      <p style="font-size:1rem;color:#41506B;max-width:60ch;margin:0 auto 2rem;">In the meantime, read our <a href="weekly-philanthropy-ai-research.html" style="color:var(--color-copper,#C07830);font-weight:600;">Weekly Philanthropy &amp; AI Research</a> and <a href="daily-intelligence-briefings.html" style="color:var(--color-copper,#C07830);font-weight:600;">Daily Intelligence Briefings</a>.</p>
+      <a class="btn" style="display:inline-block;font-weight:700;text-decoration:none;padding:0.85rem 1.7rem;border-radius:10px;background:var(--color-copper,#C07830);color:#fff;" href="https://calendly.com/mark-malaniru/30min" target="_blank" rel="noopener">Book a discovery call</a>
     </div>
-
-    <!-- CTA -->
-    <section class="cta-band" id="contact" aria-labelledby="cta-heading">
-      <h2 id="cta-heading">From AI curiosity to AI capability</h2>
-      <p>Talk through where documented, AI-enabled procedures would make your organization's gains stick.</p>
-      <a class="btn" href="https://calendly.com/mark-malaniru/30min" target="_blank" rel="noopener">Book a discovery call</a>
-    </section>
-
   </main>
 
   <footer>
     <p>&copy; 2026 Malaniru Inc, LLC &middot; Lafayette, Colorado &middot; AI Enablement</p>
-    <p>Part of Malaniru's guided AI adoption path. <a href="index.html">Back to AI Enablement &rarr;</a></p>
+    <p><a href="weekly-philanthropy-ai-research.html">Philanthropy &amp; AI Research &rarr;</a> &middot; <a href="index.html">Back to AI Enablement &rarr;</a></p>
       <nav class="mal-footernav" data-mal-footernav aria-label="Site" style="margin-top:0.7rem;font-size:0.82rem;line-height:1.9;">
       <a href="about.html" style="color:#C07830;font-weight:700;text-decoration:none;">About</a> &middot;
       <a href="pricing.html" style="color:#C07830;font-weight:700;text-decoration:none;">Pricing</a> &middot;

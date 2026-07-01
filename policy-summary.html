@@ -241,6 +241,38 @@
     }
     /* ===== end canonical header ===== */
   </style>
+<style id="mal-nav-dd">
+  .hero__links .nav-dd{ position:relative; display:inline-block; }
+  .hero__links a.nav-dd__toggle{
+    margin:0; color:var(--color-gold,#D4A853); font-weight:600; font-size:0.9rem;
+    text-decoration:none; cursor:pointer; line-height:1.4;
+    border-bottom:1px solid rgba(212,168,83,0.4); transition:border-color .18s ease;
+  }
+  .hero__links a.nav-dd__toggle:hover,
+  .hero__links a.nav-dd__toggle:focus-visible{ border-bottom-color:var(--color-gold,#D4A853); outline:none; }
+  .hero__links .nav-dd__menu{
+    position:absolute; top:100%; left:0; z-index:60; margin-top:0.6rem;
+    min-width:290px; display:none; flex-direction:column;
+    background:var(--color-navy-deep,#0A1322);
+    border:1px solid var(--color-navy-mid,#2A3F63); border-radius:10px;
+    padding:0.4rem; box-shadow:0 14px 34px rgba(0,0,0,0.40);
+  }
+  /* transparent bridge so the 0.6rem gap doesn't drop the hover */
+  .hero__links .nav-dd__menu::before{ content:""; position:absolute; top:-0.6rem; left:0; right:0; height:0.6rem; }
+  .hero__links .nav-dd:hover .nav-dd__menu,
+  .hero__links .nav-dd:focus-within .nav-dd__menu,
+  .hero__links .nav-dd__menu[data-open="true"]{ display:flex; }
+  .hero__links .nav-dd__menu a{
+    color:var(--color-on-navy-muted,#C3CBD9); font-weight:600; font-size:0.9rem;
+    text-decoration:none; padding:0.55rem 0.7rem; border-radius:7px;
+    border-bottom:none; white-space:nowrap; transition:background .15s ease,color .15s ease;
+  }
+  .hero__links .nav-dd__menu a:hover,
+  .hero__links .nav-dd__menu a:focus-visible{
+    background:var(--color-navy-mid,#2A3F63); color:var(--color-off-white,#F4F1EC); outline:none;
+  }
+  @media (max-width:640px){ .hero__links .nav-dd__menu{ min-width:220px; } }
+</style>
 </head>
 <body>
     <header class="hero">
@@ -256,9 +288,15 @@
       <a class="btn" href="https://calendly.com/mark-malaniru/30min" target="_blank" rel="noopener">Book a discovery call</a>
       <nav class="hero__links" aria-label="Site sections">
         <a class="policy-link" href="pricing.html">Pricing &rarr;</a>
-        <a class="policy-link" href="research.html">Research &rarr;</a>
-        <a class="policy-link" href="daily-intelligence-briefings.html">Daily Intelligence Briefings &rarr;</a>
-        <a class="policy-link" href="philanthropy-ai-research.html">Philanthropy &amp; AI Research &rarr;</a>
+        <div class="nav-dd">
+          <a class="policy-link nav-dd__toggle" href="research.html" aria-haspopup="true" aria-expanded="false">Research &#9662;</a>
+          <div class="nav-dd__menu" role="menu">
+            <a role="menuitem" href="research.html">Research</a>
+            <a role="menuitem" href="daily-intelligence-briefings.html">Daily Intelligence Briefings</a>
+            <a role="menuitem" href="weekly-philanthropy-ai-research.html">Weekly Philanthropy &amp; AI Research</a>
+            <a role="menuitem" href="weekly-compliance-security-research.html">Weekly Compliance &amp; Security Research</a>
+          </div>
+        </div>
       </nav>
     </div>
   </header>
@@ -352,5 +390,30 @@
       <a href="index.html" style="color:#C07830;font-weight:700;text-decoration:none;">AI Enablement</a>
     </nav>
   </footer>
+<script id="mal-nav-dd-js">
+(function(){
+  var noHover = window.matchMedia && window.matchMedia('(hover: none)').matches;
+  document.querySelectorAll('.nav-dd').forEach(function(dd){
+    var t=dd.querySelector('.nav-dd__toggle'), menu=dd.querySelector('.nav-dd__menu');
+    if(!t||!menu) return;
+    // Touch devices (no hover): first tap opens the menu, second tap follows the link.
+    if(noHover){
+      t.addEventListener('click',function(e){
+        if(menu.getAttribute('data-open')!=='true'){
+          e.preventDefault();
+          menu.setAttribute('data-open','true');
+          t.setAttribute('aria-expanded','true');
+        }
+      });
+      document.addEventListener('click',function(e){
+        if(!dd.contains(e.target)){ menu.setAttribute('data-open','false'); t.setAttribute('aria-expanded','false'); }
+      });
+    }
+    dd.addEventListener('keydown',function(e){
+      if(e.key==='Escape'){ menu.setAttribute('data-open','false'); t.setAttribute('aria-expanded','false'); t.blur(); }
+    });
+  });
+})();
+</script>
 </body>
 </html>
