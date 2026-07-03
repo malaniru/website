@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<!--
+  Malaniru - Research article (branded HTML)
+  Built by: publish_research_page.py - Date: 2026-07-03
+  Source:   Website/src/content/research/ai-policy-small-orgs.md  (published, copy-reviewed)
+  Slug:     ai-policy-small-orgs   Source-hash: 9a9dc5123d54
+  FIDELITY: Body rendered VERBATIM from the source markdown. No copy edits.
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Minimum-Viable AI Use Policy: A Starter Framework for Small Organizations - Malaniru</title>
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.malaniru.com/ai-policy-small-orgs">
+  <meta name="description" content="What an AI use policy actually is, why a small organization needs one before rolling out AI tools, and a practical seven-part starter framework grounded in NIST, ISO/IEC 42001, and the EU AI Act — translated down to what a team of five to fifty can implement without a compliance department.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --navy:#0F1A2E;--navy-mid:#2A3F63;--copper:#C07830;--gold:#D4A853;
+      --off-white:#F4F1EC;--light-gray:#E8E6E1;--mid-gray:#8A8A96;--dark-text:#1C1C1C;
+      --font:"Inter","Helvetica Neue",Arial,sans-serif;
+    }
+    *{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:var(--font);background:var(--off-white);color:var(--dark-text);line-height:1.65;font-size:16px;-webkit-font-smoothing:antialiased;}
+    .skip-link{position:absolute;left:-999px;top:0;background:var(--gold);color:var(--navy);padding:10px 16px;font-weight:700;z-index:10;}
+    .skip-link:focus{left:8px;top:8px;}
+    a{color:var(--copper);}
+    /* Header */
+    header{background: linear-gradient(160deg, rgba(15,26,46,0.72) 0%, rgba(10,18,33,0.82) 100%), url('StockCake-Cosmic_Web_Complexity-1361288-standard-rot90ccw.jpg'); background-size: auto, 100% 100%; background-repeat: no-repeat, no-repeat; background-position: center, center;color:var(--off-white);padding:48px 24px 52px;position:relative;overflow:hidden;}
+    header::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 85% 12%,rgba(192,120,48,0.20) 0%,rgba(15,26,46,0) 55%);pointer-events:none;}
+    .header-inner{max-width:760px;margin:0 auto;position:relative;z-index:1;}
+    .wordmark{font-weight:800;font-size:1.25rem;letter-spacing:0.02em;margin-bottom:30px;}
+    .wordmark .dot{color:var(--copper);}
+    .wordmark a{color:var(--off-white);text-decoration:none;transition:opacity .18s ease;}
+    .wordmark a:hover,.wordmark a:focus-visible{opacity:.85;outline:none;}
+    .eyebrow{display:inline-block;font-size:0.72rem;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;}
+    header h1{font-weight:800;font-size:clamp(1.8rem,4.6vw,2.6rem);line-height:1.14;letter-spacing:-0.01em;margin-bottom:16px;}
+    .byline{font-size:0.9rem;color:var(--light-gray);letter-spacing:0.01em;}
+    .byline .sep{color:var(--copper);margin:0 8px;}
+    .lede{font-size:1.08rem;color:var(--light-gray);max-width:66ch;margin-top:18px;}
+    .backlink{display:inline-block;margin-top:26px;color:var(--gold);font-weight:600;font-size:0.9rem;text-decoration:none;border-bottom:1px solid rgba(212,168,83,0.4);}
+    .backlink:hover,.backlink:focus-visible{border-bottom-color:var(--gold);outline:none;}
+    /* Article */
+    main{max-width:760px;margin:0 auto;padding:48px 24px 8px;}
+    .disclaimer{background:#fff;border:1px solid var(--light-gray);border-left:4px solid var(--copper);border-radius:8px;padding:14px 18px;font-size:0.9rem;color:var(--navy-mid);margin-bottom:34px;}
+    article{font-size:1.05rem;}
+    article h2{font-weight:800;font-size:1.5rem;color:var(--navy);line-height:1.22;letter-spacing:-0.01em;margin:42px 0 14px;}
+    article h3{font-weight:700;font-size:1.18rem;color:var(--navy-mid);line-height:1.25;margin:30px 0 10px;}
+    article h2 + p, article h3 + p{margin-top:0;}
+    article p{margin:0 0 18px;color:var(--dark-text);}
+    article ul,article ol{margin:0 0 18px;padding-left:24px;}
+    article li{margin-bottom:8px;}
+    article strong{font-weight:700;color:var(--navy);}
+    article em{font-style:italic;}
+    article a{color:var(--copper);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(192,120,48,0.35);transition:border-color .18s ease;}
+    article a:hover,article a:focus-visible{border-bottom-color:var(--copper);outline:none;}
+    article hr{border:none;border-top:1px solid var(--light-gray);margin:34px 0;}
+    article h2#sources, article h2#references{border-top:1px solid var(--light-gray);padding-top:30px;font-size:1.2rem;color:var(--navy-mid);}
+    /* sources list smaller */
+    article h2[id^="sources"] ~ ul li, article h3[id^="sources"] ~ ul li{font-size:0.95rem;color:var(--navy-mid);}
+    /* CTA */
+    .cta-band{background:var(--navy);color:var(--off-white);border-radius:12px;padding:42px 32px;text-align:center;margin:48px 0 8px;}
+    .cta-band h2{font-weight:800;font-size:clamp(1.4rem,3.4vw,1.9rem);margin-bottom:12px;letter-spacing:-0.01em;color:var(--off-white);}
+    .cta-band p{color:var(--light-gray);max-width:52ch;margin:0 auto 24px;}
+    .cta-band .btn{display:inline-block;background:var(--copper);color:#fff;font-weight:700;padding:13px 28px;border-radius:8px;text-decoration:none;transition:background .18s ease;}
+    .cta-band .btn:hover,.cta-band .btn:focus-visible{background:var(--gold);color:var(--navy);outline:none;}
+    /* Footer */
+    footer{max-width:760px;margin:16px auto 0;padding:24px;font-size:0.82rem;color:var(--mid-gray);border-top:1px solid var(--light-gray);}
+    footer p+p{margin-top:6px;}
+    footer a{color:var(--mid-gray);text-decoration:underline;}
+    @media (prefers-reduced-motion:reduce){*{transition:none!important;}}
+  
+  
+    /* ===== Canonical site header — standardized 2026-06-24 (Web / Morgan Shaw) ===== */
+    .hero{
+      position: relative;
+      background:
+        radial-gradient(900px 500px at 80% -10%, rgba(192,120,48,0.80), transparent 20%),
+        linear-gradient(160deg, rgba(15,26,46,0.82) 0%, rgba(10,18,33,0.90) 100%),
+        url('StockCake-Cosmic_Web_Complexity-1361288-standard-rot90ccw.jpg');
+      background-size: cover, cover, cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      color: var(--color-off-white, #F4F1EC);
+      padding-block: 4.5rem;
+    }
+    .hero .container, .hero__inner{
+      width:100%; max-width:1120px; margin-inline:auto; padding-inline:1.5rem;
+    }
+    .hero .container.hero__inner{ max-width:820px; }
+    .hero .wordmark{ font-weight:800; font-size:1.25rem; letter-spacing:0.02em; margin:0 0 2rem; }
+    .hero .wordmark a{ color:var(--color-off-white,#F4F1EC); text-decoration:none; transition:opacity .18s ease; }
+    .hero .wordmark a:hover,.hero .wordmark a:focus-visible{ opacity:.85; outline:none; }
+    .hero .wordmark .dot{ color:var(--color-copper,#C07830); }
+    .hero .hero__eyebrow,.hero .eyebrow{
+      display:inline-block; color:var(--color-gold,#D4A853); font-weight:600;
+      letter-spacing:0.16em; text-transform:uppercase; font-size:0.8rem; margin:0 0 1rem;
+    }
+    .hero h1{ font-size:clamp(2.1rem,6vw,3.6rem); line-height:1.12;
+      color:var(--color-off-white,#F4F1EC); margin:0 0 1rem; max-width:24ch; }
+    .hero .hero__tagline{ font-size:clamp(1.15rem,3vw,1.5rem); font-weight:600;
+      color:var(--color-copper-soft,#D89A5C); margin:0 0 1.25rem; }
+    .hero .byline{ color:var(--color-on-navy-muted,#C3CBD9); font-size:0.95rem; margin:0 0 1rem; }
+    .hero .hero__lede{ font-size:1.1rem; color:var(--color-on-navy-muted,#C3CBD9);
+      max-width:64ch; margin:0 0 1.75rem; }
+    .hero .btn{
+      display:inline-block; font-weight:700; font-size:1rem; text-decoration:none;
+      padding:0.85rem 1.7rem; border-radius:10px; background:var(--color-copper,#C07830);
+      color:#fff; transition:background .18s ease,color .18s ease;
+    }
+    .hero .btn:hover,.hero .btn:focus-visible{ background:var(--color-gold,#D4A853); color:var(--color-navy,#0F1A2E); outline:none; }
+    .hero .hero__links{ display:flex; flex-wrap:wrap; align-items:center; gap:1.5rem; margin-top:2rem; }
+    .hero .hero__links a.policy-link{
+      margin:0; color:var(--color-gold,#D4A853); font-weight:600; font-size:0.9rem;
+      text-decoration:none; border-bottom:1px solid rgba(212,168,83,0.4); transition:border-color .18s ease;
+    }
+    .hero .hero__links a.policy-link:hover,.hero .hero__links a.policy-link:focus-visible{
+      border-bottom-color:var(--color-gold,#D4A853); outline:none;
+    }
+    /* ===== end canonical header ===== */
+  </style>
+<style id="mal-nav-dd">
+  .hero__links .nav-dd{ position:relative; display:inline-block; }
+  .hero__links a.nav-dd__toggle{
+    margin:0; color:var(--color-gold,#D4A853); font-weight:600; font-size:0.9rem;
+    text-decoration:none; cursor:pointer; line-height:1.4;
+    border-bottom:1px solid rgba(212,168,83,0.4); transition:border-color .18s ease;
+  }
+  .hero__links a.nav-dd__toggle:hover,
+  .hero__links a.nav-dd__toggle:focus-visible{ border-bottom-color:var(--color-gold,#D4A853); outline:none; }
+  .hero__links .nav-dd__menu{
+    position:absolute; top:100%; left:0; z-index:60; margin-top:0.6rem;
+    min-width:290px; display:none; flex-direction:column;
+    background:var(--color-navy-deep,#0A1322);
+    border:1px solid var(--color-navy-mid,#2A3F63); border-radius:10px;
+    padding:0.4rem; box-shadow:0 14px 34px rgba(0,0,0,0.40);
+  }
+  /* transparent bridge so the 0.6rem gap doesn't drop the hover */
+  .hero__links .nav-dd__menu::before{ content:""; position:absolute; top:-0.6rem; left:0; right:0; height:0.6rem; }
+  .hero__links .nav-dd:hover .nav-dd__menu,
+  .hero__links .nav-dd:focus-within .nav-dd__menu,
+  .hero__links .nav-dd__menu[data-open="true"]{ display:flex; }
+  .hero__links .nav-dd__menu a{
+    color:var(--color-on-navy-muted,#C3CBD9); font-weight:600; font-size:0.9rem;
+    text-decoration:none; padding:0.55rem 0.7rem; border-radius:7px;
+    border-bottom:none; white-space:nowrap; transition:background .15s ease,color .15s ease;
+  }
+  .hero__links .nav-dd__menu a:hover,
+  .hero__links .nav-dd__menu a:focus-visible{
+    background:var(--color-navy-mid,#2A3F63); color:var(--color-off-white,#F4F1EC); outline:none;
+  }
+  @media (max-width:640px){ .hero__links .nav-dd__menu{ min-width:220px; } }
+</style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+    <header class="hero">
+    <div class="container hero__inner">
+      <div class="wordmark"><a href="index.html">Malaniru<span class="dot">.</span></a></div>
+      <p class="hero__eyebrow">AI Enablement · Research · Governance</p>
+      <h1>The Minimum-Viable AI Use Policy: A Starter Framework for Small Organizations</h1>
+      <p class="byline">By Marco Harris<span class="sep">·</span>July 3, 2026</p>
+      <p class="hero__lede">What an AI use policy actually is, why a small organization needs one before rolling out AI tools, and a practical seven-part starter framework grounded in NIST, ISO/IEC 42001, and the EU AI Act — translated down to what a team of five to fifty can implement without a compliance department.</p>
+      <a class="btn" href="https://calendly.com/mark-malaniru/30min" target="_blank" rel="noopener">Book a discovery call</a>
+      <nav class="hero__links" aria-label="Site sections">
+        <a class="policy-link" href="pricing.html">Pricing &rarr;</a>
+        <div class="nav-dd">
+          <a class="policy-link nav-dd__toggle" href="research.html" aria-haspopup="true" aria-expanded="false">Research &#9662;</a>
+          <div class="nav-dd__menu" role="menu">
+            <a role="menuitem" href="research.html">Research</a>
+            <a role="menuitem" href="daily-intelligence-briefings.html">Daily Intelligence Briefings</a>
+            <a role="menuitem" href="weekly-philanthropy-ai-research.html">Weekly Philanthropy &amp; AI Research</a>
+            <a role="menuitem" href="weekly-compliance-security-research.html">Weekly Compliance &amp; Security Research</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    
+    <article>
+      <blockquote>
+      <p>This article is research and thought leadership, not legal advice. It describes what governance frameworks and regulations say and offers a practical starting structure. Any organization operating in a regulated environment, or subject to a specific state, sector, or EU rule, should have its policy reviewed by qualified legal or compliance counsel before relying on it. Every regulatory item below is anchored to its state as of early July 2026 and noted where it is still moving.</p>
+      </blockquote>
+      <p>A small organization does not need a compliance department to adopt AI responsibly. It needs a short, plain-language policy written <em>before</em> the tools go live, and one person who keeps it current. The realistic choice is not "ban it" versus "wing it." Both are already failing in practice: surveys through the first half of 2026 consistently show that roughly half of workers, and by some measures far more, are already using AI tools their employer never approved, often pasting confidential information into consumer apps (Source: CIO and Forbes reporting on 2026 shadow-AI surveys; figures are survey-based and directional). A minimum-viable policy covers seven areas: approved tools, data classification, human oversight, vendor and third-party handling, accounts and access, incident response, and staff responsibilities. It borrows its structure from established frameworks, then translates them down to what a team of five to fifty people can actually implement in an afternoon. The single most important design principle in mid-2026 is <em>maintainability</em>: the regulatory ground is moving fast enough that a policy pinned to today's specific rules will be stale the day it is signed, so the durable version governs behavior and data, not named statutes.</p>
+      <h2 id="why-a-small-organization-needs-a-policy-before-it-rolls-out-ai">Why a small organization needs a policy before it rolls out AI</h2>
+      <p>The instinct at a small organization is to treat governance as an enterprise luxury, something to worry about once there's a legal team. That gets the sequence backwards. The risk from AI adoption lands earliest and hardest precisely where there is no IT department to set guardrails, because the tools are free, browser-based, and already in every employee's pocket.</p>
+      <p>The evidence that adoption is already happening, sanctioned or not, is now substantial. Multiple 2026 workforce surveys place unsanctioned AI use somewhere between roughly 45% and 66% of workers, and one widely reported figure put the share of workers who have brought their own AI tool to work at around 76% (Source: reporting by CIO, Forbes, and TechTimes on 2026 shadow-AI surveys, April–June 2026). The exact percentages vary by survey and should be read as directional rather than precise, but the direction is consistent across independent surveys. More telling than the headline usage numbers are the behavior numbers: the same body of reporting indicated that a meaningful minority of employees had shared sensitive company data with AI tools without approval, and that a notable share of prompts contained confidential or proprietary information (Source: 2026 shadow-AI survey reporting, CIO and secondary aggregators). Those specific figures are self-reported and drawn from vendor-adjacent surveys; treat them as illustrative of a real pattern rather than audited statistics.</p>
+      <p>The practical point does not depend on any single number. "Shadow AI," employees quietly using unapproved tools to get work done, is the default state of an organization that has said nothing. A policy written before rollout does three things a post-incident scramble cannot: it tells staff which tools are safe so they stop guessing, it draws a clear line around the data that must never leave the building, and it names a person who owns the decision when something new comes up. A policy written <em>after</em> a client's data has already been pasted into a consumer chatbot is doing damage control, not governance.</p>
+      <h2 id="the-frameworks-in-plain-language">The frameworks, in plain language</h2>
+      <p>Three reference points matter, and none require a compliance department to read. Knowing what they are prevents a small team from either over-engineering governance or dismissing it entirely.</p>
+      <p>The <strong>NIST AI Risk Management Framework (AI RMF 1.0)</strong> is a voluntary U.S. framework, published by the National Institute of Standards and Technology, built around four plain-language functions: Govern, Map, Measure, and Manage (Source: NIST, <em>AI Risk Management Framework (AI RMF 1.0)</em>, NIST AI 100-1). It is not a law and carries no penalties; it is a structured way to think about AI risk. NIST also published a companion Generative AI Profile (NIST AI 600-1) in July 2024 that extends the framework to large-language-model risks such as confabulation, prompt injection, and data leakage. NIST has signaled the framework is being revised and, in April 2026, released a concept note for a profile on trustworthy AI in critical infrastructure. For a small organization, NIST's value is vocabulary and structure, not compliance: "Govern, Map, Measure, Manage" is a usable skeleton for a policy.</p>
+      <p><strong>ISO/IEC 42001:2023</strong> is the first international standard for an AI management system. It uses the familiar Plan-Do-Check-Act cycle and asks an organization to define an AI policy, assign roles, run risk and impact assessments, and monitor continually (Source: ISO, <em>ISO/IEC 42001:2023 — AI management systems</em>). Certification is voluntary and is typically pursued by organizations that want independent, audited proof of responsible AI management, with surveillance audits annually and full recertification every three years. A five-person firm almost certainly does not need to certify. But the standard's shape, a written policy with named owners and periodic review, is exactly the shape a minimum-viable policy should take, which is why it's worth knowing it exists.</p>
+      <p>The <strong>EU AI Act</strong> is the binding one, and its reach is the part small U.S. organizations most often misjudge. It entered into force on August 1, 2024, with obligations phasing in over several years: prohibited practices and AI-literacy duties from February 2, 2025; general-purpose AI model obligations from August 2, 2025; and broad general applicability, including the Article 50 transparency rules that require disclosing when users interact with a chatbot and labeling AI-generated content, from August 2, 2026 (Source: European Commission, <em>AI Act</em>; artificialintelligenceact.eu implementation timeline). Critically, the high-risk obligations were <em>delayed</em> in 2026. Through the "Digital Omnibus" simplification package, provisionally agreed May 7, 2026, endorsed by the European Parliament on June 16, 2026, and given final Council approval on June 29, 2026, the applicability of high-risk obligations for standalone Annex III systems was pushed to December 2, 2027, and for AI embedded in regulated products under Annex I to August 2, 2028 (Source: Gibson Dunn, Latham &amp; Watkins, Hogan Lovells, and DLA Piper analyses of the EU AI Act Digital Omnibus, May–June 2026). The Act applies extraterritorially, reaching a provider or deployer outside the EU when the AI system's output is used in the EU, so a U.S. organization is not automatically exempt. Whether it reaches your specific organization depends on facts about where your customers and AI outputs are; that is a counsel-review question, not a self-assessment.</p>
+      <p>The U.S. picture is deliberately unsettled, and that is the headline. State laws are moving in both directions at once. Colorado is the cautionary tale: its 2024 AI Act (SB 24-205) was delayed, then repealed and replaced in 2026 by SB 26-189, signed May 14, 2026, with a new effective date of January 1, 2027 and a substantially narrower scope focused on disclosure and transparency around certain automated decision-making technologies, dropping the original duty of care, risk-management-program mandate, and impact-assessment requirements (Source: Hunton, Akin, Seyfarth Shaw, and Norton Rose Fulbright analyses of Colorado SB 26-189, May 2026). At the federal level, a December 11, 2025 executive order directed agencies to challenge state AI laws seen as inconsistent with federal priorities and stood up a Department of Justice AI Litigation Task Force, but legal analysts widely note the order lacks independent preemptive force. An executive order cannot by itself override state statutes, so existing state laws remain in effect while the conflict plays out, and a countervailing bill (the GUARDRAILS Act) was introduced in March 2026 to repeal it (Source: Latham &amp; Watkins, Ropes &amp; Gray, Paul Hastings, and White &amp; Case analyses, Q1–Q2 2026).</p>
+      <p>For a small organization, the lesson from the U.S. churn is not to memorize any of these statutes. It is that you cannot build your policy on the specifics of a named law, because the specifics are changing quarter to quarter. Build it on durable behaviors instead.</p>
+      <h2 id="the-minimum-viable-ai-policy-section-by-section">The minimum-viable AI policy, section by section</h2>
+      <p>A workable starter policy for a five-to-fifty-person organization fits comfortably in three to five pages. This structure maps loosely onto NIST's Govern/Map/Measure/Manage and ISO/IEC 42001's policy-plus-roles shape, translated to small-team scale.</p>
+      <p><strong>1. Approved tools (an allow-list, not a ban-list).</strong> State plainly which AI tools staff may use for work, and for what. An allow-list beats a block-list because you cannot enumerate every tool that will exist next month, but you can name the two or three you have vetted. Specify the account type: a vetted business or enterprise tier with data-handling commitments is a different risk profile than a free consumer login. Include a lightweight path for requesting a new tool so the answer to "can I use this?" is "ask the owner," not silence, which produces shadow AI. Vendor data-handling terms differ by tier and change over time; for any tool that will touch sensitive data, verify the current terms directly from the vendor's documentation before approval.</p>
+      <p><strong>2. Data classification (the one-page version).</strong> You do not need a formal taxonomy. You need three or four buckets and a one-line rule for each: <em>Public</em> (fine for any approved tool), <em>Internal</em> (approved business-tier tools only), <em>Confidential / client / regulated</em> (never in a general-purpose AI tool without a specific, documented approval), and, if relevant, <em>Regulated data under a specific law</em> (protected health information, non-public financial data, attorney-client material) which gets its own handling rule and almost always a counsel check. The entire value of this section is a bright line an employee can apply in five seconds before pasting anything.</p>
+      <p><strong>3. Human oversight (a human owns the output).</strong> State that AI assists, but a named human reviews and is accountable for anything that goes to a client, a regulator, the public, or into a decision about a person. This is the single principle every major framework shares, and it is where the EU AI Act's transparency direction and NIST's "Manage" function converge. For a small organization it reduces to one sentence: no AI output is final until a responsible person has checked it. Call out the highest-stakes uses explicitly; anything affecting employment, credit, eligibility, or legal rights deserves heightened review.</p>
+      <p><strong>4. Vendor and third-party management (know where the data goes).</strong> Keep a short register of the AI tools in use and, for each, one line on what the vendor does with your data. Does it train on your inputs by default? Is there a business-tier setting that turns that off? Is a data-processing agreement available? You are not conducting a formal vendor audit; you are refusing to let data leave the building through a tool nobody vetted. Specific vendor claims (retention windows, training defaults, certifications such as SOC 2, or availability of a HIPAA Business Associate Agreement) must be verified against the vendor's own current documentation before you rely on them. These change, and they should never be asserted from memory.</p>
+      <p><strong>5. Accounts and access (work accounts, not personal ones).</strong> Require that approved tools be used through organization-managed accounts, not employees' personal logins. This is the difference between being able to revoke access when someone leaves and having your data scattered across personal accounts you cannot see or control. Where the tool supports it, use single sign-on and turn on multi-factor authentication. This section is short but non-negotiable.</p>
+      <p><strong>6. Incident response (what to do when data goes somewhere it shouldn't).</strong> Write down, in advance, the three steps for when something goes wrong, whether someone pastes client data into the wrong tool, a tool has a breach, or an AI output causes a problem: who to tell, immediately; what to preserve (the prompt, the output, the timestamps); and who decides whether it triggers a legal or regulatory notification obligation. A small organization will not have a formal incident-response team, but it can have one named person and a three-line procedure. The point is that the answer is decided calmly in advance, not invented during a bad afternoon.</p>
+      <p><strong>7. Staff responsibilities (what every person agrees to).</strong> Close with the short list of what each employee is accountable for: use only approved tools, classify data before entering it, keep a human in the loop, use work accounts, and report incidents. A page people actually read beats a manual nobody opens. Pair it with a brief acknowledgment so adoption is a documented act, not an assumption.</p>
+      <h2 id="what-is-non-negotiable-and-what-a-small-org-can-reasonably-skip">What is non-negotiable, and what a small org can reasonably skip</h2>
+      <p>Non-negotiable, regardless of size: the data bright line (never put confidential, client, or regulated data into an unvetted general-purpose tool); a named human accountable for AI output that reaches the outside world; work-managed accounts rather than personal logins; and a single named owner for the policy itself. These four cost almost nothing and prevent the large majority of real incidents.</p>
+      <p>Reasonably skippable at small scale, <em>for now</em>: formal ISO/IEC 42001 certification; a dedicated AI governance committee; heavyweight algorithmic-impact assessments of the kind some enterprise and regulatory regimes contemplate; and elaborate model-inventory tooling. "Skippable" is scale- and sector-dependent, not permanent. An organization handling health, financial, legal, or children's data, or one selling AI-driven decisions into regulated markets, may need several of these sooner, and should get counsel input on which. The judgment call is proportionality: match the control to the actual risk, and revisit as the organization and the rules grow.</p>
+      <h2 id="the-most-common-mistakes-small-organizations-make">The most common mistakes small organizations make</h2>
+      <p><strong>Banning AI outright.</strong> The blanket ban feels safe and is the least safe option available, because it does not stop usage. It drives usage underground into exactly the free consumer tools with the weakest data protections, while removing your ability to see or shape any of it. The shadow-AI numbers above are, in large part, a measure of bans that failed.</p>
+      <p><strong>Tolerating shadow AI by saying nothing.</strong> Silence is a decision, and it defaults to the same underground usage a ban produces. The fix is cheap: a short allow-list and a clear "ask first" path convert shadow usage into visible, governable usage.</p>
+      <p><strong>Pasting sensitive data into consumer tools.</strong> The most common concrete harm is also the most preventable: client, employee, or regulated data entered into a free-tier general-purpose tool that may retain or train on it. The data-classification bright line exists specifically to stop this, which is why it is the section to get right first.</p>
+      <p><strong>No owner for the policy.</strong> A policy nobody owns is stale the day it is signed. Without a named person responsible for reviewing tools, approving new ones, and updating the document, the policy becomes a compliance artifact rather than a working control. This is the mistake that quietly disables all the others.</p>
+      <h2 id="keeping-the-policy-maintainable-not-stale-on-signing">Keeping the policy maintainable, not stale-on-signing</h2>
+      <p>The regulatory review in this piece is itself the argument for maintainability. In a single stretch of 2026, the EU deferred its high-risk obligations, Colorado repealed and replaced its entire AI Act, and the U.S. federal government opened a contested effort to override state AI laws. A policy that named specific statutes and deadlines as its foundation would already be out of date. Three habits keep a small-org policy alive.</p>
+      <p><strong>Govern behavior and data, not named laws.</strong> The durable core (approved tools, the data bright line, human oversight, work accounts, incident steps) does not change when a statute's effective date slips. Keep specific legal citations in a clearly dated appendix that counsel can update, not woven into the operative rules.</p>
+      <p><strong>Give it an owner and a review cadence.</strong> Assign one person and one recurring date, quarterly is reasonable for a small organization in a fast-moving area, to re-check the approved-tools list, confirm vendor data terms have not changed, and note any regulatory development that warrants a counsel question. Fifteen minutes on a calendar beats a rewrite after an incident.</p>
+      <p><strong>Write it to be revised.</strong> Short, plainly worded, modular sections are easy to amend; a dense document is not. Version and date every change. A living three-page policy that staff actually follow is worth more than a comprehensive one that ossifies on signing.</p>
+      <h2 id="what-this-means-for-you">What this means for you</h2>
+      <p>If you lead or work at a small organization, the takeaway is not that you're behind, and not that you need to hire a compliance function. It's that the core of responsible AI governance is genuinely within reach this week. Start with the data bright line, name an owner, insist on work accounts, and keep a human accountable for anything that leaves the building. Those four decisions prevent most of what goes wrong, and they hold steady no matter which way the regulations move next quarter. Where your work touches regulated data or specific jurisdictions, treat this as the structure to bring to qualified counsel, not a substitute for that conversation.</p>
+      <hr />
+      <p><em>Frameworks and regulations referenced here were current as of July 3, 2026; several are actively evolving and were noted accordingly. This is research and thought leadership, not legal advice, and it does not create any advisory relationship. Organizations should obtain advice from qualified counsel licensed in the relevant jurisdiction before making compliance decisions.</em></p>
+      <h3 id="sources">Sources</h3>
+      <ul>
+      <li>NIST, <em>Artificial Intelligence Risk Management Framework (AI RMF 1.0)</em>, NIST AI 100-1. https://www.nist.gov/itl/ai-risk-management-framework</li>
+      <li>NIST, <em>Generative AI Profile</em>, NIST AI 600-1, July 2024. https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf</li>
+      <li>ISO, <em>ISO/IEC 42001:2023 — Artificial intelligence management system</em>. https://www.iso.org/standard/42001</li>
+      <li>European Commission, <em>AI Act — Shaping Europe's digital future</em>. https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai</li>
+      <li>EU Artificial Intelligence Act, Implementation Timeline. https://artificialintelligenceact.eu/implementation-timeline/</li>
+      <li>Gibson Dunn, "EU AI Act Omnibus Agreement — Postponed High-Risk Deadlines and Other Key Changes," 2026. https://www.gibsondunn.com/eu-ai-act-omnibus-agreement-postponed-high-risk-deadlines-and-other-key-changes/</li>
+      <li>Latham &amp; Watkins, "AI Act Update: EU Resolves to Change Rules and Extend Deadlines," 2026. https://www.lw.com/en/insights/ai-act-update-eu-resolves-to-change-rules-and-extend-deadlines</li>
+      <li>DLA Piper, "The Digital AI Omnibus: Proposed deferral of high-risk AI obligations under the AI Act," 2026. https://knowledge.dlapiper.com/dlapiperknowledge/globalemploymentlatestdevelopments/2026/The-Digital-AI-Omnibus-Proposed-deferral-of-high-risk-AI-obligations-under-the-AI-Act</li>
+      <li>Hunton Andrews Kurth, "Colorado AI Act Amended and Effective Date Delayed," 2026. https://www.hunton.com/privacy-and-cybersecurity-law-blog/colorado-ai-act-amended-and-effective-date-delayed</li>
+      <li>Akin Gump, "Colorado Postpones Implementation of Colorado AI Act, SB 24-205," 2026. https://www.akingump.com/en/insights/ai-law-and-regulation-tracker/colorado-postpones-implementation-of-colorado-ai-act-sb-24-205</li>
+      <li>Seyfarth Shaw, "Colorado Enacts Artificial Intelligence Replacement Law," 2026. https://www.seyfarth.com/news-insights/colorado-enacts-artificial-intelligence-replacement-law.html</li>
+      <li>Latham &amp; Watkins, "AI Executive Order Targets State Laws and Seeks Uniform Federal Standards," 2026. https://www.lw.com/en/insights/ai-executive-order-targets-state-laws-and-seeks-uniform-federal-standards</li>
+      <li>Ropes &amp; Gray, "Examining the Landscape and Limitations of the Federal Push to Override State AI Regulation," 2026. https://www.ropesgray.com/en/insights/alerts/2026/03/examining-the-landscape-and-limitations-of-the-federal-push-to-override-state-ai-regulation</li>
+      <li>CIO, "Roughly half of employees are using unsanctioned AI tools," 2026. https://www.cio.com/article/4124760/roughly-half-of-employees-are-using-unsanctioned-ai-tools-and-enterprise-leaders-are-major-culprits.html</li>
+      <li>Forbes, "Your Employees Are Using AI Without Telling You — Now What?" April 30, 2026. https://www.forbes.com/sites/terdawn-deboe/2026/04/30/your-employees-are-using-ai-without-telling-you-now-what/</li>
+      <li>TechTimes, "Shadow AI Cybersecurity Risk Spikes as 45% of Workers Use Unsanctioned Tools," June 15, 2026. https://www.techtimes.com/articles/318438/20260615/shadow-ai-cybersecurity-risk-spikes-45-workers-use-unsanctioned-tools.htm</li>
+      </ul>
+    </article>
+
+    <section class="cta-band" id="contact" aria-labelledby="cta-heading">
+      <h2 id="cta-heading">From AI curiosity to AI capability</h2>
+      <p>This research is the groundwork behind our AI Enablement service &mdash; a curated, white-glove Claude Cowork implementation tailored to your organization&rsquo;s workflow.</p>
+      <a class="btn" href="https://calendly.com/mark-malaniru/30min" target="_blank" rel="noopener">Book a discovery call</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Malaniru Inc, LLC &middot; Lafayette, Colorado &middot; AI Enablement</p>
+    <p><a href="weekly-philanthropy-ai-research.html">&larr; Back to Philanthropy &amp; AI Research</a> &middot; <a href="index.html">AI Enablement</a></p>
+      <nav class="mal-footernav" data-mal-footernav aria-label="Site" style="margin-top:0.7rem;font-size:0.82rem;line-height:1.9;">
+      <a href="about.html" style="color:#C07830;font-weight:700;text-decoration:none;">About</a> &middot;
+      <a href="pricing.html" style="color:#C07830;font-weight:700;text-decoration:none;">Pricing</a> &middot;
+      <a href="index.html" style="color:#C07830;font-weight:700;text-decoration:none;">AI Enablement</a>
+    </nav>
+  </footer>
+<script id="mal-nav-dd-js">
+(function(){
+  var noHover = window.matchMedia && window.matchMedia('(hover: none)').matches;
+  document.querySelectorAll('.nav-dd').forEach(function(dd){
+    var t=dd.querySelector('.nav-dd__toggle'), menu=dd.querySelector('.nav-dd__menu');
+    if(!t||!menu) return;
+    // Touch devices (no hover): first tap opens the menu, second tap follows the link.
+    if(noHover){
+      t.addEventListener('click',function(e){
+        if(menu.getAttribute('data-open')!=='true'){
+          e.preventDefault();
+          menu.setAttribute('data-open','true');
+          t.setAttribute('aria-expanded','true');
+        }
+      });
+      document.addEventListener('click',function(e){
+        if(!dd.contains(e.target)){ menu.setAttribute('data-open','false'); t.setAttribute('aria-expanded','false'); }
+      });
+    }
+    dd.addEventListener('keydown',function(e){
+      if(e.key==='Escape'){ menu.setAttribute('data-open','false'); t.setAttribute('aria-expanded','false'); t.blur(); }
+    });
+  });
+})();
+</script>
+</body>
+</html>
