@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<!--
+  Malaniru - Daily Intelligence Briefing (branded HTML)
+  Built by: publish_briefing_page.py - Date: 2026-07-03
+  Source:   Projects/Malaniru_Marketing_Site/Staging/20260703-daily-intelligence-briefing.md
+  FIDELITY: Body rendered VERBATIM from the source markdown. No copy edits.
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daily Intelligence Briefing — Friday, July 3, 2026 - Malaniru</title>
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.malaniru.com/briefing-2026-07-03">
+  <meta name="description" content="The story that dominated three weeks of briefings — Fable 5&#x27;s suspension and restoration — hands the lead to a quieter, more consequential development: Claude Sonnet 5 is live, with near-Opus 4.8 performance at $2/$10 introductory pricing, a 1M-token context window, and default status for Free and Pro. Fable 5&#x27;s temporary usage cap winds down toward July 7 before moving to usage credits, the MCP Python SDK v2 beta has now published, and Gemini 3.5 Pro and GPT-5.6 stay gated or delayed. Opus 4.8 and the new Sonnet 5 anchor the reliable deployable tier.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --navy:#0F1A2E;--navy-mid:#2A3F63;--copper:#C07830;--gold:#D4A853;
+      --off-white:#F4F1EC;--light-gray:#E8E6E1;--mid-gray:#8A8A96;--dark-text:#1C1C1C;
+      --font:"Inter","Helvetica Neue",Arial,sans-serif;
+    }
+    *{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:var(--font);background:var(--off-white);color:var(--dark-text);line-height:1.65;font-size:16px;-webkit-font-smoothing:antialiased;}
+    .skip-link{position:absolute;left:-999px;top:0;background:var(--gold);color:var(--navy);padding:10px 16px;font-weight:700;z-index:10;}
+    .skip-link:focus{left:8px;top:8px;}
+    a{color:var(--copper);}
+    /* Header */
+    header{background: linear-gradient(160deg, rgba(15,26,46,0.72) 0%, rgba(10,18,33,0.82) 100%), url('StockCake-Cosmic_Web_Complexity-1361288-standard-rot90ccw.jpg'); background-size: auto, 100% 100%; background-repeat: no-repeat, no-repeat; background-position: center, center;color:var(--off-white);padding:48px 24px 52px;position:relative;overflow:hidden;}
+    header::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 85% 12%,rgba(192,120,48,0.20) 0%,rgba(15,26,46,0) 55%);pointer-events:none;}
+    .header-inner{max-width:760px;margin:0 auto;position:relative;z-index:1;}
+    .wordmark{font-weight:800;font-size:1.25rem;letter-spacing:0.02em;margin-bottom:30px;}
+    .wordmark .dot{color:var(--copper);}
+    .wordmark a{color:var(--off-white);text-decoration:none;transition:opacity .18s ease;}
+    .wordmark a:hover,.wordmark a:focus-visible{opacity:.85;outline:none;}
+    .eyebrow{display:inline-block;font-size:0.72rem;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;}
+    header h1{font-weight:800;font-size:clamp(1.8rem,4.6vw,2.6rem);line-height:1.14;letter-spacing:-0.01em;margin-bottom:16px;}
+    .byline{font-size:0.9rem;color:var(--light-gray);letter-spacing:0.01em;}
+    .byline .sep{color:var(--copper);margin:0 8px;}
+    .lede{font-size:1.08rem;color:var(--light-gray);max-width:66ch;margin-top:18px;}
+    .backlink{display:inline-block;margin-top:26px;color:var(--gold);font-weight:600;font-size:0.9rem;text-decoration:none;border-bottom:1px solid rgba(212,168,83,0.4);}
+    .backlink:hover,.backlink:focus-visible{border-bottom-color:var(--gold);outline:none;}
+    /* Article */
+    main{max-width:760px;margin:0 auto;padding:48px 24px 8px;}
+    .disclaimer{background:#fff;border:1px solid var(--light-gray);border-left:4px solid var(--copper);border-radius:8px;padding:14px 18px;font-size:0.9rem;color:var(--navy-mid);margin-bottom:34px;}
+    article{font-size:1.05rem;}
+    article h2{font-weight:800;font-size:1.5rem;color:var(--navy);line-height:1.22;letter-spacing:-0.01em;margin:42px 0 14px;}
+    article h3{font-weight:700;font-size:1.18rem;color:var(--navy-mid);line-height:1.25;margin:30px 0 10px;}
+    article h2 + p, article h3 + p{margin-top:0;}
+    article p{margin:0 0 18px;color:var(--dark-text);}
+    article ul,article ol{margin:0 0 18px;padding-left:24px;}
+    article li{margin-bottom:8px;}
+    article strong{font-weight:700;color:var(--navy);}
+    article em{font-style:italic;}
+    article a{color:var(--copper);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(192,120,48,0.35);transition:border-color .18s ease;}
+    article a:hover,article a:focus-visible{border-bottom-color:var(--copper);outline:none;}
+    article hr{border:none;border-top:1px solid var(--light-gray);margin:34px 0;}
+    article h2#sources, article h2#references{border-top:1px solid var(--light-gray);padding-top:30px;font-size:1.2rem;color:var(--navy-mid);}
+    /* sources list smaller */
+    article h2[id^="sources"] ~ ul li, article h3[id^="sources"] ~ ul li{font-size:0.95rem;color:var(--navy-mid);}
+    /* tables */
+    article table{width:100%;border-collapse:collapse;margin:0 0 24px;font-size:0.95rem;}
+    article th,article td{border:1px solid var(--light-gray);padding:9px 12px;text-align:left;vertical-align:top;}
+    article thead th{background:var(--navy);color:var(--off-white);font-weight:700;}
+    article tbody tr:nth-child(even){background:#fff;}
+    article .table-wrap{overflow-x:auto;margin:0 0 24px;}
+    article .table-wrap table{margin:0;}
+    /* CTA */
+    .cta-band{background:var(--navy);color:var(--off-white);border-radius:12px;padding:42px 32px;text-align:center;margin:48px 0 8px;}
+    .cta-band h2{font-weight:800;font-size:clamp(1.4rem,3.4vw,1.9rem);margin-bottom:12px;letter-spacing:-0.01em;color:var(--off-white);}
+    .cta-band p{color:var(--light-gray);max-width:52ch;margin:0 auto 24px;}
+    .cta-band .btn{display:inline-block;background:var(--copper);color:#fff;font-weight:700;padding:13px 28px;border-radius:8px;text-decoration:none;transition:background .18s ease;}
+    .cta-band .btn:hover,.cta-band .btn:focus-visible{background:var(--gold);color:var(--navy);outline:none;}
+    /* Footer */
+    footer{max-width:760px;margin:16px auto 0;padding:24px;font-size:0.82rem;color:var(--mid-gray);border-top:1px solid var(--light-gray);}
+    footer p+p{margin-top:6px;}
+    footer a{color:var(--mid-gray);text-decoration:underline;}
+    @media (prefers-reduced-motion:reduce){*{transition:none!important;}}
+
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header>
+    <div class="header-inner">
+      <div class="wordmark"><a href="index.html">Malaniru<span class="dot">.</span></a></div>
+      <span class="eyebrow">AI Enablement &middot; Daily Intelligence Briefing</span>
+      <h1>Daily Intelligence Briefing — Friday, July 3, 2026</h1>
+      <p class="byline">By Marco Harris<span class="sep">&middot;</span>July 3, 2026</p>
+      <p class="lede">The story that dominated three weeks of briefings — Fable 5&#x27;s suspension and restoration — hands the lead to a quieter, more consequential development: Claude Sonnet 5 is live, with near-Opus 4.8 performance at $2/$10 introductory pricing, a 1M-token context window, and default status for Free and Pro. Fable 5&#x27;s temporary usage cap winds down toward July 7 before moving to usage credits, the MCP Python SDK v2 beta has now published, and Gemini 3.5 Pro and GPT-5.6 stay gated or delayed. Opus 4.8 and the new Sonnet 5 anchor the reliable deployable tier.</p>
+      <a class="backlink" href="daily-intelligence-briefings.html">&larr; All daily intelligence briefings</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <article>
+      <p>The story that dominated three weeks of briefings — Fable 5's suspension and restoration — has now handed the lead to a quieter but more consequential development for deployment work: Claude Sonnet 5 is live. Released June 30 and announced July 1, Sonnet 5 is described by Anthropic as its most agentic Sonnet yet, with performance "close to Opus 4.8" at materially lower prices — introductory pricing of $2 per million input tokens and $10 per million output tokens through August 31, then $3/$15 — a 1M-token context window, 128K max output, and adaptive thinking on by default; it is now the default model for Free and Pro and is available in Claude Code, the Claude Platform, and the API (Source: Anthropic, "Introducing Claude Sonnet 5"; Claude Platform docs; Simon Willison, June 30, 2026). That gives the deployable baseline a stronger, cheaper workhorse than Sonnet 4.6. Meanwhile Fable 5's temporary usage cap winds down toward July 7, after which — per Anthropic — Fable 5 leaves subscription limits and moves to usage credits; the company says this is not permanent and it aims to restore Fable to standard subscriptions "as capacity allows," and notes its new classifier blocks the reported jailbreak technique in over 99% of cases (Source: Anthropic, "Redeploying Claude Fable 5"; BleepingComputer, July 2026). On the infrastructure side, the MCP Python SDK v2 beta has now published (v2.0.0b1, the first release with full support for the 2026-07-28 spec) — resolving the "unconfirmed at press" note carried on July 1 (Source: Model Context Protocol blog; MCP Python SDK GitHub). Carry items hold and are drawing closer: identity verification for some consumer Claude users July 8 (5 days out); the Fable 5 cap expiry July 7 (4 days); Gemini 3.5 Pro still a July target (unshipped); GPT-5.6 GA "coming weeks"; MCP v2 stable July 27 and spec July 28; EU AI Act transparency obligations August 2; the Anthropic IPO targeting fall (October). In public markets, Palantir ran hard on a new Nvidia partnership and a US Army command-and-control win, and the AI-IPO pipeline continues to define the trade — tracked in Section 5.</p>
+      <h2 id="1-ai-market-trends">1. AI Market Trends</h2>
+      <p>This week the deployable tier got stronger, and the frontier tier got a countdown.</p>
+      <p>First, and dominant for delivery work: Claude Sonnet 5 shipped. Anthropic released Sonnet 5 on June 30 (announced July 1) as "the most agentic Sonnet model yet," able to plan, use tools like browsers and terminals, and run autonomously at a level that "just a few months ago required larger and more expensive models," with performance the company positions as close to Opus 4.8 (Source: Anthropic, "Introducing Claude Sonnet 5" — vendor-stated; benchmark parity self-reported). It carries a 1,000,000-token context window and 128,000 max output tokens, adaptive thinking on by default (manual extended thinking now returns a 400 error, as it did on Sonnet 4.6), and it is the default model for Free and Pro while also available to Max, Team, and Enterprise, in Claude Code and via the API as claude-sonnet-5 (Source: Claude Platform docs, "What's new in Claude Sonnet 5"; Simon Willison, June 30). Introductory pricing is $2/M input and $10/M output through August 31, 2026, then $3/M and $15/M (Source: Anthropic; IT-Connect, 2026). The strategic read: this lands the same week Anthropic is preparing to go public, and it strengthens exactly the tier most teams build on — a governable, generally available model with near-flagship capability at a workhorse price.</p>
+      <p>Second: Fable 5's clock is ticking toward July 7. Restored July 1 under a government-coordinated safety classifier, Fable 5 is included for up to 50% of weekly usage limits through July 7; after that it exits subscription limits and moves to usage credits. Anthropic frames this as capacity-driven and temporary, saying Fable is not permanently leaving subscriptions and will be restored "as soon as capacity allows," and that its improved classifier blocks the specific reported technique in over 99% of cases (Source: Anthropic, "Redeploying Claude Fable 5"; BleepingComputer; MarkTechPost, July 1). Mythos 5, the tightly controlled cyber model, remains administered to roughly 100-plus US critical-infrastructure organizations (Source: 9to5Mac, June 26).</p>
+      <p>Third: the Google talent story keeps its shadow over Gemini. No new named departure has been confirmed since Bloomberg's June 24 report that Gemini researchers Jonas Adler and Alexander Pritzel are leaving for Anthropic (following Nobel laureate John Jumper to Anthropic and Noam Shazeer to OpenAI), but the episode still frames Gemini 3.5 Pro's continued slip. Jumper's exit alone reportedly coincided with a single-session Alphabet decline variously reported at roughly $225B–$245B in market value (Source: Bloomberg, June 24; Inc., 2026 — the dollar figure and its causal link are reported, not proven). Treat the market-cap figure as an attributed same-day move, not established cause and effect.</p>
+      <h2 id="2-top-10-ai-agents-three-lenses">2. Top 10 AI Agents — Three Lenses</h2>
+      <p>Rankings as of Friday, July 3, 2026. Material changes this run: Claude Sonnet 5 shipped June 30 and enters the deployable set as a near-flagship workhorse (default for Free/Pro); Fable 5's usage cap expires July 7, after which it moves to usage credits; the MCP Python SDK v2 beta published; Mythos 5 remains allowlisted to roughly 100-plus organizations; Gemini 3.5 Pro still a July target (unshipped); GPT-5.6 still government-gated to about 20 partners.</p>
+      <h3 id="2a-relevance-for-claude-mcp-centered-work">2a. Relevance for Claude / MCP-Centered Work</h3>
+      <div class="table-wrap"><table>
+      <thead>
+      <tr>
+      <th>Rank</th>
+      <th>Agent / Platform</th>
+      <th>Justification</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>1</td>
+      <td>Claude Cowork</td>
+      <td>Core delivery surface; runs on Opus 4.8, and now gains Sonnet 5 as a cheaper near-flagship option. Stable throughout the Fable turbulence. A primary managed delivery surface for Claude-centered work.</td>
+      </tr>
+      <tr>
+      <td>2</td>
+      <td>Claude Opus 4.8 / Sonnet 5</td>
+      <td>Opus 4.8 is the proven flagship; Sonnet 5 (new, June 30) is the workhorse tier, near-Opus performance at $2/$10 intro pricing, default for Free/Pro, business plans exempt from consumer ID verification. The tier teams can reliably deploy — validate Sonnet 5 before load-bearing use given its freshness.</td>
+      </tr>
+      <tr>
+      <td>3</td>
+      <td>Claude Code + Agent SDK</td>
+      <td>Primary agentic build tool; broad developer adoption; Sonnet 5 lands in Claude Code at a lower price point, widening agentic build economics (Source: Anthropic).</td>
+      </tr>
+      <tr>
+      <td>4</td>
+      <td>MCP-based connectors (cross-vendor)</td>
+      <td>Universal interop; Python SDK v2 beta now published (v2.0.0b1), stable v2 July 27, final spec July 28 with breaking changes (stateless core, header routing, Tasks, MCP Apps, enterprise auth/ID-JAG). v1.x remains the only production-recommended line (Source: MCP blog; GitHub).</td>
+      </tr>
+      <tr>
+      <td>5</td>
+      <td>Claude Fable 5 (restored, capped)</td>
+      <td>Broad frontier model, live on Cowork, Code, and the Platform under the new classifier, but usage-capped through July 7, then moves to usage credits (out of subscription limits). Evaluate under the cap; do not treat as steady-state (Source: Anthropic; BleepingComputer).</td>
+      </tr>
+      </tbody>
+      </table></div>
+      <p><em>(Watch line: Mythos 5 — allowlisted to roughly 100-plus US critical-infrastructure organizations; tracked for governance precedent, not a general delivery surface. Claude Design + Canva — shipped design-to-code surface, still worth hands-on evaluation.)</em></p>
+      <h3 id="2b-market-momentum-adoption-funding-buzz">2b. Market Momentum (adoption / funding / buzz)</h3>
+      <div class="table-wrap"><table>
+      <thead>
+      <tr>
+      <th>Rank</th>
+      <th>Agent / Platform</th>
+      <th>Justification</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>1</td>
+      <td>Anthropic (Sonnet 5 + Fable 5 restored + Mythos allowlist + IPO)</td>
+      <td>Dominant news share — Sonnet 5 shipped, Fable 5 back (capped through July 7), Mythos 5 to 100-plus orgs, July 8 ID verification, fall IPO off the June 1 filing.</td>
+      </tr>
+      <tr>
+      <td>2</td>
+      <td>Open-weight non-US labs (Zhipu GLM 5.2 + MiniMax M3 + Kimi K2.7)</td>
+      <td>Sustained attention — GLM 5.2 independently corroborated as a top open-weight model; MiniMax M3 and Kimi K2.7 round out a crowded open-weight wave.</td>
+      </tr>
+      <tr>
+      <td>3</td>
+      <td>Google Gemini / Google Cloud</td>
+      <td>Mixed run — Gemini 3.5 Pro still a July target (2M-token context claimed), Flash GA and default in Search, Antigravity 2.0 multi-agent orchestration shown; but the senior-researcher departures and a reported roughly $225B–$245B one-session market-cap hit still overhang.</td>
+      </tr>
+      <tr>
+      <td>4</td>
+      <td>OpenAI (GPT-5.6 government-gated + Shazeer hire)</td>
+      <td>Sol/Terra/Luna still limited to about 20 government-approved partners; GA "coming weeks" (mid-July best case per Axios); gained Noam Shazeer from Google; previewed a Broadcom inference chip June 25. Heavy coverage, low availability.</td>
+      </tr>
+      <tr>
+      <td>5</td>
+      <td>Palantir (public-market AI bellwether)</td>
+      <td>Off-index momentum — an Nvidia partnership and a US Army NGC2 win drove PLTR up roughly 9.3% July 1 and 3% July 2 (Source: Motley Fool, July 1; StocksToTrade).</td>
+      </tr>
+      </tbody>
+      </table></div>
+      <h3 id="2c-capability-maturity-production-readiness">2c. Capability &amp; Maturity (production readiness)</h3>
+      <div class="table-wrap"><table>
+      <thead>
+      <tr>
+      <th>Rank</th>
+      <th>Agent / Model</th>
+      <th>Justification</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>1</td>
+      <td>Claude Opus 4.8</td>
+      <td>Production-proven, available, agentic-optimized, cost-stable; a reliable reference tier, unaffected throughout the Fable episode.</td>
+      </tr>
+      <tr>
+      <td>2</td>
+      <td>GPT-5.5 / Codex</td>
+      <td>Shipped, production-grade, broad enterprise deployment.</td>
+      </tr>
+      <tr>
+      <td>3</td>
+      <td>Claude Sonnet 5 (new)</td>
+      <td>Generally available June 30, near-Opus performance at lower cost, 1M context; production-viable but days old — validate on real workloads before load-bearing use (Source: Anthropic; Simon Willison).</td>
+      </tr>
+      <tr>
+      <td>4</td>
+      <td>Gemini 3.5 Flash</td>
+      <td>Flash shipped, GA, default in Search; Pro still targeted for July (unshipped).</td>
+      </tr>
+      <tr>
+      <td>5</td>
+      <td>Open weights (GLM 5.2, MiniMax M3, Nemotron 3, Unisound U2)</td>
+      <td>Generally available and self-hostable — real production options. GLM 5.2 independently corroborated; MiniMax M3 headline scores remain vendor-internal.</td>
+      </tr>
+      </tbody>
+      </table></div>
+      <p><em>(Not ranked as broadly deployable: Mythos 5 — allowlist only, roughly 100-plus orgs; GPT-5.6 (Sol/Terra/Luna) — about 20 government-approved partners, GA "coming weeks"; Gemini 3.5 Pro — pre-GA, July target; Fable 5 — restored but usage-capped through July 7.)</em></p>
+      <h3 id="divergence-analysis">Divergence Analysis</h3>
+      <p>The deployable set got materially better this week without any change at the gated frontier. Sonnet 5 crossed into the always-available, governable column on day one — the same column Opus 4.8 anchors — while Fable 5 sits one notch lower (available but usage-capped, with a July 7 step-down to usage credits), and the truly gated names (GPT-5.6, Gemini 3.5 Pro, Mythos 5) are unchanged. The most interesting cross-lens signal is that Anthropic's strongest near-term move was not a frontier release but a cheaper, more agentic workhorse — a capability-per-dollar play aimed squarely at sustained enterprise deployment, landing the same week it courts public markets. Near-term movers to watch, in order of proximity: Fable 5 usage-cap expiry (July 7), Claude ID verification (July 8), Gemini 3.5 Pro GA (July target), MCP v2 stable (July 27) and spec (July 28), GPT-5.6 GA ("coming weeks"), EU AI Act transparency (August 2).</p>
+      <p><strong>What This Means for You.</strong> The reference architecture question just got easier: Opus 4.8 stays the proven anchor, and Sonnet 5 becomes the natural default workhorse for builds once validated — near-flagship capability at $2/$10 intro pricing changes the cost model for agentic delivery, and business-tier plans remain exempt from the July 8 consumer ID verification. Treat Sonnet 5 as promising-but-fresh (days old) and pilot it against real workloads before making it load-bearing. Hold the discipline the Fable episode taught: name a governable fallback that is not subject to access toggles, and treat the July 7 cap expiry as a planning date rather than assuming Fable steady-state.</p>
+      <h2 id="3-agentic-ai-advances-new-releases">3. Agentic AI Advances &amp; New Releases</h2>
+      <p>Genuinely new or sharpened items since the July 1 briefing:</p>
+      <p>Claude Sonnet 5 — shipped (the headline release). Released June 30, announced July 1: most agentic Sonnet to date, near-Opus 4.8 performance, 1M-token context, 128K max output, adaptive thinking default, default for Free/Pro, in Claude Code, the Platform, and the API (claude-sonnet-5), intro pricing $2/$10 through August 31 then $3/$15 (Source: Anthropic, "Introducing Claude Sonnet 5"; Claude Platform docs; Simon Willison, June 30). Benchmark-parity claims are vendor-stated; validate independently.</p>
+      <p>MCP Python SDK v2 beta — now published (resolved carry). The MCP project has published the v2 beta (v2.0.0b1), the first release with full support for the 2026-07-28 spec release candidate; it replaces the session-centric v1 internals with a dispatcher/runner pipeline for the stateless 2026 protocol, adds header-based routing and caching (Mcp-Method / Mcp-Name / Mcp-Param-* headers, ttlMs / cacheScope hints) and enterprise auth (SEP-990 ID-JAG), and renames the bundled class to MCPServer, dropping the old mcp.server.fastmcp import path. Stable v2 is targeted for July 27 alongside the July 28 spec RC; v1.x remains the only production-recommended line (Source: Model Context Protocol blog, "Beta SDKs for the 2026-07-28 Spec Release Candidate Are Here"; MCP Python SDK GitHub). This closes the "beta publish unconfirmed" note carried July 1.</p>
+      <p>Fable 5 — cap step-down approaching July 7 (sharpened carry). Anthropic confirms Fable 5 exits subscription limits after July 7 and moves to usage credits, framing this as temporary and capacity-driven, not a permanent removal; the new classifier reportedly blocks the reported technique in over 99% of cases (Source: Anthropic; BleepingComputer, July 2026).</p>
+      <p>Gemini 3.5 Pro — still July, still unshipped (carry). Announced at Google I/O with a June GA target; now a July target in limited enterprise preview; refinement focus reported as coding, token efficiency, and long-task performance; a 2,000,000-token context window is claimed; Google "declined to comment" on the revised schedule (Source: cryptobriefing; TradingView/Reuters; TechCrunch — context figure vendor-attributed). Google also showcased Antigravity 2.0, a multi-agent orchestration surface (Source: BuildFastWithAI, July 1 — secondary).</p>
+      <p>Cross-lab jailbreak severity standard (unverified). Secondary aggregation reports Anthropic unveiled a joint jailbreak-severity standard with Amazon, Microsoft, and Google around July 1 (Source: BuildFastWithAI, July 1 — single secondary aggregator; no primary confirmation located). Flagged for verification before acting on it.</p>
+      <p>Carry items (scheduled or unchanged):</p>
+      <ul>
+      <li>Claude ID verification — government ID plus live selfie and facial-geometry template for some consumer users, effective July 8 (5 days out); processed by Persona Identities; Free/Pro/Max only, Team/Enterprise/API exempt; triggered for select use cases and integrity/safety checks (Source: TechTimes, June 21; CyberInsider; MLQ News).</li>
+      <li>GPT-5.6 — Sol/Terra/Luna in limited preview to about 20 government-approved partners via API and Codex, not in ChatGPT; GA "coming weeks" (Source: OpenAI; Axios, June 26; VentureBeat).</li>
+      <li>MCP v2 — beta published; stable v2 July 27; final spec 2026-07-28 with breaking changes. v1.x stays in production (Source: MCP blog and GitHub).</li>
+      <li>Anthropic IPO — confidential S-1 filed June 1; targeting a fall (October) listing; last round roughly $965B valuation (a $65B Series H); run-rate roughly $47B targeting $50B-plus by end July; figures unaudited (Source: CNBC, June 1; Zacks, 2026). See Section 5.</li>
+      <li>EU AI Act — Article 50 transparency obligations apply August 2, 2026; general-purpose AI enforcement powers and fines also enter application that date (Source: European Commission — verify specifics before external use).</li>
+      </ul>
+      <p><strong>What This Means for You.</strong> Two items move onto the near-term validation calendar. Sonnet 5 goes on the evaluation bench now — pilot it as the build default and confirm the near-Opus claim on representative workloads before relying on it. The MCP v2 beta is real code to test against (it changes import paths and server class names, and moves to a stateless, header-routed model), so engineering teams can start a v2 spike while keeping every connector on v1.x in production through at least the July 27 stable. As always, vendor benchmarks (Sonnet 5 parity, Gemini's 2M context, MiniMax M3 scores) are hypotheses until independently verified.</p>
+      <h2 id="4-overnight-daily-release-monitor">4. Overnight / Daily Release Monitor</h2>
+      <p>Covering roughly July 1 – July 3 since the July 1 publish (no July 2 briefing was produced):</p>
+      <ul>
+      <li>Claude Sonnet 5 (June 30 / announced July 1) — the one large, confirmed model release in the window; near-Opus performance, 1M context, $2/$10 intro pricing, default for Free/Pro (Source: Anthropic; Simon Willison).</li>
+      <li>MCP Python SDK v2 beta published — v2.0.0b1 live with full 2026-07-28 spec support; resolves the prior "unconfirmed" note (Source: MCP blog; GitHub).</li>
+      <li>Fable 5 — unchanged terms; usage cap runs through July 7, then usage credits; Mythos 5 still administered to roughly 100-plus orgs (Source: Anthropic; 9to5Mac).</li>
+      <li>No new generally-available frontier model from another US lab in the window. GPT-5.6 still preview-gated; Gemini 3.5 Pro still unshipped.</li>
+      <li>Talent movement — no new named Google departure confirmed in the last 48 hours beyond the June 24 report (Adler, Pritzel, Jumper to Anthropic; Shazeer to OpenAI) (Source: Bloomberg, June 24).</li>
+      <li>Public markets — Palantir ran on an Nvidia partnership and a US Army NGC2 win (July 1); the semiconductor complex was mixed into the holiday-shortened week (see Section 5).</li>
+      <li>Carry, unchanged: Claude ID verification July 8; MCP v2 stable July 27 and spec July 28; EU AI Act transparency August 2; Anthropic IPO proceeding from the June 1 filing.</li>
+      </ul>
+      <p><strong>What This Means for You.</strong> For the first time in weeks the action item is an upgrade path, not a watch: Sonnet 5 is live and cheaper than the tier it succeeds — verify it, then treat it as the default build workhorse behind Opus 4.8. Keep the Fable 5 July 7 step-down and the July 8 ID-verification date on the operations calendar, and keep production anchored to the governable Opus and Sonnet tiers regardless of frontier swings.</p>
+      <h2 id="5-ai-trading-trends">5. AI Trading Trends</h2>
+      <p><em>Market intelligence for situational awareness — not investment advice. No buy, sell, or hold recommendations, price targets, or return forecasts appear here. Every figure carries a source; where a precise price or a definitive same-day volume ranking could not be confirmed to an authoritative source, that is stated plainly rather than guessed. Note: the US market week was holiday-shortened around the July 4 observance.</em></p>
+      <h3 id="5a-ipos-the-public-market-ai-wave">5a. IPOs — the public-market AI wave</h3>
+      <ul>
+      <li>Cerebras (AI systems and chip designer) priced its IPO at $185 per share, above range, selling 30 million shares for a raise of about $5.55 billion; it debuted May 14 and traded intraday as high as a reported $386.34 before easing to roughly $233 by late May. Recent references cite a $24.6 billion backlog and a $20 billion partnership with OpenAI (Source: CNBC, May 13, 2026; Morningstar; Yahoo Finance). Confirm current price and the backlog and partnership figures against primary disclosures before acting on them.</li>
+      <li>Anthropic filed confidentially for a US IPO on June 1, days after a round reportedly valuing it near $965 billion (a roughly $65 billion Series H), and is targeting a Nasdaq listing as soon as October (fall). A reported run-rate near $47 billion, said to be targeting $50 billion-plus by end of July, is not audited (Source: CNBC, June 1; Zacks, 2026). Treat private-company financials as reported, not verified.</li>
+      <li>CoreWeave (CRWV), the March 2025 AI-infrastructure IPO, is reported up roughly 162% since listing and has joined the Nasdaq 100 alongside Nebius and Astera Labs — noted to track the AI-infrastructure trade, not as a 2026 listing (Source: Motley Fool; Nasdaq).</li>
+      <li>SpaceX and OpenAI both remain on the 2026 watchlist; SpaceX was reported to be eyeing a listing near a roughly $1.75 trillion valuation, and OpenAI is also expected to list in 2026 (Source: Yahoo Finance; IG; MarketWise). Neither is a pure-play AI equity, and the timing is unconfirmed.</li>
+      <li>Next-tier pipeline candidates named for the 2026–2027 window include Databricks (~$134B), Cursor ($50B+), Scale AI (~$14B), and Glean (~$7.2B) (Source: Acquinox Capital; MarketWise — targets and timing speculative).</li>
+      </ul>
+      <h3 id="5b-top-5-traded-ai-related-tickers">5b. Top 5 traded AI-related tickers</h3>
+      <p>This is not a definitive "most-traded-today-by-volume" ranking from a single authoritative source — same-day volume leaderboards shift intraday and were not confirmed to one primary feed at press, and the week was holiday-shortened. Prices cited are July 2 session references; treat the ordering as indicative.</p>
+      <div class="table-wrap"><table>
+      <thead>
+      <tr>
+      <th>#</th>
+      <th>Ticker</th>
+      <th>Company</th>
+      <th>Why it's an AI-trading bellwether</th>
+      <th>Latest verifiable signal</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>1</td>
+      <td>NVDA</td>
+      <td>Nvidia</td>
+      <td>The AI-GPU anchor; roughly 81% AI-chip share (IDC); the most direct route from AI capital spending to revenue</td>
+      <td>Traded near $194.28 on July 2 (intraday range roughly $193.86–$200.06); about +18% YTD, lagging the semiconductor index (price single-source)</td>
+      </tr>
+      <tr>
+      <td>2</td>
+      <td>AMD</td>
+      <td>Advanced Micro Devices</td>
+      <td>Second AI accelerator plus data-center CPU</td>
+      <td>Reported roughly +114% YTD in 2026; data-center revenue about $5.8B, up roughly 57% (press-reported)</td>
+      </tr>
+      <tr>
+      <td>3</td>
+      <td>PLTR</td>
+      <td>Palantir</td>
+      <td>Enterprise-AI software bellwether; high retail trading interest</td>
+      <td>Jumped roughly 9.3% July 1 on an Nvidia partnership and a US Army NGC2 win; up about 3% July 2 (moves press-reported)</td>
+      </tr>
+      <tr>
+      <td>4</td>
+      <td>MU</td>
+      <td>Micron Technology</td>
+      <td>High-bandwidth memory for AI accelerators</td>
+      <td>High-liquidity AI-memory name; no confirmed same-day figure this window — included on liquidity and relevance</td>
+      </tr>
+      <tr>
+      <td>5</td>
+      <td>INTC</td>
+      <td>Intel</td>
+      <td>Foundry and AI-PC exposure</td>
+      <td>High-liquidity name; no confirmed July 2 figure this window — included on liquidity and relevance</td>
+      </tr>
+      </tbody>
+      </table></div>
+      <p>Two honest caveats: Microsoft (MSFT) and Alphabet (GOOGL) are top AI stocks by market weight but trade at lower share turnover than the semiconductor names, so they are bellwethers by weight, not by volume, and are excluded from a traded-volume top five (Source: Morningstar; Forbes). And the precise ordering above should be treated as indicative, not authoritative; confirm it against a live exchange volume leaderboard before presenting it as a ranking.</p>
+      <p><strong>What This Means for You.</strong> The relevance here is governance demand, not portfolio strategy. As AI capital keeps moving onto public markets — Sonnet 5 landing the same week Anthropic courts an October listing, Palantir monetizing sovereign and defense AI, and a semiconductor complex that moves the whole index — board-level scrutiny of responsible AI adoption rises with it. Public companies and their vendors face sharper questions about data handling, model governance, and disclosure. Read this as market context, not investment guidance: the money moving into AI pulls governance obligations along behind it.</p>
+      <h2 id="sources">Sources</h2>
+      <ul>
+      <li>Anthropic, "Introducing Claude Sonnet 5," 2026. https://www.anthropic.com/news/claude-sonnet-5</li>
+      <li>Anthropic, "What's new in Claude Sonnet 5" (Claude Platform Docs), 2026. https://platform.claude.com/docs/en/about-claude/models/whats-new-sonnet-5</li>
+      <li>Simon Willison, "What's new in Claude Sonnet 5," June 30, 2026. https://simonwillison.net/2026/Jun/30/claude-sonnet-5/</li>
+      <li>IT-Connect, "Claude Fable 5 Returns Worldwide as Anthropic Launches Sonnet 5," 2026. https://www.it-connect.tech/claude-fable-5-returns-worldwide-as-anthropic-launches-sonnet-5/</li>
+      <li>Anthropic, "Redeploying Claude Fable 5," June 30, 2026. https://www.anthropic.com/news/redeploying-fable-5</li>
+      <li>BleepingComputer, "Claude Fable 5 isn't permanently leaving subscriptions, Anthropic says," July 2026. https://www.bleepingcomputer.com/news/artificial-intelligence/claude-fable-5-isnt-permanently-leaving-subscriptions-anthropic-says/</li>
+      <li>MarkTechPost, "Anthropic Redeploys Claude Fable 5 on July 1 After US Export Controls Lift, Adds New Cybersecurity Classifier," July 1, 2026. https://www.marktechpost.com/2026/07/01/anthropic-redeploys-claude-fable-5-on-july-1-after-us-export-controls-lift-adds-new-cybersecurity-classifier/</li>
+      <li>9to5Mac, "Anthropic cleared to release Claude Mythos 5 to over 100 US institutions," June 26, 2026. https://9to5mac.com/2026/06/26/anthropic-cleared-to-release-claude-mythos-5-to-over-100-us-institutions/</li>
+      <li>Model Context Protocol Blog, "Beta SDKs for the 2026-07-28 MCP Spec Release Candidate Are Here," 2026. https://blog.modelcontextprotocol.io/posts/sdk-betas-2026-07-28/</li>
+      <li>Model Context Protocol Blog, "The 2026-07-28 MCP Specification Release Candidate," 2026. https://blog.modelcontextprotocol.io/posts/2026-07-28-release-candidate/</li>
+      <li>MCP Python SDK (GitHub / PyPI releases), 2026. https://github.com/modelcontextprotocol/python-sdk/releases</li>
+      <li>Bloomberg, "Google Poised to Lose Two More High-Profile AI Staffers to Anthropic," June 24, 2026. https://www.bloomberg.com/news/articles/2026-06-24/google-poised-to-lose-two-more-high-profile-ai-staffers-to-anthropic</li>
+      <li>TechCrunch, "AI researchers continue to leave Google for its rivals," June 24, 2026. https://techcrunch.com/2026/06/24/ai-researchers-continue-to-leave-google-for-its-rivals/</li>
+      <li>Inc., "Why Google Just Lost 4 Key Staffers to Anthropic and OpenAI," 2026. https://www.inc.com/moses-jeanfrancois/why-google-just-lost-4-key-staffers-to-anthropic-and-openai/91365820</li>
+      <li>Cryptobriefing, "Google delays Gemini 3.5 Pro launch to July 2026," 2026. https://cryptobriefing.com/google-delays-gemini-35-pro-launch-to-july-2026/</li>
+      <li>TradingView / Reuters, "Google delays Gemini 3.5 Pro launch to July as it tweaks its new frontier AI model," 2026. https://www.tradingview.com/news/reuters.com,2026:newsml_FWN42W0FW:0-google-delays-gemini-3-5-pro-launch-to-july-as-it-tweaks-its-new-frontier-ai-model-business-insider/</li>
+      <li>BuildFastWithAI, "AI News Today July 1 2026: 15 Biggest Stories," July 1, 2026. https://www.buildfastwithai.com/blogs/ai-news-today-july-1-2026</li>
+      <li>OpenAI, "Previewing GPT-5.6 Sol: a next-generation model," June 2026. https://openai.com/index/previewing-gpt-5-6-sol/</li>
+      <li>Axios, "OpenAI releases powerful new GPT-5.6 model under restrictions," June 26, 2026. https://www.axios.com/2026/06/26/openai-gpt-sol-terra-luna-trump</li>
+      <li>VentureBeat, "OpenAI unveils GPT-5.6 Sol, Terra and Luna models — but only accessible to limited preview partners for now, per US Gov," June 2026. https://venturebeat.com/technology/openai-unveils-gpt-5-6-sol-terra-and-luna-models-but-only-accessible-to-limited-preview-partners-for-now-per-us-gov</li>
+      <li>TechTimes, "Claude Identity Verification Starts July 8: What Facial Data Anthropic Collects," June 21, 2026. https://www.techtimes.com/articles/318778/20260621/claude-identity-verification-starts-july-8-what-facial-data-anthropic-collects.htm</li>
+      <li>CyberInsider, "Anthropic to introduce age and ID checks for Claude users on July 8," 2026. https://cyberinsider.com/anthropic-to-introduce-age-and-id-checks-for-claude-users-on-july-8/</li>
+      <li>CNBC, "Anthropic confidentially files IPO prospectus with SEC," June 1, 2026. https://www.cnbc.com/2026/06/01/anthropic-ipo-s1-prospectus.html</li>
+      <li>Zacks, "Anthropic IPO 2026 Guide: Price Predictions, Dates, and Valuation," 2026. https://www.zacks.com/featured-articles/761/anthropic-ipo</li>
+      <li>CNBC, "Cerebras prices IPO above expected range, as Wall Street braces for AI tsunami," May 13, 2026. https://www.cnbc.com/2026/05/13/cerebras-prices-ipo-above-expected-range-wall-street-expects-ai-flood.html</li>
+      <li>Morningstar, "Why AI Chip Designer Cerebras Is 2026's Hottest IPO Yet," 2026. https://www.morningstar.com/stocks/why-ai-chip-designer-cerebras-is-2026s-hottest-ipo-yet</li>
+      <li>The Motley Fool, "Why Palantir Stock Is Skyrocketing Today," July 1, 2026. https://www.fool.com/investing/2026/07/01/why-palantir-stock-is-skyrocketing-today/</li>
+      <li>StocksToTrade, "Palantir Stock Pops As Nvidia AI Deal And Army Win Fuel Bullish Targets," July 1, 2026. https://stockstotrade.com/news/palantir-technologies-inc-pltr-news-2026_07_01/</li>
+      <li>Morningstar, "Best AI Stocks to Buy Now," 2026. https://www.morningstar.com/stocks/best-ai-stocks-buy-now</li>
+      <li>Forbes Advisor, "Best AI Stocks Of 2026." https://www.forbes.com/advisor/investing/best-ai-stocks/</li>
+      <li>European Commission, "AI Act | Shaping Europe's digital future," 2026. https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai</li>
+      </ul>
+      <p><em>Research date: 2026-07-03. Items attributed to secondary, single-source, or market-attributed reporting should be verified before acting on them. No briefing was produced July 2; this run covers roughly the 48 hours since the July 1 publish. Section 5 financial figures (Cerebras pricing and backlog, Anthropic valuation and run-rate, AMD YTD, NVDA and PLTR moves, and the traded-volume ordering) should be verified against primary filings and a live market feed before any external, investor-facing use. Future-dated items (Fable 5 cap expiry July 7, ID verification July 8, Gemini 3.5 Pro July, GPT-5.6 GA, MCP stable and spec July 27–28, EU AI Act August 2, Anthropic IPO October) are scheduled or expected, not delivered.</em></p>
+    </article>
+
+    <section class="cta-band" id="contact" aria-labelledby="cta-heading">
+      <h2 id="cta-heading">From AI curiosity to AI capability</h2>
+      <p>This briefing is part of the field research behind our AI Enablement service &mdash; a curated, white-glove Claude Cowork implementation tailored to your organization&rsquo;s workflow.</p>
+      <a class="btn" href="https://calendly.com/mark-malaniru/30min" target="_blank" rel="noopener">Book a discovery call</a>
+    </section>
+    <!-- mal-ai-disclaimer:v1 -->
+  <aside class="mal-ai-disclaimer" role="note" aria-label="AI transparency notice" style="max-width:760px;margin:2.5rem auto 0;padding:1rem 1.25rem;border:1px solid #d9c3a5;border-left:4px solid #C07830;border-radius:6px;background:#faf6f0;color:#5c5347;font-size:0.82rem;line-height:1.6;box-sizing:border-box;">
+    <strong style="display:block;color:#8a5a1e;font-size:0.78rem;letter-spacing:.04em;text-transform:uppercase;margin-bottom:.35rem;">AI Transparency Notice</strong>
+    This article was produced through Malaniru&rsquo;s guided-research process: generated with the assistance of AI and reviewed by a person before publication (human-in-the-loop). In line with EU AI Act transparency obligations, we disclose that AI systems were used to create this content. It is provided for general information only, may contain inaccuracies, and is not professional advice &mdash; verify before relying on it.
+  </aside>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Malaniru Inc, LLC &middot; Lafayette, Colorado &middot; AI Enablement</p>
+    <p><a href="daily-intelligence-briefings.html">&larr; Back to Daily Intelligence Briefings</a> &middot; <a href="index.html">AI Enablement</a></p>
+      <nav class="mal-footernav" data-mal-footernav aria-label="Site" style="margin-top:0.7rem;font-size:0.82rem;line-height:1.9;">
+      <a href="about.html" style="color:#C07830;font-weight:700;text-decoration:none;">About</a> &middot;
+      <a href="pricing.html" style="color:#C07830;font-weight:700;text-decoration:none;">Pricing</a> &middot;
+      <a href="index.html" style="color:#C07830;font-weight:700;text-decoration:none;">AI Enablement</a>
+     &middot;
+      <a href="privacy-policy.html" style="color:#C07830;font-weight:700;text-decoration:none;">Privacy</a>
+    </nav>
+  </footer>
+</body>
+</html>
