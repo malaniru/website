@@ -738,7 +738,7 @@
   <script>
     // CRITICAL: url-encoded body, NO custom Content-Type header → CORS simple
     // request → no preflight. Sending JSON would break every submission silently.
-    var ENDPOINT = 'https://script.google.com/macros/s/AKfycbxeJ00GVCGZ2coK_QlSJmy5TyrnqZa6PCNy5j4IsNdmlbJyBuUVuWBdCbYQOr0KPId5aQ/exec'; // wired to deployed Apps Script /exec (2026-06-22)
+    var ENDPOINT = '<a href="https://script.google.com/macros/s/AKfycbxeJ00GVCGZ2coK_QlSJmy5TyrnqZa6PCNy5j4IsNdmlbJyBuUVuWBdCbYQOr0KPId5aQ/exec" target="_blank" rel="noopener">https://script.google.com/macros/s/AKfycbxeJ00GVCGZ2coK_QlSJmy5TyrnqZa6PCNy5j4IsNdmlbJyBuUVuWBdCbYQOr0KPId5aQ/exec</a>'; // wired to deployed Apps Script /exec (2026-06-22)
     var formEl = document.getElementById('intake');
     var msg = document.getElementById('formMsg');
 
