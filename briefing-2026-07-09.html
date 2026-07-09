@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<!--
+  Malaniru - Daily Intelligence Briefing (branded HTML)
+  Built by: publish_briefing_page.py - Date: 2026-07-09
+  Source:   Projects/Malaniru_Marketing_Site/Staging/20260709-daily-intelligence-briefing.md
+  FIDELITY: Body rendered VERBATIM from the source markdown. No copy edits.
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daily Intelligence Briefing — Thursday, July 9, 2026 - Malaniru</title>
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.malaniru.com/briefing-2026-07-09">
+  <meta name="description" content="The movement rotates from the delivery surface to the public markets, and it is the sharpest market story in weeks: a deepening semiconductor selloff wiped an estimated $1.3 trillion in chip-sector value, with Nvidia&#x27;s roughly $1 trillion slide dragging its valuation back to pre-AI-boom multiples on doubts about AI capital-spending returns — not collapsing demand. The product front is quiet by contrast: Claude ID verification went live yesterday for a flagged subset of consumer users, Fable 5&#x27;s paid-plan cutoff was pushed to July 12 (a correction to yesterday&#x27;s read), and the deployable tier holds — Opus 4.8 anchors, Sonnet 5 is the Claude Code default at $2/$10 intro pricing. GPT-5.6 stays preview-gated to roughly 20 partners and Gemini 3.5 Pro remains in preview.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --navy:#0F1A2E;--navy-mid:#2A3F63;--copper:#C07830;--gold:#D4A853;
+      --off-white:#F4F1EC;--light-gray:#E8E6E1;--mid-gray:#8A8A96;--dark-text:#1C1C1C;
+      --font:"Inter","Helvetica Neue",Arial,sans-serif;
+    }
+    *{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:var(--font);background:var(--off-white);color:var(--dark-text);line-height:1.65;font-size:16px;-webkit-font-smoothing:antialiased;}
+    .skip-link{position:absolute;left:-999px;top:0;background:var(--gold);color:var(--navy);padding:10px 16px;font-weight:700;z-index:10;}
+    .skip-link:focus{left:8px;top:8px;}
+    a{color:var(--copper);}
+    /* Header */
+    header{background: linear-gradient(160deg, rgba(15,26,46,0.72) 0%, rgba(10,18,33,0.82) 100%), url('StockCake-Cosmic_Web_Complexity-1361288-standard-rot90ccw.jpg'); background-size: auto, 100% 100%; background-repeat: no-repeat, no-repeat; background-position: center, center;color:var(--off-white);padding:48px 24px 52px;position:relative;overflow:hidden;}
+    header::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 85% 12%,rgba(192,120,48,0.20) 0%,rgba(15,26,46,0) 55%);pointer-events:none;}
+    .header-inner{max-width:760px;margin:0 auto;position:relative;z-index:1;}
+    .wordmark{font-weight:800;font-size:1.25rem;letter-spacing:0.02em;margin-bottom:30px;}
+    .wordmark .dot{color:var(--copper);}
+    .wordmark a{color:var(--off-white);text-decoration:none;transition:opacity .18s ease;}
+    .wordmark a:hover,.wordmark a:focus-visible{opacity:.85;outline:none;}
+    .eyebrow{display:inline-block;font-size:0.72rem;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;}
+    header h1{font-weight:800;font-size:clamp(1.8rem,4.6vw,2.6rem);line-height:1.14;letter-spacing:-0.01em;margin-bottom:16px;}
+    .byline{font-size:0.9rem;color:var(--light-gray);letter-spacing:0.01em;}
+    .byline .sep{color:var(--copper);margin:0 8px;}
+    .lede{font-size:1.08rem;color:var(--light-gray);max-width:66ch;margin-top:18px;}
+    .backlink{display:inline-block;margin-top:26px;color:var(--gold);font-weight:600;font-size:0.9rem;text-decoration:none;border-bottom:1px solid rgba(212,168,83,0.4);}
+    .backlink:hover,.backlink:focus-visible{border-bottom-color:var(--gold);outline:none;}
+    /* Article */
+    main{max-width:760px;margin:0 auto;padding:48px 24px 8px;}
+    .disclaimer{background:#fff;border:1px solid var(--light-gray);border-left:4px solid var(--copper);border-radius:8px;padding:14px 18px;font-size:0.9rem;color:var(--navy-mid);margin-bottom:34px;}
+    article{font-size:1.05rem;}
+    article h2{font-weight:800;font-size:1.5rem;color:var(--navy);line-height:1.22;letter-spacing:-0.01em;margin:42px 0 14px;}
+    article h3{font-weight:700;font-size:1.18rem;color:var(--navy-mid);line-height:1.25;margin:30px 0 10px;}
+    article h2 + p, article h3 + p{margin-top:0;}
+    article p{margin:0 0 18px;color:var(--dark-text);}
+    article ul,article ol{margin:0 0 18px;padding-left:24px;}
+    article li{margin-bottom:8px;}
+    article strong{font-weight:700;color:var(--navy);}
+    article em{font-style:italic;}
+    article a{color:var(--copper);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(192,120,48,0.35);transition:border-color .18s ease;}
+    article a:hover,article a:focus-visible{border-bottom-color:var(--copper);outline:none;}
+    article hr{border:none;border-top:1px solid var(--light-gray);margin:34px 0;}
+    article h2#sources, article h2#references{border-top:1px solid var(--light-gray);padding-top:30px;font-size:1.2rem;color:var(--navy-mid);}
+    /* sources list smaller */
+    article h2[id^="sources"] ~ ul li, article h3[id^="sources"] ~ ul li{font-size:0.95rem;color:var(--navy-mid);}
+    /* tables */
+    article table{width:100%;border-collapse:collapse;margin:0 0 24px;font-size:0.95rem;}
+    article th,article td{border:1px solid var(--light-gray);padding:9px 12px;text-align:left;vertical-align:top;}
+    article thead th{background:var(--navy);color:var(--off-white);font-weight:700;}
+    article tbody tr:nth-child(even){background:#fff;}
+    article .table-wrap{overflow-x:auto;margin:0 0 24px;}
+    article .table-wrap table{margin:0;}
+    /* CTA */
+    .cta-band{background:var(--navy);color:var(--off-white);border-radius:12px;padding:42px 32px;text-align:center;margin:48px 0 8px;}
+    .cta-band h2{font-weight:800;font-size:clamp(1.4rem,3.4vw,1.9rem);margin-bottom:12px;letter-spacing:-0.01em;color:var(--off-white);}
+    .cta-band p{color:var(--light-gray);max-width:52ch;margin:0 auto 24px;}
+    .cta-band .btn{display:inline-block;background:var(--copper);color:#fff;font-weight:700;padding:13px 28px;border-radius:8px;text-decoration:none;transition:background .18s ease;}
+    .cta-band .btn:hover,.cta-band .btn:focus-visible{background:var(--gold);color:var(--navy);outline:none;}
+    /* Footer */
+    footer{max-width:760px;margin:16px auto 0;padding:24px;font-size:0.82rem;color:var(--mid-gray);border-top:1px solid var(--light-gray);}
+    footer p+p{margin-top:6px;}
+    footer a{color:var(--mid-gray);text-decoration:underline;}
+    @media (prefers-reduced-motion:reduce){*{transition:none!important;}}
+
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header>
+    <div class="header-inner">
+      <div class="wordmark"><a href="index.html">Malaniru<span class="dot">.</span></a></div>
+      <span class="eyebrow">AI Enablement &middot; Daily Intelligence Briefing</span>
+      <h1>Daily Intelligence Briefing — Thursday, July 9, 2026</h1>
+      <p class="byline">By Mark Harris<span class="sep">&middot;</span>July 9, 2026</p>
+      <p class="lede">The movement rotates from the delivery surface to the public markets, and it is the sharpest market story in weeks: a deepening semiconductor selloff wiped an estimated $1.3 trillion in chip-sector value, with Nvidia&#x27;s roughly $1 trillion slide dragging its valuation back to pre-AI-boom multiples on doubts about AI capital-spending returns — not collapsing demand. The product front is quiet by contrast: Claude ID verification went live yesterday for a flagged subset of consumer users, Fable 5&#x27;s paid-plan cutoff was pushed to July 12 (a correction to yesterday&#x27;s read), and the deployable tier holds — Opus 4.8 anchors, Sonnet 5 is the Claude Code default at $2/$10 intro pricing. GPT-5.6 stays preview-gated to roughly 20 partners and Gemini 3.5 Pro remains in preview.</p>
+      <a class="backlink" href="daily-intelligence-briefings.html">&larr; All daily intelligence briefings</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <article>
+      <p>After a run centered on the delivery surface — Cowork on web and mobile, Microsoft 365 write tools, a FedRAMP High government beta — the fresh movement rotates to the public markets, and it is the sharpest market story in weeks. A semiconductor selloff deepened on Wednesday, July 8, wiping an estimated $1.3 trillion in chip-sector value; Nvidia's roughly $1 trillion slide since its spring peak has pulled its valuation back to pre-AI-boom multiples, with the stock up only about 5.6% in 2026 and trading near 18 times forward earnings (Source: Bloomberg, July 8; Forbes, July 8; press aggregation of Reuters estimates — treat index and percentage figures as press-reported). The driver is doubt about the return on AI capital spending, dot-com-level valuations, and a more hawkish Fed rather than any collapse in chip demand. The product front is quiet by contrast: Claude ID verification went live yesterday, July 8, for a flagged subset of consumer users, processed by Persona Identities; Fable 5's paid-plan cutoff was pushed from July 7 to July 12 (a correction to yesterday's briefing, which read it as already on usage credits); and the deployable tier is unchanged — Opus 4.8 anchors, Sonnet 5 (June 30; $2/$10 intro through August 31, then $3/$15; 1M context) is the Claude Code default. On the frontier nothing generally shipped: GPT-5.6 stays gated to roughly 20 government-approved partners and Gemini 3.5 Pro remains in preview (a July 17 launch is circulating but unconfirmed). Markets are tracked in Section 5.</p>
+      <h2 id="1-ai-market-trends">1. AI Market Trends</h2>
+      <p>After weeks in which the movement was on the delivery surface, the story this run is the AI trade itself — and it is under pressure.</p>
+      <p>First, the chip selloff deepened. Semiconductor equities fell sharply into Wednesday, July 8, in a slide that press coverage estimates has erased roughly $1.3 trillion in sector market value. Nvidia is the anchor: its decline since the spring peak — widely described as a roughly $1 trillion slide — has taken its valuation back toward pre-AI-boom levels, with the shares up only about 5.6% in 2026 and trading near 18 times projected forward earnings, the cheapest multiple since early 2019 (Source: Bloomberg, "Nvidia's $1 Trillion Slide Sends Valuation to Pre-AI Boom Levels," July 8; Yahoo Finance syndication). Breadth measures fell with it: the Philadelphia Semiconductor Index is reported off about 10.8%, the VanEck semiconductor index down roughly 13% over ten sessions, and the iShares Semiconductor ETF down about 8% in a single week (Source: Forbes, "Semiconductor Selloff Deepens As AI Spending Fears Hit Intel," July 8 — press-reported; re-confirm against live feeds before external use).</p>
+      <p>Second, the cause is sentiment, not demand. The consistent read across coverage is that the selloff reflects doubt about the return on record AI infrastructure spending, valuations that critics compare to the dot-com peak, and a more hawkish Fed — not deteriorating fundamentals. A Reuters report that DeepSeek is developing its own AI chip, potentially reducing its dependence on Nvidia and Samsung silicon, added to the pressure (Source: Forbes, July 8; Kavout market analysis — secondary; treat the DeepSeek chip report as reported, not confirmed). Several analysts frame the move as a "mid-cycle reset" and say they are maintaining 12-month price targets on names like Nvidia and Micron.</p>
+      <p>Third, single-name damage is broad. Intel is reported down about 21% inside the July selloff; AMD cratered roughly 8% and Applied Materials fell about 10% after Samsung earnings triggered the leg down on July 7; Micron closed off about 4.7% on memory-demand concerns (Source: Forbes, July 8; 24/7 Wall St., "Intel and Applied Materials Dive 10%, AMD Craters 8%," July 7). One nuance worth holding: the AI trade appears to be rotating within the complex — toward memory and storage — rather than exiting wholesale, which is why a name like Micron is discussed as both a casualty and a next-leg beneficiary.</p>
+      <p>Fourth, insider-selling headlines kept circulating but do not, on inspection, signal panic. Nvidia CEO Jensen Huang and CFO Colette Kress sold shares on June 17 at $207.41, and Director Mark Stevens disposed of more than 2 million shares in June; the executive sales were coordinated on a single day at an identical price, consistent with pre-scheduled 10b5-1 plans rather than a discretionary exit (Source: MarketBeat insider-trades data; Motley Fool, July 7 — treat exact figures as reported). On the product side, the calendar advanced two items: Fable 5's paid-plan cutoff moved to July 12 (Section 3), and Claude ID verification went live yesterday, July 8. The deployable model lineup is otherwise steady — Opus 4.8 proven, Sonnet 5 the Claude Code default and general workhorse at $2/$10 intro — and the frontier did not generally ship: GPT-5.6 remains gated to roughly 20 government-approved partners with general availability "coming weeks," and Gemini 3.5 Pro is still in preview (Source: OpenAI Help Center; TechTimes, July 6; BigGo — vendor/leak-attributed).</p>
+      <h2 id="2-top-10-ai-agents-three-lenses">2. Top 10 AI Agents — Three Lenses</h2>
+      <p>Rankings as of Thursday, July 9, 2026. Material change this run is external: the movement is in the public markets, not the product set. The deployable model set is unchanged — Sonnet 5 (June 30) is the Claude Code default and the workhorse to validate, Fable 5 sits on paid plans through July 12 before moving to usage credits, Gemini 3.5 Pro is still an unshipped July target, and GPT-5.6 stays government-gated to about 20 partners.</p>
+      <h3 id="2a-relevance-for-claude-mcp-centered-work">2a. Relevance for Claude / MCP-Centered Work</h3>
+      <div class="table-wrap"><table>
+      <thead>
+      <tr>
+      <th>Rank</th>
+      <th>Agent / Platform</th>
+      <th>Justification</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>1</td>
+      <td>Claude Cowork</td>
+      <td>Still a core delivery surface for Claude-centered work — now on web and mobile with sessions running remotely in beta (Max first), so scheduled and long-running automations continue with no device online. Directly relevant to every Cowork deployment.</td>
+      </tr>
+      <tr>
+      <td>2</td>
+      <td>Claude Enterprise + Microsoft 365 write path (governance layer)</td>
+      <td>Admin analytics, model defaults/entitlements, spend alerts, and a write-enabled Microsoft 365 connector gated behind Entra admin consent — draft/send email, calendars, OneDrive/SharePoint; Teams read-only. The exact read-to-write boundary a documented AI implementation policy is built to govern.</td>
+      </tr>
+      <tr>
+      <td>3</td>
+      <td>MCP-based connectors (cross-vendor)</td>
+      <td>Central after enterprise-managed connector access (Okta first); all four Tier-1 v2 SDK betas (Python, TypeScript, Go, C#) remain published against the 2026-07-28 spec RC, with v1.x the only production-recommended line.</td>
+      </tr>
+      <tr>
+      <td>4</td>
+      <td>Claude Opus 4.8 / Sonnet 5</td>
+      <td>Opus 4.8 the proven flagship; Sonnet 5 the workhorse (near-Opus, $2/$10 intro), the default in Claude Code and for Free/Pro. Validate Sonnet 5 before load-bearing use.</td>
+      </tr>
+      <tr>
+      <td>5</td>
+      <td>Claude Code + Agent SDK</td>
+      <td>Primary agentic build tool; Sonnet 5 is its default model, and this run adds login-expiry warnings, clearer agent-status and manual-mode badges, and background-session fixes — small reliability gains for unattended work.</td>
+      </tr>
+      </tbody>
+      </table></div>
+      <p><em>(Watch line: Claude for Government — Code + Cowork public beta on FedRAMP High; governance precedent, not a general delivery lane. Claude Science — agentic workbench for regulated scientific work. Claude Fable 5 — included on paid plans through July 12, then usage-credits-only at $10/$50; evaluate accordingly.)</em></p>
+      <h3 id="2b-market-momentum-adoption-funding-buzz">2b. Market Momentum (adoption / funding / buzz)</h3>
+      <div class="table-wrap"><table>
+      <thead>
+      <tr>
+      <th>Rank</th>
+      <th>Agent / Platform</th>
+      <th>Justification</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>1</td>
+      <td>Anthropic (Cowork web/mobile + M365 write + government beta + IPO)</td>
+      <td>Sustained news share — Cowork on web and mobile with remote sessions, Microsoft 365 write tools, a FedRAMP High Claude for Government beta, Fable 5 extended to July 12, July 8 ID verification, and a fall IPO off the June 1 filing.</td>
+      </tr>
+      <tr>
+      <td>2</td>
+      <td>NVIDIA (the $1 trillion slide)</td>
+      <td>Dominant market share of attention this run — a roughly $1 trillion decline since the spring peak, valuation back to pre-AI-boom multiples, and a semiconductor selloff estimated at $1.3 trillion in erased value. Coverage is heavy but bearish.</td>
+      </tr>
+      <tr>
+      <td>3</td>
+      <td>OpenAI (GPT-5.6 government-gated + $122B raise)</td>
+      <td>Heavy coverage — GPT-5.6 Sol/Terra/Luna still limited to roughly 20 government-approved partners with GA "coming weeks"; a reported $122B raise; a Cerebras deployment targeting up to 750 tokens/second. A July 9 "public launch" claim circulated but is unconfirmed and conflicts with the gated-partner status.</td>
+      </tr>
+      <tr>
+      <td>4</td>
+      <td>Cloud + productivity platforms (Microsoft + AWS + Google Cloud)</td>
+      <td>Steady attention — the write-enabled Microsoft 365 path puts governed Claude actions inside Outlook/OneDrive/SharePoint; the apps gateway routes governed Claude Code to Bedrock and Google Cloud.</td>
+      </tr>
+      <tr>
+      <td>5</td>
+      <td>Chip complex (Intel, AMD, Micron, Applied Materials)</td>
+      <td>Renewed attention for the wrong reasons — Intel reported down about 21%, AMD off roughly 8%, Applied Materials about 10%, and Micron about 4.7% in the July selloff, with the AI trade rotating toward memory rather than exiting.</td>
+      </tr>
+      </tbody>
+      </table></div>
+      <h3 id="2c-capability-maturity-production-readiness">2c. Capability &amp; Maturity (production readiness)</h3>
+      <div class="table-wrap"><table>
+      <thead>
+      <tr>
+      <th>Rank</th>
+      <th>Agent / Model</th>
+      <th>Justification</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>1</td>
+      <td>Claude Opus 4.8</td>
+      <td>Production-proven, available, agentic-optimized, cost-stable; GA in Microsoft Foundry. The reliable reference tier.</td>
+      </tr>
+      <tr>
+      <td>2</td>
+      <td>GPT-5.5 / Codex</td>
+      <td>Shipped, production-grade, broad enterprise deployment.</td>
+      </tr>
+      <tr>
+      <td>3</td>
+      <td>Claude Sonnet 5</td>
+      <td>GA since June 30, near-Opus performance, 1M context, $2/$10 intro; the default in Claude Code. Production-viable but validate on real workloads before load-bearing use.</td>
+      </tr>
+      <tr>
+      <td>4</td>
+      <td>Gemini 3.5 Flash</td>
+      <td>Shipped, GA, default in Search; Pro still in preview (July target; a July 17 date is circulating but unconfirmed).</td>
+      </tr>
+      <tr>
+      <td>5</td>
+      <td>Open weights (GLM 5.2, Nemotron 3 Ultra, MiniMax M3, Kimi K2.7)</td>
+      <td>Generally available and self-hostable — real production options. GLM 5.2 and Nemotron 3 independently corroborated on the Intelligence Index; MiniMax M3 headline scores remain largely vendor-reported.</td>
+      </tr>
+      </tbody>
+      </table></div>
+      <p><em>(Not ranked as broadly deployable: Claude for Government Code/Cowork — public beta, FedRAMP High, agency-scoped; Claude Science — public beta, domain-scoped; GPT-5.6 (Sol/Terra/Luna) — roughly 20 government-approved partners, GA "coming weeks"; Gemini 3.5 Pro — pre-GA, July target; Fable 5 — paid plans through July 12, then usage credits.)</em></p>
+      <h3 id="divergence-analysis">Divergence Analysis</h3>
+      <p>The locus of movement keeps rotating — connector governance, then the delivery surface, now the public markets — and this run's rotation is the most external yet. What you can actually deploy did not change: Opus 4.8 and Sonnet 5 anchor, the gated frontier (GPT-5.6, Gemini 3.5 Pro) is unchanged, and the delivery-surface upgrades from last week are still rolling out. What changed is the market's mood about the trade funding all of it. The important discipline is to separate the two: a $1.3 trillion selloff driven by capital-spending doubts and Fed policy is a valuation story, not a capability story, and none of the tools an organization deploys got slower or less available because Nvidia re-rated. Near-term movers to watch, in order of proximity: Fable 5 paid-plan cutoff (July 12), GPT-5.6 GA ("coming weeks"), Gemini 3.5 Pro GA (July target; unconfirmed July 17), MCP v2 stable (roughly July 27) and spec (July 28), EU AI Act transparency (August 2).</p>
+      <p><strong>What This Means for You.</strong> The market wobble is easy to misread. When headlines describe a $1 trillion slide and doubts about AI-capex "returns," it is tempting to conclude the technology itself is faltering — but a $1.3 trillion selloff driven by valuation, capital-spending skepticism, and Fed policy is a market story, not a capability story. None of the tools an organization deploys got slower or less available because Nvidia re-rated. The more useful response is internal: use the moment to ask whether your own AI adoption is disciplined, measured, and governed. On the product side, the run's only substantive items are small — Claude Code's login-expiry warnings and background-session fixes improve unattended reliability, and Fable 5 stays included on paid plans through July 12, four days longer than an early read suggested. Treat any GPT-5.6/Gemini timing as unconfirmed.</p>
+      <h2 id="3-agentic-ai-advances-new-releases">3. Agentic AI Advances &amp; New Releases</h2>
+      <p>Genuinely new or sharpened items since the July 8 briefing:</p>
+      <p><strong>Fable 5 paid-plan access extended to July 12 — a correction.</strong> Hours before the July 7 cutoff, Anthropic extended included Fable 5 access on all paid plans through July 12; Pro, Max, Team, and select Enterprise subscribers can use it for up to 50% of their weekly usage limits until then. After July 12, access shifts to prepaid usage credits at $10/M input and $50/M output, described as temporary until capacity allows a return to standard subscriptions (Source: Claude on X, July 7; TechTimes, July 7; Forbes, July 7; Android Authority — primary/press). This corrects yesterday's briefing, which read Fable 5 as already on usage credits from July 7.</p>
+      <p><strong>Claude ID verification went live yesterday (July 8).</strong> The scheduled check began: a flagged subset of Free/Pro/Max users may be asked for a government ID plus a live selfie and facial-geometry template, processed by third-party KYC provider Persona Identities; Team, Enterprise, and API are exempt; Anthropic describes the checks as limited to accounts flagged for possible abuse (Source: TechTimes, June 21; it-connect; cybernews). This is now in effect, not pending.</p>
+      <p><strong>Claude Code reliability pass (minor).</strong> This window's Claude Code notes add login-expiry warnings, clearer agent-status and manual-mode badges, smoother background sessions with macOS/Windows/worktree/daemon fixes, improved streaming responsiveness, trimmed startup memory, and a VS Code remote-control setting — all small, all relevant to dependable unattended automation (Source: Releasebot, Anthropic Claude Code updates, July 2026).</p>
+      <p><strong>Cowork on web and mobile — carry, still rolling out.</strong> Cowork runs on web and mobile in addition to desktop, with sessions executing remotely in beta so sessions and files persist to the Claude account across devices; scheduled tasks run with no device online, rollout starting with Max (Source: Claude by Anthropic, "Claude Cowork on web and mobile"; 9to5Mac, July 7 — primary/press; per-plan timing vendor-stated).</p>
+      <p><strong>Microsoft 365 write tools — carry, gated.</strong> The Microsoft 365 connector's write actions — draft/send email, manage calendars, update mailbox settings, create/update OneDrive and SharePoint files — require Microsoft Entra admin consent; Teams stays read-only (Source: Claude Help Center release notes; Claude for Microsoft 365 — primary).</p>
+      <p><strong>Claude for Government — Code + Cowork public beta on FedRAMP High (carry).</strong> FedRAMP High authorized inference, local conversation storage on the agency device, admin configuration defaults and per-department spend control, tamper-evident audit logs, ATO-supporting documentation, deployed via agency MDM (Source: Claude by Anthropic, "Bringing Claude Code and Claude Cowork to government" — primary).</p>
+      <p><strong>GPT-5.6 — still preview-gated (carry, with a flag).</strong> Sol/Terra/Luna remain limited to roughly 20 government-approved partners via API and Codex, not in ChatGPT; GA "coming weeks," no confirmed date. A July 9 "public launch" claim surfaced on a low-quality source but conflicts with the still-gated status and is not corroborated — treat as unconfirmed (Source: OpenAI Help Center; TechTimes, July 6 — vendor-attributed).</p>
+      <p><strong>MCP v2 SDK betas — full Tier-1 set (carry).</strong> Python, TypeScript, Go, C# v2 betas against the 2026-07-28 spec release candidate (final July 28): stateless core, caching hints, W3C Trace Context, OAuth/OIDC-aligned authorization, a deprecation policy, and an extensions framework. v1.x remains the only production-recommended line (Source: Model Context Protocol blog).</p>
+      <p><strong>Gemini 3.5 Pro — still in preview (carry).</strong> GA slipped from June to July and remains a limited enterprise preview; a July 17 launch is circulating but is a leak, not a Google confirmation; a 2,000,000-token context window and a Deep Think reasoning layer are claimed (Source: TechTimes, June 29; BigGo — vendor/leak-attributed).</p>
+      <p>Carry items (scheduled or unchanged): Anthropic IPO — confidential S-1 filed June 1, targeting a fall listing, raise reported above $60B, last round roughly $965B; figures unaudited (Source: CNBC, June 1; Fortune, June 1). EU AI Act — Article 50 transparency obligations apply August 2, 2026 (Source: European Commission — verify specifics before external use).</p>
+      <p><strong>What This Means for You.</strong> Two items are worth acting on. First, if you are evaluating Fable 5, note it stays included on paid plans (up to 50% of weekly usage) through July 12 before the $10/$50 credit rate applies — four more days than an early-cutoff read implied. Second, the Claude Code reliability fixes (login-expiry warnings, background-session stability) quietly strengthen the case for unattended, scheduled automation. Claude ID verification is now live for a flagged subset of Free/Pro/Max users; it does not affect Team, Enterprise, or API use. Vendor and leak-sourced timing (GPT-5.6 GA, the GPT-5.6 "public launch" rumor, Gemini's July 17, the 2M context claim) are hypotheses until confirmed.</p>
+      <h2 id="4-overnight-daily-release-monitor">4. Overnight / Daily Release Monitor</h2>
+      <p>Covering roughly July 8 – July 9 since the July 8 publish:</p>
+      <ul>
+      <li><strong>Fable 5 paid-plan cutoff moved to July 12</strong> — included on all paid plans (up to 50% of weekly usage) through July 12, then usage credits at $10/$50; a correction to yesterday's read (Source: Claude on X, July 7; TechTimes, July 7 — primary/press).</li>
+      <li><strong>Claude ID verification went live (July 8)</strong> — flagged consumer subset, government ID + selfie via Persona Identities; now in effect (Source: TechTimes, June 21; it-connect).</li>
+      <li><strong>Claude Code reliability pass</strong> — login-expiry warnings, agent-status/manual-mode badges, background-session and streaming fixes, VS Code remote-control setting (Source: Releasebot — press aggregation of release notes).</li>
+      <li><strong>No new generally-available frontier model</strong> from any US lab in the window. Sonnet 5 (June 30) remains the most recent GA; GPT-5.6 stays preview-gated; Gemini 3.5 Pro stays in preview.</li>
+      <li><strong>Open weights</strong> — no confirmed new drop July 8–9; GLM 5.2, Nemotron 3 Ultra, MiniMax M3, and Kimi K2.7 remain the current wave (Source: OpenRouter; Artificial Analysis).</li>
+      <li><strong>Public markets</strong> — the standout: a deepening semiconductor selloff into July 8 erased an estimated $1.3 trillion in chip-sector value, with Nvidia's roughly $1 trillion slide taking its valuation to pre-AI-boom multiples; Intel about −21%, AMD about −8%, Applied Materials about −10%, Micron about −4.7% (Source: Bloomberg, July 8; Forbes, July 8; 24/7 Wall St., July 7). Section 5 details.</li>
+      <li>Carry, unchanged: Cowork web/mobile rollout (Max first); Microsoft 365 write tools; Claude for Government FedRAMP High beta; GPT-5.6 GA "coming weeks"; MCP v2 stable roughly July 27 and spec July 28; EU AI Act transparency August 2; Anthropic IPO proceeding from the June 1 filing.</li>
+      </ul>
+      <p><strong>What This Means for You.</strong> A quiet stretch for products, a loud one for markets. There is no model-upgrade action to take. The one useful update is Fable 5's four-day extension; the one operational positive is the Claude Code reliability pass. The market selloff needs no response at the workflow level — it changes valuations, not the availability or capability of anything you deploy. If anyone on your team asks whether the "AI wobble" affects their setup, the short answer is that it does not.</p>
+      <h2 id="5-ai-trading-trends">5. AI Trading Trends</h2>
+      <p><em>Market intelligence for situational awareness — not investment advice. No buy, sell, or hold recommendations, price targets, or return forecasts appear here. Every figure carries a source and a confidence note; where a precise closing price or a definitive same-day volume ranking could not be confirmed to an authoritative feed, that is stated plainly rather than guessed.</em></p>
+      <h3 id="5a-ipos-the-public-market-ai-wave">5a. IPOs — the public-market AI wave</h3>
+      <ul>
+      <li><strong>Anthropic</strong> filed confidentially for a US IPO on June 1, targeting a listing in the second half of 2026 (fall widely reported). The raise is reported above $60 billion; the last private round was roughly $965 billion (a May Series H that raised about $65 billion). A reported run-rate near $47 billion at end-May is unaudited (Source: CNBC, June 1; Fortune, June 1 — treat private financials as reported, not verified).</li>
+      <li><strong>Cerebras</strong> (AI systems and chip designer) priced its IPO at $185 per share, above range, sold about 215 million shares for a raise near $5.55 billion, popped roughly 68% on its May 14 debut, and reached a market cap around $95 billion — the largest US tech IPO since 2019. OpenAI is reported to be deploying GPT-5.6 Sol on Cerebras at up to 750 tokens/second (Source: CNBC, May 13; NextPlatform, May 15 — confirm current figures against primary disclosures).</li>
+      <li><strong>CoreWeave</strong> (CRWV), the March 2025 AI-infrastructure IPO, is noted for context, not as a 2026 listing; it trades as part of the AI-infrastructure complex now under selloff pressure (Source: Motley Fool; Nasdaq).</li>
+      <li><strong>SpaceX</strong> and <strong>OpenAI</strong> remain on the 2026 watchlist, each discussed alongside Anthropic as a potential large listing; neither is a pure-play AI equity and timing is unconfirmed (Source: Fortune; NBC News).</li>
+      </ul>
+      <h3 id="5b-top-5-traded-ai-related-tickers">5b. Top 5 traded AI-related tickers</h3>
+      <p>This is not a definitive "most-traded-today-by-volume" ranking from a single authoritative source. Figures below reflect the July 7–8 selloff; daily-move and price figures are press-reported. Treat the ordering as indicative and re-confirm against a live exchange volume leaderboard.</p>
+      <div class="table-wrap"><table>
+      <thead>
+      <tr>
+      <th>#</th>
+      <th>Ticker</th>
+      <th>Company</th>
+      <th>Why it's an AI-trading bellwether</th>
+      <th>Latest verifiable signal</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>1</td>
+      <td>NVDA</td>
+      <td>Nvidia</td>
+      <td>The AI-GPU anchor; the most direct route from AI capital spending to revenue</td>
+      <td>Roughly $1 trillion slide since the spring peak took the valuation to pre-AI-boom multiples; up about 5.6% in 2026 and near 18× forward earnings. Exact July 8 close not confirmed to a single authoritative feed this window (a scraped $204.12 figure conflicts with the selloff narrative and is not used) (Source: Bloomberg, July 8; Forbes, July 8)</td>
+      </tr>
+      <tr>
+      <td>2</td>
+      <td>MU</td>
+      <td>Micron Technology</td>
+      <td>High-bandwidth memory for AI accelerators; the name the AI trade is rotating toward</td>
+      <td>Closed about −4.7% on July 8 on memory-demand concerns, even as analysts discuss memory as the next leg of the AI trade (Source: press aggregation, July 8 — re-confirm against a live feed)</td>
+      </tr>
+      <tr>
+      <td>3</td>
+      <td>INTC</td>
+      <td>Intel</td>
+      <td>Broad-line chipmaker; sentiment bellwether for the semiconductor complex</td>
+      <td>Reported down about 21% inside the July 2026 semiconductor selloff (Source: Forbes, "Semiconductor Selloff Deepens As AI Spending Fears Hit Intel," July 8)</td>
+      </tr>
+      <tr>
+      <td>4</td>
+      <td>AMD</td>
+      <td>Advanced Micro Devices</td>
+      <td>Second AI accelerator plus data-center CPU</td>
+      <td>Cratered about 8% on July 7 after Samsung earnings triggered the leg down; high-liquidity AI name (Source: 24/7 Wall St., July 7)</td>
+      </tr>
+      <tr>
+      <td>5</td>
+      <td>PLTR</td>
+      <td>Palantir</td>
+      <td>Enterprise-AI software bellwether; high retail trading interest</td>
+      <td>Software, not silicon — held up better than the chip names on the sovereign-AI engine story, but a confirmed same-day July 8 figure was not available to a single authoritative feed this window; included on relevance, not a verified close (Source: 24/7 Wall St.; Yahoo Finance)</td>
+      </tr>
+      </tbody>
+      </table></div>
+      <p>Two honest caveats: index-level breadth figures (Philadelphia Semiconductor Index about −10.8%, VanEck semis about −13% over ten sessions, iShares Semi ETF about −8% in a week) are press-reported and should be re-confirmed against a live feed. And precise same-day closing prices for several names above were not confirmed to a single authoritative source at publish time — the selloff's direction and magnitude are well-corroborated across outlets, but treat any specific per-share number as reported, not verified, before external use.</p>
+      <p><strong>What This Means for You.</strong> The signal here is about discipline, not portfolio strategy. The week's market story is a sentiment-driven re-rating of the AI trade — a $1.3 trillion chip selloff on doubts about AI-spending returns, not on failing technology. For any organization adopting AI, that is a prompt to ask a harder question internally: is our own AI adoption measured, controlled, and producing something we can point to? Read this as market context, not investment guidance; nothing here changes what you can build or deploy today.</p>
+      <h2 id="sources">Sources</h2>
+      <ul>
+      <li>Bloomberg, "Nvidia's $1 Trillion Slide Sends Valuation to Pre-AI Boom Levels," July 8, 2026. <a href="https://www.bloomberg.com/news/articles/2026-07-08/nvidia-s-1-trillion-slide-sends-valuation-to-pre-ai-boom-levels" target="_blank" rel="noopener">https://www.bloomberg.com/news/articles/2026-07-08/nvidia-s-1-trillion-slide-sends-valuation-to-pre-ai-boom-levels</a></li>
+      <li>Forbes, "Semiconductor Selloff Deepens As AI Spending Fears Hit Intel," July 8, 2026. <a href="https://www.forbes.com/sites/petercohan/2026/07/08/intel-stock-down-21-inside-the-july-2026-semiconductor-selloff/" target="_blank" rel="noopener">https://www.forbes.com/sites/petercohan/2026/07/08/intel-stock-down-21-inside-the-july-2026-semiconductor-selloff/</a></li>
+      <li>24/7 Wall St., "Intel and Applied Materials Dive 10%, AMD Craters 8% as Samsung Earnings Trigger Chip Selloff," July 7, 2026. <a href="https://247wallst.com/investing/2026/07/07/intel-and-applied-materials-dive-10-amd-craters-8-as-samsung-earnings-trigger-chip-selloff/" target="_blank" rel="noopener">https://247wallst.com/investing/2026/07/07/intel-and-applied-materials-dive-10-amd-craters-8-as-samsung-earnings-trigger-chip-selloff/</a></li>
+      <li>Kavout, "What Triggered the Recent Semiconductor Sell-Off," July 2026. <a href="https://www.kavout.com/market-lens/what-triggered-the-recent-semiconductor-sell-off" target="_blank" rel="noopener">https://www.kavout.com/market-lens/what-triggered-the-recent-semiconductor-sell-off</a></li>
+      <li>NBC News, "Global tech sell-off intensifies, led by AI and chip stocks," July 2026. <a href="https://www.nbcnews.com/business/business-news/tech-sell-off-markets-spacex-alphabet-nasdaq100-stocks-rcna351331" target="_blank" rel="noopener">https://www.nbcnews.com/business/business-news/tech-sell-off-markets-spacex-alphabet-nasdaq100-stocks-rcna351331</a></li>
+      <li>MarketBeat, "NVIDIA (NVDA) Insider Trading Activity 2026." <a href="https://www.marketbeat.com/stocks/NASDAQ/NVDA/insider-trades/" target="_blank" rel="noopener">https://www.marketbeat.com/stocks/NASDAQ/NVDA/insider-trades/</a></li>
+      <li>Motley Fool, "AI Leaders Nvidia, Palantir, and Meta Platforms Are Shaking Wall Street's Foundation," July 7, 2026. <a href="https://www.fool.com/investing/2026/07/07/nvda-pltr-meta-shake-wall-st-156-billion-warning/" target="_blank" rel="noopener">https://www.fool.com/investing/2026/07/07/nvda-pltr-meta-shake-wall-st-156-billion-warning/</a></li>
+      <li>Claude on X (@claudeai), "We're extending access to Claude Fable 5 on all paid plans through July 12," July 7, 2026. <a href="https://x.com/claudeai/status/2074548242386178258" target="_blank" rel="noopener">https://x.com/claudeai/status/2074548242386178258</a></li>
+      <li>TechTimes, "Claude Fable 5 Free Window Extended to July 12: What Subscribers Should Do Now," July 7, 2026. <a href="https://www.techtimes.com/articles/319875/20260707/claude-fable-5-free-window-extended-july-12-what-subscribers-should-do-now.htm" target="_blank" rel="noopener">https://www.techtimes.com/articles/319875/20260707/claude-fable-5-free-window-extended-july-12-what-subscribers-should-do-now.htm</a></li>
+      <li>Forbes, "Claude Fable 5 Extends By Five More Days. 10 Moves To Make Now!," July 7, 2026. <a href="https://www.forbes.com/sites/sandycarter/2026/07/07/claude-fable-5-extends-by-five-more-days-10-moves-to-make-now/" target="_blank" rel="noopener">https://www.forbes.com/sites/sandycarter/2026/07/07/claude-fable-5-extends-by-five-more-days-10-moves-to-make-now/</a></li>
+      <li>Android Authority, "Claude Fable 5 promotion extended after backlash over early cutoff," July 2026. <a href="https://www.androidauthority.com/claude-fable-5-free-extension-3685103/" target="_blank" rel="noopener">https://www.androidauthority.com/claude-fable-5-free-extension-3685103/</a></li>
+      <li>Anthropic, "Redeploying Claude Fable 5," July 2026. <a href="https://www.anthropic.com/news/redeploying-fable-5" target="_blank" rel="noopener">https://www.anthropic.com/news/redeploying-fable-5</a></li>
+      <li>TechTimes, "Claude Identity Verification Starts July 8: What Facial Data Anthropic Collects," June 21, 2026. <a href="https://www.techtimes.com/articles/318778/20260621/claude-identity-verification-starts-july-8-what-facial-data-anthropic-collects.htm" target="_blank" rel="noopener">https://www.techtimes.com/articles/318778/20260621/claude-identity-verification-starts-july-8-what-facial-data-anthropic-collects.htm</a></li>
+      <li>IT-Connect, "Anthropic to Verify Claude Users' Age and Identity on July 8," 2026. <a href="https://www.it-connect.tech/claude-anthropic-will-start-verifying-users-age-and-identity-on-july-8/" target="_blank" rel="noopener">https://www.it-connect.tech/claude-anthropic-will-start-verifying-users-age-and-identity-on-july-8/</a></li>
+      <li>Cybernews, "Anthropic updates privacy policy, includes ID verification for Claude users," 2026. <a href="https://cybernews.com/ai-news/anthropic-privacy-policy-id-verification/" target="_blank" rel="noopener">https://cybernews.com/ai-news/anthropic-privacy-policy-id-verification/</a></li>
+      <li>Claude by Anthropic, "Claude Cowork on web and mobile: hand off work anywhere," July 2026. <a href="https://claude.com/blog/cowork-web-mobile" target="_blank" rel="noopener">https://claude.com/blog/cowork-web-mobile</a></li>
+      <li>9to5Mac, "Anthropic expanding Claude Cowork to mobile and web, details here," July 7, 2026. <a href="https://9to5mac.com/2026/07/07/anthropic-expanding-claude-cowork-to-mobile-and-web-details-here/" target="_blank" rel="noopener">https://9to5mac.com/2026/07/07/anthropic-expanding-claude-cowork-to-mobile-and-web-details-here/</a></li>
+      <li>Claude Help Center, "Release notes," July 2026. <a href="https://support.claude.com/en/articles/12138966-release-notes" target="_blank" rel="noopener">https://support.claude.com/en/articles/12138966-release-notes</a></li>
+      <li>Releasebot, "Claude Code Updates by Anthropic — July 2026." <a href="https://releasebot.io/updates/anthropic/claude-code" target="_blank" rel="noopener">https://releasebot.io/updates/anthropic/claude-code</a></li>
+      <li>Claude by Anthropic, "Bringing Claude Code and Claude Cowork to government," July 2026. <a href="https://claude.com/blog/bringing-claude-code-and-claude-cowork-to-government" target="_blank" rel="noopener">https://claude.com/blog/bringing-claude-code-and-claude-cowork-to-government</a></li>
+      <li>OpenAI Help Center, "A preview of GPT-5.6 Sol, Terra, and Luna," 2026. <a href="https://help.openai.com/en/articles/20001325-a-preview-of-gpt-56-sol-terra-and-luna" target="_blank" rel="noopener">https://help.openai.com/en/articles/20001325-a-preview-of-gpt-56-sol-terra-and-luna</a></li>
+      <li>TechTimes, "GPT-5.6 Release Nears: Ultra Mode Spawns Subagents, Terra Cuts Cost, METR Flags Risk," July 6, 2026. <a href="https://www.techtimes.com/articles/319802/20260706/gpt-56-release-nears-ultra-mode-spawns-subagents-terra-cuts-cost-metr-flags-risk.htm" target="_blank" rel="noopener">https://www.techtimes.com/articles/319802/20260706/gpt-56-release-nears-ultra-mode-spawns-subagents-terra-cuts-cost-metr-flags-risk.htm</a></li>
+      <li>TechTimes, "Gemini 3.5 Pro Cleared for July Launch as Fable 5 Nears Return, GPT-5.6 Stays Locked," June 29, 2026. <a href="https://www.techtimes.com/articles/319318/20260629/gemini-35-pro-cleared-july-launch-fable-5-nears-return-gpt-56-stays-locked.htm" target="_blank" rel="noopener">https://www.techtimes.com/articles/319318/20260629/gemini-35-pro-cleared-july-launch-fable-5-nears-return-gpt-56-stays-locked.htm</a></li>
+      <li>BigGo Finance, "Google Delays Gemini 3.5 Pro Launch to July 17 for Full Architectural Rebuild," 2026. <a href="https://finance.biggo.com/news/6f0c6bb2-795f-4c57-9d09-6db691d7638a" target="_blank" rel="noopener">https://finance.biggo.com/news/6f0c6bb2-795f-4c57-9d09-6db691d7638a</a></li>
+      <li>Model Context Protocol Blog, "Beta SDKs for the 2026-07-28 MCP Spec Release Candidate Are Here," 2026. <a href="https://blog.modelcontextprotocol.io/posts/sdk-betas-2026-07-28/" target="_blank" rel="noopener">https://blog.modelcontextprotocol.io/posts/sdk-betas-2026-07-28/</a></li>
+      <li>OpenRouter Blog, "The Open Weight Models that Matter: June 2026." <a href="https://openrouter.ai/blog/insights/the-open-weight-models-that-matter-june-2026/" target="_blank" rel="noopener">https://openrouter.ai/blog/insights/the-open-weight-models-that-matter-june-2026/</a></li>
+      <li>CNBC, "Anthropic confidentially files IPO prospectus with SEC," June 1, 2026. <a href="https://www.cnbc.com/2026/06/01/anthropic-ipo-s1-prospectus.html" target="_blank" rel="noopener">https://www.cnbc.com/2026/06/01/anthropic-ipo-s1-prospectus.html</a></li>
+      <li>Fortune, "Anthropic confidentially files for IPO after raising $65 billion at a $965 billion valuation," June 1, 2026. <a href="https://fortune.com/2026/06/01/anthropic-confidentially-files-ipo-965-billion-valuation/" target="_blank" rel="noopener">https://fortune.com/2026/06/01/anthropic-confidentially-files-ipo-965-billion-valuation/</a></li>
+      <li>CNBC, "Cerebras prices IPO above expected range," May 13, 2026. <a href="https://www.cnbc.com/2026/05/13/cerebras-prices-ipo-above-expected-range-wall-street-expects-ai-flood.html" target="_blank" rel="noopener">https://www.cnbc.com/2026/05/13/cerebras-prices-ipo-above-expected-range-wall-street-expects-ai-flood.html</a></li>
+      <li>NextPlatform, "With Its IPO Done, Cerebras Can Get Back To Pushing The AI Envelope," May 15, 2026. <a href="https://www.nextplatform.com/compute/2026/05/15/with-its-ipo-done-cerebras-can-get-back-to-pushing-the-ai-envelope/" target="_blank" rel="noopener">https://www.nextplatform.com/compute/2026/05/15/with-its-ipo-done-cerebras-can-get-back-to-pushing-the-ai-envelope/</a></li>
+      <li>European Commission, "AI Act | Shaping Europe's digital future," 2026. <a href="https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" target="_blank" rel="noopener">https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai</a></li>
+      </ul>
+    </article>
+
+    <section class="cta-band" id="contact" aria-labelledby="cta-heading">
+      <h2 id="cta-heading">From AI curiosity to AI capability</h2>
+      <p>This briefing is part of the field research behind our AI Enablement service &mdash; a curated, white-glove Claude Cowork implementation tailored to your organization&rsquo;s workflow.</p>
+      <a class="btn" href="https://calendly.com/mark-malaniru/30min" target="_blank" rel="noopener">Book a discovery call</a>
+    </section>
+    <!-- mal-ai-disclaimer:v1 -->
+  <aside class="mal-ai-disclaimer" role="note" aria-label="AI transparency notice" style="max-width:760px;margin:2.5rem auto 0;padding:1rem 1.25rem;border:1px solid #d9c3a5;border-left:4px solid #C07830;border-radius:6px;background:#faf6f0;color:#5c5347;font-size:0.82rem;line-height:1.6;box-sizing:border-box;">
+    <strong style="display:block;color:#8a5a1e;font-size:0.78rem;letter-spacing:.04em;text-transform:uppercase;margin-bottom:.35rem;">AI Transparency Notice</strong>
+    This article was produced through Malaniru&rsquo;s guided-research process: generated with the assistance of AI and reviewed by a person before publication (human-in-the-loop). In line with EU AI Act transparency obligations, we disclose that AI systems were used to create this content. It is provided for general information only, may contain inaccuracies, and is not professional advice &mdash; verify before relying on it.
+  </aside>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Malaniru Inc, LLC &middot; Lafayette, Colorado &middot; AI Enablement</p>
+    <p><a href="daily-intelligence-briefings.html">&larr; Back to Daily Intelligence Briefings</a> &middot; <a href="index.html">AI Enablement</a></p>
+      <nav class="mal-footernav" data-mal-footernav aria-label="Site" style="margin-top:0.7rem;font-size:0.82rem;line-height:1.9;">
+      <a href="about.html" style="color:#C07830;font-weight:700;text-decoration:none;">About</a> &middot;
+      <a href="pricing.html" style="color:#C07830;font-weight:700;text-decoration:none;">Pricing</a> &middot;
+      <a href="index.html" style="color:#C07830;font-weight:700;text-decoration:none;">AI Enablement</a>
+     &middot;
+      <a href="privacy-policy.html" style="color:#C07830;font-weight:700;text-decoration:none;">Privacy</a>
+    </nav>
+  </footer>
+</body>
+</html>
