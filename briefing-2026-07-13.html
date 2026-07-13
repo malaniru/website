@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<!--
+  Malaniru - Daily Intelligence Briefing (branded HTML)
+  Built by: publish_briefing_page.py - Date: 2026-07-13
+  Source:   Projects/Malaniru_Marketing_Site/Staging/20260713-daily-intelligence-briefing.md
+  FIDELITY: Body rendered VERBATIM from the source markdown. No copy edits.
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daily Intelligence Briefing — Monday, July 13, 2026 - Malaniru</title>
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.malaniru.com/briefing-2026-07-13">
+  <meta name="description" content="The deadline that was supposed to bite today moved instead: Fable 5&#x27;s included access on paid Claude plans has been extended a second time — now through July 19, with metered usage credits ($10/$50 per million tokens) starting July 20 rather than today. The Monday market story is SK Hynix: its ticker flips from the temporary SKHYV to the permanent SKHY today as GraniteShares&#x27; leveraged ETFs (SKUU/SKDD) launch — even as its Seoul-listed shares fell a record ~15% after Friday&#x27;s ~13% US debut pop. No new frontier model dropped over the weekend; the deployable Claude tier is unchanged — Opus 4.8 anchors, Sonnet 5 is the Claude Code default; Claude Code v2.1.207 (July 11) remains the latest release.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --navy:#0F1A2E;--navy-mid:#2A3F63;--copper:#C07830;--gold:#D4A853;
+      --off-white:#F4F1EC;--light-gray:#E8E6E1;--mid-gray:#8A8A96;--dark-text:#1C1C1C;
+      --font:"Inter","Helvetica Neue",Arial,sans-serif;
+    }
+    *{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:var(--font);background:var(--off-white);color:var(--dark-text);line-height:1.65;font-size:16px;-webkit-font-smoothing:antialiased;}
+    .skip-link{position:absolute;left:-999px;top:0;background:var(--gold);color:var(--navy);padding:10px 16px;font-weight:700;z-index:10;}
+    .skip-link:focus{left:8px;top:8px;}
+    a{color:var(--copper);}
+    /* Header */
+    header{background: linear-gradient(160deg, rgba(15,26,46,0.72) 0%, rgba(10,18,33,0.82) 100%), url('StockCake-Cosmic_Web_Complexity-1361288-standard-rot90ccw.jpg'); background-size: auto, 100% 100%; background-repeat: no-repeat, no-repeat; background-position: center, center;color:var(--off-white);padding:48px 24px 52px;position:relative;overflow:hidden;}
+    header::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 85% 12%,rgba(192,120,48,0.20) 0%,rgba(15,26,46,0) 55%);pointer-events:none;}
+    .header-inner{max-width:760px;margin:0 auto;position:relative;z-index:1;}
+    .wordmark{font-weight:800;font-size:1.25rem;letter-spacing:0.02em;margin-bottom:30px;}
+    .wordmark .dot{color:var(--copper);}
+    .wordmark a{color:var(--off-white);text-decoration:none;transition:opacity .18s ease;}
+    .wordmark a:hover,.wordmark a:focus-visible{opacity:.85;outline:none;}
+    .eyebrow{display:inline-block;font-size:0.72rem;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;}
+    header h1{font-weight:800;font-size:clamp(1.8rem,4.6vw,2.6rem);line-height:1.14;letter-spacing:-0.01em;margin-bottom:16px;}
+    .byline{font-size:0.9rem;color:var(--light-gray);letter-spacing:0.01em;}
+    .byline .sep{color:var(--copper);margin:0 8px;}
+    .lede{font-size:1.08rem;color:var(--light-gray);max-width:66ch;margin-top:18px;}
+    .backlink{display:inline-block;margin-top:26px;color:var(--gold);font-weight:600;font-size:0.9rem;text-decoration:none;border-bottom:1px solid rgba(212,168,83,0.4);}
+    .backlink:hover,.backlink:focus-visible{border-bottom-color:var(--gold);outline:none;}
+    /* Article */
+    main{max-width:760px;margin:0 auto;padding:48px 24px 8px;}
+    .disclaimer{background:#fff;border:1px solid var(--light-gray);border-left:4px solid var(--copper);border-radius:8px;padding:14px 18px;font-size:0.9rem;color:var(--navy-mid);margin-bottom:34px;}
+    article{font-size:1.05rem;}
+    article h2{font-weight:800;font-size:1.5rem;color:var(--navy);line-height:1.22;letter-spacing:-0.01em;margin:42px 0 14px;}
+    article h3{font-weight:700;font-size:1.18rem;color:var(--navy-mid);line-height:1.25;margin:30px 0 10px;}
+    article h2 + p, article h3 + p{margin-top:0;}
+    article p{margin:0 0 18px;color:var(--dark-text);}
+    article ul,article ol{margin:0 0 18px;padding-left:24px;}
+    article li{margin-bottom:8px;}
+    article strong{font-weight:700;color:var(--navy);}
+    article em{font-style:italic;}
+    article a{color:var(--copper);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(192,120,48,0.35);transition:border-color .18s ease;}
+    article a:hover,article a:focus-visible{border-bottom-color:var(--copper);outline:none;}
+    article hr{border:none;border-top:1px solid var(--light-gray);margin:34px 0;}
+    article h2#sources, article h2#references{border-top:1px solid var(--light-gray);padding-top:30px;font-size:1.2rem;color:var(--navy-mid);}
+    /* sources list smaller */
+    article h2[id^="sources"] ~ ul li, article h3[id^="sources"] ~ ul li{font-size:0.95rem;color:var(--navy-mid);}
+    /* tables */
+    article table{width:100%;border-collapse:collapse;margin:0 0 24px;font-size:0.95rem;}
+    article th,article td{border:1px solid var(--light-gray);padding:9px 12px;text-align:left;vertical-align:top;}
+    article thead th{background:var(--navy);color:var(--off-white);font-weight:700;}
+    article tbody tr:nth-child(even){background:#fff;}
+    article .table-wrap{overflow-x:auto;margin:0 0 24px;}
+    article .table-wrap table{margin:0;}
+    /* CTA */
+    .cta-band{background:var(--navy);color:var(--off-white);border-radius:12px;padding:42px 32px;text-align:center;margin:48px 0 8px;}
+    .cta-band h2{font-weight:800;font-size:clamp(1.4rem,3.4vw,1.9rem);margin-bottom:12px;letter-spacing:-0.01em;color:var(--off-white);}
+    .cta-band p{color:var(--light-gray);max-width:52ch;margin:0 auto 24px;}
+    .cta-band .btn{display:inline-block;background:var(--copper);color:#fff;font-weight:700;padding:13px 28px;border-radius:8px;text-decoration:none;transition:background .18s ease;}
+    .cta-band .btn:hover,.cta-band .btn:focus-visible{background:var(--gold);color:var(--navy);outline:none;}
+    /* Footer */
+    footer{max-width:760px;margin:16px auto 0;padding:24px;font-size:0.82rem;color:var(--mid-gray);border-top:1px solid var(--light-gray);}
+    footer p+p{margin-top:6px;}
+    footer a{color:var(--mid-gray);text-decoration:underline;}
+    @media (prefers-reduced-motion:reduce){*{transition:none!important;}}
+
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header>
+    <div class="header-inner">
+      <div class="wordmark"><a href="index.html">Malaniru<span class="dot">.</span></a></div>
+      <span class="eyebrow">AI Enablement &middot; Daily Intelligence Briefing</span>
+      <h1>Daily Intelligence Briefing — Monday, July 13, 2026</h1>
+      <p class="byline">By Mark Harris<span class="sep">&middot;</span>July 13, 2026</p>
+      <p class="lede">The deadline that was supposed to bite today moved instead: Fable 5&#x27;s included access on paid Claude plans has been extended a second time — now through July 19, with metered usage credits ($10/$50 per million tokens) starting July 20 rather than today. The Monday market story is SK Hynix: its ticker flips from the temporary SKHYV to the permanent SKHY today as GraniteShares&#x27; leveraged ETFs (SKUU/SKDD) launch — even as its Seoul-listed shares fell a record ~15% after Friday&#x27;s ~13% US debut pop. No new frontier model dropped over the weekend; the deployable Claude tier is unchanged — Opus 4.8 anchors, Sonnet 5 is the Claude Code default; Claude Code v2.1.207 (July 11) remains the latest release.</p>
+      <a class="backlink" href="daily-intelligence-briefings.html">&larr; All daily intelligence briefings</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <article>
+      <p>Yesterday's briefing said Fable 5's included access ended July 12 and usage credits ($10/$50 per million tokens) would begin today, July 13. That is no longer the plan: over the weekend Anthropic extended the included-access window a second time — Fable 5 now stays included on paid plans (Pro, Max, Team, select Enterprise) through July 19, with the switch to prepaid usage credits pushed to July 20 (Source: Forbes, "Claude Fable 5 Extends To July 19," July 13; BleepingComputer, July 2026; DigitalApplied, July 2026 — press-reported; the extension was posted via @claudeai after the July 12 cutoff had already passed. Verify in Settings → Usage before relying on it). The practical takeaway inverts from yesterday: there is no cutoff today, but the credit-enablement task is not cancelled — only deferred to July 20. The Monday market story is SK Hynix: its US ADR ticker flips from the temporary <strong>SKHYV</strong> to the permanent <strong>SKHY</strong> today as GraniteShares' two leveraged single-stock ETFs (<strong>SKUU</strong>, <strong>SKDD</strong>) begin trading — while its Seoul-listed shares (000660.KS) fell a record ~15% Monday after Friday's ~13% US debut pop to a ~$168 close off $149 pricing. No new generally-available frontier model dropped over the weekend: the deployable Claude tier is unchanged — Opus 4.8 anchors, Sonnet 5 (June 30) is the Claude Code default; Claude Code v2.1.207 (July 11) remains the latest release, and Gemini 3.5 Pro is still an unshipped July target in preview (rumored July 17, unconfirmed).</p>
+      <h2 id="1-ai-market-trends">1. AI Market Trends</h2>
+      <p>Monday reopens the equities story that sat frozen over a closed weekend, and the two loudest threads — one internal to the Claude stack, one in the chip complex — both moved in ways that revise, rather than confirm, last week's expectations.</p>
+      <p>First, the Fable 5 timeline slipped again. What the prior two briefings framed as a hard July 12 cutoff — with usage-credit pricing kicking in today — has been deferred a second time. Included access on paid plans now runs through July 19, and the metered-credit switch ($10 per million input tokens, $50 per million output — the highest pricing Anthropic has published for a GA model) moves to July 20; the 50%-higher Claude Code weekly rate limits ride along to the same date (Source: Forbes, July 13; BleepingComputer, July 2026 — press-reported). This is the second extension in a week (July 7 → July 12 → July 19), and the pattern itself is the signal: the constraint is capacity, not policy, and the date is soft enough that planning around any single one of these deadlines has repeatedly proven premature.</p>
+      <p>Second, the SK Hynix listing entered its "morning after" phase. The record US debut — a ~13% first-day pop Friday, July 10 to close near $168.01 off a $149 ADR pricing, a raise of roughly $26.5 billion billed as the largest-ever US first-time share sale by a foreign company — is now colliding with a sharp reaction in the home market: SK Hynix's Seoul-listed shares (000660.KS) fell a record ~15% Monday, with traders citing worries the AI-memory boom has become overstretched and a rotation into the newly listed US ADRs (Source: Bloomberg, "SK Hynix Shares Drop in Seoul After Much-Hyped US Trading Debut," July 13; CNBC, July 10 — press-reported). Two mechanical events land today regardless of price: the US ADR ticker changes from the when-issued <strong>SKHYV</strong> to the regular-way <strong>SKHY</strong>, and GraniteShares' leveraged ETFs <strong>SKUU</strong> (2x long) and <strong>SKDD</strong> (-2x short) begin trading (Source: Nasdaq Trader, DTN #2026-11; GraniteShares, July 13 — primary/vendor). Detail in Section 5.</p>
+      <p>Third, the surrounding semiconductor complex is still digesting the early-July valuation-and-sentiment reset rather than a demand collapse. Coverage continues to tie the rout to a report that SK Hynix plans to slow high-bandwidth-memory (HBM) capacity expansion and tilt toward lower-cost commodity DRAM, with Micron, Intel, and AMD taking the sharpest single-name hits and the VanEck Semiconductor ETF (SMH) off several percent on the move (Source: Intellectia.ai, "AI Chip Stocks Plunge," July 2026; Forbes, July 8 — press-reported; figures vary by outlet and window). Nvidia has continued to trade apart from the group, holding up better than the sector through the selloff (Source: 24/7 Wall St., July 9; GuruFocus, July — press-reported). The Seoul drop feeds directly into that narrative: the very supplier whose record listing anchored the week is also the name at the center of the HBM-discipline worry.</p>
+      <p>Fourth, the protocol and enterprise-enablement layer keeps standardizing underneath all of it. The MCP 2026-07-28 specification remains on track — a release candidate is available now, with the final spec and its stateless-first core landing July 28 (more in Section 3). Microsoft's 60+-server MCP catalog across Copilot, Foundry, and GitHub from earlier in the month underscores how quickly the connector surface is consolidating (Source: Model Context Protocol blog; Microsoft Power Platform blog, July 6 — primary/vendor). The throughline is unchanged: capital and attention are concentrating on the operational and governance layer — deployment, connectors, agent reliability — as much as on the models themselves.</p>
+      <h2 id="2-top-10-ai-agents-three-lenses">2. Top 10 AI Agents — Three Lenses</h2>
+      <p>Rankings as of Monday, July 13, 2026. No new generally-available frontier model dropped over the weekend, and no new Claude Code release landed since v2.1.207 (July 11). The material change since yesterday is not a product ship but a date slip: the Fable 5 included-access window moved from "closes July 12" to "closes July 19." The Claude deployable set is unchanged — Opus 4.8 anchors, Sonnet 5 (June 30) is the Claude Code default. Gemini 3.5 Pro remains an unshipped July target in preview (rumored July 17, unconfirmed); GPT-5.6 is roughly four days into general availability.</p>
+      <h3 id="2a-relevance-for-claude-mcp-centered-work">2a. Relevance for Claude / MCP-Centered Work</h3>
+      <div class="table-wrap"><table>
+      <thead>
+      <tr>
+      <th>Rank</th>
+      <th>Agent / Platform</th>
+      <th>Justification</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>1</td>
+      <td>Claude Cowork</td>
+      <td>Still a core delivery surface for Claude-centered work — Chat and Cowork share one home tab, one sidebar, and one place for Projects &amp; Artifacts on web and desktop, with the remote-session beta rolling out over the coming weeks starting on Max. Directly relevant to every Cowork deployment.</td>
+      </tr>
+      <tr>
+      <td>2</td>
+      <td>Claude Code + Agent SDK</td>
+      <td>Primary agentic build tool; v2.1.207 (July 11) remains the latest release — auto mode default on Bedrock, Vertex AI, and Foundry, Bedrock on Opus 4.8, plus fixes for long-stream terminal freezes and a non-interactive consent-dialog bug. No new release over the weekend; the recent reliability cadence is what keeps unattended, scheduled automation dependable.</td>
+      </tr>
+      <tr>
+      <td>3</td>
+      <td>MCP-based connectors (cross-vendor)</td>
+      <td>Central and increasingly cross-model: the 2026-07-28 spec (final July 28) moves to a stateless core, adds MCP Apps (server-rendered UIs) and a Tasks extension for long-running work, and aligns auth with OAuth/OIDC. Microsoft's 60+-server catalog underscores how fast the connector surface is standardizing. Tier-1 SDK support is expected within the ten-week validation window; v1.x remains the production-recommended line.</td>
+      </tr>
+      <tr>
+      <td>4</td>
+      <td>Claude Enterprise + Microsoft 365 write path (governance layer)</td>
+      <td>Admin analytics, model defaults/entitlements, spend alerts, and a write-enabled Microsoft 365 connector gated behind Entra admin consent. The exact read-to-write boundary a documented AI implementation policy is built to govern — and more valuable now that a second frontier (GPT-5.6) is live and teams ask which model does which job.</td>
+      </tr>
+      <tr>
+      <td>5</td>
+      <td>Claude Opus 4.8 / Sonnet 5</td>
+      <td>Opus 4.8 the proven flagship; Sonnet 5 the workhorse (near-Opus, $2/$10 intro through Aug 31), the default in Claude Code and for Free/Pro. Validate Sonnet 5 before load-bearing use.</td>
+      </tr>
+      </tbody>
+      </table></div>
+      <p><em>(Watch line: Claude Fable 5 — now included on paid plans through July 19 (extended a second time), then usage-credits-only at $10/$50 from July 20. GPT-5.6 + ChatGPT Work — generally available and a genuine agent competitor; relevant as a comparison point teams will raise, not as a general delivery lane. Claude for Government — Code + Cowork public beta on FedRAMP High.)</em></p>
+      <h3 id="2b-market-momentum-adoption-funding-buzz">2b. Market Momentum (adoption / funding / buzz)</h3>
+      <div class="table-wrap"><table>
+      <thead>
+      <tr>
+      <th>Rank</th>
+      <th>Agent / Platform</th>
+      <th>Justification</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>1</td>
+      <td>SK Hynix (SKHYV → SKHY) — the record debut, day two</td>
+      <td>Still the loudest name of the week — a ~13% US first-day pop Friday to a ~$168 close on a ~$26.5B raise billed as the largest US listing ever by a foreign company; the ticker flips to SKHY today and leveraged ETFs SKUU/SKDD launch today, even as Seoul shares fell a record ~15% Monday. The memory/HBM supplier at the center of the AI accelerator cycle.</td>
+      </tr>
+      <tr>
+      <td>2</td>
+      <td>OpenAI (GPT-5.6 GA + ChatGPT Work)</td>
+      <td>Sustained dominance — roughly four days into GA across ChatGPT, Codex, and the API, with Luna's $1/$6 pricing driving the open price-war narrative and a vendor-stated 54% coding-token-efficiency claim for Sol (unaudited).</td>
+      </tr>
+      <tr>
+      <td>3</td>
+      <td>Anthropic (Fable 5 second extension + adoption lead)</td>
+      <td>Steady share — the Fable 5 included-access window extended a second time to July 19, a recent near-daily Claude Code release cadence (latest v2.1.207, July 11), unified Chat/Cowork, and a reported revenue run-rate crossing ~$30B (reported, unaudited — treat with caution).</td>
+      </tr>
+      <tr>
+      <td>4</td>
+      <td>NVIDIA (the divergence)</td>
+      <td>Still the AI-market bellwether — trading apart from the chip selloff and holding up better than the sector through early July; exact same-day print varies by source.</td>
+      </tr>
+      <tr>
+      <td>5</td>
+      <td>Microsoft (MCP catalog + Frontier Company)</td>
+      <td>Steady enterprise attention — a 60+-server MCP catalog across Copilot/Foundry/GitHub, plus the earlier $2.5B, 6,000-expert Frontier Company deployment push and the write-enabled Microsoft 365 Claude path.</td>
+      </tr>
+      </tbody>
+      </table></div>
+      <h3 id="2c-capability-maturity-production-readiness">2c. Capability &amp; Maturity (production readiness)</h3>
+      <div class="table-wrap"><table>
+      <thead>
+      <tr>
+      <th>Rank</th>
+      <th>Agent / Model</th>
+      <th>Justification</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>1</td>
+      <td>Claude Opus 4.8</td>
+      <td>Production-proven, available, agentic-optimized, cost-stable; GA in Microsoft Foundry and the Bedrock default in Claude Code v2.1.207. The reliable reference tier.</td>
+      </tr>
+      <tr>
+      <td>2</td>
+      <td>GPT-5.6 (Sol / Terra / Luna)</td>
+      <td>Generally available and production-grade across ChatGPT, Codex, and the API since July 9; vendor-reported strong on coding and cybersecurity. Validate on real workloads before load-bearing use; Claude still leads on SWE-bench Pro.</td>
+      </tr>
+      <tr>
+      <td>3</td>
+      <td>Claude Sonnet 5</td>
+      <td>GA since June 30, near-Opus performance, 1M context, $2/$10 intro through Aug 31; the default in Claude Code. Production-viable; validate before load-bearing use.</td>
+      </tr>
+      <tr>
+      <td>4</td>
+      <td>GPT-5.5 / Codex</td>
+      <td>Shipped, production-grade, broad enterprise deployment; now the prior-generation OpenAI tier.</td>
+      </tr>
+      <tr>
+      <td>5</td>
+      <td>Gemini 3.5 Flash</td>
+      <td>Shipped, GA, default in Search; Pro still in preview (July target, rumored July 17, no confirmed date).</td>
+      </tr>
+      </tbody>
+      </table></div>
+      <p><em>(Not ranked as broadly deployable this run: Gemini 3.5 Pro — pre-GA, July target, reportedly still refining reasoning/coding and token efficiency; Claude Fable 5 — included through July 19, then usage credits; open weights GLM 5.2, Nemotron 3 Ultra, MiniMax M3, Kimi K2.7 — GA and self-hostable but a tier below the flagships.)</em></p>
+      <h3 id="divergence-analysis">Divergence Analysis</h3>
+      <p>The three lenses stay coherent as markets reopen. Momentum (2b) is still led by SK Hynix — a record debut now entering a volatile day two, with a US ticker switch and ETF launch landing the same Monday its Seoul shares fell a record ~15%; that whipsaw is exactly the kind of event that keeps a name at the top of the attention ranking. Capability (2c) is unchanged: Opus 4.8 opens, reinforced as the Bedrock default in Claude Code; GPT-5.6's headline efficiency and cybersecurity claims remain vendor-stated and unaudited, and Claude retains the SWE-bench Pro lead that best tracks real software work. Relevance to Claude/MCP work (2a) had no product mover this run — the change is a date, not a ship: Fable 5's included window slipped to July 19. Near-term movers to watch, in order of proximity: SKHYV→SKHY ticker switch and SKUU/SKDD ETF launch (today, July 13), Gemini 3.5 Pro GA (July target, rumored July 17, unconfirmed), Fable 5 included-access cutoff (now July 19; credits July 20), MCP v2 stable and spec (roughly July 27–28), EU AI Act transparency (August 2).</p>
+      <p><strong>What This Means for You.</strong> The most useful correction this run is that the Fable 5 cutoff flagged for today did not happen — it moved to July 19. If you'd planned to fund usage credits by today, you have a week of breathing room: the deadline is real but soft, it has now slipped twice, and the credit-enablement step is deferred, not cancelled. The prudent posture is "enable credits before July 19 and stop chasing the exact date." On the competitive front, GPT-5.6's settling into GA keeps the "should we be on GPT-5.6?" question live; for most teams the answer is worth repeating plainly — it is a task- and governance-dependent routing decision, not a default switch, and Claude still leads on SWE-bench Pro. Nothing in the Claude deployable tier changed over the weekend, so any automation validated last week remains valid today.</p>
+      <h2 id="3-agentic-ai-advances-new-releases">3. Agentic AI Advances &amp; New Releases</h2>
+      <p>Genuinely new or sharpened items since the July 12 briefing:</p>
+      <p><strong>Fable 5 included-access window extended a second time — now July 19.</strong> Over the weekend Anthropic pushed the included-access deadline from July 12 to July 19; usage credits ($10/M input, $50/M output — the highest pricing Anthropic has published for a GA model) now begin July 20 rather than today. The 50%-higher Claude Code weekly rate limits extend to the same date. This is the second extension in a week (July 7 → July 12 → July 19), announced via @claudeai after the July 12 cutoff had passed; Anthropic continues to say it aims to restore Fable 5 as a standard subscription offering when capacity allows. Access past the window still requires manually enabling and funding credits in Settings → Usage (Source: Forbes, "Claude Fable 5 Extends To July 19," July 13; BleepingComputer; DigitalApplied — press-reported).</p>
+      <p><strong>SK Hynix: ticker switch + leveraged ETFs, both today.</strong> The US ADR moves from the when-issued <strong>SKHYV</strong> to the regular-way <strong>SKHY</strong> on Nasdaq today, and GraniteShares' <strong>SKUU</strong> (2x Long SK Hynix Daily) and <strong>SKDD</strong> (-2x Short SK Hynix Daily) begin trading today. Per the effective prospectus dated July 2, net annual fund operating expenses are 1.50% (SKUU) and 2.20% (SKDD), and both use swaps and options rather than holding SK Hynix shares directly (Source: Nasdaq Trader, DTN #2026-11; GraniteShares; GlobeNewswire, July 8 — primary/vendor; confirm final figures against Nasdaq notices). Detail in Section 5.</p>
+      <p><strong>No new Claude Code release over the weekend (carry).</strong> v2.1.207 (July 11) remains the latest version — auto mode default on Bedrock/Vertex/Foundry, Bedrock updated to Opus 4.8, highlight.js 11, plus fixes for long-stream terminal freezes, the non-interactive consent-dialog security bug, and spurious prompt-injection warnings. Stacks on v2.1.206's transcript-tampering block and subagent-carryover fix. Nothing newer than v2.1.207 is confirmed as of this run (Source: Claude Code changelog / DevelopersIO, July 11 — press aggregation of release notes; verify against the official changelog).</p>
+      <p><strong>MCP 2026-07-28 spec release candidate (carry).</strong> The largest revision since launch is available as a release candidate, with the final spec landing July 28. The headline change is a stateless protocol core — the <code>Mcp-Session-Id</code> header and protocol-level session are removed, so any request can land on any server instance and horizontal deployments no longer need sticky routing or shared session stores at the protocol layer (state moves to explicit, model-passed handles). It also adds MCP Apps (server-rendered UIs), a Tasks extension for long-running work, OAuth/OIDC-aligned authorization, and a formal deprecation policy. The ten-week window is for SDK maintainers and client implementers to validate against real workloads; Tier-1 SDKs are expected to ship support within it (Source: Model Context Protocol blog, "The 2026-07-28 MCP Specification Release Candidate" — primary).</p>
+      <p><strong>Gemini 3.5 Pro — still in preview (carry).</strong> GA remains a July target in limited Vertex AI enterprise preview; the loudest rumor is a July 17 date with a 2M context window and stronger math/coding, but Google has published no confirmed general-availability date, model card, or pricing. Reports attribute the slip to reasoning, coding, and token-efficiency refinements after early testing — treat the July 17 date and all spec claims as unconfirmed (Source: BigGo Finance; Coursiv; Geeky Gadgets — press/rumor; unconfirmed).</p>
+      <p><strong>GPT-5.6 general availability (carry).</strong> Roughly four days into GA across ChatGPT, ChatGPT Work, Codex, and the API, with API pricing at Sol $5/$30, Terra $2.50/$15, Luna $1/$6 per million tokens and a vendor 54% coding-token-efficiency claim for Sol (unaudited). Sol on Cerebras at up to ~750 tokens/second is slated for July (Source: iClarified; Dataconomy, July 10 — vendor/press).</p>
+      <p>Carry items (scheduled or unchanged): ChatGPT Work — OpenAI's Cowork-style agentic app, live since July 9. Anthropic IPO — confidential S-1 filed June 1, targeting a fall listing (October reported). EU AI Act — Article 50 transparency obligations apply August 2, 2026 (verify specifics before external use).</p>
+      <p><strong>What This Means for You.</strong> With no new Claude Code release over the weekend, the operational picture is stable: last week's reliability cadence (v2.1.206, v2.1.207) already hardened the failure modes — silent subagent stops, stale background sessions, streaming freezes, the non-interactive consent-dialog gap — that break unattended, scheduled workflows, and nothing new needs validating this morning. The Fable 5 second extension is the near-term update (see Section 2): the deadline moved, so any "fund credits today" plan should be revised to "before July 19." The MCP stateless-core change is still the July-28 milestone to prepare connectors for — worth confirming that any custom MCP server you maintain does not depend on protocol-level sessions before the spec finalizes.</p>
+      <h2 id="4-overnight-daily-release-monitor">4. Overnight / Daily Release Monitor</h2>
+      <p>Covering roughly July 12 – July 13 since the July 12 publish:</p>
+      <ul>
+      <li><strong>Fable 5 included-access extended a second time to July 19</strong> — usage credits ($10/$50) now begin July 20, not today; the announcement landed over the weekend via @claudeai after the July 12 cutoff had passed (Source: Forbes, July 13; BleepingComputer — press).</li>
+      <li><strong>SK Hynix ticker switch + ETF launch today</strong> — SKHYV → SKHY (regular-way trading begins) and GraniteShares' SKUU/SKDD leveraged ETFs launch today (Source: Nasdaq Trader, DTN #2026-11; GraniteShares, July 13 — primary/vendor).</li>
+      <li><strong>SK Hynix Seoul shares fell a record ~15% Monday</strong> after Friday's ~13% US debut pop, on worries the AI-memory boom is overstretched and a rotation into the US ADRs (Source: Bloomberg, July 13 — press).</li>
+      <li><strong>No new generally-available frontier model</strong> dropped over the weekend. GPT-5.6 is ~four days into GA (not a new event); Opus 4.8 and Sonnet 5 (June 30) remain the current Claude tier; Gemini 3.5 Pro stays in preview (rumored July 17, unconfirmed).</li>
+      <li><strong>No new Claude Code release</strong> since v2.1.207 (July 11) is confirmed as of this run.</li>
+      <li><strong>Open weights</strong> — no confirmed new drop July 12–13; GLM 5.2, Nemotron 3 Ultra, MiniMax M3, and Kimi K2.7 remain the current wave (Source: OpenRouter; Artificial Analysis).</li>
+      <li>Carry, unchanged: Cowork unified home tab and remote-session beta (Max first); Microsoft 365 write tools; Microsoft's 60+-server MCP catalog; Claude for Government FedRAMP High beta; MCP v2 stable roughly July 27 and spec July 28; EU AI Act transparency August 2; Anthropic IPO proceeding from the June 1 filing.</li>
+      </ul>
+      <p><strong>What This Means for You.</strong> The overnight news is a schedule change, not a capability change: the one deadline in play (Fable 5 credits) moved out a week, and the market event of the day (SK Hynix's ticker switch, ETF launch, and Seoul drop) is context, not something any production pipeline depends on. Nothing already in production got slower or less available. The single action is to revise any "fund Fable 5 credits by July 13" plan to "by July 19."</p>
+      <h2 id="5-ai-trading-trends">5. AI Trading Trends</h2>
+      <p><em>Market intelligence for situational awareness — not investment advice. No buy, sell, or hold recommendations, price targets, or return forecasts appear here. US markets reopen Monday, July 13; several same-day US figures below could not be confirmed to a single authoritative live feed at publish time and are flagged as such rather than guessed. Every figure carries a source and a confidence note.</em></p>
+      <h3 id="5a-ipos-the-public-market-ai-wave">5a. IPOs — the public-market AI wave</h3>
+      <ul>
+      <li><strong>SK Hynix</strong> remains the week's headline listing, now entering a volatile day two. Its Nasdaq debut Friday, July 10 rose about 13% to close near $168.01 after opening around $170; ADRs priced at $149 the prior day for a raise of roughly $26.5 billion — described across outlets as the largest-ever US first-time share sale by a foreign company. Today, July 13, the US ADR switches from the temporary <strong>SKHYV</strong> to the permanent <strong>SKHY</strong> and begins regular-way trading, and GraniteShares' two leveraged single-stock ETFs — <strong>SKUU</strong> (2x Long) and <strong>SKDD</strong> (-2x Short) — begin trading, with net annual operating expenses of 1.50% and 2.20% respectively per the July 2 prospectus; both use swaps and options rather than holding shares directly. Meanwhile, SK Hynix's Seoul-listed shares (000660.KS) fell a record ~15% Monday on concerns the AI-memory boom is overstretched (Source: CNBC, July 10; Bloomberg, July 13; Nasdaq Trader, DTN #2026-11; GraniteShares / GlobeNewswire, July 8 — press/primary/vendor; confirm the same-day US ADR print against a live feed before external use). SK Hynix is the memory/HBM supplier at the center of the AI accelerator cycle.</li>
+      <li><strong>Anthropic</strong> filed confidentially for a US IPO on June 1, with reporting pointing to a listing as early as October 2026 on the Nasdaq or NYSE; the last private round valued it near $965 billion, and annualized revenue is reported to have grown sharply through 2026, with recent reporting putting the run-rate above ~$30 billion. Private financials are unaudited (Source: CNBC, June 1; press, July — treat as reported, not verified).</li>
+      <li><strong>Cerebras</strong> remains context: it priced at $185, raised about $5.55 billion in its May 14 debut, and reached a market cap near $95 billion; OpenAI is reported to be deploying a faster GPT-5.6 Sol option on Cerebras (up to ~750 tokens/second) in July (Source: CNBC, May 13; Dataconomy, July 10 — confirm against primary disclosures).</li>
+      <li><strong>SpaceX/xAI</strong> and <strong>OpenAI</strong> stay on the 2026 watchlist as potential large listings; timing and structure are unconfirmed and neither is a pure-play AI equity (Source: IG; Intellectia.ai — reported/speculative).</li>
+      </ul>
+      <h3 id="5b-top-5-traded-ai-related-tickers">5b. Top 5 traded AI-related tickers</h3>
+      <p>This is not a definitive "most-traded-today-by-volume" ranking from a single authoritative source. Markets reopen Monday; where a same-day close or a definitive volume ranking could not be confirmed to a live exchange feed, that is stated. Treat the ordering as indicative and re-confirm against a live exchange volume leaderboard.</p>
+      <div class="table-wrap"><table>
+      <thead>
+      <tr>
+      <th>#</th>
+      <th>Ticker</th>
+      <th>Company</th>
+      <th>Why it's an AI-trading bellwether</th>
+      <th>Latest verifiable signal</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>1</td>
+      <td>SKHY (was SKHYV)</td>
+      <td>SK Hynix (ADR)</td>
+      <td>Memory/HBM supplier at the center of the AI accelerator cycle; the week's record listing</td>
+      <td>Debuted July 10 up ~13% to close near $168.01 off a $149 ADR pricing; ~$26.5B raised; ticker switches to SKHY and leveraged ETFs SKUU/SKDD launch today (July 13); Seoul shares (000660.KS) fell a record ~15% Monday (Source: CNBC, July 10; Bloomberg, July 13; Nasdaq Trader)</td>
+      </tr>
+      <tr>
+      <td>2</td>
+      <td>NVDA</td>
+      <td>Nvidia</td>
+      <td>The AI-GPU anchor; the most direct route from AI capital spending to revenue</td>
+      <td>Continued to trade apart from the chip selloff, holding up better than the sector through early July; specific same-day close varies by source and is not confirmed to a single authoritative feed this window (Source: 24/7 Wall St., July 9; GuruFocus, July — press-reported)</td>
+      </tr>
+      <tr>
+      <td>3</td>
+      <td>MU</td>
+      <td>Micron Technology</td>
+      <td>US high-bandwidth-memory name; the segment the AI trade is rotating toward</td>
+      <td>Led one leg of last week's selloff down on the HBM-slowdown worry; a high-liquidity memory bellwether. No confirmed same-day close to a single authoritative feed — included on relevance (Source: Intellectia.ai, July 2026 — re-confirm against a live feed)</td>
+      </tr>
+      <tr>
+      <td>4</td>
+      <td>AMD</td>
+      <td>Advanced Micro Devices</td>
+      <td>Second AI accelerator plus data-center CPU</td>
+      <td>Reported down in last week's early-July rout; a high-liquidity AI name still trading on selloff sentiment (Source: Intellectia.ai, July 2026 — press-reported)</td>
+      </tr>
+      <tr>
+      <td>5</td>
+      <td>INTC</td>
+      <td>Intel</td>
+      <td>Broad-line chipmaker; sentiment bellwether for the semiconductor complex</td>
+      <td>Reported down across the July 2026 selloff (figures vary by window); a high-attention casualty of the rout (Source: Forbes, July 8; Intellectia.ai — press-reported)</td>
+      </tr>
+      </tbody>
+      </table></div>
+      <p>Two honest caveats: the single-name move figures referenced above are press-reported, vary by outlet and measurement window, and should be re-confirmed against a live feed before any external use. Precise same-day closing prices for several names — including Monday's US ADR print for SK Hynix — were not confirmed to a single authoritative source at publish time; the SK Hynix debut pop and pricing, the Monday Seoul drop, and the direction of last week's semiconductor selloff are well-corroborated across outlets, but treat any specific per-share number other than SK Hynix's reported ~$168.01 Friday close and $149 pricing as reported, not verified.</p>
+      <p><strong>What This Means for You.</strong> The signal remains governance, not portfolio strategy. A record $26.5 billion memory-chip listing that popped 13% on its US debut and then saw the same company's home-market shares fall a record 15% two sessions later — while its leveraged ETFs launch into that volatility — captures the whole market mood: capital is re-pricing the AI trade on questions about returns and discipline while still paying up for the names at the center of the buildout. For organizations adopting AI, that ambient board-level skepticism is a useful prompt — it makes leaders ask harder questions about whether their own AI adoption is measured, documented, and controlled, which is exactly the discipline a documented implementation policy and a compliance-awareness habit are meant to support. Read this as market context, not investment guidance; nothing here changes what you can build or deploy today.</p>
+      <h2 id="sources">Sources</h2>
+      <ul>
+      <li>Forbes, "Claude Fable 5 Extends To July 19. 7 Days, 7 Power Moves," July 13, 2026. <a href="https://www.forbes.com/sites/sandycarter/2026/07/13/claude-fable-5-extends-to-july-19-7-days-7-power-moves/" target="_blank" rel="noopener">https://www.forbes.com/sites/sandycarter/2026/07/13/claude-fable-5-extends-to-july-19-7-days-7-power-moves/</a></li>
+      <li>BleepingComputer, "Claude Fable 5 stays free for paid users until July 19 as Anthropic buys more time," July 2026. <a href="https://www.bleepingcomputer.com/news/artificial-intelligence/claude-fable-5-stays-free-for-paid-users-until-july-19-as-anthropic-buys-more-time/" target="_blank" rel="noopener">https://www.bleepingcomputer.com/news/artificial-intelligence/claude-fable-5-stays-free-for-paid-users-until-july-19-as-anthropic-buys-more-time/</a></li>
+      <li>DigitalApplied, "Claude Fable 5 Extended Again: The Access Whiplash Problem," July 2026. <a href="https://www.digitalapplied.com/blog/claude-fable-5-extended-july-19-access-uncertainty-2026" target="_blank" rel="noopener">https://www.digitalapplied.com/blog/claude-fable-5-extended-july-19-access-uncertainty-2026</a></li>
+      <li>Anthropic, "Redeploying Claude Fable 5." <a href="https://www.anthropic.com/news/redeploying-fable-5" target="_blank" rel="noopener">https://www.anthropic.com/news/redeploying-fable-5</a></li>
+      <li>Claude Code Docs, "Claude Code changelog." <a href="https://code.claude.com/docs/en/changelog" target="_blank" rel="noopener">https://code.claude.com/docs/en/changelog</a></li>
+      <li>DevelopersIO, "Main Updates in Claude Code v2.1.207," July 11, 2026. <a href="https://dev.classmethod.jp/en/articles/20260711-cc-updates-v2-1-207/" target="_blank" rel="noopener">https://dev.classmethod.jp/en/articles/20260711-cc-updates-v2-1-207/</a></li>
+      <li>CNBC, "SK Hynix rises 13% in Nasdaq debut. Chairman tells CNBC 'demand is enormous'," July 10, 2026. <a href="https://www.cnbc.com/2026/07/10/sk-hynix-skhy-stock-nasdaq.html" target="_blank" rel="noopener">https://www.cnbc.com/2026/07/10/sk-hynix-skhy-stock-nasdaq.html</a></li>
+      <li>Bloomberg, "SK Hynix Shares Drop in Seoul After Much-Hyped US Trading Debut," July 13, 2026. <a href="https://www.bloomberg.com/news/articles/2026-07-13/sk-hynix-shares-drop-in-seoul-after-much-hyped-us-trading-debut" target="_blank" rel="noopener">https://www.bloomberg.com/news/articles/2026-07-13/sk-hynix-shares-drop-in-seoul-after-much-hyped-us-trading-debut</a></li>
+      <li>Yahoo Finance, "Chip giant SK Hynix raises $26.5 billion in blockbuster US share offering," July 10, 2026. <a href="https://finance.yahoo.com/technology/article/chip-giant-sk-hynix-raises-265-billion-in-blockbuster-us-share-offering-193700352.html" target="_blank" rel="noopener">https://finance.yahoo.com/technology/article/chip-giant-sk-hynix-raises-265-billion-in-blockbuster-us-share-offering-193700352.html</a></li>
+      <li>GraniteShares, "SK Hynix Leveraged ETFs | 2x Long &amp; -2x Short." <a href="https://graniteshares.com/sk-hynix-leveraged-etfs/" target="_blank" rel="noopener">https://graniteshares.com/sk-hynix-leveraged-etfs/</a></li>
+      <li>GlobeNewswire, "SK Hynix hits Nasdaq July 10. SKUU and SKDD are expected to launch on July 13," July 8, 2026. <a href="https://www.globenewswire.com/news-release/2026/07/08/3324503/0/en/SK-Hynix-hits-Nasdaq-July-10-SKUU-and-SKDD-are-expected-to-launch-on-July-13.html" target="_blank" rel="noopener">https://www.globenewswire.com/news-release/2026/07/08/3324503/0/en/SK-Hynix-hits-Nasdaq-July-10-SKUU-and-SKDD-are-expected-to-launch-on-July-13.html</a></li>
+      <li>Nasdaq Trader, "Data Technical News #2026-11 — SK hynix Inc. Initial Public Offering on Nasdaq Global Select Market." <a href="https://www.nasdaqtrader.com/TraderNews.aspx?id=DTN2026-11" target="_blank" rel="noopener">https://www.nasdaqtrader.com/TraderNews.aspx?id=DTN2026-11</a></li>
+      <li>Model Context Protocol Blog, "The 2026-07-28 MCP Specification Release Candidate." <a href="https://blog.modelcontextprotocol.io/posts/2026-07-28-release-candidate/" target="_blank" rel="noopener">https://blog.modelcontextprotocol.io/posts/2026-07-28-release-candidate/</a></li>
+      <li>Microsoft Power Platform Blog, "Dataverse Is Your Agent Data Platform: What's New in July 2026," July 6, 2026. <a href="https://www.microsoft.com/en-us/power-platform/blog/2026/07/06/dataverse-july2026/" target="_blank" rel="noopener">https://www.microsoft.com/en-us/power-platform/blog/2026/07/06/dataverse-july2026/</a></li>
+      <li>iClarified, "OpenAI Launches GPT-5.6 Sol, Terra, and Luna for General Availability," July 10, 2026. <a href="https://www.iclarified.com/101425/openai-launches-gpt56-sol-terra-and-luna-for-general-availability" target="_blank" rel="noopener">https://www.iclarified.com/101425/openai-launches-gpt56-sol-terra-and-luna-for-general-availability</a></li>
+      <li>Dataconomy, "OpenAI Launches GPT-5.6 With Sol, Terra, And Luna Models," July 10, 2026. <a href="https://dataconomy.com/2026/07/10/openai-launches-gpt-5-6-with-sol-terra-and-luna-models/" target="_blank" rel="noopener">https://dataconomy.com/2026/07/10/openai-launches-gpt-5-6-with-sol-terra-and-luna-models/</a></li>
+      <li>BigGo Finance, "Google Delays Gemini 3.5 Pro Launch to July 17 for Full Architectural Rebuild." <a href="https://finance.biggo.com/news/6f0c6bb2-795f-4c57-9d09-6db691d7638a" target="_blank" rel="noopener">https://finance.biggo.com/news/6f0c6bb2-795f-4c57-9d09-6db691d7638a</a></li>
+      <li>Coursiv, "Gemini 3.5 Pro: Release Date, Rumors, Leaks &amp; What Google Confirmed," 2026. <a href="https://coursiv.io/blog/gemini-3-5-pro" target="_blank" rel="noopener">https://coursiv.io/blog/gemini-3-5-pro</a></li>
+      <li>Intellectia.ai, "AI Chip Stocks Plunge: Valuation Concerns Shake Semiconductor Sector July 2026." <a href="https://intellectia.ai/blog/ai-chip-stocks-valuation-concerns-july-2026" target="_blank" rel="noopener">https://intellectia.ai/blog/ai-chip-stocks-valuation-concerns-july-2026</a></li>
+      <li>Forbes, "Semiconductor Selloff Deepens As AI Spending Fears Hit Intel," July 8, 2026. <a href="https://www.forbes.com/sites/petercohan/2026/07/08/intel-stock-down-21-inside-the-july-2026-semiconductor-selloff/" target="_blank" rel="noopener">https://www.forbes.com/sites/petercohan/2026/07/08/intel-stock-down-21-inside-the-july-2026-semiconductor-selloff/</a></li>
+      <li>24/7 Wall St., "Why NVIDIA Might Be Immune to the Semiconductor Sell-Off," July 9, 2026. <a href="https://247wallst.com/investing/2026/07/09/why-nvidia-might-be-immune-to-the-semiconductor-sell-off/" target="_blank" rel="noopener">https://247wallst.com/investing/2026/07/09/why-nvidia-might-be-immune-to-the-semiconductor-sell-off/</a></li>
+      <li>CNBC, "Anthropic confidentially files IPO prospectus with SEC," June 1, 2026. <a href="https://www.cnbc.com/2026/06/01/anthropic-ipo-s1-prospectus.html" target="_blank" rel="noopener">https://www.cnbc.com/2026/06/01/anthropic-ipo-s1-prospectus.html</a></li>
+      <li>CNBC, "Cerebras prices IPO above expected range," May 13, 2026. <a href="https://www.cnbc.com/2026/05/13/cerebras-prices-ipo-above-expected-range-wall-street-expects-ai-flood.html" target="_blank" rel="noopener">https://www.cnbc.com/2026/05/13/cerebras-prices-ipo-above-expected-range-wall-street-expects-ai-flood.html</a></li>
+      <li>European Commission, "AI Act | Shaping Europe's digital future," 2026. <a href="https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" target="_blank" rel="noopener">https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai</a></li>
+      </ul>
+      <p>[THOUGHT LEADERSHIP] [DRAFT — Pending Copy Review]</p>
+    </article>
+
+    <section class="cta-band" id="contact" aria-labelledby="cta-heading">
+      <h2 id="cta-heading">From AI curiosity to AI capability</h2>
+      <p>This briefing is part of the field research behind our AI Enablement service &mdash; a curated, white-glove Claude Cowork implementation tailored to your organization&rsquo;s workflow.</p>
+      <a class="btn" href="https://calendly.com/mark-malaniru/30min" target="_blank" rel="noopener">Book a discovery call</a>
+    </section>
+    <!-- mal-ai-disclaimer:v1 -->
+  <aside class="mal-ai-disclaimer" role="note" aria-label="AI transparency notice" style="max-width:760px;margin:2.5rem auto 0;padding:1rem 1.25rem;border:1px solid #d9c3a5;border-left:4px solid #C07830;border-radius:6px;background:#faf6f0;color:#5c5347;font-size:0.82rem;line-height:1.6;box-sizing:border-box;">
+    <strong style="display:block;color:#8a5a1e;font-size:0.78rem;letter-spacing:.04em;text-transform:uppercase;margin-bottom:.35rem;">AI Transparency Notice</strong>
+    This article was produced through Malaniru&rsquo;s guided-research process: generated with the assistance of AI and reviewed by a person before publication (human-in-the-loop). In line with EU AI Act transparency obligations, we disclose that AI systems were used to create this content. It is provided for general information only, may contain inaccuracies, and is not professional advice &mdash; verify before relying on it.
+  </aside>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Malaniru Inc, LLC &middot; Lafayette, Colorado &middot; AI Enablement</p>
+    <p><a href="daily-intelligence-briefings.html">&larr; Back to Daily Intelligence Briefings</a> &middot; <a href="index.html">AI Enablement</a></p>
+      <nav class="mal-footernav" data-mal-footernav aria-label="Site" style="margin-top:0.7rem;font-size:0.82rem;line-height:1.9;">
+      <a href="about.html" style="color:#C07830;font-weight:700;text-decoration:none;">About</a> &middot;
+      <a href="pricing.html" style="color:#C07830;font-weight:700;text-decoration:none;">Pricing</a> &middot;
+      <a href="index.html" style="color:#C07830;font-weight:700;text-decoration:none;">AI Enablement</a>
+     &middot;
+      <a href="privacy-policy.html" style="color:#C07830;font-weight:700;text-decoration:none;">Privacy</a>
+    </nav>
+  </footer>
+</body>
+</html>
