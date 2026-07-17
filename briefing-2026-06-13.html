@@ -1,26 +1,15 @@
 <!DOCTYPE html>
 <!--
-  ============================================================================
-  Malaniru - Research article page (branded HTML)
-  Built by: Web (Morgan Shaw) - Date: 2026-06-23
-  Project:  Malaniru_Marketing_Site
-  Source:   Website/src/content/research/20260613-daily-intelligence-briefing.md
-  Purpose:  Standalone public article page for a daily intelligence briefing,
-            linked from philanthropy-ai-research.html.
-  STATUS:   Public marketing page. robots noindex pre-launch (mirrors template).
-            Calendly CTA hidden via CSS (per Principal, as in template).
-  FIDELITY: Article body rendered VERBATIM from the approved markdown. No copy
-            edits, no reordered sections, no changed figures or heading levels.
-  FLAGS:    none.
-  TECH:     Single self-contained HTML5 file. Embedded CSS. No JavaScript.
-            Template-matched (philanthropy-ai-adoption.html). WCAG AA. Mobile-first.
-  ============================================================================
+  Malaniru - Daily Intelligence Briefing (branded HTML)
+  Built by: publish_briefing_page.py - Date: 2026-07-17
+  Source:   Projects/Malaniru_Marketing_Site/Staging/20260613-daily-intelligence-briefing.md
+  FIDELITY: Body rendered VERBATIM from the source markdown. No copy edits.
 -->
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Daily Intelligence Briefing — June 13, 2026: Verify the Number, Not the Headline - Malaniru</title>
+  <title>Daily Intelligence Briefing — Saturday, June 13, 2026 - Malaniru</title>
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://www.malaniru.com/briefing-2026-06-13">
   <meta name="description" content="Fable 5&#x27;s top benchmark gets independent confirmation while its loudest number stays vendor-reported, the June 15 Claude 4 retirement is now confirmed, and foundation AI funding accelerates — the day&#x27;s agentic AI landscape for foundation leaders.">
@@ -98,8 +87,8 @@
     <div class="header-inner">
       <div class="wordmark"><a href="index.html">Malaniru<span class="dot">.</span></a></div>
       <span class="eyebrow">AI Enablement &middot; Daily Intelligence Briefing</span>
-      <h1>Daily Intelligence Briefing — June 13, 2026: Verify the Number, Not the Headline</h1>
-      <p class="byline">By Mark Harris<span class="sep">&middot;</span>June 13, 2026</p>
+      <h1>Daily Intelligence Briefing — Saturday, June 13, 2026</h1>
+      <p class="byline">By Mark Andrew Harris<span class="sep">&middot;</span>June 13, 2026</p>
       <p class="lede">Fable 5&#x27;s top benchmark gets independent confirmation while its loudest number stays vendor-reported, the June 15 Claude 4 retirement is now confirmed, and foundation AI funding accelerates — the day&#x27;s agentic AI landscape for foundation leaders.</p>
       <a class="backlink" href="daily-intelligence-briefings.html">&larr; All daily intelligence briefings</a>
     </div>
@@ -107,16 +96,19 @@
 
   <main id="main">
     <article>
+      <blockquote>
+      <p><strong>On the numbers.</strong> Dollar figures here are largely vendor-reported and unaudited. Treat them as directional, and confirm before acting.</p>
+      </blockquote>
       <p>No new frontier model shipped overnight. The consequential movement this run is in verification and deadlines — exactly the kind of detail that separates a careful AI decision from a hasty one.</p>
       <h2 id="the-june-15-deadline-is-now-confirmed-and-specified">The June 15 deadline is now confirmed and specified</h2>
       <p>Two days out, the June 15 changes are fully detailed. Anthropic moves Agent SDK, <code>claude -p</code>, GitHub Actions, and third-party agent usage onto a separate metered credit pool, and retires two original Claude 4 models from the API — <code>claude-sonnet-4-20250514</code> and <code>claude-opus-4-20250514</code>. After that date, calls to those model IDs return an error. A same-day change drops <code>temperature</code>/<code>top_p</code> support on the newest Opus, which can break code even after a clean model-name swap.</p>
       <p>This was a single-source caveat a day ago; it is now confirmed across multiple outlets. That changes the practical posture from "verify" to "migrate now." One detail still needs care: outlets disagree on the exact Opus replacement model, so confirm the precise replacement ID against Anthropic's official model-deprecations page before changing any configuration. Interactive use — Claude.ai, interactive Claude Code, and Claude Cowork — is explicitly unaffected.</p>
       <h2 id="fable-5s-verification-gap-narrowed">Fable 5's verification gap narrowed</h2>
-      <p>Claude Fable 5, the strongest model on most tested suites, now has independent confirmation of its 95% SWE-bench Verified score from the evaluator vals.ai. Its more frequently quoted 80.3% on SWE-bench Pro remains vendor-reported — produced on Anthropic's own scaffolding — with an independent evaluation from Epoch AI still pending as of mid-June.</p>
+      <p>Claude Fable 5, arguably the strongest model on most tested suites, now has independent confirmation of its 95% SWE-bench Verified score from the evaluator vals.ai. Its more frequently quoted 80.3% on SWE-bench Pro remains vendor-reported — produced on Anthropic's own scaffolding — with an independent evaluation from Epoch AI still pending as of mid-June.</p>
       <p>The takeaway is unchanged in direction but stronger in degree: Fable 5 is genuinely the tested leader on at least one independently confirmed suite, and the specific Pro number is still the contested one. The defensible statement is the precise one: independently verified on SWE-bench Verified, vendor-reported on SWE-bench Pro.</p>
       <h2 id="claude-corps-named-hosts-and-a-third-partner">Claude Corps: named hosts and a third partner</h2>
       <p>The $150 million, 1,000-fellow program now has named first-year hosts including RAINN, Goodwill Industries International, Code for America, Year Up United, the YMCA of Greater Charlotte, and the Montgomery County Food Bank — among more than 400 in total. Social Finance is confirmed as the third partner, alongside Anthropic as funder and strategist and CodePath as employer of record, leading measurement and evaluation and building a vehicle to scale the program. Applications for the 100-fellow first cohort, which starts in October 2026, close July 17, with rolling applications for January and August 2027 cohorts.</p>
-      <p>For organizations whose work is grantmaking and the broader nonprofit sector, this remains the most strategically significant item in weeks. The peers of these named hosts are now primed buyers who want the outcome without waiting on a fellowship slot.</p>
+      <p>For organizations whose work is grantmaking and the broader nonprofit sector, this remains arguably the most strategically significant item in weeks. The peers of these named hosts are now likely primed buyers who want the outcome without waiting on a fellowship slot.</p>
       <h2 id="the-competitive-backdrop">The competitive backdrop</h2>
       <p>Gemini 3.5 Pro is still pre-GA, with Sundar Pichai's "wait another month" the most concrete guidance; the 2-million-token, Deep Think model remains in limited Vertex preview. GPT-5.6 is unannounced officially, though trade rumor points to "later this month." Google has wired its consumer agent Gemini Spark to MCP and shipped Antigravity 2.0, its agentic coding tool — continued evidence that MCP is becoming cross-vendor table stakes. OpenAI extended its workspace-agent free period to July 6. The MCP final specification lands July 28 with breaking changes included.</p>
       <h2 id="weekly-view-foundation-and-philanthropy-ai-adoption">Weekly view: foundation and philanthropy AI adoption</h2>
@@ -126,7 +118,7 @@
       <h2 id="weekly-view-data-and-security-regulations">Weekly view: data and security regulations</h2>
       <p>The next hard EU AI Act deadline is August 2, 2026. On that date, the Act's transparency rules under Article 50 take effect, including obligations for generative and general-purpose AI to mark machine-readable synthetic outputs across modalities and for GPAI providers to maintain technical documentation of training and testing. The Act remains in active implementation — the Commission issued draft transparency guidelines in May 2026 and a draft content-marking Code of Practice in December 2025 — so treat the specifics as evolving, not settled.</p>
       <p>A timing nuance matters: GPAI models already on the market before August 2, 2025 have until August 2, 2027 to comply, while newer models face the nearer timeline. Most US foundation and small-organization clients are not direct GPAI providers, so these obligations land indirectly — through vendor selection and through any synthetic content they publish. The practical move is to build the habit of labeling AI-generated media now, and to ask AI vendors whether their documentation and content-marking posture is EU-AI-Act-aligned.</p>
-      <hr>
+      <hr />
       <p>This briefing is internal strategic intelligence adapted for publication. Items drawn from vendor benchmarks, secondary reporting, or scheduled-but-undelivered events are noted as such. Figures attributed to confidential filings or company announcements are reported, not independently audited. This is market and regulatory information, not legal advice.</p>
     </article>
 

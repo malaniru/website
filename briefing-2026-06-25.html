@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <!--
   Malaniru - Daily Intelligence Briefing (branded HTML)
-  Built by: web-publish-briefing component (backfill) - Date: 2026-06-27
-  Source:   Website/src/content/research/20260625-daily-intelligence-briefing.md
-  FIDELITY: Body rendered VERBATIM from the published markdown. No copy edits.
+  Built by: publish_briefing_page.py - Date: 2026-07-17
+  Source:   Projects/Malaniru_Marketing_Site/Staging/20260625-daily-intelligence-briefing.md
+  FIDELITY: Body rendered VERBATIM from the source markdown. No copy edits.
 -->
 <html lang="en">
 <head>
@@ -88,7 +88,7 @@
       <div class="wordmark"><a href="index.html">Malaniru<span class="dot">.</span></a></div>
       <span class="eyebrow">AI Enablement &middot; Daily Intelligence Briefing</span>
       <h1>Daily Intelligence Briefing — Thursday, June 25, 2026</h1>
-      <p class="byline">By Mark Harris<span class="sep">&middot;</span>June 25, 2026</p>
+      <p class="byline">By Mark Andrew Harris<span class="sep">&middot;</span>June 25, 2026</p>
       <p class="lede">Anthropic accuses Alibaba&#x27;s Qwen lab of the largest known distillation attack on Claude. A continuity correction: Fable 5 is reported still suspended worldwide, contradicting last week&#x27;s &#x27;returned and metered&#x27; framing. GPT-5.6 and Gemini 3.5 Pro both slip toward July. Plus Claude Tag on Slack and the firming MCP July-28 spec.</p>
       <a class="backlink" href="daily-intelligence-briefings.html">&larr; All daily intelligence briefings</a>
     </div>
@@ -96,8 +96,11 @@
 
   <main id="main">
     <article>
+      <blockquote>
+      <p><strong>On the numbers.</strong> Dollar figures here are largely vendor-reported and unaudited. Treat them as directional, and confirm before acting.</p>
+      </blockquote>
       <h2 id="executive-summary">Executive Summary</h2>
-      <p>The most significant development this run is Anthropic's public accusation that operators affiliated with Alibaba's Qwen AI lab ran a coordinated "adversarial distillation" campaign against Claude — 28.8 million exchanges across roughly 25,000 fraudulent accounts between April 22 and June 5, disclosed via a letter to the US Senate Banking Committee and White House and surfaced in the press June 24 (Source: CNBC; Bloomberg, June 24, 2026). A continuity correction is warranted: contrary to last week's briefing, several June 24–25 sources report Fable 5 and Mythos 5 remain offline globally under the June 12 export-control directive, with no confirmed restoration and only unverified chatter about staging back into Claude Code. The frontier-release calendar has slipped: prediction-market odds for a GPT-5.6 launch in the June 22–28 window collapsed from roughly 83% to 18%, and Gemini 3.5 Pro has reportedly been pushed to July — neither is generally available today (Source: TechTimes; Startup Fortune, June 2026). Opus 4.8 and Sonnet 4.6 remain the stable, available reference tiers. Carry items hold: the MCP final specification on July 28, EU AI Act transparency obligations on August 2, and Anthropic's IPO targeting an October Nasdaq listing at a $965B last-round valuation.</p>
+      <p>The most significant development this run is Anthropic's public accusation that operators affiliated with Alibaba's Qwen AI lab ran a coordinated "adversarial distillation" campaign against Claude: 28.8 million exchanges across roughly 25,000 fraudulent accounts between April 22 and June 5, disclosed via a letter to the US Senate Banking Committee and White House and surfaced in the press June 24 (Source: CNBC; Bloomberg, June 24, 2026). A continuity correction is warranted: contrary to last week's briefing, several June 24–25 sources report Fable 5 and Mythos 5 remain offline globally under the June 12 export-control directive, with no confirmed restoration and only unverified chatter about staging back into Claude Code. The frontier-release calendar has slipped: prediction-market odds for a GPT-5.6 launch in the June 22–28 window collapsed from roughly 83% to 18%, and Gemini 3.5 Pro has reportedly been pushed to July — neither is generally available today (Source: TechTimes; Startup Fortune, June 2026). Opus 4.8 and Sonnet 4.6 remain the stable, available reference tiers. Carry items hold: the MCP final specification on July 28, EU AI Act transparency obligations on August 2, and Anthropic's IPO targeting an October Nasdaq listing at a $965B last-round valuation.</p>
       <h2 id="1-ai-market-trends">1. AI Market Trends</h2>
       <p>The story today is model security and intellectual-property protection — the "your data and capabilities can leak" problem.</p>
       <p><strong>The Anthropic–Alibaba distillation accusation.</strong> Anthropic sent a letter, dated June 10 and surfaced publicly June 24, to US Senate Banking Committee Chair Tim Scott, Ranking Member Elizabeth Warren, and White House officials, accusing operators affiliated with Alibaba's Qwen AI lab of "brazenly" and "illicitly" attempting to extract Claude's capabilities in what it called "the largest known distillation attack on Anthropic to date." Anthropic alleges roughly 28.8 million exchanges through about 25,000 fraudulent accounts between April 22 and June 5, 2026, targeting Claude's software-engineering and agentic-reasoning capabilities and circumventing rules that prohibit access from inside China (Source: CNBC; Bloomberg, June 24, 2026). "Adversarial distillation" is the technique of repeatedly prompting a frontier model to harvest its reasoning patterns and outputs, then using that corpus to train a competing model. Important framing: this is one company's allegation in a letter to policymakers, not a court finding — treat it as a serious, sourced claim under active dispute, not settled fact.</p>
@@ -218,9 +221,9 @@
       </tr>
       </tbody>
       </table></div>
-      <p><em>(Not ranked as deployable: GPT-5.6 and Gemini 3.5 Pro — both pre-GA and slipping toward July. Fable 5 and Mythos 5 — suspended.)</em></p>
+      <p><em>(Not ranked as deployable: GPT-5.6 and Gemini 3.5 Pro — both pre-GA and slipping toward July. Fable 5 and Mythos 5, suspended.)</em></p>
       <h3 id="divergence-analysis">Divergence Analysis</h3>
-      <p>The dominant divergence this run is capability versus controllability. Fable 5 is, on self-reported benchmarks, the most capable model in the field — and it is the one model on this board you cannot use, because it sits at the intersection of export control and a contested security environment. The Alibaba accusation deepens the theme: the frontier is now governed by who can access and protect capability, not only who can build it. The second divergence is announced versus shipped — the two releases the calendar pointed at this week, GPT-5.6 and Gemini 3.5 Pro, both slipped, a reminder that vendor and market-implied timelines are hypotheses, not commitments. The near-term board-movers to watch remain GPT-5.6 and Gemini 3.5 Pro general availability, now both more likely in July, plus any confirmed Fable 5 restoration.</p>
+      <p>The dominant divergence this run is capability versus controllability. Fable 5 is, on self-reported benchmarks, the most capable model in the field, and it is the one model on this board you cannot use, because it sits at the intersection of export control and a contested security environment. The Alibaba accusation deepens the theme: the frontier is now governed by who can access and protect capability, not only who can build it. The second divergence is announced versus shipped — the two releases the calendar pointed at this week, GPT-5.6 and Gemini 3.5 Pro, both slipped, a reminder that vendor and market-implied timelines are hypotheses, not commitments. The near-term board-movers to watch remain GPT-5.6 and Gemini 3.5 Pro general availability, now both more likely in July, plus any confirmed Fable 5 restoration.</p>
       <p><strong>What This Means for You.</strong> The practical conclusion is that you don't need the newest or most capable model — you need a governed, available, well-integrated, cost-predictable one, with a documented fallback. The repeated slippage of GPT-5.6 and Gemini 3.5 Pro is a concrete argument against building any roadmap around an unshipped model. Hold your reference architecture on tiers that are available today.</p>
       <h2 id="3-agentic-ai-advances-new-releases">3. Agentic AI Advances &amp; New Releases</h2>
       <p>Genuinely new structural items since the June 23 briefing:</p>

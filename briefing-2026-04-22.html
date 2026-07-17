@@ -1,20 +1,9 @@
 <!DOCTYPE html>
 <!--
-  ============================================================================
-  Malaniru - Research article page (branded HTML)
-  Built by: Web (Morgan Shaw) - Date: 2026-06-23
-  Project:  Malaniru_Marketing_Site
-  Source:   Website/src/content/research/20260422-daily-intelligence-briefing.md
-  Purpose:  Standalone public article page for a daily intelligence briefing,
-            linked from philanthropy-ai-research.html.
-  STATUS:   Public marketing page. robots noindex pre-launch (mirrors template).
-            Calendly CTA hidden via CSS (per Principal, as in template).
-  FIDELITY: Article body rendered VERBATIM from the approved markdown. No copy
-            edits, no reordered sections, no changed figures or heading levels.
-  FLAGS:    none.
-  TECH:     Single self-contained HTML5 file. Embedded CSS. No JavaScript.
-            Template-matched (philanthropy-ai-adoption.html). WCAG AA. Mobile-first.
-  ============================================================================
+  Malaniru - Daily Intelligence Briefing (branded HTML)
+  Built by: publish_briefing_page.py - Date: 2026-07-17
+  Source:   Projects/Malaniru_Marketing_Site/Staging/20260422-daily-intelligence-briefing.md
+  FIDELITY: Body rendered VERBATIM from the source markdown. No copy edits.
 -->
 <html lang="en">
 <head>
@@ -99,7 +88,7 @@
       <div class="wordmark"><a href="index.html">Malaniru<span class="dot">.</span></a></div>
       <span class="eyebrow">AI Enablement &middot; Daily Intelligence Briefing</span>
       <h1>Daily Intelligence Briefing — Wednesday, April 22, 2026</h1>
-      <p class="byline">By Mark Harris<span class="sep">&middot;</span>April 22, 2026</p>
+      <p class="byline">By Mark Andrew Harris<span class="sep">&middot;</span>April 22, 2026</p>
       <p class="lede">Anthropic&#x27;s Claude Code pricing experiment becomes the second opaque vendor change in two weeks; Google Cloud Next 2026 opens with agentic-cloud keynote; Q1 2026 venture capital hits $297B–$331B with ~80% to AI.</p>
       <a class="backlink" href="daily-intelligence-briefings.html">&larr; All daily intelligence briefings</a>
     </div>
@@ -107,21 +96,24 @@
 
   <main id="main">
     <article>
+      <blockquote>
+      <p><strong>On the numbers.</strong> Dollar figures here are largely vendor-reported and unaudited. Treat them as directional, and confirm before acting.</p>
+      </blockquote>
       <h2 id="executive-summary">Executive Summary</h2>
-      <p>Two developments dominate today. First, Anthropic spent the last 24 hours inside a Claude Code pricing controversy: on April 21 the public pricing and docs pages were quietly changed to remove Claude Code from the $20/month Pro tier and restrict it to Max (starting at $100/month); by April 22 head-of-growth Amol Avasare said the change was a "small test on ~2% of new prosumer signups" with "existing Pro and Max subscribers not affected," and the pricing page has been partially reverted. Second, Google Cloud Next 2026 opened this morning at Mandalay Bay with Thomas Kurian's "agentic cloud" keynote; TPU v7 Ironwood, Gemini 3.2, Agentspace, and the Agent2Agent Protocol are the announced focus. Separately, Crunchbase, TechCrunch, and KPMG published Q1 2026 venture data showing $297–331B in quarterly VC deployment with roughly 80% going to AI — the largest quarter on record, and a concentration story worth raising with clients. The Anthropic–Amazon $25B/$100B deal from Monday continues to reverberate, joined now by renewed coverage of the Anthropic–Alphabet–Broadcom TPU deal (3.5 GW capacity starting 2027) and Anthropic's disclosed $30B run-rate revenue.</p>
-      <hr>
+      <p>Two developments dominate today. First, Anthropic spent the last 24 hours inside a Claude Code pricing controversy: on April 21 the public pricing and docs pages were quietly changed to remove Claude Code from the $20/month Pro tier and restrict it to Max (starting at $100/month); by April 22, head of growth Amol Avasare said the change was a "small test on ~2% of new prosumer signups" with "existing Pro and Max subscribers not affected," and the pricing page has been partially reverted. Second, Google Cloud Next 2026 opened this morning at Mandalay Bay with Thomas Kurian's "agentic cloud" keynote; TPU v7 Ironwood, Gemini 3.2, Agentspace, and the Agent2Agent Protocol are the announced focus. Separately, Crunchbase, TechCrunch, and KPMG published Q1 2026 venture data showing $297–331B in quarterly VC deployment with roughly 80% going to AI — the largest quarter on record, and a concentration story worth raising with clients. The Anthropic–Amazon $25B/$100B deal from Monday continues to reverberate, joined now by renewed coverage of the Anthropic–Alphabet–Broadcom TPU deal (3.5 GW capacity starting 2027) and Anthropic's disclosed $30B run-rate revenue (vendor-reported).</p>
+      <hr />
       <h2 id="1-ai-market-trends">1. AI Market Trends</h2>
-      <p><strong>Anthropic Claude Code pricing experiment — the communication, not the price, is the story.</strong> On April 21, Anthropic changed its public pricing page and Claude Code support documentation to show Claude Code as exclusive to the Max plan ($100/month) rather than available in Pro ($20/month). No press release, no changelog entry, no user email. Developer reaction was sharp — Simon Willison, The Register, Wheresyoured.at, and The New Stack all covered it within 24 hours. By April 22, Anthropic's head of growth Amol Avasare posted publicly that the change was "a small test on approximately 2% of new prosumer signups" and "existing Pro and Max subscribers aren't affected," and the pricing page has been partially reverted.</p>
+      <p><strong>Anthropic Claude Code pricing experiment — the communication, not the price, is the story.</strong> On April 21, Anthropic changed its public pricing page and Claude Code support documentation to show Claude Code as exclusive to the Max plan ($100/month) rather than available in Pro ($20/month). No press release, no changelog entry, no user email. Developer reaction was sharp: Simon Willison, The Register, Wheresyoured.at, and The New Stack all covered it within 24 hours. By April 22, Anthropic's head of growth Amol Avasare posted publicly that the change was "a small test on approximately 2% of new prosumer signups" and "existing Pro and Max subscribers aren't affected," and the pricing page has been partially reverted.</p>
       <p>For client-facing posture this is the second material "opaque change" event from Anthropic in two weeks (the first being the effort-reduction parameter narrative from April 13–19). The price point itself is not the concern — the pattern of shipping significant changes without notifying existing users is. For any organization whose governance framework cites "vendor-side unannounced changes" as a risk, today's event is a second data point, not a one-off.</p>
-      <p><strong>Google Cloud Next 2026 opens today in Las Vegas — agentic cloud as theme.</strong> The conference runs April 22–24 at Mandalay Bay. Thomas Kurian's keynote started at 9 AM PT this morning. Expected — and in the case of Ironwood, already-announced — releases: TPU v7 "Ironwood" as the inference-era chip (Google confirms "first Google TPU for the age of inference," ~2× power efficiency over prior generation), Gemini 3.2 (contextual window expansion is the market-anticipated headline), Agentspace deployment demos, and Agent2Agent Protocol updates.</p>
-      <p><strong>Anthropic–Alphabet–Broadcom expanded TPU deal — 3.5 GW starting 2027.</strong> Bloomberg, CNBC, and TechCrunch confirmed in early April that Broadcom agreed to produce future generations of Google TPU chips and that Anthropic will use multiple gigawatts — specifically 3.5 GW — of next-generation TPUs starting in 2027. The Motley Fool ran renewed coverage today (April 22) reframing the deal alongside Monday's Amazon announcement. The combined Amazon + Alphabet + Broadcom compute footprint is the underlying story. Bloomberg also reported Anthropic run-rate revenue has surpassed $30B, up from ~$9B at end of 2025, and that 1,000+ customers now spend &gt;$1M/year on Anthropic (doubled in under two months).</p>
-      <p><strong>Q1 2026 venture capital closes at record $297–331B, roughly 80% to AI.</strong> Crunchbase reports $300B deployed into ~6,000 global startups in Q1 2026 — up over 150% quarter-over-quarter and year-over-year. KPMG's Venture Pulse reports a comparable $330.9B figure, up from $128.6B in Q4 2025. TechCrunch reports AI absorbed 80% of that quarter's funding — ~$242B. Four of the five largest venture rounds ever recorded closed in Q1 2026: OpenAI $122B, Anthropic $30B, xAI $20B, Waymo $16B — collectively $188B, or 65% of the quarter. Concentration is the story: four companies pulled 65% of global venture capital in a single quarter.</p>
-      <p><strong>Cursor raising $2B at &gt;$50B valuation.</strong> CNBC, Bloomberg, and TechCrunch confirmed on April 17–19 that Cursor is in active talks for a $2B round led by Andreessen Horowitz and Thrive, with Nvidia and Battery Ventures participating. Cursor's prior post-money valuation was $29.3B six months ago; the round has not formally closed as of April 22. Cursor is reported at &gt;$1B annualized revenue now, projecting $6B run-rate by year-end 2026.</p>
+      <p><strong>Google Cloud Next 2026 opens today in Las Vegas — agentic cloud as theme.</strong> The conference runs April 22–24 at Mandalay Bay. Thomas Kurian's keynote started at 9 AM PT this morning. Expected (and, in the case of Ironwood, already-announced) releases: TPU v7 "Ironwood" as the inference-era chip (Google confirms "first Google TPU for the age of inference," ~2× power efficiency over prior generation, vendor-reported), Gemini 3.2 (contextual window expansion is the market-anticipated headline), Agentspace deployment demos, and Agent2Agent Protocol updates.</p>
+      <p><strong>Anthropic–Alphabet–Broadcom expanded TPU deal — 3.5 GW starting 2027.</strong> Bloomberg, CNBC, and TechCrunch confirmed in early April that Broadcom agreed to produce future generations of Google TPU chips and that Anthropic will use multiple gigawatts (specifically 3.5 GW) of next-generation TPUs starting in 2027. The Motley Fool ran renewed coverage today (April 22) reframing the deal alongside Monday's Amazon announcement. The combined Amazon + Alphabet + Broadcom compute footprint is the underlying story. Bloomberg also reported Anthropic run-rate revenue has surpassed $30B, up from ~$9B at end of 2025, and that 1,000+ customers now spend &gt;$1M/year on Anthropic (doubled in under two months).</p>
+      <p><strong>Q1 2026 venture capital closes at record $297–331B, roughly 80% to AI.</strong> Crunchbase reports $300B deployed into ~6,000 global startups in Q1 2026, up over 150% quarter-over-quarter and year-over-year. KPMG's Venture Pulse reports a comparable $330.9B figure, up from $128.6B in Q4 2025. TechCrunch reports AI absorbed 80% of that quarter's funding: ~$242B. Four of the five largest venture rounds ever recorded closed in Q1 2026: OpenAI $122B, Anthropic $30B, xAI $20B, Waymo $16B — collectively $188B, or 65% of the quarter. Concentration is the story: four companies pulled 65% of global venture capital in a single quarter.</p>
+      <p><strong>Cursor raising $2B at &gt;$50B valuation.</strong> CNBC, Bloomberg, and TechCrunch confirmed on April 17–19 that Cursor is in active talks for a $2B round led by Andreessen Horowitz and Thrive, with Nvidia and Battery Ventures participating. Cursor's prior post-money valuation was $29.3B six months ago; the round has not formally closed as of April 22. Cursor is reported at &gt;$1B annualized revenue now (vendor-reported), with a projected $6B run-rate by year-end 2026.</p>
       <p><strong>What This Means for You.</strong> Three implications.</p>
       <p>For your AI implementation policies, the Anthropic Claude Code pricing experiment is the new pointer: policy language about "vendor unannounced changes" now has its second event in a fortnight. Implementation policy templates should include a named line item — "vendor pricing-tier changes, including experimental changes that may revert" — alongside the existing parameter-change clause. This is a Claude-specific pattern in 2026 and should be documented as such.</p>
-      <p>For team training, Google Cloud Next is the week's live curriculum event. If Gemini 3.2 ships with meaningfully expanded context, any training module on multi-model workflow triage needs a refresh within 60 days. No team should be given training content that positions Gemini as a "future" consideration — it is already in enterprise production.</p>
+      <p>For team training, Google Cloud Next is the week's live curriculum event. If Gemini 3.2 ships with meaningfully expanded context, any training module on multi-model workflow triage needs a refresh within 60 days. No team should be given training content that positions Gemini as a "future" consideration — it is reported to already be in enterprise production.</p>
       <p>For compliance posture, the Q1 VC concentration data sharpens the vendor-risk talking point. AI governance materials should name, explicitly, that 80% of Q1 global venture went to AI and 65% went to four companies. This is not a hype point — it is the underlying capital structure organizations are indirectly exposed to through their tech stacks.</p>
-      <hr>
+      <hr />
       <h2 id="2-top-10-ai-agents-three-lenses">2. Top 10 AI Agents — Three Lenses</h2>
       <p>Rankings as of Wednesday, April 22, 2026. Movement noted relative to Tuesday, April 21.</p>
       <h3 id="2a-relevance-for-claude-mcp-centered-work">2a. Relevance for Claude / MCP-Centered Work</h3>
@@ -315,14 +307,14 @@
       <p>Two divergences worth flagging today.</p>
       <p><strong>First, Gemini re-enters the Capability top 5 while Anthropic absorbs negative coverage.</strong> For most of Q1 the Capability conversation was effectively "Claude vs. Claude." Today's aggregator data places Gemini 3.x at the top of SWE-bench Verified, GPQA Diamond, and ARC-AGI-2. Separately, the Claude Code pricing story is the second consecutive week of negative Anthropic coverage. These are not causally connected, but they are occurring in the same news window. The posture is unchanged — Claude remains the delivery surface — but any policy or training document that was written as "Claude is the uncontested leader" should be softened to "Claude leads in the integrated-workflow tier; Gemini leads on specific public benchmarks; both results track within weeks."</p>
       <p><strong>Second, capital is concentrating in the frontier-lab tier while news cycle is diffusing across platforms.</strong> The Q1 VC data puts 65% of global venture into four companies. Meanwhile today's news spans Google, Salesforce, Adobe, Databricks, Microsoft, Cursor, Anthropic — seven platforms. The divergence is that capital is concentrating upstream while developer-productivity momentum is diffusing downstream. This is the structural story I would brief a foundation board on this quarter.</p>
-      <hr>
+      <hr />
       <h2 id="3-agentic-ai-advances-new-releases">3. Agentic AI Advances &amp; New Releases</h2>
       <p><strong>Adobe CX Enterprise (April 20, Adobe Summit).</strong> End-to-end agentic system for customer experience orchestration. Combines AI agents, agent skills, and MCP endpoints with Adobe Brand Intelligence (brand-signal reasoning engine) and Adobe Engagement Intelligence (decisioning engine). CX Enterprise Coworker — a cross-tool orchestrator that builds plans, executes campaigns, monitors against goals — ships "in the coming months." Partner list: AWS, Anthropic, Google Cloud, IBM, Microsoft, NVIDIA, OpenAI.</p>
       <p><strong>Google Cloud Next 2026 opens today — keynote announcements pending primary-source reconciliation.</strong> Expected themes per pre-event coverage, to be reconciled tomorrow: TPU v7 Ironwood capacity expansion, Gemini 3.2 release, Agentspace deployment demos, Agent2Agent Protocol updates, Gemini Enterprise release-note cadence.</p>
-      <p><strong>MCP scale milestone — 97M monthly SDK downloads.</strong> MCP SDK downloads reached 97M/month by March 2026, up from 2M at launch in November 2024 — equivalent-scale adoption to React in 16 months vs. React's three years. Active MCP servers: ~10,000.</p>
+      <p><strong>MCP scale milestone — 97M monthly SDK downloads.</strong> MCP SDK downloads reached 97M/month by March 2026, up from 2M at launch in November 2024, roughly equivalent-scale adoption to React in 16 months vs. React's three years. Active MCP servers: ~10,000.</p>
       <p><strong>MCP STDIO vulnerability disclosure — Anthropic response stands.</strong> Security researchers disclosed (April 16) a "critical, systemic" vulnerability in MCP allowing arbitrary command execution on vulnerable systems. Anthropic's public response: the STDIO execution model represents a secure default; sanitization is the developer's responsibility; the protocol will not be modified.</p>
       <p><strong>Microsoft MAI-Image-2-Efficient.</strong> Lower-cost, faster image model positioned against Microsoft's prior MAI-Image line.</p>
-      <hr>
+      <hr />
       <h2 id="4-overnight-release-monitor">4. Overnight Release Monitor</h2>
       <p>Since the Tuesday (April 21) briefing:</p>
       <ul>
@@ -332,7 +324,7 @@
       <li><strong>April 22 — The Motley Fool renewed coverage</strong> of the Anthropic–Alphabet–Broadcom compute deal, pairing with Monday's Amazon–Anthropic announcement. No new primary disclosures.</li>
       <li><strong>April 22 — No other primary-source frontier-lab release identified</strong> between the Monday coverage wave and this briefing publish window, outside the Claude Code pricing story and Google Cloud Next opening.</li>
       </ul>
-      <hr>
+      <hr />
       <h2 id="sources">Sources</h2>
       <ul>
       <li>The Register, "Anthropic tests reaction to yanking Claude Code from Pro," April 22, 2026.</li>

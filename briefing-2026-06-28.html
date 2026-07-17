@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--
   Malaniru - Daily Intelligence Briefing (branded HTML)
-  Built by: publish_briefing_page.py - Date: 2026-06-28
+  Built by: publish_briefing_page.py - Date: 2026-07-17
   Source:   Projects/Malaniru_Marketing_Site/Staging/20260628-daily-intelligence-briefing.md
   FIDELITY: Body rendered VERBATIM from the source markdown. No copy edits.
 -->
@@ -88,7 +88,7 @@
       <div class="wordmark"><a href="index.html">Malaniru<span class="dot">.</span></a></div>
       <span class="eyebrow">AI Enablement &middot; Daily Intelligence Briefing</span>
       <h1>Daily Intelligence Briefing — Sunday, June 28, 2026</h1>
-      <p class="byline">By Mark Harris<span class="sep">&middot;</span>June 28, 2026</p>
+      <p class="byline">By Mark Andrew Harris<span class="sep">&middot;</span>June 28, 2026</p>
       <p class="lede">China&#x27;s open-weight GLM 5.2 is now publicly claimed to match Claude Mythos on security bug-detection benchmarks — the exact capability the June 12 export controls were meant to contain — while reporting indicates Anthropic&#x27;s Fable 5 is on track to return soon. Plus the Annex A framing of Mythos 5&#x27;s restoration and the week&#x27;s carry items.</p>
       <a class="backlink" href="daily-intelligence-briefings.html">&larr; All daily intelligence briefings</a>
     </div>
@@ -96,10 +96,13 @@
 
   <main id="main">
     <article>
+      <blockquote>
+      <p><strong>On the numbers.</strong> Dollar figures here are largely vendor-reported and unaudited. Treat them as directional, and confirm before acting.</p>
+      </blockquote>
       <p>The defining tension this run is containment versus parity. The June 12 export controls and the June 26 government-gated releases rest on the premise that the most cyber-capable frontier models can be kept inside government-approved access lists. That premise is now under direct pressure: Zhipu AI's open-weight GLM 5.2 is publicly claimed to match Claude Mythos on security bug-detection benchmarks — the exact capability class the US government cited to justify the export control (Source: Semgrep, "We have Mythos at Home: GLM 5.2 beats Claude in our Cyber Benchmarks," June 2026; the-decoder; TechTimes, June 21). At the same time, Fable 5 remains suspended on Day 16, but Axios reports it is "on track to return soon," with insiders expecting the administration's limits could lift "as soon as the following week," pending Pentagon and NSA sign-off (Source: Axios, June 27, 2026). Mythos 5's partial restoration is now framed against a defined "Annex A" approved-entity list (Source: explainx.ai; Anthropic statement). For organizations adopting AI, the practical guidance is unchanged and reinforced: stable, generally available models such as Claude Opus 4.8 and Sonnet 4.6 on governed business-tier plans remain the deployable reference tiers, untouched by the cyber-model turbulence.</p>
       <h2 id="1-ai-market-trends">1. AI Market Trends</h2>
       <p>The story today is the containment-versus-parity tension created by an open-weight cyber model, set against Fable 5's likely near-term return.</p>
-      <p>First, open-weight parity undercuts the export-control logic. Zhipu AI, the Tsinghua University spinout behind China's GLM series, reports that GLM 5.2 matches Claude Mythos on security bug-detection benchmarks — the precise capability the June 12 export controls were meant to contain. In an independent test, Semgrep reported GLM 5.2 scored 39% F1 on IDOR (insecure direct object reference) detection, beating Claude Code's 32%, at roughly $0.17 per vulnerability found (Source: Semgrep, June 2026 — single-vendor benchmark, methodology not yet widely replicated). GLM 5.2 shipped to Zhipu's GLM Coding Plan members on June 13, with open weights released June 16 (Source: the-decoder; TechTimes, June 21, 2026). The structural point is that an open-weight, Mythos-parity security model undercuts the containment logic of the export control entirely — the restricted capability becomes globally accessible regardless of whether Anthropic's API is live. That parity claim rests largely on one vendor benchmark and self-reported coding-marathon results; treat it as directional, not settled, until independently replicated across a broader cyber-evaluation suite.</p>
+      <p>First, open-weight parity undercuts the export-control logic. Zhipu AI, the Tsinghua University spinout behind China's GLM series, reports that GLM 5.2 matches Claude Mythos on security bug-detection benchmarks — the precise capability the June 12 export controls were meant to contain. In an independent test, Semgrep reported GLM 5.2 scored 39% F1 on IDOR (insecure direct object reference) detection, beating Claude Code's 32%, at roughly $0.17 per vulnerability found (Source: Semgrep, June 2026; single-vendor benchmark, methodology not yet widely replicated). GLM 5.2 shipped to Zhipu's GLM Coding Plan members on June 13, with open weights released June 16 (Source: the-decoder; TechTimes, June 21, 2026). The structural point is that an open-weight, Mythos-parity security model undercuts the containment logic of the export control entirely. The restricted capability becomes globally accessible regardless of whether Anthropic's API is live. That parity claim rests largely on one vendor benchmark and self-reported coding-marathon results; treat it as directional, not settled, until independently replicated across a broader cyber-evaluation suite.</p>
       <p>Second, Fable 5 is reportedly close to restoration. As of Day 16 (June 28), Fable 5 remains suspended for subscribers, Claude Code, and general API use. But Axios reported June 27 that the Trump administration is close to allowing Anthropic to restore Fable 5, with insiders expecting the limits "could be lifted as soon as the following week"; the holdup is that the Pentagon and National Security Agency still have to green-light Fable 5, while other agencies have determined it can safely return (Source: Axios, "Scoop: Powerful Anthropic model, Fable 5, on track to return soon," June 27, 2026). Prediction markets continue to track an end-of-June restoration as a live but uncertain outcome (Source: Polymarket; Manifold — market-implied).</p>
       <p>Third, Mythos 5's "Annex A" framing. Saturday's roughly 100-org figure is now described more precisely: Mythos 5 may be exported or retransferred to entities on "Annex A" ("Anthropic US Entities – Approved") and their foreign-national employees, Anthropic's own foreign-national employees, and US government civilian agencies and national labs (Source: explainx.ai; Anthropic statement on the directive). This hardens the read from Saturday: model access is now administered like an export-controlled good, via a named allowlist — not a commercial release.</p>
       <p><strong>What This Means for You.</strong> The most capable cyber models are simultaneously being gated behind government allowlists at US labs and becoming freely available as open weights from non-US labs. The governance lesson is that capability containment is leaky, and a defensible AI policy can't assume a restricted capability stays restricted — it must address what tools are actually reachable inside the organization, including open-weight models a team could self-host. Production work, meanwhile, is safest on stable, available models such as Opus 4.8 and Sonnet 4.6 on governed business-tier plans, none of which are affected by the Mythos and Fable controls or the open-weight cyber race.</p>
@@ -133,7 +136,7 @@
       <tr>
       <td>4</td>
       <td>MCP-based connectors (cross-vendor)</td>
-      <td>Universal interop; final spec lands July 28 with breaking changes (stateless core, Tasks, MCP Apps, OAuth/OIDC authorization, 12-month deprecation policy). RC locked May 21; Python SDK beta June 30, stable v2 July 27 (Source: Model Context Protocol Blog).</td>
+      <td>Broad interop; final spec lands July 28 with breaking changes (stateless core, Tasks, MCP Apps, OAuth/OIDC authorization, 12-month deprecation policy). RC locked May 21; Python SDK beta June 30, stable v2 July 27 (Source: Model Context Protocol Blog).</td>
       </tr>
       <tr>
       <td>5</td>
@@ -142,7 +145,7 @@
       </tr>
       </tbody>
       </table></div>
-      <p>(Watch line: Claude Fable 5 — still suspended, but reported "on track to return soon"; re-enters as a deployment candidate only on confirmed broad restoration and published terms. Mythos 5 — restored only to the Annex A approved-entity list for defensive cyber; tracked for governance precedent, not a general deployment surface.)</p>
+      <p>(Watch line: Claude Fable 5 — still suspended, but reported "on track to return soon"; re-enters as a deployment candidate only on confirmed broad restoration and published terms. Mythos 5, restored only to the Annex A approved-entity list for defensive cyber; tracked for governance precedent, not a general deployment surface.)</p>
       <h3 id="market-momentum-adoption-funding-buzz">Market Momentum (adoption / funding / buzz)</h3>
       <div class="table-wrap"><table>
       <thead>
@@ -217,9 +220,9 @@
       </tr>
       </tbody>
       </table></div>
-      <p>(Not ranked as broadly deployable: Fable 5 — still suspended pending restoration; Mythos 5 — Annex A only; Gemini 3.5 Pro — pre-GA.)</p>
+      <p>(Not ranked as broadly deployable: Fable 5 — still suspended pending restoration; Mythos 5, Annex A only; Gemini 3.5 Pro, pre-GA.)</p>
       <h3 id="divergence-analysis">Divergence Analysis</h3>
-      <p>This run reframes last week's capability-versus-eligibility story as containment-versus-parity. The US government can gate who uses Mythos 5 and GPT-5.6 Sol, but it cannot gate an open-weight model from a non-US lab — and GLM 5.2 now claims the same cyber capability the controls were designed to contain. The "announced versus shipped" tension persists: GPT-5.6 shipped only to 20 named partners, Gemini 3.5 Pro still hasn't shipped at all and may slip to July, while GLM 5.2 is fully available as open weights. The practical takeaway is unchanged for real work: the deployable models remain the available, governable ones — Opus 4.8, Sonnet 4.6, GPT-5.5, Gemini 3.5 Flash — and now, for teams that evaluate it carefully, GLM 5.2 as a self-hostable open-weight option. Near-term movers to watch: broad Fable 5 restoration, GPT-5.6 GA, Gemini 3.5 Pro GA, and independent replication of GLM 5.2's cyber benchmarks.</p>
+      <p>This run reframes last week's capability-versus-eligibility story as containment-versus-parity. The US government can gate who uses Mythos 5 and GPT-5.6 Sol, but it cannot gate an open-weight model from a non-US lab — and GLM 5.2 now claims the same cyber capability the controls were designed to contain. The "announced versus shipped" tension persists: GPT-5.6 shipped only to 20 named partners, Gemini 3.5 Pro still hasn't shipped at all and may slip to July, while GLM 5.2 is fully available as open weights. The practical takeaway is unchanged for real work: the deployable models remain the available, governable ones (Opus 4.8, Sonnet 4.6, GPT-5.5, Gemini 3.5 Flash), and now, for teams that evaluate it carefully, GLM 5.2 as a self-hostable open-weight option. Near-term movers to watch: broad Fable 5 restoration, GPT-5.6 GA, Gemini 3.5 Pro GA, and independent replication of GLM 5.2's cyber benchmarks.</p>
       <p><strong>What This Means for You.</strong> Clients increasingly have a self-hostable open-weight option, which is attractive on cost and data control but carries its own governance burden — provenance, security evaluation, and update cadence. The honest decision to surface is managed business-tier model versus self-hosted open weight; each has a different risk profile. Hold reference architecture on stable, available models such as Opus 4.8 and Sonnet 4.6 on governed business-tier plans, and avoid building any roadmap around an access-gated or unshipped model.</p>
       <h2 id="3-agentic-ai-advances-new-releases">3. Agentic AI Advances &amp; New Releases</h2>
       <p>Genuinely new structural items since the June 27 briefing:</p>
@@ -231,7 +234,7 @@
       <li>Gartner forecast — AI agent software spending projected at roughly $206.5B in 2026, up 139% from $86.4B in 2025 (Source: Gartner forecast, via reporting — figure not independently confirmed against the primary release).</li>
       <li>Microsoft MDASH — a multi-model agentic security-scanning harness in expanded preview, now integrating with Microsoft Defender (Source: Microsoft Security Blog, June 2026).</li>
       <li>MIT RLM-Qwen3-8B — the first natively recursive language model, reported to outperform the base Qwen3-8B by 28.3% on average across long-context tasks (Source: MIT researchers, via reporting — research-stage, not productized).</li>
-      <li>Claude Code updates — /rewind to resume before /clear, Workload Identity Federation (short-lived scoped credentials replacing static API keys), Slack tagging and task delegation for Team and Enterprise, Trusted Devices for Remote Control admins, and roughly 37% lower CPU during streaming (Source: Anthropic release notes via Releasebot, June 2026).</li>
+      <li>Claude Code updates — /rewind to resume before /clear, Workload Identity Federation (short-lived scoped credentials replacing static API keys), Slack tagging and task delegation for Team and Enterprise, Trusted Devices for Remote Control admins, and roughly 37% lower CPU during streaming (vendor-reported) (Source: Anthropic release notes via Releasebot, June 2026).</li>
       </ul>
       <p>Carry items (scheduled or unchanged):</p>
       <ul>
@@ -242,7 +245,7 @@
       <li>MCP final specification — July 28, 2026 — release candidate public; breaking changes; stewarded by the Linux Foundation's Agentic AI Foundation.</li>
       <li>EU AI Act — transparency obligations (Article 50) apply August 2, 2026 (verify before external use).</li>
       </ul>
-      <p><strong>What This Means for You.</strong> The open-weight cyber-parity story makes a sharp point: governance can't rely on a capability staying behind a vendor's API or a government's allowlist — frameworks should address self-hostable open-weight tooling too. For anyone building connectors, the MCP May 21 RC lock, June 30 beta, and July 27 stable runway is an actionable validation window — test against the v2 alpha now, not after July 28. As always, vendor and benchmark claims (GLM 5.2 cyber parity, GPT-5.6 capability, the Gartner spend forecast) are hypotheses until independently verified.</p>
+      <p><strong>What This Means for You.</strong> The open-weight cyber-parity story makes a sharp point: governance can't rely on a capability staying behind a vendor's API or a government's allowlist — frameworks should address self-hostable open-weight tooling too. For anyone building connectors, the MCP May 21 RC lock, June 30 beta, and July 27 stable runway is an actionable validation window: test against the v2 alpha now, not after July 28. As always, vendor and benchmark claims (GLM 5.2 cyber parity, GPT-5.6 capability, the Gartner spend forecast) are hypotheses until independently verified.</p>
       <h2 id="4-overnight-daily-release-monitor">4. Overnight / Daily Release Monitor</h2>
       <p>Covering roughly June 27–28 since the June 27 publish:</p>
       <ul>

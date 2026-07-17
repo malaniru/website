@@ -1,20 +1,9 @@
 <!DOCTYPE html>
 <!--
-  ============================================================================
-  Malaniru - Research article page (branded HTML)
-  Built by: Web (Morgan Shaw) - Date: 2026-06-23
-  Project:  Malaniru_Marketing_Site
-  Source:   Website/src/content/research/20260421-daily-intelligence-briefing.md
-  Purpose:  Standalone public article page for a daily intelligence briefing,
-            linked from philanthropy-ai-research.html.
-  STATUS:   Public marketing page. robots noindex pre-launch (mirrors template).
-            Calendly CTA hidden via CSS (per Principal, as in template).
-  FIDELITY: Article body rendered VERBATIM from the approved markdown. No copy
-            edits, no reordered sections, no changed figures or heading levels.
-  FLAGS:    none.
-  TECH:     Single self-contained HTML5 file. Embedded CSS. No JavaScript.
-            Template-matched (philanthropy-ai-adoption.html). WCAG AA. Mobile-first.
-  ============================================================================
+  Malaniru - Daily Intelligence Briefing (branded HTML)
+  Built by: publish_briefing_page.py - Date: 2026-07-17
+  Source:   Projects/Malaniru_Marketing_Site/Staging/20260421-daily-intelligence-briefing.md
+  FIDELITY: Body rendered VERBATIM from the source markdown. No copy edits.
 -->
 <html lang="en">
 <head>
@@ -99,7 +88,7 @@
       <div class="wordmark"><a href="index.html">Malaniru<span class="dot">.</span></a></div>
       <span class="eyebrow">AI Enablement &middot; Daily Intelligence Briefing</span>
       <h1>Daily Intelligence Briefing — Tuesday, April 21, 2026</h1>
-      <p class="byline">By Mark Harris<span class="sep">&middot;</span>April 21, 2026</p>
+      <p class="byline">By Mark Andrew Harris<span class="sep">&middot;</span>April 21, 2026</p>
       <p class="lede">Amazon&#x27;s $25B Anthropic commitment and a first-party reliability acknowledgement reframe the week; MCP moves to foundation governance; enterprise agent frameworks ship parallel updates.</p>
       <a class="backlink" href="daily-intelligence-briefings.html">&larr; All daily intelligence briefings</a>
     </div>
@@ -107,22 +96,25 @@
 
   <main id="main">
     <article>
+      <blockquote>
+      <p><strong>On the numbers.</strong> Dollar figures here are largely vendor-reported and unaudited. Treat them as directional, and confirm before acting.</p>
+      </blockquote>
       <h2 id="executive-summary">Executive Summary</h2>
-      <p>Monday's Amazon–Anthropic announcement reframes the week. Amazon committed up to $25B in additional investment (on top of $8B since 2023) and Anthropic committed to more than $100B in AWS spend over 10 years, securing up to 5 GW of Trainium capacity. Anthropic publicly acknowledged what last week's user backlash implied — enterprise and developer demand, plus a consumer surge, has created "inevitable strain" on reliability and performance — which makes the infrastructure deal read as both a customer-supply fix and a credibility reset. Separately, the Agentic AI Foundation's April 2–3 MCP Dev Summit and the growing Platinum-member list (AWS, Anthropic, Block, Bloomberg, Cloudflare, Google, Microsoft, OpenAI) moves MCP decisively from "Anthropic protocol" to "neutral foundation standard" — a material shift in the governance conversation for any client evaluating MCP-adjacent tooling. Salesforce (Headless 360, TDX), Databricks (Unity AI Gateway), OpenAI (Agents SDK sandbox update), and Microsoft (Agent Framework 1.0) all shipped enterprise agent platform updates since the prior briefing.</p>
-      <hr>
+      <p>Monday's Amazon–Anthropic announcement reframes the week. Amazon committed up to $25B in additional investment (on top of $8B since 2023) and Anthropic committed to more than $100B in AWS spend over 10 years, securing up to 5 GW of Trainium capacity. Anthropic publicly acknowledged what last week's user backlash implied — enterprise and developer demand, plus a consumer surge, has created "inevitable strain" on reliability and performance — which makes the infrastructure deal read as both a customer-supply fix and a credibility reset. Separately, the Agentic AI Foundation's April 2–3 MCP Dev Summit and the growing Platinum-member list (AWS, Anthropic, Block, Bloomberg, Cloudflare, Google, Microsoft, OpenAI) moves MCP decisively from "Anthropic protocol" to "neutral foundation standard": a material shift in the governance conversation for any client evaluating MCP-adjacent tooling. Salesforce (Headless 360, TDX), Databricks (Unity AI Gateway), OpenAI (Agents SDK sandbox update), and Microsoft (Agent Framework 1.0) all shipped enterprise agent platform updates since the prior briefing.</p>
+      <hr />
       <h2 id="1-ai-market-trends">1. AI Market Trends</h2>
-      <p><strong>Amazon–Anthropic expanded collaboration — up to $25B, up to 5 GW Trainium, $100B+ AWS commitment over 10 years.</strong> Announced Monday, April 20. $5B in new investment is closing immediately; up to $20B more is tied to commercial milestones, on top of the $8B Amazon has put in since 2023. The deal secures Anthropic up to 5 GW of capacity on Amazon's Trainium chips, with nearly 1 GW of Trainium2 and Trainium3 coming online by year-end. Anthropic currently runs more than 1 million Trainium2 chips to train and serve Claude. Context worth noting: Amazon's earlier February 2026 round with OpenAI was $50B in investment and a $100B cloud commitment — structurally similar but twice the equity ticket. Capital concentration at the compute layer is narrowing further.</p>
+      <p><strong>Amazon–Anthropic expanded collaboration — up to $25B, up to 5 GW Trainium, $100B+ AWS commitment over 10 years.</strong> Announced Monday, April 20. $5B in new investment is closing immediately; up to $20B more is tied to commercial milestones, on top of the $8B Amazon has put in since 2023. The deal secures Anthropic up to 5 GW of capacity on Amazon's Trainium chips, with nearly 1 GW of Trainium2 and Trainium3 coming online by year-end. Anthropic currently runs more than 1 million Trainium2 chips to train and serve Claude. Context worth noting: Amazon's earlier February 2026 round with OpenAI was $50B in investment and a $100B cloud commitment, structurally similar but twice the equity ticket. Capital concentration at the compute layer is narrowing further.</p>
       <p><strong>Anthropic acknowledges infrastructure strain.</strong> In the Monday announcement, Anthropic stated that enterprise and developer demand for Claude, plus a "sharp rise" in consumer usage, has caused "inevitable strain" on its infrastructure affecting reliability and performance. This is the first public, first-party acknowledgement tying the April 13–19 "effort-reduction" backlash, the April 15 outage coverage, and user complaints into a single infrastructure-capacity narrative. For client-facing posture, this moves the story from "quiet vendor change" to "publicly confirmed capacity constraint" — which is a cleaner thing to document in policy.</p>
       <p><strong>Agentic AI Foundation (AAIF) lifts MCP out of single-vendor orbit.</strong> The Linux Foundation's AAIF — founded December 2025 with MCP (Anthropic), goose (Block), and AGENTS.md (OpenAI) as anchor projects — held its first MCP Dev Summit North America in New York, April 2–3, with ~1,200 attendees and 95+ sessions. Platinum members now include AWS, Anthropic, Block, Bloomberg, Cloudflare, Google, Microsoft, and OpenAI. Material because the last two weeks of MCP coverage have been framed as "risks in Anthropic's protocol." MCP is now governed by a neutral foundation whose members include every major cloud and every major frontier lab. That is the correct framing for client conversations going forward.</p>
       <p><strong>Salesforce Headless 360 — every platform capability exposed as API, MCP tool, or CLI (TDX 2026, April 16).</strong> 60+ new MCP tools ship immediately; Agentforce Vibes 2.0 IDE gains multi-model support (Claude Code, Cursor, Codex are called out as target clients).</p>
-      <p><strong>Databricks Unity AI Gateway — MCP governance with on-behalf-of access (April 15).</strong> Databricks extended Unity Catalog governance to agentic AI: fine-grained MCP server permissions, on-behalf-of (OBO) identity, unified model API with fallbacks across Anthropic, OpenAI, Google, and open-source models, end-to-end observability across LLM and tool calls. The first enterprise data-platform product to treat MCP-tool access as a first-class governed resource with auditable, user-scoped permissions — directly relevant to the compliance conversation for foundation clients.</p>
-      <p><strong>OpenAI Agents SDK update — sandboxing, file inspection, long-horizon task support (April 15).</strong> The update ships a controlled-sandbox runtime; agents can inspect files, run commands, edit code. OpenAI also disclosed in the same window that enterprise is now 40%+ of revenue, tracking to parity with consumer by year-end, anchored by Frontier customers (Oracle, State Farm, Uber named).</p>
+      <p><strong>Databricks Unity AI Gateway — MCP governance with on-behalf-of access (April 15).</strong> Databricks extended Unity Catalog governance to agentic AI: fine-grained MCP server permissions, on-behalf-of (OBO) identity, unified model API with fallbacks across Anthropic, OpenAI, Google, and open-source models, end-to-end observability across LLM and tool calls. Among the first enterprise data-platform products to treat MCP-tool access as a first-class governed resource with auditable, user-scoped permissions, directly relevant to the compliance conversation for foundation clients.</p>
+      <p><strong>OpenAI Agents SDK update — sandboxing, file inspection, long-horizon task support (April 15).</strong> The update ships a controlled-sandbox runtime; agents can inspect files, run commands, edit code. OpenAI also disclosed in the same window that enterprise is now 40%+ of revenue (vendor-reported), tracking to parity with consumer by year-end, anchored by Frontier customers (Oracle, State Farm, Uber named).</p>
       <h3 id="what-this-means-for-you">What This Means for You</h3>
       <p>For organizations adopting AI, the AAIF/Platinum-member framing is the biggest change: any internal policy language that previously described MCP as "Anthropic's protocol" should now describe it as "the open standard maintained by the Agentic AI Foundation under the Linux Foundation." Implementation policies can also cite Databricks Unity AI Gateway and Salesforce Headless 360 as concrete examples of MCP-aware governance products — this moves the conversation from "emerging standard" to "already being governed in enterprise platforms."</p>
       <p>For team training, the Anthropic infrastructure-strain acknowledgement is a useful teaching asset: train staff to treat capacity-driven performance variation as a known operating condition, document it, and know how to detect and report it rather than assume user error.</p>
       <p>For compliance posture, the governance signal is now layered: a neutral foundation owns the protocol, Databricks ships OBO access controls, Salesforce exposes 60+ MCP tools under its existing permission model. Compliance assessments can cite named products, not just aspirations.</p>
       <p>On strategic posture, the Amazon–Anthropic deal is a double-edged story. Upside: Claude's compute supply is now backed by a hyperscaler with aligned commercial incentive for at least 10 years — reliability should improve. Downside: capital concentration at the frontier-lab layer continues to narrow, and that tends to surface in questions about vendor lock-in and strategic risk.</p>
-      <hr>
+      <hr />
       <h2 id="2-top-10-ai-agents-three-lenses">2. Top 10 AI Agents — Three Lenses</h2>
       <p>Rankings as of Tuesday, April 21, 2026. Movement noted relative to April 19.</p>
       <h3 id="2a-relevance-for-claude-mcp-centered-work">2a. Relevance for Claude / MCP-Centered Work</h3>
@@ -313,25 +305,25 @@
       </table></div>
       <h3 id="divergence-analysis">Divergence Analysis</h3>
       <p>Claude's Momentum and Capability rankings have re-converged — both now lead the list. The Amazon deal gave the momentum story a fresh anchor that is not dependent on the effort-parameter narrative, and the Monday reliability acknowledgement removed the worst of the communication overhang.</p>
-      <p>A Microsoft vs OpenAI framework convergence is forming. Microsoft Agent Framework 1.0 GA, OpenAI Agents SDK sandboxed runtime, and Salesforce Agentforce Vibes 2.0 IDE all shipped within the same seven-day window. All three target the same job: letting enterprise teams build, govern, and run agents across multiple models. Databricks Unity AI Gateway is the data-platform answer to the same question. The first time in 2026 we have seen four enterprise-scale frameworks shipping parallel updates in one week.</p>
-      <hr>
+      <p>A Microsoft vs OpenAI framework convergence is forming. Microsoft Agent Framework 1.0 GA, OpenAI Agents SDK sandboxed runtime, and Salesforce Agentforce Vibes 2.0 IDE all shipped within the same seven-day window. All three target the same job: letting enterprise teams build, govern, and run agents across multiple models. Databricks Unity AI Gateway is the data-platform answer to the same question. This is the first time in 2026 we have seen four enterprise-scale frameworks shipping parallel updates in one week.</p>
+      <hr />
       <h2 id="3-agentic-ai-advances-new-releases">3. Agentic AI Advances &amp; New Releases</h2>
       <p><strong>Microsoft Agent Framework 1.0 GA.</strong> Microsoft moved its agent framework from preview to 1.0.</p>
       <p><strong>Salesforce Headless 360 (TDX, April 16).</strong> 60+ new MCP tools ship day-one; platform-wide exposure as API/MCP/CLI; Agentforce Vibes 2.0 multi-model IDE with Claude Code / Cursor / Codex as named target clients.</p>
       <p><strong>Databricks Unity AI Gateway (April 15).</strong> Fine-grained MCP governance with on-behalf-of access, unified model API across Anthropic / OpenAI / Google / open-source with fallbacks, end-to-end LLM-and-tool-call observability.</p>
       <p><strong>OpenAI Agents SDK update (April 15) and Codex macOS app.</strong> Sandboxed runtime; file inspection; long-horizon tasks; Codex command-center app for managing parallel coding agents on macOS.</p>
-      <p><strong>Microsoft MAI-Image-2-Efficient.</strong> Lower-cost, faster image model positioned against Microsoft's prior MAI-Image line.</p>
+      <p><strong>Microsoft MAI-Image-2-Efficient.</strong> Lower-cost, faster image model (vendor-reported), positioned against Microsoft's prior MAI-Image line.</p>
       <p><strong>Stanford 2026 AI Index agent-task result.</strong> Agents jumped from 12% to 66% success on real computer tasks over the report window.</p>
-      <hr>
+      <hr />
       <h2 id="4-overnight-release-monitor">4. Overnight Release Monitor</h2>
       <p>Since the Sunday (April 19) briefing:</p>
       <ul>
-      <li><strong>April 20 — Amazon / Anthropic:</strong> Expanded collaboration announced — up to $25B investment, up to 5 GW Trainium, &gt;$100B AWS commitment over 10 years.</li>
+      <li><strong>April 20 — Amazon / Anthropic:</strong> Expanded collaboration announced: up to $25B investment, up to 5 GW Trainium, &gt;$100B AWS commitment over 10 years.</li>
       <li><strong>April 20 — Anthropic:</strong> First-party acknowledgement of reliability/performance strain from enterprise + consumer demand surge.</li>
       <li><strong>April 20 — Claude Mythos Preview coverage cycle:</strong> Foreign Policy, Barracuda, The Hacker News, and Yahoo News all ran Mythos / Project Glasswing coverage; NSA use of Mythos reported.</li>
       <li><strong>April 21 overnight:</strong> No new primary-source release identified between the Monday coverage wave and this briefing publish window.</li>
       </ul>
-      <hr>
+      <hr />
       <h2 id="sources">Sources</h2>
       <ul>
       <li>CNBC, "Amazon to invest up to another $25 billion in Anthropic as part of AI infrastructure deal," April 20, 2026. <a href="https://www.cnbc.com/2026/04/20/amazon-invest-up-to-25-billion-in-anthropic-part-of-ai-infrastructure.html" target="_blank" rel="noopener">https://www.cnbc.com/2026/04/20/amazon-invest-up-to-25-billion-in-anthropic-part-of-ai-infrastructure.html</a></li>

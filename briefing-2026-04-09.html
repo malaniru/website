@@ -1,26 +1,15 @@
 <!DOCTYPE html>
 <!--
-  ============================================================================
-  Malaniru - Research article page (branded HTML)
-  Built by: Web (Morgan Shaw) - Date: 2026-06-23
-  Project:  Malaniru_Marketing_Site
-  Source:   Website/src/content/research/20260409-daily-intelligence-briefing.md
-  Purpose:  Standalone public article page for a daily intelligence briefing,
-            linked from philanthropy-ai-research.html.
-  STATUS:   Public marketing page. robots noindex pre-launch (mirrors template).
-            Calendly CTA hidden via CSS (per Principal, as in template).
-  FIDELITY: Article body rendered VERBATIM from the approved markdown. No copy
-            edits, no reordered sections, no changed figures or heading levels.
-  FLAGS:    header H1 uses the article's own title line ("Daily Intelligence Briefing — Thursday, April 9, 2026"); frontmatter title ("Daily Intelligence Briefing — April 9, 2026") used for <title> tag/listing.
-  TECH:     Single self-contained HTML5 file. Embedded CSS. No JavaScript.
-            Template-matched (philanthropy-ai-adoption.html). WCAG AA. Mobile-first.
-  ============================================================================
+  Malaniru - Daily Intelligence Briefing (branded HTML)
+  Built by: publish_briefing_page.py - Date: 2026-07-17
+  Source:   Projects/Malaniru_Marketing_Site/Staging/20260409-daily-intelligence-briefing.md
+  FIDELITY: Body rendered VERBATIM from the source markdown. No copy edits.
 -->
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Daily Intelligence Briefing — April 9, 2026 - Malaniru</title>
+  <title>Daily Intelligence Briefing — Thursday, April 9, 2026 - Malaniru</title>
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://www.malaniru.com/briefing-2026-04-09">
   <meta name="description" content="Anthropic launches Claude Managed Agents, revenue crosses $30B run rate, and OutSystems data confirms the enterprise governance gap at 94% concern.">
@@ -99,7 +88,7 @@
       <div class="wordmark"><a href="index.html">Malaniru<span class="dot">.</span></a></div>
       <span class="eyebrow">AI Enablement &middot; Daily Intelligence Briefing</span>
       <h1>Daily Intelligence Briefing — Thursday, April 9, 2026</h1>
-      <p class="byline">By Mark Harris<span class="sep">&middot;</span>April 9, 2026</p>
+      <p class="byline">By Mark Andrew Harris<span class="sep">&middot;</span>April 9, 2026</p>
       <p class="lede">Anthropic launches Claude Managed Agents, revenue crosses $30B run rate, and OutSystems data confirms the enterprise governance gap at 94% concern.</p>
       <a class="backlink" href="daily-intelligence-briefings.html">&larr; All daily intelligence briefings</a>
     </div>
@@ -107,19 +96,22 @@
 
   <main id="main">
     <article>
+      <blockquote>
+      <p><strong>On the numbers.</strong> Dollar figures here are largely vendor-reported and unaudited. Treat them as directional, and confirm before acting.</p>
+      </blockquote>
       <p>Run type: Daily (Thursday — no weekly sections)</p>
-      <hr>
+      <hr />
       <h2 id="executive-summary">Executive Summary</h2>
-      <p>Anthropic launched Claude Managed Agents on April 8 — a cloud-hosted agent deployment service with sandboxed execution, session tracing, and scoped permissions, already in use by Notion, Rakuten, and Asana. This is the most significant product release for AI implementation delivery since Claude Cowork itself. Separately, Anthropic's annualized revenue run rate has crossed $30 billion, up from $9 billion at end of 2025, with over 1,000 enterprise customers each spending more than $1 million annually — a number that has doubled since February. New survey data from OutSystems confirms the governance gap: 96% of enterprises are using AI agents, but 94% report concern about sprawl, complexity, and security risk. Meanwhile, Anthropic's ban on OpenClaw and third-party agent frameworks from flat-rate Claude subscriptions is reshaping the agentic AI ecosystem's economics, with 135,000+ affected instances and cost increases of up to 50x for heavy users.</p>
-      <hr>
+      <p>Anthropic launched Claude Managed Agents on April 8 — a cloud-hosted agent deployment service with sandboxed execution, session tracing, and scoped permissions, already in use by Notion, Rakuten, and Asana. This is arguably one of the most consequential product releases for AI implementation delivery since Claude Cowork. Separately, Anthropic's annualized revenue run rate has crossed $30 billion, up from $9 billion at end of 2025, with over 1,000 enterprise customers each spending more than $1 million annually, a number that has doubled since February. New survey data from OutSystems confirms the governance gap: 96% of enterprises are using AI agents, but 94% report concern about sprawl, complexity, and security risk. Meanwhile, Anthropic's ban on OpenClaw and third-party agent frameworks from flat-rate Claude subscriptions is reshaping the agentic AI ecosystem's economics, with 135,000+ affected instances and cost increases of up to 50x for heavy users.</p>
+      <hr />
       <h2 id="1-ai-market-trends">1. AI Market Trends</h2>
       <p><strong>Anthropic's revenue run rate crosses $30 billion.</strong> Anthropic disclosed that its annualized revenue run rate has surpassed $30 billion — more than triple the approximately $9 billion recorded at the end of 2025. The disclosure came alongside an expanded compute partnership with Google and Broadcom for multiple gigawatts of next-generation TPU capacity. More than 1,000 business customers now spend over $1 million annually on Claude services, a figure that has more than doubled since February 2026. The growth is being driven by enterprise deployments moving beyond pilots into production — software development, customer support, and internal data operations are the primary use cases. (Source: Bloomberg, "Anthropic Tops $30 Billion Run Rate, Seals Broadcom Deal," April 6, 2026; Anthropic, "Google-Broadcom Partnership Compute," April 2026; PYMNTS; The Register; Quartz)</p>
       <p>However, this expansion comes amid regulatory friction. Anthropic is contesting a federal designation that labeled it a potential supply chain risk, and the company has warned the dispute could cost billions in lost revenue. More than 100 enterprise customers have reportedly raised concerns about continuing their relationships with Anthropic. The nature and scope of the federal designation require independent verification.</p>
       <p><strong>96% of enterprises now use AI agents; 94% report sprawl concerns.</strong> OutSystems published the results of a survey of nearly 1,900 global IT leaders (fielded December 2025–January 2026). Key findings: 96% of organizations are already using AI agents in some capacity, 97% are exploring system-wide agentic AI strategies, but 94% report concern that AI sprawl is increasing complexity, technical debt, and security risk. Only 12% have implemented a centralized platform to manage sprawl. Thirty-eight percent are mixing custom-built and pre-built agents, creating AI stacks that are difficult to standardize and secure. (Source: OutSystems / BusinessWire, April 7, 2026; SD Times; BetaNews)</p>
       <p><strong>Anthropic bans OpenClaw and third-party agents from flat-rate subscriptions.</strong> Effective April 4, Anthropic blocked Claude Pro and Max subscribers from routing their flat-rate plan usage through third-party agent frameworks like OpenClaw. Users who want to continue must pay under a new "extra usage" billing system. More than 135,000 OpenClaw instances were running at the time of the announcement; affected users face cost increases of up to 50x. OpenClaw creator Peter Steinberger — who joined OpenAI in February 2026 — called the move a lock-out of open source. (Source: TechCrunch, April 4, 2026; VentureBeat; The Register; TNW; Axios)</p>
       <p><strong>DigitalOcean acquires Katanemo Labs, joins S&amp;P MidCap 400.</strong> DigitalOcean acquired Katanemo Labs (announced April 2–3), bringing its open-source agent platform Plano and agentic AI primitives into DigitalOcean's Inference Cloud. Katanemo CEO Salman Paracha joined as SVP of AI. Separately, DigitalOcean was selected to join the S&amp;P MidCap 400 on April 6. (Source: DigitalOcean Investor Relations, April 2, 2026; S&amp;P Global, April 6, 2026)</p>
-      <p><strong>What This Means for You.</strong> The $30 billion run rate is the headline, but the underlying data point is more useful: over 1,000 customers spending $1M+ annually, doubled in two months. That's proof of production-grade enterprise adoption, not experimentation. The OutSystems data — 94% sprawl concern, only 12% with centralized governance — makes a direct case for putting an AI implementation policy in place before agent sprawl outpaces oversight. The OpenClaw ban reshapes pricing expectations for agentic AI workflows; organizations need to understand that flat-rate agent usage is not a given. The federal supply chain risk designation for Anthropic is worth monitoring — for any organization standardizing on a single AI provider, an escalation like this is a reminder to keep an approved fallback and a contingency plan.</p>
-      <hr>
+      <p><strong>What This Means for You.</strong> The $30 billion run rate is the headline, but the underlying data point is more useful: over 1,000 customers spending $1M+ annually, doubled in two months. That's proof of production-grade enterprise adoption, not experimentation. The OutSystems data — 94% sprawl concern, only 12% with centralized governance — makes a direct case for putting an AI implementation policy in place before agent sprawl outpaces oversight. The OpenClaw ban reshapes pricing expectations for agentic AI workflows; organizations need to understand that flat-rate agent usage is not a given. The federal supply chain risk designation for Anthropic is worth monitoring: for any organization standardizing on a single AI provider, an escalation like this is a reminder to keep an approved fallback and a contingency plan.</p>
+      <hr />
       <h2 id="2-top-10-ai-agents-three-lenses">2. Top 10 AI Agents — Three Lenses</h2>
       <p>Rankings as of April 9, 2026. Changes from April 8 noted where applicable.</p>
       <h3 id="2a-relevance-for-claude-mcp-centered-work">2a. Relevance for Claude / MCP-Centered Work</h3>
@@ -312,7 +304,7 @@
       <p>Claude Managed Agents entered all three tables — the dominant signal this cycle. It ranks #3 Relevance because it directly extends Claude-based delivery capabilities. It ranks #2 Momentum because the named launch customers and $0.08/hr pricing generated heavy coverage. It ranks #3 Capability because its infrastructure features address production-readiness gaps that raw API access leaves open.</p>
       <p>The project44 entry in Momentum signals agentic AI's expansion into supply chain operations — domain-specific agents doing narrow tasks at scale is where enterprise value is landing.</p>
       <p>The OpenClaw ban reshapes ecosystem economics: the era of flat-rate unlimited agent usage on consumer subscriptions is over.</p>
-      <hr>
+      <hr />
       <h2 id="3-agentic-ai-advances-new-releases">3. Agentic AI Advances &amp; New Releases</h2>
       <p><strong>Anthropic — Claude Managed Agents (April 8).</strong> Anthropic launched a cloud service for building and deploying AI agents with managed hosting, automatic scaling, and built-in monitoring. Sandboxed code execution, authentication, checkpointing, scoped permissions, and persistent long-running sessions. Developers define agent tasks, tools, and guardrails; Anthropic handles tool orchestration, context management, and error recovery. Available through the Claude Console, Claude Code, and a new CLI. Launch customers include Notion, Rakuten, and Asana. Reported pricing: $0.08/hr per agent. (Source: SiliconANGLE, April 8, 2026; National Today; TestingCatalog; FindSkill.ai)</p>
       <p><strong>Anthropic — $30B run rate and Google/Broadcom compute expansion (April 6–7).</strong> Anthropic is securing multiple gigawatts of next-generation Google TPU capacity through a deal involving Broadcom's chip packaging. Infrastructure-level investment signaling sustained demand expectations. (Source: Bloomberg; Anthropic; The Register; Quartz)</p>
@@ -320,7 +312,7 @@
       <p><strong>project44 — AI Agent Portfolio launch (April 8–9).</strong> Portfolio of AI agents launched at decision44 conference covering freight procurement, disruption response, carrier onboarding, and network operations. Platform connects 259,000+ carriers across 186 countries, processes 700M+ logistics events daily. Network Operations Agent has initiated nearly 1 million automated carrier communications. Customer adoption increased 235% YoY. (Source: GlobeNewswire, April 8, 2026)</p>
       <p><strong>DigitalOcean — Katanemo Labs acquisition (April 2–3).</strong> Katanemo's open-source Plano platform provides the data plane layer for agentic applications. DigitalOcean is extending beyond inference into the operational layer of agentic systems. (Source: DigitalOcean; BizWest)</p>
       <p><strong>OutSystems — Enterprise agentic AI survey (April 7).</strong> 1,900 IT leaders surveyed across multiple regions. The 96% adoption figure is consistent with the data trajectory but reflects OutSystems' respondent pool of IT leaders at larger organizations. (Source: OutSystems / BusinessWire; SD Times; BetaNews)</p>
-      <hr>
+      <hr />
       <h2 id="4-overnight-release-monitor">4. Overnight Release Monitor</h2>
       <p>Scanning for material releases between Wednesday evening (April 8) and Thursday morning (April 9):</p>
       <ul>
@@ -330,28 +322,28 @@
       <li><strong>Claude outage status:</strong> No new outage reports as of Thursday morning. Formal post-mortem still pending for April 7–8 incidents.</li>
       <li><strong>MCP ecosystem:</strong> No protocol-level changes overnight.</li>
       </ul>
-      <hr>
+      <hr />
       <h2 id="sources">Sources</h2>
       <ul>
-      <li><a href="https://www.bloomberg.com/news/articles/2026-04-06/broadcom-confirms-deal-to-ship-google-tpu-chips-to-anthropic" target="_blank" rel="noopener">Bloomberg — Anthropic Tops $30 Billion Run Rate</a></li>
-      <li><a href="https://www.anthropic.com/news/google-broadcom-partnership-compute" target="_blank" rel="noopener">Anthropic — Google-Broadcom Partnership Compute</a></li>
-      <li><a href="https://www.pymnts.com/artificial-intelligence-2/2026/anthropic-hits-30-billion-run-rate-as-enterprise-demand-accelerates/" target="_blank" rel="noopener">PYMNTS — Anthropic Hits $30 Billion Run Rate</a></li>
-      <li><a href="https://www.theregister.com/2026/04/07/broadcom_google_chip_deal_anthropic_customer/" target="_blank" rel="noopener">The Register — Anthropic reveals $30bn run rate</a></li>
-      <li><a href="https://siliconangle.com/2026/04/08/anthropic-launches-claude-managed-agents-speed-ai-agent-development/" target="_blank" rel="noopener">SiliconANGLE — Anthropic launches Claude Managed Agents</a></li>
-      <li><a href="https://nationaltoday.com/us/ca/san-francisco/news/2026/04/08/anthropic-unveils-managed-agents-for-claude-eyeing-enterprise-ai-workflows/" target="_blank" rel="noopener">National Today — Anthropic Unveils Managed Agents</a></li>
-      <li><a href="https://findskill.ai/blog/claude-managed-agents-explained/" target="_blank" rel="noopener">FindSkill.ai — Claude Managed Agents $0.08/Hr</a></li>
-      <li><a href="https://techcrunch.com/2026/04/04/anthropic-says-claude-code-subscribers-will-need-to-pay-extra-for-openclaw-support/" target="_blank" rel="noopener">TechCrunch — Anthropic OpenClaw extra usage</a></li>
-      <li><a href="https://venturebeat.com/technology/anthropic-cuts-off-the-ability-to-use-claude-subscriptions-with-openclaw-and" target="_blank" rel="noopener">VentureBeat — Anthropic cuts off OpenClaw</a></li>
-      <li><a href="https://www.theregister.com/2026/04/06/anthropic_closes_door_on_subscription/" target="_blank" rel="noopener">The Register — Anthropic closes door on OpenClaw</a></li>
-      <li><a href="https://thenextweb.com/news/anthropic-openclaw-claude-subscription-ban-cost" target="_blank" rel="noopener">TNW — Anthropic blocks OpenClaw</a></li>
-      <li><a href="https://www.axios.com/2026/04/06/anthropic-openclaw-subscription-openai" target="_blank" rel="noopener">Axios — Anthropic cuts third party usage</a></li>
-      <li><a href="https://www.businesswire.com/news/home/20260407749542/en/" target="_blank" rel="noopener">OutSystems / BusinessWire — 94% Sprawl Concern</a></li>
-      <li><a href="https://sdtimes.com/ai/agentic-ai-goes-mainstream-in-the-enterprise-but-94-raise-concern-about-sprawl-outsystems-research-finds/" target="_blank" rel="noopener">SD Times — OutSystems survey</a></li>
-      <li><a href="https://www.globenewswire.com/news-release/2026/04/08/3270430/0/en/" target="_blank" rel="noopener">GlobeNewswire — project44 AI Agent Portfolio</a></li>
-      <li><a href="https://investors.digitalocean.com/news/news-details/2026/DigitalOcean-Acquires-Katanemo-Labs-to-Accelerate-the-Inference-Cloud-for-the-Agentic-Era/default.aspx" target="_blank" rel="noopener">DigitalOcean — Katanemo Labs acquisition</a></li>
-      <li><a href="https://press.spglobal.com/2026-04-06-Caseys-General-Stores-Set-to-Join-S-P-500-DigitalOcean-Holdings-to-Join-S-P-MidCap-400-Broadstone-Net-Lease-to-Join-S-P-SmallCap-600" target="_blank" rel="noopener">S&amp;P Global — DigitalOcean to Join S&amp;P MidCap 400</a></li>
-      <li><a href="https://epoch.ai/benchmarks/swe-bench-verified/" target="_blank" rel="noopener">Epoch AI — SWE-Bench Verified</a></li>
-      <li><a href="https://lmcouncil.ai/benchmarks" target="_blank" rel="noopener">LM Council benchmarks</a></li>
+      <li><a href="https://www.bloomberg.com/news/articles/2026-04-06/broadcom-confirms-deal-to-ship-google-tpu-chips-to-anthropic">Bloomberg — Anthropic Tops $30 Billion Run Rate</a></li>
+      <li><a href="https://www.anthropic.com/news/google-broadcom-partnership-compute">Anthropic — Google-Broadcom Partnership Compute</a></li>
+      <li><a href="https://www.pymnts.com/artificial-intelligence-2/2026/anthropic-hits-30-billion-run-rate-as-enterprise-demand-accelerates/">PYMNTS — Anthropic Hits $30 Billion Run Rate</a></li>
+      <li><a href="https://www.theregister.com/2026/04/07/broadcom_google_chip_deal_anthropic_customer/">The Register — Anthropic reveals $30bn run rate</a></li>
+      <li><a href="https://siliconangle.com/2026/04/08/anthropic-launches-claude-managed-agents-speed-ai-agent-development/">SiliconANGLE — Anthropic launches Claude Managed Agents</a></li>
+      <li><a href="https://nationaltoday.com/us/ca/san-francisco/news/2026/04/08/anthropic-unveils-managed-agents-for-claude-eyeing-enterprise-ai-workflows/">National Today — Anthropic Unveils Managed Agents</a></li>
+      <li><a href="https://findskill.ai/blog/claude-managed-agents-explained/">FindSkill.ai — Claude Managed Agents $0.08/Hr</a></li>
+      <li><a href="https://techcrunch.com/2026/04/04/anthropic-says-claude-code-subscribers-will-need-to-pay-extra-for-openclaw-support/">TechCrunch — Anthropic OpenClaw extra usage</a></li>
+      <li><a href="https://venturebeat.com/technology/anthropic-cuts-off-the-ability-to-use-claude-subscriptions-with-openclaw-and">VentureBeat — Anthropic cuts off OpenClaw</a></li>
+      <li><a href="https://www.theregister.com/2026/04/06/anthropic_closes_door_on_subscription/">The Register — Anthropic closes door on OpenClaw</a></li>
+      <li><a href="https://thenextweb.com/news/anthropic-openclaw-claude-subscription-ban-cost">TNW — Anthropic blocks OpenClaw</a></li>
+      <li><a href="https://www.axios.com/2026/04/06/anthropic-openclaw-subscription-openai">Axios — Anthropic cuts third party usage</a></li>
+      <li><a href="https://www.businesswire.com/news/home/20260407749542/en/">OutSystems / BusinessWire — 94% Sprawl Concern</a></li>
+      <li><a href="https://sdtimes.com/ai/agentic-ai-goes-mainstream-in-the-enterprise-but-94-raise-concern-about-sprawl-outsystems-research-finds/">SD Times — OutSystems survey</a></li>
+      <li><a href="https://www.globenewswire.com/news-release/2026/04/08/3270430/0/en/">GlobeNewswire — project44 AI Agent Portfolio</a></li>
+      <li><a href="https://investors.digitalocean.com/news/news-details/2026/DigitalOcean-Acquires-Katanemo-Labs-to-Accelerate-the-Inference-Cloud-for-the-Agentic-Era/default.aspx">DigitalOcean — Katanemo Labs acquisition</a></li>
+      <li><a href="https://press.spglobal.com/2026-04-06-Caseys-General-Stores-Set-to-Join-S-P-500-DigitalOcean-Holdings-to-Join-S-P-MidCap-400-Broadstone-Net-Lease-to-Join-S-P-SmallCap-600">S&amp;P Global — DigitalOcean to Join S&amp;P MidCap 400</a></li>
+      <li><a href="https://epoch.ai/benchmarks/swe-bench-verified/">Epoch AI — SWE-Bench Verified</a></li>
+      <li><a href="https://lmcouncil.ai/benchmarks">LM Council benchmarks</a></li>
       </ul>
     </article>
 

@@ -1,20 +1,9 @@
 <!DOCTYPE html>
 <!--
-  ============================================================================
-  Malaniru - Research article page (branded HTML)
-  Built by: Web (Morgan Shaw) - Date: 2026-06-23
-  Project:  Malaniru_Marketing_Site
-  Source:   Website/src/content/research/20260518-daily-intelligence-briefing.md
-  Purpose:  Standalone public article page for a daily intelligence briefing,
-            linked from philanthropy-ai-research.html.
-  STATUS:   Public marketing page. robots noindex pre-launch (mirrors template).
-            Calendly CTA hidden via CSS (per Principal, as in template).
-  FIDELITY: Article body rendered VERBATIM from the approved markdown. No copy
-            edits, no reordered sections, no changed figures or heading levels.
-  FLAGS:    none.
-  TECH:     Single self-contained HTML5 file. Embedded CSS. No JavaScript.
-            Template-matched (philanthropy-ai-adoption.html). WCAG AA. Mobile-first.
-  ============================================================================
+  Malaniru - Daily Intelligence Briefing (branded HTML)
+  Built by: publish_briefing_page.py - Date: 2026-07-17
+  Source:   Projects/Malaniru_Marketing_Site/Staging/20260518-daily-intelligence-briefing.md
+  FIDELITY: Body rendered VERBATIM from the source markdown. No copy edits.
 -->
 <html lang="en">
 <head>
@@ -99,7 +88,7 @@
       <div class="wordmark"><a href="index.html">Malaniru<span class="dot">.</span></a></div>
       <span class="eyebrow">AI Enablement &middot; Daily Intelligence Briefing</span>
       <h1>Daily Intelligence Briefing — Monday, May 18, 2026</h1>
-      <p class="byline">By Mark Harris<span class="sep">&middot;</span>May 18, 2026</p>
+      <p class="byline">By Mark Andrew Harris<span class="sep">&middot;</span>May 18, 2026</p>
       <p class="lede">CAISI pre-deployment evaluation regime reportedly finalized with all five frontier labs; Google I/O opens tomorrow with Gemini 4.0 expected; Anthropic raise repriced to $30B at $900B+; EU AI Act transparency obligations reportedly shift to December 2, 2026.</p>
       <a class="backlink" href="daily-intelligence-briefings.html">&larr; All daily intelligence briefings</a>
     </div>
@@ -107,13 +96,16 @@
 
   <main id="main">
     <article>
+      <blockquote>
+      <p><strong>On the numbers.</strong> Dollar figures here are largely vendor-reported and unaudited. Treat them as directional, and confirm before acting.</p>
+      </blockquote>
       <h2 id="executive-summary">Executive Summary</h2>
-      <p>Monday opens with three signals that materially change the planning landscape from Sunday's brief. The US Commerce Department's AI Safety and Infrastructure Bureau (CAISI) has reportedly finalized pre-deployment evaluation agreements with all five US frontier labs, formalizing a regulatory chokepoint between model completion and public release. Google I/O opens tomorrow with Gemini 4.0 widely expected — multiple aggregators describe the expected release as roughly at GPT-5.5's level and meaningfully short of Claude Mythos on capability benchmarks. Reporting on Anthropic's funding round has visibly tightened from Sunday's "$50B at $900B" figure to "$30B at $900B+," co-led by Sequoia, Dragoneer, Greenoaks, and Altimeter, expected to close as soon as end of May. Anthropic's reported Q1 2026 ARR is now above $44B (80x year-over-year), with paying $1M+ customers reportedly doubling from 500 to over 1,000 in two months — press-reported figures; Anthropic has not published audited financials. The other Monday-window items: a brief Claude Haiku 4.5 incident this morning (elevated errors detected 07:28 UTC, resolved 08:07 UTC); the Anthropic × SpaceX Colossus 1 compute deal (May 6) is back in the briefing because it underwrites the Claude Code rate-limit doubling now visibly in production; and Isomorphic Labs $2.1B Series B (May 13, Thrive Capital lead) plus Recursive Superintelligence $650M out of stealth (May 14) reshape the AI life-sciences and frontier-research funding maps.</p>
+      <p>Monday opens with three signals that materially change the planning landscape from Sunday's brief. The US Commerce Department's AI Safety and Infrastructure Bureau (CAISI) has reportedly finalized pre-deployment evaluation agreements with all five US frontier labs, formalizing a regulatory chokepoint between model completion and public release. Google I/O opens tomorrow with Gemini 4.0 widely expected — multiple aggregators describe the expected release as roughly at GPT-5.5's level and meaningfully short of Claude Mythos on capability benchmarks. Reporting on Anthropic's funding round has visibly tightened from Sunday's "$50B at $900B" figure to "$30B at $900B+," co-led by Sequoia, Dragoneer, Greenoaks, and Altimeter, expected to close as soon as end of May. Anthropic's reported Q1 2026 ARR is now above $44B (80x year-over-year), with paying $1M+ customers reportedly doubling from 500 to over 1,000 in two months, press-reported figures; Anthropic has not published audited financials. The other Monday-window items: a brief Claude Haiku 4.5 incident this morning (elevated errors detected 07:28 UTC, resolved 08:07 UTC); the Anthropic × SpaceX Colossus 1 compute deal (May 6) is back in the briefing because it underwrites the Claude Code rate-limit doubling now visibly in production; and Isomorphic Labs $2.1B Series B (May 13, Thrive Capital lead) plus Recursive Superintelligence $650M out of stealth (May 14) reshape the AI life-sciences and frontier-research funding maps.</p>
       <h2 id="1-ai-market-trends">1. AI Market Trends</h2>
       <p><strong>US frontier-lab pre-deployment regulatory regime is now reportedly comprehensive.</strong> The US Commerce Department's CAISI has reportedly finalized pre-deployment evaluation agreements with OpenAI, Anthropic, Google DeepMind, Microsoft, and xAI. Every major US frontier model now passes through a government evaluation step between completion and public release. The UK AI Safety Institute reportedly published updated red-teaming guidance ahead of Google I/O, and the EU continues separate access discussions with Anthropic over the Mythos model. Single-aggregator secondary source as of writing; primary-source confirmation from CAISI / Commerce Department press releases pending. If verified, this is the most consequential structural change in the US AI release pipeline since the October 2023 executive order: release windows lengthen, capability disclosures formalize, and "every frontier model now has a government-evaluated trust signal" becomes a usable enterprise procurement frame.</p>
-      <p><strong>Anthropic's reported raise has been re-priced down to $30B at $900B+, co-led by Sequoia, Dragoneer, Greenoaks, Altimeter.</strong> Bloomberg-derived reporting now describes a $30B raise (down from prior $50B reporting in Sunday's brief) at a $900B+ valuation, expected to close as soon as the end of May. No term sheet has been signed as of May 16. The round size has now appeared in two different magnitudes across consecutive reporting windows — flag the discrepancy. Anthropic's reported Q1 2026 ARR exceeds $44B (80x year-over-year); paying customers spending $1M+ annually reportedly doubled from 500 to over 1,000 in two months. Press-reported, not Anthropic-audited. The reported $900B valuation, if signed, would surpass OpenAI's $852B March valuation — a position reversal that did not exist at the start of Q1.</p>
+      <p><strong>Anthropic's reported raise has been re-priced down to $30B at $900B+, co-led by Sequoia, Dragoneer, Greenoaks, and Altimeter.</strong> Bloomberg-derived reporting now describes a $30B raise (down from prior $50B reporting in Sunday's brief) at a $900B+ valuation, expected to close as soon as the end of May. No term sheet has been signed as of May 16. The round size has now appeared in two different magnitudes across consecutive reporting windows: flag the discrepancy. Anthropic's reported Q1 2026 ARR exceeds $44B (80x year-over-year); paying customers spending $1M+ annually reportedly doubled from 500 to over 1,000 in two months. Press-reported, not Anthropic-audited. The reported $900B valuation, if signed, would surpass OpenAI's $852B March valuation — a position reversal that did not exist at the start of Q1.</p>
       <p><strong>Google I/O 2026 keynote opens tomorrow, Tuesday May 19 at 10am PT.</strong> Google has confirmed coverage of "the latest Gemini model updates" and "agentic coding" — widely interpreted across press and leak coverage as a Gemini 4.0 reveal. Multiple aggregators now describe the expected new Gemini as "roughly at the level of OpenAI's GPT-5.5 and meaningfully short of Anthropic's Claude Mythos" on capability benchmarks. Other confirmed-or-leak-staged surfaces: Android XR glasses (Samsung, Warby Parker, Gentle Monster, XREAL partnerships), Aluminium OS (Android-based ChromeOS replacement, 2026 launch confirmed by VP Sameer Samat), Google Cloud Agentic Toolkit (expanded APIs and Workspace integrations).</p>
-      <p><strong>What This Means for You.</strong> The CAISI pre-deployment evaluation regime — if it lands as reported — becomes one of the cleanest procurement frames available since the EU AI Act timeline emerged: "every frontier model your organization might deploy has been evaluated by CAISI before release." Consider adding pre-deployment evaluation as a third-party trust signal to your governance documentation. On capability comparisons, hold any updates 48 hours — Gemini 4.0 will reshape the relative-capability picture depending on what ships, so plan a post-keynote refresh rather than acting on pre-event framing. And the $30B-vs-$50B discrepancy in the Anthropic raise reporting is a useful reminder of a discipline worth building into your own analysis: distinguish "press-reported and not vendor-confirmed" from "vendor-disclosed and audited" before repeating a figure.</p>
+      <p><strong>What This Means for You.</strong> The CAISI pre-deployment evaluation regime, if it lands as reported, becomes one of the cleanest procurement frames available since the EU AI Act timeline emerged: "every frontier model your organization might deploy has been evaluated by CAISI before release." Consider adding pre-deployment evaluation as a third-party trust signal to your governance documentation. On capability comparisons, hold any updates 48 hours — Gemini 4.0 is likely to reshape the relative-capability picture depending on what ships, so plan a post-keynote refresh rather than acting on pre-event framing. And the $30B-vs-$50B discrepancy in the Anthropic raise reporting is a useful reminder of a discipline worth building into your own analysis: distinguish "press-reported and not vendor-confirmed" from "vendor-disclosed and audited" before repeating a figure.</p>
       <h2 id="2-top-10-ai-agents-three-lenses">2. Top 10 AI Agents — Three Lenses</h2>
       <p>Rankings as of Monday, May 18, 2026. Movement noted relative to Sunday, May 17.</p>
       <h3 id="2a-relevance-for-claude-mcp-centered-work">2a. Relevance for Claude / MCP-Centered Work</h3>
@@ -206,7 +198,7 @@
       <tr>
       <td>4</td>
       <td>Microsoft Agent 365 + M365 E7 + MDASH agentic security (private preview May 12)</td>
-      <td>Down one. MDASH at CyberGym 88.45% remains the strongest vertical-security capability signal on file.</td>
+      <td>Down one. MDASH at CyberGym 88.45% (vendor-reported) remains the strongest vertical-security capability signal on file.</td>
       </tr>
       <tr>
       <td>5</td>
@@ -258,7 +250,7 @@
       <tr>
       <td>2</td>
       <td>Microsoft MDASH multi-agent security system</td>
-      <td>Unchanged. CyberGym 88.45% top; private preview.</td>
+      <td>Unchanged. CyberGym 88.45% (vendor-reported) top; private preview.</td>
       </tr>
       <tr>
       <td>3</td>
@@ -326,7 +318,7 @@
       <li><strong>May 17–18</strong> — CAISI pre-deployment evaluation agreements reportedly finalized with all five frontier labs (OpenAI, Anthropic, Google DeepMind, Microsoft, xAI). Single secondary source as of writing.</li>
       <li><strong>May 17</strong> — UK AI Safety Institute reportedly updated red-teaming guidance ahead of I/O.</li>
       <li><strong>May 17</strong> — EU Digital Omnibus on AI transparency-date shift surfaces clearly across multiple law-firm sources. Provisional agreement May 7; new transparency obligations now reportedly December 2, 2026 (down from August 2, 2026).</li>
-      <li><strong>May 17</strong> — MarketingProfs AI Update covering prior week's stack changes (Anthropic billing change, Routines, Codex mobile, MDASH, Gates Foundation, PwC alliance) — all already on file from prior brief.</li>
+      <li><strong>May 17</strong> — MarketingProfs AI Update covering prior week's stack changes (Anthropic billing change, Routines, Codex mobile, MDASH, Gates Foundation, PwC alliance), all already on file from prior brief.</li>
       <li><strong>No new closed-frontier base-model class releases</strong> from Anthropic, OpenAI Pro tier, Google DeepMind, Meta, Mistral, xAI, or Cohere in the May 17–18 window. Continuing carry: Sonnet 4.8 (leak), Gemini 4.0 / 3.2 Flash / Omni / Remy / Spark Robin (all I/O Tuesday May 19), Meta Avocado (now most-likely-June).</li>
       </ul>
       <p><strong>What This Means for You.</strong> The Monday-window read is pre-I/O hush with three structural shifts in the background: (a) the CAISI pre-deployment regime, if confirmed primary-source, becomes a permanent fixture of US enterprise procurement language for AI; (b) the EU AI Act transparency-obligation date has reportedly moved by four months, which changes the urgency of every disclosure-text review you have underway; (c) the Anthropic funding round has been re-priced down by 40% in reporting magnitude ($50B → $30B) in 24 hours, illustrating exactly why a source-or-silence standard is the right posture for analysis you intend to act on.</p>
@@ -360,7 +352,7 @@
       <li>White &amp; Case, "EU agrees Digital Omnibus deal to simplify AI rules," 2026.</li>
       <li>Yahoo Finance, "Anthropic debuts Claude for Small Business as it continues its enterprise software push," May 13, 2026.</li>
       </ul>
-      <p><em>Research date: 2026-05-18 (Monday). Data flagged as likely to shift within 30–60 days: CAISI pre-deployment evaluation agreements (single-aggregator secondary source; primary-source confirmation pending); Gemini 4.0 / Android XR / Aluminium OS / Google Cloud Agentic Toolkit (leak-staged; I/O Tuesday May 19 is the disclosure window); Anthropic raise (now reported as $30B at $900B+ — Bloomberg-derived press, not Anthropic-confirmed); Anthropic Q1 ARR &gt; $44B / 80x YoY (press-reported, not audited); EU Digital Omnibus on AI transparency obligations (now reportedly December 2, 2026 — provisional, pending formal adoption); Isomorphic Labs $2.1B Series B (primary-source confirmation pending); Meta Avocado (silent — June most-likely window); Sonnet 4.8 (leak-sourced); Claude Mythos SWE-bench Pro 77.8% top ranking (verify after I/O); Anthropic billing changes June 15 (effective; per-token cost impact workload-dependent).</em></p>
+      <p><em>Research date: 2026-05-18 (Monday). Data flagged as likely to shift within 30–60 days: CAISI pre-deployment evaluation agreements (single-aggregator secondary source; primary-source confirmation pending); Gemini 4.0 / Android XR / Aluminium OS / Google Cloud Agentic Toolkit (leak-staged; I/O Tuesday May 19 is the disclosure window); Anthropic raise (now reported as $30B at $900B+, Bloomberg-derived press, not Anthropic-confirmed); Anthropic Q1 ARR &gt; $44B / 80x YoY (press-reported, not audited); EU Digital Omnibus on AI transparency obligations (now reportedly December 2, 2026, provisional, pending formal adoption); Isomorphic Labs $2.1B Series B (primary-source confirmation pending); Meta Avocado (silent — June most-likely window); Sonnet 4.8 (leak-sourced); Claude Mythos SWE-bench Pro 77.8% top ranking (verify after I/O); Anthropic billing changes June 15 (effective; per-token cost impact workload-dependent).</em></p>
     </article>
 
     <section class="cta-band" id="contact" aria-labelledby="cta-heading">

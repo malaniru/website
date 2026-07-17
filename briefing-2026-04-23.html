@@ -1,20 +1,9 @@
 <!DOCTYPE html>
 <!--
-  ============================================================================
-  Malaniru - Research article page (branded HTML)
-  Built by: Web (Morgan Shaw) - Date: 2026-06-23
-  Project:  Malaniru_Marketing_Site
-  Source:   Website/src/content/research/20260423-daily-intelligence-briefing.md
-  Purpose:  Standalone public article page for a daily intelligence briefing,
-            linked from philanthropy-ai-research.html.
-  STATUS:   Public marketing page. robots noindex pre-launch (mirrors template).
-            Calendly CTA hidden via CSS (per Principal, as in template).
-  FIDELITY: Article body rendered VERBATIM from the approved markdown. No copy
-            edits, no reordered sections, no changed figures or heading levels.
-  FLAGS:    none.
-  TECH:     Single self-contained HTML5 file. Embedded CSS. No JavaScript.
-            Template-matched (philanthropy-ai-adoption.html). WCAG AA. Mobile-first.
-  ============================================================================
+  Malaniru - Daily Intelligence Briefing (branded HTML)
+  Built by: publish_briefing_page.py - Date: 2026-07-17
+  Source:   Projects/Malaniru_Marketing_Site/Staging/20260423-daily-intelligence-briefing.md
+  FIDELITY: Body rendered VERBATIM from the source markdown. No copy edits.
 -->
 <html lang="en">
 <head>
@@ -99,7 +88,7 @@
       <div class="wordmark"><a href="index.html">Malaniru<span class="dot">.</span></a></div>
       <span class="eyebrow">AI Enablement &middot; Daily Intelligence Briefing</span>
       <h1>Daily Intelligence Briefing — Thursday, April 23, 2026</h1>
-      <p class="byline">By Mark Harris<span class="sep">&middot;</span>April 23, 2026</p>
+      <p class="byline">By Mark Andrew Harris<span class="sep">&middot;</span>April 23, 2026</p>
       <p class="lede">Anthropic crosses ~$1T implied secondary-market valuation and overtakes OpenAI; Google Cloud Next &#x27;26 consolidates Vertex AI into Gemini Enterprise Agent Platform with A2A v1.0 in production at 150 orgs; Microsoft integrates Claude Mythos into its Security Development Lifecycle the same day Sullivan &amp; Cromwell warns bank CEOs about it; OpenAI ships Workspace Agents.</p>
       <a class="backlink" href="daily-intelligence-briefings.html">&larr; All daily intelligence briefings</a>
     </div>
@@ -107,11 +96,14 @@
 
   <main id="main">
     <article>
+      <blockquote>
+      <p><strong>On the numbers.</strong> Dollar figures here are largely vendor-reported and unaudited. Treat them as directional, and confirm before acting.</p>
+      </blockquote>
       <h2 id="executive-summary">Executive Summary</h2>
       <p>Today's landscape is dominated by one private-market event and one conference. First, Anthropic is trading at roughly a $1 trillion implied valuation on secondary markets as of this morning — Forge Global CEO Kelly Rodriques confirmed the activity to Business Insider, with one shareholder offering stock at $1.15T and a major growth fund bidding $1.05T; this puts Anthropic at ~2.6× its February $380B primary round and, for the first time, above OpenAI on the secondary market, which is trading below its $852B March primary. Second, Google Cloud Next '26 delivered a far larger agentic-stack release than the pre-event coverage anticipated: Vertex AI is rebranded and absorbed into "Gemini Enterprise Agent Platform," A2A v1.0 is in production at 150 organizations, ADK v1.0 GA across four languages, a $750M partner fund, and enterprise deals with Merck (up to $1B), Apple (Foundation Models on Gemini, Siri refresh), and NASA (Artemis II flight readiness). Separately, Microsoft joined Project Glasswing and is integrating Claude Mythos Preview into its Security Development Lifecycle, and Sullivan &amp; Cromwell circulated a cybersecurity-risk note to bank CEOs about Mythos the same day. OpenAI quietly shipped Workspace Agents (Codex-powered team agents). The Anthropic Claude Code pricing experiment from April 21–22 remains partially reverted per Head of Growth Amol Avasare's public statement.</p>
-      <hr>
+      <hr />
       <h2 id="1-ai-market-trends">1. AI Market Trends</h2>
-      <p><strong>Anthropic hits ~$1T on secondary markets — overtakes OpenAI.</strong> This morning, Business Insider reported, confirmed by Forge Global CEO Kelly Rodriques, that Anthropic is trading at an implied ~$1T valuation on secondary platforms. One shareholder has offered stock at a $1.15T valuation; a major growth fund has bid $1.05T. This is 2.6× Anthropic's February $380B primary round. By contrast, OpenAI's $852B March primary valuation is trading below face on the same platforms. The driving claim is Anthropic's run-rate revenue moving from $9B at end-2025 to ~$30B by end-March 2026 — a 233% one-quarter jump — with Claude Code specifically disclosed as ~$2.5B annualized (self-reported; independent verification unavailable). Reported IPO target remains $400–500B with Goldman Sachs and JPMorgan advising for a possible October 2026 listing. Secondary-market prints are thin-tape and not the same as a priced round; treat as directional signal, not confirmed market cap.</p>
+      <p><strong>Anthropic hits ~$1T on secondary markets — overtakes OpenAI.</strong> This morning, Business Insider reported, confirmed by Forge Global CEO Kelly Rodriques, that Anthropic is trading at an implied ~$1T valuation on secondary platforms. One shareholder has offered stock at a $1.15T valuation; a major growth fund has bid $1.05T. This is 2.6× Anthropic's February $380B primary round. By contrast, OpenAI's $852B March primary valuation is trading below face on the same platforms. The driving claim is Anthropic's run-rate revenue moving from $9B at end-2025 to ~$30B by end-March 2026, a 233% one-quarter jump, with Claude Code specifically disclosed as ~$2.5B annualized (self-reported; independent verification unavailable). Reported IPO target remains $400–500B with Goldman Sachs and JPMorgan advising for a possible October 2026 listing. Secondary-market prints are thin-tape and not the same as a priced round; treat as directional signal, not confirmed market cap.</p>
       <p><strong>Google Cloud Next '26 — agentic stack consolidated.</strong> Day 1 (April 22) and Day 2 (April 23, Developer Keynote) landed a broader release than pre-event coverage anticipated. Headline items:</p>
       <ul>
       <li><strong>Vertex AI rebranded as "Gemini Enterprise Agent Platform"</strong> — Agentspace absorbed into a unified Gemini Enterprise product.</li>
@@ -120,14 +112,14 @@
       <li><strong>Managed MCP servers</strong> and <strong>Apigee as API-to-agent bridge</strong> — direct answer to the STDIO-vulnerability conversation on self-hosted MCP.</li>
       <li><strong>Model Garden</strong> now includes 200+ models, with Anthropic Claude explicitly listed.</li>
       <li><strong>New Gemini models disclosed:</strong> Gemini 3.1 Pro, Gemini 3.1 Flash Image (Nano Banana 2), Veo 3.1 Lite, Lyria 3 Pro. Pre-event coverage had anticipated "Gemini 3.2"; the actual drop is the 3.1 line.</li>
-      <li><strong>TPU v7 Ironwood</strong> confirmed at 4.6 petaFLOPS per chip, scaling to 9,216-chip superpods at 42.5 exaFLOPS; Google disclosed a separate <strong>"TPU 8t"</strong> for training, scaling to 9,600 TPUs and 2 PB shared HBM per superpod, with vendor-claimed 3× compute and 2× perf/W over Ironwood (self-reported — independent verification unavailable).</li>
+      <li><strong>TPU v7 Ironwood</strong> confirmed at 4.6 petaFLOPS per chip, scaling to 9,216-chip superpods at 42.5 exaFLOPS (vendor-reported); Google disclosed a separate <strong>"TPU 8t"</strong> for training, scaling to 9,600 TPUs and 2 PB shared HBM per superpod, with vendor-claimed 3× compute and 2× perf/W over Ironwood (self-reported — independent verification unavailable).</li>
       <li><strong>$750M partner fund</strong> targeting the 120,000-member partner ecosystem for agentic deployments across Accenture, Deloitte, KPMG, and others.</li>
       <li><strong>Anchor enterprise deals:</strong> Merck–Google up to $1B for an agentic platform spanning R&amp;D, manufacturing, commercial; Apple selected Google as preferred cloud provider for next-gen Apple Foundation Models powering a Gemini-influenced Siri later in 2026; NASA–Google for Artemis II flight readiness systems.</li>
       </ul>
       <p><strong>Salesforce × Google Cloud expanded agent interop.</strong> Agentforce Sales in Gemini Enterprise is in Open Beta today; Gemini Enterprise in Slack is in Private Preview; IDMC BigQuery and Apache Iceberg connectors GA this month; Gemini-powered reasoning for Agentforce lands May 2026.</p>
       <p><strong>OpenAI ships Workspace Agents.</strong> Codex-powered shared team agents — positioned as "an evolution of GPTs" — run continuously in the cloud, execute multi-step tasks, and connect to external apps. Research Preview, free on Business/Enterprise/Edu/Teachers plans through May 6, 2026; credit-based pricing thereafter. OpenAI also updated the Agents SDK with sandboxed runtime, configurable memory, and durable-run snapshotting.</p>
-      <p><strong>What This Means for You.</strong> For your AI implementation policies, the Anthropic $1T secondary print is not a governance item on its own, but the rate of change at Anthropic — revenue 233% in a quarter, compute commitments across Amazon, Alphabet, Broadcom — is what governance documents need to normalize around. Implementation policy templates should treat "vendor organizational volatility" as a first-class risk alongside pricing and parameter changes. For team training, the Google Cloud Next release is the week's most significant curriculum delta: Gemini Enterprise Agent Platform, Workspace Studio, A2A v1.0, ADK v1.0, and managed MCP servers collectively reposition Google's agentic stack from "future" to "in production at 150 orgs, with Claude in the Model Garden." For compliance posture, the Microsoft + Project Glasswing expansion and the Sullivan &amp; Cromwell bank-CEO note are both governance-relevant: Mythos is now being actively deployed by Microsoft in a production cybersecurity pipeline, and top-tier banking counsel is circulating cybersecurity-risk language about it. This is the first time a frontier-lab model has been simultaneously treated as critical-infrastructure defense and critical-infrastructure threat in the same 24-hour cycle.</p>
-      <hr>
+      <p><strong>What This Means for You.</strong> For your AI implementation policies, the Anthropic $1T secondary print is not a governance item on its own, but the rate of change at Anthropic — revenue 233% in a quarter, compute commitments across Amazon, Alphabet, Broadcom — is what governance documents need to normalize around. Implementation policy templates should treat "vendor organizational volatility" as a first-class risk alongside pricing and parameter changes. For team training, the Google Cloud Next release is arguably the week's most significant curriculum delta: Gemini Enterprise Agent Platform, Workspace Studio, A2A v1.0, ADK v1.0, and managed MCP servers collectively reposition Google's agentic stack from "future" to "in production at 150 orgs, with Claude in the Model Garden." For compliance posture, the Microsoft + Project Glasswing expansion and the Sullivan &amp; Cromwell bank-CEO note are both governance-relevant: Mythos is now being actively deployed by Microsoft in a production cybersecurity pipeline, and top-tier banking counsel is circulating cybersecurity-risk language about it. This appears to be among the first times a frontier-lab model has been simultaneously treated as critical-infrastructure defense and critical-infrastructure threat in the same 24-hour cycle.</p>
+      <hr />
       <h2 id="2-top-10-ai-agents-three-lenses">2. Top 10 AI Agents — Three Lenses</h2>
       <p>Rankings as of Thursday, April 23, 2026. Movement noted relative to Wednesday, April 22.</p>
       <h3 id="2a-relevance-for-claude-mcp-centered-work">2a. Relevance for Claude / MCP-Centered Work</h3>
@@ -320,19 +312,19 @@
       </table></div>
       <h3 id="divergence-analysis">Divergence Analysis</h3>
       <p>Two divergences today.</p>
-      <p><strong>First, capability is now measured across three surfaces, not two.</strong> For most of Q1 the Capability conversation was "Claude vs. Gemini." Today's OpenAI Agents SDK update — sandboxed runtime, durable snapshotting, standardized integrations — pulls OpenAI back onto the Capability leaderboard as a real third surface. Clients evaluating agentic platforms in May–June 2026 will have three credible production options, not two.</p>
-      <p><strong>Second, Anthropic is the capital story and a cybersecurity-risk story in the same 24-hour window.</strong> Sullivan &amp; Cromwell circulated a memo today, summarized on the CLS Blue Sky Blog as "Warnings to Bank CEOs About Cybersecurity Risks of Anthropic's New AI Model." On the same day, Microsoft integrated Mythos into its Security Development Lifecycle. The same model is being treated as both a defensive weapon and a systemic threat by two top-tier institutions on the same calendar day. For any organization governing foundation-scale AI, this is the first 2026 event that concretely warrants the phrase "dual-use frontier model" in a policy document.</p>
+      <p><strong>First, capability is now measured across three surfaces, not two.</strong> For most of Q1 the Capability conversation was "Claude vs. Gemini." Today's OpenAI Agents SDK update — sandboxed runtime, durable snapshotting, standardized integrations — pulls OpenAI back onto the Capability leaderboard as a real third surface. Clients evaluating agentic platforms in May–June 2026 are likely to have three credible production options, not two.</p>
+      <p><strong>Second, Anthropic is the capital story and a cybersecurity-risk story in the same 24-hour window.</strong> Sullivan &amp; Cromwell circulated a memo today, summarized on the CLS Blue Sky Blog as "Warnings to Bank CEOs About Cybersecurity Risks of Anthropic's New AI Model." On the same day, Microsoft integrated Mythos into its Security Development Lifecycle. The same model is being treated as both a defensive weapon and a systemic threat by two top-tier institutions on the same calendar day. For any organization governing foundation-scale AI, this looks like one of the first 2026 events that concretely warrants the phrase "dual-use frontier model" in a policy document.</p>
       <p><strong>What This Means for You.</strong> For your policies, consider a "dual-use model deployment" clause referencing today's simultaneous Microsoft-defensive and S&amp;C-threat framings of Mythos. For training, shift any Claude-vs-Gemini comparison module to a three-way Claude–Gemini–OpenAI comparison within 30 days. For compliance, the Sullivan &amp; Cromwell primary memo is worth pulling into your AI governance reference materials.</p>
-      <hr>
+      <hr />
       <h2 id="3-agentic-ai-advances-new-releases">3. Agentic AI Advances &amp; New Releases</h2>
       <p><strong>Gemini Enterprise Agent Platform (formerly Vertex AI) — GA.</strong> Unified platform absorbing Agentspace, with Workspace Studio, A2A Protocol v1.0, ADK v1.0 across four languages, 200+ Model Garden models (including Claude), managed MCP servers, Apigee API-to-agent bridge, Project Mariner web-browsing agent, and partner agents from Box, Workday, Salesforce, ServiceNow.</p>
       <p><strong>OpenAI Workspace Agents + Agents SDK update.</strong> Workspace Agents in Research Preview, free through May 6 on Business/Enterprise/Edu/Teachers; Agents SDK adds sandboxed runtime, memory configuration, durable snapshotting.</p>
       <p><strong>Microsoft × Project Glasswing.</strong> Claude Mythos Preview integrated into Microsoft's Security Development Lifecycle; Mythos is cited as having identified "thousands of zero-day vulnerabilities" across major OSes and browsers (self-reported by Anthropic — independent verification unavailable). Launch-partner roster expanded. Anthropic committed $100M usage credits + $4M direct donations to open-source security orgs.</p>
       <p><strong>Merck × Google Cloud — up to $1B agentic platform.</strong> Deployment spans R&amp;D, manufacturing, commercial, corporate. Google Cloud engineers embedded with Merck teams.</p>
       <p><strong>Apple × Google for next-gen Apple Foundation Models.</strong> Google selected as preferred cloud provider; Apple Foundation Models to be built on Gemini technology; personalized Siri refresh "later in 2026."</p>
-      <p><strong>Cognizant Agentic Retail CX.</strong> New AI-powered contact-center solution built on Gemini Enterprise for Customer Experience.</p>
+      <p><strong>Cognizant Agentic Retail CX.</strong> New contact-center solution built on Gemini Enterprise for Customer Experience.</p>
       <p><strong>ProMarket antitrust note on Project Glasswing.</strong> ProMarket published a short analysis raising concentration-risk concerns about the launch-partner roster; one analyst's reading, not regulatory action.</p>
-      <hr>
+      <hr />
       <h2 id="4-overnight-release-monitor">4. Overnight Release Monitor</h2>
       <p>Since the Wednesday (April 22) briefing publish window:</p>
       <ul>
@@ -346,7 +338,7 @@
       <li><strong>April 22</strong> — Cognizant Agentic Retail CX launched on Gemini Enterprise.</li>
       <li>No new material primary-source frontier-lab release from Meta, Mistral, xAI, or Cohere identified between the Wednesday publish window and this one outside the items above.</li>
       </ul>
-      <hr>
+      <hr />
       <h2 id="sources">Sources</h2>
       <ul>
       <li>Startup Fortune, "Anthropic hits a trillion-dollar valuation on secondary markets and knocks OpenAI from the top spot," April 23, 2026. <a href="https://startupfortune.com/anthropic-hits-a-trillion-dollar-valuation-on-secondary-markets-and-knocks-openai-from-the-top-spot/" target="_blank" rel="noopener">https://startupfortune.com/anthropic-hits-a-trillion-dollar-valuation-on-secondary-markets-and-knocks-openai-from-the-top-spot/</a></li>

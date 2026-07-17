@@ -1,26 +1,15 @@
 <!DOCTYPE html>
 <!--
-  ============================================================================
-  Malaniru - Research article page (branded HTML)
-  Built by: Web (Morgan Shaw) - Date: 2026-06-23
-  Project:  Malaniru_Marketing_Site
-  Source:   Website/src/content/research/20260411-daily-intelligence-briefing.md
-  Purpose:  Standalone public article page for a daily intelligence briefing,
-            linked from philanthropy-ai-research.html.
-  STATUS:   Public marketing page. robots noindex pre-launch (mirrors template).
-            Calendly CTA hidden via CSS (per Principal, as in template).
-  FIDELITY: Article body rendered VERBATIM from the approved markdown. No copy
-            edits, no reordered sections, no changed figures or heading levels.
-  FLAGS:    none.
-  TECH:     Single self-contained HTML5 file. Embedded CSS. No JavaScript.
-            Template-matched (philanthropy-ai-adoption.html). WCAG AA. Mobile-first.
-  ============================================================================
+  Malaniru - Daily Intelligence Briefing (branded HTML)
+  Built by: publish_briefing_page.py - Date: 2026-07-17
+  Source:   Projects/Malaniru_Marketing_Site/Staging/20260411-daily-intelligence-briefing.md
+  FIDELITY: Body rendered VERBATIM from the source markdown. No copy edits.
 -->
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Daily Intelligence Briefing — April 11, 2026 - Malaniru</title>
+  <title>Daily Intelligence Briefing — Saturday, April 11, 2026 - Malaniru</title>
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://www.malaniru.com/briefing-2026-04-11">
   <meta name="description" content="CoreWeave–Anthropic multi-year compute deal, Claude for Word public beta completes Office integration, Anthropic explores custom silicon, and the Saturday weekly sections on foundation AI adoption and data/security regulation.">
@@ -98,8 +87,8 @@
     <div class="header-inner">
       <div class="wordmark"><a href="index.html">Malaniru<span class="dot">.</span></a></div>
       <span class="eyebrow">AI Enablement &middot; Daily Intelligence Briefing</span>
-      <h1>Daily Intelligence Briefing — April 11, 2026</h1>
-      <p class="byline">By Mark Harris<span class="sep">&middot;</span>April 11, 2026</p>
+      <h1>Daily Intelligence Briefing — Saturday, April 11, 2026</h1>
+      <p class="byline">By Mark Andrew Harris<span class="sep">&middot;</span>April 11, 2026</p>
       <p class="lede">CoreWeave–Anthropic multi-year compute deal, Claude for Word public beta completes Office integration, Anthropic explores custom silicon, and the Saturday weekly sections on foundation AI adoption and data/security regulation.</p>
       <a class="backlink" href="daily-intelligence-briefings.html">&larr; All daily intelligence briefings</a>
     </div>
@@ -107,17 +96,20 @@
 
   <main id="main">
     <article>
+      <blockquote>
+      <p><strong>On the numbers.</strong> Dollar figures here are largely vendor-reported and unaudited. Treat them as directional, and confirm before acting.</p>
+      </blockquote>
       <h2 id="executive-summary">Executive Summary</h2>
-      <p>Anthropic followed Wednesday's Claude Cowork GA with a 48-hour infrastructure and distribution push that pulls the company's enterprise story into sharper focus. On April 10, CoreWeave announced a multi-year compute agreement to run Claude workloads at production scale — the first external confirmation that Claude demand has outgrown Anthropic's existing Google TPU and AWS Trainium footprint. The same 48 hours brought Claude for Word public beta — completing native Claude integration across the core Microsoft Office trio (Word, Excel, PowerPoint) — and Reuters-sourced reporting that Anthropic is now exploring a custom silicon program. Anthropic's annualized revenue run rate has reportedly crossed $30 billion, up from $9 billion at end-2025, a 3.3x jump in roughly four months that, if accurate, makes Claude the fastest-growing enterprise software product on record. For organizations adopting Claude, the signal is the same one from yesterday's briefing, reinforced: the Claude stack is no longer an experiment — it is a fully funded, enterprise-integrated platform you can commit to without reputational or continuity risk.</p>
-      <hr>
+      <p>Anthropic followed Wednesday's Claude Cowork GA with a 48-hour infrastructure and distribution push that pulls the company's enterprise story into sharper focus. On April 10, CoreWeave announced a multi-year compute agreement to run Claude workloads at production scale — the first external confirmation that Claude demand has outgrown Anthropic's existing Google TPU and AWS Trainium footprint. The same 48 hours brought Claude for Word public beta (completing native Claude integration across the core Microsoft Office trio: Word, Excel, PowerPoint), and Reuters-sourced reporting that Anthropic is now exploring a custom silicon program. Anthropic's annualized revenue run rate has reportedly crossed $30 billion, up from $9 billion at end-2025, a 3.3x jump in roughly four months that, if accurate, makes Claude the fastest-growing enterprise software product on record. For organizations adopting Claude, the signal is the same one from yesterday's briefing, reinforced: the Claude stack is no longer an experiment; it is a fully funded, enterprise-integrated platform that materially lowers the reputational and continuity risk of committing to it.</p>
+      <hr />
       <h2 id="1-ai-market-trends">1. AI Market Trends</h2>
       <p><strong>CoreWeave and Anthropic sign multi-year compute deal.</strong> CoreWeave announced on April 10 a multi-year agreement to provide Anthropic with dedicated Nvidia GPU capacity across US data centers to power Claude model training and production inference. Multiple outlets reported the contract value at approximately $6.8 billion, with compute capacity coming online later in 2026 in phased rollouts that may expand over time. CoreWeave's stock jumped roughly 11% on the news, extending a 48-hour run that also included a separately reported $21 billion Meta commitment. With Anthropic on board, CoreWeave now reports that nine of the top ten AI model providers are running on its platform. The $6.8 billion figure originates in secondary reporting — Bloomberg and CoreWeave's press release did not disclose the deal value, so treat it as self-reported pending confirmation. (Source: CoreWeave press release, April 10, 2026; Bloomberg, "Anthropic Will Use CoreWeave's AI Capacity to Power Claude," April 10, 2026; CNBC, April 10, 2026; SiliconANGLE, April 10, 2026)</p>
       <p><strong>Anthropic run-rate revenue reported at $30B, up from $9B at end-2025.</strong> Multiple outlets covering the CoreWeave deal referenced Anthropic's annualized revenue run rate at over $30 billion in early April 2026, up from approximately $9 billion at the end of 2025. That is a 3.3x increase in roughly four months. This figure is widely repeated in trade press but originates from Reuters-attributed sources inside the company rather than audited financials — flag as self-reported and do not cite as audited revenue. (Source: The Next Web, April 10, 2026; TechBriefly, April 10, 2026)</p>
       <p><strong>Anthropic exploring custom silicon.</strong> Reuters-sourced reporting on April 10 indicates Anthropic is in early-stage exploration of its own AI chip program to reduce dependence on third-party suppliers during the ongoing compute shortage. No dedicated team has been assembled, no design has been committed, and the company may still choose to continue buying. Anthropic currently runs Claude on a mix of Google TPUs (via the Google/Broadcom partnership), AWS Trainium, and Nvidia hardware, and has a prior long-term agreement with Google/Broadcom for approximately 3.5 GW of TPU capacity from 2027. This puts Anthropic on a similar exploratory path to Meta and OpenAI. (Source: The Next Web, April 10, 2026; Techzine, April 10, 2026; TechBriefly, April 10, 2026)</p>
       <p><strong>Claude for Word ships public beta — Office integration completed.</strong> Anthropic launched Claude for Word in public beta as a native Microsoft Word add-in for Claude Team and Claude Enterprise users on macOS and Windows. The integration preserves native Word formatting and surfaces AI edits as Word's tracked changes, keeping the human review workflow intact. Combined with the existing Claude for Excel and Claude for PowerPoint add-ins, this completes Anthropic's native Claude integration across the classic Office trio. A single conversation thread can now span Word, Excel, and PowerPoint simultaneously — Claude can check a Word report against an Excel model for consistency, or align narrative language between a Word memo and its paired PowerPoint deck. (Source: Anthropic, "Claude for Word," April 10, 2026; Cybersecurity News, April 10, 2026; Artificial Lawyer, April 11, 2026; Microsoft AppSource marketplace listing)</p>
       <p><strong>OpenClaw dispute — Anthropic bans then restores creator's account.</strong> Anthropic temporarily suspended OpenClaw creator Peter Steinberger's account on April 10, citing "suspicious activity," then restored it within hours. The incident follows Anthropic's April 4 decision to exclude third-party harnesses like OpenClaw from Claude Code subscription entitlements and require pay-as-you-go API billing for those usage patterns. Steinberger had previously announced he was joining OpenAI and that OpenClaw would continue as an open-source project with OpenAI support. This is a minor operational incident but a meaningful signal about how Anthropic intends to price and enforce subscription scope as agentic runtime loops (which consume tokens at very different rates than interactive chat) proliferate. (Source: TechCrunch, April 10, 2026; Axios, April 6, 2026; MindStudio, April 2026)</p>
-      <p><strong>What This Means for You.</strong> Two things. First, the CoreWeave deal plus the custom-chip reporting plus the $30B run-rate (even discounted for self-reported caveats) make the continuity risk of building a core workflow on Claude effectively negligible for the next 24–36 months. The "what if Anthropic disappears" objection can be answered with specific data points instead of a promise. Second, the Word integration closes the single largest practical gap in the Cowork story for document-heavy organizations — the fact that most documentation still lives in Word and Excel, not in a cloud-native workspace. An AI implementation policy should now assume a cross-document conversation model (Word, Excel, and PowerPoint in a single thread) when defining data-handling and access rules, and training should add an Office add-in module. The OpenClaw incident is a compliance footnote: organizations that layer third-party agent frameworks on top of a Claude subscription need to understand that the terms of service govern usage patterns, not just data handling.</p>
-      <hr>
+      <p><strong>What This Means for You.</strong> Two things. First, the CoreWeave deal plus the custom-chip reporting plus the $30B run-rate (even discounted for self-reported caveats) substantially lower the continuity risk of building a core workflow on Claude over the next 24–36 months. The "what if Anthropic disappears" objection can be answered with specific data points instead of a promise. Second, the Word integration closes the single largest practical gap in the Cowork story for document-heavy organizations — the fact that most documentation still lives in Word and Excel, not in a cloud-native workspace. An AI implementation policy should now assume a cross-document conversation model (Word, Excel, and PowerPoint in a single thread) when defining data-handling and access rules, and training should add an Office add-in module. The OpenClaw incident is a compliance footnote: organizations that layer third-party agent frameworks on top of a Claude subscription need to understand that the terms of service govern usage patterns, not just data handling.</p>
+      <hr />
       <h2 id="2-top-10-ai-agents-three-lenses">2. Top 10 AI Agents — Three Lenses</h2>
       <p>Rankings as of April 11, 2026. Changes from April 10 noted where applicable.</p>
       <h3 id="2a-relevance-for-claude-mcp-centered-work">2a. Relevance for Claude / MCP-Centered Work</h3>
@@ -313,7 +305,7 @@
       <p>The Claude stack now appears on all three tables in five of the top five slots on Relevance and Capability — an unusually concentrated showing. That concentration is both a strength (alignment with a winning platform) and a risk (counterparty concentration for organizations standardizing on it). The CoreWeave deal and the Anthropic custom-chip exploration are the mitigation story: Anthropic is actively diversifying its own compute stack across Google TPUs, Nvidia via CoreWeave, AWS Trainium, and potentially custom silicon — the same kind of vertical resilience planning a mature enterprise would expect from a strategic vendor.</p>
       <p>Oracle and NVIDIA entering the Momentum list is the other signal worth noting. Oracle's Fusion Agentic Applications is a platform-native approach rather than a Claude-style API-plus-connector approach — different architecture, same target market. If foundation and enterprise buyers begin to frame the question as "do I want agentic AI inside my ERP stack or as a cross-cutting workspace layer," both framings deserve a clean answer.</p>
       <p><strong>What This Means for You.</strong> The competitive picture is cleaner than last week: Claude dominates on capability and ecosystem relevance, but competing platform-native approaches (Oracle, NVIDIA) are beginning to show up on momentum. Organizations weighing options face a real architectural choice — a workflow-first, cross-cutting approach (Cowork, Office, and MCP) versus agentic capabilities embedded inside an existing ERP stack — and should decide deliberately rather than by default. The Lucidworks MCP server is a useful reference case for reducing custom integration work across fragmented data landscapes.</p>
-      <hr>
+      <hr />
       <h2 id="3-agentic-ai-advances-new-releases">3. Agentic AI Advances &amp; New Releases</h2>
       <p><strong>Claude for Word public beta (April 10).</strong> Native Word add-in for Team and Enterprise, Mac and Windows. Preserves native formatting, surfaces edits as tracked changes. Completes Claude integration across Word, Excel, and PowerPoint in a unified conversation thread. (Source: Anthropic; Cybersecurity News; Artificial Lawyer)</p>
       <p><strong>CoreWeave–Anthropic compute agreement (April 10).</strong> Multi-year agreement for Nvidia GPU capacity across US data centers. Deal value reported at ~$6.8B by secondary sources; not independently confirmed by either party. (Source: CoreWeave; Bloomberg; CNBC; SiliconANGLE)</p>
@@ -324,7 +316,7 @@
       <p><strong>Oracle Fusion Agentic Applications launch (week of April 6).</strong> Oracle positioned autonomous AI agents as native capabilities inside Fusion enterprise applications. Analyst framing from Futurum raised the "platform-first" question — whether agentic capabilities delivered inside an existing ERP stack can produce better ROI than cross-cutting tool approaches. (Source: Futurum Group, April 2026)</p>
       <p><strong>NVIDIA Open Agent Development Platform (April 2026).</strong> Announced this week, targeting knowledge-work agent development. (Source: NVIDIA Newsroom, April 2026)</p>
       <p><strong>What This Means for You.</strong> The Office integration closing and the Lucidworks MCP server landing in the same week are two useful signals for organizations scoping their AI plans. Office-native Claude means document and board workflows can move onto Claude without leaving Word. Lucidworks shows the MCP server pattern is now being sold as a productized integration shortcut, not just a protocol. Both are worth factoring into the next policy scoping conversation.</p>
-      <hr>
+      <hr />
       <h2 id="4-overnight-release-monitor">4. Overnight Release Monitor</h2>
       <p>Scanning material releases between Friday evening (April 10) and Saturday morning (April 11):</p>
       <ul>
@@ -336,7 +328,7 @@
       <li>Claude operational status: no new outage reports. Formal post-mortem for the April 7–8 incidents is still pending per prior briefing.</li>
       </ul>
       <p><strong>What This Means for You.</strong> The Cowork-GA-plus-CoreWeave-plus-Word story now has additional days of trade press reinforcement behind it. For document-heavy organizations specifically, the Word integration is the practical angle: documentation workflows can become Claude-native inside the tool staff already use every day, without forcing a move to a new workspace.</p>
-      <hr>
+      <hr />
       <h2 id="5-weekly-foundation-philanthropy-ai-adoption">5. Weekly — Foundation &amp; Philanthropy AI Adoption</h2>
       <p>Chronicle of Philanthropy and Technology Association of Grantmakers (TAG) coverage over the past week aligns on one headline: the question for foundations in 2026 is no longer whether to use AI, but how to move from sporadic productivity-tool use to organization-wide adoption with appropriate governance.</p>
       <p>Named foundation examples surfacing this week:</p>
@@ -348,42 +340,42 @@
       </ul>
       <p>Sector-wide data point: 92% of nonprofits report using AI in some capacity per the 2026 Virtuous nonprofit AI adoption report (n=346, self-selected). The same report flags that most organizations are hitting an "efficiency plateau" — accelerating existing workflows without fundamentally expanding capacity. (Source: Virtuous, "2026 Nonprofit AI Adoption Report")</p>
       <p><strong>What This Means for You.</strong> The "efficiency plateau" is the key opening for organizations that have already adopted AI. Those that have rolled out productivity AI are ready for the next conversation — workflow redesign, not tool rollout — which is where AI implementation policy and hands-on training pay off. The Kauffman and KPMG Foundation examples are useful, carefully attributed reference points for what organization-wide adoption looks like. For document-heavy organizations specifically, Claude Cowork paired with Claude for Word is the route to take documentation workflows agentic without leaving the tools staff already use.</p>
-      <hr>
+      <hr />
       <h2 id="6-weekly-data-security-regulations">6. Weekly — Data &amp; Security Regulations</h2>
       <p><strong>EU AI Act — August 2, 2026 full enforcement approaching.</strong> The next major deadline is 16 weeks out. High-risk AI systems in the financial sector must meet specific requirements by August 2, 2026, and the remaining general obligations under the Act become applicable on the same date. Partial enforcement is already in place: prohibited AI practices (banned since February 2025), AI literacy obligations, and general-purpose AI model governance obligations (since August 2025) are active. Audit activity and fine magnitudes are still evolving week to week; flag any specific enforcement statistics before external use. (Source: European Commission Digital Strategy; Kennedys Law; OneTrust, "Where AI Regulation is Heading in 2026")</p>
       <p><strong>Digital Omnibus — consultation open.</strong> The European Commission's Digital Omnibus proposal, introduced late 2025, would simplify and align elements of the GDPR, AI Act, and ePrivacy framework. Proposed adjustments include changes to definitions of personal data, data subject rights, legitimate interest frameworks, and greater flexibility for certain AI training activities. Amnesty International and other civil society organizations have raised concerns that "simplification" in this context amounts to rollback. Still in consultation — not yet enacted. (Source: Amnesty International, April 2026; TechPolicy.Press; Covington Inside Privacy)</p>
       <p><strong>GDPR procedural regulation.</strong> Entered into force January 1, 2026; applies to new cross-border cases from April 2, 2027. Primarily affects how supervisory authorities process data protection complaints and cooperate on cross-border enforcement. Organizations should expect stricter, more structured enforcement timelines under this framework. (Source: Covington Inside Privacy, "What to Watch in 2026")</p>
       <p><strong>US state-level AI legislation.</strong> State-level AI frameworks (California, Colorado, Texas, New York) continue to proliferate. No federal action expected in Q2. (Source: OneTrust, "Where AI Regulation is Heading in 2026")</p>
       <p><strong>What This Means for You.</strong> The August 2, 2026 deadline is now inside a normal budget planning cycle — any organization choosing AI tooling or AI governance in April should have a credible story about how that tooling fits the August deadline for any EU exposure (partners, co-funders, data-sharing relationships). Even US-only organizations often have European relationships that pull them partially into scope, so compliance should lead with this deadline in scoping conversations through the end of July. The Digital Omnibus consultation is worth watching but not worth planning around — it would be a mistake to make AI governance decisions based on proposed rollbacks that may not pass. The operating assumption through August 2 remains: plan for the current Act as written.</p>
-      <hr>
+      <hr />
       <h2 id="sources">Sources</h2>
       <ul>
-      <li><a href="https://www.coreweave.com/news/coreweave-announces-multi-year-agreement-with-anthropic" target="_blank" rel="noopener">CoreWeave — Multi-Year Agreement With Anthropic</a></li>
-      <li><a href="https://www.bloomberg.com/news/articles/2026-04-10/anthropic-agrees-to-rent-coreweave-ai-capacity-to-power-claude" target="_blank" rel="noopener">Bloomberg — Anthropic Will Use CoreWeave's AI Capacity to Power Claude</a></li>
-      <li><a href="https://www.cnbc.com/2026/04/10/coreweave-anthropic-claude-ai-deal.html" target="_blank" rel="noopener">CNBC — CoreWeave stock pops 11% on deal to power Anthropic's Claude</a></li>
-      <li><a href="https://siliconangle.com/2026/04/10/coreweave-inks-multiyear-cloud-deal-anthropic/" target="_blank" rel="noopener">SiliconANGLE — CoreWeave inks multiyear cloud deal with Anthropic</a></li>
-      <li><a href="https://thenextweb.com/news/coreweave-has-agreed-a-multi-year-gpu-cloud-deal-with-anthropic-to-power-claude-at-production-scale-its-second-major-ai-infrastructure-announcement-in-48-hours" target="_blank" rel="noopener">The Next Web — CoreWeave signs multi-year Anthropic deal</a></li>
-      <li><a href="https://claude.com/claude-for-word" target="_blank" rel="noopener">Anthropic — Claude for Word</a></li>
-      <li><a href="https://cybersecuritynews.com/claude-beta-for-word/" target="_blank" rel="noopener">Cybersecurity News — Anthropic Launches Claude Beta for Word</a></li>
-      <li><a href="https://www.artificiallawyer.com/2026/04/11/anthropic-targets-lawyers-with-claude-for-word/" target="_blank" rel="noopener">Artificial Lawyer — Anthropic Targets Lawyers With Claude For Word</a></li>
-      <li><a href="https://marketplace.microsoft.com/en-us/product/office/wa200010453?tab=overview" target="_blank" rel="noopener">Microsoft AppSource — Claude by Anthropic for Word</a></li>
-      <li><a href="https://techbriefly.com/2026/04/10/anthropic-explores-custom-ai-chip-design-to-power-claude-models/" target="_blank" rel="noopener">TechBriefly — Anthropic explores custom AI chip design</a></li>
-      <li><a href="https://www.techzine.eu/news/infrastructure/140353/anthropic-considers-developing-own-chip-to-reduce-third-party-reliance/" target="_blank" rel="noopener">Techzine — Anthropic considers developing own chip</a></li>
-      <li><a href="https://techcrunch.com/2026/04/10/anthropic-temporarily-banned-openclaws-creator-from-accessing-claude/" target="_blank" rel="noopener">TechCrunch — Anthropic temporarily banned OpenClaw's creator from accessing Claude</a></li>
-      <li><a href="https://www.datacenterknowledge.com/data-center-software/anthropic-targets-ai-data-center-bottleneck-with-claude-managed-agents" target="_blank" rel="noopener">Data Center Knowledge — Anthropic Targets AI Data Center Bottleneck With Claude Managed Agents</a></li>
-      <li><a href="https://blog.modelcontextprotocol.io/posts/2026-04-08-maintainer-update/" target="_blank" rel="noopener">MCP Blog — Expanding the MCP Maintainer Team</a></li>
-      <li><a href="https://www.globenewswire.com/news-release/2026/04/08/3269912/0/en/Lucidworks-Launches-Model-Context-Protocol-to-Reduce-AI-Agent-Integration-Timelines-by-Up-to-10x.html" target="_blank" rel="noopener">GlobeNewswire — Lucidworks Launches Model Context Protocol</a></li>
-      <li><a href="https://www.infoq.com/news/2026/04/pinterest-mcp-ecosystem/" target="_blank" rel="noopener">InfoQ — Pinterest Deploys Production-Scale MCP Ecosystem</a></li>
-      <li><a href="https://futurumgroup.com/insights/agentic-ai-11/" target="_blank" rel="noopener">Futurum Group — Oracle's Fusion Agentic Apps</a></li>
-      <li><a href="https://nvidianews.nvidia.com/news/ai-agents" target="_blank" rel="noopener">NVIDIA Newsroom — Open Agent Development Platform</a></li>
-      <li><a href="https://www.philanthropy.com/news/can-ai-make-grant-seeking-easier-and-grant-making-more-refined/" target="_blank" rel="noopener">Chronicle of Philanthropy — Can AI Make Grant Seeking Easier and Grant Making More Refined?</a></li>
-      <li><a href="https://charitableadvisors.com/the-ai-questions-foundations-will-ask-in-2026-and-why-thats-good-news/" target="_blank" rel="noopener">Charitable Advisors — The AI Questions Foundations Will Ask In 2026</a></li>
-      <li><a href="https://virtuous.org/blog/2026-nonprofit-ai-adoption-report/" target="_blank" rel="noopener">Virtuous — 2026 Nonprofit AI Adoption Report</a></li>
-      <li><a href="https://applyingai.com/2026/03/openai-foundations-1-billion-grant-pledge-a-new-paradigm-for-inclusive-ai-advancement/" target="_blank" rel="noopener">Applying AI — OpenAI Foundation's $1 Billion Grant Pledge</a></li>
-      <li><a href="https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" target="_blank" rel="noopener">European Commission — AI Act</a></li>
-      <li><a href="https://www.onetrust.com/blog/where-ai-regulation-is-heading-in-2026-a-global-outlook/" target="_blank" rel="noopener">OneTrust — Where AI Regulation is Heading in 2026</a></li>
-      <li><a href="https://www.amnesty.org/en/latest/news/2026/04/eu-simplification-laws/" target="_blank" rel="noopener">Amnesty International — How EU proposals to "simplify" tech laws roll back our rights</a></li>
-      <li><a href="https://www.insideprivacy.com/european-union-2/what-to-watch-in-2026-key-eu-privacy-cybersecurity-developments/" target="_blank" rel="noopener">Covington Inside Privacy — What to Watch in 2026</a></li>
+      <li><a href="https://www.coreweave.com/news/coreweave-announces-multi-year-agreement-with-anthropic">CoreWeave — Multi-Year Agreement With Anthropic</a></li>
+      <li><a href="https://www.bloomberg.com/news/articles/2026-04-10/anthropic-agrees-to-rent-coreweave-ai-capacity-to-power-claude">Bloomberg — Anthropic Will Use CoreWeave's AI Capacity to Power Claude</a></li>
+      <li><a href="https://www.cnbc.com/2026/04/10/coreweave-anthropic-claude-ai-deal.html">CNBC — CoreWeave stock pops 11% on deal to power Anthropic's Claude</a></li>
+      <li><a href="https://siliconangle.com/2026/04/10/coreweave-inks-multiyear-cloud-deal-anthropic/">SiliconANGLE — CoreWeave inks multiyear cloud deal with Anthropic</a></li>
+      <li><a href="https://thenextweb.com/news/coreweave-has-agreed-a-multi-year-gpu-cloud-deal-with-anthropic-to-power-claude-at-production-scale-its-second-major-ai-infrastructure-announcement-in-48-hours">The Next Web — CoreWeave signs multi-year Anthropic deal</a></li>
+      <li><a href="https://claude.com/claude-for-word">Anthropic — Claude for Word</a></li>
+      <li><a href="https://cybersecuritynews.com/claude-beta-for-word/">Cybersecurity News — Anthropic Launches Claude Beta for Word</a></li>
+      <li><a href="https://www.artificiallawyer.com/2026/04/11/anthropic-targets-lawyers-with-claude-for-word/">Artificial Lawyer — Anthropic Targets Lawyers With Claude For Word</a></li>
+      <li><a href="https://marketplace.microsoft.com/en-us/product/office/wa200010453?tab=overview">Microsoft AppSource — Claude by Anthropic for Word</a></li>
+      <li><a href="https://techbriefly.com/2026/04/10/anthropic-explores-custom-ai-chip-design-to-power-claude-models/">TechBriefly — Anthropic explores custom AI chip design</a></li>
+      <li><a href="https://www.techzine.eu/news/infrastructure/140353/anthropic-considers-developing-own-chip-to-reduce-third-party-reliance/">Techzine — Anthropic considers developing own chip</a></li>
+      <li><a href="https://techcrunch.com/2026/04/10/anthropic-temporarily-banned-openclaws-creator-from-accessing-claude/">TechCrunch — Anthropic temporarily banned OpenClaw's creator from accessing Claude</a></li>
+      <li><a href="https://www.datacenterknowledge.com/data-center-software/anthropic-targets-ai-data-center-bottleneck-with-claude-managed-agents">Data Center Knowledge — Anthropic Targets AI Data Center Bottleneck With Claude Managed Agents</a></li>
+      <li><a href="https://blog.modelcontextprotocol.io/posts/2026-04-08-maintainer-update/">MCP Blog — Expanding the MCP Maintainer Team</a></li>
+      <li><a href="https://www.globenewswire.com/news-release/2026/04/08/3269912/0/en/Lucidworks-Launches-Model-Context-Protocol-to-Reduce-AI-Agent-Integration-Timelines-by-Up-to-10x.html">GlobeNewswire — Lucidworks Launches Model Context Protocol</a></li>
+      <li><a href="https://www.infoq.com/news/2026/04/pinterest-mcp-ecosystem/">InfoQ — Pinterest Deploys Production-Scale MCP Ecosystem</a></li>
+      <li><a href="https://futurumgroup.com/insights/agentic-ai-11/">Futurum Group — Oracle's Fusion Agentic Apps</a></li>
+      <li><a href="https://nvidianews.nvidia.com/news/ai-agents">NVIDIA Newsroom — Open Agent Development Platform</a></li>
+      <li><a href="https://www.philanthropy.com/news/can-ai-make-grant-seeking-easier-and-grant-making-more-refined/">Chronicle of Philanthropy — Can AI Make Grant Seeking Easier and Grant Making More Refined?</a></li>
+      <li><a href="https://charitableadvisors.com/the-ai-questions-foundations-will-ask-in-2026-and-why-thats-good-news/">Charitable Advisors — The AI Questions Foundations Will Ask In 2026</a></li>
+      <li><a href="https://virtuous.org/blog/2026-nonprofit-ai-adoption-report/">Virtuous — 2026 Nonprofit AI Adoption Report</a></li>
+      <li><a href="https://applyingai.com/2026/03/openai-foundations-1-billion-grant-pledge-a-new-paradigm-for-inclusive-ai-advancement/">Applying AI — OpenAI Foundation's $1 Billion Grant Pledge</a></li>
+      <li><a href="https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai">European Commission — AI Act</a></li>
+      <li><a href="https://www.onetrust.com/blog/where-ai-regulation-is-heading-in-2026-a-global-outlook/">OneTrust — Where AI Regulation is Heading in 2026</a></li>
+      <li><a href="https://www.amnesty.org/en/latest/news/2026/04/eu-simplification-laws/">Amnesty International — How EU proposals to "simplify" tech laws roll back our rights</a></li>
+      <li><a href="https://www.insideprivacy.com/european-union-2/what-to-watch-in-2026-key-eu-privacy-cybersecurity-developments/">Covington Inside Privacy — What to Watch in 2026</a></li>
       </ul>
     </article>
 

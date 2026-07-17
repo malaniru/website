@@ -1,26 +1,15 @@
 <!DOCTYPE html>
 <!--
-  ============================================================================
-  Malaniru - Research article page (branded HTML)
-  Built by: Web (Morgan Shaw) - Date: 2026-06-23
-  Project:  Malaniru_Marketing_Site
-  Source:   Website/src/content/research/20260611-daily-intelligence-briefing.md
-  Purpose:  Standalone public article page for a daily intelligence briefing,
-            linked from philanthropy-ai-research.html.
-  STATUS:   Public marketing page. robots noindex pre-launch (mirrors template).
-            Calendly CTA hidden via CSS (per Principal, as in template).
-  FIDELITY: Article body rendered VERBATIM from the approved markdown. No copy
-            edits, no reordered sections, no changed figures or heading levels.
-  FLAGS:    none.
-  TECH:     Single self-contained HTML5 file. Embedded CSS. No JavaScript.
-            Template-matched (philanthropy-ai-adoption.html). WCAG AA. Mobile-first.
-  ============================================================================
+  Malaniru - Daily Intelligence Briefing (branded HTML)
+  Built by: publish_briefing_page.py - Date: 2026-07-17
+  Source:   Projects/Malaniru_Marketing_Site/Staging/20260611-daily-intelligence-briefing.md
+  FIDELITY: Body rendered VERBATIM from the source markdown. No copy edits.
 -->
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Daily Intelligence Briefing — June 11, 2026: Agents Go on Autopilot - Malaniru</title>
+  <title>Daily Intelligence Briefing — Thursday, June 11, 2026 - Malaniru</title>
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://www.malaniru.com/briefing-2026-06-11">
   <meta name="description" content="Claude Managed Agents enter public beta with cron scheduling and credential vaults, Claude lands inside Apple&#x27;s Foundation Models framework, and independent benchmarks for Fable 5 arrive with a scaffold caveat.">
@@ -98,8 +87,8 @@
     <div class="header-inner">
       <div class="wordmark"><a href="index.html">Malaniru<span class="dot">.</span></a></div>
       <span class="eyebrow">AI Enablement &middot; Daily Intelligence Briefing</span>
-      <h1>Daily Intelligence Briefing — June 11, 2026: Agents Go on Autopilot</h1>
-      <p class="byline">By Mark Harris<span class="sep">&middot;</span>June 11, 2026</p>
+      <h1>Daily Intelligence Briefing — Thursday, June 11, 2026</h1>
+      <p class="byline">By Mark Andrew Harris<span class="sep">&middot;</span>June 11, 2026</p>
       <p class="lede">Claude Managed Agents enter public beta with cron scheduling and credential vaults, Claude lands inside Apple&#x27;s Foundation Models framework, and independent benchmarks for Fable 5 arrive with a scaffold caveat.</p>
       <a class="backlink" href="daily-intelligence-briefings.html">&larr; All daily intelligence briefings</a>
     </div>
@@ -107,8 +96,11 @@
 
   <main id="main">
     <article>
+      <blockquote>
+      <p><strong>On the numbers.</strong> Dollar figures here are largely vendor-reported and unaudited. Treat them as directional, and confirm before acting.</p>
+      </blockquote>
       <h2 id="executive-summary">Executive Summary</h2>
-      <p>The frontier-model story from June 9 is maturing into a verification story: independent evaluations of Claude Fable 5 have started to appear, and they broadly support Anthropic's capability claim while exposing a real caveat — the headline 80.3% on SWE-bench Pro uses Anthropic's own scaffold, and standardized third-party leaderboards report different numbers, with the spread attributable to scaffolding and data splits. The more actionable news sits one layer down the stack: on June 9–10, Anthropic moved Claude Managed Agents into public beta with cron-based scheduled deployments, vault-stored credentials, browser-capable integrations, and connection to private MCP servers — turning agents from interactive sessions into scheduled, governed infrastructure. Separately, off the back of WWDC, Claude shipped as a server-side language model inside Apple's Foundation Models framework, letting developers route from Apple's on-device model to Claude with a Swift Package dependency change and no session-logic rewrite. Carry items hold: the June 15 Agent SDK billing change is days out (Cowork and interactive use remain unaffected), Gemini 3.5 Pro is still pre-GA, and the EU AI Act's August 2 transparency obligations and August 5 Opus 4.1 retirement remain on the calendar.</p>
+      <p>The frontier-model story from June 9 is maturing into a verification story: independent evaluations of Claude Fable 5 have started to appear, and they broadly support Anthropic's capability claim while exposing a real caveat — the headline 80.3% on SWE-bench Pro uses Anthropic's own scaffold, and standardized third-party leaderboards report different numbers, with the spread attributable to scaffolding and data splits. The more actionable news sits one layer down the stack: on June 9–10, Anthropic moved Claude Managed Agents into public beta with cron-based scheduled deployments, vault-stored credentials, browser-capable integrations, and connections to private MCP servers, turning agents from interactive sessions into scheduled, governed infrastructure. Separately, off the back of WWDC, Claude shipped as a server-side language model inside Apple's Foundation Models framework, letting developers route from Apple's on-device model to Claude with a Swift Package dependency change and, per Anthropic's description, minimal session-logic rewrite. Carry items hold: the June 15 Agent SDK billing change is days out (Cowork and interactive use remain unaffected), Gemini 3.5 Pro is still pre-GA, and the EU AI Act's August 2 transparency obligations and August 5 Opus 4.1 retirement remain on the calendar.</p>
       <h2 id="1-ai-market-trends">1. AI Market Trends</h2>
       <p>The Fable 5 verification picture is filling in, and the honest read is "strong, with a scaffold asterisk." Since launch, third-party and semi-independent evaluations have begun to publish. Cognition's FrontierCode eval placed Fable 5 first among frontier models, reaching 29.3% on the hardest "Diamond" split, more than double Opus 4.8's 13.4%. The crucial nuance is on SWE-bench Pro: the widely repeated 80.3% figure uses Anthropic's own scaffold, and Scale's standardized SEAL leaderboard reports different numbers, with the gap explained by scaffolding and data-split differences. The model is genuinely strong, but the single most-quoted number is scaffold-dependent and should not be presented as a clean apples-to-apples result.</p>
       <p>Anthropic's compute and capital backdrop continues to widen. A confidential S-1 (June 1) sits on top of a recent raise reported at $65B, bringing valuation to roughly $965B, with annualized revenue reported at $47B — figures reported by trade press citing the filing and funding round, and best treated as reported-not-audited until the public S-1 is available. On compute, the SpaceX Colossus 1 deal continues to underwrite the higher Claude Code limits that landed last month.</p>
@@ -118,7 +110,7 @@
       <p>On production readiness, Fable 5 leads on tested suites with partial independent verification now in hand, though its headline number is scaffold-dependent. Opus 4.8 remains the fully production-proven prior frontier and the safety-fallback target inside Fable 5. The item most worth studying this week is Managed Agents: it carries little general buzz but maps almost exactly onto what a boutique implementer sells — quiet capability, high strategic fit.</p>
       <h2 id="3-agentic-ai-advances-and-new-releases">3. Agentic AI Advances and New Releases</h2>
       <p><strong>Claude Managed Agents — public beta.</strong> Anthropic moved Managed Agents into public beta with three capabilities that matter for production automation. Scheduled deployments give an agent a cron schedule; when it fires, the agent starts a fresh session and completes its task, with no scheduler to build or host. Secure credential handling stores environment variables in a vault. And agents can run in a sandbox you control and connect to private MCP servers, alongside browser-capable integrations. Anthropic's framing — "decoupling the brain from the hands" — is the strategic signal: agents as autonomous, schedulable infrastructure that runs inside enterprise boundaries, not interactive chat.</p>
-      <p><strong>Claude inside Apple's Foundation Models framework.</strong> Claude shipped as a Swift package that exposes Claude as a server-side language model conforming to Apple's LanguageModel protocol, using the same LanguageModelSession API as Apple's on-device model across iOS 27, iPadOS 27, macOS 27, visionOS 27, and watchOS 27. A developer can prototype on Apple's on-device model, then route complex queries to Claude or Gemini by changing a Swift Package Manager dependency, with no session-logic rewrite. The provider-swappable design broadens Claude's reach and, at the same time, commoditizes the model slot.</p>
+      <p><strong>Claude inside Apple's Foundation Models framework.</strong> Claude shipped as a Swift package that exposes Claude as a server-side language model conforming to Apple's LanguageModel protocol, using the same LanguageModelSession API as Apple's on-device model across iOS 27, iPadOS 27, macOS 27, visionOS 27, and watchOS 27. A developer can prototype on Apple's on-device model, then route complex queries to Claude or Gemini by changing a Swift Package Manager dependency, with minimal session-logic rewrite, per Anthropic's description. The provider-swappable design broadens Claude's reach and, at the same time, commoditizes the model slot.</p>
       <p><strong>Carry items.</strong> The Claude Code / Agent SDK billing change takes effect June 15: Agent SDK, <code>claude -p</code>, and GitHub Actions move to a separate metered credit pool, while Cowork and interactive terminal use are unchanged. The MCP final specification is scheduled for July 28 with a stateless core, MCP Apps, a Tasks extension, and OAuth/OIDC-aligned authorization. Gemini 3.5 Pro remains pre-GA. Claude Opus 4.1 API retirement is scheduled for August 5.</p>
       <p><strong>What this means for implementers:</strong> Managed Agents introduces new governance surface to template now — scheduled runs, vault-stored secrets, and private-MCP connectivity each need a documented control. The Apple integration is a useful teachable about provider-swappable architecture and a quiet caution that model choice is becoming a configuration decision. Confirm no client or internal workflow still runs on Opus 4.1 ahead of the August 5 retirement.</p>
       <h2 id="4-release-monitor">4. Release Monitor</h2>

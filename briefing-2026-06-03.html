@@ -1,20 +1,9 @@
 <!DOCTYPE html>
 <!--
-  ============================================================================
-  Malaniru - Research article page (branded HTML)
-  Built by: Web (Morgan Shaw) - Date: 2026-06-23
-  Project:  Malaniru_Marketing_Site
-  Source:   Website/src/content/research/20260603-daily-intelligence-briefing.md
-  Purpose:  Standalone public article page for a daily intelligence briefing,
-            linked from philanthropy-ai-research.html.
-  STATUS:   Public marketing page. robots noindex pre-launch (mirrors template).
-            Calendly CTA hidden via CSS (per Principal, as in template).
-  FIDELITY: Article body rendered VERBATIM from the approved markdown. No copy
-            edits, no reordered sections, no changed figures or heading levels.
-  FLAGS:    none.
-  TECH:     Single self-contained HTML5 file. Embedded CSS. No JavaScript.
-            Template-matched (philanthropy-ai-adoption.html). WCAG AA. Mobile-first.
-  ============================================================================
+  Malaniru - Daily Intelligence Briefing (branded HTML)
+  Built by: publish_briefing_page.py - Date: 2026-07-17
+  Source:   Projects/Malaniru_Marketing_Site/Staging/20260603-daily-intelligence-briefing.md
+  FIDELITY: Body rendered VERBATIM from the source markdown. No copy edits.
 -->
 <html lang="en">
 <head>
@@ -99,7 +88,7 @@
       <div class="wordmark"><a href="index.html">Malaniru<span class="dot">.</span></a></div>
       <span class="eyebrow">AI Enablement &middot; Daily Intelligence Briefing</span>
       <h1>Daily Intelligence Briefing — Wednesday, June 3, 2026</h1>
-      <p class="byline">By Mark Harris<span class="sep">&middot;</span>June 3, 2026</p>
+      <p class="byline">By Mark Andrew Harris<span class="sep">&middot;</span>June 3, 2026</p>
       <p class="lede">The frontier stayed still this week, but the commercial layer moved: Anthropic filed confidentially for an IPO, expanded its Mythos security preview to ~200 organizations, and changed how agent usage is billed — prompting an immediate OpenAI counter-offer.</p>
       <a class="backlink" href="daily-intelligence-briefings.html">&larr; All daily intelligence briefings</a>
     </div>
@@ -107,8 +96,11 @@
 
   <main id="main">
     <article>
+      <blockquote>
+      <p><strong>On the numbers.</strong> Dollar figures here are largely vendor-reported and unaudited. Treat them as directional, and confirm before acting.</p>
+      </blockquote>
       <h2 id="executive-summary">Executive Summary</h2>
-      <p>The model frontier did not move between June 1 and June 3 — no new flagship shipped from any major lab — but the commercial and governance layers moved sharply. The defining events were Anthropic's confidential IPO filing on June 1, at the $965 billion valuation set by its May 28 Series H (Source: CNBC, May 28, 2026; Sacra, 2026), and a same-day skirmish over agent billing: Anthropic announced that, starting June 15, Claude Agent SDK and Claude Code agent usage will move off the flat subscription pool into a separate metered credit billed at API rates, and OpenAI immediately offered switchers two months of free Codex (Source: TechTimes, June 2, 2026; VentureBeat, 2026). On the governance side, the Model Context Protocol published its 2026-07-28 specification release candidate — the largest revision since launch — and the EU AI Act Digital Omnibus moved toward formal adoption expected this month (Source: Model Context Protocol Blog, 2026; Council of the EU, May 7, 2026).</p>
+      <p>The model frontier did not move between June 1 and June 3 — no new flagship shipped from any major lab — but the commercial and governance layers moved sharply. The defining events were Anthropic's confidential IPO filing on June 1, at the $965 billion valuation set by its May 28 Series H (Source: CNBC, May 28, 2026; Sacra, 2026), and a same-day skirmish over agent billing: Anthropic announced that, starting June 15, Claude Agent SDK and Claude Code agent usage will move off the flat subscription pool into a separate metered credit billed at API rates, and OpenAI immediately offered switchers two months of free Codex (Source: TechTimes, June 2, 2026; VentureBeat, 2026). On the governance side, the Model Context Protocol published its 2026-07-28 specification release candidate, the largest revision since launch, and the EU AI Act Digital Omnibus moved toward formal adoption expected this month (Source: Model Context Protocol Blog, 2026; Council of the EU, May 7, 2026).</p>
       <h2 id="1-ai-market-trends">1. AI Market Trends</h2>
       <p>Anthropic filed confidentially for an IPO on June 1, at the $965 billion valuation established by its May 28 $65 billion Series H — the round that made it the most valuable AI startup ahead of OpenAI's last-reported $852 billion (Source: CNBC, "Anthropic tops OpenAI as most valuable AI startup," May 28, 2026; Sacra, 2026). The revenue backdrop: run-rate crossed roughly $47 billion in late May, with more than 1,000 customers now reportedly spending over $1 million annually (Source: Simon Willison, May 29, 2026; Sacra, 2026). These run-rate and customer figures are company-reported and not independently audited.</p>
       <p>The agent-billing change is the week's most operationally relevant story. Effective June 15, Claude Agent SDK usage and related agentic workloads will no longer draw from the same subscription pool as interactive chat; instead they consume a separate monthly credit, reportedly sized $20–$200 depending on plan, billed at standard API rates (Source: TechTimes, June 2, 2026). The tier figures come from a single outlet and should be confirmed against Anthropic's pricing page. The same day, OpenAI offered new enterprise customers two months of free Codex for switching within 30 days and shipped a Codex enterprise update bundling 62 business apps and 110 prebuilt skills (Source: VentureBeat, 2026; TechTimes, June 2, 2026).</p>

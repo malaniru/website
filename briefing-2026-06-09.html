@@ -1,26 +1,15 @@
 <!DOCTYPE html>
 <!--
-  ============================================================================
-  Malaniru - Research article page (branded HTML)
-  Built by: Web (Morgan Shaw) - Date: 2026-06-23
-  Project:  Malaniru_Marketing_Site
-  Source:   Website/src/content/research/20260609-daily-intelligence-briefing.md
-  Purpose:  Standalone public article page for a daily intelligence briefing,
-            linked from philanthropy-ai-research.html.
-  STATUS:   Public marketing page. robots noindex pre-launch (mirrors template).
-            Calendly CTA hidden via CSS (per Principal, as in template).
-  FIDELITY: Article body rendered VERBATIM from the approved markdown. No copy
-            edits, no reordered sections, no changed figures or heading levels.
-  FLAGS:    none.
-  TECH:     Single self-contained HTML5 file. Embedded CSS. No JavaScript.
-            Template-matched (philanthropy-ai-adoption.html). WCAG AA. Mobile-first.
-  ============================================================================
+  Malaniru - Daily Intelligence Briefing (branded HTML)
+  Built by: publish_briefing_page.py - Date: 2026-07-17
+  Source:   Projects/Malaniru_Marketing_Site/Staging/20260609-daily-intelligence-briefing.md
+  FIDELITY: Body rendered VERBATIM from the source markdown. No copy edits.
 -->
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Daily Intelligence Briefing — June 9, 2026: A quiet model week, a loud compliance calendar - Malaniru</title>
+  <title>Daily Intelligence Briefing — Tuesday, June 9, 2026 - Malaniru</title>
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://www.malaniru.com/briefing-2026-06-09">
   <meta name="description" content="No new frontier model shipped this week. The items that matter are dates: the EU AI Act&#x27;s August 2 high-risk deadline, a resolved Claude outage, and the near-term MCP and billing changes.">
@@ -98,8 +87,8 @@
     <div class="header-inner">
       <div class="wordmark"><a href="index.html">Malaniru<span class="dot">.</span></a></div>
       <span class="eyebrow">AI Enablement &middot; Daily Intelligence Briefing</span>
-      <h1>Daily Intelligence Briefing — June 9, 2026: A quiet model week, a loud compliance calendar</h1>
-      <p class="byline">By Mark Harris<span class="sep">&middot;</span>June 9, 2026</p>
+      <h1>Daily Intelligence Briefing — Tuesday, June 9, 2026</h1>
+      <p class="byline">By Mark Andrew Harris<span class="sep">&middot;</span>June 9, 2026</p>
       <p class="lede">No new frontier model shipped this week. The items that matter are dates: the EU AI Act&#x27;s August 2 high-risk deadline, a resolved Claude outage, and the near-term MCP and billing changes.</p>
       <a class="backlink" href="daily-intelligence-briefings.html">&larr; All daily intelligence briefings</a>
     </div>
@@ -107,11 +96,14 @@
 
   <main id="main">
     <article>
+      <blockquote>
+      <p><strong>On the numbers.</strong> Dollar figures here are largely vendor-reported and unaudited. Treat them as directional, and confirm before acting.</p>
+      </blockquote>
       <h2 id="executive-summary">Executive summary</h2>
       <p>June 8–9 produced no flagship model launch from any frontier lab, and the standing watch-list is unchanged: Google's Gemini 3.5 Pro remains a June target with no committed date, OpenAI's next model remains unannounced, and Claude Opus 4.8 (released late May, with a 1M-token context window) remains the current Claude frontier. The two updates that matter are about confidence rather than capability. First, the June 5 Claude outage investigation has effectively settled: Anthropic attributed the disruption to infrastructure rather than a breach, confirmed full restoration, and reported it has seen no evidence that customer data was leaked despite the social-media claims that triggered the review. Second, the EU AI Act's August 2, 2026 deadline for high-risk-system obligations is now about eight weeks out, with the "AI omnibus" simplification package having reached political agreement on May 7 but not delivering relief on this specific date. The near calendar is dense — a June 15 Claude agent-billing change, the MCP final specification on July 28, and the EU deadline on August 2. The read for a boutique practice: nothing in client architecture changed this week, so this is the week to convert standing watch-items into client-facing compliance and policy material while the model layer is calm.</p>
       <h2 id="ai-market-trends">AI market trends</h2>
       <p>The frontier model layer was static across June 8–9. No generally available flagship model shipped from Anthropic, OpenAI, Google, Meta, Mistral, or xAI in the window. The structural stories of the prior week — Anthropic's June 1 confidential IPO filing and the June 3 formalization of the Claude Partner Network — continue to define the channel landscape but produced no fresh development in this window.</p>
-      <p>The most concrete item in front of any organization using AI is the EU AI Act's August 2, 2026 deadline. On that day, obligations for high-risk AI systems become binding for deployers: risk-management systems, automated log retention, human-oversight tooling, and, for many deployers, a fundamental-rights impact assessment. Two features make this worth attention even for US-based foundations and small organizations. The rule follows the data and the use case, not the company's headquarters — an organization serving EU data subjects, or building grantee-facing decision tooling, can fall inside the high-risk definition without an EU office. And the regulation is actively moving: the AI omnibus simplification proposal reached political agreement on May 7, 2026, and pushes certain category dates (biometrics, critical infrastructure, employment, migration) to December 2, 2027 — but the core August 2 deployer obligations remain the near-term item. This is not a legal reading, and no organization should take one from an AI vendor; whether a specific workflow is high-risk is a classification question for counsel. The point is narrower: this is the moment to confirm the classification rather than assume it.</p>
+      <p>The most concrete item in front of any organization using AI is the EU AI Act's August 2, 2026 deadline. On that day, obligations for high-risk AI systems become binding for deployers: risk-management systems, automated log retention, human-oversight tooling, and, for many deployers, a fundamental-rights impact assessment. Two features make this worth attention even for US-based foundations and small organizations. The rule follows the data and the use case, not the company's headquarters. An organization serving EU data subjects, or building grantee-facing decision tooling, can fall inside the high-risk definition without an EU office. And the regulation is actively moving: the AI omnibus simplification proposal reached political agreement on May 7, 2026, and pushes certain category dates (biometrics, critical infrastructure, employment, migration) to December 2, 2027 — but the core August 2 deployer obligations remain the near-term item. This is not a legal reading, and no organization should take one from an AI vendor; whether a specific workflow is high-risk is a classification question for counsel. The point is narrower: this is the moment to confirm the classification rather than assume it.</p>
       <p>Enterprise agent adoption continues to show the same pilot-to-production gap that defines the current market. Industry trackers report high experimentation but a low double-digit share of agent pilots reaching full production, with a persistent governance gap behind the stall. Those specific figures are self-reported by industry trackers and are directionally consistent with the pattern of recent months rather than independently audited.</p>
       <p><strong>What this means in practice.</strong> The quiet model layer is an opportunity. The August 2 EU deadline is the cleanest current hook for a governance conversation — even for mostly US clients, a hard regulatory deadline is a concrete way to show the value of an implementation policy before one is forced. The omnibus revision is the teachable nuance: regulation is moving, dates are shifting by category, and a posture assessment has to confirm classification rather than assume it.</p>
       <h2 id="the-agent-landscape-three-lenses">The agent landscape, three lenses</h2>

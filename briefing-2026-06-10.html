@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<!--
+  Malaniru - Daily Intelligence Briefing (branded HTML)
+  Built by: publish_briefing_page.py - Date: 2026-07-17
+  Source:   Projects/Malaniru_Marketing_Site/Staging/20260610-daily-intelligence-briefing.md
+  FIDELITY: Body rendered VERBATIM from the source markdown. No copy edits.
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daily Intelligence Briefing — Wednesday, June 10, 2026 - Malaniru</title>
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.malaniru.com/briefing-2026-06-10">
+  <meta name="description" content="Anthropic&#x27;s Claude Fable 5 and Mythos 5 launch reorders the capability board, the June 15 billing change clarified, and an EU AI Act deadline correction.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --navy:#0F1A2E;--navy-mid:#2A3F63;--copper:#C07830;--gold:#D4A853;
+      --off-white:#F4F1EC;--light-gray:#E8E6E1;--mid-gray:#8A8A96;--dark-text:#1C1C1C;
+      --font:"Inter","Helvetica Neue",Arial,sans-serif;
+    }
+    *{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:var(--font);background:var(--off-white);color:var(--dark-text);line-height:1.65;font-size:16px;-webkit-font-smoothing:antialiased;}
+    .skip-link{position:absolute;left:-999px;top:0;background:var(--gold);color:var(--navy);padding:10px 16px;font-weight:700;z-index:10;}
+    .skip-link:focus{left:8px;top:8px;}
+    a{color:var(--copper);}
+    /* Header */
+    header{background: linear-gradient(160deg, rgba(15,26,46,0.72) 0%, rgba(10,18,33,0.82) 100%), url('StockCake-Cosmic_Web_Complexity-1361288-standard-rot90ccw.jpg'); background-size: auto, 100% 100%; background-repeat: no-repeat, no-repeat; background-position: center, center;color:var(--off-white);padding:48px 24px 52px;position:relative;overflow:hidden;}
+    header::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 85% 12%,rgba(192,120,48,0.20) 0%,rgba(15,26,46,0) 55%);pointer-events:none;}
+    .header-inner{max-width:760px;margin:0 auto;position:relative;z-index:1;}
+    .wordmark{font-weight:800;font-size:1.25rem;letter-spacing:0.02em;margin-bottom:30px;}
+    .wordmark .dot{color:var(--copper);}
+    .wordmark a{color:var(--off-white);text-decoration:none;transition:opacity .18s ease;}
+    .wordmark a:hover,.wordmark a:focus-visible{opacity:.85;outline:none;}
+    .eyebrow{display:inline-block;font-size:0.72rem;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;}
+    header h1{font-weight:800;font-size:clamp(1.8rem,4.6vw,2.6rem);line-height:1.14;letter-spacing:-0.01em;margin-bottom:16px;}
+    .byline{font-size:0.9rem;color:var(--light-gray);letter-spacing:0.01em;}
+    .byline .sep{color:var(--copper);margin:0 8px;}
+    .lede{font-size:1.08rem;color:var(--light-gray);max-width:66ch;margin-top:18px;}
+    .backlink{display:inline-block;margin-top:26px;color:var(--gold);font-weight:600;font-size:0.9rem;text-decoration:none;border-bottom:1px solid rgba(212,168,83,0.4);}
+    .backlink:hover,.backlink:focus-visible{border-bottom-color:var(--gold);outline:none;}
+    /* Article */
+    main{max-width:760px;margin:0 auto;padding:48px 24px 8px;}
+    .disclaimer{background:#fff;border:1px solid var(--light-gray);border-left:4px solid var(--copper);border-radius:8px;padding:14px 18px;font-size:0.9rem;color:var(--navy-mid);margin-bottom:34px;}
+    article{font-size:1.05rem;}
+    article h2{font-weight:800;font-size:1.5rem;color:var(--navy);line-height:1.22;letter-spacing:-0.01em;margin:42px 0 14px;}
+    article h3{font-weight:700;font-size:1.18rem;color:var(--navy-mid);line-height:1.25;margin:30px 0 10px;}
+    article h2 + p, article h3 + p{margin-top:0;}
+    article p{margin:0 0 18px;color:var(--dark-text);}
+    article ul,article ol{margin:0 0 18px;padding-left:24px;}
+    article li{margin-bottom:8px;}
+    article strong{font-weight:700;color:var(--navy);}
+    article em{font-style:italic;}
+    article a{color:var(--copper);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(192,120,48,0.35);transition:border-color .18s ease;}
+    article a:hover,article a:focus-visible{border-bottom-color:var(--copper);outline:none;}
+    article hr{border:none;border-top:1px solid var(--light-gray);margin:34px 0;}
+    article h2#sources, article h2#references{border-top:1px solid var(--light-gray);padding-top:30px;font-size:1.2rem;color:var(--navy-mid);}
+    /* sources list smaller */
+    article h2[id^="sources"] ~ ul li, article h3[id^="sources"] ~ ul li{font-size:0.95rem;color:var(--navy-mid);}
+    /* tables */
+    article table{width:100%;border-collapse:collapse;margin:0 0 24px;font-size:0.95rem;}
+    article th,article td{border:1px solid var(--light-gray);padding:9px 12px;text-align:left;vertical-align:top;}
+    article thead th{background:var(--navy);color:var(--off-white);font-weight:700;}
+    article tbody tr:nth-child(even){background:#fff;}
+    article .table-wrap{overflow-x:auto;margin:0 0 24px;}
+    article .table-wrap table{margin:0;}
+    /* CTA */
+    .cta-band{background:var(--navy);color:var(--off-white);border-radius:12px;padding:42px 32px;text-align:center;margin:48px 0 8px;}
+    .cta-band h2{font-weight:800;font-size:clamp(1.4rem,3.4vw,1.9rem);margin-bottom:12px;letter-spacing:-0.01em;color:var(--off-white);}
+    .cta-band p{color:var(--light-gray);max-width:52ch;margin:0 auto 24px;}
+    .cta-band .btn{display:inline-block;background:var(--copper);color:#fff;font-weight:700;padding:13px 28px;border-radius:8px;text-decoration:none;transition:background .18s ease;}
+    .cta-band .btn:hover,.cta-band .btn:focus-visible{background:var(--gold);color:var(--navy);outline:none;}
+    /* Footer */
+    footer{max-width:760px;margin:16px auto 0;padding:24px;font-size:0.82rem;color:var(--mid-gray);border-top:1px solid var(--light-gray);}
+    footer p+p{margin-top:6px;}
+    footer a{color:var(--mid-gray);text-decoration:underline;}
+    @media (prefers-reduced-motion:reduce){*{transition:none!important;}}
+
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header>
+    <div class="header-inner">
+      <div class="wordmark"><a href="index.html">Malaniru<span class="dot">.</span></a></div>
+      <span class="eyebrow">AI Enablement &middot; Daily Intelligence Briefing</span>
+      <h1>Daily Intelligence Briefing — Wednesday, June 10, 2026</h1>
+      <p class="byline">By Mark Andrew Harris<span class="sep">&middot;</span>June 10, 2026</p>
+      <p class="lede">Anthropic&#x27;s Claude Fable 5 and Mythos 5 launch reorders the capability board, the June 15 billing change clarified, and an EU AI Act deadline correction.</p>
+      <a class="backlink" href="daily-intelligence-briefings.html">&larr; All daily intelligence briefings</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <article>
+      <blockquote>
+      <p><strong>On the numbers.</strong> Dollar figures here are largely vendor-reported and unaudited. Treat them as directional, and confirm before acting.</p>
+      </blockquote>
+      <h2 id="executive-summary">Executive Summary</h2>
+      <p>The headline is a capability event on the Claude stack: on June 9, 2026, Anthropic released Claude Fable 5 (generally available) and Claude Mythos 5 (limited release to vetted cyberdefenders via Project Glasswing), introducing a new Mythos-class tier positioned above Opus 4.8 (Source: Anthropic, "Claude Fable 5 and Claude Mythos 5," June 9, 2026). Anthropic's self-reported benchmarks put Fable 5 at 80.3% on SWE-bench Pro versus 58.6% for GPT-5.5, and the model launched at less than half the price of the earlier Mythos Preview, with availability day-one on Amazon Bedrock and GitHub Copilot (Source: Anthropic, June 9, 2026; AWS News Blog, June 9, 2026; GitHub Changelog, June 9, 2026). Two things make this matter more than a typical model bump: Fable 5 is priced for production rather than preview, and it ships with always-on safeguards that fall back to Opus 4.8 on flagged requests in under 5% of sessions (vendor-reported) — a built-in governance behavior worth understanding before recommending it. Separately, the June 15 Claude Code / Agent SDK billing change is days out, and research this run clarified that Claude Cowork and interactive terminal use are explicitly unchanged; only programmatic Agent SDK usage moves to a metered credit pool. Finally, a correction: the EU AI Act's August 2 high-risk obligations have been deferred to December 2, 2027 under the omnibus political agreement; what binds on August 2, 2026 is the Article 50 transparency set, not the full high-risk regime (Source: Gibson Dunn; Latham &amp; Watkins, 2026).</p>
+      <h2 id="1-ai-market-trends">1. AI Market Trends</h2>
+      <p>The frontier moved, and it moved on Anthropic's side of the board. On June 9, Anthropic announced Claude Fable 5 and Claude Mythos 5, the first models in a Mythos-class tier positioned above the Opus class (Source: Anthropic, June 9, 2026). Fable 5 is the generally available, safety-classified model; Mythos 5 is the same underlying model with some safeguards lifted, released only to a small group of cyberdefenders and infrastructure providers through Project Glasswing (Source: TechCrunch, June 9, 2026; CNBC, June 9, 2026). Day-one availability spanned Anthropic's API, Amazon Bedrock, and GitHub Copilot (Source: AWS News Blog, June 9, 2026; GitHub Changelog, June 9, 2026).</p>
+      <p>The benchmark claims are strong and self-reported — treat accordingly until independent evaluation lands. Anthropic reports Fable 5 / Mythos 5 at 80.3% on SWE-bench Pro (vs. 58.6% for GPT-5.5), 29.3% on Cognition's FrontierCode Diamond (vs. 13.4% for Opus 4.8 and 5.7% for GPT-5.5), and 1932 on GDPval-AA (vs. 1890 for Opus 4.8, 1769 for GPT-5.5) (Source: Anthropic, June 9, 2026, as reported by VentureBeat and news.bitcoin.com). These are self-reported with no independent verification available yet, and should not be presented as settled. The genuinely notable number for a practitioner is price: the model launched at less than half the Mythos Preview rate (Source: Anthropic; news.bitcoin.com, June 9, 2026).</p>
+      <p>On billing: the June 15 change moves Claude Agent SDK, <code>claude -p</code>, and Claude Code GitHub Actions onto a separate metered monthly credit billed at full API rates, while Claude.ai chat, interactive terminal Claude Code, and Claude Cowork keep drawing from normal subscription limits, unchanged (Source: TechTimes, June 2, 2026; DigitalApplied, 2026). Confirm against Anthropic's primary billing documentation before quoting client costs.</p>
+      <p>On regulation: under the AI omnibus (political agreement May 7, 2026), high-risk obligations for stand-alone Annex III systems are deferred to December 2, 2027, and Annex I embedded systems to August 2, 2028 (Source: Gibson Dunn, 2026; Latham &amp; Watkins, 2026). What still takes effect August 2, 2026 is the Article 50 transparency regime and the Act's general applicability (Source: European Commission, accessed June 10, 2026). The omnibus takes legal effect only on formal adoption and publication; plan for the original deadline as a contingency.</p>
+      <p><strong>What this means for practitioners.</strong> Fable 5's built-in fallback-to-Opus-4.8 safeguard is a concrete artifact of governed model selection: a good implementation policy should document which model answers which request, and what happens on a flagged query. The EU correction is its own lesson — a date everyone circled moved, which is exactly why a posture assessment confirms classification and current effective dates rather than relying on last quarter's calendar.</p>
+      <h2 id="2-top-ai-agents-three-lenses">2. Top AI Agents — Three Lenses</h2>
+      <p>Rankings as of June 10, 2026. The June 9 Fable 5 / Mythos 5 launch is a capability-reordering event.</p>
+      <p><strong>Relevance for Claude / MCP-Centered Work:</strong> (1) Claude Cowork — core delivery surface, not repriced by the June 15 change; (2) Claude Fable 5: new GA frontier, day-one on Bedrock and Copilot, built-in Opus-4.8 safety fallback; (3) Claude Code + Agent SDK: Agent SDK repriced June 15; (4) MCP connectors: final spec lands July 28; (5) Claude Partner Network.</p>
+      <p><strong>Market Momentum:</strong> (1) Anthropic — June 9 Mythos-class launch on top of the June 1 IPO filing; (2) OpenAI: GPT-5.5 shipped, GPT-5.6 unannounced; (3) NVIDIA Nemotron 3 Ultra: 550B open-weight, shipped June 4; (4) Google Gemini 3.5: Flash GA, Pro pending; (5) agent-governance startups.</p>
+      <p><strong>Capability &amp; Maturity:</strong> (1) Claude Fable 5 — new GA frontier, figures self-reported, independent eval pending; (2) Claude Opus 4.8: prior frontier, now the safety-fallback target inside Fable 5; (3) GPT-5.5 / Codex; (4) NVIDIA Nemotron 3 Ultra; (5) Gemini 3.5 Flash.</p>
+      <p><strong>Divergence.</strong> For weeks the gap was Momentum vs. Maturity in the Gemini line — strong coverage, no GA ship. That persists, but the new divergence is Maturity vs. Verification on Fable 5: it tops the capability board on day one purely on Anthropic's own numbers, with no independent benchmark yet. The honest call is to rank it first on capability while flagging that the ranking rests on self-reported data. Mythos 5 deliberately does not rank publicly. It is restricted to Project Glasswing.</p>
+      <h2 id="3-agentic-ai-advances-new-releases">3. Agentic AI Advances &amp; New Releases</h2>
+      <p>Claude Fable 5 / Mythos 5 (June 9) is the genuine new release of the window: a Mythos-class tier above Opus, with 1M-token context, 128K output, and always-on adaptive thinking; day-one on Bedrock and GitHub Copilot (Source: Anthropic; AWS News Blog; GitHub Changelog; CNBC, June 9, 2026). The cyberdefense framing matters — Anthropic is gating the un-classified Mythos 5 to vetted defenders rather than releasing it broadly, a notable safety-posture signal (Source: TechCrunch; Interconnects, June 9, 2026).</p>
+      <p>NVIDIA Nemotron 3 Ultra (June 4) is a 550-billion-parameter open-weight model aimed at agentic reasoning, completing the Nemotron 3 family (Source: NVIDIA Newsroom; NVIDIA Technical Blog, 2026). Independent benchmarks are still maturing.</p>
+      <p>The MCP final specification is scheduled for July 28, 2026, with a public release candidate: a stateless core, MCP Apps, the Tasks extension, OAuth/OIDC-aligned authorization, and a formal deprecation policy (Source: Model Context Protocol Blog, 2026). July 28 is a scheduled future date.</p>
+      <p>Carry items: the June 15 Claude Code / Agent SDK billing change (Cowork unchanged); Gemini 3.5 Pro still pre-GA; GPT-5.6 unannounced; Claude Opus 4.1 API retirement scheduled August 5, 2026 — confirm against Anthropic's deprecation page before advising any client still on 4.1.</p>
+      <h2 id="4-overnight-daily-release-monitor">4. Overnight / Daily Release Monitor</h2>
+      <p>Covering June 9–10: Claude Fable 5 + Mythos 5 launched (June 9) — new Mythos-class tier, Fable 5 GA, Mythos 5 limited via Project Glasswing, day-one on Bedrock and GitHub Copilot, benchmarks self-reported. No other frontier-class GA launch in the window from OpenAI, Google, Meta, Mistral, or xAI (Source: LLM-Stats updates tracker, accessed June 10, 2026). NVIDIA Nemotron 3 Ultra (June 4) continues to draw open-weight agentic coverage. EU AI Act clarified, not new: August 2, 2026 binds Article 50 transparency; high-risk Annex III obligations deferred to December 2, 2027.</p>
+      <p><strong>What this means for practitioners.</strong> Three concrete actions: open a short internal Fable 5 evaluation against current Opus 4.8 workflows so any recommendation rests on your own results plus independent benchmarks, not launch-day vendor numbers; treat the June 15 billing change accurately — Cowork and interactive use are unchanged, only programmatic Agent SDK automation is repriced; and update the EU AI Act talking point to the corrected picture: August 2 is transparency, not the full high-risk regime, which moved to December 2027.</p>
+      <hr />
+      <h2 id="sources">Sources</h2>
+      <ul>
+      <li>Anthropic, "Claude Fable 5 and Claude Mythos 5," June 9, 2026. <a href="https://www.anthropic.com/news/claude-fable-5-mythos-5" target="_blank" rel="noopener">https://www.anthropic.com/news/claude-fable-5-mythos-5</a></li>
+      <li>VentureBeat, "Anthropic brings Mythos to the masses with Claude Fable 5," June 9, 2026. <a href="https://venturebeat.com/technology/anthropic-brings-mythos-to-the-masses-with-claude-fable-5-its-most-powerful-generally-available-model-ever" target="_blank" rel="noopener">https://venturebeat.com/technology/anthropic-brings-mythos-to-the-masses-with-claude-fable-5-its-most-powerful-generally-available-model-ever</a></li>
+      <li>TechCrunch, "Anthropic's Claude Fable 5 is a version of Mythos the public can access today," June 9, 2026. <a href="https://techcrunch.com/2026/06/09/anthropics-claude-fable-5-is-a-version-of-mythos-the-public-can-access-today/" target="_blank" rel="noopener">https://techcrunch.com/2026/06/09/anthropics-claude-fable-5-is-a-version-of-mythos-the-public-can-access-today/</a></li>
+      <li>CNBC, "Anthropic releases Mythos-like AI model to the public, Claude Fable 5," June 9, 2026. <a href="https://www.cnbc.com/2026/06/09/anthropic-mythos-claude-fable-5.html" target="_blank" rel="noopener">https://www.cnbc.com/2026/06/09/anthropic-mythos-claude-fable-5.html</a></li>
+      <li>Amazon Web Services, "Anthropic Claude Fable 5 on AWS," June 9, 2026. <a href="https://aws.amazon.com/blogs/aws/anthropic-claude-fable-5-on-aws-mythos-class-capabilities-with-built-in-safeguards-now-available/" target="_blank" rel="noopener">https://aws.amazon.com/blogs/aws/anthropic-claude-fable-5-on-aws-mythos-class-capabilities-with-built-in-safeguards-now-available/</a></li>
+      <li>GitHub Changelog, "Claude Fable 5 is generally available for GitHub Copilot," June 9, 2026. <a href="https://github.blog/changelog/2026-06-09-claude-fable-5-is-generally-available-for-github-copilot/" target="_blank" rel="noopener">https://github.blog/changelog/2026-06-09-claude-fable-5-is-generally-available-for-github-copilot/</a></li>
+      <li>NVIDIA Newsroom, "NVIDIA Debuts Nemotron 3 Family of Open Models," 2026. <a href="https://nvidianews.nvidia.com/news/nvidia-debuts-nemotron-3-family-of-open-models" target="_blank" rel="noopener">https://nvidianews.nvidia.com/news/nvidia-debuts-nemotron-3-family-of-open-models</a></li>
+      <li>Model Context Protocol Blog, "The 2026-07-28 MCP Specification Release Candidate," 2026. <a href="https://blog.modelcontextprotocol.io/posts/2026-07-28-release-candidate/" target="_blank" rel="noopener">https://blog.modelcontextprotocol.io/posts/2026-07-28-release-candidate/</a></li>
+      <li>TechTimes, "Anthropic Ends Subscription Subsidy for Agents June 15," June 2, 2026. <a href="https://www.techtimes.com/articles/317625/20260602/anthropic-ends-subscription-subsidy-agents-june-15-credit-pool-replaces-flat-rate-access.htm" target="_blank" rel="noopener">https://www.techtimes.com/articles/317625/20260602/anthropic-ends-subscription-subsidy-agents-june-15-credit-pool-replaces-flat-rate-access.htm</a></li>
+      <li>Gibson Dunn, "EU AI Act Omnibus Agreement — Postponed High-Risk Deadlines," 2026. <a href="https://www.gibsondunn.com/eu-ai-act-omnibus-agreement-postponed-high-risk-deadlines-and-other-key-changes/" target="_blank" rel="noopener">https://www.gibsondunn.com/eu-ai-act-omnibus-agreement-postponed-high-risk-deadlines-and-other-key-changes/</a></li>
+      <li>Latham &amp; Watkins, "AI Act Update: EU Resolves to Change Rules and Extend Deadlines," 2026. <a href="https://www.lw.com/en/insights/ai-act-update-eu-resolves-to-change-rules-and-extend-deadlines" target="_blank" rel="noopener">https://www.lw.com/en/insights/ai-act-update-eu-resolves-to-change-rules-and-extend-deadlines</a></li>
+      <li>European Commission, "Regulatory framework on Artificial Intelligence (AI Act)," accessed June 10, 2026. <a href="https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" target="_blank" rel="noopener">https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai</a></li>
+      </ul>
+      <p><em>Research date: 2026-06-10. Fable 5 / Mythos 5 benchmark figures are Anthropic self-reported with no independent verification available yet. Future-dated items (June 15 billing, July 28 MCP spec, August 2 EU transparency, August 5 Opus 4.1 retirement) are scheduled, not delivered.</em></p>
+    </article>
+
+    <section class="cta-band" id="contact" aria-labelledby="cta-heading">
+      <h2 id="cta-heading">From AI curiosity to AI capability</h2>
+      <p>This briefing is part of the field research behind our AI Enablement service &mdash; a curated, white-glove Claude Cowork implementation tailored to your organization&rsquo;s workflow.</p>
+      <a class="btn" href="https://calendly.com/mark-malaniru/30min" target="_blank" rel="noopener">Book a discovery call</a>
+    </section>
+    <!-- mal-ai-disclaimer:v1 -->
+  <aside class="mal-ai-disclaimer" role="note" aria-label="AI transparency notice" style="max-width:760px;margin:2.5rem auto 0;padding:1rem 1.25rem;border:1px solid #d9c3a5;border-left:4px solid #C07830;border-radius:6px;background:#faf6f0;color:#5c5347;font-size:0.82rem;line-height:1.6;box-sizing:border-box;">
+    <strong style="display:block;color:#8a5a1e;font-size:0.78rem;letter-spacing:.04em;text-transform:uppercase;margin-bottom:.35rem;">AI Transparency Notice</strong>
+    This article was produced through Malaniru&rsquo;s guided-research process: generated with the assistance of AI and reviewed by a person before publication (human-in-the-loop). In line with EU AI Act transparency obligations, we disclose that AI systems were used to create this content. It is provided for general information only, may contain inaccuracies, and is not professional advice &mdash; verify before relying on it.
+  </aside>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Malaniru Inc, LLC &middot; Lafayette, Colorado &middot; AI Enablement</p>
+    <p><a href="daily-intelligence-briefings.html">&larr; Back to Daily Intelligence Briefings</a> &middot; <a href="index.html">AI Enablement</a></p>
+      <nav class="mal-footernav" data-mal-footernav aria-label="Site" style="margin-top:0.7rem;font-size:0.82rem;line-height:1.9;">
+      <a href="about.html" style="color:#C07830;font-weight:700;text-decoration:none;">About</a> &middot;
+      <a href="pricing.html" style="color:#C07830;font-weight:700;text-decoration:none;">Pricing</a> &middot;
+      <a href="index.html" style="color:#C07830;font-weight:700;text-decoration:none;">AI Enablement</a>
+     &middot;
+      <a href="privacy-policy.html" style="color:#C07830;font-weight:700;text-decoration:none;">Privacy</a>
+    </nav>
+  </footer>
+</body>
+</html>
