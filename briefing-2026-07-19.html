@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<!--
+  Malaniru - Daily Intelligence Briefing (branded HTML)
+  Built by: publish_briefing_page.py - Date: 2026-07-19
+  Source:   Projects/Malaniru_Marketing_Site/Staging/20260719-daily-intelligence-briefing.md
+  FIDELITY: Body rendered VERBATIM from the source markdown. No copy edits.
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daily Intelligence Briefing — Sunday, July 19, 2026 - Malaniru</title>
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.malaniru.com/briefing-2026-07-19">
+  <meta name="description" content="The weekend resolved Friday&#x27;s numbers and reframed the story. Kimi K3&#x27;s Frontend Code Arena result is now specific — #1 at 1679 points with a 76% pairwise win rate against Claude Fable 5&#x27;s 63% and GPT-5.6 Sol&#x27;s 58%, a 17-place jump from Kimi K2.6, and #1 in six of seven domains — while Moor Insights&#x27; Patrick Moorhead called the market reaction an over-reaction &#x27;shockingly similar&#x27; to the DeepSeek panic. Friday&#x27;s disputed Nvidia decline now resolves toward roughly 1.2%, with SoftBank down about 9% and Z.ai down nearly 30% in Hong Kong; TSMC fell about 7% in Taipei despite a reported 77% jump in quarterly operating profit. The larger correction is that K3 was not a single event: Thinking Machines released Inkling on July 15 — 975 billion parameters, Apache 2.0, the leading US open-weights model by one independent tracker — and DeepSeek&#x27;s V4 graduated from preview to official release in mid-July, making three significant open-weight drops in one week. Twenty-nine countries signed the agreement establishing the Shanghai-headquartered World AI Cooperation Organization on July 16, with the UN Secretary-General attending. Microsoft is preparing Project Perception, a multi-model AI vulnerability-detection tool positioned explicitly as a cheaper alternative to Claude Mythos. Claude Fable 5&#x27;s included access on paid plans ends tonight at 11:59 PM PT, with prepaid credits at $10/$50 per million tokens beginning July 20. The MCP 2026-07-28 specification is final in nine days.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --navy:#0F1A2E;--navy-mid:#2A3F63;--copper:#C07830;--gold:#D4A853;
+      --off-white:#F4F1EC;--light-gray:#E8E6E1;--mid-gray:#8A8A96;--dark-text:#1C1C1C;
+      --font:"Inter","Helvetica Neue",Arial,sans-serif;
+    }
+    *{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:var(--font);background:var(--off-white);color:var(--dark-text);line-height:1.65;font-size:16px;-webkit-font-smoothing:antialiased;}
+    .skip-link{position:absolute;left:-999px;top:0;background:var(--gold);color:var(--navy);padding:10px 16px;font-weight:700;z-index:10;}
+    .skip-link:focus{left:8px;top:8px;}
+    a{color:var(--copper);}
+    /* Header */
+    header{background: linear-gradient(160deg, rgba(15,26,46,0.72) 0%, rgba(10,18,33,0.82) 100%), url('StockCake-Cosmic_Web_Complexity-1361288-standard-rot90ccw.jpg'); background-size: auto, 100% 100%; background-repeat: no-repeat, no-repeat; background-position: center, center;color:var(--off-white);padding:48px 24px 52px;position:relative;overflow:hidden;}
+    header::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 85% 12%,rgba(192,120,48,0.20) 0%,rgba(15,26,46,0) 55%);pointer-events:none;}
+    .header-inner{max-width:760px;margin:0 auto;position:relative;z-index:1;}
+    .wordmark{font-weight:800;font-size:1.25rem;letter-spacing:0.02em;margin-bottom:30px;}
+    .wordmark .dot{color:var(--copper);}
+    .wordmark a{color:var(--off-white);text-decoration:none;transition:opacity .18s ease;}
+    .wordmark a:hover,.wordmark a:focus-visible{opacity:.85;outline:none;}
+    .eyebrow{display:inline-block;font-size:0.72rem;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;}
+    header h1{font-weight:800;font-size:clamp(1.8rem,4.6vw,2.6rem);line-height:1.14;letter-spacing:-0.01em;margin-bottom:16px;}
+    .byline{font-size:0.9rem;color:var(--light-gray);letter-spacing:0.01em;}
+    .byline .sep{color:var(--copper);margin:0 8px;}
+    .lede{font-size:1.08rem;color:var(--light-gray);max-width:66ch;margin-top:18px;}
+    .backlink{display:inline-block;margin-top:26px;color:var(--gold);font-weight:600;font-size:0.9rem;text-decoration:none;border-bottom:1px solid rgba(212,168,83,0.4);}
+    .backlink:hover,.backlink:focus-visible{border-bottom-color:var(--gold);outline:none;}
+    /* Article */
+    main{max-width:760px;margin:0 auto;padding:48px 24px 8px;}
+    .disclaimer{background:#fff;border:1px solid var(--light-gray);border-left:4px solid var(--copper);border-radius:8px;padding:14px 18px;font-size:0.9rem;color:var(--navy-mid);margin-bottom:34px;}
+    article{font-size:1.05rem;}
+    article h2{font-weight:800;font-size:1.5rem;color:var(--navy);line-height:1.22;letter-spacing:-0.01em;margin:42px 0 14px;}
+    article h3{font-weight:700;font-size:1.18rem;color:var(--navy-mid);line-height:1.25;margin:30px 0 10px;}
+    article h2 + p, article h3 + p{margin-top:0;}
+    article p{margin:0 0 18px;color:var(--dark-text);}
+    article ul,article ol{margin:0 0 18px;padding-left:24px;}
+    article li{margin-bottom:8px;}
+    article strong{font-weight:700;color:var(--navy);}
+    article em{font-style:italic;}
+    article a{color:var(--copper);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(192,120,48,0.35);transition:border-color .18s ease;}
+    article a:hover,article a:focus-visible{border-bottom-color:var(--copper);outline:none;}
+    article hr{border:none;border-top:1px solid var(--light-gray);margin:34px 0;}
+    article h2#sources, article h2#references{border-top:1px solid var(--light-gray);padding-top:30px;font-size:1.2rem;color:var(--navy-mid);}
+    /* sources list smaller */
+    article h2[id^="sources"] ~ ul li, article h3[id^="sources"] ~ ul li{font-size:0.95rem;color:var(--navy-mid);}
+    /* tables */
+    article table{width:100%;border-collapse:collapse;margin:0 0 24px;font-size:0.95rem;}
+    article th,article td{border:1px solid var(--light-gray);padding:9px 12px;text-align:left;vertical-align:top;}
+    article thead th{background:var(--navy);color:var(--off-white);font-weight:700;}
+    article tbody tr:nth-child(even){background:#fff;}
+    article .table-wrap{overflow-x:auto;margin:0 0 24px;}
+    article .table-wrap table{margin:0;}
+    /* CTA */
+    .cta-band{background:var(--navy);color:var(--off-white);border-radius:12px;padding:42px 32px;text-align:center;margin:48px 0 8px;}
+    .cta-band h2{font-weight:800;font-size:clamp(1.4rem,3.4vw,1.9rem);margin-bottom:12px;letter-spacing:-0.01em;color:var(--off-white);}
+    .cta-band p{color:var(--light-gray);max-width:52ch;margin:0 auto 24px;}
+    .cta-band .btn{display:inline-block;background:var(--copper);color:#fff;font-weight:700;padding:13px 28px;border-radius:8px;text-decoration:none;transition:background .18s ease;}
+    .cta-band .btn:hover,.cta-band .btn:focus-visible{background:var(--gold);color:var(--navy);outline:none;}
+    /* Footer */
+    footer{max-width:760px;margin:16px auto 0;padding:24px;font-size:0.82rem;color:var(--mid-gray);border-top:1px solid var(--light-gray);}
+    footer p+p{margin-top:6px;}
+    footer a{color:var(--mid-gray);text-decoration:underline;}
+    @media (prefers-reduced-motion:reduce){*{transition:none!important;}}
+
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header>
+    <div class="header-inner">
+      <div class="wordmark"><a href="index.html">Malaniru<span class="dot">.</span></a></div>
+      <span class="eyebrow">AI Enablement &middot; Daily Intelligence Briefing</span>
+      <h1>Daily Intelligence Briefing — Sunday, July 19, 2026</h1>
+      <p class="byline">By Mark Andrew Harris<span class="sep">&middot;</span>July 19, 2026</p>
+      <p class="lede">The weekend resolved Friday&#x27;s numbers and reframed the story. Kimi K3&#x27;s Frontend Code Arena result is now specific — #1 at 1679 points with a 76% pairwise win rate against Claude Fable 5&#x27;s 63% and GPT-5.6 Sol&#x27;s 58%, a 17-place jump from Kimi K2.6, and #1 in six of seven domains — while Moor Insights&#x27; Patrick Moorhead called the market reaction an over-reaction &#x27;shockingly similar&#x27; to the DeepSeek panic. Friday&#x27;s disputed Nvidia decline now resolves toward roughly 1.2%, with SoftBank down about 9% and Z.ai down nearly 30% in Hong Kong; TSMC fell about 7% in Taipei despite a reported 77% jump in quarterly operating profit. The larger correction is that K3 was not a single event: Thinking Machines released Inkling on July 15 — 975 billion parameters, Apache 2.0, the leading US open-weights model by one independent tracker — and DeepSeek&#x27;s V4 graduated from preview to official release in mid-July, making three significant open-weight drops in one week. Twenty-nine countries signed the agreement establishing the Shanghai-headquartered World AI Cooperation Organization on July 16, with the UN Secretary-General attending. Microsoft is preparing Project Perception, a multi-model AI vulnerability-detection tool positioned explicitly as a cheaper alternative to Claude Mythos. Claude Fable 5&#x27;s included access on paid plans ends tonight at 11:59 PM PT, with prepaid credits at $10/$50 per million tokens beginning July 20. The MCP 2026-07-28 specification is final in nine days.</p>
+      <a class="backlink" href="daily-intelligence-briefings.html">&larr; All daily intelligence briefings</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <article>
+      <p>Two things happened over the weekend, and only one of them was news. The news is the deadline: <strong>Claude Fable 5's included access on all paid plans ends tonight, Sunday July 19, at 11:59 PM PT</strong>, with all Fable 5 usage moving to prepaid credits at $10 per million input tokens and $50 per million output tokens from July 20 (Source: Anthropic, "Redeploying Fable 5" — primary; BleepingComputer, "Claude Fable 5 stays free for paid users until July 19 as Anthropic buys more time," July 13 — press). The other thing is a correction to yesterday's framing. Friday's Kimi K3 story was reported as a single Chinese open-weight release detonating under the AI trade. The weekend's coverage makes clear it was <strong>the third significant open-weight release in one week</strong> — Thinking Machines Lab shipped <strong>Inkling</strong> on July 15 (975 billion parameters, Apache 2.0, described by one independent tracker as the new leading US open-weights model), <strong>DeepSeek V4</strong> graduated from April's preview to official release in mid-July under MIT licence, and <strong>Kimi K3</strong>'s weights are still nine days out on July 27 (Source: Thinking Machines Lab, "Inkling: Our open-weights model," July 15 — primary; TechCrunch, July 15; Artificial Analysis, "Thinking Machines has released Inkling, the new leading U.S. open weights model" — third-party benchmark; DeepSeek API Docs — primary). The Arena numbers also firmed up: K3 took <strong>#1 in the Frontend Code Arena at 1679 points with a 76% pairwise win rate</strong>, against 63% for Fable 5 and 58% for GPT-5.6 Sol, a 17-place jump from Kimi K2.6, ranking first in six of seven domains (Source: Arena.ai via X, July 16; The New Stack, "Kimi K3 tops Arena's coding leaderboard — and it's open-weight" — third-party leaderboard, methodology public but unaudited). And the pushback arrived: Moor Insights &amp; Strategy CEO Patrick Moorhead called the market reaction "an over-reaction shockingly similar to the DeepSeek panic" (Source: Fortune, "Markets experience new DeepSeek shock after Moonshot AI releases Kimi K3," July 17 — press). Elsewhere: <strong>29 countries signed the agreement establishing the World AI Cooperation Organization</strong> in Shanghai on July 16, and <strong>Microsoft is preparing Project Perception</strong>, a multi-model vulnerability-detection tool aimed squarely at Claude Mythos on price.</p>
+      <h2 id="1-ai-market-trends">1. AI Market Trends</h2>
+      <p>Markets were closed Saturday and Sunday. What the weekend produced was better information about Friday, and in two places the better information changes the read.</p>
+      <p><strong>Friday's disputed Nvidia number resolves — mostly.</strong> Yesterday's briefing flagged a genuine discrepancy: outlets reported Nvidia's Friday decline anywhere between roughly 1.2% and roughly 3.5%. Weekend coverage from Fortune and CNBC consistently reports the smaller figure — <strong>Nvidia fell about 1.2%</strong>, which was enough to briefly cede the world's-most-valuable-company title to Apple but is a materially less dramatic move than the 3.5% figure that circulated (Source: Fortune, July 17; CNBC, "Chinese AI has leveled up," July 17 — press; the ~3.5% figure appears in at least one outlet and should be treated as an outlier, not a competing account). Two other single-name moves from Friday are now on the record and are larger than Nvidia's: <strong>SoftBank fell about 9.0%</strong> — widely traded as an OpenAI proxy — and <strong>Z.ai, a Chinese startup with a competing model to Moonshot's, dropped nearly 30% in Hong Kong</strong> (Source: Fortune, July 17 — press). That last one is the detail most worth sitting with. If the market's thesis were simply "open Chinese models beat closed US models," Z.ai would not have been the worst performer on the board. What actually got repriced was <em>narrower</em>: the value of being a second-tier model provider of any nationality when a first-tier model is about to become free to download.</p>
+      <p><strong>TSMC's decline looks stranger the more detail arrives.</strong> The company fell about 7% in Taipei on Friday while reporting what Fortune describes as a <strong>77% jump in quarterly operating profit</strong> and raising its 2026 revenue growth outlook above 40% (Source: Fortune, July 17; Bloomberg, "Chip Stock Rout Deepens as TSMC Selloff Drives Taiwan Correction," July 17 — press). The bear reading remains the raised capital-spending plan of $60–64 billion, up from $52–56 billion, read as margin risk rather than demand confirmation. Note that the Taipei-listed decline and the US ADR move are different numbers and are routinely conflated; the ~7% figure is Taipei.</p>
+      <p><strong>The open-weight wave is the actual story, and it is not primarily Chinese.</strong> Three releases in eight days, from three different kinds of organization. <strong>Inkling</strong>, from Mira Murati's Thinking Machines Lab, is a 975-billion-parameter mixture-of-experts model with 41 billion active parameters, a 1M-token context window, pretrained on 45 trillion tokens of text, image, audio and video, released under <strong>Apache 2.0</strong> with a lighter Inkling-Small preview alongside it (Source: Thinking Machines Lab, "Inkling: Our open-weights model," July 15 — primary/vendor; VentureBeat, July 15; TechCrunch, July 15 — press). Thinking Machines is explicit that Inkling is <em>not</em> the strongest model available — its pitch is that it is a good customizable base, multimodal, with controllable thinking effort, available for fine-tuning. <strong>DeepSeek V4</strong> moved from its April 24 preview to official release in mid-July, with V4-Pro at 1.6 trillion total parameters and 49 billion active at $0.435/$0.87 per million tokens, and V4-Flash at 284 billion total, under MIT licence with weights on Hugging Face (Source: DeepSeek API Docs — primary; Artificial Analysis, "DeepSeek is back among the leading open weights models with V4 Pro and V4 Flash" — third-party). And <strong>Kimi K3</strong> is 2.8 trillion parameters activating 16 of 896 experts, with weights promised July 27. Frontier-adjacent capability is arriving as a downloadable artifact from at least three directions at once, on permissive licences, at a fraction of closed-model token pricing. That is a durable structural fact in a way that any single benchmark result is not.</p>
+      <p><strong>Microsoft moves on the security agent market.</strong> Reporting indicates Microsoft is preparing <strong>Project Perception</strong>, a vulnerability-detection product deployed inside an organization's IT estate — functionally similar to Anthropic's Claude Mythos — but built on a <strong>model router that dispatches each query to whichever model fits</strong>, drawing on Microsoft's own models plus OpenAI's and Anthropic's. The stated selling point is cost: Mythos's API pricing is reported at roughly 100% above Opus and 82% above GPT, and Perception's pitch is to make continuous automated vulnerability-fixing cheap enough to run nonstop (Source: The Information, "Exclusive: Microsoft Preps Mythos-Like AI Bug Finder"; TechRepublic, "Microsoft's 'Project Perception' Could Challenge Anthropic's Mythos in AI Security," July 17 — press reporting on unannounced product; launch timing reported as "this month," not confirmed by Microsoft). Treat every specific figure here as press-reported rather than disclosed.</p>
+      <p><strong>Governance moved too, and not in the direction most Western coverage tracks.</strong> On <strong>July 16, twenty-nine countries signed the agreement establishing the World Artificial Intelligence Cooperation Organization (WAICO)</strong>, headquartered in Shanghai, on the eve of the World AI Conference; UN Secretary-General António Guterres attended the signing. Founding members skew heavily toward the Global South — Indonesia, Brazil, Malaysia, South Africa, Senegal, Kazakhstan, Laos, Pakistan and Russia among them (Source: Xinhua, "29 countries sign agreement on establishing World AI Cooperation Organization," July 16 — state media, primary for the fact of signing; Al Jazeera, "China's Xi Jinping launches new AI alliance: What is it?," July 17; PYMNTS, July 2026 — press). China paired the launch with an explicit open-source positioning argument (Source: Quartz, July 17 — press). WAICO has no binding regulatory authority today and its practical effect is unknown; what it does establish is a second multilateral venue for AI rulemaking alongside the EU's, which matters for any organization operating across those jurisdictions over a multi-year horizon.</p>
+      <p><strong>Funding stayed heavy and stayed diversified.</strong> Fireworks AI's <strong>$1.505 billion Series D at a $17.5 billion valuation</strong> was the week's largest AI round, on a company-reported $1 billion annualized run rate and 40 trillion-plus tokens served daily (Source: Fireworks AI blog — primary/vendor, unaudited; Crunchbase News, July 2026). Also closing in the same window: <strong>Helsing at $1.8 billion</strong> (JPMorgan, Lightspeed, Iconiq; announced July 13), <strong>Neko Health at $700 million</strong> Series C, <strong>Acrab at $350 million</strong> for edge agentic AI, <strong>Emergent at $130 million</strong> Series C at a $1.5 billion valuation, and <strong>Lyzr AI at $100 million</strong> at a $500 million valuation (Source: Crunchbase News; aifundingtracker.com, July 2026 — press; private valuations unaudited). Separately, Crunchbase reports global startup investment hit a record <strong>$510 billion in H1 2026</strong>, AI-led.</p>
+      <h2 id="2-top-10-ai-agents-three-lenses">2. Top 10 AI Agents — Three Lenses</h2>
+      <p>Rankings as of Sunday, July 19, 2026. One dated event today (Fable 5's included-access cutoff at 11:59 PM PT) and one structural revision (the open-weight wave is three models, not one). The deployable Claude set is unchanged: Opus 4.8 anchors, Sonnet 5 is the Claude Code default. Gemini 3.5 Pro remains delayed with no GA date. GPT-5.6 is ten days into general availability.</p>
+      <h3 id="2a-relevance-for-claude-mcp-centered-work">2a. Relevance for Claude / MCP-Centered Work</h3>
+      <div class="table-wrap"><table>
+      <thead>
+      <tr>
+      <th>Rank</th>
+      <th>Agent / Platform</th>
+      <th>Justification</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>1</td>
+      <td>Claude Code + Agent SDK</td>
+      <td>Primary agentic build tool. The July 17–18 release cycle remains the operative one: <code>/fork</code> now copies the conversation into a new <strong>background</strong> session with its own row in <code>claude agents</code> while you keep working, the in-session subagent is renamed <code>/subtask</code>, and <code>/resume</code> and <code>/background</code> flows are smoother. Safety and stability work: a session-wide <strong>WebSearch call limit</strong> (default 200, tunable via <code>CLAUDE_CODE_MAX_WEB_SEARCHES_PER_SESSION</code>), <code>claude auto-mode reset</code> behind a confirmation prompt, auto mode blocking tampering with session transcript files and prompting before <code>rm -rf</code> on an unresolvable variable. Fixes: returning to <code>claude agents</code> no longer silently stops running subagents and re-runs the prompt from scratch, a memory and per-turn CPU regression in interactive sessions is resolved, a startup hang when the Chrome extension is enabled but Chrome is not running is fixed, and background jobs on LLM-gateway auth no longer return "Not logged in" after daemon respawn. Directly relevant to anyone running long or unattended sessions.</td>
+      </tr>
+      <tr>
+      <td>2</td>
+      <td>Claude Cowork</td>
+      <td>Core delivery surface. Now on web and mobile in beta — sessions and files follow the user across devices, with background work, scheduled tasks that run with no device online, shared chats and projects, and mobile approvals. Beta access started with Max users; <strong>doubled usage limits run through August 5</strong>. Also in public beta inside Claude for Government Desktop on FedRAMP High.</td>
+      </tr>
+      <tr>
+      <td>3</td>
+      <td>MCP-based connectors (cross-vendor)</td>
+      <td><strong>Nine days from final.</strong> The 2026-07-28 spec removes the <code>initialize</code>/<code>initialized</code> handshake and the <code>Mcp-Session-Id</code> header; protocol version, client info and client capabilities travel in <code>_meta</code> on every request, and <code>server/discover</code> fetches capabilities up front. Any request can land on any server instance — sticky routing and shared session stores are no longer required. Adds an Extensions framework with reverse-DNS identifiers and independent versioning, Tasks, MCP Apps (server-rendered UIs), and cache TTLs. Servers become formal OAuth 2.1 resource servers implementing Protected Resource Metadata; clients implement Resource Indicators. <strong>Roots, Sampling and Logging are deprecated</strong>, with at least twelve months in Deprecated status before removal. Beta SDKs for Python, TypeScript, Go and C# are published; Tier 1 SDKs are expected to ship support inside the ten-week validation window. Clients speaking 2026-07-28 fall back to the <code>initialize</code> handshake against servers on 2025-11-25 or earlier, so old servers and new clients keep interoperating.</td>
+      </tr>
+      <tr>
+      <td>4</td>
+      <td>Claude Enterprise governance layer</td>
+      <td>Admin analytics, model-level entitlements, spend alerts, and a write-enabled Microsoft 365 connector gated behind Entra admin consent. Sharper this week: with three permissively-licensed near-frontier models now downloadable and a fourth arriving July 27, "which model, on whose infrastructure, for which workload" is a live governance question rather than a procurement footnote.</td>
+      </tr>
+      <tr>
+      <td>5</td>
+      <td>Claude Opus 4.8 / Sonnet 5</td>
+      <td>Opus 4.8 the proven flagship; Sonnet 5 the workhorse (near-Opus, $2/$10 intro through Aug 31, 1M context), the default in Claude Code and for Free/Pro. Validate Sonnet 5 before load-bearing use.</td>
+      </tr>
+      </tbody>
+      </table></div>
+      <p><em>(Watch line: Claude Fable 5 — included access ends </em><em>tonight at 11:59 PM PT</em><em>; credits at $10/$50 from July 20. Anthropic has said Fable 5 is not permanently leaving subscriptions and will be restored when compute allows. Kimi K3 — enters this lens as a self-hosting and cost-comparison option once weights land July 27, not as a Claude replacement. Inkling and DeepSeek V4 — downloadable today, relevant mainly as fine-tuning bases. GPT-5.6 + ChatGPT Work — GA and a genuine agent competitor. Gemini 3.5 Pro — delayed, no GA date.)</em></p>
+      <h3 id="2b-market-momentum-adoption-funding-buzz">2b. Market Momentum (adoption / funding / buzz)</h3>
+      <div class="table-wrap"><table>
+      <thead>
+      <tr>
+      <th>Rank</th>
+      <th>Agent / Platform</th>
+      <th>Justification</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>1</td>
+      <td>Moonshot AI — Kimi K3</td>
+      <td>Still the dominant story, now with hard third-party numbers: <strong>#1 in the Frontend Code Arena at 1679 points, 76% pairwise win rate</strong> (Fable 5 63%, GPT-5.6 Sol 58%), a 17-place jump from K2.6, #1 in six of seven domains and #2 in Gaming behind Fable 5. Weights July 27. Moonshot reportedly raising at ~$31.5B pre-money. Counterweight: Moor Insights' Patrick Moorhead calls the market reaction an over-reaction "shockingly similar" to the DeepSeek panic.</td>
+      </tr>
+      <tr>
+      <td>2</td>
+      <td>The open-weight wave (K3 + Inkling + DeepSeek V4)</td>
+      <td>Promoted from a footnote to the frame. Three permissive-licence, near-frontier releases inside eight days from a Chinese lab, a US startup and an established open-weight player. This is the structurally significant item; K3 alone is the headline version of it.</td>
+      </tr>
+      <tr>
+      <td>3</td>
+      <td>WAICO — 29-nation AI governance body</td>
+      <td>29 signatories on July 16, Shanghai headquarters, UN Secretary-General in attendance, Global South-weighted membership. No binding authority yet; significant as a second multilateral rulemaking venue.</td>
+      </tr>
+      <tr>
+      <td>4</td>
+      <td>Microsoft — Project Perception</td>
+      <td>A direct, cheaper, multi-model challenge to Claude Mythos in AI security, using a model router across Microsoft, OpenAI and Anthropic models. Press-reported and unannounced, but a clear signal that the security-agent category is now contested on price rather than capability.</td>
+      </tr>
+      <tr>
+      <td>5</td>
+      <td>Anthropic — IPO process</td>
+      <td>Banks (Morgan Stanley, Goldman Sachs, JPMorgan) scheduling investor meetings; a listing reported as possible <strong>as soon as October</strong>, against a reported $965 billion valuation from the May round. Company-confirmed details remain limited.</td>
+      </tr>
+      </tbody>
+      </table></div>
+      <p><em>(Also live: Qualcomm's reported $8–10B talks for Tenstorrent, which would be among its largest deals ever and would buy a RISC-V inference architecture aimed at Nvidia's cost position; Intel is reported to have expressed interest as well.)</em></p>
+      <h3 id="2c-capability-maturity-production-readiness">2c. Capability &amp; Maturity (production readiness)</h3>
+      <div class="table-wrap"><table>
+      <thead>
+      <tr>
+      <th>Rank</th>
+      <th>Agent / Model</th>
+      <th>Justification</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>1</td>
+      <td>Claude Opus 4.8</td>
+      <td>Production-proven, available, agentic-optimized, cost-stable; GA in Microsoft Foundry and the Bedrock default in Claude Code. The reliable reference tier.</td>
+      </tr>
+      <tr>
+      <td>2</td>
+      <td>GPT-5.6 (Sol / Terra / Luna)</td>
+      <td>Generally available and production-grade across ChatGPT, ChatGPT Work, Codex and the API since July 9; 1M context, February 2026 knowledge cutoff, $1–$5 per million input tokens; programmatic tool calling, multi-agent orchestration and prompt cache breakpoints in the API. Validate on real workloads before load-bearing use.</td>
+      </tr>
+      <tr>
+      <td>3</td>
+      <td>Claude Sonnet 5</td>
+      <td>GA since June 30, near-Opus performance, 1M context, $2/$10 intro through Aug 31; the default in Claude Code. Production-viable; validate before load-bearing use.</td>
+      </tr>
+      <tr>
+      <td>4</td>
+      <td>DeepSeek V4-Pro / V4-Flash</td>
+      <td>The open-weight entry that is actually deployable <strong>today</strong> — MIT licence, weights on Hugging Face, 1M context, and the highest open-weights SWE-bench Verified score reported by Artificial Analysis. Ranked here above K3 for exactly one reason: you can download it. Independent verification of the top-line scores is still thin.</td>
+      </tr>
+      <tr>
+      <td>5</td>
+      <td>Kimi K3</td>
+      <td>Holds at #5. Third-party Arena placement is now strong and specific, which is a real improvement over yesterday's evidence base — but <strong>the weights are not public until July 27</strong>, so K3 cannot be self-hosted, independently evaluated on private data, or governed on your own infrastructure. Promising; not yet deployable.</td>
+      </tr>
+      </tbody>
+      </table></div>
+      <p><em>(Not ranked as broadly deployable: Inkling — Apache 2.0 and downloadable, but positioned by its own creators as a customization base rather than a frontier performer, and days old; Gemini 3.5 Pro — delayed on coding and long-horizon reasoning, no GA date; Meta Muse Spark 1.1 — 1M-context agentic model in paid developer preview, US-only; Claude Fable 5 — credits-only from tomorrow; other open weights Qwen 3 235B-A22B, GLM 5.2, MiniMax/MiMo, Kimi K2.7.)</em></p>
+      <h3 id="divergence-analysis">Divergence Analysis</h3>
+      <p>The instructive gap today sits between 2b and 2c, and it is a licence-and-availability gap rather than a capability one. Momentum's #1 (Kimi K3) is maturity's #5 because its weights are nine days out; meanwhile DeepSeek V4 — barely mentioned in the week's coverage — enters the maturity lens at #4 because it is downloadable this morning. Attention and deployability have come apart almost completely. Lens 2a barely moved: the July 17–18 Claude Code release is the only concrete change to Claude/MCP-centered work, and none of the three open-weight releases displaces anything in a Claude-based delivery stack. Note also that 2b's #3 and #4 (WAICO, Project Perception) are governance and competitive-positioning items that touch no deployable capability at all — they are 12-to-24-month shape-of-the-market signals, not this quarter's decisions. Dated movers, in order: <strong>Fable 5 included-access cutoff (tonight, 11:59 PM PT)</strong>, AMD's Advancing AI event (July 22–23), Kimi K3 weights (July 27), CXMT listing (July 27), MCP 2026-07-28 final spec (July 28), EU AI Act Article 50 transparency obligations (August 2). Gemini 3.5 Pro GA remains undated; an Anthropic listing is reported as possible from October but is not confirmed.</p>
+      <p><strong>What This Means for You.</strong> One action today, and it has a clock on it. If any workflow depends on Fable 5 running inside a plan's included usage, that ends at 11:59 PM PT tonight — move it to Opus 4.8 or Sonnet 5 now, or explicitly accept prepaid credits at $10/$50 per million tokens from tomorrow. Do not plan around a fourth extension; Anthropic has extended three times, and has said Fable 5 will return to subscriptions when compute allows, but neither of those is a commitment about tonight. The second point is a reframing rather than a task: this week produced three permissively-licensed near-frontier models, which is a more durable development than any one benchmark table and shifts the useful question from "which vendor" to "under what criteria would we revisit our model choice, and who decides." Organizations with that written down absorbed this week as news. Organizations without it absorbed it as a series of interruptions.</p>
+      <h2 id="3-agentic-ai-advances-new-releases">3. Agentic AI Advances &amp; New Releases</h2>
+      <p>Genuinely new or materially sharpened since the July 18 briefing:</p>
+      <p><strong>Inkling — Thinking Machines Lab's first open-weights model (new to this briefing).</strong> Released <strong>July 15</strong>, Inkling is a mixture-of-experts transformer with <strong>975 billion total parameters and 41 billion active</strong>, a <strong>1M-token context window</strong>, pretrained on <strong>45 trillion tokens</strong> of text, images, audio and video, reasoning natively across modalities with controllable thinking effort. It ships under <strong>Apache 2.0</strong> — full legal freedom to download, modify, integrate and commercialize — alongside a preview of <strong>Inkling-Small</strong> at 12 billion active parameters. Thinking Machines states plainly that Inkling "is not the strongest overall model available today, open or closed," positioning it instead as a customization base available for fine-tuning on their Tinker platform. Artificial Analysis describes it as the new leading US open-weights model (Source: Thinking Machines Lab, "Inkling: Our open-weights model," July 15 — primary/vendor; TechCrunch, July 15; VentureBeat, July 15; Artificial Analysis — third-party benchmark; AIwire, July 16 — press).</p>
+      <p><strong>Kimi K3 — third-party benchmark detail firms up (major update).</strong> Arena.ai's Frontend Code Arena now shows K3 at <strong>#1 with 1679 points and a 76% pairwise win rate</strong>, versus <strong>63% for Claude Fable 5</strong> and <strong>58% for GPT-5.6 Sol</strong> (50% is the baseline), a <strong>17-place jump from Kimi K2.6</strong> (#18 → #1), ranking <strong>#1 in six of seven domains</strong> — Brand &amp; Marketing, Reference-Based Design, Data &amp; Analytics, Consumer Product, Simulations, and Content Creation Tools — and #2 in Gaming behind Fable 5. Architecture detail also firmed: <strong>2.8 trillion total parameters activating 16 of 896 experts</strong>, 1M-token context, multimodal. Terminal-Bench 2.1 at 88.3 trails only GPT-5.6 Sol's 88.8. Weights July 27 (Source: Arena.ai via X, July 16; Techmeme/VentureBeat, July 16; The New Stack; Winzheng, July 2026 — third-party leaderboard plus press; Arena is a public head-to-head preference leaderboard, not an audited benchmark, and preference-based rankings are not the same measurement as task-completion benchmarks).</p>
+      <p><strong>DeepSeek V4 — official release (new to this briefing).</strong> V4 graduated from its April 24 preview to full release in mid-July alongside DeepSeek's first peak/off-peak API pricing. <strong>V4-Pro:</strong> 1.6 trillion total parameters, 49 billion active, $0.435 per million input and $0.87 per million output. <strong>V4-Flash:</strong> 284 billion total, 13 billion active, $0.14/$0.28. Both default to 1M-token context with 384K max output, <strong>MIT licence</strong>, weights on Hugging Face. DeepSeek-V4-Pro-Max is reported at <strong>80.6% on SWE-bench Verified</strong>, the highest open-weights entry (Source: DeepSeek API Docs — primary; Artificial Analysis — third-party; morphllm.com; Hugging Face model card; SWE-bench figure is reported, not independently re-run here).</p>
+      <p><strong>Microsoft Project Perception — a cheaper multi-model rival to Claude Mythos (new).</strong> A vulnerability-detection product deployed inside an organization's IT estate, using a <strong>model router</strong> to dispatch each scan to the most cost-appropriate model across Microsoft, OpenAI and Anthropic families. The pitch is explicitly economic: Mythos API pricing is reported at roughly <strong>100% above Opus and 82% above GPT</strong>, and Perception aims to make continuous automated vulnerability-fixing cheap enough to run nonstop. Launch reported as "this month" (Source: The Information — press, exclusive; TechRepublic, July 17; Neowin; Windows News, July 2026 — press reporting on an unannounced product; <strong>Microsoft has not confirmed specifications, pricing, or timing — treat all figures as press-reported</strong>).</p>
+      <p><strong>WAICO — a 29-nation intergovernmental AI body (new).</strong> The agreement establishing the <strong>World Artificial Intelligence Cooperation Organization</strong>, headquartered in <strong>Shanghai</strong>, was signed by <strong>29 countries on July 16, 2026</strong>, on the eve of the World AI Conference, with <strong>UN Secretary-General António Guterres in attendance</strong>. Founding members include Indonesia, Brazil, Malaysia, South Africa, Senegal, Kazakhstan, Laos, Pakistan and Russia. Stated goals are international cooperation and cross-border AI regulation ensuring the technology is "beneficial, safe and fair." The concept was first proposed by China in July 2025 and restated at APEC in October 2025 (Source: Xinhua, July 16 and July 17 — state media, primary for the signing; Al Jazeera, July 17; PYMNTS; China.org.cn, July 18 — press. <strong>No binding regulatory authority has been described; do not treat WAICO as a compliance obligation. Verify any regulatory reading with counsel.</strong>).</p>
+      <p><strong>Claude Cowork — web and mobile beta (sharpened carry).</strong> Cowork now runs on web and mobile with sessions and files following the user across devices, background work, <strong>scheduled tasks that execute with no device online</strong>, shared chats and projects, and mobile approvals. Beta access began with Max users; <strong>doubled usage limits run through August 5</strong> (Source: Anthropic/Claude blog, "Cowork on web and mobile: hand off work anywhere" — primary; TechCrunch, July 7; 9to5Mac, July 13 — press).</p>
+      <p><strong>MCP 2026-07-28 — nine days out (carry, unchanged).</strong> Contents confirmed and stable since the May 21 RC lock: stateless core, Extensions framework, Tasks, MCP Apps, cache TTLs, OAuth 2.1 / OIDC alignment, formal deprecation policy. Beta SDKs for Python, TypeScript, Go and C# are available. Current finalized version remains 2025-11-25, and backward compatibility is explicit — new clients fall back to the <code>initialize</code> handshake against older servers (Source: Model Context Protocol blog, "The 2026-07-28 MCP Specification Release Candidate" and "Beta SDKs for the 2026-07-28 Spec" — primary; WorkOS; Stacktree — secondary analysis).</p>
+      <p><strong>Claude Fable 5 — the deadline is tonight (dated).</strong> Included access at up to 50% of weekly plan limits, across Pro, Max, Team and premium Enterprise seats, ends <strong>Sunday July 19 at 11:59 PM PT</strong>. From July 20, all Fable 5 usage runs on prepaid credits at <strong>$10 per million input tokens and $50 per million output tokens</strong>. Anthropic has extended this three times — June 22 → July 7 → July 12 → July 19 — and states Fable 5 will be restored to subscriptions when it has sufficient compute (Source: Anthropic, "Redeploying Fable 5" — primary; BleepingComputer, July 13; Forbes, July 13; CybersecurityNews, July 2026 — press).</p>
+      <p>Carry items: <strong>Gemini 3.5 Pro</strong> — months behind schedule on coding and complex long-horizon reasoning, no firm launch date; Alphabet fell about 4.4% on the July 16 Bloomberg report, roughly $200 billion in market value. <strong>GPT-5.6</strong> — GA since July 9 in Sol/Terra/Luna. <strong>Anthropic Mythos</strong> — access limited to select partners to prevent misuse; JPMorgan CEO Jamie Dimon has publicly called the risks it raises "a real issue." <strong>EU AI Act</strong> — Article 50 transparency obligations apply August 2, 2026 (verify specifics with counsel before external use).</p>
+      <p><strong>What This Means for You.</strong> Three of this week's six items are downloadable software and three are market signals; only the first group can change anything you ship. Of the downloadable three, DeepSeek V4 and Inkling are available now and are genuinely useful as fine-tuning bases if you have the infrastructure and the evaluation discipline to use them — and close to useless if you do not, since an open-weight model you cannot evaluate on your own data is a liability rather than an asset. Kimi K3 remains a July 27 diary entry. On the governance side, WAICO is not a compliance obligation and should not be treated as one; it is a signal that AI rulemaking is becoming multi-polar, which matters for multi-year planning and not for this quarter. Keep testing custom MCP servers against the beta SDKs — the spec is final in nine days, and while the deprecations of Roots, Sampling and Logging carry a twelve-month runway, the stateless-core changes land on schedule.</p>
+      <h2 id="4-overnight-daily-release-monitor">4. Overnight / Daily Release Monitor</h2>
+      <p>Covering roughly July 18 – July 19 since the July 18 publish. <strong>Markets were closed both days; this is a product-and-information ledger, not a trading one.</strong></p>
+      <ul>
+      <li><strong>No new frontier model releases</strong> were confirmed on July 18 or 19. The week's open-weight wave — Inkling (July 15), DeepSeek V4 official (mid-July), Kimi K3 (announced July 16, weights July 27) — is the current state.</li>
+      <li><strong>Kimi K3 benchmark detail firmed up.</strong> Arena.ai Frontend Code Arena: #1, 1679 points, 76% pairwise win rate vs Fable 5's 63% and GPT-5.6 Sol's 58%; 17-place jump from K2.6; #1 in six of seven domains (Source: Arena.ai; The New Stack — third-party leaderboard).</li>
+      <li><strong>Analyst pushback on the market reaction.</strong> Moor Insights &amp; Strategy CEO Patrick Moorhead characterized Friday's selloff as "an over-reaction shockingly similar to the DeepSeek panic" (Source: Fortune, July 17 — press).</li>
+      <li><strong>Friday's single-name figures resolved.</strong> Nvidia's decline now reads consistently at about <strong>1.2%</strong> across Fortune and CNBC; SoftBank <strong>−9.0%</strong>; Z.ai <strong>−~30%</strong> in Hong Kong; TSMC <strong>−~7%</strong> in Taipei despite a reported <strong>77% jump in quarterly operating profit</strong> (Source: Fortune; CNBC, July 17 — press; supersedes yesterday's flagged 1.2%-vs-3.5% discrepancy, with the higher figure now looking like an outlier).</li>
+      <li><strong>Microsoft Project Perception</strong> surfaced in reporting as a cheaper multi-model rival to Claude Mythos, launch reported as this month (Source: The Information; TechRepublic, July 17 — press; unannounced).</li>
+      <li><strong>WAICO established</strong> — 29 signatories, July 16, Shanghai, UN Secretary-General attending (Source: Xinhua, July 16; Al Jazeera, July 17).</li>
+      <li><strong>Anthropic IPO process advanced.</strong> Morgan Stanley, Goldman Sachs and JPMorgan are scheduling investor meetings; reporting points to a listing possible <strong>as soon as October</strong> against a reported $965 billion valuation (Source: Bloomberg, "Anthropic Plans IPO Investor Meetings as Mega-Listing Nears," July 15; CNBC, July 15 — press; not company-confirmed).</li>
+      <li><strong>Qualcomm–Tenstorrent</strong> talks continue at a reported <strong>$8–10 billion</strong>, with milestone-based structure and reported Intel interest (Source: The Information via Reuters, June 15; Tom's Hardware; The Register — press; no deal announced).</li>
+      <li>⚠️ <strong>Correction to a widely-recirculating item.</strong> Several aggregator digests listed "Oracle cuts 30,000 jobs to fund Stargate" among July 18 news. That is <strong>not overnight news</strong> — the reduction was executed on or around <strong>March 31, 2026</strong>, with a final severance phase reported in June (Source: TechTimes, June 1; business-news-today.com, 2026 — press). It is being recirculated, not reported fresh. Flagged here so it is not double-counted as a new development.</li>
+      <li>Carry, unchanged: Cowork web/mobile beta with doubled limits through August 5; Claude for Government FedRAMP High beta; Microsoft 365 write tools; MCP final spec July 28; <strong>Fable 5 included access ends tonight, credits July 20</strong>; CXMT listing July 27; AMD Advancing AI July 22–23; EU AI Act transparency August 2.</li>
+      </ul>
+      <p><strong>What This Means for You.</strong> The weekend ledger contains exactly one thing with a deadline attached — Fable 5, tonight — and everything else is context. The corrected Oracle item is worth internalizing as a method point rather than a fact: AI news aggregators recirculate months-old events into "today's top stories" lists with enough regularity that any operational decision drawn from a digest should be traced to a primary source with a date on it before it is acted on. That habit costs a few minutes and prevents the specific failure mode of budgeting or planning against something that already happened.</p>
+      <h2 id="5-ai-trading-trends">5. AI Trading Trends</h2>
+      <p><em>Market intelligence for situational awareness — not investment advice. No buy, sell, or hold recommendations, price targets, or return forecasts appear here. US markets were closed Saturday July 18 and Sunday July 19; all figures below reference Friday July 17's session or earlier. Every figure carries a source and a confidence note.</em></p>
+      <h3 id="5a-ipos-the-public-market-ai-wave">5a. IPOs — the public-market AI wave</h3>
+      <ul>
+      <li><strong>Anthropic</strong> is the calendar item that moved this week. Banks — <strong>Morgan Stanley, Goldman Sachs and JPMorgan Chase</strong> — are scheduling investor meetings, and reporting now points to a listing <strong>as soon as October</strong>, against a <strong>reported $965 billion valuation</strong> from the May funding round, which would exceed OpenAI's valuation for the first time. A confidential S-1 was filed June 1 (Source: Bloomberg, July 15; CNBC, "Anthropic moves closer to mega-IPO as bankers line up investor meetings," July 15 — press; <strong>private financials are unaudited, no listing terms are confirmed by the company, and timing reported as "as soon as October" is not a scheduled date</strong>).</li>
+      <li><strong>CXMT (ChangXin Memory Technologies)</strong> is priced and dated. Shanghai STAR Market IPO at <strong>8.66 yuan (~$1.34) per share</strong>, targeting roughly <strong>57.9 billion yuan (~$8.55 billion)</strong>, rising to about <strong>66.6 billion yuan (~$9.8 billion)</strong> with over-allotment — the largest A-share semiconductor listing ever and Asia's largest IPO of 2026 so far. <strong>Listing date: July 27</strong> (Source: Bloomberg, July 14; Reuters via MSN — press; the "$8.6 billion" and "$9.8 billion" figures are the base raise and the with-over-allotment maximum, not conflicting reports).</li>
+      <li><strong>SK Hynix</strong> remains the week's cautionary tale. Its July 10 Nasdaq debut rose ~13–14% after ADRs priced at $149, raising roughly $26.5 billion — the largest-ever US first-time share sale by a foreign company — and both the ADR (<strong>SKHY</strong>) and the Seoul line fell sharply through the following week as memory entered a bear market (Source: CNBC, July 10; 24/7 Wall St., July 16 — press; specific same-day prices not confirmed to a single authoritative feed).</li>
+      <li><strong>Cerebras</strong> remains context: priced at $185, raised about $5.55 billion in its May 14 debut, market cap near $95 billion (Source: CNBC, May 13 — press; confirm against primary disclosures).</li>
+      <li><strong>Private-market counterparts:</strong> Moonshot AI is reportedly raising at <strong>~$31.5 billion pre-money</strong> (against ~$20 billion in May and ~$4.3 billion at end-2025), and Qualcomm's reported <strong>$8–10 billion</strong> approach to Tenstorrent would be an M&amp;A rather than IPO event. OpenAI has reportedly postponed its own listing to 2027 (Source: Bloomberg, June 8; TechCrunch, May 7; Tom's Hardware; GuruFocus, July 15 — press/speculative; private valuations unaudited).</li>
+      </ul>
+      <h3 id="5b-top-5-traded-ai-related-tickers">5b. Top 5 traded AI-related tickers</h3>
+      <p>This is not a definitive "most-traded-by-volume" ranking from a single authoritative source, and no session occurred on July 18 or 19. Signals below are Friday July 17's or earlier. Re-confirm against a live exchange leaderboard before any external use.</p>
+      <div class="table-wrap"><table>
+      <thead>
+      <tr>
+      <th>#</th>
+      <th>Ticker</th>
+      <th>Company</th>
+      <th>Why it's an AI-trading bellwether</th>
+      <th>Latest verifiable signal</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>1</td>
+      <td>NVDA</td>
+      <td>Nvidia</td>
+      <td>The AI-GPU anchor and the name the open-weight thesis argues against</td>
+      <td>Fell about <strong>1.2%</strong> on July 17, briefly ceding the world's-most-valuable-company title to Apple at roughly $4.86T market cap. The ~3.5% figure reported by at least one outlet now looks like an outlier against Fortune and CNBC. Up ~9% YTD (Source: Fortune; CNBC, July 17 — press; direction well-corroborated, magnitude now consistent across major outlets)</td>
+      </tr>
+      <tr>
+      <td>2</td>
+      <td>AAPL</td>
+      <td>Apple</td>
+      <td>The clearest expression of rotation from AI capex toward AI distribution</td>
+      <td>Closed at about <strong>$4.88T</strong>, reclaiming the top spot from Nvidia for the first time since April 2025; finished the week higher alongside Amazon and Microsoft despite the late-week Big Tech pullback; up ~23% YTD (Source: CNBC, July 17 and July 18 — press; well-corroborated)</td>
+      </tr>
+      <tr>
+      <td>3</td>
+      <td>TSM</td>
+      <td>Taiwan Semiconductor</td>
+      <td>Foundry to every frontier chip; the swing factor for the AI-capex trade</td>
+      <td>Fell about <strong>7% in Taipei</strong> on July 17 despite a reported <strong>77% jump in quarterly operating profit</strong> and a raised 2026 revenue growth outlook above 40%; the $60–64B capex plan (up from $52–56B) read as margin risk and Taiwan entered a technical correction. The Taipei decline and the US ADR move are different numbers (Source: Fortune; Bloomberg, July 17 — press)</td>
+      </tr>
+      <tr>
+      <td>4</td>
+      <td>9984.T</td>
+      <td>SoftBank Group</td>
+      <td>Traded as an OpenAI proxy and a Stargate funding vehicle</td>
+      <td>Fell about <strong>9.0%</strong> on July 17 — a larger single-day move than Nvidia's, and the cleanest read on how directly the market linked Kimi K3 to closed-model economics (Source: Fortune, July 17 — press)</td>
+      </tr>
+      <tr>
+      <td>5</td>
+      <td>MU</td>
+      <td>Micron Technology</td>
+      <td>US high-bandwidth-memory name; the segment being repriced by CXMT's arrival</td>
+      <td>Continued sliding as the memory group entered a bear market; CXMT's priced ~$8.55–9.8B <strong>July 27</strong> listing is the standing overhang. Specific July 17 close not confirmed to a single authoritative feed (Source: 24/7 Wall St.; Bloomberg, July 14–17 — press)</td>
+      </tr>
+      </tbody>
+      </table></div>
+      <p><strong>Week ahead (July 20–24) — calendar, not forecast.</strong> Alphabet, Tesla, Intel, Texas Instruments and AT&amp;T report; Alphabet is the first hyperscaler chip-buyer to report this cycle and is being watched for cloud growth and capital-expenditure guidance. <strong>AMD's Advancing AI event runs July 22–23</strong>, with a Zen 6 Venice launch and an MI455X roadmap update expected ahead of its August 4 Q2 earnings. CXMT lists and Kimi K3's weights publish on <strong>July 27</strong>. Earnings season overall has started strong — five of six major US banks beat on July 14, and S&amp;P 500 companies are expected to show quarterly earnings growth above 20% — but the AI rotation has consistently upstaged it (Source: CNBC, "Stock market next week: Outlook for July 20-24, 2026," July 17; CNBC, "The AI rotation stole the spotlight from a strong start to earnings season," July 18; TradingKey, July 2026 — press; these are scheduled events and consensus expectations, not predictions).</p>
+      <p><strong>What This Means for You.</strong> The honest summary of the week is that a great deal of market value moved on information that changed almost nothing about what an organization can deploy. Three near-frontier open-weight models were released, one of which cannot be downloaded for another eight days; two of the largest companies on earth swapped rank; a foundry fell 7% while reporting a 77% profit increase. Meanwhile the set of models an organization could actually put into production, govern, and defend to an auditor is the same today as it was on Monday, minus Fable 5's included access as of tonight. The practical discipline this argues for is unglamorous: separate the market narrative from the deployment question, and keep a short written list of what would actually cause you to change models — cost thresholds, capability gaps, data-handling requirements, licence terms. Weeks like this one are then something you read rather than something you react to. Read this section as market context, not investment guidance.</p>
+      <h2 id="sources">Sources</h2>
+      <ul>
+      <li>Anthropic, "Redeploying Fable 5." <a href="https://www.anthropic.com/news/redeploying-fable-5" target="_blank" rel="noopener">https://www.anthropic.com/news/redeploying-fable-5</a></li>
+      <li>BleepingComputer, "Claude Fable 5 stays free for paid users until July 19 as Anthropic buys more time," July 13, 2026. <a href="https://www.bleepingcomputer.com/news/artificial-intelligence/claude-fable-5-stays-free-for-paid-users-until-july-19-as-anthropic-buys-more-time/" target="_blank" rel="noopener">https://www.bleepingcomputer.com/news/artificial-intelligence/claude-fable-5-stays-free-for-paid-users-until-july-19-as-anthropic-buys-more-time/</a></li>
+      <li>Forbes, "Claude Fable 5 Extends To July 19. 7 Days, 7 Power Moves," July 13, 2026. <a href="https://www.forbes.com/sites/sandycarter/2026/07/13/claude-fable-5-extends-to-july-19-7-days-7-power-moves/" target="_blank" rel="noopener">https://www.forbes.com/sites/sandycarter/2026/07/13/claude-fable-5-extends-to-july-19-7-days-7-power-moves/</a></li>
+      <li>CybersecurityNews, "Anthropic Extends Claude Fable 5 Access From July 12 to July 19," July 2026. <a href="https://cybersecuritynews.com/anthropic-extends-claude-fable-5-access/" target="_blank" rel="noopener">https://cybersecuritynews.com/anthropic-extends-claude-fable-5-access/</a></li>
+      <li>Thinking Machines Lab, "Inkling: Our open-weights model," July 15, 2026. <a href="https://thinkingmachines.ai/news/introducing-inkling/" target="_blank" rel="noopener">https://thinkingmachines.ai/news/introducing-inkling/</a></li>
+      <li>TechCrunch, "Thinking Machines amps up its bet against one-size-fits-all AI with its first open model, Inkling," July 15, 2026. <a href="https://techcrunch.com/2026/07/15/thinking-machines-amps-up-its-bet-against-one-size-fits-all-ai-with-its-first-open-model-inkling/" target="_blank" rel="noopener">https://techcrunch.com/2026/07/15/thinking-machines-amps-up-its-bet-against-one-size-fits-all-ai-with-its-first-open-model-inkling/</a></li>
+      <li>VentureBeat, "Thinking Machines open sources first multimodal language model, Inkling, focused on low cost and 'resistance to censorship'," July 15, 2026. <a href="https://venturebeat.com/technology/thinking-machines-open-sources-first-multimodal-language-model-inkling-focused-on-low-cost-and-resistance-to-censorship" target="_blank" rel="noopener">https://venturebeat.com/technology/thinking-machines-open-sources-first-multimodal-language-model-inkling-focused-on-low-cost-and-resistance-to-censorship</a></li>
+      <li>Artificial Analysis, "Thinking Machines has released Inkling, the new leading U.S. open weights model." <a href="https://artificialanalysis.ai/articles/thinking-machines-has-released-inkling-the-new-leading-u-s-open-weights-model" target="_blank" rel="noopener">https://artificialanalysis.ai/articles/thinking-machines-has-released-inkling-the-new-leading-u-s-open-weights-model</a></li>
+      <li>AIwire, "Thinking Machines Launches Open-Weight 'Inkling' Foundation Model for Fine-Tuning," July 16, 2026. <a href="https://www.hpcwire.com/aiwire/2026/07/16/thinking-machines-launches-open-weight-inkling-foundation-model-for-fine-tuning/" target="_blank" rel="noopener">https://www.hpcwire.com/aiwire/2026/07/16/thinking-machines-launches-open-weight-inkling-foundation-model-for-fine-tuning/</a></li>
+      <li>Fortune, "Murati's Thinking Machines releases first AI model for broad use," July 15, 2026. <a href="https://fortune.com/2026/07/15/what-is-mira-murati-thinking-machines-first-ai-model-inkling/" target="_blank" rel="noopener">https://fortune.com/2026/07/15/what-is-mira-murati-thinking-machines-first-ai-model-inkling/</a></li>
+      <li>Arena.ai via X, "Kimi-K3 is now #1 in the Frontend Code Arena with 1679 pts," July 16, 2026. <a href="https://x.com/arena/status/2077824029126504525" target="_blank" rel="noopener">https://x.com/arena/status/2077824029126504525</a></li>
+      <li>The New Stack, "Kimi K3 tops Arena's coding leaderboard — and it's open-weight." <a href="https://thenewstack.io/kimi-k3-open-weight-coding/" target="_blank" rel="noopener">https://thenewstack.io/kimi-k3-open-weight-coding/</a></li>
+      <li>Techmeme/VentureBeat, "Kimi K3 takes #1 on the Frontend Code Arena benchmark, surpassing Claude Fable 5," July 16, 2026. <a href="https://www.techmeme.com/260716/p53" target="_blank" rel="noopener">https://www.techmeme.com/260716/p53</a></li>
+      <li>Winzheng, "Kimi K3 Tops Frontend Code Arena with 1679 Points; Open Weights July 27," July 2026. <a href="https://www.winzheng.com/en/article/kimi-k3-tops-frontend-code-arena-moonshot-ai" target="_blank" rel="noopener">https://www.winzheng.com/en/article/kimi-k3-tops-frontend-code-arena-moonshot-ai</a></li>
+      <li>Fortune, "Markets experience new DeepSeek shock after MoonShot AI releases Kimi K3," July 17, 2026. <a href="https://fortune.com/2026/07/17/china-moonshot-kimi-k3-markets-china-ai/" target="_blank" rel="noopener">https://fortune.com/2026/07/17/china-moonshot-kimi-k3-markets-china-ai/</a></li>
+      <li>CNBC, "China's Moonshot AI unveils Kimi K3 that rivals OpenAI, Anthropic," July 17, 2026. <a href="https://www.cnbc.com/2026/07/17/moonshot-ai-kimi-k3-model-openai-anthropic-china.html" target="_blank" rel="noopener">https://www.cnbc.com/2026/07/17/moonshot-ai-kimi-k3-model-openai-anthropic-china.html</a></li>
+      <li>Bloomberg, "Moonshot Unveils Kimi K3 AI Model, Narrowing Gap With US Rivals," July 17, 2026. <a href="https://www.bloomberg.com/news/articles/2026-07-17/china-s-powerful-new-moonshot-ai-model-closes-gap-with-us-rivals" target="_blank" rel="noopener">https://www.bloomberg.com/news/articles/2026-07-17/china-s-powerful-new-moonshot-ai-model-closes-gap-with-us-rivals</a></li>
+      <li>Simon Willison, "Kimi K3, and what we can still learn from the pelican benchmark," July 16, 2026. <a href="https://simonwillison.net/2026/Jul/16/kimi-k3/" target="_blank" rel="noopener">https://simonwillison.net/2026/Jul/16/kimi-k3/</a></li>
+      <li>DeepSeek API Docs, "DeepSeek V4 Preview Release." <a href="https://api-docs.deepseek.com/news/news260424/" target="_blank" rel="noopener">https://api-docs.deepseek.com/news/news260424/</a></li>
+      <li>Artificial Analysis, "DeepSeek is back among the leading open weights models with V4 Pro and V4 Flash." <a href="https://artificialanalysis.ai/articles/deepseek-is-back-among-the-leading-open-weights-models-with-v4-pro-and-v4-flash" target="_blank" rel="noopener">https://artificialanalysis.ai/articles/deepseek-is-back-among-the-leading-open-weights-models-with-v4-pro-and-v4-flash</a></li>
+      <li>Hugging Face, "deepseek-ai/DeepSeek-V4-Pro." <a href="https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro" target="_blank" rel="noopener">https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro</a></li>
+      <li>morphllm.com, "DeepSeek V4: 1.6T MoE, 1M Context, $0.87/M Output — Architecture, Benchmarks, Pricing (2026)." <a href="https://www.morphllm.com/deepseek-v4" target="_blank" rel="noopener">https://www.morphllm.com/deepseek-v4</a></li>
+      <li>digitalapplied.com, "July 2026 Open-Weight Wave: K3, Inkling and the New Gap." <a href="https://www.digitalapplied.com/blog/open-weight-model-wave-july-2026-momentum-tracker" target="_blank" rel="noopener">https://www.digitalapplied.com/blog/open-weight-model-wave-july-2026-momentum-tracker</a></li>
+      <li>The Information, "Exclusive: Microsoft Preps Mythos-Like AI Bug Finder." <a href="https://www.theinformation.com/briefings/exclusive-microsoft-preps-mythos-like-ai-bug-finder" target="_blank" rel="noopener">https://www.theinformation.com/briefings/exclusive-microsoft-preps-mythos-like-ai-bug-finder</a></li>
+      <li>TechRepublic, "Microsoft's 'Project Perception' Could Challenge Anthropic's Mythos in AI Security," July 2026. <a href="https://www.techrepublic.com/article/news-microsoft-project-perception-ai-security-tool/" target="_blank" rel="noopener">https://www.techrepublic.com/article/news-microsoft-project-perception-ai-security-tool/</a></li>
+      <li>Neowin, "Recent patches for Windows 11 could have been created by Microsoft's new Mythos rival," July 2026. <a href="https://www.neowin.net/news/recent-patches-for-windows-11-could-have-been-created-by-microsofts-new-mythos-rival/" target="_blank" rel="noopener">https://www.neowin.net/news/recent-patches-for-windows-11-could-have-been-created-by-microsofts-new-mythos-rival/</a></li>
+      <li>Windows News, "Microsoft's Project Perception Aims to Make AI Vulnerability Fixing Cheap Enough to Run Nonstop," July 2026. <a href="https://windowsnews.ai/article/microsofts-project-perception-aims-to-make-ai-vulnerability-fixing-cheap-enough-to-run-nonstop.439207" target="_blank" rel="noopener">https://windowsnews.ai/article/microsofts-project-perception-aims-to-make-ai-vulnerability-fixing-cheap-enough-to-run-nonstop.439207</a></li>
+      <li>Xinhua, "Update: 29 countries sign agreement on establishing World AI Cooperation Organization," July 16, 2026. <a href="https://english.news.cn/20260716/b0449aa2133542868e310fdc45ef2969/c.html" target="_blank" rel="noopener">https://english.news.cn/20260716/b0449aa2133542868e310fdc45ef2969/c.html</a></li>
+      <li>Xinhua, "Mankind creates first global intergovernmental AI cooperation organization," July 17, 2026. <a href="https://english.news.cn/20260717/d4e26796023e48edadbc77b7b6d2d7f8/c.html" target="_blank" rel="noopener">https://english.news.cn/20260717/d4e26796023e48edadbc77b7b6d2d7f8/c.html</a></li>
+      <li>Al Jazeera, "China's Xi Jinping launches new AI alliance: What is it?," July 17, 2026. <a href="https://www.aljazeera.com/news/2026/7/17/chinas-xi-jinping-launches-new-ai-alliance-what-is-it" target="_blank" rel="noopener">https://www.aljazeera.com/news/2026/7/17/chinas-xi-jinping-launches-new-ai-alliance-what-is-it</a></li>
+      <li>PYMNTS, "29 Nations Join China-Led World AI Cooperation Organization," July 2026. <a href="https://www.pymnts.com/news/artificial-intelligence/2026/29-nations-join-china-led-world-ai-cooperation-organization/" target="_blank" rel="noopener">https://www.pymnts.com/news/artificial-intelligence/2026/29-nations-join-china-led-world-ai-cooperation-organization/</a></li>
+      <li>China.org.cn, "Xi calls for equitable global AI governance, unveils new cooperation body," July 18, 2026. <a href="http://www.china.org.cn/2026-07/18/content_118605771.shtml" target="_blank" rel="noopener">http://www.china.org.cn/2026-07/18/content_118605771.shtml</a></li>
+      <li>Quartz, "Xi Jinping positions China as open-source AI leader," July 17, 2026. <a href="https://qz.com/xi-jinping-waic-china-open-source-ai-governance-071726" target="_blank" rel="noopener">https://qz.com/xi-jinping-waic-china-open-source-ai-governance-071726</a></li>
+      <li>Claude by Anthropic, "Claude Cowork on web and mobile: hand off work anywhere." <a href="https://claude.com/blog/cowork-web-mobile" target="_blank" rel="noopener">https://claude.com/blog/cowork-web-mobile</a></li>
+      <li>TechCrunch, "Claude Cowork expands to mobile and web," July 7, 2026. <a href="https://techcrunch.com/2026/07/07/the-coding-agent-wars-are-spilling-into-the-rest-of-the-office-claude-cowork/" target="_blank" rel="noopener">https://techcrunch.com/2026/07/07/the-coding-agent-wars-are-spilling-into-the-rest-of-the-office-claude-cowork/</a></li>
+      <li>9to5Mac, "Anthropic expanding Claude Cowork to mobile and web, details here," July 13, 2026. <a href="https://9to5mac.com/2026/07/13/anthropic-expanding-claude-cowork-to-mobile-and-web-details-here/" target="_blank" rel="noopener">https://9to5mac.com/2026/07/13/anthropic-expanding-claude-cowork-to-mobile-and-web-details-here/</a></li>
+      <li>Claude by Anthropic, "Bringing Claude Code and Claude Cowork to government." <a href="https://claude.com/blog/bringing-claude-code-and-claude-cowork-to-government" target="_blank" rel="noopener">https://claude.com/blog/bringing-claude-code-and-claude-cowork-to-government</a></li>
+      <li>Releasebot, "Claude Code Updates by Anthropic — July 2026." <a href="https://releasebot.io/updates/anthropic/claude-code" target="_blank" rel="noopener">https://releasebot.io/updates/anthropic/claude-code</a></li>
+      <li>anthropics/claude-code, "CHANGELOG.md." <a href="https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md" target="_blank" rel="noopener">https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md</a></li>
+      <li>Claude Code Docs, "Claude Code changelog." <a href="https://code.claude.com/docs/en/changelog" target="_blank" rel="noopener">https://code.claude.com/docs/en/changelog</a></li>
+      <li>Model Context Protocol Blog, "The 2026-07-28 MCP Specification Release Candidate." <a href="https://blog.modelcontextprotocol.io/posts/2026-07-28-release-candidate/" target="_blank" rel="noopener">https://blog.modelcontextprotocol.io/posts/2026-07-28-release-candidate/</a></li>
+      <li>Model Context Protocol Blog, "Beta SDKs for the 2026-07-28 MCP Spec Release Candidate Are Here." <a href="https://blog.modelcontextprotocol.io/posts/sdk-betas-2026-07-28/" target="_blank" rel="noopener">https://blog.modelcontextprotocol.io/posts/sdk-betas-2026-07-28/</a></li>
+      <li>WorkOS, "The biggest MCP spec update ships July 28: What changes for AI agent authentication." <a href="https://workos.com/blog/mcp-2026-spec-agent-authentication" target="_blank" rel="noopener">https://workos.com/blog/mcp-2026-spec-agent-authentication</a></li>
+      <li>Stacktree, "MCP 2026-07-28 spec: what changed, what breaks." <a href="https://stacktr.ee/blog/mcp-2026-spec-changes" target="_blank" rel="noopener">https://stacktr.ee/blog/mcp-2026-spec-changes</a></li>
+      <li>Bloomberg, "Anthropic Plans IPO Investor Meetings as Mega-Listing Nears," July 15, 2026. <a href="https://www.bloomberg.com/news/articles/2026-07-15/anthropic-is-said-to-plan-ipo-investor-meetings-as-listing-nears" target="_blank" rel="noopener">https://www.bloomberg.com/news/articles/2026-07-15/anthropic-is-said-to-plan-ipo-investor-meetings-as-listing-nears</a></li>
+      <li>CNBC, "Anthropic moves closer to mega-IPO as bankers line up investor meetings," July 15, 2026. <a href="https://www.cnbc.com/2026/07/15/anthropic-ipo-banks-investor-meetings.html" target="_blank" rel="noopener">https://www.cnbc.com/2026/07/15/anthropic-ipo-banks-investor-meetings.html</a></li>
+      <li>CNBC, "Alphabet shares fall on report its most powerful AI model Gemini 3.5 Pro is delayed," July 16, 2026. <a href="https://www.cnbc.com/2026/07/16/alphabet-stock-gemini-3-5-pro-ai.html" target="_blank" rel="noopener">https://www.cnbc.com/2026/07/16/alphabet-stock-gemini-3-5-pro-ai.html</a></li>
+      <li>Bloomberg, "Google Gemini Launch Delayed as Tech Falls Short of Internal Goals," July 16, 2026. <a href="https://www.bloomberg.com/news/articles/2026-07-16/google-gemini-launch-delayed-as-tech-falls-short-of-internal-goals" target="_blank" rel="noopener">https://www.bloomberg.com/news/articles/2026-07-16/google-gemini-launch-delayed-as-tech-falls-short-of-internal-goals</a></li>
+      <li>Bloomberg, "Chip Stock Rout Deepens as TSMC Selloff Drives Taiwan Correction," July 17, 2026. <a href="https://www.bloomberg.com/news/articles/2026-07-17/chip-stock-selloff-deepens-in-asia-as-tsmc-fails-to-impress" target="_blank" rel="noopener">https://www.bloomberg.com/news/articles/2026-07-17/chip-stock-selloff-deepens-in-asia-as-tsmc-fails-to-impress</a></li>
+      <li>CNBC, "Apple, Nvidia vie for title of world's most valuable company," July 17, 2026. <a href="https://www.cnbc.com/2026/07/17/apple-nvidia-aapl-nvda-market-cap.html" target="_blank" rel="noopener">https://www.cnbc.com/2026/07/17/apple-nvidia-aapl-nvda-market-cap.html</a></li>
+      <li>CNBC, "The AI rotation stole the spotlight from a strong start to earnings season," July 18, 2026. <a href="https://www.cnbc.com/2026/07/18/the-ai-rotation-stole-the-spotlight-from-a-strong-start-to-earnings-season-.html" target="_blank" rel="noopener">https://www.cnbc.com/2026/07/18/the-ai-rotation-stole-the-spotlight-from-a-strong-start-to-earnings-season-.html</a></li>
+      <li>CNBC, "Stock market next week: Outlook for July 20-24, 2026," July 17, 2026. <a href="https://www.cnbc.com/2026/07/17/stock-market-next-week-outlook-for-july-20-24-2026.html" target="_blank" rel="noopener">https://www.cnbc.com/2026/07/17/stock-market-next-week-outlook-for-july-20-24-2026.html</a></li>
+      <li>TradingKey, "AMD Stock Down 17% From Peak — Can July 22 Advancing AI Save It?," July 2026. <a href="https://www.tradingkey.com/analysis/stocks/us-stocks/262037492-amd-stock-forecast-week-july-20-2026-advancing-ai-july-22-tradingkey" target="_blank" rel="noopener">https://www.tradingkey.com/analysis/stocks/us-stocks/262037492-amd-stock-forecast-week-july-20-2026-advancing-ai-july-22-tradingkey</a></li>
+      <li>Fireworks AI, "Fireworks Secures $1.5 Billion in Series D Funding," July 16, 2026. <a href="https://fireworks.ai/blog/series-d-announcement" target="_blank" rel="noopener">https://fireworks.ai/blog/series-d-announcement</a></li>
+      <li>Crunchbase News, "The Week's 10 Biggest Funding Rounds: AI, Energy And Biotech Lead The Way," July 2026. <a href="https://news.crunchbase.com/venture/biggest-funding-rounds-ai-energy-biotech-joulent/" target="_blank" rel="noopener">https://news.crunchbase.com/venture/biggest-funding-rounds-ai-energy-biotech-joulent/</a></li>
+      <li>Crunchbase News, "Global Startup Investment Hit Record $510B In H1 2026 As AI Boom Accelerates Funding And Exits." <a href="https://news.crunchbase.com/venture/global-startup-exits-ipo-ma-soar-ai-q2-h1-2026/" target="_blank" rel="noopener">https://news.crunchbase.com/venture/global-startup-exits-ipo-ma-soar-ai-q2-h1-2026/</a></li>
+      <li>aifundingtracker.com, "AI Startup Funding News Today." <a href="https://aifundingtracker.com/ai-startup-funding-news-today/" target="_blank" rel="noopener">https://aifundingtracker.com/ai-startup-funding-news-today/</a></li>
+      <li>Bloomberg, "Chip Giant CXMT Seeks to Raise $9.8 Billion in Shanghai IPO," July 14, 2026. <a href="https://www.bloomberg.com/news/articles/2026-07-14/cxmt-prices-shanghai-star-board-ipo-at-8-66-yuan-per-share" target="_blank" rel="noopener">https://www.bloomberg.com/news/articles/2026-07-14/cxmt-prices-shanghai-star-board-ipo-at-8-66-yuan-per-share</a></li>
+      <li>CNBC, "SK Hynix rises 13% in Nasdaq debut," July 10, 2026. <a href="https://www.cnbc.com/2026/07/10/sk-hynix-skhy-stock-nasdaq.html" target="_blank" rel="noopener">https://www.cnbc.com/2026/07/10/sk-hynix-skhy-stock-nasdaq.html</a></li>
+      <li>Tom's Hardware, "Qualcomm mulls taking over Jim Keller's Tenstorrent, report claims — deal would value the company at between $8 billion and $10 billion." <a href="https://www.tomshardware.com/tech-industry/artificial-intelligence/qualcomm-mulls-taking-over-jim-kellers-tenstorrent-report-claims-deal-for-ai-chipmaker-would-value-the-company-at-between-usd8-billion-and-usd10-billion" target="_blank" rel="noopener">https://www.tomshardware.com/tech-industry/artificial-intelligence/qualcomm-mulls-taking-over-jim-kellers-tenstorrent-report-claims-deal-for-ai-chipmaker-would-value-the-company-at-between-usd8-billion-and-usd10-billion</a></li>
+      <li>The Register, "Qualcomm said to be circling AI chip biz Tenstorrent in $10B RISC-V power play," June 16, 2026. <a href="https://www.theregister.com/systems/2026/06/16/qualcomm-said-to-be-circling-ai-chip-biz-tenstorrent-in-10b-risc-v-power-play/5256084" target="_blank" rel="noopener">https://www.theregister.com/systems/2026/06/16/qualcomm-said-to-be-circling-ai-chip-biz-tenstorrent-in-10b-risc-v-power-play/5256084</a></li>
+      <li>TechTimes, "Oracle's 30,000 Layoffs Enter Final Phase: Sign the Release or Forfeit Severance," June 1, 2026. <a href="https://www.techtimes.com/articles/317527/20260601/oracles-30000-layoffs-enter-final-phase-sign-release-forfeit-severance.htm" target="_blank" rel="noopener">https://www.techtimes.com/articles/317527/20260601/oracles-30000-layoffs-enter-final-phase-sign-release-forfeit-severance.htm</a></li>
+      <li>Bloomberg, "China's Moonshot AI Seeks $30 Billion Value in New Funding Talks," June 8, 2026. <a href="https://www.bloomberg.com/news/articles/2026-06-08/china-s-moonshot-ai-seeks-30-billion-value-in-new-funding-talks" target="_blank" rel="noopener">https://www.bloomberg.com/news/articles/2026-06-08/china-s-moonshot-ai-seeks-30-billion-value-in-new-funding-talks</a></li>
+      <li>GuruFocus, "Anthropic Prepares for Potential IPO, Outpacing OpenAI," July 15, 2026. <a href="https://www.gurufocus.com/news/8960658/anthropic-prepares-for-potential-ipo-outpacing-openai" target="_blank" rel="noopener">https://www.gurufocus.com/news/8960658/anthropic-prepares-for-potential-ipo-outpacing-openai</a></li>
+      <li>llm-stats.com, "AI Updates Today (July 2026) — Latest AI Model Releases." <a href="https://llm-stats.com/llm-updates" target="_blank" rel="noopener">https://llm-stats.com/llm-updates</a></li>
+      <li>European Commission, "AI Act | Shaping Europe's digital future," 2026. <a href="https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" target="_blank" rel="noopener">https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai</a></li>
+      </ul>
+      <p>[THOUGHT LEADERSHIP] [DRAFT — Pending Copy Review]</p>
+    </article>
+
+    <section class="cta-band" id="contact" aria-labelledby="cta-heading">
+      <h2 id="cta-heading">From AI curiosity to AI capability</h2>
+      <p>This briefing is part of the field research behind our AI Enablement service &mdash; a curated, white-glove Claude Cowork implementation tailored to your organization&rsquo;s workflow.</p>
+      <a class="btn" href="https://calendly.com/mark-malaniru/30min" target="_blank" rel="noopener">Book a discovery call</a>
+    </section>
+    <!-- mal-ai-disclaimer:v1 -->
+  <aside class="mal-ai-disclaimer" role="note" aria-label="AI transparency notice" style="max-width:760px;margin:2.5rem auto 0;padding:1rem 1.25rem;border:1px solid #d9c3a5;border-left:4px solid #C07830;border-radius:6px;background:#faf6f0;color:#5c5347;font-size:0.82rem;line-height:1.6;box-sizing:border-box;">
+    <strong style="display:block;color:#8a5a1e;font-size:0.78rem;letter-spacing:.04em;text-transform:uppercase;margin-bottom:.35rem;">AI Transparency Notice</strong>
+    This article was produced through Malaniru&rsquo;s guided-research process: generated with the assistance of AI and reviewed by a person before publication (human-in-the-loop). In line with EU AI Act transparency obligations, we disclose that AI systems were used to create this content. It is provided for general information only, may contain inaccuracies, and is not professional advice &mdash; verify before relying on it.
+  </aside>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Malaniru Inc, LLC &middot; Lafayette, Colorado &middot; AI Enablement</p>
+    <p><a href="daily-intelligence-briefings.html">&larr; Back to Daily Intelligence Briefings</a> &middot; <a href="index.html">AI Enablement</a></p>
+      <nav class="mal-footernav" data-mal-footernav aria-label="Site" style="margin-top:0.7rem;font-size:0.82rem;line-height:1.9;">
+      <a href="about.html" style="color:#C07830;font-weight:700;text-decoration:none;">About</a> &middot;
+      <a href="pricing.html" style="color:#C07830;font-weight:700;text-decoration:none;">Pricing</a> &middot;
+      <a href="index.html" style="color:#C07830;font-weight:700;text-decoration:none;">AI Enablement</a>
+     &middot;
+      <a href="privacy-policy.html" style="color:#C07830;font-weight:700;text-decoration:none;">Privacy</a>
+    </nav>
+  </footer>
+</body>
+</html>
