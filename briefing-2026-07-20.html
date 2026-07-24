@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<!--
+  Malaniru - Daily Intelligence Briefing (branded HTML)
+  Built by: publish_briefing_page.py - Date: 2026-07-20
+  Source:   Projects/Malaniru_Marketing_Site/Staging/20260720-daily-intelligence-briefing.md
+  FIDELITY: Body rendered VERBATIM from the source markdown. No copy edits.
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daily Intelligence Briefing — Monday, July 20, 2026 - Malaniru</title>
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.malaniru.com/briefing-2026-07-20">
+  <meta name="description" content="Yesterday&#x27;s expected outcome did not happen. Fable 5&#x27;s included access did not simply end — Anthropic split its paid base: Max and Team Premium keep Fable 5 permanently at 50% of standard weekly limits, while Pro and Team Standard move to usage credits with a one-time $100 credit. This corrects the framing carried in the July 19 briefing. The European Commission&#x27;s July 16 Digital Markets Act specification decisions are the larger structural item: Google must open 11 Android feature groups to rival AI assistants by July 2027 and share anonymized search data with rivals on FRAND terms from January 2027. The Philadelphia Semiconductor Index enters the week in a technical bear market, down about 20% from its late-June record after an 11% weekly decline, its worst week since March 2025 — though still up roughly 65% year to date. Gemini 3.5 Pro missed a third target date. The World AI Conference closes in Shanghai today. Two dated corrections: the recirculating &#x27;Oracle cuts 30,000 jobs&#x27; item is a March 31 event, and July 24 is the retirement of DeepSeek&#x27;s legacy API aliases, not a V4 stable release. The MCP 2026-07-28 specification is final in eight days.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --navy:#0F1A2E;--navy-mid:#2A3F63;--copper:#C07830;--gold:#D4A853;
+      --off-white:#F4F1EC;--light-gray:#E8E6E1;--mid-gray:#8A8A96;--dark-text:#1C1C1C;
+      --font:"Inter","Helvetica Neue",Arial,sans-serif;
+    }
+    *{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:var(--font);background:var(--off-white);color:var(--dark-text);line-height:1.65;font-size:16px;-webkit-font-smoothing:antialiased;}
+    .skip-link{position:absolute;left:-999px;top:0;background:var(--gold);color:var(--navy);padding:10px 16px;font-weight:700;z-index:10;}
+    .skip-link:focus{left:8px;top:8px;}
+    a{color:var(--copper);}
+    /* Header */
+    header{background: linear-gradient(160deg, rgba(15,26,46,0.72) 0%, rgba(10,18,33,0.82) 100%), url('StockCake-Cosmic_Web_Complexity-1361288-standard-rot90ccw.jpg'); background-size: auto, 100% 100%; background-repeat: no-repeat, no-repeat; background-position: center, center;color:var(--off-white);padding:48px 24px 52px;position:relative;overflow:hidden;}
+    header::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 85% 12%,rgba(192,120,48,0.20) 0%,rgba(15,26,46,0) 55%);pointer-events:none;}
+    .header-inner{max-width:760px;margin:0 auto;position:relative;z-index:1;}
+    .wordmark{font-weight:800;font-size:1.25rem;letter-spacing:0.02em;margin-bottom:30px;}
+    .wordmark .dot{color:var(--copper);}
+    .wordmark a{color:var(--off-white);text-decoration:none;transition:opacity .18s ease;}
+    .wordmark a:hover,.wordmark a:focus-visible{opacity:.85;outline:none;}
+    .eyebrow{display:inline-block;font-size:0.72rem;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;}
+    header h1{font-weight:800;font-size:clamp(1.8rem,4.6vw,2.6rem);line-height:1.14;letter-spacing:-0.01em;margin-bottom:16px;}
+    .byline{font-size:0.9rem;color:var(--light-gray);letter-spacing:0.01em;}
+    .byline .sep{color:var(--copper);margin:0 8px;}
+    .lede{font-size:1.08rem;color:var(--light-gray);max-width:66ch;margin-top:18px;}
+    .backlink{display:inline-block;margin-top:26px;color:var(--gold);font-weight:600;font-size:0.9rem;text-decoration:none;border-bottom:1px solid rgba(212,168,83,0.4);}
+    .backlink:hover,.backlink:focus-visible{border-bottom-color:var(--gold);outline:none;}
+    /* Article */
+    main{max-width:760px;margin:0 auto;padding:48px 24px 8px;}
+    .disclaimer{background:#fff;border:1px solid var(--light-gray);border-left:4px solid var(--copper);border-radius:8px;padding:14px 18px;font-size:0.9rem;color:var(--navy-mid);margin-bottom:34px;}
+    article{font-size:1.05rem;}
+    article h2{font-weight:800;font-size:1.5rem;color:var(--navy);line-height:1.22;letter-spacing:-0.01em;margin:42px 0 14px;}
+    article h3{font-weight:700;font-size:1.18rem;color:var(--navy-mid);line-height:1.25;margin:30px 0 10px;}
+    article h2 + p, article h3 + p{margin-top:0;}
+    article p{margin:0 0 18px;color:var(--dark-text);}
+    article ul,article ol{margin:0 0 18px;padding-left:24px;}
+    article li{margin-bottom:8px;}
+    article strong{font-weight:700;color:var(--navy);}
+    article em{font-style:italic;}
+    article a{color:var(--copper);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(192,120,48,0.35);transition:border-color .18s ease;}
+    article a:hover,article a:focus-visible{border-bottom-color:var(--copper);outline:none;}
+    article hr{border:none;border-top:1px solid var(--light-gray);margin:34px 0;}
+    article h2#sources, article h2#references{border-top:1px solid var(--light-gray);padding-top:30px;font-size:1.2rem;color:var(--navy-mid);}
+    /* sources list smaller */
+    article h2[id^="sources"] ~ ul li, article h3[id^="sources"] ~ ul li{font-size:0.95rem;color:var(--navy-mid);}
+    /* tables */
+    article table{width:100%;border-collapse:collapse;margin:0 0 24px;font-size:0.95rem;}
+    article th,article td{border:1px solid var(--light-gray);padding:9px 12px;text-align:left;vertical-align:top;}
+    article thead th{background:var(--navy);color:var(--off-white);font-weight:700;}
+    article tbody tr:nth-child(even){background:#fff;}
+    article .table-wrap{overflow-x:auto;margin:0 0 24px;}
+    article .table-wrap table{margin:0;}
+    /* CTA */
+    .cta-band{background:var(--navy);color:var(--off-white);border-radius:12px;padding:42px 32px;text-align:center;margin:48px 0 8px;}
+    .cta-band h2{font-weight:800;font-size:clamp(1.4rem,3.4vw,1.9rem);margin-bottom:12px;letter-spacing:-0.01em;color:var(--off-white);}
+    .cta-band p{color:var(--light-gray);max-width:52ch;margin:0 auto 24px;}
+    .cta-band .btn{display:inline-block;background:var(--copper);color:#fff;font-weight:700;padding:13px 28px;border-radius:8px;text-decoration:none;transition:background .18s ease;}
+    .cta-band .btn:hover,.cta-band .btn:focus-visible{background:var(--gold);color:var(--navy);outline:none;}
+    /* Footer */
+    footer{max-width:760px;margin:16px auto 0;padding:24px;font-size:0.82rem;color:var(--mid-gray);border-top:1px solid var(--light-gray);}
+    footer p+p{margin-top:6px;}
+    footer a{color:var(--mid-gray);text-decoration:underline;}
+    @media (prefers-reduced-motion:reduce){*{transition:none!important;}}
+
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header>
+    <div class="header-inner">
+      <div class="wordmark"><a href="index.html">Malaniru<span class="dot">.</span></a></div>
+      <span class="eyebrow">AI Enablement &middot; Daily Intelligence Briefing</span>
+      <h1>Daily Intelligence Briefing — Monday, July 20, 2026</h1>
+      <p class="byline">By Mark Andrew Harris<span class="sep">&middot;</span>July 20, 2026</p>
+      <p class="lede">Yesterday&#x27;s expected outcome did not happen. Fable 5&#x27;s included access did not simply end — Anthropic split its paid base: Max and Team Premium keep Fable 5 permanently at 50% of standard weekly limits, while Pro and Team Standard move to usage credits with a one-time $100 credit. This corrects the framing carried in the July 19 briefing. The European Commission&#x27;s July 16 Digital Markets Act specification decisions are the larger structural item: Google must open 11 Android feature groups to rival AI assistants by July 2027 and share anonymized search data with rivals on FRAND terms from January 2027. The Philadelphia Semiconductor Index enters the week in a technical bear market, down about 20% from its late-June record after an 11% weekly decline, its worst week since March 2025 — though still up roughly 65% year to date. Gemini 3.5 Pro missed a third target date. The World AI Conference closes in Shanghai today. Two dated corrections: the recirculating &#x27;Oracle cuts 30,000 jobs&#x27; item is a March 31 event, and July 24 is the retirement of DeepSeek&#x27;s legacy API aliases, not a V4 stable release. The MCP 2026-07-28 specification is final in eight days.</p>
+      <a class="backlink" href="daily-intelligence-briefings.html">&larr; All daily intelligence briefings</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <article>
+      <p>The single most useful thing in today's briefing is a correction to yesterday's. The July 19 briefing reported — accurately, against the sources available at the time — that Claude Fable 5's included access ended last night and that all Fable 5 usage would move to prepaid credits at $10/$50 per million tokens from today. That is now only half right. Anthropic <strong>split its paid base into two tiers</strong>: from July 20, <strong>Max and Team Premium subscribers keep Fable 5 as a permanent subscription feature, included at 50% of their standard weekly usage limits</strong>, while <strong>Pro and Team Standard subscribers lose the bundled entitlement and move to usage credits, cushioned by a one-time $100 credit</strong> (Source: Anthropic via @claudeai on X, "Beginning July 20, Claude Fable 5 will be included in all Max and Team Premium plans, at 50% of limits" — primary/vendor; TechTimes, "Claude Fable 5 Ends Subscription Limbo: Permanent for Max, Credits-Only for Pro," July 18 — press). The practical consequence is that the answer to "did my Fable 5 access just stop being free" now depends entirely on which plan the seat sits on, which is a materially different support conversation than the one implied yesterday.</p>
+      <p>Two structural items outrank the model news. First, the <strong>European Commission's binding Digital Markets Act specification decisions against Google</strong>, adopted July 16 and enforceable immediately: Google must open <strong>11 Android feature groups</strong> — including voice activation and cross-app action — to certified third-party AI assistants by <strong>July 2027</strong>, and must share anonymized search ranking, query, click and view data with rival search engines and AI providers on FRAND terms beginning <strong>January 2027</strong> (Source: European Commission, "Commission provides guidance to Google for AI interoperability on Android and sharing of Google Search data under the Digital Markets Act," July 16 — primary; CNBC, July 16 — press). Second, the <strong>Philadelphia Semiconductor Index has entered a technical bear market</strong>, down roughly 20% from its late-June record after an 11% weekly decline — its worst week since March 2025 — while still holding a roughly 65% year-to-date gain (Source: Bloomberg, "Chips Stocks Sink Into Bear Market as 105% AI Rally Fizzles," July 17 — press). Elsewhere: <strong>Gemini 3.5 Pro missed a third target date</strong>, the <strong>World AI Conference closes in Shanghai today</strong>, and <strong>SAP completed its Prior Labs acquisition</strong> with a €1 billion-plus four-year commitment to tabular foundation models.</p>
+      <h2 id="1-ai-market-trends">1. AI Market Trends</h2>
+      <p><strong>The chip complex opens the week in a bear market, and the internals are not uniform.</strong> The SOX index fell about 11% last week and sits roughly 20% below its late-June record, having shed more than 18% since the start of July — against a 105% run from the March low to that peak, and a year-to-date gain still near 65% (Source: Bloomberg, July 17 — press). The single-name damage is concentrated: Marvell, ARM and Intel have each fallen more than 30% from their peaks, and TSMC recorded seven consecutive daily declines totalling about 8.8%, its longest losing streak since July 2022 (Source: Bloomberg, July 17 — press). Monday's session shows the dispersion widening rather than resolving — reporting from the July 20 session has Nvidia testing the $200 level and edging lower while <strong>Micron rose about 7% and Intel about 5%</strong>, with the megacap complex taking the harder hit: Alphabet down over 5%, Amazon down about 4.75%, Microsoft down about 3.18%, and the Nasdaq off roughly 1.32% (Source: FXLeaders, "Nvidia Stock NVDA Tests $200 Support as Chinese AI Competition Shakes the Chip Rally," July 20 — press; ⚠️ <strong>intraday figures from a live session, provisional until the close, and not confirmed against an authoritative exchange feed</strong>). Macro is compounding it: the 10-year Treasury at about 4.49% and hawkish expectations under new Fed Chair Kevin Warsh (Source: FXLeaders, July 20 — press; ⚠️ directional, confirm before external use).</p>
+      <p><strong>Brussels did to Google what no competitor managed.</strong> The Commission's two specification decisions conclude six months of proceedings opened January 27, 2026, and attack the two assets that insulate Google from bad model weeks — default placement across Android and two decades of search behaviour data. Third-party assistants gain voice activation and cross-app capability across 11 Android feature groups, subject to certification and user consent; Google must make anonymized ranking, query, click and view data available to rival search engines and AI chatbot providers, OpenAI explicitly included, on fair, reasonable and non-discriminatory terms (Source: European Commission, July 16 — primary; Computerworld, July 16; CNBC, July 16 — press). Google's president of global affairs Kent Walker pushed back on privacy and security grounds. The timing is what makes it bite: the distribution moat is being opened on a regulatory clock in the same month the flagship model failed to ship.</p>
+      <p><strong>Gemini 3.5 Pro missed a third target.</strong> Reporting indicates the model missed a July 17 date after falling short on coding and complex reasoning, following a June decision to discard the near-ready model and restart pre-training on a native Gemini 3 foundation; Google is reported to be weighing a stopgap Gemini 3.6 Flash release. No official model card, pricing or benchmarks have been published, so every circulating spec remains unconfirmed (Source: Bloomberg, "Google Gemini Launch Delayed as Tech Falls Short of Internal Goals," July 16; 9to5Google, July 16; TechTimes, July 16 — press reporting on an unannounced product). Alphabet fell about 4% on the delay reports. One delay is engineering discipline; three suggests something structural in either the training run or the evaluation bar.</p>
+      <p><strong>SAP bought a frontier lab that is not building a chatbot.</strong> SAP completed its acquisition of <strong>Prior Labs</strong>, the Freiburg-based originator of tabular foundation models, and committed <strong>more than €1 billion over four years</strong> to scale it, with Prior Labs continuing as an independent entity. The company is roughly 18 months old; its TabPFN series was published in <em>Nature</em> and set the state of the art across tabular benchmarks (Source: SAP News, "SAP Completes Prior Labs Acquisition," July 2026 — primary/vendor; Tech.eu, July 17 — press). The thesis is that the largest untapped enterprise AI opportunity is structured data — ledgers, inventories, transaction records — rather than prose, and that language models handle tables badly. Worth noting as a counter-cycle bet at a moment when nearly every other large commitment is aimed at the same frontier.</p>
+      <p><strong>Huawei showed silicon at WAIC.</strong> The <strong>Atlas 950 SuperPoD</strong> — 1,024 Ascend chips, scalable to 8,192 NPUs — was demonstrated on the show floor with claims of <strong>6.7× the compute and 15× the memory of Nvidia's NVL144</strong>, targeted for Q4 2026 (Source: Huawei Central; Seoul Economic Daily, July 17; DCD — press/vendor claim). ⚠️ These are peak theoretical figures against a system Nvidia has not yet shipped at scale, comparing a 8,192-NPU cluster to a 144-GPU node. Treat as a scale-versus-per-chip architectural argument, not a like-for-like benchmark.</p>
+      <h2 id="2-top-10-ai-agents-three-lenses">2. Top 10 AI Agents — Three Lenses</h2>
+      <p>Rankings as of Monday, July 20, 2026. One entitlement change lands today (the Fable 5 tier split), one regulatory clock started Thursday (the DMA decisions), and the MCP spec is final in eight days. The deployable Claude set is unchanged: Opus 4.8 anchors, Sonnet 5 is the Claude Code default.</p>
+      <h3 id="2a-relevance-for-claude-mcp-centered-work">2a. Relevance for Claude / MCP-Centered Work</h3>
+      <div class="table-wrap"><table>
+      <thead>
+      <tr>
+      <th>Rank</th>
+      <th>Agent / Platform</th>
+      <th>Justification</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>1</td>
+      <td>Claude Code + Agent SDK</td>
+      <td>Primary agentic build tool. The July release train (v2.1.207–v2.1.212) continues to harden unattended operation: session-wide caps now cover <strong>both WebSearch calls and subagent spawns</strong>, each defaulting to 200 and tunable via <code>CLAUDE_CODE_MAX_WEB_SEARCHES_PER_SESSION</code> and <code>CLAUDE_CODE_MAX_SUBAGENTS_PER_SESSION</code>. A <code>--forward-subagent-text</code> flag and <code>CLAUDE_CODE_FORWARD_SUBAGENT_TEXT</code> env var include subagent text and thinking in stream-json output (v2.1.211, July 15). The Task tool's <code>mode</code> parameter is deprecated and ignored — subagents inherit the parent session's permission mode by default. Fixes: the Agent tool now returns a clear error naming unrecognized entries rather than launching with no tools, agents are less likely to re-delegate an entire task onward, and "Change directory" in SDK hosts no longer fails with "A turn is in progress" on idle sessions with a running background task (Source: Claude Code changelog — primary). Directly relevant to anything running long or unattended.</td>
+      </tr>
+      <tr>
+      <td>2</td>
+      <td>Claude Cowork</td>
+      <td>Core delivery surface. Web and mobile beta — sessions and files follow the user across devices, background work, scheduled tasks that run with no device online, shared chats and projects, mobile approvals. <strong>Doubled usage limits run through August 5.</strong> Also in public beta inside Claude for Government Desktop on FedRAMP High.</td>
+      </tr>
+      <tr>
+      <td>3</td>
+      <td>MCP-based connectors (cross-vendor)</td>
+      <td><strong>Eight days from final.</strong> The 2026-07-28 spec removes the <code>initialize</code>/<code>initialized</code> handshake (SEP-2575) and session IDs (SEP-2567), making the protocol stateless at the layer: any request can hit any server instance, so sticky routing and shared session stores are no longer required. Streamable HTTP now requires <code>Mcp-Method</code> and <code>Mcp-Name</code> headers so gateways and rate-limiters can route without inspecting the body. List and resource-read results carry <code>ttlMs</code> and <code>cacheScope</code>, modelled on HTTP Cache-Control. Two official extensions ship: <strong>MCP Apps</strong> (server-delivered interactive HTML in a sandboxed iframe) and <strong>Tasks</strong>, graduated from experimental, with <code>tasks/get</code>, <code>tasks/update</code> and <code>tasks/cancel</code>. Servers become formal OAuth 2.1 resource servers aligned with OpenID Connect. Roots, Sampling and Logging are deprecated with a twelve-month runway. Beta SDKs for Python, TypeScript, Go and C# are published (Source: modelcontextprotocol.io blog — primary).</td>
+      </tr>
+      <tr>
+      <td>4</td>
+      <td>Claude Enterprise governance layer</td>
+      <td>Admin analytics, model-level entitlements, spend alerts, Admin API in beta for member/role/group management, and a write-enabled Microsoft 365 connector gated behind Entra admin consent. Sharper today: the Fable 5 tier split means entitlement now varies by plan inside a single organization, which is exactly the condition model-level entitlement controls exist to manage.</td>
+      </tr>
+      <tr>
+      <td>5</td>
+      <td>Claude Opus 4.8 / Sonnet 5</td>
+      <td>Opus 4.8 the proven flagship; Sonnet 5 the workhorse (near-Opus, $2/$10 intro through Aug 31, 1M context), default in Claude Code and for Free/Pro. Validate Sonnet 5 before load-bearing use.</td>
+      </tr>
+      </tbody>
+      </table></div>
+      <p><em>(Watch line: Claude Fable 5 — </em><em>included permanently on Max/Team Premium at 50% of limits from today</em><em>; Pro/Team Standard on credits at $10/$50 with a one-time $100 credit. Kimi K3 — weights July 27, a self-hosting and cost-comparison option, not a Claude replacement. Inkling and DeepSeek V4 — downloadable now, relevant as fine-tuning bases. GPT-5.6 + ChatGPT Work — GA and a genuine agent competitor. Gemini 3.5 Pro — third miss, no GA date, stopgap Flash reported.)</em></p>
+      <h3 id="2b-market-momentum-adoption-funding-buzz">2b. Market Momentum (adoption / funding / buzz)</h3>
+      <div class="table-wrap"><table>
+      <thead>
+      <tr>
+      <th>Rank</th>
+      <th>Agent / Platform</th>
+      <th>Justification</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>1</td>
+      <td>EU DMA remedies against Google</td>
+      <td>Promoted to the top on structural consequence. Eleven Android feature groups opened to certified rival assistants by July 2027; anonymized search data to rivals on FRAND terms from January 2027. This is a distribution change on a legal clock, and distribution has been the quiet answer to why Google survives bad model weeks.</td>
+      </tr>
+      <tr>
+      <td>2</td>
+      <td>Moonshot AI — Kimi K3</td>
+      <td>Still the dominant narrative: 2.8T parameters, #1 in the Frontend Code Arena at 1679 points with a 76% pairwise win rate against Fable 5's 63% and GPT-5.6 Sol's 58%, weights free July 27. The honest qualifier that has now surfaced: K3 ranks around <strong>ninth on general chat</strong>, making it a coding and agent specialist rather than an all-around frontier replacement (Source: VentureBeat, July 16; Axios, July 16–17 — press).</td>
+      </tr>
+      <tr>
+      <td>3</td>
+      <td>Microsoft — Project Perception</td>
+      <td>Multi-model AI vulnerability detection using Microsoft, OpenAI and Anthropic models behind an orchestration layer that routes cheap models to triage and frontier models only to complex exploit-chain reasoning. Reported to be led by security chief Hayete Gallot, launch reported as this month, unconfirmed by Microsoft (Source: The Information; TechRepublic, July 17 — press).</td>
+      </tr>
+      <tr>
+      <td>4</td>
+      <td>SAP — Prior Labs / tabular foundation models</td>
+      <td>A €1B+ four-year commitment to a category outside the chatbot race, and the most substantial European frontier-lab investment of the month.</td>
+      </tr>
+      <tr>
+      <td>5</td>
+      <td>Anthropic — IPO process</td>
+      <td>Morgan Stanley, Goldman Sachs and JPMorgan leading; confidential S-1 filed June 1; listing reported as possible <strong>as soon as October</strong> against a reported $965 billion May valuation. OpenAI has reportedly pushed its own listing to 2027 (Source: CNBC, July 15; Bloomberg, June 3 — press; not company-confirmed).</td>
+      </tr>
+      </tbody>
+      </table></div>
+      <h3 id="2c-capability-maturity-production-readiness">2c. Capability &amp; Maturity (production readiness)</h3>
+      <div class="table-wrap"><table>
+      <thead>
+      <tr>
+      <th>Rank</th>
+      <th>Agent / Platform</th>
+      <th>Justification</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>1</td>
+      <td>Claude Opus 4.8</td>
+      <td>Longest production track record in the current Claude line; the default choice for load-bearing agentic work and the model to move Fable 5 workloads onto if a Pro-tier seat just lost its bundled entitlement.</td>
+      </tr>
+      <tr>
+      <td>2</td>
+      <td>GPT-5.6 (Sol / Terra / Luna)</td>
+      <td>Eleven days into GA across ChatGPT, Codex and the API; 1M context, February 2026 knowledge cutoff, $1–$5 per million input tokens by variant. Mature and broadly deployed.</td>
+      </tr>
+      <tr>
+      <td>3</td>
+      <td>Claude Sonnet 5</td>
+      <td>Near-Opus capability at workhorse pricing, 1M context, the Claude Code default. Three weeks of production exposure — validate on your own workload first.</td>
+      </tr>
+      <tr>
+      <td>4</td>
+      <td>DeepSeek V4 (Pro / Flash)</td>
+      <td>MIT-licensed, weights on Hugging Face, roughly $0.435/$0.87 per million tokens for V4-Pro. ⚠️ <strong>GA status is genuinely unclear</strong> — an official mid-July release was planned, but no confirmed GA date has been published, and the label remains Preview in the API docs (Source: DeepSeek API Docs — primary; see the correction in Section 4).</td>
+      </tr>
+      <tr>
+      <td>5</td>
+      <td>Kimi K3</td>
+      <td>Frontier-competitive on coding benchmarks, but the weights do not exist publicly until July 27 and independent evaluation across varied workloads is thin. Not production-assessable today.</td>
+      </tr>
+      </tbody>
+      </table></div>
+      <h3 id="divergence-analysis">Divergence Analysis</h3>
+      <p>The three lenses disagree more sharply than at any point this month, and the disagreement is the finding. Momentum's top item is a <strong>regulatory decision</strong> — the first time this quarter that a lens has been led by something that ships no software at all. Relevance's list is nearly static. Maturity's top three are the same three models that were there a week ago. What moved this week moved in the market and the statute book, not in the deployment stack. The one place all three lenses agree is MCP: eight days out, stateless core, and a spec change that touches anything already built against the handshake. The one place they most sharply diverge is Kimi K3 — first or second on momentum, unrankable on maturity, and a watch-line item on relevance, which is the correct spread for a model whose weights do not yet exist and whose leaderboard win is now understood to be domain-specific rather than general.</p>
+      <p><strong>What This Means for You.</strong> Today's task is narrower than yesterday's framing implied, and it is a segmentation exercise rather than a migration. Any seat on <strong>Max or Team Premium keeps Fable 5</strong>, at half the standard weekly limit — no action needed beyond noting the reduced ceiling. Any seat on <strong>Pro or Team Standard has lost the bundled entitlement</strong> and is now drawing down a one-time $100 credit, after which usage bills at $10/$50 per million tokens. Audit which seats are which before someone discovers it in a billing statement. The strategic item is the EU decision, and it illustrates something worth internalizing: a structural change to who can reach two billion devices, on a defined timeline, decided by a regulator rather than by a market. Organizations that have written down what would trigger a model-and-vendor review absorbed that as a calendar entry. Organizations without one will absorb it as a scramble in eighteen months. Worth being clear about the limit of that point, though — nothing in the DMA decisions creates an obligation for an organization outside the EU, and anyone telling you otherwise is selling something.</p>
+      <h2 id="3-agentic-ai-advances-new-releases">3. Agentic AI Advances &amp; New Releases</h2>
+      <ul>
+      <li><strong>MCP 2026-07-28 — eight days out.</strong> Stateless core (no handshake, no session ID), routable <code>Mcp-Method</code>/<code>Mcp-Name</code> headers, <code>ttlMs</code>/<code>cacheScope</code> cache semantics, Extensions framework with MCP Apps and Tasks as the two official extensions, OAuth 2.1 resource-server alignment, and a formal deprecation policy. The RC was locked May 21; the ten-week window to July 28 exists for SDK maintainers and client implementers to validate against real workloads. Beta SDKs published for Python, TypeScript, Go and C# (Source: modelcontextprotocol.io blog, "The 2026-07-28 MCP Specification Release Candidate" and "Beta SDKs for the 2026-07-28 MCP Spec Release Candidate Are Here" — primary).</li>
+      <li><strong>Claude Code v2.1.207–v2.1.212.</strong> Subagent spawn caps, WebSearch caps, <code>--forward-subagent-text</code>, deprecated Task <code>mode</code> parameter, clearer Agent tool errors, reduced re-delegation, and a fix for "Change directory" failing in SDK hosts on idle sessions with running background tasks (Source: Claude Code changelog — primary).</li>
+      <li><strong>Claude Fable 5 entitlement split</strong> — Max/Team Premium permanent at 50% of limits; Pro/Team Standard to credits with a one-time $100 credit, effective today (Source: Anthropic via @claudeai — primary/vendor).</li>
+      <li><strong>SAP × Prior Labs completed</strong>, €1B+ over four years, TabPFN tabular foundation model series (Source: SAP News — primary/vendor).</li>
+      <li><strong>Huawei Atlas 950 SuperPoD</strong> demonstrated at WAIC; 1,024 Ascend chips scaling to 8,192 NPUs, Q4 2026 target, vendor claims of 6.7× compute and 15× memory versus NVL144 (Source: Huawei Central; DCD — vendor claim, peak figures, unverified).</li>
+      <li><strong>AI text detectors fail under style imitation.</strong> Epoch AI tested Pangram, GPTZero and Originality.ai against text generated in imitation of a specific author's style and found <strong>up to 18% of AI-generated passages went undetected</strong>, with scientific and formal academic prose the weakest case (Source: Epoch AI via aggregator reporting, July 2026 — third-party study; ⚠️ methodology not independently reviewed here).</li>
+      <li><strong>RadLE 2.0 radiology benchmark</strong> finds models frequently produce incorrect findings with full confidence and no uncertainty signal — a calibration failure rather than an accuracy one (Source: RadLE 2.0 via aggregator reporting, July 2026 — third-party benchmark; ⚠️ pending direct review of the primary publication).</li>
+      </ul>
+      <p><strong>What This Means for You.</strong> Two items here can change something you ship; the rest are context. MCP is the one with a date on it: eight days to final, the stateless-core changes land on schedule, and anything built against the <code>initialize</code> handshake or <code>Mcp-Session-Id</code> should be exercised against the beta SDKs this week rather than next. The twelve-month runway on the Roots, Sampling and Logging deprecations is real breathing room; the stateless changes are not on that runway. The Claude Code subagent-spawn cap is worth propagating into any unattended pipeline you run — a 200-spawn ceiling is a cheap guardrail against a runaway agent loop, and it is exactly the kind of concrete control that belongs in a written implementation policy rather than in a slide about responsible AI. The two study items — detector failure at 18% and confidently-wrong radiology output — are worth reading together, because they are the same failure in different clothes. Neither is a fabrication problem. Both are calibration problems, and both argue the same thing: an AI output that carries no uncertainty signal should never be treated as a conclusion.</p>
+      <h2 id="4-overnight-daily-release-monitor">4. Overnight / Daily Release Monitor</h2>
+      <p>Covering roughly July 19 – July 20 since the July 19 publish. <strong>US markets reopened this morning; figures from today's session are intraday and provisional.</strong></p>
+      <ul>
+      <li><strong>No new frontier model releases confirmed</strong> on July 19 or overnight into July 20. The standing open-weight set is Inkling (July 15), DeepSeek V4 (status contested — see below), and Kimi K3 (announced July 16, weights July 27).</li>
+      <li><strong>Fable 5 outcome resolved differently than expected</strong> — a two-tier split rather than a clean end to included access. This supersedes the July 19 briefing's framing (Source: Anthropic via @claudeai — primary/vendor).</li>
+      <li><strong>The World AI Conference closes today</strong> in Shanghai after four days, 140+ forums and 1,100+ exhibitors, having included Xi Jinping's first WAIC keynote and the WAICO launch with 29 founding countries (Source: aggregator reporting citing Xinhua, July 17–20 — state media primary for the fact of the event).</li>
+      <li><strong>EU DMA specification decisions</strong> adopted July 16, enforceable immediately; January 2027 for search data sharing, July 2027 for Android interoperability (Source: European Commission — primary).</li>
+      <li>⚠️ <strong>Correction, second consecutive day.</strong> Aggregator digests again list "Oracle cuts up to 30,000 jobs to fund Stargate" among today's stories. The reduction was executed on or around <strong>March 31, 2026</strong>, with a final severance phase reported in June — it is being recirculated, not reported fresh (Source: WSWS, April 2; TechTimes, June 1 — press). Flagged again so it is not double-counted.</li>
+      <li>⚠️ <strong>Correction, new.</strong> Several outlets frame <strong>July 24 as "DeepSeek V4's stable release."</strong> It is not. July 24, 2026 at 15:59 UTC is the date the <strong>legacy <code>deepseek-chat</code> and <code>deepseek-reasoner</code> API aliases are fully retired</strong> and begin returning errors. Any code still calling those aliases breaks on that date. DeepSeek has published <strong>no confirmed V4 GA date</strong> (Source: DeepSeek API Docs — primary). This also qualifies yesterday's briefing, which reported V4 as having graduated to official release in mid-July; the accurate statement is that an official mid-July release was <em>planned</em> and no GA confirmation has appeared.</li>
+      <li><strong>UN Independent International Scientific Panel on AI</strong> — first preliminary report, released July 1, 40 experts, feeding the UN Global Dialogue on AI Governance held in Geneva July 6–7. Headline finding: at the current level of science, the possibility of future catastrophic harm cannot be ruled out; the panel expects a near-term shift to agentic systems with task complexity doubling every four to seven months (Source: UN News, July 2026; UN panel press release — primary). Carried forward here because it continues to drive coverage, not because it is new today.</li>
+      <li>Carry, unchanged: Cowork web/mobile beta with doubled limits through August 5; Claude for Government FedRAMP High beta; MCP final spec July 28; CXMT listing July 27; Kimi K3 weights July 27; AMD Advancing AI July 22–23; EU AI Act transparency obligations August 2.</li>
+      </ul>
+      <p><strong>What This Means for You.</strong> Two corrections in one ledger, on consecutive days, from the same class of source. The Oracle item is a stale March event recirculating for a second day. The DeepSeek item is worse in kind, because it is not merely stale — it is a real, dated, operationally consequential event (API aliases retiring July 24) mislabelled as something else entirely (a model release). A team reading only the digest version would prepare for a launch and be surprised by a breakage. That distinction is the useful one to carry: the failure mode here is not fabrication, it is a correct date attached to the wrong event, which is far harder to spot and far more likely to be acted on than an obvious error. Practically: if any integration you run calls <code>deepseek-chat</code> or <code>deepseek-reasoner</code>, that is a four-day fix, not a July 24 surprise.</p>
+      <h2 id="5-ai-trading-trends">5. AI Trading Trends</h2>
+      <p><em>Market intelligence for situational awareness — not investment advice. No buy, sell, or hold recommendations, price targets, or return forecasts appear here. US markets are open today; intraday figures are provisional and flagged as such. Every figure carries a source and a confidence note.</em></p>
+      <h3 id="5a-ipos-the-public-market-ai-wave">5a. IPOs — the public-market AI wave</h3>
+      <ul>
+      <li><strong>Anthropic</strong> remains the calendar item that matters most. Morgan Stanley, Goldman Sachs and JPMorgan Chase are lead underwriters; a confidential draft S-1 was filed June 1; banks are scheduling investor meetings and reporting points to a listing <strong>as soon as October</strong>, against a <strong>reported $965 billion valuation</strong> from the May $65 billion round — above OpenAI's reported $852 billion for the first time (Source: CNBC, "Anthropic moves closer to mega-IPO as bankers line up investor meetings," July 15; Bloomberg, June 3 — press). ⚠️ <strong>No share count, price range, exchange or ticker has been set; the offering remains subject to SEC review and market conditions; private financials are unaudited.</strong></li>
+      <li><strong>OpenAI</strong> has reportedly moved its own listing target from Q4 2026 to 2027, which leaves Anthropic the first-mover window (Source: Forbes, July 2026; aggregator reporting — press; not company-confirmed).</li>
+      <li><strong>CXMT (ChangXin Memory Technologies)</strong> is priced and dated: Shanghai STAR Market, <strong>8.66 yuan per share</strong>, targeting roughly <strong>57.9 billion yuan (~$8.55 billion)</strong>, rising to about <strong>66.6 billion yuan (~$9.8 billion)</strong> with over-allotment — the largest A-share semiconductor listing on record. <strong>Lists July 27</strong> (Source: Bloomberg, July 14; Reuters — press).</li>
+      <li><strong>This week's US IPO calendar</strong> shows <strong>six pricings scheduled for July 20 and one for July 21</strong>, none of which are identified in available sources as AI-sector listings (Source: IPOScoop; Yahoo Finance IPO calendar — press/aggregated; ⚠️ <strong>sector classification not confirmed to a primary filing</strong>).</li>
+      <li><strong>Recent context:</strong> SpaceX listed June 12 on Nasdaq under <strong>SPCX</strong> at $150 per share. SK Hynix's July 10 Nasdaq ADR debut priced at $149 and raised roughly $26.5 billion — the largest-ever US first-time share sale by a foreign company — then fell sharply through the following week as memory entered a bear market. Cerebras priced at $185 in its May 14 debut, raising about $5.55 billion (Source: CNBC, June 12, July 10, May 13; 24/7 Wall St., July 16 — press).</li>
+      </ul>
+      <h3 id="5b-top-5-traded-ai-related-tickers">5b. Top 5 traded AI-related tickers</h3>
+      <p>⚠️ This is not a definitive most-traded-by-volume ranking from a single authoritative source, and today's session is still in progress. Figures below are intraday July 20 where noted and Friday July 17 or earlier otherwise. Re-confirm against a live exchange leaderboard before any external use.</p>
+      <div class="table-wrap"><table>
+      <thead>
+      <tr>
+      <th>#</th>
+      <th>Ticker</th>
+      <th>Company</th>
+      <th>Why it's an AI-trading bellwether</th>
+      <th>Latest verifiable signal</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>1</td>
+      <td>NVDA</td>
+      <td>Nvidia</td>
+      <td>The AI-GPU anchor and the name the open-weight thesis argues against</td>
+      <td>Testing the <strong>$200 level</strong> intraday July 20, edging lower and underperforming several chip peers; roughly 10% below its 2026 high since the last earnings report. Fell about 1.2% on July 17 (Source: FXLeaders, July 20 — press, ⚠️ intraday/provisional; Fortune, CNBC, July 17 — press, well-corroborated)</td>
+      </tr>
+      <tr>
+      <td>2</td>
+      <td>MU</td>
+      <td>Micron Technology</td>
+      <td>US high-bandwidth-memory name; the segment being repriced by CXMT's July 27 arrival</td>
+      <td><strong>Up about 7% intraday July 20</strong>, one of the few green names in a red tape — a notable divergence after the memory group entered a bear market last week (Source: FXLeaders, July 20 — press; ⚠️ intraday, provisional, single-source)</td>
+      </tr>
+      <tr>
+      <td>3</td>
+      <td>TSM</td>
+      <td>Taiwan Semiconductor</td>
+      <td>Foundry to every frontier chip; the swing factor for the AI-capex trade</td>
+      <td><strong>Seven consecutive daily declines</strong> through July 17 totalling about <strong>8.8%</strong> — longest streak since July 2022 — despite a reported 77% jump in quarterly operating profit, raised 2026 revenue growth guidance above 40%, capex raised to $60–64B, and an additional $100B Arizona pledge taking the total US commitment to $265B (Source: Bloomberg, July 17 — press; aggregator reporting on the Arizona figure, ⚠️ confirm against TSMC primary disclosure)</td>
+      </tr>
+      <tr>
+      <td>4</td>
+      <td>GOOGL</td>
+      <td>Alphabet</td>
+      <td>The name absorbing a model delay and a regulatory remedy in the same week</td>
+      <td>Fell about <strong>4%</strong> on the Gemini 3.5 Pro delay reports, and reported <strong>down over 5% intraday July 20</strong> amid the megacap selloff. The DMA decisions are a structural rather than quarterly input (Source: aggregator reporting, July 18; FXLeaders, July 20 — press; ⚠️ intraday figure provisional and single-source)</td>
+      </tr>
+      <tr>
+      <td>5</td>
+      <td>AVGO</td>
+      <td>Broadcom</td>
+      <td>Custom-accelerator proxy; the clearest read on hyperscaler ASIC demand</td>
+      <td>Trading volume of <strong>23.27M against a 22.74M average daily volume</strong> as of July 19 — elevated but not extreme. Down about <strong>25% from its own high</strong>, versus AMD's roughly 15% (Source: Yahoo Finance, July 19 — press/aggregated; 24/7 Wall St.; Motley Fool, July 20 — press)</td>
+      </tr>
+      </tbody>
+      </table></div>
+      <p><strong>Week ahead (July 20–24) — calendar, not forecast.</strong> Alphabet, Tesla, Intel and Texas Instruments report; Alphabet is the first hyperscaler chip-buyer of the cycle and is being watched for cloud growth and capex guidance, now with the DMA decisions as an additional line of questioning. <strong>AMD's Advancing AI event runs July 22–23.</strong> <strong>DeepSeek's legacy API aliases retire July 24 at 15:59 UTC.</strong> <strong>CXMT lists and Kimi K3's weights publish July 27.</strong> <strong>The MCP 2026-07-28 spec is final July 28.</strong> (Source: CNBC week-ahead coverage, July 17; DeepSeek API Docs; modelcontextprotocol.io — scheduled events, not predictions.)</p>
+      <p><strong>What This Means for You.</strong> The market is repricing the economics of closed frontier models, and it is doing so considerably faster than anything has actually changed about what an organization can deploy. A 20% drawdown in the chip index, a foundry on a seven-day losing streak while reporting a 77% profit increase, and megacaps down 3–5% on a Monday — against which the deployable stack is Opus 4.8, Sonnet 5, GPT-5.6, and, for anyone with the infrastructure to run it, an open-weight base. That set has not changed in a month. Two things are worth tracking rather than reacting to. Anthropic's October window and the reported $965 billion valuation now exceeding OpenAI's will change how conservative buyers read a Claude-centered stack — but nothing about the listing is confirmed, and it should not be planned around. More immediately useful is the Project Perception architecture rather than the rivalry it represents: cheap models for triage, frontier models only for hard reasoning. That routing pattern is available to anyone building agent systems today, and it is a better answer to "isn't this expensive" than any vendor discount. Read this section as market context, not investment guidance.</p>
+      <h2 id="sources">Sources</h2>
+      <ul>
+      <li>Anthropic via @claudeai on X, "Beginning July 20, Claude Fable 5 will be included in all Max and Team Premium plans, at 50% of limits." <a href="https://x.com/claudeai/status/2078302415804379218" target="_blank" rel="noopener">https://x.com/claudeai/status/2078302415804379218</a></li>
+      <li>TechTimes, "Claude Fable 5 Ends Subscription Limbo: Permanent for Max, Credits-Only for Pro," July 18, 2026. <a href="https://www.techtimes.com/articles/320905/20260718/claude-fable-5-ends-subscription-limbo-permanent-max-credits-only-pro.htm" target="_blank" rel="noopener">https://www.techtimes.com/articles/320905/20260718/claude-fable-5-ends-subscription-limbo-permanent-max-credits-only-pro.htm</a></li>
+      <li>Technobezz, "Anthropic Splits Claude Subscribers into Two Tiers as Fable 5 Promotional Limbo Ends July 20." <a href="https://www.technobezz.com/news/anthropic-splits-claude-subscribers-into-two-tiers-as-fable-5-promotional-limbo-ends-july-20" target="_blank" rel="noopener">https://www.technobezz.com/news/anthropic-splits-claude-subscribers-into-two-tiers-as-fable-5-promotional-limbo-ends-july-20</a></li>
+      <li>European Commission, "Commission provides guidance to Google for AI interoperability on Android and sharing of Google Search data under the Digital Markets Act," July 16, 2026. <a href="https://digital-markets-act.ec.europa.eu/commission-provides-guidance-google-ai-interoperability-android-and-sharing-google-search-data-under-2026-07-16_en" target="_blank" rel="noopener">https://digital-markets-act.ec.europa.eu/commission-provides-guidance-google-ai-interoperability-android-and-sharing-google-search-data-under-2026-07-16_en</a></li>
+      <li>CNBC, "Google required to open up to AI, search engine rivals under EU-mandated changes," July 16, 2026. <a href="https://www.cnbc.com/2026/07/16/google-required-to-open-up-to-ai-search-engine-rivals-under-eu-mandated-changes.html" target="_blank" rel="noopener">https://www.cnbc.com/2026/07/16/google-required-to-open-up-to-ai-search-engine-rivals-under-eu-mandated-changes.html</a></li>
+      <li>Computerworld, "Google Must Open Android to Rival AI Agents, EU Orders." <a href="https://www.computerworld.com/article/4198420/google-must-open-android-to-rival-ai-agents-eu-orders.html" target="_blank" rel="noopener">https://www.computerworld.com/article/4198420/google-must-open-android-to-rival-ai-agents-eu-orders.html</a></li>
+      <li>Bloomberg, "Chips Stocks Sink Into Bear Market as 105% AI Rally Fizzles," July 17, 2026. <a href="https://www.bloomberg.com/news/articles/2026-07-17/chips-stocks-tumble-into-bear-market-as-105-ai-rally-fizzles" target="_blank" rel="noopener">https://www.bloomberg.com/news/articles/2026-07-17/chips-stocks-tumble-into-bear-market-as-105-ai-rally-fizzles</a></li>
+      <li>FXLeaders, "Nvidia Stock NVDA Tests $200 Support as Chinese AI Competition Shakes the Chip Rally," July 20, 2026. <a href="https://www.fxleaders.com/news/2026/07/20/nvidia-stock-nvda-tests-200-support-as-chinese-ai-competition-shakes-the-chip-rally/" target="_blank" rel="noopener">https://www.fxleaders.com/news/2026/07/20/nvidia-stock-nvda-tests-200-support-as-chinese-ai-competition-shakes-the-chip-rally/</a></li>
+      <li>Bloomberg, "Google Gemini Launch Delayed as Tech Falls Short of Internal Goals," July 16, 2026. <a href="https://www.bloomberg.com/news/articles/2026-07-16/google-gemini-launch-delayed-as-tech-falls-short-of-internal-goals" target="_blank" rel="noopener">https://www.bloomberg.com/news/articles/2026-07-16/google-gemini-launch-delayed-as-tech-falls-short-of-internal-goals</a></li>
+      <li>9to5Google, "Gemini 3.5 Pro delays due to coding performance, upgraded Flash model in testing," July 16, 2026. <a href="https://9to5google.com/2026/07/16/gemini-3-5-pro-delays/" target="_blank" rel="noopener">https://9to5google.com/2026/07/16/gemini-3-5-pro-delays/</a></li>
+      <li>TechTimes, "Rebuilt Gemini 3.5 Pro Misses Third Deadline: Google Eyes Stopgap Release," July 16, 2026. <a href="https://www.techtimes.com/articles/320736/20260716/rebuilt-gemini-35-pro-misses-third-deadline-google-eyes-stopgap-release.htm" target="_blank" rel="noopener">https://www.techtimes.com/articles/320736/20260716/rebuilt-gemini-35-pro-misses-third-deadline-google-eyes-stopgap-release.htm</a></li>
+      <li>SAP News, "SAP Completes Prior Labs Acquisition," July 2026. <a href="https://news.sap.com/2026/07/sap-completes-prior-labs-acquisition/" target="_blank" rel="noopener">https://news.sap.com/2026/07/sap-completes-prior-labs-acquisition/</a></li>
+      <li>Tech.eu, "SAP Acquires Prior Labs Just 18 Months After Launch in €1B Deal," July 17, 2026. <a href="https://tech.eu/2026/07/17/sap-acquires-prior-labs-just-18-months-after-launch-in-eur1b-deal/" target="_blank" rel="noopener">https://tech.eu/2026/07/17/sap-acquires-prior-labs-just-18-months-after-launch-in-eur1b-deal/</a></li>
+      <li>Model Context Protocol Blog, "The 2026-07-28 MCP Specification Release Candidate." <a href="https://blog.modelcontextprotocol.io/posts/2026-07-28-release-candidate/" target="_blank" rel="noopener">https://blog.modelcontextprotocol.io/posts/2026-07-28-release-candidate/</a></li>
+      <li>Model Context Protocol Blog, "Beta SDKs for the 2026-07-28 MCP Spec Release Candidate Are Here." <a href="https://blog.modelcontextprotocol.io/posts/sdk-betas-2026-07-28/" target="_blank" rel="noopener">https://blog.modelcontextprotocol.io/posts/sdk-betas-2026-07-28/</a></li>
+      <li>Claude Code Docs, changelog. <a href="https://code.claude.com/docs/en/changelog" target="_blank" rel="noopener">https://code.claude.com/docs/en/changelog</a></li>
+      <li>DeepSeek API Docs, "DeepSeek V4 Preview Release." <a href="https://api-docs.deepseek.com/news/news260424/" target="_blank" rel="noopener">https://api-docs.deepseek.com/news/news260424/</a></li>
+      <li>VentureBeat, "China's Moonshot AI releases Kimi K3, the largest open-source model ever, rivaling top U.S. systems," July 16, 2026. <a href="https://venturebeat.com/technology/chinas-moonshot-ai-releases-kimi-k3-the-largest-open-source-model-ever-rivaling-top-u-s-systems" target="_blank" rel="noopener">https://venturebeat.com/technology/chinas-moonshot-ai-releases-kimi-k3-the-largest-open-source-model-ever-rivaling-top-u-s-systems</a></li>
+      <li>Axios, "China's open-weight Kimi model stuns AI world with frontier-level results," July 16, 2026. <a href="https://www.axios.com/2026/07/16/moonshot-kimi-ai-china-model-openai-anthropic" target="_blank" rel="noopener">https://www.axios.com/2026/07/16/moonshot-kimi-ai-china-model-openai-anthropic</a></li>
+      <li>TechRepublic, "Microsoft's 'Project Perception' Could Challenge Anthropic's Mythos in AI Security." <a href="https://www.techrepublic.com/article/news-microsoft-project-perception-ai-security-tool/" target="_blank" rel="noopener">https://www.techrepublic.com/article/news-microsoft-project-perception-ai-security-tool/</a></li>
+      <li>The Information, "Exclusive: Microsoft Preps Mythos-Like AI Bug Finder." <a href="https://www.theinformation.com/briefings/exclusive-microsoft-preps-mythos-like-ai-bug-finder" target="_blank" rel="noopener">https://www.theinformation.com/briefings/exclusive-microsoft-preps-mythos-like-ai-bug-finder</a></li>
+      <li>CNBC, "Anthropic moves closer to mega-IPO as bankers line up investor meetings," July 15, 2026. <a href="https://www.cnbc.com/2026/07/15/anthropic-ipo-banks-investor-meetings.html" target="_blank" rel="noopener">https://www.cnbc.com/2026/07/15/anthropic-ipo-banks-investor-meetings.html</a></li>
+      <li>Bloomberg, "Morgan Stanley, Goldman Sachs to Lead Anthropic IPO," June 3, 2026. <a href="https://www.bloomberg.com/news/articles/2026-06-03/anthropic-said-to-pick-morgan-stanley-goldman-sachs-to-lead-ipo" target="_blank" rel="noopener">https://www.bloomberg.com/news/articles/2026-06-03/anthropic-said-to-pick-morgan-stanley-goldman-sachs-to-lead-ipo</a></li>
+      <li>Huawei Central, "Huawei Atlas 950 SuperPoD claims 6.7x more computing power than Nvidia NVL144." <a href="https://www.huaweicentral.com/huawei-atlas-950-superpod/" target="_blank" rel="noopener">https://www.huaweicentral.com/huawei-atlas-950-superpod/</a></li>
+      <li>Seoul Economic Daily, "Huawei Unveils Atlas 950 SuperPoD, Linking Thousands of AI Chips," July 17, 2026. <a href="https://en.sedaily.com/international/2026/07/17/huawei-unveils-atlas-950-superpod-linking-thousands-of-ai" target="_blank" rel="noopener">https://en.sedaily.com/international/2026/07/17/huawei-unveils-atlas-950-superpod-linking-thousands-of-ai</a></li>
+      <li>UN News, "Global push for AI governance amid warnings of 'catastrophic harm'," July 2026. <a href="https://news.un.org/en/story/2026/07/1167862" target="_blank" rel="noopener">https://news.un.org/en/story/2026/07/1167862</a></li>
+      <li>UN Independent International Scientific Panel on AI, "Preliminary Report on AI Opportunities, Risks and Impacts" (press release), July 2026. <a href="https://www.un.org/independent-international-scientific-panel-ai/sites/default/files/2026-07/Press%20Release%20-%20Independent%20International%20Scientific%20Panel%20on%20AI%20Launches%20Preliminary%20Report%20on%20AI%20Opportunities,%20Risks%20and%20Impacts.pdf" target="_blank" rel="noopener">https://www.un.org/independent-international-scientific-panel-ai/sites/default/files/2026-07/Press%20Release%20-%20Independent%20International%20Scientific%20Panel%20on%20AI%20Launches%20Preliminary%20Report%20on%20AI%20Opportunities,%20Risks%20and%20Impacts.pdf</a></li>
+      <li>WSWS, "Oracle reported to lay off up to 30,000 workers globally," April 2, 2026. <a href="https://www.wsws.org/en/articles/2026/04/02/clmg-a02.html" target="_blank" rel="noopener">https://www.wsws.org/en/articles/2026/04/02/clmg-a02.html</a></li>
+      <li>TechTimes, "Oracle's 30,000 Layoffs Enter Final Phase: Sign the Release or Forfeit Severance," June 1, 2026. <a href="https://www.techtimes.com/articles/317527/20260601/oracles-30000-layoffs-enter-final-phase-sign-release-forfeit-severance.htm" target="_blank" rel="noopener">https://www.techtimes.com/articles/317527/20260601/oracles-30000-layoffs-enter-final-phase-sign-release-forfeit-severance.htm</a></li>
+      <li>Build Fast with AI, "AI News Today July 20 2026: 16 Biggest Stories," July 19, 2026. <a href="https://www.buildfastwithai.com/blogs/ai-news-today-july-20-2026-16-biggest-stories" target="_blank" rel="noopener">https://www.buildfastwithai.com/blogs/ai-news-today-july-20-2026-16-biggest-stories</a></li>
+      <li>Al Jazeera, "China's Xi Jinping launches new AI alliance: What is it?," July 17, 2026. <a href="https://www.aljazeera.com/news/2026/7/17/chinas-xi-jinping-launches-new-ai-alliance-what-is-it" target="_blank" rel="noopener">https://www.aljazeera.com/news/2026/7/17/chinas-xi-jinping-launches-new-ai-alliance-what-is-it</a></li>
+      <li>IPOScoop, "2026 Pricings." <a href="https://www.iposcoop.com/current-year-pricings/" target="_blank" rel="noopener">https://www.iposcoop.com/current-year-pricings/</a></li>
+      <li>Yahoo Finance, Broadcom (AVGO) quote and volume data, July 19, 2026. <a href="https://finance.yahoo.com/quote/AVGO/" target="_blank" rel="noopener">https://finance.yahoo.com/quote/AVGO/</a></li>
+      <li>Motley Fool, "AMD vs. Broadcom: The Better AI-Chip Stock to Buy After the Sell-Off," July 20, 2026. <a href="https://www.fool.com/investing/2026/07/20/amd-vs-broadcom-the-better-ai-chip-stock-to-buy-af/" target="_blank" rel="noopener">https://www.fool.com/investing/2026/07/20/amd-vs-broadcom-the-better-ai-chip-stock-to-buy-af/</a></li>
+      </ul>
+      <hr />
+      <p>[THOUGHT LEADERSHIP] [DRAFT — Pending Copy Review]</p>
+    </article>
+
+    <section class="cta-band" id="contact" aria-labelledby="cta-heading">
+      <h2 id="cta-heading">From AI curiosity to AI capability</h2>
+      <p>This briefing is part of the field research behind our AI Enablement service &mdash; a curated, white-glove Claude Cowork implementation tailored to your organization&rsquo;s workflow.</p>
+      <a class="btn" href="https://calendly.com/mark-malaniru/30min" target="_blank" rel="noopener">Book a discovery call</a>
+    </section>
+    <!-- mal-ai-disclaimer:v1 -->
+  <aside class="mal-ai-disclaimer" role="note" aria-label="AI transparency notice" style="max-width:760px;margin:2.5rem auto 0;padding:1rem 1.25rem;border:1px solid #d9c3a5;border-left:4px solid #C07830;border-radius:6px;background:#faf6f0;color:#5c5347;font-size:0.82rem;line-height:1.6;box-sizing:border-box;">
+    <strong style="display:block;color:#8a5a1e;font-size:0.78rem;letter-spacing:.04em;text-transform:uppercase;margin-bottom:.35rem;">AI Transparency Notice</strong>
+    This article was produced through Malaniru&rsquo;s guided-research process: generated with the assistance of AI and reviewed by a person before publication (human-in-the-loop). In line with EU AI Act transparency obligations, we disclose that AI systems were used to create this content. It is provided for general information only, may contain inaccuracies, and is not professional advice &mdash; verify before relying on it.
+  </aside>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Malaniru Inc, LLC &middot; Lafayette, Colorado &middot; AI Enablement</p>
+    <p><a href="daily-intelligence-briefings.html">&larr; Back to Daily Intelligence Briefings</a> &middot; <a href="index.html">AI Enablement</a></p>
+      <nav class="mal-footernav" data-mal-footernav aria-label="Site" style="margin-top:0.7rem;font-size:0.82rem;line-height:1.9;">
+      <a href="about.html" style="color:#C07830;font-weight:700;text-decoration:none;">About</a> &middot;
+      <a href="pricing.html" style="color:#C07830;font-weight:700;text-decoration:none;">Pricing</a> &middot;
+      <a href="index.html" style="color:#C07830;font-weight:700;text-decoration:none;">AI Enablement</a>
+     &middot;
+      <a href="privacy-policy.html" style="color:#C07830;font-weight:700;text-decoration:none;">Privacy</a>
+    </nav>
+  </footer>
+</body>
+</html>
