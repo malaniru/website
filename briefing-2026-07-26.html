@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<!--
+  Malaniru - Daily Intelligence Briefing (branded HTML)
+  Built by: publish_briefing_page.py - Date: 2026-07-26
+  Source:   Projects/Malaniru_Marketing_Site/Staging/20260726-daily-intelligence-briefing.md
+  FIDELITY: Body rendered VERBATIM from the source markdown. No copy edits.
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daily Intelligence Briefing — Sunday, July 26, 2026 - Malaniru</title>
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.malaniru.com/briefing-2026-07-26">
+  <meta name="description" content="Sunday, and US markets are closed for a second day, so the standing read is still Friday&#x27;s: Intel gave back its clean-beat pop to close down about 7.89% at $92.32 on foundry and AI-roadmap doubts, while the broad tape steadied — S&amp;P 500 flat at 7,411.98 (+0.05%), Dow +0.46% to 51,947.25, Nasdaq -0.64% to 24,975.82 — and oil slipped below $100. The week ahead is the whole story. CXMT&#x27;s record ~$8.6 billion STAR Market listing, reportedly oversubscribed more than 500 times, and Moonshot&#x27;s Kimi K3 open weights (2.8 trillion parameters, ~1.4TB in MXFP4) both land Monday, July 27; the MCP 2026-07-28 stateless spec is final Tuesday; and the EU AI Act&#x27;s Article 50 transparency obligations apply August 2, now seven days away. DeepSeek&#x27;s legacy aliases have been dead since Friday at 15:59 UTC; Gemini 3.5 Pro still is not out. Every figure carries a source and a confidence tag; this is market intelligence, not investment advice.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --navy:#0F1A2E;--navy-mid:#2A3F63;--copper:#C07830;--gold:#D4A853;
+      --off-white:#F4F1EC;--light-gray:#E8E6E1;--mid-gray:#8A8A96;--dark-text:#1C1C1C;
+      --font:"Inter","Helvetica Neue",Arial,sans-serif;
+    }
+    *{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:var(--font);background:var(--off-white);color:var(--dark-text);line-height:1.65;font-size:16px;-webkit-font-smoothing:antialiased;}
+    .skip-link{position:absolute;left:-999px;top:0;background:var(--gold);color:var(--navy);padding:10px 16px;font-weight:700;z-index:10;}
+    .skip-link:focus{left:8px;top:8px;}
+    a{color:var(--copper);}
+    /* Header */
+    header{background: linear-gradient(160deg, rgba(15,26,46,0.72) 0%, rgba(10,18,33,0.82) 100%), url('StockCake-Cosmic_Web_Complexity-1361288-standard-rot90ccw.jpg'); background-size: auto, 100% 100%; background-repeat: no-repeat, no-repeat; background-position: center, center;color:var(--off-white);padding:48px 24px 52px;position:relative;overflow:hidden;}
+    header::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 85% 12%,rgba(192,120,48,0.20) 0%,rgba(15,26,46,0) 55%);pointer-events:none;}
+    .header-inner{max-width:760px;margin:0 auto;position:relative;z-index:1;}
+    .wordmark{font-weight:800;font-size:1.25rem;letter-spacing:0.02em;margin-bottom:30px;}
+    .wordmark .dot{color:var(--copper);}
+    .wordmark a{color:var(--off-white);text-decoration:none;transition:opacity .18s ease;}
+    .wordmark a:hover,.wordmark a:focus-visible{opacity:.85;outline:none;}
+    .eyebrow{display:inline-block;font-size:0.72rem;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;}
+    header h1{font-weight:800;font-size:clamp(1.8rem,4.6vw,2.6rem);line-height:1.14;letter-spacing:-0.01em;margin-bottom:16px;}
+    .byline{font-size:0.9rem;color:var(--light-gray);letter-spacing:0.01em;}
+    .byline .sep{color:var(--copper);margin:0 8px;}
+    .lede{font-size:1.08rem;color:var(--light-gray);max-width:66ch;margin-top:18px;}
+    .backlink{display:inline-block;margin-top:26px;color:var(--gold);font-weight:600;font-size:0.9rem;text-decoration:none;border-bottom:1px solid rgba(212,168,83,0.4);}
+    .backlink:hover,.backlink:focus-visible{border-bottom-color:var(--gold);outline:none;}
+    /* Article */
+    main{max-width:760px;margin:0 auto;padding:48px 24px 8px;}
+    .disclaimer{background:#fff;border:1px solid var(--light-gray);border-left:4px solid var(--copper);border-radius:8px;padding:14px 18px;font-size:0.9rem;color:var(--navy-mid);margin-bottom:34px;}
+    article{font-size:1.05rem;}
+    article h2{font-weight:800;font-size:1.5rem;color:var(--navy);line-height:1.22;letter-spacing:-0.01em;margin:42px 0 14px;}
+    article h3{font-weight:700;font-size:1.18rem;color:var(--navy-mid);line-height:1.25;margin:30px 0 10px;}
+    article h2 + p, article h3 + p{margin-top:0;}
+    article p{margin:0 0 18px;color:var(--dark-text);}
+    article ul,article ol{margin:0 0 18px;padding-left:24px;}
+    article li{margin-bottom:8px;}
+    article strong{font-weight:700;color:var(--navy);}
+    article em{font-style:italic;}
+    article a{color:var(--copper);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(192,120,48,0.35);transition:border-color .18s ease;}
+    article a:hover,article a:focus-visible{border-bottom-color:var(--copper);outline:none;}
+    article hr{border:none;border-top:1px solid var(--light-gray);margin:34px 0;}
+    article h2#sources, article h2#references{border-top:1px solid var(--light-gray);padding-top:30px;font-size:1.2rem;color:var(--navy-mid);}
+    /* sources list smaller */
+    article h2[id^="sources"] ~ ul li, article h3[id^="sources"] ~ ul li{font-size:0.95rem;color:var(--navy-mid);}
+    /* tables */
+    article table{width:100%;border-collapse:collapse;margin:0 0 24px;font-size:0.95rem;}
+    article th,article td{border:1px solid var(--light-gray);padding:9px 12px;text-align:left;vertical-align:top;}
+    article thead th{background:var(--navy);color:var(--off-white);font-weight:700;}
+    article tbody tr:nth-child(even){background:#fff;}
+    article .table-wrap{overflow-x:auto;margin:0 0 24px;}
+    article .table-wrap table{margin:0;}
+    /* CTA */
+    .cta-band{background:var(--navy);color:var(--off-white);border-radius:12px;padding:42px 32px;text-align:center;margin:48px 0 8px;}
+    .cta-band h2{font-weight:800;font-size:clamp(1.4rem,3.4vw,1.9rem);margin-bottom:12px;letter-spacing:-0.01em;color:var(--off-white);}
+    .cta-band p{color:var(--light-gray);max-width:52ch;margin:0 auto 24px;}
+    .cta-band .btn{display:inline-block;background:var(--copper);color:#fff;font-weight:700;padding:13px 28px;border-radius:8px;text-decoration:none;transition:background .18s ease;}
+    .cta-band .btn:hover,.cta-band .btn:focus-visible{background:var(--gold);color:var(--navy);outline:none;}
+    /* Footer */
+    footer{max-width:760px;margin:16px auto 0;padding:24px;font-size:0.82rem;color:var(--mid-gray);border-top:1px solid var(--light-gray);}
+    footer p+p{margin-top:6px;}
+    footer a{color:var(--mid-gray);text-decoration:underline;}
+    @media (prefers-reduced-motion:reduce){*{transition:none!important;}}
+
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header>
+    <div class="header-inner">
+      <div class="wordmark"><a href="index.html">Malaniru<span class="dot">.</span></a></div>
+      <span class="eyebrow">AI Enablement &middot; Daily Intelligence Briefing</span>
+      <h1>Daily Intelligence Briefing — Sunday, July 26, 2026</h1>
+      <p class="byline">By Mark Andrew Harris<span class="sep">&middot;</span>July 26, 2026</p>
+      <p class="lede">Sunday, and US markets are closed for a second day, so the standing read is still Friday&#x27;s: Intel gave back its clean-beat pop to close down about 7.89% at $92.32 on foundry and AI-roadmap doubts, while the broad tape steadied — S&amp;P 500 flat at 7,411.98 (+0.05%), Dow +0.46% to 51,947.25, Nasdaq -0.64% to 24,975.82 — and oil slipped below $100. The week ahead is the whole story. CXMT&#x27;s record ~$8.6 billion STAR Market listing, reportedly oversubscribed more than 500 times, and Moonshot&#x27;s Kimi K3 open weights (2.8 trillion parameters, ~1.4TB in MXFP4) both land Monday, July 27; the MCP 2026-07-28 stateless spec is final Tuesday; and the EU AI Act&#x27;s Article 50 transparency obligations apply August 2, now seven days away. DeepSeek&#x27;s legacy aliases have been dead since Friday at 15:59 UTC; Gemini 3.5 Pro still is not out. Every figure carries a source and a confidence tag; this is market intelligence, not investment advice.</p>
+      <a class="backlink" href="daily-intelligence-briefings.html">&larr; All daily intelligence briefings</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <article>
+      <p>It is the quietest kind of Sunday — the second consecutive day with US markets closed — and that makes the standing market read a two-day-old snapshot rather than a fresh one. The picture has not changed since Friday: <strong>Intel gave back its entire clean-beat pop and closed down about 7.89% at $92.32</strong>, as attention swung from a genuinely strong Q2 print to unanswered questions about external foundry customers and the pace of its AI-accelerator roadmap (Source: The Motley Fool, "Stock Market Today, July 24: Intel Reverses Gains on Foundry and AI Spending Concerns," July 24; Yahoo Finance, July 24 — press). 🔶 The earnings were a beat on both lines; the tape simply refused to pay for it. Around that single reversal, the broad complex steadied: the <strong>S&amp;P 500 closed essentially flat, +0.05% to 7,411.98</strong>; the <strong>Dow rose 0.46% (+235.60) to 51,947.25</strong>; and the <strong>Nasdaq slipped 0.64% to 24,975.82</strong>, held back by chips even as the rest of the market recovered (Source: The Motley Fool, "Dow Recovers and Sandisk Tumbles 11%," July 24; Yahoo Finance, July 24 — press). Oil retreated <strong>below $100</strong> as the Middle East premium eased (Source: Bloomberg, July 24 — press).</p>
+      <p><strong>The story now is entirely the calendar.</strong> The week that opens tomorrow is one of the densest this briefing has tracked: two market-moving events land on the same Monday, a foundational protocol goes final on Tuesday, and a hard regulatory date sits at the end of the week. CXMT's record STAR Market listing and Moonshot's Kimi K3 open weights both arrive Monday, July 27; the MCP 2026-07-28 specification is final Tuesday, July 28; and the EU AI Act's Article 50 general transparency obligations apply Saturday, August 2 — seven days out. ✅ Nothing new dropped over the weekend, which is exactly what makes the next five days worth reading closely: the split this briefing has tracked all month — demand fundamentals confirming while equities trade on multiples and roadmap risk — is about to meet a run of concrete, dated events.</p>
+      <h2 id="1-ai-market-trends">1. AI Market Trends</h2>
+      <p><strong>Intel's round trip is still the tape's tidiest illustration of the demand-versus-price gap, and two days of closed markets have not resolved it.</strong> The fundamentals did what the bull case needed — Q2 revenue of <strong>$16.1 billion (+25% year-over-year)</strong>, adjusted EPS of <strong>$0.42</strong> against a <strong>~$0.21</strong> consensus, Data Center and AI up about <strong>59%</strong>, an 18A yield step from <strong>65% to 85%</strong>, and a raised Q3 guide to a <strong>$16.3 billion</strong> midpoint — and the stock still handed back its ~13% after-hours pop within a single session to close down about 7.89% at $92.32 (Source: The Motley Fool, July 24; Yahoo Finance, July 24 — press). ✅ It fits the early-July pattern exactly: a semiconductor selloff that erased <strong>more than a trillion dollars</strong> of market value on valuation nerves and macro, not any demand miss (Source: ABC News, "What to know about the AI chip stock selloff," July 2026; Forbes, "Semiconductor Selloff Deepens As AI Spending Fears Hit Intel," July 8 — press). The read that survives the weekend is unchanged: chip demand keeps confirming while the equities trade on multiples, roadmap risk, and rates.</p>
+      <p><strong>Alphabet's record 2026 capex guide remains the quarter's largest single demand signal for the buildout.</strong> The guide — reported at <strong>$205 billion</strong>, with some coverage framing a <strong>$195–205 billion</strong> range — followed Q2 revenue up <strong>24% to $119.8 billion</strong> and Google Cloud up about <strong>82% to $24.8 billion</strong>, with second-quarter capex alone near <strong>$44.9 billion</strong> (Source: CNBC, "Alphabet earnings takeaways," July 22; Yahoo Finance / Reuters market wrap, July 23 — press). ⚠️ The precise headline figure still differs across outlets — a single $205 billion number versus a $195–205 billion range; treat the record framing as solid and the point figure as reported, not settled. The market's read has not moved: the spend is demand confirmation for the chip complex and a free-cash-flow question for Alphabet's own shareholders.</p>
+      <p><strong>The enterprise-agent adoption picture is still a governance-gap story, and the survey figures that firmed up last week are the clearest numbers on it.</strong> A Boomi/Forrester survey of 409 director-and-above technology decision-makers found <strong>86% of organizations have moved past the agent-pilot stage</strong> while only <strong>34% say they trust the actions their agents take</strong> (Source: Yahoo Finance, "86% Of Enterprises Have Deployed AI Agents. Just 34% Trust Them, Boomi Study Finds," July 2026 — press). Alongside it, Anaconda/Forrester data has <strong>88% of agent pilots failing to reach production</strong>, with evaluation gaps (<strong>64%</strong>), governance friction (<strong>57%</strong>), and model reliability (<strong>51%</strong>) the top blockers, and Gartner's read is close at <strong>89% of pilots failing</strong> while the surviving ~11% return a reported <strong>171% ROI</strong> (Source: Institute PM citing Forrester/Anaconda; Gartner via industry reporting, July 2026 — press/aggregator). ⚠️ These are survey figures — trace them to the primary instrument before any external use. The through-line is consistent: deployment is widespread, trusted production is not, and the bottleneck is operational governance more than model capability.</p>
+      <p><strong>Private capital keeps clearing above the compute layer.</strong> July agent-startup funding is tracked at roughly <strong>$1.8 billion across 12+ deals</strong>, valuations up about <strong>40% quarter-over-quarter</strong>, most rounds Series B or later (Source: aifunding.me and Gravity funding trackers, July 2026 — aggregator; ⚠️ not traced to primary announcements; directional). The standout remains <strong>Moonshot AI</strong>, which has circulated a shareholder resolution for a <strong>Hong Kong listing within six months</strong> and is near a round valuing it above <strong>$30 billion</strong> on the strength of Kimi K3 — whose open weights publish tomorrow (Source: Yahoo Finance, "Moonshot AI Plans Hong Kong IPO," July 20; TrendingTopics, July 20 — press; ⚠️ valuation and timing reported, not company-confirmed). Money keeps arriving at the vertical-agent and open-weight layer even as the public market reprices the chips beneath it.</p>
+      <h2 id="2-top-10-ai-agents-three-lenses">2. Top 10 AI Agents — Three Lenses</h2>
+      <p>Rankings as of Sunday, July 26, 2026 — markets closed for a second day. <strong>One day to Kimi K3's open weights and CXMT's listing (Monday, July 27), two to the MCP final spec (Tuesday, July 28), seven to the EU AI Act's August 2 transparency date.</strong> The DeepSeek legacy aliases have been retired since Friday at 15:59 UTC. The deployable Claude set is unchanged: Opus 4.8 anchors, Sonnet 5 is the Claude Code default.</p>
+      <h3 id="2a-relevance-for-claude-mcp-centered-work">2a. Relevance for Claude / MCP-Centered Work</h3>
+      <div class="table-wrap"><table>
+      <thead>
+      <tr>
+      <th>Rank</th>
+      <th>Agent / Platform</th>
+      <th>Justification</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>1</td>
+      <td>Claude Code + Agent SDK</td>
+      <td>Primary agentic build tool, shipping continuously. The operationally important change stands: <code>/verify</code> and <code>/code-review</code> run only when invoked directly — the tool no longer fires them on its own — <code>/fork</code> copies the conversation into a background session, and the default <code>/review &lt;pr&gt;</code> reverted to a fast single-pass review. Any unattended pipeline that assumed auto-run still needs an explicit review this week.</td>
+      </tr>
+      <tr>
+      <td>2</td>
+      <td>Claude Cowork</td>
+      <td>Core delivery surface. Web and mobile beta — sessions and files follow the user across devices, background work, scheduled tasks that run with no device online, shared chats and projects, mobile approvals. <strong>Add-ins</strong> let Claude work directly inside productivity software (e.g., Microsoft Word) rather than only through a connector, and Microsoft 365 Copilot has added Claude and Cowork agent workflows. Doubled usage limits run through August 5; also in public beta on FedRAMP High infrastructure for government use.</td>
+      </tr>
+      <tr>
+      <td>3</td>
+      <td>MCP-based connectors (cross-vendor)</td>
+      <td><strong>Two days from final.</strong> The 2026-07-28 spec ships a stateless protocol core (removes the initialize handshake and the <code>Mcp-Session-Id</code> header, so any request can land on any server instance behind an ordinary round-robin load balancer), an Extensions framework, Tasks and MCP Apps graduated to first-class, OAuth-aligned authorization hardening, and a formal deprecation policy. The release candidate has been locked since May 21; beta Python, TypeScript, Go and C# SDKs are out (Source: modelcontextprotocol.io blog, July 2026; WorkOS; The Register, July 23 — primary/press).</td>
+      </tr>
+      <tr>
+      <td>4</td>
+      <td>Claude Developer Platform — Managed Agents</td>
+      <td>Recent capabilities: model effort settings, expanded webhook coverage for environment and memory-store events, session seeding with initial events, optional version checks on updates, and event deltas for thread streams (Source: Releasebot, Anthropic release notes, July 2026 — secondary). Relevant for anyone building server-hosted agents against the platform rather than self-managing the loop.</td>
+      </tr>
+      <tr>
+      <td>5</td>
+      <td>Claude Opus 4.8 / Sonnet 5</td>
+      <td>Opus 4.8 the proven flagship; Sonnet 5 the workhorse (near-Opus, intro pricing, 1M context), default in Claude Code and for Free/Pro tiers. Validate Sonnet 5 on your own workload before load-bearing use.</td>
+      </tr>
+      </tbody>
+      </table></div>
+      <p><em>(Watch line: Claude Fable 5 — tiered by plan. Kimi K3 — weights tomorrow, Monday, July 27. DeepSeek V4 — legacy <code>deepseek-chat</code>/<code>deepseek-reasoner</code> aliases retired Friday at 15:59 UTC; calls to them now error. GPT-5.6 + ChatGPT Work — GA and a genuine agent competitor. Gemini 3.5 Pro — still not released.)</em></p>
+      <h3 id="2b-market-momentum-adoption-funding-buzz">2b. Market Momentum (adoption / funding / buzz)</h3>
+      <div class="table-wrap"><table>
+      <thead>
+      <tr>
+      <th>Rank</th>
+      <th>Agent / Platform</th>
+      <th>Justification</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>1</td>
+      <td>CXMT listing (Monday)</td>
+      <td>China's DRAM champion prices the largest IPO in the STAR Market's history — about <strong>57.9 billion yuan (~$8.6 billion)</strong> at <strong>8.66 yuan/share</strong>, valuing the company near <strong>580 billion yuan</strong>, called Asia's largest IPO of 2026 so far and reportedly <strong>oversubscribed more than 500 times</strong> by institutions. <strong>Lists tomorrow, Monday, July 27</strong>, as the memory-chip rally wobbles (see Section 5). ⚠️ Raise framing varies across outlets (see Section 5).</td>
+      </tr>
+      <tr>
+      <td>2</td>
+      <td>Moonshot AI — Kimi K3</td>
+      <td>2.8T-parameter MoE, ~50B active per token, ~1.4TB MXFP4 weight footprint, 1M context, with a new "Kimi Delta Attention" mechanism claimed to decode up to ~6.3× faster; <strong>open weights tomorrow, Monday, July 27</strong>, under a Modified MIT license — plus a reported move toward a Hong Kong IPO within six months at a &gt;$30B valuation. ⚠️ Benchmark placement and the speed claim stay vendor-adjacent until independent evaluation runs on the published weights.</td>
+      </tr>
+      <tr>
+      <td>3</td>
+      <td>Intel — beat, then reversed</td>
+      <td>Q2 was a clean beat: revenue $16.1B (+25%), adjusted EPS $0.42 vs ~$0.21, Data Center and AI +59%, 18A yield 65%→85%, Q3 guide raised to a $16.3B midpoint — good for a ~13% after-hours pop. Then the stock <strong>fell ~7.89% to $92.32 on Friday</strong> on foundry-customer and AI-roadmap doubts. The cleanest demand read of the week, sold anyway — the single most-argued print on the tape.</td>
+      </tr>
+      <tr>
+      <td>4</td>
+      <td>Alphabet's record capex guide</td>
+      <td>The record 2026 capital-expenditure line — reported at $205B (some coverage: $195–205B) — is the single largest demand signal the AI-infrastructure trade received this quarter; the market still scores the spend as a cost.</td>
+      </tr>
+      <tr>
+      <td>5</td>
+      <td>Anthropic — IPO process</td>
+      <td>Confidential S-1 filed June 1; Goldman Sachs, JPMorgan and Morgan Stanley leading; October Nasdaq listing targeted; raise reported at more than $60 billion; $965 billion private valuation (May 2026 Series H-1), with secondary markets implying $1.05–1.15 trillion (Source: cryptobriefing; Value Add VC, July 2026 — press; ⚠️ timing not company-confirmed; secondary marks are indicative, not an offer price).</td>
+      </tr>
+      </tbody>
+      </table></div>
+      <h3 id="2c-capability-maturity-production-readiness">2c. Capability &amp; Maturity (production readiness)</h3>
+      <div class="table-wrap"><table>
+      <thead>
+      <tr>
+      <th>Rank</th>
+      <th>Agent / Platform</th>
+      <th>Justification</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>1</td>
+      <td>Claude Opus 4.8</td>
+      <td>Longest production track record in the current Claude line; the default for load-bearing agentic work.</td>
+      </tr>
+      <tr>
+      <td>2</td>
+      <td>GPT-5.6 (Sol / Terra / Luna)</td>
+      <td>Weeks into GA across ChatGPT, Codex and the API; 1M context, broadly deployed and mature.</td>
+      </tr>
+      <tr>
+      <td>3</td>
+      <td>Claude Sonnet 5</td>
+      <td>Near-Opus capability at workhorse pricing, 1M context, the Claude Code default. Validate on your own workload before load-bearing use.</td>
+      </tr>
+      <tr>
+      <td>4</td>
+      <td>DeepSeek V4 (Pro / Flash)</td>
+      <td>MIT-licensed, weights on Hugging Face — V4-Pro and V4-Flash, 1M default context. The legacy <code>deepseek-chat</code> and <code>deepseek-reasoner</code> aliases retired Friday, July 24, at 15:59 UTC — calls to them now error with no grace period. Production integrations should already be on <code>deepseek-v4-flash</code>/<code>deepseek-v4-pro</code>; note that <code>v4-flash</code> defaults to thinking enabled, so pin <code>thinking: disabled</code> to reproduce the old <code>deepseek-chat</code> behavior (Source: DeepSeek API docs; Enterprise DNA; TECHi, July 2026 — primary/press).</td>
+      </tr>
+      <tr>
+      <td>5</td>
+      <td>Gemini 3.5 Pro</td>
+      <td>Recorded only to mark it <strong>not production-assessable</strong>. Still unreleased after multiple missed windows; the July 17 target passed, and Google shipped three Flash-tier models (Gemini 3.6 Flash, 3.5 Flash-Lite, and a Flash "Cyber" variant) on July 21 but not the Pro. Google's position is that Pro is "testing with partners," no date; it remains in limited enterprise preview on Vertex AI with no officially confirmed context window or pricing (Source: TechCrunch, July 21; CroeAi status tracker, July 2026 — press).</td>
+      </tr>
+      </tbody>
+      </table></div>
+      <h3 id="divergence-analysis">Divergence Analysis</h3>
+      <p>The three lenses stay split the way they have all month, but the weekend rotated the Momentum column decisively toward the calendar. Relevance is the near-static deployable-Claude-plus-MCP list, its motion the Claude Code release cadence, the Cowork Add-ins surface, and a now two-day countdown to the MCP final spec. Momentum is led by two events that have not happened yet — CXMT's record listing and Kimi K3's open weights, both landing tomorrow — with Intel's beat-then-reversal and Alphabet's capex line the standing financial-market context beneath them. Maturity is unchanged, with the most-discussed model of the month, Gemini 3.5 Pro, still not assessable at all after a reported ground-up rebuild. The one item all three lenses share remains MCP, two days out, whose stateless-core change touches anything built against the handshake regardless of the model behind it.</p>
+      <p><strong>What This Means for You.</strong> For organizations adopting AI, nothing in the weekend's quiet changes the deployable stack: Opus 4.8 and Sonnet 5 behind MCP connectors have held steady through the entire drawdown-rebound-earnings cycle, and that stability is worth more than any single-week market move. The most actionable item already has a hard clock behind it — the DeepSeek alias retirement landed Friday, and any integration still calling <code>deepseek-chat</code> or <code>deepseek-reasoner</code> now breaks, with a subtle default-behavior change (thinking on) waiting for teams that rename carelessly. The instructive item is still Gemini: a frontier lab has shipped three Flash-tier models around a Pro it has now reportedly rebuilt from scratch — the clearest available reminder that "announced" and "assessable" are different states, and a model-selection policy should encode the difference.</p>
+      <h2 id="3-agentic-ai-advances-new-releases">3. Agentic AI Advances &amp; New Releases</h2>
+      <ul>
+      <li><strong>MCP 2026-07-28 — two days out.</strong> Stateless core (removes the initialize handshake and the <code>Mcp-Session-Id</code> header), Extensions framework, Tasks and MCP Apps promoted to first-class, OAuth-aligned authorization hardening, and a formal deprecation policy. Any server that needed sticky sessions and a shared session store can now run behind a plain round-robin load balancer; the RC has been locked since May 21 and beta Python, TypeScript, Go and C# SDKs shipped (Source: modelcontextprotocol.io blog; WorkOS; The Register, "Model Context Protocol prepares to break with its stateful past," July 23 — primary/press).</li>
+      <li><strong>Kimi K3 — open weights tomorrow, Monday, July 27.</strong> 2.8T-parameter MoE, ~50B active per token (only 16 of 896 experts fire), native multimodal, 1M context; MXFP4 weights with a ~1.4TB footprint (versus ~5.6TB at 16-bit), so self-hosting needs serious accelerator capacity. It introduces "Kimi Delta Attention," claimed to decode up to ~6.3× faster than standard approaches, and the weights publish under a Modified MIT license. Announced July 16; weights and technical report by July 27 (Source: TechTimes, "Kimi K3 Open Weights Drop July 27," July 24; TECHi; Hugging Face model overview; Interconnects — press/vendor-adjacent). ⚠️ The speed and quality claims are vendor-stated until independent evaluation.</li>
+      <li><strong>DeepSeek legacy aliases retired Friday.</strong> <code>deepseek-chat</code> and <code>deepseek-reasoner</code> stopped resolving at 15:59 UTC on July 24 — a hard cutoff, no fallback. Migrated calls use <code>deepseek-v4-flash</code> or <code>deepseek-v4-pro</code>; same base URL, key and request shape, but <code>v4-flash</code> defaults to thinking on, so pin <code>thinking: disabled</code> to reproduce the old non-thinking behavior (Source: DeepSeek API docs; Enterprise DNA; TECHi, July 2026 — primary/press).</li>
+      <li><strong>Claude — Add-ins and Copilot reach.</strong> A new Add-ins capability lets Claude operate directly inside productivity software (e.g., Microsoft Word) rather than through a connector, and Microsoft 365 Copilot has added Claude and Cowork agent workflows (Source: Windows Forum; Fingerlakes1; Releasebot, July 2026 — press/secondary).</li>
+      <li><strong>Google shipped Flash, not Pro.</strong> The July 21 batch — Gemini 3.6 Flash, 3.5 Flash-Lite, and a Flash "Cyber" variant — landed, but Gemini 3.5 Pro is still not out; Google's position is "testing with partners," no date (Source: TechCrunch, July 21; CroeAi, July 2026 — press).</li>
+      </ul>
+      <p><strong>What This Means for You.</strong> Two of these have hard dates and touch live deployments. The DeepSeek alias retirement is behind us — a good moment to confirm no integration is still calling the dead names, since the default rename switches reasoning on and changes token cost and latency. MCP is next: two days to final, and any connector built against the <code>initialize</code> handshake or protocol-level session IDs should be exercised against the beta SDKs before Tuesday — the deprecation runway covers older primitives, not the stateless-core changes landing on the 28th. The Cowork Add-ins surface is worth a note of its own: working "inside" an app rather than through a connector changes the data-handling story, and it is worth understanding before adopting it for sensitive documents.</p>
+      <h2 id="4-overnight-daily-release-monitor">4. Overnight / Daily Release Monitor</h2>
+      <p>Covering roughly July 25 – July 26 since the July 25 publish. <strong>Today is Sunday — US markets are closed, as they were Saturday; the figures below are Friday, July 24 closes and standing items. No intraday figures are printed.</strong></p>
+      <ul>
+      <li><strong>No new frontier model releases</strong> confirmed over the weekend into July 26. The standing open-weight set is DeepSeek V4 (Preview, April 24), Kimi K3 (announced July 16, weights tomorrow, Monday, July 27), and Google's July 21 Flash-tier batch (still no 3.5 Pro).</li>
+      <li><strong>The standing tape — Friday's Intel reversal.</strong> Intel gave back its after-hours pop and <strong>fell ~7.89% to $92.32</strong> on foundry-customer and AI-roadmap questions; <strong>SanDisk fell about 11%</strong>; the Nasdaq slipped <strong>0.64% to 24,975.82</strong> on chips, while the S&amp;P 500 was flat (<strong>+0.05% to 7,411.98</strong>) and the Dow rose <strong>0.46% (+235.60) to 51,947.25</strong>; oil fell below $100 (Source: The Motley Fool, July 24; Yahoo Finance, July 24; Bloomberg, July 24 — press).</li>
+      <li><strong>DeepSeek aliases now retired.</strong> The <code>deepseek-chat</code>/<code>deepseek-reasoner</code> cutoff took effect Friday at 15:59 UTC; any integration still calling those names now returns an error (Source: DeepSeek API docs; Enterprise DNA, July 2026 — primary/press).</li>
+      <li><strong>EU AI Act, August 2 — confirmed, with one narrow grace period.</strong> Article 50's general transparency obligations apply from August 2, 2026: users must be told when they are interacting with an AI, and deep fakes and AI-generated public-interest text must be labelled. The machine-readable content-marking obligation (Article 50(2)) is delayed to December 2, 2026 — but only for systems already placed on the market before August 2; penalties can reach <strong>€15 million or 3% of worldwide annual turnover</strong>, whichever is higher (Source: European Commission digital-strategy FAQ; Sidley Data Matters; Gibson Dunn — primary/legal analysis). ⚠️ Frame as compliance awareness, not legal advice; confirm applicability with counsel.</li>
+      <li>Carry, unchanged: Cowork web/mobile beta with doubled limits through August 5; Claude for Government FedRAMP High beta; <strong>CXMT lists Monday, July 27</strong>; <strong>Kimi K3 weights Monday, July 27</strong>; <strong>MCP final spec Tuesday, July 28</strong>.</li>
+      </ul>
+      <p><strong>What This Means for You.</strong> The weekend is quiet by design, which makes it the right window for the unglamorous work: confirm the DeepSeek cutover is clean across every integration, and rehearse the MCP stateless-core change against the beta SDKs before Tuesday. On the EU AI Act, the nuance is the whole point — general transparency duties land August 2 (disclosure that a user is interacting with an AI, and labelling of deep fakes and AI-generated public-interest text), while the heavier machine-readable content-marking obligation has a December 2 runway and applies only to systems already on the market before August 2. Any material implying a single August 2 cliff needs a correction pass. This is compliance awareness, not legal advice — describe the landscape and route the determination to qualified counsel.</p>
+      <h2 id="5-ai-trading-trends">5. AI Trading Trends</h2>
+      <p><em>Market intelligence for situational awareness — not investment advice. No buy, sell or hold recommendations, price targets, or return forecasts appear here. Today is Sunday; US markets are closed and the figures below are Friday, July 24 closes and standing items. Every figure carries a source and a confidence note.</em></p>
+      <h3 id="5a-ipos-the-public-market-ai-wave">5a. IPOs — the public-market AI wave</h3>
+      <ul>
+      <li><strong>CXMT (ChangXin Memory Technologies)</strong> is the imminent event. It is priced and dated: Shanghai STAR Market, <strong>8.66 yuan per share</strong>, valuing the company near <strong>580 billion yuan</strong> — the largest IPO in the STAR Market's history and, by Reuters' framing, Asia's largest IPO of 2026 so far, reportedly <strong>oversubscribed more than 500 times</strong> by institutional investors. <strong>Lists tomorrow, Monday, July 27.</strong> ⚠️ <strong>The raise figure varies materially across outlets: much coverage cites about 57.9 billion yuan (~$8.6 billion), while some Reuters-sourced reporting frames a ~29.5 billion yuan (~$4.35 billion) raise — treat the total as directional and the per-share price and listing date as the firm facts</strong> (Source: Caixin Global, "The Week Ahead," July 24; TechTimes, "CXMT Hits STAR Market Monday," July 25; CNBC, July 24; Reuters via Yahoo Finance — press).</li>
+      <li><strong>Anthropic</strong> remains the calendar item that matters most for the US public-market AI wave. Goldman Sachs, JPMorgan and Morgan Stanley are leading; a confidential S-1 was filed June 1; an <strong>October Nasdaq listing</strong> is targeted, with a raise reported at <strong>more than $60 billion</strong> against a <strong>$965 billion</strong> private valuation (May 2026 Series H-1), and secondary-market marks implying <strong>$1.05–1.15 trillion</strong> (Source: cryptobriefing, "Anthropic targets IPO by October 2026 after $965B valuation," July 2026; Value Add VC, July 2026 — press). ⚠️ <strong>No share count, price range or exchange has been formally set; the offering remains subject to SEC review; secondary marks are indicative, not an offer price; private financials are unaudited and revenue run-rate figures vary by source.</strong></li>
+      <li><strong>Moonshot AI</strong> has circulated a shareholder resolution for a <strong>Hong Kong listing within six months</strong> and is near a round valuing it at <strong>more than $30 billion</strong> (Source: Yahoo Finance; TrendingTopics, July 20 — press; ⚠️ not company-confirmed).</li>
+      <li><strong>Recent context (carry):</strong> SK Hynix's July 10 Nasdaq ADR debut, Cerebras's May 14 pricing, and SpaceX's June listing under SPCX remain unreconciled to primary filings — do not print those raise/valuation figures externally.</li>
+      </ul>
+      <h3 id="5b-top-5-traded-ai-related-tickers">5b. Top 5 traded AI-related tickers</h3>
+      <p>⚠️ This is not a definitive most-traded-by-volume ranking from a single authoritative source. Figures are Friday, July 24 closes; markets have been shut since. Re-confirm against a live exchange leaderboard before any external use.</p>
+      <div class="table-wrap"><table>
+      <thead>
+      <tr>
+      <th>#</th>
+      <th>Ticker</th>
+      <th>Company</th>
+      <th>Why it's an AI-trading bellwether</th>
+      <th>Latest verifiable signal</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>1</td>
+      <td>INTC</td>
+      <td>Intel</td>
+      <td>The laggard's beat, and the market's refusal to pay for it</td>
+      <td>Q2 beat — revenue <strong>$16.1B (+25%)</strong>, adjusted EPS <strong>$0.42 vs ~$0.21</strong>, Data Center and AI <strong>+59%</strong>, 18A yield <strong>65%→85%</strong>, Q3 guide to a <strong>$16.3B</strong> midpoint — then <strong>fell ~7.89% to $92.32</strong> on Friday, reversing the ~13% after-hours pop (Source: The Motley Fool; Yahoo Finance, July 24 — press)</td>
+      </tr>
+      <tr>
+      <td>2</td>
+      <td>GOOGL</td>
+      <td>Alphabet</td>
+      <td>The record capex line the whole complex is arguing over</td>
+      <td>Record 2026 capex guide (reported <strong>$205B</strong>; some coverage <strong>$195–205B</strong>); Q2 revenue <strong>$119.8B (+24%)</strong>, Cloud <strong>$24.8B (+82%)</strong> (Source: CNBC; Yahoo Finance/Reuters — press)</td>
+      </tr>
+      <tr>
+      <td>3</td>
+      <td>SNDK</td>
+      <td>SanDisk</td>
+      <td>Memory-complex proxy; the segment CXMT's Monday listing reprices</td>
+      <td><strong>Fell ~11%</strong> on Friday, July 24, one of the session's larger single-name declines as the memory rally wobbled ahead of CXMT (Source: The Motley Fool, July 24 — press)</td>
+      </tr>
+      <tr>
+      <td>4</td>
+      <td>MU</td>
+      <td>Micron Technology</td>
+      <td>US high-bandwidth-memory name most directly repriced by CXMT</td>
+      <td>Led the July 21 semiconductor rebound with a ~12% session; the memory complex is the one CXMT's record Monday listing directly reprices (Source: The Motley Fool, July 21 — press)</td>
+      </tr>
+      <tr>
+      <td>5</td>
+      <td>AMD</td>
+      <td>Advanced Micro Devices</td>
+      <td>Advancing AI shipped Helios and EPYC Venice this month</td>
+      <td>Helios rack rated at 2.9 FP4 exaflops, priced ~$5–5.5M; MI500 roadmap previewed for 2027; a confirmed Microsoft–Azure Helios deal underpins the launch (Source: TechTimes, July 22 — press)</td>
+      </tr>
+      </tbody>
+      </table></div>
+      <p><strong>Week ahead (July 27 – August 2) — calendar, not forecast.</strong> <strong>CXMT lists and Kimi K3's weights publish Monday, July 27.</strong> <strong>The MCP 2026-07-28 spec is final Tuesday, July 28.</strong> <strong>EU AI Act Article 50 general transparency obligations apply Saturday, August 2.</strong> (Source: Caixin Global; TechTimes; modelcontextprotocol.io; European Commission — scheduled events, not predictions.)</p>
+      <p><strong>What This Means for You.</strong> The gap between what the market is repricing and what an organization can actually deploy stayed wide over the weekend, and the coming week will test it against real events rather than sentiment: Intel printed the cleanest demand read of the quarter and the tape sold it anyway, on foundry and roadmap questions that have nothing to do with the software most teams actually run. Opus 4.8, Sonnet 5, GPT-5.6, and — from Monday — a fresh 2.8-trillion-parameter open-weight base for anyone with the infrastructure are the deployable set, and that set has been stable for a month. The private-market signal is the more telling one: agent-layer rounds keep clearing, and Moonshot's reported move toward a &gt;$30B Hong Kong listing suggests capital still believes durable value sits above the chips. The Anthropic and CXMT listings are tracking items only — unpriced or contested-size offerings, not a basis for action. Market intelligence only, not investment advice.</p>
+      <h2 id="sources">Sources</h2>
+      <ul>
+      <li>The Motley Fool, "Stock Market Today, July 24: Intel Reverses Gains on Foundry and AI Spending Concerns," July 24, 2026. <a href="https://www.fool.com/coverage/stock-market-today/2026/07/24/stock-market-today-july-24-intel-reverses-gains-on-foundry-and-ai-spending-concerns/" target="_blank" rel="noopener">https://www.fool.com/coverage/stock-market-today/2026/07/24/stock-market-today-july-24-intel-reverses-gains-on-foundry-and-ai-spending-concerns/</a></li>
+      <li>Yahoo Finance, "Stock Market Today, July 24: Intel Reverses Gains on Foundry and AI Spending Concerns," July 24, 2026. <a href="https://finance.yahoo.com/markets/stocks/articles/stock-market-today-july-24-221251196.html" target="_blank" rel="noopener">https://finance.yahoo.com/markets/stocks/articles/stock-market-today-july-24-221251196.html</a></li>
+      <li>The Motley Fool, "Stock Market Today, July 24: Dow Recovers and Sandisk Tumbles 11% as Tech Stocks Fall Further," July 24, 2026. <a href="https://www.fool.com/coverage/stock-market-today/2026/07/24/stock-market-today-july-24-dow-recovers-and-sandisk-tumbles-11-as-tech-stocks-fall-further/" target="_blank" rel="noopener">https://www.fool.com/coverage/stock-market-today/2026/07/24/stock-market-today-july-24-dow-recovers-and-sandisk-tumbles-11-as-tech-stocks-fall-further/</a></li>
+      <li>Yahoo Finance, "Stock market today: Nasdaq slips, Dow and S&amp;P 500 recover to close a volatile week on Wall Street," July 24, 2026. <a href="https://finance.yahoo.com/markets/live/stock-market-today-friday-july-24-dow-sp-500-nasdaq-081854465.html" target="_blank" rel="noopener">https://finance.yahoo.com/markets/live/stock-market-today-friday-july-24-dow-sp-500-nasdaq-081854465.html</a></li>
+      <li>Bloomberg, "S&amp;P 500 Futures Steady as Big Tech Rebounds, Oil Dips Below $100," July 24, 2026. <a href="https://www.bloomberg.com/news/articles/2026-07-24/s-p-500-futures-steady-as-big-tech-rebounds-oil-dips-below-100" target="_blank" rel="noopener">https://www.bloomberg.com/news/articles/2026-07-24/s-p-500-futures-steady-as-big-tech-rebounds-oil-dips-below-100</a></li>
+      <li>ABC News, "What to know about the AI chip stock selloff," July 2026. <a href="https://abcnews.com/Business/ai-chip-stock-selloff/story?id=134844421" target="_blank" rel="noopener">https://abcnews.com/Business/ai-chip-stock-selloff/story?id=134844421</a></li>
+      <li>Forbes, "Semiconductor Selloff Deepens As AI Spending Fears Hit Intel," July 8, 2026. <a href="https://www.forbes.com/sites/petercohan/2026/07/08/intel-stock-down-21-inside-the-july-2026-semiconductor-selloff/" target="_blank" rel="noopener">https://www.forbes.com/sites/petercohan/2026/07/08/intel-stock-down-21-inside-the-july-2026-semiconductor-selloff/</a></li>
+      <li>CNBC, "Alphabet earnings takeaways: Q2 revenue beats, GOOGL stock sinks on 2026 capex hike," July 22, 2026. <a href="https://www.cnbc.com/2026/07/22/google-earnings-q2-goog-live-updates.html" target="_blank" rel="noopener">https://www.cnbc.com/2026/07/22/google-earnings-q2-goog-live-updates.html</a></li>
+      <li>Yahoo Finance / Reuters, "Stock market today: Dow, S&amp;P 500, Nasdaq slip as oil prices rise, Alphabet and Tesla earnings in focus," July 2026. <a href="https://finance.yahoo.com/markets/live/" target="_blank" rel="noopener">https://finance.yahoo.com/markets/live/</a></li>
+      <li>Yahoo Finance, "86% Of Enterprises Have Deployed AI Agents. Just 34% Trust Them, Boomi Study Finds," July 2026. <a href="https://finance.yahoo.com/technology/ai/articles/86-enterprises-deployed-ai-agents-130000701.html" target="_blank" rel="noopener">https://finance.yahoo.com/technology/ai/articles/86-enterprises-deployed-ai-agents-130000701.html</a></li>
+      <li>Institute PM, "Why 88% of Enterprise AI Pilots Never Reach Production — and How to Be in the 12%," July 2026. <a href="https://www.institutepm.com/knowledge-hub/why-enterprise-ai-pilots-fail" target="_blank" rel="noopener">https://www.institutepm.com/knowledge-hub/why-enterprise-ai-pilots-fail</a></li>
+      <li>The D<em>AI</em>LY BRIEF, "89% of AI Agent Pilots Never Scale: Gartner's 2026 Data," July 2026. <a href="https://www.beri.net/article/ai-agent-adoption-enterprise-2026-gartner-idc" target="_blank" rel="noopener">https://www.beri.net/article/ai-agent-adoption-enterprise-2026-gartner-idc</a></li>
+      <li>Model Context Protocol Blog, "The 2026-07-28 MCP Specification Release Candidate." <a href="https://blog.modelcontextprotocol.io/posts/2026-07-28-release-candidate/" target="_blank" rel="noopener">https://blog.modelcontextprotocol.io/posts/2026-07-28-release-candidate/</a></li>
+      <li>WorkOS, "The biggest MCP spec update ships July 28: What changes for AI agent authentication." <a href="https://workos.com/blog/mcp-2026-spec-agent-authentication" target="_blank" rel="noopener">https://workos.com/blog/mcp-2026-spec-agent-authentication</a></li>
+      <li>The Register, "Model Context Protocol prepares to break with its stateful past," July 23, 2026. <a href="https://www.theregister.com/devops/2026/07/23/model-context-protocol-prepares-to-break-with-its-stateful-past/" target="_blank" rel="noopener">https://www.theregister.com/devops/2026/07/23/model-context-protocol-prepares-to-break-with-its-stateful-past/</a></li>
+      <li>Enterprise DNA, "DeepSeek API: Migrate Before July 24 or Integrations Break," July 2026. <a href="https://enterprisedna.co/resources/news/deepseek-api-migration-july-24-deadline-2026/" target="_blank" rel="noopener">https://enterprisedna.co/resources/news/deepseek-api-migration-july-24-deadline-2026/</a></li>
+      <li>TECHi, "DeepSeek's legacy model names retire today, and the easy fix has a catch," July 2026. <a href="https://www.techi.com/deepseek-chat-reasoner-retirement-v4-migration/" target="_blank" rel="noopener">https://www.techi.com/deepseek-chat-reasoner-retirement-v4-migration/</a></li>
+      <li>TechTimes, "Kimi K3 Open Weights Drop July 27: Near-Frontier Coding, Undisclosed Hallucination Risk," July 24, 2026. <a href="https://www.techtimes.com/articles/321499/20260724/kimi-k3-open-weights-drop-july-27-near-frontier-coding-undisclosed-hallucination-risk.htm" target="_blank" rel="noopener">https://www.techtimes.com/articles/321499/20260724/kimi-k3-open-weights-drop-july-27-near-frontier-coding-undisclosed-hallucination-risk.htm</a></li>
+      <li>TECHi, "Kimi K3's open weights arrive July 27. The catch is 1.4TB," July 2026. <a href="https://www.techi.com/kimi-k3-open-weights-inference-economics/" target="_blank" rel="noopener">https://www.techi.com/kimi-k3-open-weights-inference-economics/</a></li>
+      <li>Hugging Face, "Kimi K3 Model Overview: 2.8T Parameters, MXFP4 Quantization, and What the Open Weights Mean for the Community," July 2026. <a href="https://huggingface.co/blog/ResterChed/kimi-k3-model-overview-mxfp4-quantization-open-wei" target="_blank" rel="noopener">https://huggingface.co/blog/ResterChed/kimi-k3-model-overview-mxfp4-quantization-open-wei</a></li>
+      <li>Interconnects, "Kimi K3: The open-weights escalation." <a href="https://www.interconnects.ai/p/kimi-k3-the-open-weights-escalation" target="_blank" rel="noopener">https://www.interconnects.ai/p/kimi-k3-the-open-weights-escalation</a></li>
+      <li>Windows Forum, "Microsoft 365 Copilot Adds Claude and Cowork Agent Workflows," July 2026. <a href="https://windowsforum.com/threads/microsoft-365-copilot-adds-claude-and-cowork-agent-workflows.439995/" target="_blank" rel="noopener">https://windowsforum.com/threads/microsoft-365-copilot-adds-claude-and-cowork-agent-workflows.439995/</a></li>
+      <li>Fingerlakes1, "Claude Cowork AI Agent Launches as Anthropic Expands AI Assistant to Cloud and Mobile," July 9, 2026. <a href="https://www.fingerlakes1.com/2026/07/09/claude-cowork-ai-agent-launches-as-anthropic-expands-ai-assistant-to-cloud-and-mobile/" target="_blank" rel="noopener">https://www.fingerlakes1.com/2026/07/09/claude-cowork-ai-agent-launches-as-anthropic-expands-ai-assistant-to-cloud-and-mobile/</a></li>
+      <li>Releasebot, "Anthropic Release Notes — July 2026 Latest Updates." <a href="https://releasebot.io/updates/anthropic" target="_blank" rel="noopener">https://releasebot.io/updates/anthropic</a></li>
+      <li>Yahoo Finance, "Moonshot AI Plans Hong Kong IPO After Kimi K3 Model Debut," July 20, 2026. <a href="https://finance.yahoo.com/markets/stocks/articles/moonshot-ai-plans-hong-kong-123000193.html" target="_blank" rel="noopener">https://finance.yahoo.com/markets/stocks/articles/moonshot-ai-plans-hong-kong-123000193.html</a></li>
+      <li>TrendingTopics, "After Kimi K3 Coup: Moonshot AI Aims for Hong Kong IPO Within Six Months," July 20, 2026. <a href="https://www.trendingtopics.eu/after-kimi-k3-coup-moonshot-ai-aims-for-hong-kong-ipo-within-six-months/" target="_blank" rel="noopener">https://www.trendingtopics.eu/after-kimi-k3-coup-moonshot-ai-aims-for-hong-kong-ipo-within-six-months/</a></li>
+      <li>Cryptobriefing, "Anthropic targets IPO by October 2026 after $965B valuation." <a href="https://cryptobriefing.com/anthropic-targets-ipo-by-october-2026-after-965b-valuation/" target="_blank" rel="noopener">https://cryptobriefing.com/anthropic-targets-ipo-by-october-2026-after-965b-valuation/</a></li>
+      <li>Value Add VC, "Anthropic IPO 2026: $965B Valuation, October Listing &amp; How to Invest." <a href="https://valueaddvc.com/blog/anthropic-ipo-2026-date-valuation-how-to-invest" target="_blank" rel="noopener">https://valueaddvc.com/blog/anthropic-ipo-2026-date-valuation-how-to-invest</a></li>
+      <li>Caixin Global, "The Week Ahead (July 27–Aug. 2): CXMT Set for STAR Market Debut in Board's Largest IPO," July 24, 2026. <a href="https://www.caixinglobal.com/2026-07-24/the-week-ahead-july-27-aug-2-cxmt-set-for-star-market-debut-in-boards-largest-ipo-102467832.html" target="_blank" rel="noopener">https://www.caixinglobal.com/2026-07-24/the-week-ahead-july-27-aug-2-cxmt-set-for-star-market-debut-in-boards-largest-ipo-102467832.html</a></li>
+      <li>TechTimes, "CXMT Hits STAR Market Monday With $8.6B War Chest and a Hard Equipment Ceiling," July 25, 2026. <a href="https://www.techtimes.com/articles/321597/20260725/cxmt-hits-star-market-monday-86b-war-chest-hard-equipment-ceiling.htm" target="_blank" rel="noopener">https://www.techtimes.com/articles/321597/20260725/cxmt-hits-star-market-monday-86b-war-chest-hard-equipment-ceiling.htm</a></li>
+      <li>CNBC, "CXMT is sparking fears of a cash drain before blockbuster IPO," July 24, 2026. <a href="https://www.cnbc.com/2026/07/24/cxmt-china-ipo-listing-chip-memory.html" target="_blank" rel="noopener">https://www.cnbc.com/2026/07/24/cxmt-china-ipo-listing-chip-memory.html</a></li>
+      <li>TechCrunch, "Google releases three new Gemini models — but no 3.5 Pro," July 21, 2026. <a href="https://techcrunch.com/2026/07/21/google-releases-three-new-gemini-models-but-no-3-5-pro/" target="_blank" rel="noopener">https://techcrunch.com/2026/07/21/google-releases-three-new-gemini-models-but-no-3-5-pro/</a></li>
+      <li>CroeAi, "Is Gemini 3.5 Pro Out Yet? July 2026 Status." <a href="https://croeai.com/is-gemini-3-5-pro-out-yet-july-2026/" target="_blank" rel="noopener">https://croeai.com/is-gemini-3-5-pro-out-yet-july-2026/</a></li>
+      <li>TechTimes, "AMD Advancing AI 2026 Opens With Zen 6 Venice, Helios, and Open AI Rack Bet," July 22, 2026. <a href="https://www.techtimes.com/articles/321257/20260722/amd-advancing-ai-2026-opens-zen-6-venice-helios-open-ai-rack-bet.htm" target="_blank" rel="noopener">https://www.techtimes.com/articles/321257/20260722/amd-advancing-ai-2026-opens-zen-6-venice-helios-open-ai-rack-bet.htm</a></li>
+      <li>Gibson Dunn, "EU AI Act Omnibus Agreement — Postponed High-Risk Deadlines and Other Key Changes." <a href="https://www.gibsondunn.com/eu-ai-act-omnibus-agreement-postponed-high-risk-deadlines-and-other-key-changes/" target="_blank" rel="noopener">https://www.gibsondunn.com/eu-ai-act-omnibus-agreement-postponed-high-risk-deadlines-and-other-key-changes/</a></li>
+      <li>Sidley, Data Matters, "EU AI Act Transparency Obligations: Preparing for Compliance by 2 August 2026," June 24, 2026. <a href="https://datamatters.sidley.com/2026/06/24/eu-ai-act-transparency-obligations-preparing-for-compliance-by-2-august-2026/" target="_blank" rel="noopener">https://datamatters.sidley.com/2026/06/24/eu-ai-act-transparency-obligations-preparing-for-compliance-by-2-august-2026/</a></li>
+      <li>European Commission, "Transparency obligations under Article 50 of the AI Act." <a href="https://digital-strategy.ec.europa.eu/en/faqs/transparency-obligations-under-article-50-ai-act" target="_blank" rel="noopener">https://digital-strategy.ec.europa.eu/en/faqs/transparency-obligations-under-article-50-ai-act</a></li>
+      </ul>
+    </article>
+
+    <section class="cta-band" id="contact" aria-labelledby="cta-heading">
+      <h2 id="cta-heading">From AI curiosity to AI capability</h2>
+      <p>This briefing is part of the field research behind our AI Enablement service &mdash; a curated, white-glove Claude Cowork implementation tailored to your organization&rsquo;s workflow.</p>
+      <a class="btn" href="https://calendly.com/mark-malaniru/30min" target="_blank" rel="noopener">Book a discovery call</a>
+    </section>
+    <!-- mal-ai-disclaimer:v1 -->
+  <aside class="mal-ai-disclaimer" role="note" aria-label="AI transparency notice" style="max-width:760px;margin:2.5rem auto 0;padding:1rem 1.25rem;border:1px solid #d9c3a5;border-left:4px solid #C07830;border-radius:6px;background:#faf6f0;color:#5c5347;font-size:0.82rem;line-height:1.6;box-sizing:border-box;">
+    <strong style="display:block;color:#8a5a1e;font-size:0.78rem;letter-spacing:.04em;text-transform:uppercase;margin-bottom:.35rem;">AI Transparency Notice</strong>
+    This article was produced through Malaniru&rsquo;s guided-research process: generated with the assistance of AI and reviewed by a person before publication (human-in-the-loop). In line with EU AI Act transparency obligations, we disclose that AI systems were used to create this content. It is provided for general information only, may contain inaccuracies, and is not professional advice &mdash; verify before relying on it.
+  </aside>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Malaniru Inc, LLC &middot; Lafayette, Colorado &middot; AI Enablement</p>
+    <p><a href="daily-intelligence-briefings.html">&larr; Back to Daily Intelligence Briefings</a> &middot; <a href="index.html">AI Enablement</a></p>
+      <nav class="mal-footernav" data-mal-footernav aria-label="Site" style="margin-top:0.7rem;font-size:0.82rem;line-height:1.9;">
+      <a href="about.html" style="color:#C07830;font-weight:700;text-decoration:none;">About</a> &middot;
+      <a href="pricing.html" style="color:#C07830;font-weight:700;text-decoration:none;">Pricing</a> &middot;
+      <a href="index.html" style="color:#C07830;font-weight:700;text-decoration:none;">AI Enablement</a>
+     &middot;
+      <a href="privacy-policy.html" style="color:#C07830;font-weight:700;text-decoration:none;">Privacy</a>
+    </nav>
+  </footer>
+</body>
+</html>
