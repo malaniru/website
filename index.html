@@ -169,7 +169,12 @@
     .btn:active { transform: translateY(1px); }
 
     /* ---- Section scaffolding -------------------------------------------- */
-    section { padding-block: var(--space-6); }
+    section { padding-block: var(--space-6);   
+      min-height: 100dvh; /* Dynamic viewport height */
+      box-sizing: border-box; 
+      display: flex;
+      align-items: center;      /* Vertically centers the child */
+      justify-content: center;}
 
     .section-label {
       display: inline-block;
@@ -199,8 +204,14 @@
       background-position: center, center, center;
       color: var(--color-off-white);
       padding-block: var(--space-6);
+      min-height: 100dvh; /* Dynamic viewport height */
+      box-sizing: border-box; 
+      display: flex;
+      align-items: center;      /* Vertically centers the child */
+      justify-content: center;
     }
-    .hero__inner { max-width: 760px; }
+    .hero__inner { max-width: 760px; 
+                 }
     .hero__eyebrow {
       color: var(--color-gold);
       font-weight: 600;
@@ -587,7 +598,7 @@
   <a class="skip-link" href="#main">Skip to content</a>
 
   <!-- ============================= HERO ============================= -->
-    <header class="hero">
+    <header class="hero" id ="hero">
     <div class="container hero__inner">
       <div class="wordmark"><a href="index.html">Malaniru<span class="dot">.</span></a></div>
       <h1>AI Enablement</h1>
@@ -612,7 +623,7 @@
   <main id="main">
 
     <!-- ===================== THE SERVICE / 5-PART ===================== -->
-    <section class="service" aria-labelledby="service-heading">
+    <section class="service" aria-labelledby="service-heading" id="service">
       <div class="container">
         <div class="section-head">
           <span class="section-label">What the service is</span>
@@ -658,7 +669,7 @@
     </section>
 
     <!-- ===================== MATURITY SCALE ===================== -->
-    <section class="maturity on-navy" aria-labelledby="maturity-heading">
+    <section class="maturity on-navy" aria-labelledby="maturity-heading" id="maturity">
       <div class="container">
         <div class="section-head">
           <span class="section-label">A Malaniru maturity model</span>
@@ -723,7 +734,7 @@
     </section>
 
     <!-- ===================== FOUR-STEP PATH ===================== -->
-    <section class="path" aria-labelledby="path-heading">
+    <section class="path" aria-labelledby="path-heading" id="path">
       <div class="container">
         <div class="section-head">
           <span class="section-label">The four-step path</span>
