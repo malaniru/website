@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<!--
+  Malaniru - Daily Intelligence Briefing (branded HTML)
+  Built by: publish_briefing_page.py - Date: 2026-08-08
+  Source:   Projects/Malaniru_Marketing_Site/Staging/20260808-daily-intelligence-briefing.md
+  FIDELITY: Body rendered VERBATIM from the source markdown. No copy edits.
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daily Intelligence Briefing — Saturday, August 8, 2026 - Malaniru</title>
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.malaniru.com/briefing-2026-08-08">
+  <meta name="description" content="Saturday, and the morning after the streak resumed. On Friday the S&amp;P 500 rose 0.62% to a record 7,757.64 and the Dow added 151.83 points (0.28%) to a record 54,036.93, while the Nasdaq Composite climbed 1.3% to 26,690.62 — the strongest week for the major indexes since mid-April. The catalyst flipped Thursday&#x27;s story: July nonfarm payrolls unexpectedly fell 23,000 (vs a roughly 83,000 gain expected) with government jobs down 53,000, the unemployment rate edged to 4.1%, and rate-hike fears faded. Palantir closed at $172.01, up 10.32%, after Bank of America reaffirmed Buy and raised its target to $255; SpaceX surged 15.83% to $133.11 on a Q2 revenue beat and lockup relief; Nvidia rose more than 1% Friday and over 10% on the week. On the model side, Claude Opus 5 (July 24) still tops Artificial Analysis&#x27;s Intelligence Index at 61, the MCP 2026-07-28 stateless spec is standing, and Gemini 3.5 Pro&#x27;s prediction-market-favored August 7 date has now passed with no model card. EU AI Act Article 50 transparency duties remain in force. Every figure carries a source and a confidence tag; this is market intelligence, not investment advice.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --navy:#0F1A2E;--navy-mid:#2A3F63;--copper:#C07830;--gold:#D4A853;
+      --off-white:#F4F1EC;--light-gray:#E8E6E1;--mid-gray:#8A8A96;--dark-text:#1C1C1C;
+      --font:"Inter","Helvetica Neue",Arial,sans-serif;
+    }
+    *{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:var(--font);background:var(--off-white);color:var(--dark-text);line-height:1.65;font-size:16px;-webkit-font-smoothing:antialiased;}
+    .skip-link{position:absolute;left:-999px;top:0;background:var(--gold);color:var(--navy);padding:10px 16px;font-weight:700;z-index:10;}
+    .skip-link:focus{left:8px;top:8px;}
+    a{color:var(--copper);}
+    /* Header */
+    header{background: linear-gradient(160deg, rgba(15,26,46,0.72) 0%, rgba(10,18,33,0.82) 100%), url('StockCake-Cosmic_Web_Complexity-1361288-standard-rot90ccw.jpg'); background-size: auto, 100% 100%; background-repeat: no-repeat, no-repeat; background-position: center, center;color:var(--off-white);padding:48px 24px 52px;position:relative;overflow:hidden;}
+    header::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 85% 12%,rgba(192,120,48,0.20) 0%,rgba(15,26,46,0) 55%);pointer-events:none;}
+    .header-inner{max-width:760px;margin:0 auto;position:relative;z-index:1;}
+    .wordmark{font-weight:800;font-size:1.25rem;letter-spacing:0.02em;margin-bottom:30px;}
+    .wordmark .dot{color:var(--copper);}
+    .wordmark a{color:var(--off-white);text-decoration:none;transition:opacity .18s ease;}
+    .wordmark a:hover,.wordmark a:focus-visible{opacity:.85;outline:none;}
+    .eyebrow{display:inline-block;font-size:0.72rem;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;}
+    header h1{font-weight:800;font-size:clamp(1.8rem,4.6vw,2.6rem);line-height:1.14;letter-spacing:-0.01em;margin-bottom:16px;}
+    .byline{font-size:0.9rem;color:var(--light-gray);letter-spacing:0.01em;}
+    .byline .sep{color:var(--copper);margin:0 8px;}
+    .lede{font-size:1.08rem;color:var(--light-gray);max-width:66ch;margin-top:18px;}
+    .backlink{display:inline-block;margin-top:26px;color:var(--gold);font-weight:600;font-size:0.9rem;text-decoration:none;border-bottom:1px solid rgba(212,168,83,0.4);}
+    .backlink:hover,.backlink:focus-visible{border-bottom-color:var(--gold);outline:none;}
+    /* Article */
+    main{max-width:760px;margin:0 auto;padding:48px 24px 8px;}
+    .disclaimer{background:#fff;border:1px solid var(--light-gray);border-left:4px solid var(--copper);border-radius:8px;padding:14px 18px;font-size:0.9rem;color:var(--navy-mid);margin-bottom:34px;}
+    article{font-size:1.05rem;}
+    article h2{font-weight:800;font-size:1.5rem;color:var(--navy);line-height:1.22;letter-spacing:-0.01em;margin:42px 0 14px;}
+    article h3{font-weight:700;font-size:1.18rem;color:var(--navy-mid);line-height:1.25;margin:30px 0 10px;}
+    article h2 + p, article h3 + p{margin-top:0;}
+    article p{margin:0 0 18px;color:var(--dark-text);}
+    article ul,article ol{margin:0 0 18px;padding-left:24px;}
+    article li{margin-bottom:8px;}
+    article strong{font-weight:700;color:var(--navy);}
+    article em{font-style:italic;}
+    article a{color:var(--copper);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(192,120,48,0.35);transition:border-color .18s ease;}
+    article a:hover,article a:focus-visible{border-bottom-color:var(--copper);outline:none;}
+    article hr{border:none;border-top:1px solid var(--light-gray);margin:34px 0;}
+    article h2#sources, article h2#references{border-top:1px solid var(--light-gray);padding-top:30px;font-size:1.2rem;color:var(--navy-mid);}
+    /* sources list smaller */
+    article h2[id^="sources"] ~ ul li, article h3[id^="sources"] ~ ul li{font-size:0.95rem;color:var(--navy-mid);}
+    /* tables */
+    article table{width:100%;border-collapse:collapse;margin:0 0 24px;font-size:0.95rem;}
+    article th,article td{border:1px solid var(--light-gray);padding:9px 12px;text-align:left;vertical-align:top;}
+    article thead th{background:var(--navy);color:var(--off-white);font-weight:700;}
+    article tbody tr:nth-child(even){background:#fff;}
+    article .table-wrap{overflow-x:auto;margin:0 0 24px;}
+    article .table-wrap table{margin:0;}
+    /* CTA */
+    .cta-band{background:var(--navy);color:var(--off-white);border-radius:12px;padding:42px 32px;text-align:center;margin:48px 0 8px;}
+    .cta-band h2{font-weight:800;font-size:clamp(1.4rem,3.4vw,1.9rem);margin-bottom:12px;letter-spacing:-0.01em;color:var(--off-white);}
+    .cta-band p{color:var(--light-gray);max-width:52ch;margin:0 auto 24px;}
+    .cta-band .btn{display:inline-block;background:var(--copper);color:#fff;font-weight:700;padding:13px 28px;border-radius:8px;text-decoration:none;transition:background .18s ease;}
+    .cta-band .btn:hover,.cta-band .btn:focus-visible{background:var(--gold);color:var(--navy);outline:none;}
+    /* Footer */
+    footer{max-width:760px;margin:16px auto 0;padding:24px;font-size:0.82rem;color:var(--mid-gray);border-top:1px solid var(--light-gray);}
+    footer p+p{margin-top:6px;}
+    footer a{color:var(--mid-gray);text-decoration:underline;}
+    @media (prefers-reduced-motion:reduce){*{transition:none!important;}}
+
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header>
+    <div class="header-inner">
+      <div class="wordmark"><a href="index.html">Malaniru<span class="dot">.</span></a></div>
+      <span class="eyebrow">AI Enablement &middot; Daily Intelligence Briefing</span>
+      <h1>Daily Intelligence Briefing — Saturday, August 8, 2026</h1>
+      <p class="byline">By Mark Andrew Harris<span class="sep">&middot;</span>August 8, 2026</p>
+      <p class="lede">Saturday, and the morning after the streak resumed. On Friday the S&amp;P 500 rose 0.62% to a record 7,757.64 and the Dow added 151.83 points (0.28%) to a record 54,036.93, while the Nasdaq Composite climbed 1.3% to 26,690.62 — the strongest week for the major indexes since mid-April. The catalyst flipped Thursday&#x27;s story: July nonfarm payrolls unexpectedly fell 23,000 (vs a roughly 83,000 gain expected) with government jobs down 53,000, the unemployment rate edged to 4.1%, and rate-hike fears faded. Palantir closed at $172.01, up 10.32%, after Bank of America reaffirmed Buy and raised its target to $255; SpaceX surged 15.83% to $133.11 on a Q2 revenue beat and lockup relief; Nvidia rose more than 1% Friday and over 10% on the week. On the model side, Claude Opus 5 (July 24) still tops Artificial Analysis&#x27;s Intelligence Index at 61, the MCP 2026-07-28 stateless spec is standing, and Gemini 3.5 Pro&#x27;s prediction-market-favored August 7 date has now passed with no model card. EU AI Act Article 50 transparency duties remain in force. Every figure carries a source and a confidence tag; this is market intelligence, not investment advice.</p>
+      <a class="backlink" href="daily-intelligence-briefings.html">&larr; All daily intelligence briefings</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <article>
+      <p>The record run resumed on the same fault line that broke it — energy and money — only this time both moved the other way. <strong>Friday's weak July jobs report faded rate-hike fears and powered record closes: the S&amp;P 500 rose 0.62% to a record 7,757.64 and the Dow added 151.83 points to a record 54,036.93, capping the strongest week for the major indexes since mid-April</strong> (Source: STL.News, "U.S. Stock Market Today — Friday, August 7, 2026," August 7, 2026; CNBC, "S&amp;P 500 rises to record close Friday and posts strongest week since April," August 7, 2026 — press). ✅ The index directions and record levels are settled. The trigger was a soft labor print rather than any change in the AI story: <strong>nonfarm payrolls unexpectedly fell 23,000 in July against a roughly 83,000 gain expected</strong>, and the AI bid rode the relief rally selectively — <strong>Palantir closed up 10.32% at $172.01</strong> after Bank of America raised its target, and <strong>SpaceX surged 15.83% to $133.11</strong> on a Q2 revenue beat and lockup relief (Source: CNBC, "Jobs report July 2026," August 7, 2026; Yahoo Finance, "Stock Market Today, Aug. 7," August 7, 2026 — press). 🔶 Same-day single-stock percentages are intraday-to-close snapshots.</p>
+      <p>On the model side the picture is unchanged and comfortable for anyone shipping AI in production. <strong>Claude Opus 5 — released July 24 with a five-level compute "effort" setting — still tops Artificial Analysis's Intelligence Index at 61 and its Agentic Index at 55.3 at $5 / $25 per million tokens</strong>, ahead of Fable 5 (60) and GPT-5.6 Sol (59), and roughly half the price of the top-tier Fable 5 model (Source: officechai, "Claude Opus 5 Becomes Top Model In The World On Artificial Analysis Intelligence Index," July 2026; BenchLM.ai, "Artificial Analysis Intelligence Index Leaderboard (August 2026)," August 2026 — press/aggregator). The <strong>MCP 2026-07-28 stateless spec is standing</strong>, <strong>Gemini 3.5 Pro is still not released</strong> — its prediction-market-favored <strong>August 7</strong> date has now passed with no model card — and the <strong>EU AI Act's Article 50 transparency obligations remain in force</strong> after taking effect August 2.</p>
+      <h2 id="1-ai-market-trends">1. AI Market Trends</h2>
+      <p><strong>Friday resumed the record run.</strong> The <strong>S&amp;P 500 rose about 0.62% to a record 7,757.64</strong>, the <strong>Dow Jones Industrial Average added 151.83 points, or 0.28%, to a record 54,036.93</strong>, and the <strong>Nasdaq Composite climbed about 1.3% to 26,690.62</strong> (Source: STL.News, August 7, 2026; Yahoo Finance, "Stock market today: Dow, S&amp;P 500, Nasdaq rise after July jobs report surprises to the downside," August 7, 2026 — press). It was the strongest week for the major indexes since mid-April (Source: CNBC, August 7, 2026 — press). 🔶 The Nasdaq's all-time closing high remains <strong>27,086.81, set June 1, 2026</strong>, so Friday's close, while strong, was not a Nasdaq record (Source: Wikipedia, "Closing milestones of the Nasdaq Composite" — reference).</p>
+      <p><strong>A soft labor read did the work, and it flipped Thursday's driver.</strong> <strong>July nonfarm payrolls unexpectedly fell 23,000</strong> — against a Dow Jones consensus for a gain of roughly <strong>83,000</strong> — as <strong>government jobs dropped 53,000</strong> and retail, leisure and hospitality softened; <strong>private payrolls still rose 30,000</strong> (Source: CNBC, "Jobs report July 2026," August 7, 2026; Yahoo Finance, "U.S. jobs report July 2026: Payrolls fell 23,000," August 7, 2026 — press). The <strong>unemployment rate edged lower to 4.1%</strong>, largely on a further decline in the labor force, and the 12-month increase in <strong>average hourly earnings slipped to 3.2%, the lowest since May 2021</strong> (Source: CNBC, "Here are three key takeaways from the disappointing July jobs report," August 7, 2026; U.S. Bureau of Labor Statistics, "The Employment Situation — July 2026," August 7, 2026 — press/primary). The soft print cooled rate-hike odds and the energy overhang that pressured Thursday eased, letting rates and sentiment do the lifting. 🔶 Oil and precise Treasury-yield closes for Friday could not be confirmed to an authoritative live quote here; treat the "yields eased / oil lower on the week" framing as directional and re-confirm exact levels before external use.</p>
+      <p><strong>The AI complex led the relief rally rather than sold into it.</strong> <strong>Palantir closed up 10.32% at $172.01</strong>, extending a roughly <strong>35%</strong> five-session run, after <strong>Bank of America reaffirmed Buy and raised its price target to $255</strong> on the heels of its August 4 earnings (revenue <strong>$1.94 billion, +93% year over year</strong>); <strong>SpaceX jumped 15.83% to $133.11</strong> on a Q2 revenue beat, easing lockup fears, and a joint "Terafab" update with Tesla; and <strong>Nvidia rose more than 1% Friday and over 10% on the week</strong> on Elon Musk's SpaceX chip-exclusivity comment (Source: Yahoo Finance, "Stock Market Today, Aug. 7," August 7, 2026; CNBC, "Palantir stock rises 29% on soaring commercial revenue, AI sovereignty," August 4, 2026 — press). 🔶 Single-name moves are intraday-to-close snapshots; re-confirm against a live quote before external use. The through-line into the weekend is continuity: the market is still separating "AI demand is real" from "the macro sets the tape," and this session let a dovish jobs read win.</p>
+      <h2 id="2-top-10-ai-agents-three-lenses">2. Top 10 AI Agents — Three Lenses</h2>
+      <p>Rankings as of Saturday, August 8, 2026 — the morning after a weak jobs report powered record S&amp;P 500 and Dow closes and the strongest week since April. <strong>Claude Opus 5 (released July 24) still tops Artificial Analysis's Intelligence and Agentic indices and holds the deployable flagship-adjacent slot, with a five-level effort setting; the MCP 2026-07-28 stateless spec is standing and its Tier 1 SDKs are near half a billion monthly downloads; the EU AI Act's Article 50 transparency obligations remain in force as of August 2; Gemini 3.5 Pro is still not released, with its prediction-market-favored August 7 date now passed unconfirmed.</strong> Fable 5 remains the top-tier Claude model; Sonnet 5 is the Claude Code workhorse default.</p>
+      <h3 id="2a-relevance-for-claude-mcp-centered-work">2a. Relevance for Claude / MCP-Centered Work</h3>
+      <div class="table-wrap"><table>
+      <thead>
+      <tr>
+      <th>Rank</th>
+      <th>Agent / Platform</th>
+      <th>Justification</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>1</td>
+      <td>MCP-based connectors (cross-vendor)</td>
+      <td><strong>Standing spec; migration is the work.</strong> The 2026-07-28 release moved MCP to a stateless request/response core, added multi round-trip requests, header-based routing, cacheable list results, hardened authorization against OAuth mix-up attacks, and a formal extensions framework (MCP Apps, Tasks, Enterprise-Managed Authorization) that adds capabilities like interactive UIs and long-running work without changing the core protocol. Tier 1 SDKs are seeing close to <strong>half a billion downloads a month</strong>, with the TypeScript and Python SDKs each past <strong>1 billion total</strong>. Servers on the new revision may not interoperate with older clients — any connector built against the old handshake or session header must be exercised against the new SDKs now (Source: Model Context Protocol Blog, "The 2026-07-28 Specification"; Releasebot, Anthropic release notes, August 2026 — primary/secondary).</td>
+      </tr>
+      <tr>
+      <td>2</td>
+      <td>Claude Code + Agent SDK</td>
+      <td>Primary agentic build tool, shipping continuously. Recent updates make Claude Opus 5 the default Opus model, expand dynamic workflows and nested subagents (up to depth 3 by default), and improve MCP, sandbox, model-picker, and remote-control behavior (Source: Releasebot, "Claude Code Updates by Anthropic — August 2026" — secondary). Review-and-isolation discipline remains the point: least-privilege permissions and explicit review gates belong in any unattended pipeline.</td>
+      </tr>
+      <tr>
+      <td>3</td>
+      <td>Claude Cowork</td>
+      <td>Core delivery surface. Web and mobile beta — sessions and files follow the user across devices, background work, scheduled tasks that run with no device online, shared chats and projects, and mobile approvals. Add-ins let Claude work directly inside productivity software; Microsoft 365 Copilot has added Claude and Cowork agent workflows.</td>
+      </tr>
+      <tr>
+      <td>4</td>
+      <td>Claude Opus 5</td>
+      <td>Holds the deployable top slot since July 24: <strong>#1 on Artificial Analysis's Intelligence Index (61) and Agentic Index (55.3)</strong> at <strong>$5 / $25 per million input/output tokens</strong> (unchanged Opus pricing), ahead of Fable 5 (60) and GPT-5.6 Sol (59), roughly half the top-tier Fable 5 price, with a five-level effort setting to trade compute for capability, a 1M-token context window, and up to 128K output (Source: officechai, July 2026; the-decoder, "Anthropic's Claude Opus 5 costs well below Fable 5," July 2026 — press). 🔶 Validate index positions against your own workload.</td>
+      </tr>
+      <tr>
+      <td>5</td>
+      <td>Claude Developer Platform — Managed Agents</td>
+      <td>Server-hosted agents with model effort settings, expanded webhook coverage, session seeding, optional version checks, and event deltas for thread streams (Source: Releasebot, Anthropic release notes, August 2026 — secondary). The MCP authorization hardening changes how these agents authenticate.</td>
+      </tr>
+      </tbody>
+      </table></div>
+      <p><em>(Watch line: Claude Fable 5 — top-tier Claude model, tiered by plan. Claude Sonnet 5 — Claude Code default; promotional $2/$10 pricing ends August 31, standard $3/$15 from September 1. GPT-5.6 (Sol / Terra / Luna) — GA since July 9, a genuine agent competitor. Kimi K3 — open weights out, #3 on the Intelligence Index. Meta Muse Spark 1.1 — leads Scale SEAL's MCP Atlas tool-use board at 88.1; a reported 1.2 remains aggregator-only, ⚠️ confirm before load-bearing use. Gemini 3.5 Pro — still not released; prediction-market date of August 7 now passed.)</em></p>
+      <h3 id="2b-market-momentum-adoption-funding-buzz">2b. Market Momentum (adoption / funding / buzz)</h3>
+      <div class="table-wrap"><table>
+      <thead>
+      <tr>
+      <th>Rank</th>
+      <th>Agent / Platform</th>
+      <th>Justification</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>1</td>
+      <td>Palantir — AI-sovereignty surge extends</td>
+      <td>The session's loudest AI-adoption print: <strong>Palantir closed up 10.32% at $172.01</strong>, up roughly <strong>35%</strong> over five sessions, after <strong>Bank of America reaffirmed Buy and raised its target to $255</strong> — building on August 4 results of revenue <strong>$1.94 billion (+93% YoY)</strong>, adjusted EPS <strong>$0.41</strong> vs a $0.35 consensus, and a raised full-year 2026 outlook to <strong>$8.15–$8.158 billion</strong> on demand to keep enterprise data private from frontier labs (Source: Yahoo Finance, August 7, 2026; CNBC, August 4, 2026 — press).</td>
+      </tr>
+      <tr>
+      <td>2</td>
+      <td>SpaceX — earnings beat and lockup relief</td>
+      <td><strong>SpaceX surged 15.83% to $133.11</strong> on a Q2 revenue beat, easing fears around its first post-IPO lockup expiry, more positive analyst views, and a joint "Terafab" update with Tesla — recovering well above the sub-$115 levels of earlier in the week (Source: Yahoo Finance, "Space Exploration Technologies Surges on Q2 Revenue Beat, Lockup Relief, and Terafab Update," August 7, 2026 — press).</td>
+      </tr>
+      <tr>
+      <td>3</td>
+      <td>Nvidia — chip bid reaffirmed</td>
+      <td>The week's structural AI-demand signal: <strong>Nvidia rose more than 1% Friday and over 10% on the week</strong> after Elon Musk said <strong>SpaceX would rely exclusively on Nvidia chips for its AI infrastructure</strong>; fiscal-Q2 results are due <strong>August 26</strong> (Source: STL.News, August 7, 2026 — press).</td>
+      </tr>
+      <tr>
+      <td>4</td>
+      <td>Claude Opus 5</td>
+      <td>Anthropic's newest model continues to top intelligence and agentic coverage in early August — <strong>#1 on Artificial Analysis's Intelligence (61) and Agentic (55.3) indices</strong> — with an effort setting and unchanged Opus pricing keeping it the default deployable frontier-adjacent choice (Source: officechai; BenchLM.ai, August 2026 — press/aggregator). 🔶 Validate against your own workload.</td>
+      </tr>
+      <tr>
+      <td>5</td>
+      <td>Moonshot AI — Kimi K3</td>
+      <td>Open weights remain out — a 2.8T-parameter mixture-of-experts model with native vision and a 1M-token window that ranks <strong>#3 overall on the Artificial Analysis Intelligence Index</strong> — keeping an open-weight option live for data-residency-sensitive work (Source: LLM-Stats, August 2026; blog.mean.ceo, "New AI Model Releases News — August 2026," August 2026 — aggregator/press).</td>
+      </tr>
+      </tbody>
+      </table></div>
+      <h3 id="2c-capability-maturity-production-readiness">2c. Capability &amp; Maturity (production readiness)</h3>
+      <div class="table-wrap"><table>
+      <thead>
+      <tr>
+      <th>Rank</th>
+      <th>Agent / Platform</th>
+      <th>Justification</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>1</td>
+      <td>Claude Opus 5</td>
+      <td>The load-bearing Opus for agentic work: <strong>#1 on Artificial Analysis's Intelligence Index (61) and Agentic Index (55.3)</strong>, roughly <strong>1861 Elo on GDPval-AA v2 and 1720 on AA-Briefcase (+146 ahead of Fable 5)</strong>, a five-level effort setting to tune compute, 1M context, and up to 128K output. Now the default on Claude Max and the default Opus in Claude Code (Source: officechai; the-decoder, July 2026 — press). 🔶 Confirm on your own evals before load-bearing use.</td>
+      </tr>
+      <tr>
+      <td>2</td>
+      <td>GPT-5.6 (Sol / Terra / Luna)</td>
+      <td>Broadly deployed and mature since the July 9 GA, restructured into durable capability tiers (Sol $5/$30, Terra $2/$12, Luna $0.20/$1.20) with the agentic ChatGPT Work system; Sol sits at <strong>59</strong> on the Intelligence Index, just behind the two Claude flagships (Source: officechai; blog.mean.ceo, August 2026 — press/aggregator). ⚠️ Earlier system-card notes flagged elevated "scheming" behavior in Sol — treat carefully for high-stakes factual work until independent results settle.</td>
+      </tr>
+      <tr>
+      <td>3</td>
+      <td>Claude Sonnet 5</td>
+      <td>Near-Opus capability at workhorse pricing, 1M context, the Claude Code default. Validate on your own workload before load-bearing use.</td>
+      </tr>
+      <tr>
+      <td>4</td>
+      <td>Kimi K3 (open weights)</td>
+      <td>Assessable and deployable: a 2.8T MoE with native vision and a 1M-token window, open weights out with day-0 third-party hosting and a <strong>#3</strong> Intelligence-Index placement; production readiness is real but harness-dependent, and self-hosting is a meaningful capital question depending on quantization (Source: LLM-Stats; blog.mean.ceo, August 2026 — aggregator/press).</td>
+      </tr>
+      <tr>
+      <td>5</td>
+      <td>Gemini 3.5 Pro</td>
+      <td>Recorded only to mark it <strong>not production-assessable</strong>. As of August 8 it remains in limited partner testing, not on the consumer app or AI Studio; Google has confirmed neither the context window nor pricing, the launch has slipped past its Google I/O promise and multiple subsequent targets (June, July, a widely-reported July 17) on hallucination-rate and reliability shortfalls, DeepMind is reported to have rebuilt the base model, and Google shipped Gemini 3.6 Flash, 3.5 Flash-Lite and 3.5 Flash Cyber instead (Source: TechCrunch, "Google releases three new Gemini models — but no 3.5 Pro," July 21; TechTimes, "Gemini 3.5 Pro Targets July 17 After Full Rebuild," July 13 — press). ⚠️ Prediction markets favored an August 7 date, which has now passed; treat every spec and date as unconfirmed until Google publishes a model card.</td>
+      </tr>
+      </tbody>
+      </table></div>
+      <h3 id="divergence-analysis">Divergence Analysis</h3>
+      <p>The three lenses agree on the deployable core and split on what is moving it. Relevance stays topped by MCP itself — the stateless spec is standing, its extensions framework is live, Tier 1 SDK downloads are near half a billion a month, and older clients will not interoperate with the new revision — a dated migration task, not a preview. Momentum rotated hard toward AI-adoption and infrastructure proof this session: Palantir's 10%-plus gain on a raised target, SpaceX's 16% earnings-beat pop, and Nvidia's double-digit weekly run all rode above a tape lifted by a dovish jobs read. Maturity is unchanged at the top: Claude Opus 5 holds the load-bearing slot and leads the public intelligence and agentic indices, GPT-5.6 remains the mature general-purpose competitor at 59, Kimi K3 sits third and assessable, and Gemini 3.5 Pro is still not assessable. The cleanest cross-lens signal is unchanged — "announced" and "assessable" remain different states; Opus 5 crossed that line on July 24, and Gemini 3.5 Pro, with its prediction-market date now passed, still has not.</p>
+      <p><strong>What This Means for You.</strong> For organizations adopting AI, Friday's rally changes nothing about what you can deploy, and the deployable stack is stable: Opus 5 as the load-bearing default with an effort setting, GPT-5.6 as the mature competitor, Kimi K3 as a benchmarked open-weight base. The engineering task of the moment is unchanged: exercise every MCP connector against the new Tier 1 SDKs, confirm nothing depends on the removed handshake or session header, and flag the Enterprise-Managed Authorization extension for anything touching sensitive data. Palantir's "AI-sovereignty" surge and Nvidia's SpaceX exclusivity signal together tell the same story a documented AI governance program encodes — the market is paying for data-control tooling and infrastructure control. On model selection, Opus 5's effort setting keeps cost-vs-capability tunable per task; Gemini's continued absence reinforces a simple discipline: treat a model as real only when you can assess it.</p>
+      <h2 id="3-agentic-ai-advances-new-releases">3. Agentic AI Advances &amp; New Releases</h2>
+      <ul>
+      <li><strong>Claude Opus 5 — still tops the public indices (carry from July 24).</strong> Released July 24 at <strong>$5 / $25 per million input/output tokens</strong> (unchanged Opus pricing), Opus 5 sits <strong>#1 on Artificial Analysis's Intelligence Index (61) and Agentic Index (55.3)</strong>, ahead of Fable 5 (60) and GPT-5.6 Sol (59), roughly half the top-tier Fable 5 price, with a five-level compute effort setting, a 1M-token context window, and up to 128K output; it is the default on Claude Max and the default Opus in Claude Code, which also expanded nested subagents to depth 3 (Source: officechai, July 2026; the-decoder, July 2026; Releasebot, August 2026 — press/secondary).</li>
+      <li><strong>MCP 2026-07-28 — standing stateless spec (carry).</strong> The largest revision since launch: a stateless request/response core, multi round-trip requests, header-based routing, cacheable list results, authorization hardening against OAuth mix-up attacks, and a formal versioned extensions framework (MCP Apps, Tasks, EMA). Tier 1 SDK downloads are near <strong>half a billion a month</strong>, with TypeScript and Python each past <strong>1 billion total</strong>. Breaking change — servers on the new revision may not work with older clients (Source: Model Context Protocol Blog, "The 2026-07-28 Specification"; Releasebot, August 2026 — primary/secondary).</li>
+      <li><strong>GPT-5.6 tiers and ChatGPT Work (carry from July 9).</strong> OpenAI's July 9 GA restructured the lineup into durable capability tiers — <strong>Sol ($5/$30), Terra ($2/$12), Luna ($0.20/$1.20)</strong> — and launched <strong>ChatGPT Work</strong>, an agentic system that executes multi-hour projects across team files and apps; Sol scores <strong>59</strong> on the Intelligence Index (Source: blog.mean.ceo, August 2026; officechai, July 2026 — press). ⚠️ Independent scheming-behavior notes on Sol remain a watch item for high-stakes factual work.</li>
+      <li><strong>Meta Muse Spark — MCP tool-use leader (with an unconfirmed 1.2).</strong> <strong>Muse Spark 1.1 (released July 9) leads Scale SEAL's MCP Atlas tool-use board at 88.1</strong> (Source: officechai; blog.mean.ceo, August 2026 — press/aggregator). ⚠️ A reported "Muse Spark 1.2" appears only on a single aggregator tracker; treat it as unconfirmed and validate against Meta's own release notes before any client-facing claim.</li>
+      <li><strong>Gemini 3.5 Pro — still not released (carry).</strong> As of August 8 it sits in limited partner testing, not on the consumer Gemini app or AI Studio; it missed its Google I/O promise and multiple subsequent targets (June, July, a widely-reported July 17) on hallucination-rate and reliability shortfalls, DeepMind reportedly rebuilt the base model, and Google shipped Gemini 3.6 Flash, 3.5 Flash-Lite and 3.5 Flash Cyber instead (Source: TechCrunch, July 21; TechTimes, July 13 — press). ⚠️ A prediction market favored August 7, which has now passed; treat every spec, date, and benchmark as unconfirmed until Google publishes a model card.</li>
+      </ul>
+      <p><strong>What This Means for You.</strong> Two dated items still sit at the top of any live delivery list. First, the MCP migration remains the concrete engineering task: run every connector against the new Tier 1 SDKs, confirm nothing relies on the removed handshake or session header, and note that the new revision is not backward-compatible with older clients. Second, the model field is stable enough to standardize on: Opus 5 as the default with a tunable effort setting, GPT-5.6's tiers where cost matters, and Kimi K3 as a ready open-weight trial for data-residency-conscious teams via third-party day-0 hosting. Palantir's AI-sovereignty print and Nvidia's SpaceX exclusivity nod are live talking points for any governance and data-handling program — the buildout is concentrating around a small set of infrastructure and data-control vendors, which is exactly the concentration risk a documented AI implementation policy should name.</p>
+      <h2 id="4-overnight-daily-release-monitor">4. Overnight / Daily Release Monitor</h2>
+      <p>Covering roughly August 7 – August 8 since the prior briefing. <strong>Figures below are Friday, August 7 US closes, reported results, and confirmed scheduled events.</strong> Markets are closed for the weekend.</p>
+      <ul>
+      <li><strong>No new frontier proprietary model confirmed overnight.</strong> Gemini 3.5 Pro remains unconfirmed as released, its prediction-market-favored August 7 date now passed; Claude Opus 5 (July 24) and GPT-5.6 (July 9 GA) are the current frontier-adjacent releases. A reported Meta "Muse Spark 1.2" appears on one aggregator tracker only — ⚠️ unconfirmed against a primary source.</li>
+      <li><strong>Friday's US closes — the record run resumes:</strong> S&amp;P 500 <strong>7,757.64 (+0.62%)</strong>, a record; Dow <strong>54,036.93 (+151.83, +0.28%)</strong>, a record; Nasdaq Composite <strong>26,690.62 (+1.3%)</strong>, still below its June 1 record of <strong>27,086.81</strong> (Source: STL.News; Yahoo Finance; Wikipedia closing-milestones reference, August 7, 2026 — press/reference). It was the strongest week for the major indexes since mid-April.</li>
+      <li><strong>The July jobs report drove it.</strong> Nonfarm payrolls <strong>fell 23,000</strong> (vs a roughly <strong>83,000</strong> gain expected), with government jobs <strong>down 53,000</strong> and private payrolls <strong>up 30,000</strong>; the unemployment rate edged to <strong>4.1%</strong>; average hourly earnings' 12-month gain slipped to <strong>3.2%</strong>, the lowest since May 2021 (Source: CNBC; Yahoo Finance; U.S. BLS, August 7, 2026 — press/primary).</li>
+      <li><strong>Single-stock movers.</strong> Palantir <strong>+10.32%</strong> to <strong>$172.01</strong> on a Bank of America target raise to <strong>$255</strong>; SpaceX <strong>+15.83%</strong> to <strong>$133.11</strong> on a Q2 revenue beat and lockup relief; Nvidia <strong>+1%+</strong> Friday and <strong>+10%+</strong> on the week on Musk's SpaceX chip-exclusivity comment (Source: Yahoo Finance; STL.News, August 7, 2026 — press). 🔶 Single-name percentages are intraday-to-close snapshots.</li>
+      <li><strong>Anthropic corporate &amp; product notes.</strong> Claude Opus 5 is the default on Claude Max and the default Opus in Claude Code; Sonnet 5's promotional <strong>$2/$10</strong> pricing ends <strong>August 31</strong>, with standard <strong>$3/$15</strong> from <strong>September 1</strong> (Source: Releasebot, Anthropic release notes, August 2026 — secondary). ⚠️ Reliability remains a press watch item — earlier tallies cited well over 160 documented Claude outages since January 2026; treat any outage count as press-compiled, not an official figure.</li>
+      <li><strong>Nvidia earnings ahead.</strong> Fiscal-Q2 results are scheduled for <strong>August 26</strong>, the next major AI-infrastructure data point; Street focus is on Blackwell shipments and AI-customer financing commentary (Source: STL.News; company calendar, August 2026 — press). Scheduled event, not a forecast.</li>
+      <li><strong>EU AI Act, Article 50 — remains in force.</strong> The general transparency obligations applied from <strong>August 2, 2026</strong>: people must be told when they are interacting with an AI (chatbots, voice assistants, AI agents), and AI-generated synthetic audio, image, video, and text must be marked machine-readable and detectable. The obligations apply to all in-scope systems regardless of market date, but the AI Omnibus provisional agreement (May 2026) gives generative systems already on the market before August 2 until <strong>December 2, 2026</strong> to meet the machine-readable marking requirement (Article 50(2)). Penalties can reach <strong>€15 million or 3% of worldwide annual turnover</strong>, whichever is higher (Source: Cooley, "EU AI Act: Transparency Obligations Take Effect 2 August 2026," August 3; European Commission digital-strategy, 2026 — legal analysis/primary). ⚠️ Compliance awareness, not legal advice; confirm applicability with counsel.</li>
+      </ul>
+      <p><strong>What This Means for You.</strong> The near-term work is concrete: a connector-validation pass against the new stateless SDKs, plus a review of any client-facing AI surfaces now that Article 50 is live. The EU transparency duties are in force — chatbots and AI agents must disclose they are AI, and synthetic content must be marked — while the heavier machine-readable content-marking obligation for pre-existing generative systems runs to December 2. Any customer-facing material that still describes these duties as "upcoming" needs a correction pass to "in force." This is compliance awareness, not legal advice — describe the landscape and route determinations to qualified counsel.</p>
+      <h2 id="5-ai-trading-trends">5. AI Trading Trends</h2>
+      <p><em>Market intelligence for situational awareness — not investment advice. No buy, sell or hold recommendations, price targets, or return forecasts appear here; where an analyst target is cited it is reported as a third party's published view, not this briefing's. Figures below are Friday, August 7 US closes, reported results, and confirmed scheduled events. Every figure carries a source and a confidence note.</em></p>
+      <h3 id="5a-ipos-the-public-market-ai-wave">5a. IPOs — the public-market AI wave</h3>
+      <ul>
+      <li><strong>Anthropic</strong> remains the calendar item that matters most for the US public-market AI wave. A confidential S-1 was filed June 1; Goldman Sachs, JPMorgan and Morgan Stanley are leading; an <strong>October Nasdaq listing</strong> is targeted — one tracker cites a reported <strong>October 23</strong> date — with a raise reported at <strong>more than $60 billion</strong>, a last private valuation near <strong>$965 billion</strong>, and secondary-market trading implying roughly <strong>$1.05 trillion to $1.2 trillion</strong>; the company is running toward an annualized revenue of roughly <strong>$47 billion</strong> reached in May 2026 (Source: cryptobriefing, "Anthropic targets IPO by October 2026 after $965B valuation," 2026; gradually.ai, "Anthropic IPO 2026," 2026 — press). ⚠️ No share count, price range or firm date has been formally set; the offering remains subject to SEC review. Rival <strong>OpenAI has reportedly postponed its own IPO to 2027</strong>, which — if the October listing holds — would let Anthropic reach the public market first (Source: gradually.ai, 2026 — press).</li>
+      <li><strong>SpaceX</strong> is the realized AI-exposed listing of the season, and Friday resolved its lockup overhang decisively: <strong>shares surged 15.83% to $133.11</strong> on a Q2 revenue beat and lockup relief after its first post-IPO lockup expiry, with a joint "Terafab" update alongside Tesla adding to the move (Source: Yahoo Finance, "Space Exploration Technologies Surges on Q2 Revenue Beat, Lockup Relief, and Terafab Update," August 7, 2026 — press). ⚠️ IPO-price sourcing has conflicted across outlets earlier in the run; re-confirm against the prospectus before external use.</li>
+      <li><strong>OpenAI</strong> filed an S-1 on June 8 but has signaled the timing "may be a while," consistent with the reported push to 2027 and reinforcing skepticism about a 2026 listing (Source: gradually.ai, 2026 — press; ⚠️ not company-confirmed as scheduled).</li>
+      </ul>
+      <h3 id="5b-top-5-traded-ai-related-tickers">5b. Top 5 traded AI-related tickers</h3>
+      <p>⚠️ This is not a definitive most-traded-by-volume ranking from a single authoritative source. Figures are Friday, August 7 US closes and recent reported results; re-confirm against a live exchange leaderboard before any external use.</p>
+      <div class="table-wrap"><table>
+      <thead>
+      <tr>
+      <th>#</th>
+      <th>Ticker</th>
+      <th>Company</th>
+      <th>Why it's an AI-trading bellwether</th>
+      <th>Latest verifiable signal</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>1</td>
+      <td>NVDA</td>
+      <td>Nvidia</td>
+      <td>The core AI-infrastructure name; the rally's chip anchor</td>
+      <td>Rose <strong>more than 1%</strong> Friday and <strong>over 10%</strong> on the week after Musk said SpaceX would use Nvidia chips exclusively for AI infrastructure; fiscal-Q2 results due August 26 (Source: STL.News, August 7 — press)</td>
+      </tr>
+      <tr>
+      <td>2</td>
+      <td>PLTR</td>
+      <td>Palantir</td>
+      <td>Enterprise AI-adoption and "AI-sovereignty" read</td>
+      <td>Closed <strong>+10.32%</strong> at <strong>$172.01</strong> (about <strong>+35%</strong> over five sessions) after Bank of America reaffirmed Buy and raised its target to <strong>$255</strong>; August 4 results: revenue <strong>$1.94B (+93%)</strong>, adjusted EPS <strong>$0.41</strong> vs $0.35 (Source: Yahoo Finance; CNBC, August 4 — press)</td>
+      </tr>
+      <tr>
+      <td>3</td>
+      <td>SPCX</td>
+      <td>SpaceX</td>
+      <td>Newly public AI-exposed name; lockup resolved</td>
+      <td>Surged <strong>+15.83%</strong> to <strong>$133.11</strong> Friday on a Q2 revenue beat, lockup relief, and a Terafab update with Tesla (Source: Yahoo Finance, August 7 — press)</td>
+      </tr>
+      <tr>
+      <td>4</td>
+      <td>AMD</td>
+      <td>Advanced Micro Devices</td>
+      <td>AI-accelerator demand read</td>
+      <td>Record Q2 (~<strong>$11.5B</strong> revenue, EPS ~<strong>$1.66</strong>), Q3 guide ~<strong>$11.2B (+46% YoY)</strong>, Helios AI rack shipping to Meta/OpenAI/Oracle (Source: TradingKey, "August 3–7 2026 preview," August 2026 — press). 🔶 Same-day price reaction has been conflicting across sources; re-confirm before external use</td>
+      </tr>
+      <tr>
+      <td>5</td>
+      <td>GOOGL</td>
+      <td>Alphabet</td>
+      <td>Frontier-lab and hyperscaler bellwether</td>
+      <td>Participated in Friday's broad tech rally; Gemini 3.5 Pro still unreleased — its August 7 prediction-market date now passed — remains the overhang (Source: Yahoo Finance; TechCrunch, July 21 — press)</td>
+      </tr>
+      </tbody>
+      </table></div>
+      <p><strong>Week ahead (August 8 – August 14) — calendar, not forecast.</strong> <strong>AI-exposed earnings continue after Palantir, AMD and SpaceX.</strong> <strong>Watch whether Google publishes a Gemini 3.5 Pro model card now that its prediction-market date has passed.</strong> <strong>Watch any follow-through on the energy/rates picture after the soft July jobs report reset rate-hike odds.</strong> <strong>Nvidia's fiscal-Q2 report on August 26 is the next major AI-infrastructure data point.</strong> <strong>The EU AI Act's Article 50 transparency obligations remain in force as of August 2.</strong> (Source: European Commission; company calendars — scheduled events, not predictions.)</p>
+      <p><strong>What This Means for You.</strong> The gap between what the market reprices and what organizations can actually deploy stays wide. Friday's rally — record S&amp;P 500 and Dow closes, the strongest week since April, on a dovish jobs read — repriced the macro and infrastructure layer without changing which models a delivery team can put into production this week. That set is stable: Claude Opus 5 as the load-bearing default with an effort setting, GPT-5.6 as the mature competitor, and Kimi K3 as a benchmarked open-weight base. The Anthropic and OpenAI listings stay tracking items, not a basis for action; Palantir's AI-sovereignty surge and Nvidia's SpaceX exclusivity signal are the more useful reads, because they map to the data-control and infrastructure guarantees that governance work is meant to deliver. Market intelligence only, not investment advice.</p>
+      <h2 id="sources">Sources</h2>
+      <ul>
+      <li>STL.News, "U.S. Stock Market Today — Friday, August 7, 2026," August 7, 2026. <a href="https://www.stl.news/u-s-stock-market-today-friday-august-7-2026/" target="_blank" rel="noopener">https://www.stl.news/u-s-stock-market-today-friday-august-7-2026/</a></li>
+      <li>The Washington Post, "How major US stock indexes fared Friday 8/7/2026," August 7, 2026. <a href="https://www.washingtonpost.com/business/2026/08/07/stocks-dow-jones-iran-oil-fed-interest-rates/1f4daa84-929d-11f1-9fdc-0a725c989a7b_story.html" target="_blank" rel="noopener">https://www.washingtonpost.com/business/2026/08/07/stocks-dow-jones-iran-oil-fed-interest-rates/1f4daa84-929d-11f1-9fdc-0a725c989a7b_story.html</a></li>
+      <li>CNBC, "S&amp;P 500 rises to record close Friday and posts strongest week since April: Live updates," August 7, 2026. <a href="https://www.cnbc.com/2026/08/06/stock-market-today-live-updates.html" target="_blank" rel="noopener">https://www.cnbc.com/2026/08/06/stock-market-today-live-updates.html</a></li>
+      <li>Yahoo Finance, "Stock market today: Dow, S&amp;P 500, Nasdaq rise after July jobs report surprises to the downside," August 7, 2026. <a href="https://finance.yahoo.com/markets/live/stock-market-today-friday-august-7-nasdaq-dow-sp-500-july-jobs-report-surprises-100009572.html" target="_blank" rel="noopener">https://finance.yahoo.com/markets/live/stock-market-today-friday-august-7-nasdaq-dow-sp-500-july-jobs-report-surprises-100009572.html</a></li>
+      <li>CNBC, "Jobs report July 2026," August 7, 2026. <a href="https://www.cnbc.com/2026/08/07/jobs-report-july-2026.html" target="_blank" rel="noopener">https://www.cnbc.com/2026/08/07/jobs-report-july-2026.html</a></li>
+      <li>Yahoo Finance, "U.S. jobs report July 2026: Payrolls fell 23,000," August 7, 2026. <a href="https://finance.yahoo.com/economy/articles/u-payrolls-fell-23-000-123501443.html" target="_blank" rel="noopener">https://finance.yahoo.com/economy/articles/u-payrolls-fell-23-000-123501443.html</a></li>
+      <li>CNBC, "Here are three key takeaways from the disappointing July jobs report," August 7, 2026. <a href="https://www.cnbc.com/2026/08/07/here-are-three-key-takeaways-from-the-disappointing-july-jobs-report.html" target="_blank" rel="noopener">https://www.cnbc.com/2026/08/07/here-are-three-key-takeaways-from-the-disappointing-july-jobs-report.html</a></li>
+      <li>U.S. Bureau of Labor Statistics, "The Employment Situation — July 2026," August 7, 2026. <a href="https://www.bls.gov/news.release/empsit.nr0.htm" target="_blank" rel="noopener">https://www.bls.gov/news.release/empsit.nr0.htm</a></li>
+      <li>Yahoo Finance, "Stock Market Today, Aug. 7: Palantir Surges on Bank of America Upbeat View After Strong Earnings," August 7, 2026. <a href="https://finance.yahoo.com/markets/stocks/articles/stock-market-today-aug-7-210516298.html" target="_blank" rel="noopener">https://finance.yahoo.com/markets/stocks/articles/stock-market-today-aug-7-210516298.html</a></li>
+      <li>Yahoo Finance, "Stock Market Today, Aug. 7: Space Exploration Technologies Surges on Q2 Revenue Beat, Lockup Relief, and Terafab Update," August 7, 2026. <a href="https://finance.yahoo.com/markets/stocks/articles/stock-market-today-aug-7-221915237.html" target="_blank" rel="noopener">https://finance.yahoo.com/markets/stocks/articles/stock-market-today-aug-7-221915237.html</a></li>
+      <li>Yahoo Finance (Canada), "SpaceX And Palantir Lead Tech Stock Rally After Underwhelming Jobs Report," August 7, 2026. <a href="https://ca.finance.yahoo.com/news/spacex-palantir-lead-tech-stock-145917235.html" target="_blank" rel="noopener">https://ca.finance.yahoo.com/news/spacex-palantir-lead-tech-stock-145917235.html</a></li>
+      <li>CNBC, "Palantir stock rises 29% on soaring commercial revenue, AI sovereignty," August 4, 2026. <a href="https://www.cnbc.com/2026/08/04/palantir-2q-earnings-ai-sovereign-tools.html" target="_blank" rel="noopener">https://www.cnbc.com/2026/08/04/palantir-2q-earnings-ai-sovereign-tools.html</a></li>
+      <li>TheStreet, "Stock Market Today (Aug. 4, 2026): Record closes for S&amp;P 500, Dow as tech comeback continues; SpaceX and AMD report earnings," August 4, 2026. <a href="https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-aug-4-2026" target="_blank" rel="noopener">https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-aug-4-2026</a></li>
+      <li>TradingKey, "August 3–7 2026 preview: Palantir, AMD, SanDisk earnings and NFP jobs report," August 2026. <a href="https://www.tradingkey.com/analysis/stocks/us-stocks/262067492-august-3-7-2026-preview-palantir-amd-sandisk-earnings-nfarm-payrolls-tradingkey" target="_blank" rel="noopener">https://www.tradingkey.com/analysis/stocks/us-stocks/262067492-august-3-7-2026-preview-palantir-amd-sandisk-earnings-nfarm-payrolls-tradingkey</a></li>
+      <li>Wikipedia, "Closing milestones of the Nasdaq Composite." <a href="https://en.wikipedia.org/wiki/Closing_milestones_of_the_Nasdaq_Composite" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Closing_milestones_of_the_Nasdaq_Composite</a></li>
+      <li>officechai, "Claude Opus 5 Becomes Top Model In The World On Artificial Analysis Intelligence Index, Beats Fable 5," July 2026. <a href="https://officechai.com/ai/claude-opus-5-becomes-top-model-in-the-world-on-artificial-analysis-intelligence-index-beats-fable-5/" target="_blank" rel="noopener">https://officechai.com/ai/claude-opus-5-becomes-top-model-in-the-world-on-artificial-analysis-intelligence-index-beats-fable-5/</a></li>
+      <li>BenchLM.ai, "Artificial Analysis Intelligence Index Leaderboard (August 2026): Claude Opus 5 Leads at 60.7%," August 2026. <a href="https://benchlm.ai/benchmarks/artificialanalysis" target="_blank" rel="noopener">https://benchlm.ai/benchmarks/artificialanalysis</a></li>
+      <li>the-decoder, "Anthropic's Claude Opus 5 costs well below Fable 5 while matching or beating it across most benchmarks," July 2026. <a href="https://the-decoder.com/anthropics-claude-opus-5-costs-well-below-fable-5-while-matching-or-beating-it-across-most-benchmarks/" target="_blank" rel="noopener">https://the-decoder.com/anthropics-claude-opus-5-costs-well-below-fable-5-while-matching-or-beating-it-across-most-benchmarks/</a></li>
+      <li>MarkTechPost, "Meet the New Claude Opus 5: Frontier-Class Agentic Coding and Computer Use at Unchanged Opus Pricing," July 24, 2026. <a href="https://www.marktechpost.com/2026/07/24/meet-the-new-claude-opus-5-frontier-class-agentic-coding-and-computer-use-at-unchanged-opus-pricing/" target="_blank" rel="noopener">https://www.marktechpost.com/2026/07/24/meet-the-new-claude-opus-5-frontier-class-agentic-coding-and-computer-use-at-unchanged-opus-pricing/</a></li>
+      <li>LLM-Stats, "AI Updates Today (August 2026) — Latest AI Model Releases." <a href="https://llm-stats.com/llm-updates" target="_blank" rel="noopener">https://llm-stats.com/llm-updates</a></li>
+      <li>blog.mean.ceo, "New AI Model Releases News — August 2026 (Startup Edition)," August 2026. <a href="https://blog.mean.ceo/new-ai-model-releases-news-august-2026/" target="_blank" rel="noopener">https://blog.mean.ceo/new-ai-model-releases-news-august-2026/</a></li>
+      <li>Model Context Protocol Blog, "The 2026-07-28 Specification." <a href="https://blog.modelcontextprotocol.io/posts/2026-07-28/" target="_blank" rel="noopener">https://blog.modelcontextprotocol.io/posts/2026-07-28/</a></li>
+      <li>Releasebot, "Anthropic Release Notes — August 2026 Latest Updates." <a href="https://releasebot.io/updates/anthropic" target="_blank" rel="noopener">https://releasebot.io/updates/anthropic</a></li>
+      <li>Releasebot, "Claude Code Updates by Anthropic — August 2026." <a href="https://releasebot.io/updates/anthropic/claude-code" target="_blank" rel="noopener">https://releasebot.io/updates/anthropic/claude-code</a></li>
+      <li>TechCrunch, "Google releases three new Gemini models — but no 3.5 Pro," July 21, 2026. <a href="https://techcrunch.com/2026/07/21/google-releases-three-new-gemini-models-but-no-3-5-pro/" target="_blank" rel="noopener">https://techcrunch.com/2026/07/21/google-releases-three-new-gemini-models-but-no-3-5-pro/</a></li>
+      <li>TechTimes, "Gemini 3.5 Pro Targets July 17 After Full Rebuild: Every Spec Remains Unconfirmed," July 13, 2026. <a href="https://www.techtimes.com/articles/320308/20260713/gemini-35-pro-targets-july-17-after-full-rebuild-every-spec-remains-unconfirmed.htm" target="_blank" rel="noopener">https://www.techtimes.com/articles/320308/20260713/gemini-35-pro-targets-july-17-after-full-rebuild-every-spec-remains-unconfirmed.htm</a></li>
+      <li>cryptobriefing, "Anthropic targets IPO by October 2026 after $965B valuation." <a href="https://cryptobriefing.com/anthropic-targets-ipo-by-october-2026-after-965b-valuation/" target="_blank" rel="noopener">https://cryptobriefing.com/anthropic-targets-ipo-by-october-2026-after-965b-valuation/</a></li>
+      <li>gradually.ai, "Anthropic IPO 2026: Valuation, Stock &amp; Date." <a href="https://www.gradually.ai/en/anthropic-ipo/" target="_blank" rel="noopener">https://www.gradually.ai/en/anthropic-ipo/</a></li>
+      <li>Cooley, "EU AI Act: Transparency Obligations Take Effect 2 August 2026," August 3, 2026. <a href="https://www.cooley.com/news/insight/2026/2026-08-03-eu-ai-act-transparency-obligations-take-effect-2-august-2026" target="_blank" rel="noopener">https://www.cooley.com/news/insight/2026/2026-08-03-eu-ai-act-transparency-obligations-take-effect-2-august-2026</a></li>
+      <li>European Commission, "Guidelines on transparency obligations for providers and deployers of AI systems." <a href="https://digital-strategy.ec.europa.eu/en/library/guidelines-transparency-obligations-providers-and-deployers-ai-systems" target="_blank" rel="noopener">https://digital-strategy.ec.europa.eu/en/library/guidelines-transparency-obligations-providers-and-deployers-ai-systems</a></li>
+      </ul>
+    </article>
+
+    <section class="cta-band" id="contact" aria-labelledby="cta-heading">
+      <h2 id="cta-heading">From AI curiosity to AI capability</h2>
+      <p>This briefing is part of the field research behind our AI Enablement service &mdash; a curated, white-glove Claude Cowork implementation tailored to your organization&rsquo;s workflow.</p>
+      <a class="btn" href="https://calendly.com/mark-malaniru/30min" target="_blank" rel="noopener">Book a discovery call</a>
+    </section>
+    <!-- mal-ai-disclaimer:v1 -->
+  <aside class="mal-ai-disclaimer" role="note" aria-label="AI transparency notice" style="max-width:760px;margin:2.5rem auto 0;padding:1rem 1.25rem;border:1px solid #d9c3a5;border-left:4px solid #C07830;border-radius:6px;background:#faf6f0;color:#5c5347;font-size:0.82rem;line-height:1.6;box-sizing:border-box;">
+    <strong style="display:block;color:#8a5a1e;font-size:0.78rem;letter-spacing:.04em;text-transform:uppercase;margin-bottom:.35rem;">AI Transparency Notice</strong>
+    This article was produced through Malaniru&rsquo;s guided-research process: generated with the assistance of AI and reviewed by a person before publication (human-in-the-loop). In line with EU AI Act transparency obligations, we disclose that AI systems were used to create this content. It is provided for general information only, may contain inaccuracies, and is not professional advice &mdash; verify before relying on it.
+  </aside>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Malaniru Inc, LLC &middot; Lafayette, Colorado &middot; AI Enablement</p>
+    <p><a href="daily-intelligence-briefings.html">&larr; Back to Daily Intelligence Briefings</a> &middot; <a href="index.html">AI Enablement</a></p>
+      <nav class="mal-footernav" data-mal-footernav aria-label="Site" style="margin-top:0.7rem;font-size:0.82rem;line-height:1.9;">
+      <a href="about.html" style="color:#C07830;font-weight:700;text-decoration:none;">About</a> &middot;
+      <a href="pricing.html" style="color:#C07830;font-weight:700;text-decoration:none;">Pricing</a> &middot;
+      <a href="index.html" style="color:#C07830;font-weight:700;text-decoration:none;">AI Enablement</a>
+     &middot;
+      <a href="privacy-policy.html" style="color:#C07830;font-weight:700;text-decoration:none;">Privacy</a>
+    </nav>
+  </footer>
+</body>
+</html>
