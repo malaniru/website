@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<!--
+  Malaniru - Daily Intelligence Briefing (branded HTML)
+  Built by: publish_briefing_page.py - Date: 2026-08-25
+  Source:   Projects/Malaniru_Marketing_Site/Staging/20260825-daily-intelligence-briefing.md
+  FIDELITY: Body rendered VERBATIM from the source markdown. No copy edits.
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daily Intelligence Briefing — Tuesday, August 25, 2026 - Malaniru</title>
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.malaniru.com/briefing-2026-08-25">
+  <meta name="description" content="Tuesday&#x27;s briefing leads with the release the last three briefings kept saying had not happened. Claude Code published v2.1.243 — 60 changes — and v2.1.245, a hotfix for a Linux startup crash, both dated August 25; the governance-relevant items are a modelPricing managed setting that puts an organization&#x27;s contracted rates into /cost, a keyless Console sign-in for organizations that forbid API keys, and a fix for remote MCP servers that never recovered from a dropped connection in headless and SDK sessions. Separately, the Model Context Protocol maintainers published a new roadmap on August 22 that this series did not carry — progressive tool discovery is the item that matters. Monday&#x27;s tape was a memory sell-off: Micron closed down 5.83% at $910.43, Nvidia down 2.91% at $208.48 on its seventh straight decline, with the Nasdaq off 0.8% to 25,980.19 while the Dow closed green. Nvidia reports Wednesday after the close against its own $91.0 billion ±2% guide, and this briefing withdraws yesterday&#x27;s single-point consensus figure because the sources do not support one. A full check of the August IPO book found no AI listing at all. Every figure carries a source and a confidence tag; this is market intelligence, not investment advice.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --navy:#0F1A2E;--navy-mid:#2A3F63;--copper:#C07830;--gold:#D4A853;
+      --off-white:#F4F1EC;--light-gray:#E8E6E1;--mid-gray:#8A8A96;--dark-text:#1C1C1C;
+      --font:"Inter","Helvetica Neue",Arial,sans-serif;
+    }
+    *{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:var(--font);background:var(--off-white);color:var(--dark-text);line-height:1.65;font-size:16px;-webkit-font-smoothing:antialiased;}
+    .skip-link{position:absolute;left:-999px;top:0;background:var(--gold);color:var(--navy);padding:10px 16px;font-weight:700;z-index:10;}
+    .skip-link:focus{left:8px;top:8px;}
+    a{color:var(--copper);}
+    /* Header */
+    header{background: linear-gradient(160deg, rgba(15,26,46,0.72) 0%, rgba(10,18,33,0.82) 100%), url('StockCake-Cosmic_Web_Complexity-1361288-standard-rot90ccw.jpg'); background-size: auto, 100% 100%; background-repeat: no-repeat, no-repeat; background-position: center, center;color:var(--off-white);padding:48px 24px 52px;position:relative;overflow:hidden;}
+    header::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 85% 12%,rgba(192,120,48,0.20) 0%,rgba(15,26,46,0) 55%);pointer-events:none;}
+    .header-inner{max-width:760px;margin:0 auto;position:relative;z-index:1;}
+    .wordmark{font-weight:800;font-size:1.25rem;letter-spacing:0.02em;margin-bottom:30px;}
+    .wordmark .dot{color:var(--copper);}
+    .wordmark a{color:var(--off-white);text-decoration:none;transition:opacity .18s ease;}
+    .wordmark a:hover,.wordmark a:focus-visible{opacity:.85;outline:none;}
+    .eyebrow{display:inline-block;font-size:0.72rem;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;}
+    header h1{font-weight:800;font-size:clamp(1.8rem,4.6vw,2.6rem);line-height:1.14;letter-spacing:-0.01em;margin-bottom:16px;}
+    .byline{font-size:0.9rem;color:var(--light-gray);letter-spacing:0.01em;}
+    .byline .sep{color:var(--copper);margin:0 8px;}
+    .lede{font-size:1.08rem;color:var(--light-gray);max-width:66ch;margin-top:18px;}
+    .backlink{display:inline-block;margin-top:26px;color:var(--gold);font-weight:600;font-size:0.9rem;text-decoration:none;border-bottom:1px solid rgba(212,168,83,0.4);}
+    .backlink:hover,.backlink:focus-visible{border-bottom-color:var(--gold);outline:none;}
+    /* Article */
+    main{max-width:760px;margin:0 auto;padding:48px 24px 8px;}
+    .disclaimer{background:#fff;border:1px solid var(--light-gray);border-left:4px solid var(--copper);border-radius:8px;padding:14px 18px;font-size:0.9rem;color:var(--navy-mid);margin-bottom:34px;}
+    article{font-size:1.05rem;}
+    article h2{font-weight:800;font-size:1.5rem;color:var(--navy);line-height:1.22;letter-spacing:-0.01em;margin:42px 0 14px;}
+    article h3{font-weight:700;font-size:1.18rem;color:var(--navy-mid);line-height:1.25;margin:30px 0 10px;}
+    article h2 + p, article h3 + p{margin-top:0;}
+    article p{margin:0 0 18px;color:var(--dark-text);}
+    article ul,article ol{margin:0 0 18px;padding-left:24px;}
+    article li{margin-bottom:8px;}
+    article strong{font-weight:700;color:var(--navy);}
+    article em{font-style:italic;}
+    article a{color:var(--copper);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(192,120,48,0.35);transition:border-color .18s ease;}
+    article a:hover,article a:focus-visible{border-bottom-color:var(--copper);outline:none;}
+    article hr{border:none;border-top:1px solid var(--light-gray);margin:34px 0;}
+    article h2#sources, article h2#references{border-top:1px solid var(--light-gray);padding-top:30px;font-size:1.2rem;color:var(--navy-mid);}
+    /* sources list smaller */
+    article h2[id^="sources"] ~ ul li, article h3[id^="sources"] ~ ul li{font-size:0.95rem;color:var(--navy-mid);}
+    /* tables */
+    article table{width:100%;border-collapse:collapse;margin:0 0 24px;font-size:0.95rem;}
+    article th,article td{border:1px solid var(--light-gray);padding:9px 12px;text-align:left;vertical-align:top;}
+    article thead th{background:var(--navy);color:var(--off-white);font-weight:700;}
+    article tbody tr:nth-child(even){background:#fff;}
+    article .table-wrap{overflow-x:auto;margin:0 0 24px;}
+    article .table-wrap table{margin:0;}
+    /* CTA */
+    .cta-band{background:var(--navy);color:var(--off-white);border-radius:12px;padding:42px 32px;text-align:center;margin:48px 0 8px;}
+    .cta-band h2{font-weight:800;font-size:clamp(1.4rem,3.4vw,1.9rem);margin-bottom:12px;letter-spacing:-0.01em;color:var(--off-white);}
+    .cta-band p{color:var(--light-gray);max-width:52ch;margin:0 auto 24px;}
+    .cta-band .btn{display:inline-block;background:var(--copper);color:#fff;font-weight:700;padding:13px 28px;border-radius:8px;text-decoration:none;transition:background .18s ease;}
+    .cta-band .btn:hover,.cta-band .btn:focus-visible{background:var(--gold);color:var(--navy);outline:none;}
+    /* Footer */
+    footer{max-width:760px;margin:16px auto 0;padding:24px;font-size:0.82rem;color:var(--mid-gray);border-top:1px solid var(--light-gray);}
+    footer p+p{margin-top:6px;}
+    footer a{color:var(--mid-gray);text-decoration:underline;}
+    @media (prefers-reduced-motion:reduce){*{transition:none!important;}}
+
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header>
+    <div class="header-inner">
+      <div class="wordmark"><a href="index.html">Malaniru<span class="dot">.</span></a></div>
+      <span class="eyebrow">AI Enablement &middot; Daily Intelligence Briefing</span>
+      <h1>Daily Intelligence Briefing — Tuesday, August 25, 2026</h1>
+      <p class="byline">By Mark Andrew Harris<span class="sep">&middot;</span>August 25, 2026</p>
+      <p class="lede">Tuesday&#x27;s briefing leads with the release the last three briefings kept saying had not happened. Claude Code published v2.1.243 — 60 changes — and v2.1.245, a hotfix for a Linux startup crash, both dated August 25; the governance-relevant items are a modelPricing managed setting that puts an organization&#x27;s contracted rates into /cost, a keyless Console sign-in for organizations that forbid API keys, and a fix for remote MCP servers that never recovered from a dropped connection in headless and SDK sessions. Separately, the Model Context Protocol maintainers published a new roadmap on August 22 that this series did not carry — progressive tool discovery is the item that matters. Monday&#x27;s tape was a memory sell-off: Micron closed down 5.83% at $910.43, Nvidia down 2.91% at $208.48 on its seventh straight decline, with the Nasdaq off 0.8% to 25,980.19 while the Dow closed green. Nvidia reports Wednesday after the close against its own $91.0 billion ±2% guide, and this briefing withdraws yesterday&#x27;s single-point consensus figure because the sources do not support one. A full check of the August IPO book found no AI listing at all. Every figure carries a source and a confidence tag; this is market intelligence, not investment advice.</p>
+      <a class="backlink" href="daily-intelligence-briefings.html">&larr; All daily intelligence briefings</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <article>
+      <p><strong>[THOUGHT LEADERSHIP] [DRAFT — Pending Copy Review]</strong></p>
+      <h2 id="executive-summary">Executive Summary</h2>
+      <p><strong>The release this series spent three days describing as absent arrived overnight, and it is large.</strong> Claude Code published <strong>v2.1.243 — 60 changes — and v2.1.245, both dated August 25, 2026</strong> (Source: Claude Code changelog, retrieved 2026-08-25 — primary). ✅ The consequential items are governance items, not features: a <strong><code>modelPricing</code> managed setting</strong> that makes <code>/cost</code>, the status line and telemetry use an organization's contracted rates instead of list price; a <strong>keyless sign-in through the Anthropic Console</strong> for organizations that do not permit API keys; and a fix for <strong>remote MCP servers that never recovered from a dropped connection in non-interactive (<code>-p</code>) and SDK sessions</strong>. <strong>A second item is a correction to this series.</strong> The <strong>Model Context Protocol maintainers published a new roadmap on August 22</strong> — five priority areas, of which <strong>progressive tool discovery</strong> is the one that changes how MCP servers should be built — and yesterday's briefing did not carry it (Source: blog.modelcontextprotocol.io, "The New MCP Roadmap," August 22, 2026 — primary). ⚠️ <strong>A miss, corrected here.</strong> <strong>Monday's tape was a memory sell-off.</strong> <strong>Micron closed at $910.43, down $56.35 or 5.83%; Nvidia at $208.48, down $6.24 or 2.91% on its seventh consecutive decline; AMD at $456.75, down 3.49%.</strong> The <strong>Nasdaq Composite fell 200.26 points, or 0.8%, to 25,980.19</strong>, while the <strong>Dow closed up 140.15, or 0.3%, at 53,417.16</strong> (Sources: Associated Press index summary; quote records — press). <strong>Nvidia reports Wednesday after the close</strong> against its own guide of <strong>$91.0 billion ±2%</strong>, and this briefing <strong>withdraws yesterday's single-point consensus figure</strong> — the sources checked today print a range, not a number. <strong>And a check of the entire August IPO book turned up no AI listing at all.</strong></p>
+      <hr />
+      <h2 id="1-ai-market-trends">1. AI Market Trends</h2>
+      <p><strong>Monday's story was memory, and the explanations do not fully cohere.</strong> The three verifiable closes are these: <strong>Micron $910.43, down $56.35 or 5.83%, on 30,012,631 shares; Nvidia $208.48, down $6.24 or 2.91%, on 135,187,288 shares; AMD $456.75, down $16.50 or 3.49%, on 16,602,166 shares</strong> (Source: quote records citing S&amp;P Global Market Intelligence / CBOE / Nasdaq UTP, retrieved August 25, 2026). ✅ Those are closes, not intraday prints. The index picture: <strong>S&amp;P 500 7,652.86 (-21.51, -0.3%)</strong>, <strong>Dow 53,417.16 (+140.15, +0.3%)</strong>, <strong>Nasdaq Composite 25,980.19 (-200.26, -0.8%)</strong>, <strong>Russell 2000 2,995.08 (-22.79, -0.8%)</strong> (Source: Associated Press, "How major US stock indexes fared Monday 8/24/2026" — press wire). ✅ Each reconciles arithmetically against Friday's closes.</p>
+      <p><strong>The reasons given for the sell-off are four, and at least two of them point in opposite directions.</strong> Coverage attributed Monday's move variously to a <strong>Bloomberg report that Nvidia has notified customers of price increases above 15%</strong> on Vera Rubin and Grace Blackwell systems shipping early next year, driven by rising memory costs (Source: Bloomberg, August 22, 2026 — press); to concern that <strong>Apple may source memory from Chinese suppliers</strong>; to a <strong>disappointing Samsung Electronics capital-return announcement</strong>; and to <strong>Netlist's patent litigation against Micron</strong> (Sources: Yahoo Finance market coverage; Invezz; Barron's, August 24, 2026 — press). ⚠️ <strong>Note the tension:</strong> an industry-wide memory shortage severe enough to force Nvidia to raise system prices by more than 15% is, on its face, good news for memory suppliers — yet the memory suppliers are what sold off. 🔶 The most likely reconciliation is that the market is pricing a <strong>demand-destruction risk from higher AI system prices</strong> rather than a supply shortage, but that is an inference and <strong>no source checked here states it.</strong> This briefing prints the closes as fact and the causes as reported.</p>
+      <p><strong>Nvidia reports Wednesday, August 26, after the close, and today this briefing withdraws a number it printed yesterday.</strong> The company's own guidance is primary and unchanged: <strong>revenue of $91.0 billion, plus or minus 2%</strong>, GAAP and non-GAAP gross margins of <strong>74.9%</strong> and <strong>75.0%, plus or minus 50 basis points</strong>, GAAP and non-GAAP operating expenses of approximately <strong>$8.5 billion</strong> and <strong>$8.3 billion</strong>, and — the line that matters most — <strong>"NVIDIA is not assuming any Data Center compute revenue from China in its outlook"</strong> (Source: NVIDIA, Q1 FY2027 results, Form 8-K exhibit filed with the SEC, May 20, 2026 — primary). Q1 FY2027 actuals from the same document: <strong>revenue $81,615 million</strong>, up 20% sequentially and 85% year over year, with <strong>Data Center revenue of $75.2 billion</strong>; GAAP and non-GAAP diluted EPS of <strong>$2.39</strong> and <strong>$1.87</strong>; an additional <strong>$80.0 billion</strong> buyback authorization; and the quarterly dividend raised from <strong>$0.01 to $0.25</strong> per share.</p>
+      <p>⚠️ <strong>Two corrections to yesterday's briefing, both in the direction of less certainty.</strong> First, <strong>yesterday printed street consensus as "$91.9 billion with $2.08 EPS" as though it were a settled figure. It is not.</strong> Today's check found <strong>$91.85 billion, $91.9 billion, $92.07 billion and "approximately $92 billion"</strong> circulating across previews, with adjusted EPS at <strong>$2.08 or $2.09</strong>, and <strong>no authoritative consensus page could be retrieved.</strong> This briefing now carries the range — <strong>roughly $91.9 to $92.1 billion, adjusted EPS roughly $2.08 to $2.09, against a company guide of $91.0 billion ±2%</strong> — and states plainly that the street sits <strong>above</strong> the company's midpoint. Second, <strong>yesterday printed a market capitalization of $5.21 trillion. Today's retrieved quote record shows $5.05 trillion</strong> — the difference is the seven-session decline, not a data error, but the older figure should not be reused. 🔶 One further conflict worth naming: yesterday's briefing described <strong>"four consecutive beats met with four selloffs"</strong> with specific EPS-surprise percentages; today's sources describe <strong>fourteen consecutive beats</strong> with the stock falling <strong>after six of the last eight reports, including each of the last four</strong> (Source: Yahoo Finance analysis, August 24, 2026 — press). ⚠️ <strong>Those two framings are not the same claim and this briefing asserts neither surprise percentage.</strong> What both agree on: <strong>beating has not recently been sufficient.</strong></p>
+      <p><strong>Two corporate-development stories broke on August 23 and both are second-hand.</strong> <strong>Hugging Face is reported to be exploring a sale at $13 billion or more</strong>, working with a bank to gauge bidder interest, with no deal reached and no buyers named; the company was last valued at <strong>$4.5 billion</strong> in a 2023 round (Source: Business Insider, August 23, 2026, carried by Bloomberg the same day — press, second-hand; Hugging Face has not confirmed). ⚠️ Separately, <strong>Nvidia is reported to be in talks to invest in Perplexity at a valuation above $30 billion</strong>, up from roughly <strong>$20 billion</strong> a year ago, with Perplexity's annualized revenue reported <strong>above $750 million</strong> against <strong>under $250 million</strong> at the start of 2026 (Source: The Information, August 23, 2026, carried by Reuters — press, second-hand; neither party has confirmed). 🔶 The pattern is familiar: Nvidia reportedly explored licensing Perplexity's technology and hiring its people before pivoting to equity, the same sequence reported for <strong>Poolside</strong> this month and <strong>Groq</strong> in December 2025.</p>
+      <p><strong>One infrastructure item is worth the space because of where the compute is going.</strong> Elon Musk shared an Nvidia post stating that <strong>SpaceX, in partnership with Nvidia, has designed a "space-optimized Vera Rubin NVL72 system" for launch to orbit</strong>, with orbital data centers targeted by the end of 2027 (Source: MarketWatch, August 24, 2026 — press). 🔶 A design announcement, not a deployment. Separately and more concretely, <strong>Micron opened a 60,000-square-foot semiconductor training center in Boise on August 24</strong>, with Micron and the US Department of Commerce providing <strong>$3 million</strong> to the College of Western Idaho (Source: Micron press release via GlobeNewswire, August 24, 2026 — company primary). ✅</p>
+      <hr />
+      <h2 id="2-top-10-ai-agents-three-lenses">2. Top 10 AI Agents — Three Lenses</h2>
+      <p>Rankings as of Tuesday, August 25, 2026. <strong>The vendor surface woke up. Claude Code shipped 60 changes and then shipped again the same day; the MCP maintainers published a roadmap on August 22 that this series missed; the Developer Platform is still quiet. Around them, the agent-infrastructure layer spent the window on discovery and registry plumbing rather than launches.</strong></p>
+      <h3 id="2a-relevance-for-claude-mcp-centered-work">2a. Relevance for Claude / MCP-Centered Work</h3>
+      <div class="table-wrap"><table>
+      <thead>
+      <tr>
+      <th>Rank</th>
+      <th>Agent / Platform</th>
+      <th>Justification</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>1</td>
+      <td>Claude Code + Agent SDK</td>
+      <td><strong>Two releases, both dated August 25.</strong> <strong>v2.1.243</strong> carries <strong>60 changes</strong>; <strong>v2.1.245</strong> carries one — <em>"Fixed a crash on startup on Linux distributions that ship glibc 2.44 (for example Arch Linux, CachyOS and Fedora Rawhide)"</em> (Source: Claude Code changelog, retrieved 2026-08-25 — primary). The governance-relevant items in v2.1.243: a <strong><code>modelPricing</code> managed setting</strong> so an organization's contracted per-model rates and discount multiplier drive <code>/cost</code>, the status line and telemetry <strong>instead of list price</strong>; <strong>keyless sign-in via <code>/login</code> → Anthropic Console</strong> for organizations that do not allow API keys; a <strong><code>Skipped sources</code> line in <code>/status</code></strong> naming managed-settings files present but overridden; a <strong><code>managed</code> marker in <code>/mcp</code> and <code>/plugins</code></strong> for claude.ai connectors whose authentication the organization controls; and <strong>improved telemetry attribution to the organization</strong> for sessions authenticating with <code>ANTHROPIC_AUTH_TOKEN</code>, "so its data-handling settings apply." The reliability items: <strong>remote MCP servers in non-interactive (<code>-p</code>) and SDK sessions now reconnect or report as failed</strong> instead of silently never recovering; <strong>MCP sign-in from the desktop app no longer fails with "Invalid redirect URI"</strong> on servers supporting client ID metadata documents (Linear is the named example); and <strong>sessions that used to go silent for 10+ minutes when the API never began a response now time out at roughly 3 minutes, retry once, then surface <code>API Error: No response from API</code>.</strong> Operational: the native install is <strong>zstd-compressed to about 75 MB from 340 MB on Linux x64</strong>, and long sessions use roughly <strong>40–70 MB less memory</strong>. 🔶 <strong>v2.1.242 and v2.1.244 do not appear on the page, and there is no August 24 entry at all</strong> — a 60-change release followed within the same day by a single-line Linux startup-crash fix is the shape of a regression caught immediately after ship. That reading is an inference, not a stated fact.</td>
+      </tr>
+      <tr>
+      <td>2</td>
+      <td>Model Context Protocol</td>
+      <td><strong>A new roadmap, published August 22, that yesterday's briefing did not carry.</strong> The Core Maintainers — <strong>David Soria Parra and Den Delimarsky</strong> — published "The New MCP Roadmap," setting five priority areas: <strong>agentic messaging primitives; HTTP-native transport unification and hardening; agent identity and enterprise-ready security; improved primitives; improved SDK developer experience</strong> (Source: blog.modelcontextprotocol.io, August 22, 2026 — primary). The item with the most immediate design consequence is <strong>progressive discovery</strong>, stated verbatim: <em>"Connecting to a server with a hundred tools means the model pays for that entire surface before the user has asked a single question, and tool selection tends to get worse as the list grows. We're starting a progressive discovery effort so a server can offer a small entry point and reveal more of its catalog as the conversation narrows."</em> Also notable for governance: <strong>SEPs inside these five areas get expedited review; proposals outside them are not auto-rejected but go to the back of a scarce queue.</strong> ✅ <strong>The spec revision itself is unchanged at 2026-07-28</strong> — stateless core, no <code>Mcp-Session-Id</code>, Tasks moved to the <code>io.modelcontextprotocol/tasks</code> extension, DCR deprecated in favour of CIMD, Roots/Sampling/Logging deprecated with at least twelve months of support.</td>
+      </tr>
+      <tr>
+      <td>3</td>
+      <td>Claude Developer Platform</td>
+      <td><strong>Still nothing after August 20, 2026, as of this check.</strong> The most recent release-note entry remains <strong>Python SDK v1.0</strong> (Source: Claude Platform release notes, retrieved 2026-08-25 — primary). The migration items stand: <strong><code>httpx</code> → <code>httpx2</code></strong>, <strong>Python 3.10+ required</strong>, removal of the <strong>legacy Text Completions API</strong> and of <strong><code>temperature</code> / <code>top_p</code> / <code>top_k</code></strong> from Messages methods, removal of the tool runner's client-side <code>compaction_control</code>, <code>await response.parse()</code> on async raw responses, and <strong><code>AnthropicBedrock</code> raising an error rather than defaulting to <code>us-east-1</code></strong>. The <strong>August 19</strong> entry remains the substantive recent change: <strong>computer use out of beta as <code>computer_toolset_20260801</code></strong> (batch actions, <code>zoom</code> on by default, per-member <code>configs</code>), the <strong>new browser use tool <code>browser_toolset_20260801</code></strong>, and <strong>Files API, Agent Skills / Skills API, and Admin API user-management endpoints all out of beta</strong>.</td>
+      </tr>
+      <tr>
+      <td>4</td>
+      <td>Claude platform reliability</td>
+      <td><strong>A clean overnight, after a three-incident Monday.</strong> August 24 logged <strong>three</strong> separate incidents: the model-error window <strong>04:50–07:36 UTC</strong> (resolved 08:30), plus <strong>two short claude.ai login failures — 16:02–16:08 UTC and 20:00–20:08 UTC</strong> — both of which also broke <strong>connecting Claude Code with a subscription</strong> (Source: status.claude.com incident feed, retrieved 08:39 UTC August 25, 2026 — primary). <strong>Since 20:26 UTC on August 24 the feed is clean.</strong> ✅ Counting from the same primary feed: <strong>incidents fell on 10 of the 15 days from August 11 through August 25</strong> — the 12th, 13th, 14th (three), 15th, 16th, 17th, 18th, 19th, 20th (two) and 24th (three). ⚠️ <strong>This briefing does not reprint the 90-day uptime percentages carried yesterday; the systems page was not retrieved in this run and stale percentages are worse than none.</strong></td>
+      </tr>
+      <tr>
+      <td>5</td>
+      <td>AWS — Agent Registry and agent discovery</td>
+      <td><strong>A vendor primary page dated August 24, and it is a positioning post rather than a launch.</strong> AWS published "Agentic Resource Discovery (ARD): An open specification for agent discovery," describing <strong>AWS Agent Registry</strong> as complementary to ARD for cross-environment and cross-cloud federation: <strong>registries and registry records, an approval/curation workflow, hybrid semantic-plus-keyword search, an MCP-native remote endpoint, and IAM or JWT authorization</strong> (Source: AWS Machine Learning Blog, August 24, 2026 — primary). ⚠️ <strong>No GA, no new SKU</strong> — AWS states it "contributed feedback during the spec's development" and uses forward-looking language. ✅ Two dating facts that matter: <strong>ARD is not new — Google announced it June 17, 2026</strong>, Apache 2.0, built on the Linux Foundation AI Catalog Working Group data model, with Cisco, Databricks, GitHub, GoDaddy, Google, Hugging Face, Microsoft, Nvidia, Salesforce, ServiceNow and Snowflake as contributors (Source: Google Developers Blog, June 17, 2026 — primary) — and <strong>AWS Agent Registry has been in preview since April 9, 2026.</strong></td>
+      </tr>
+      </tbody>
+      </table></div>
+      <p><em>(Watch line: Claude Opus 5 — $5/$25, 1M context, thinking on by default. Claude Sonnet 5 — $2/$10, now confirmed in the <code>/model</code> picker as standard list price rather than a promotion. Claude Fable 5 and Claude Mythos 5 — both carry the computer-use and browser-use toolsets. GPT-5.6 (Sol/Terra/Luna) — GA since July 9; o3 retires from ChatGPT tomorrow, August 26. Grok 4.6. Gemini 3.7 Flash — August 13. Qwen3.8-Max — August 3. Qwen3.8-27B — August 14 or 17, sources differ. GLM-5.3 — August 14 or 19, sources differ. DeepSeek V4-Flash-Vision-Exp — August 21 or 22, sources differ. Gemini 3.5 Pro — still unreleased at 98 days.)</em></p>
+      <h3 id="2b-market-momentum-adoption-funding-buzz">2b. Market Momentum (adoption / funding / buzz)</h3>
+      <div class="table-wrap"><table>
+      <thead>
+      <tr>
+      <th>Rank</th>
+      <th>Agent / Platform</th>
+      <th>Justification</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>1</td>
+      <td>Nvidia — the print that sets the tape</td>
+      <td><strong>Wednesday, August 26, after the close.</strong> Company guide <strong>$91.0 billion ±2%</strong>, margins <strong>74.9% / 75.0% ±50 bp</strong>, <strong>no China Data Center compute assumed</strong> (Source: NVIDIA Q1 FY2027 8-K exhibit — primary). Street consensus sits <strong>above</strong> the guide midpoint at roughly <strong>$91.9–$92.1 billion</strong> with adjusted EPS around <strong>$2.08–$2.09</strong> ⚠️ <strong>(range, not a point — see Section 1)</strong>. Market cap <strong>$5.05 trillion</strong>; the stock closed <strong>-2.91% at $208.48</strong> on <strong>a seventh consecutive decline</strong> (Sources: quote record; Forbes, August 24, 2026 — press). The options market implies a move of about <strong>5.4%</strong> in either direction, roughly <strong>$280 billion</strong> of market value, against <strong>6.5%</strong> implied ahead of the May report and a twelve-quarter average realised move of <strong>7.4%</strong> (Source: Reuters, August 25, 2026 — press, headline and summary only; the article body was not retrieved). ⚠️ <strong>This briefing prints no price targets and no analyst ratings, by policy.</strong></td>
+      </tr>
+      <tr>
+      <td>2</td>
+      <td>Anthropic — no public prospectus, and that is the finding</td>
+      <td><strong>As of August 25 there is still no publicly available Anthropic S-1</strong>, no ticker, no exchange, no price range, no share count, no offering size. ✅ <strong>Verified as an absence</strong> — an SEC full-text search surfaced no Anthropic S-1. The <strong>June 1, 2026 Rule 135 notice</strong> remains the only primary document. Reporting since: the filing <strong>will name AI and data-center backlash as a risk factor</strong> (CNBC, August 21); <strong>supervoting power is being prepared for the founders</strong> (Reuters citing The Information, August 18); a <strong>pre-IPO credit facility is set to exceed $10 billion</strong> (Reuters citing Bloomberg, August 18) — all <strong>press, second-hand</strong>. ⚠️ <strong>Yesterday's briefing carried "public prospectus expected within weeks, possibly by end of August." Today that end-of-August timing traces only to low-quality aggregators and is downgraded to unsupported.</strong> 🔶 The FT-sourced account adds a useful discipline: investors are said to target an <strong>October listing above $2 trillion</strong>, but the same reporting states plainly that <strong>"senior Anthropic executives had not fixed a valuation target for the IPO, even in private conversations."</strong> The <strong>$965 billion</strong> post-money from the last private round stands.</td>
+      </tr>
+      <tr>
+      <td>3</td>
+      <td>Hugging Face — the open-model hub, in play</td>
+      <td><strong>Reported to be exploring a sale at $13 billion or more</strong>, against a <strong>$4.5 billion</strong> 2023 valuation — a bank engaged, bidder interest being gauged, no deal, no named buyers (Source: Business Insider, August 23, 2026, carried by Bloomberg — press, second-hand, unconfirmed by the company). 🔶 Momentum here is not adoption, it is ownership: Hugging Face is where a large share of open-weight distribution and model cards live, and who owns that matters to anyone whose evaluation or procurement process points at it.</td>
+      </tr>
+      <tr>
+      <td>4</td>
+      <td>Perplexity — the answer engine, repriced</td>
+      <td><strong>Nvidia reported in talks to invest at a valuation above $30 billion</strong>, versus roughly <strong>$20 billion</strong> a year ago; annualized revenue reported <strong>above $750 million</strong>, up from <strong>under $250 million</strong> at the start of 2026 (Source: The Information, August 23, 2026, via Reuters — press, second-hand). ⚠️ Neither party has confirmed.</td>
+      </tr>
+      <tr>
+      <td>5</td>
+      <td>The memory complex — the constraint everyone shares</td>
+      <td><strong>Micron -5.83% to $910.43; AMD -3.49% to $456.75; SanDisk reported down between 6% and 10% intraday depending on the source</strong> ⚠️ <strong>(no confirmed close retrieved for SanDisk — the intraday figures are snapshots at different times and are not comparable).</strong> The forward-looking item is <strong>Nvidia's reported notification of price increases above 15%</strong> on Vera Rubin and Grace Blackwell systems shipping early next year, attributed to memory costs (Source: Bloomberg, August 22, 2026 — press). 🔶 If that holds, the cost of AI infrastructure rises for every buyer downstream, which is a procurement fact before it is a stock story.</td>
+      </tr>
+      </tbody>
+      </table></div>
+      <h3 id="2c-capability-maturity-production-readiness">2c. Capability &amp; Maturity (production readiness)</h3>
+      <div class="table-wrap"><table>
+      <thead>
+      <tr>
+      <th>Rank</th>
+      <th>Agent / Platform</th>
+      <th>Justification</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>1</td>
+      <td>Claude Opus 5</td>
+      <td><strong>Capability unchanged; the tooling around it improved materially overnight.</strong> Pricing and specs remain primary: <strong>$5 / $25</strong> per million tokens, <strong>1M</strong> context, <strong>128k</strong> max output, thinking on by default (Source: Claude Platform release notes, July 24, 2026 — primary). What changed is operational — cost reporting can now reflect <strong>contracted rates rather than list price</strong>, and a class of silent failures (dead remote MCP connections in headless sessions, ten-minute API stalls) is fixed. ⚠️ The public index scores remain unquotable: <strong>multiple different values circulate for what is presented as the same benchmark</strong>, and this briefing continues to decline to print one.</td>
+      </tr>
+      <tr>
+      <td>2</td>
+      <td>Claude Sonnet 5</td>
+      <td>Production-mature at <strong>$2 / $10</strong> per million tokens. As of the August 25 release, the <strong><code>/model</code> picker and the bundled <code>claude-api</code> skill now present that rate as the standard list price rather than a limited-time promotion</strong> (Source: Claude Code changelog v2.1.243 — primary) — a client-side confirmation of the August 10 platform note. ✅ Standing caveat: Sonnet 5 emits <strong>roughly 30% more tokens for the same text</strong> than Sonnet 4.6, which the headline rate hides.</td>
+      </tr>
+      <tr>
+      <td>3</td>
+      <td>GPT-5.6 (Sol / Terra / Luna)</td>
+      <td>Mature since the <strong>July 9</strong> GA — Sol <strong>$5/$30</strong>, Terra <strong>$2/$12</strong>, Luna <strong>$0.20/$1.20</strong> — with an <strong>Ultrafast</strong> tier still in limited preview with no published price or GA date. <strong>Housekeeping lands tomorrow: OpenAI retires o3 from ChatGPT on August 26, 2026</strong> after a 90-day sunset (Source: OpenAI Help Center model release notes — primary). Anything still pinned to o3 needs a destination today, not tomorrow.</td>
+      </tr>
+      <tr>
+      <td>4</td>
+      <td>DeepSeek V4-Flash-Vision-Exp</td>
+      <td><strong>The newest model in the field, and the field has been still for three days.</strong> Two independent release trackers both showed <strong>zero model releases in the 24 hours to August 25</strong>, with this model as the most recent entry (Sources: Price Per Token; LLM Stats, both retrieved August 25, 2026 — trackers). ⚠️ <strong>They disagree on its date — August 21 or August 22.</strong> Vendor comparisons claiming it beats Opus 4.8 on some agentic evaluations while trailing on others are <strong>self-reported and reached this briefing only through an aggregator.</strong> Not a production recommendation.</td>
+      </tr>
+      <tr>
+      <td>5</td>
+      <td>Gemini 3.5 Pro</td>
+      <td><strong>Not production-assessable at 98 days.</strong> Announced at I/O on <strong>May 19, 2026</strong> with a one-month promise and headline specs of a <strong>2M-token context</strong> and a "Deep Think" reasoning mode; still in limited Vertex AI preview with no public model card or pricing page, having missed reported targets in late June, mid-July and early August. ⚠️ <strong>All of the reporting on the cause is secondary and this briefing asserts none of it.</strong> The verifiable fact is the elapsed time.</td>
+      </tr>
+      </tbody>
+      </table></div>
+      <h3 id="divergence-analysis">Divergence Analysis</h3>
+      <p><strong>Relevance moved because the vendor surface finally moved, and the shape of the release is the story.</strong> Sixty changes is not a maintenance drop, and the ones that matter are not agent capabilities — they are <strong>cost accounting, identity, and the visibility of managed settings</strong>. <code>modelPricing</code> means an organization can stop reconciling <code>/cost</code> against an invoice. Keyless Console sign-in removes the standard objection from security teams that forbid long-lived API keys. The <code>Skipped sources</code> line in <code>/status</code> answers the single most common managed-deployment question — <em>why is my policy file not taking effect</em>. These are the changes you make when your users are organizations rather than individuals.</p>
+      <p><strong>The MCP roadmap is the item this series should have had yesterday, and progressive discovery is why.</strong> The maintainers have written down, in plain language, that a hundred-tool server is a design error: the model pays for the whole surface before the user asks anything, and selection quality degrades as the list grows. Anyone assembling a workspace out of many connectors has been feeling that without a name for it. There is now a name and a stated direction, and <strong>it argues for building narrow, task-scoped servers today rather than waiting for the protocol to rescue a wide one.</strong></p>
+      <p><strong>Momentum has stopped being about models and become about ownership and cost.</strong> Three of the five entries in that lens are corporate-development stories — a hub exploring a sale, an answer engine being repriced by its chip supplier, a memory complex selling off on the price of the thing everyone needs. <strong>None of them is a capability event.</strong> Maturity, meanwhile, did not move at all: no new model in three days, the newest entrant's date disputed between two trackers, and Gemini 3.5 Pro at ninety-eight days.</p>
+      <p>Put together: <strong>the software got more governable, the protocol admitted a design problem, and the market spent the day arguing about what compute costs.</strong> Two of those three came from documents published by the people who build the thing. The third came from four incompatible explanations of the same sell-off.</p>
+      <p><strong>What This Means for You.</strong> Three items, and the first is unusually concrete. <strong><code>modelPricing</code> and the keyless Console sign-in are both directly usable this week.</strong> Nearly every managed deployment eventually produces the same two frictions: a finance conversation where the tool's cost display does not match the contract, and a security conversation where the organization's policy forbids the API keys the setup assumed. Both now have a first-party answer, and both belong in the standard setup checklist rather than being discovered three months in. The <strong><code>Skipped sources</code> line in <code>/status</code></strong> deserves its own line in the runbook — it converts the most frustrating class of managed-settings failure from a mystery into a readable diagnostic. Second, <strong>the MCP roadmap should change how you scope connector work.</strong> The maintainers have now said in writing that wide servers degrade tool selection and cost tokens before the first question — an argument many practitioners have been making from experience, and one that is now citable. Practically, it favours <strong>several narrow, task-scoped MCP servers over one broad one</strong> — a design choice that is cheap to make now and expensive to unwind. Third, <strong>the reliability fixes matter more than they read.</strong> A remote MCP server that never recovers from a dropped connection in a headless session is exactly the failure mode of a scheduled overnight job. If you run those, upgrading is not optional maintenance this week.</p>
+      <hr />
+      <h2 id="3-agentic-ai-advances-new-releases">3. Agentic AI Advances &amp; New Releases</h2>
+      <ul>
+      <li><strong>Claude Code v2.1.243 and v2.1.245, both August 25, 2026.</strong> Sixty changes in the first; a single <strong>Linux glibc 2.44 startup-crash fix</strong> in the second (Arch, CachyOS, Fedora Rawhide named). Beyond the governance items already covered: a <strong>Loops breakdown in <code>/usage</code></strong> showing per-loop run count, total tokens, tokens per run and last run; a <strong><code>modelPicker</code> setting</strong> to curate the <code>/model</code> list with ordered, labeled entries including Vertex and Bedrock ids; <strong><code>promptCacheTtl</code> and <code>subagentPromptCacheTtl</code></strong> so a one-hour prompt cache can be held on the main conversation while subagents stay at five minutes; <strong>subagent model and effort level now shown in <code>/tasks</code></strong>; and a change to <strong>computer use on macOS requiring Finder to be granted before clicking the desktop, Dock or a Finder window</strong> (Source: Claude Code changelog — primary).</li>
+      <li><strong>Model Context Protocol — "The New MCP Roadmap," August 22, 2026.</strong> Five priority areas; <strong>progressive discovery</strong> is the design-relevant one; <strong>SEPs outside the five areas are deprioritised rather than rejected</strong>. Spec revision unchanged at <strong>2026-07-28</strong> (Source: blog.modelcontextprotocol.io — primary).</li>
+      <li><strong>AWS — "Agentic Resource Discovery (ARD): An open specification for agent discovery," August 24, 2026.</strong> AWS Agent Registry positioned as complementary to the open ARD spec for cross-cloud agent federation; <strong>MCP-native remote endpoint</strong>, approval/curation workflow, hybrid search, IAM or JWT authorization (Source: AWS Machine Learning Blog — primary). ⚠️ <strong>Not a launch.</strong> The <strong>ARD spec dates to June 17, 2026</strong> (Google, primary); <strong>Agent Registry preview to April 9, 2026</strong> (AWS, primary).</li>
+      <li><strong>Google — "How to Evaluate Live &amp; Voice Agents in ADK," August 24, 2026.</strong> Listed on the Google Developers Blog with that date; a how-to, not a ship (Source: Google Developers Blog — primary date, article not retrieved).</li>
+      <li><strong>AWS — Bedrock AgentCore Payments reached GA on August 18, 2026</strong>, enabling agents to transact autonomously at scale (Source: AWS Machine Learning Blog — primary URL confirmed). 🔶 Carried here because this series did not have it and it is the most consequential agent-autonomy item of the past week: an agent that can pay is a different governance object from an agent that can search.</li>
+      <li><strong>No new model in the window.</strong> Two independent trackers both report <strong>zero releases in the 24 hours to August 25</strong>; the newest entry is <strong>DeepSeek V4-Flash-Vision-Exp</strong>, dated <strong>August 21 or August 22</strong> depending on the tracker (Sources: Price Per Token; LLM Stats — trackers). <strong>Gemini 3.5 Pro remains unreleased at 98 days.</strong></li>
+      <li>⚠️ <strong>Three self-corrections to this series' running model list.</strong> <strong>"Qwen-UI-Agent (August 20)"</strong> — neither tracker lists it on that date; the only source found files it under an <strong>August 22</strong> digest heading. <strong>Date unconfirmed.</strong> <strong>"GLM-5.2 Turbo (August 17)"</strong> — <strong>not corroborated by either tracker</strong> and withdrawn pending a source. <strong>GLM-5.3</strong> is dated <strong>August 14</strong> by one tracker and <strong>August 19</strong> by the other. Where trackers disagree, this briefing now prints both dates rather than picking.</li>
+      <li><strong>A2A under the Agentic AI Foundation — still aggregator-only.</strong> Best-available date remains <strong>August 20, 2026</strong>, with membership reported at <strong>250+</strong>. ⚠️ <strong>A second independent attempt today failed to reach a Linux Foundation or Google primary page.</strong> Two consecutive briefings have now been unable to upgrade this item; it stays flagged.</li>
+      <li><strong>EU AI Act — standing carry, with new detail on provenance.</strong> <strong>Article 50</strong> transparency obligations have been enforceable since <strong>August 2, 2026</strong>, with penalties up to <strong>€15 million or 3% of worldwide annual turnover</strong>; <strong>Annex III</strong> high-risk obligations at <strong>2 December 2027</strong>; <strong>Annex I</strong> embedded-product obligations at <strong>2 August 2028</strong>. ✅ <strong>The two deferrals come from the Digital Omnibus on AI, adopted by the European Parliament on June 16, 2026 with final Council approval on June 29, 2026</strong> (Sources: European Commission; Gibson Dunn; Goodwin — primary and legal analysis). ⚠️ Compliance awareness, not legal advice.</li>
+      </ul>
+      <p><strong>What This Means for You.</strong> The list has an unusual property this morning: <strong>the two most important items were published by maintainers, not marketers.</strong> A changelog and a roadmap are the least promotional documents a vendor produces, and both changed something real. The practical instruction is narrow. <strong>Read the v2.1.243 entry properly rather than skimming it</strong> — there are at least four items in there that belong in a managed-deployment checklist, and none of them is described in a way that announces its own importance. <strong>Treat the MCP roadmap as a design document, not news</strong>; it tells you how to build connector workspaces that will still be correct in six months. And <strong>AgentCore Payments going GA on August 18 is the item to raise proactively wherever staff are experimenting with agent tooling.</strong> An agent with payment authority is a category that most AI implementation policies written this year simply do not contemplate — the policies say what the agent may read and what a human must approve, and say nothing about what the agent may buy. That is a gap most organizations can close in a single clause, and it is better closed before someone discovers the capability on their own.</p>
+      <hr />
+      <h2 id="4-overnight-daily-release-monitor">4. Overnight / Daily Release Monitor</h2>
+      <p>Covering roughly August 24 – August 25 since the prior briefing. <strong>US markets closed Monday; Monday's closes are current and are printed as closes. Vendor items are dated primary records.</strong></p>
+      <ul>
+      <li><strong>Claude Code shipped twice.</strong> <strong>v2.1.243 (60 changes)</strong> and <strong>v2.1.245 (one Linux startup-crash fix)</strong>, both dated <strong>August 25, 2026</strong>. <strong>There is no August 24 changelog entry, and v2.1.242 and v2.1.244 do not appear on the page</strong> (Source: Claude Code changelog — primary). ✅</li>
+      <li><strong>Claude Developer Platform — still nothing after August 20</strong> as of this check (Source: Claude Platform release notes — primary).</li>
+      <li><strong>A clean overnight on the Claude status feed.</strong> No incident since <strong>20:26 UTC on August 24</strong>; the feed was retrieved at <strong>08:39 UTC on August 25</strong> (Source: status.claude.com — primary). ✅ <strong>A reversal of the last two mornings.</strong></li>
+      <li><strong>August 24 logged three incidents, two of them new to this briefing.</strong> The model-error window <strong>04:50–07:36 UTC</strong>, plus <strong>claude.ai login failures at 16:02–16:08 UTC and 20:00–20:08 UTC</strong>, both of which also broke <strong>connecting Claude Code with a subscription</strong> (Source: status.claude.com — primary). 🔶 Six and eight minutes respectively — short, but they hit the authentication path rather than the model, which fails differently and is harder for a user to diagnose.</li>
+      <li><strong>No new model overnight.</strong> Nothing newer than <strong>DeepSeek V4-Flash-Vision-Exp</strong> (August 21 or 22).</li>
+      <li><strong>Monday's US closes.</strong> <strong>S&amp;P 500 7,652.86 (-21.51, -0.3%)</strong>, <strong>Dow 53,417.16 (+140.15, +0.3%)</strong>, <strong>Nasdaq Composite 25,980.19 (-200.26, -0.8%)</strong>, <strong>Russell 2000 2,995.08 (-22.79, -0.8%)</strong> (Source: Associated Press index summary, August 24, 2026 — press). ✅ Year to date, per the same wire: <strong>S&amp;P +11.8%, Dow +11.1%, Nasdaq +11.8%, Russell 2000 +20.7%</strong>.</li>
+      <li><strong>Macro carry.</strong> Monday's session absorbed <strong>new US sanctions on Iran</strong> detailed by Treasury Secretary Scott Bessent and the <strong>breakdown of US–Canada trade talks</strong>, with reported threats of <strong>50% tariffs on Canadian autos, parts and steel from January 1, 2027</strong> (Source: Yahoo Finance market coverage, August 24, 2026 — press). ⚠️ Tariff terms are reported, not official-text-verified here.</li>
+      <li><strong>Ahead this week:</strong> <strong>Nvidia reports fiscal Q2 FY2027 Wednesday, August 26, after the close.</strong> <strong>OpenAI retires o3 from ChatGPT on August 26.</strong> <strong>Fed Chair Kevin Warsh delivers his first Jackson Hole keynote August 27–29.</strong> Next <strong>FOMC: September 15–16.</strong> Further <strong>SpaceX insider unlock tranches fall in September and October.</strong></li>
+      <li><strong>Colorado — the revised AI law, with more detail than this series has carried.</strong> <strong>Senate Bill 26-189</strong>, signed <strong>May 14, 2026</strong>, effective <strong>January 1, 2027</strong>, repealed and replaced the original Colorado AI Act. It shifts the regulated object from "high-risk AI systems" to <strong>"automated decision making technology" used in "consequential decisions"</strong>; <strong>eliminates the mandatory risk-management programs and annual impact assessments</strong> of the prior law; requires <strong>advance notice, post-decision disclosures and consumer rights</strong>; <strong>centralises enforcement with the Colorado Attorney General</strong>; and adds <strong>fault-based apportionment for discrimination liability</strong>, with substantial detail left to rulemaking (Sources: Holland &amp; Knight; Davis Wright Tremaine; Norton Rose Fulbright; Finnegan, May 2026 — legal analysis). ⚠️ Compliance awareness, not legal advice.</li>
+      <li><strong>Agent payments are becoming a regulatory subject.</strong> The <strong>AI AGENT Act (S.5051)</strong>, introduced by <strong>Senator Mark Warner on July 21, 2026</strong>, would define a <strong>"custodial user agent"</strong> — transparent, documented, limited and revocable authority — require <strong>real-time action records</strong>, and direct <strong>NIST</strong> to develop standards for verifying delegated authority (Source: press and secondary coverage, August 24, 2026). ⚠️ <strong>Introduced, not enacted.</strong> Related commentary the same day noted that <strong>Google's Agent Payments Protocol (AP2) records what an agent spent but does not prevent an unapproved purchase</strong> (Source: Fortune, August 24, 2026 — press).</li>
+      </ul>
+      <p><strong>What This Means for You.</strong> One operational item and one calendar item. <strong>The overnight was clean, and that is worth saying out loud</strong> after two mornings of leading with outages — but the two short login failures on August 24 are the more instructive incidents, because <strong>an authentication failure looks to a user exactly like a broken credential.</strong> A staff member whose subscription connection fails for six minutes will not think "provider incident"; they will think their account is broken and file a ticket, or worse, start re-authenticating and changing settings. <strong>The runbook line is one sentence: before changing any credential, check the provider status feed.</strong> The calendar item is <strong>August 26</strong>: OpenAI retires o3 from ChatGPT tomorrow. Any workflow, saved prompt or documented procedure that names o3 needs a destination model <strong>today</strong>, and it is a five-minute check that will otherwise become somebody's Thursday morning.</p>
+      <hr />
+      <h2 id="5-ai-trading-trends">5. AI Trading Trends</h2>
+      <p><em>Market intelligence for situational awareness — not investment advice. No buy/sell/hold recommendations, price targets, or return forecasts. </em><em>Analyst price targets and consensus ratings were retrieved in this run and are deliberately not printed.</em><em> Equity figures are Monday, August 24 closes unless otherwise marked. Every figure carries a source and a confidence note.</em></p>
+      <h3 id="5a-ipos-and-a-finding-that-corrects-the-premise">5a. IPOs — and a finding that corrects the premise</h3>
+      <p>⚠️ <strong>August 2026 produced no AI IPO.</strong> A full review of the month's US pricings — fifteen deals from August 4 through August 19 — found <strong>biotechs, SPACs and one defense contractor, and no AI company</strong> (Source: recent-IPO records compiled from SEC filings, retrieved August 25, 2026). ✅ <strong>This is a correction to an assumption this series has carried loosely.</strong> The month's largest deal was <strong>Lyntris Inc. (LYNX)</strong>, a defense contractor that priced on <strong>August 19 at $17.50</strong> in a <strong>downsized offering raising about $298 million</strong> and has since traded to <strong>$15.03, roughly 11.8% below issue</strong> (Sources: recent-IPO records; Reuters, August 19, 2026 — press). ⚠️ First-day move not confirmed here.</p>
+      <p><strong>The AI listings of 2026 are earlier, and the scoreboard is sober.</strong> All four figures below are IPO price against the most recent retrieved price:</p>
+      <div class="table-wrap"><table>
+      <thead>
+      <tr>
+      <th>Listing</th>
+      <th>Date</th>
+      <th>IPO price</th>
+      <th>Recent</th>
+      <th>vs. issue</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td><strong>Cerebras Systems (CBRS)</strong></td>
+      <td>May 14, 2026</td>
+      <td>$185.00</td>
+      <td>$185.43</td>
+      <td><strong>-0.4%</strong></td>
+      </tr>
+      <tr>
+      <td><strong>Quantinuum (QNT)</strong></td>
+      <td>June 4, 2026</td>
+      <td>$60.00</td>
+      <td>$52.07</td>
+      <td><strong>-13.2%</strong></td>
+      </tr>
+      <tr>
+      <td><strong>SpaceX (SPCX)</strong></td>
+      <td>June 12, 2026</td>
+      <td>$135.00</td>
+      <td>$135.00</td>
+      <td><strong>flat</strong></td>
+      </tr>
+      <tr>
+      <td><strong>SK hynix (SKHY)</strong></td>
+      <td>July 10, 2026</td>
+      <td>$149.00</td>
+      <td>$155.37</td>
+      <td><strong>+5.0%</strong></td>
+      </tr>
+      </tbody>
+      </table></div>
+      <p>(Source: recent-IPO records compiled from SEC filings, retrieved August 25, 2026.) 🔶 <strong>Three months on, the most AI-native listing of the group — an AI accelerator company — is trading at its offer price.</strong> Coverage has been blunt about it (Source: MarketWatch, "Cerebras's stock has been a post-IPO bust," August 19, 2026 — press).</p>
+      <ul>
+      <li><strong>Anthropic — still no public prospectus, and the absence is now verified.</strong> No S-1 is publicly available as of <strong>August 25</strong>; no ticker, exchange, price range, share count or offering size has been disclosed. ✅ The <strong>June 1, 2026 Rule 135 notice</strong> remains the only primary document. Recent reporting: <strong>backlash as a named risk factor</strong> (CNBC, August 21); <strong>founder supervoting</strong> (Reuters citing The Information, August 18); <strong>a pre-IPO credit facility set to exceed $10 billion</strong> (Reuters citing Bloomberg, August 18) — all press, second-hand. ⚠️ <strong>"End of August" public-filing claims are withdrawn</strong> — they trace only to aggregators. 🔶 On revenue, the FT-sourced account gives <strong>$47 billion annualized as of May</strong> with backers expecting <strong>$100–120 billion annualized by year-end</strong>, and names <strong>Morgan Stanley, Goldman Sachs and JPMorgan</strong> as leads. ⚠️ <strong>That partially resolves the $47 billion figure this series flagged as irreconcilable with a "past $65 billion in late July" claim — the $47 billion is a May number — but the late-July figure remains unverified and is not asserted.</strong> The <strong>$965 billion</strong> last private post-money stands; the circulating <strong>$2 trillion</strong> figure is an investor expectation, and the same reporting states executives <strong>had not fixed a valuation target even privately.</strong></li>
+      <li><strong>Unitree — carry, and quote the RMB.</strong> Previously cited to Bloomberg: listed in Shanghai <strong>August 19</strong>, raising <strong>RMB 6.1 billion</strong> at <strong>RMB 150.80</strong>, closing at <strong>RMB 845, up 460%</strong>, market value <strong>RMB 342 billion</strong>. ⚠️ <strong>An independent check today surfaced materially different percentages from a low-quality tracker (+629% intraday, +487% close) and could not confirm either version against a major outlet.</strong> The RMB figures are the ones with the better citation; <strong>the dollar conversions remain unquotable.</strong></li>
+      <li><strong>SpaceX — carry.</strong> Listed <strong>June 12</strong> at <strong>$135.00</strong> at a reported <strong>$1.77 trillion</strong> valuation; <strong>further insider unlock tranches fall in September and October</strong> (Sources: recent-IPO records; press). 🔶 Now also an AI-infrastructure story via the reported Nvidia orbital-datacenter design work.</li>
+      </ul>
+      <h3 id="5b-top-5-traded-ai-related-tickers">5b. Top 5 traded AI-related tickers</h3>
+      <p>⚠️ <strong>This is not a definitive most-traded-by-volume ranking.</strong> The most-active screens available in this run were <strong>stale — showing Friday, August 21 rather than Monday, August 24</strong> — and no authoritative same-session volume ranking could be confirmed. <strong>The Monday closes and volumes below were individually retrieved and are verified; the ordering is by AI relevance, not by volume rank.</strong></p>
+      <div class="table-wrap"><table>
+      <thead>
+      <tr>
+      <th>#</th>
+      <th>Ticker</th>
+      <th>Company</th>
+      <th>Why it's an AI-trading bellwether</th>
+      <th>Latest verifiable signal</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>1</td>
+      <td>NVDA</td>
+      <td>Nvidia</td>
+      <td>The volume anchor of the AI trade, and the largest scheduled event on the calendar</td>
+      <td><strong>Closed $208.48, down $6.24 or 2.91%</strong>, on <strong>135,187,288 shares</strong>, August 24 — a <strong>seventh consecutive decline</strong> into Wednesday's print. Market cap <strong>$5.05 trillion</strong> (Sources: quote record; Forbes, August 24 — press). ✅ Verified close and volume</td>
+      </tr>
+      <tr>
+      <td>2</td>
+      <td>MU</td>
+      <td>Micron</td>
+      <td>The AI-memory read-through, and Monday's largest single-name move</td>
+      <td><strong>Closed $910.43, down $56.35 or 5.83%</strong>, on <strong>30,012,631 shares</strong>, August 24. Market cap <strong>$1.03 trillion</strong>. Reported drivers include the <strong>Netlist patent litigation</strong> and concern over <strong>Apple sourcing memory from Chinese suppliers</strong> (Sources: quote record — verified; Barron's, Invezz — press). ✅ Verified close and volume</td>
+      </tr>
+      <tr>
+      <td>3</td>
+      <td>AMD</td>
+      <td>Advanced Micro Devices</td>
+      <td>The number-two merchant AI accelerator, and the cleanest read on non-Nvidia demand</td>
+      <td><strong>Closed $456.75, down $16.50 or 3.49%</strong>, on <strong>16,602,166 shares</strong>, August 24. Market cap <strong>$745.62 billion</strong> (Source: quote record). ✅ Verified close and volume</td>
+      </tr>
+      <tr>
+      <td>4</td>
+      <td>INTC</td>
+      <td>Intel</td>
+      <td>Foundry plus AI silicon, and consistently among the highest-volume names in the complex</td>
+      <td><strong>Closed $90.07, down 2.24%</strong>, on <strong>91,647,669 shares</strong> — ⚠️ <strong>August 21, not August 24.</strong> A verified Monday close and volume could not be retrieved in this run and <strong>none is printed</strong> (Source: most-active screen, page-dated August 21, 2026)</td>
+      </tr>
+      <tr>
+      <td>5</td>
+      <td>SPCX</td>
+      <td>SpaceX</td>
+      <td>Now an AI-infrastructure holding as well as a launch business, via the reported Nvidia orbital design work</td>
+      <td><strong>Closed $136.97, up 2.22%</strong>, on <strong>78,813,964 shares</strong> — ⚠️ <strong>August 21, not August 24.</strong> No verified Monday close retrieved (Sources: most-active screen, page-dated August 21; MarketWatch, August 24 — press)</td>
+      </tr>
+      </tbody>
+      </table></div>
+      <p><strong>Week ahead (August 25 – August 30) — calendar, not forecast.</strong> <strong>Nvidia reports fiscal Q2 FY2027 Wednesday, August 26, after the close</strong>, company-guided to <strong>$91.0 billion ±2%</strong> with <strong>no China Data Center compute revenue assumed</strong>, against street consensus of roughly <strong>$91.9–$92.1 billion</strong> and adjusted EPS around <strong>$2.08–$2.09</strong>; the options market implies a move of about <strong>5.4%</strong>, roughly <strong>$280 billion</strong> of market value. <strong>OpenAI retires o3 from ChatGPT on August 26.</strong> <strong>Fed Chair Kevin Warsh delivers his first Jackson Hole keynote August 27–29.</strong> Next <strong>FOMC: September 15–16.</strong> <strong>US–Canada tariff escalation and the new Iran sanctions remain live and unresolved.</strong> EU AI Act <strong>Article 50 obligations have been enforceable since August 2, 2026</strong>, with <strong>Annex III</strong> at <strong>December 2, 2027</strong> and <strong>Annex I</strong> at <strong>August 2, 2028</strong>; <strong>Colorado's revised framework takes effect January 1, 2027.</strong> (Sources: published economic calendars; Federal Reserve; European Commission; NVIDIA Newsroom; company calendars — scheduled events and reporting.)</p>
+      <p><strong>What This Means for You.</strong> The transferable item this morning is not a ticker, it is the <strong>IPO scoreboard</strong>, and it is useful precisely because it is unflattering. <strong>Three months after listing, the most AI-native public offering of 2026 is trading at its offer price, and the month of August produced no AI IPO at all.</strong> For a board or a funder being told that AI is an unstoppable capital wave, that is a grounding fact — not an argument against adoption, but an argument against <strong>urgency as a reason to adopt</strong>. The organizations that will look sensible in twelve months are still the ones that scoped a measured, documented use case. The second item is <strong>cost direction</strong>: if Nvidia's reported <strong>15%-plus</strong> system price increases hold, the cost of AI infrastructure rises for every buyer downstream of it, and <strong>the assumption that inference gets cheaper every quarter should not be written into a multi-year budget without a caveat</strong>. On the model set, nothing changes: <strong>Opus 5, Sonnet 5 and GPT-5.6</strong> remain the mainstream production choices, with <strong>Gemini 3.7 Flash</strong>, <strong>Qwen3.8-Max</strong>, <strong>Grok 4.6</strong> and the August open-weight entrants as cost-tier options to evaluate rather than adopt. Market intelligence only, not investment advice.</p>
+      <hr />
+      <h2 id="sources">Sources</h2>
+      <ul>
+      <li>Claude Code changelog, v2.1.245 and v2.1.243 (August 25, 2026), v2.1.241 (August 23), v2.1.240 (August 22), v2.1.239 (August 21), retrieved August 25, 2026 (primary). <a href="https://code.claude.com/docs/en/changelog" target="_blank" rel="noopener">https://code.claude.com/docs/en/changelog</a></li>
+      <li>Model Context Protocol Blog, David Soria Parra and Den Delimarsky, "The New MCP Roadmap," August 22, 2026 (primary). <a href="https://blog.modelcontextprotocol.io/posts/mcp-roadmap/" target="_blank" rel="noopener">https://blog.modelcontextprotocol.io/posts/mcp-roadmap/</a></li>
+      <li>Model Context Protocol, "Specification 2026-07-28 changelog" (primary). <a href="https://modelcontextprotocol.io/specification/2026-07-28/changelog" target="_blank" rel="noopener">https://modelcontextprotocol.io/specification/2026-07-28/changelog</a></li>
+      <li>Claude Platform release notes, retrieved August 25, 2026; most recent entry August 20, 2026 (primary). <a href="https://docs.anthropic.com/en/release-notes/api" target="_blank" rel="noopener">https://docs.anthropic.com/en/release-notes/api</a></li>
+      <li>Claude Status, incident history feed, retrieved 08:39 UTC August 25, 2026 (primary). <a href="https://status.claude.com/history.rss" target="_blank" rel="noopener">https://status.claude.com/history.rss</a></li>
+      <li>Claude Status, incident "Errors logging into Claude.ai," August 24, 2026 (primary). <a href="https://status.claude.com/incidents/w43j3xmngxgj" target="_blank" rel="noopener">https://status.claude.com/incidents/w43j3xmngxgj</a></li>
+      <li>Claude Status, incident "Issues logging into Claude.ai," August 24, 2026 (primary). <a href="https://status.claude.com/incidents/n0rlp126qf8g" target="_blank" rel="noopener">https://status.claude.com/incidents/n0rlp126qf8g</a></li>
+      <li>AWS Machine Learning Blog, "Agentic Resource Discovery (ARD): An open specification for agent discovery," August 24, 2026 (primary). <a href="https://aws.amazon.com/blogs/machine-learning/agentic-resource-discovery-ard-an-open-specification-for-agent-discovery/" target="_blank" rel="noopener">https://aws.amazon.com/blogs/machine-learning/agentic-resource-discovery-ard-an-open-specification-for-agent-discovery/</a></li>
+      <li>AWS Machine Learning Blog, "Amazon Bedrock AgentCore Payments is now generally available," August 18, 2026 (primary). <a href="https://aws.amazon.com/blogs/machine-learning/amazon-bedrock-agentcore-payments-is-now-generally-available-enabling-agents-to-transact-safely-and-autonomously-at-scale/" target="_blank" rel="noopener">https://aws.amazon.com/blogs/machine-learning/amazon-bedrock-agentcore-payments-is-now-generally-available-enabling-agents-to-transact-safely-and-autonomously-at-scale/</a></li>
+      <li>AWS Machine Learning Blog, "The future of managing agents at scale: AWS Agent Registry now in preview," April 9, 2026 (primary). <a href="https://aws.amazon.com/blogs/machine-learning/the-future-of-managing-agents-at-scale-aws-agent-registry-now-in-preview/" target="_blank" rel="noopener">https://aws.amazon.com/blogs/machine-learning/the-future-of-managing-agents-at-scale-aws-agent-registry-now-in-preview/</a></li>
+      <li>Google Developers Blog, "Announcing the Agentic Resource Discovery specification," June 17, 2026 (primary). <a href="https://developers.googleblog.com/announcing-the-agentic-resource-discovery-specification/" target="_blank" rel="noopener">https://developers.googleblog.com/announcing-the-agentic-resource-discovery-specification/</a></li>
+      <li>Google Developers Blog, "How to Evaluate Live &amp; Voice Agents in ADK," August 24, 2026 (primary date). <a href="https://developers.googleblog.com/how-to-evaluate-live-voice-agents-in-adk/" target="_blank" rel="noopener">https://developers.googleblog.com/how-to-evaluate-live-voice-agents-in-adk/</a></li>
+      <li>NVIDIA, "NVIDIA Announces Financial Results for First Quarter Fiscal 2027," Form 8-K exhibit, May 20, 2026 (primary, SEC EDGAR). <a href="https://www.sec.gov/Archives/edgar/data/1045810/000104581026000051/q1fy27pr.htm" target="_blank" rel="noopener">https://www.sec.gov/Archives/edgar/data/1045810/000104581026000051/q1fy27pr.htm</a></li>
+      <li>Associated Press, "How major US stock indexes fared Monday 8/24/2026," August 24, 2026 (press wire). <a href="https://www.barchart.com/story/news/4009034/how-major-us-stock-indexes-fared-monday-8-24-2026" target="_blank" rel="noopener">https://www.barchart.com/story/news/4009034/how-major-us-stock-indexes-fared-monday-8-24-2026</a></li>
+      <li>Yahoo Finance, "Stock market today: S&amp;P 500, Nasdaq fall as chip stocks sink, US unveils new Iran sanctions," August 24, 2026 (press). <a href="https://finance.yahoo.com/" target="_blank" rel="noopener">https://finance.yahoo.com/</a></li>
+      <li>Reuters, "Nvidia shares set for $280 billion price swing after earnings, options show," August 25, 2026 (press — headline and summary only). <a href="https://www.reuters.com/business/nvidia-shares-set-280-billion-price-swing-after-earnings-options-show-2026-08-25/" target="_blank" rel="noopener">https://www.reuters.com/business/nvidia-shares-set-280-billion-price-swing-after-earnings-options-show-2026-08-25/</a></li>
+      <li>Forbes, Zachary Folk, "Nvidia Stock Tumbles Another 2% — Pacing For Seventh-Straight Drop Ahead Of Earnings," August 24, 2026 (press). <a href="https://www.forbes.com/" target="_blank" rel="noopener">https://www.forbes.com/</a></li>
+      <li>Bloomberg, "Nvidia Customers Notified About AI-Related Price Hikes Above 15%," August 22, 2026 (press). <a href="https://www.bloomberg.com/news/articles/2026-08-22/nvidia-customers-notified-about-ai-related-price-hikes-above-15" target="_blank" rel="noopener">https://www.bloomberg.com/news/articles/2026-08-22/nvidia-customers-notified-about-ai-related-price-hikes-above-15</a></li>
+      <li>Bloomberg, "AI Platform Hugging Face Exploring Sale, Business Insider Says," August 23, 2026 (press, second-hand). <a href="https://www.bloomberg.com/news/articles/2026-08-23/hugging-face-gauging-interest-for-potential-sale-business-insider-says" target="_blank" rel="noopener">https://www.bloomberg.com/news/articles/2026-08-23/hugging-face-gauging-interest-for-potential-sale-business-insider-says</a></li>
+      <li>Reuters via Investing.com, "Nvidia discusses Perplexity investment at $30 billion-plus valuation, The Information reports," August 23, 2026 (press, second-hand). <a href="https://www.investing.com/news/stock-market-news/nvidia-discusses-perplexity-investment-at-30-billionplus-valuation-the-information-reports-4872594" target="_blank" rel="noopener">https://www.investing.com/news/stock-market-news/nvidia-discusses-perplexity-investment-at-30-billionplus-valuation-the-information-reports-4872594</a></li>
+      <li>MarketWatch, "SpaceX plans to put Nvidia-powered AI satellites in orbit next year," August 24, 2026 (press). <a href="https://www.marketwatch.com/story/spacex-plans-to-put-nvidia-powered-ai-satellites-in-orbit-next-year-ab57083c" target="_blank" rel="noopener">https://www.marketwatch.com/story/spacex-plans-to-put-nvidia-powered-ai-satellites-in-orbit-next-year-ab57083c</a></li>
+      <li>MarketWatch, "Cerebras's stock has been a post-IPO bust. Its comeback hinges on this new chip," August 19, 2026 (press). <a href="https://www.marketwatch.com/" target="_blank" rel="noopener">https://www.marketwatch.com/</a></li>
+      <li>Micron Technology via GlobeNewswire, "Micron opens state-of-the-art training center in Boise," August 24, 2026 (company primary). <a href="https://www.globenewswire.com/news-release/2026/08/24/3349992/14450/en/micron-opens-state-of-the-art-training-center-in-boise-to-strengthen-america-s-semiconductor-workforce.html" target="_blank" rel="noopener">https://www.globenewswire.com/news-release/2026/08/24/3349992/14450/en/micron-opens-state-of-the-art-training-center-in-boise-to-strengthen-america-s-semiconductor-workforce.html</a></li>
+      <li>Reuters, "Defense contractor Lyntris, shareholders raise about $298 million in downsized US IPO," August 19, 2026 (press). <a href="https://www.reuters.com/business/aerospace-defense/defense-contractor-lyntris-shareholders-raise-about-298-million-downsized-us-ipo-2026-08-19/" target="_blank" rel="noopener">https://www.reuters.com/business/aerospace-defense/defense-contractor-lyntris-shareholders-raise-about-298-million-downsized-us-ipo-2026-08-19/</a></li>
+      <li>Reuters, "Anthropic prepares supervoting power for founders ahead of IPO, The Information reports," August 18, 2026 (press, second-hand). <a href="https://www.reuters.com/business/anthropic-prepares-supervoting-power-founders-ahead-ipo-information-reports-2026-08-18/" target="_blank" rel="noopener">https://www.reuters.com/business/anthropic-prepares-supervoting-power-founders-ahead-ipo-information-reports-2026-08-18/</a></li>
+      <li>Reuters, "Anthropic's pre-IPO credit facility set to exceed $10 billion, Bloomberg News reports," August 18, 2026 (press, second-hand). <a href="https://www.reuters.com/legal/transactional/anthropics-pre-ipo-credit-facility-set-exceed-10-billion-bloomberg-news-reports-2026-08-18/" target="_blank" rel="noopener">https://www.reuters.com/legal/transactional/anthropics-pre-ipo-credit-facility-set-exceed-10-billion-bloomberg-news-reports-2026-08-18/</a></li>
+      <li>CNBC, "Anthropic IPO filing will show AI backlash as a risk factor, sources say," August 21, 2026 (press — headline only; article body not retrieved). <a href="https://www.cnbc.com/2026/08/21/-anthropic-ipo-filing-will-show-ai-backlash-as-risk-sources-say.html" target="_blank" rel="noopener">https://www.cnbc.com/2026/08/21/-anthropic-ipo-filing-will-show-ai-backlash-as-risk-sources-say.html</a></li>
+      <li>Quartz via Yahoo Finance, citing the Financial Times, "Anthropic investors target $2 trillion IPO valuation in October," August 13, 2026 (press). <a href="https://finance.yahoo.com/technology/ai/articles/anthropic-investors-target-2-trillion-132255261.html" target="_blank" rel="noopener">https://finance.yahoo.com/technology/ai/articles/anthropic-investors-target-2-trillion-132255261.html</a></li>
+      <li>Anthropic, "Anthropic confidentially submits draft S-1 to the SEC," June 1, 2026 (primary, Rule 135 notice). <a href="https://www.anthropic.com/news/confidential-draft-s1-sec" target="_blank" rel="noopener">https://www.anthropic.com/news/confidential-draft-s1-sec</a></li>
+      <li>Recent US IPO records compiled from SEC filings, retrieved August 25, 2026. <a href="https://stockanalysis.com/ipos/" target="_blank" rel="noopener">https://stockanalysis.com/ipos/</a></li>
+      <li>Fortune, "Google can track exactly how your agent spends your money — but it's no help when it buys something you didn't approve," August 24, 2026 (press). <a href="https://fortune.com/2026/08/24/google-ai-agent-payment-protocol-gap/" target="_blank" rel="noopener">https://fortune.com/2026/08/24/google-ai-agent-payment-protocol-gap/</a></li>
+      <li>Price Per Token, "New Models Today — AI &amp; LLM Releases," retrieved August 25, 2026 (release tracker). <a href="https://pricepertoken.com/news/model-releases" target="_blank" rel="noopener">https://pricepertoken.com/news/model-releases</a></li>
+      <li>LLM Stats, "AI Updates Today," retrieved August 25, 2026 (release tracker). <a href="https://llm-stats.com/llm-updates" target="_blank" rel="noopener">https://llm-stats.com/llm-updates</a></li>
+      <li>European Commission, "Commission starts enforcing AI Act rules and new transparency requirements on 2 August," IP/26/1714 (primary). <a href="https://ec.europa.eu/commission/presscorner/detail/en/ip_26_1714" target="_blank" rel="noopener">https://ec.europa.eu/commission/presscorner/detail/en/ip_26_1714</a></li>
+      <li>Gibson Dunn, "EU AI Act Omnibus Agreement — Postponed High-Risk Deadlines," 2026 (legal analysis). <a href="https://www.gibsondunn.com/" target="_blank" rel="noopener">https://www.gibsondunn.com/</a></li>
+      <li>Goodwin, "Not Delayed, Not Deferred: EU AI Act Transparency Obligations Are Now in Force," August 2026 (legal analysis). <a href="https://www.goodwinlaw.com/" target="_blank" rel="noopener">https://www.goodwinlaw.com/</a></li>
+      <li>Holland &amp; Knight; Davis Wright Tremaine; Norton Rose Fulbright; Finnegan — analyses of Colorado Senate Bill 26-189, May 2026 (legal analysis).</li>
+      <li>OpenAI Help Center, "Model Release Notes" (primary). <a href="https://help.openai.com/en/articles/9624314-model-release-notes" target="_blank" rel="noopener">https://help.openai.com/en/articles/9624314-model-release-notes</a></li>
+      </ul>
+    </article>
+
+    <section class="cta-band" id="contact" aria-labelledby="cta-heading">
+      <h2 id="cta-heading">From AI curiosity to AI capability</h2>
+      <p>This briefing is part of the field research behind our AI Enablement service &mdash; a curated, white-glove Claude Cowork implementation tailored to your organization&rsquo;s workflow.</p>
+      <a class="btn" href="https://calendly.com/mark-malaniru/30min" target="_blank" rel="noopener">Book a discovery call</a>
+    </section>
+    <!-- mal-ai-disclaimer:v1 -->
+  <aside class="mal-ai-disclaimer" role="note" aria-label="AI transparency notice" style="max-width:760px;margin:2.5rem auto 0;padding:1rem 1.25rem;border:1px solid #d9c3a5;border-left:4px solid #C07830;border-radius:6px;background:#faf6f0;color:#5c5347;font-size:0.82rem;line-height:1.6;box-sizing:border-box;">
+    <strong style="display:block;color:#8a5a1e;font-size:0.78rem;letter-spacing:.04em;text-transform:uppercase;margin-bottom:.35rem;">AI Transparency Notice</strong>
+    This article was produced through Malaniru&rsquo;s guided-research process: generated with the assistance of AI and reviewed by a person before publication (human-in-the-loop). In line with EU AI Act transparency obligations, we disclose that AI systems were used to create this content. It is provided for general information only, may contain inaccuracies, and is not professional advice &mdash; verify before relying on it.
+  </aside>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Malaniru Inc, LLC &middot; Lafayette, Colorado &middot; AI Enablement</p>
+    <p><a href="daily-intelligence-briefings.html">&larr; Back to Daily Intelligence Briefings</a> &middot; <a href="index.html">AI Enablement</a></p>
+      <nav class="mal-footernav" data-mal-footernav aria-label="Site" style="margin-top:0.7rem;font-size:0.82rem;line-height:1.9;">
+      <a href="about.html" style="color:#C07830;font-weight:700;text-decoration:none;">About</a> &middot;
+      <a href="pricing.html" style="color:#C07830;font-weight:700;text-decoration:none;">Pricing</a> &middot;
+      <a href="index.html" style="color:#C07830;font-weight:700;text-decoration:none;">AI Enablement</a>
+     &middot;
+      <a href="privacy-policy.html" style="color:#C07830;font-weight:700;text-decoration:none;">Privacy</a>
+    </nav>
+  </footer>
+</body>
+</html>
