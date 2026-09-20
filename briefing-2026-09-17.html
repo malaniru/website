@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<!--
+  Malaniru - Daily Intelligence Briefing (branded HTML)
+  Built by: publish_briefing_page.py - Date: 2026-09-17
+  Source:   Projects/Malaniru_Marketing_Site/Staging/20260917-daily-intelligence-briefing.md
+  FIDELITY: Body rendered VERBATIM from the source markdown. No copy edits.
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daily Intelligence Briefing — Thursday, September 17, 2026 - Malaniru</title>
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.malaniru.com/briefing-2026-09-17">
+  <meta name="description" content="The FOMC raised the target range to 3.75-4.00% on Wednesday — unanimous, 12-0, the first increase since July 2023 — and equities that had been higher all session turned down during Chair Warsh&#x27;s press conference. Google rolled out early access to an MCP server for Google Home, letting Claude, ChatGPT, Hermes, OpenClaw and Antigravity drive connected devices. Claude Code v2.1.274 landed at 00:19 UTC with 108 entries. A Euronews report put Anthropic&#x27;s pre-IPO perpetual futures near $2.15 trillion against a $965 billion last agreed round. Every figure carries a source and a confidence tag; this is market intelligence, not investment advice.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --navy:#0F1A2E;--navy-mid:#2A3F63;--copper:#C07830;--gold:#D4A853;
+      --off-white:#F4F1EC;--light-gray:#E8E6E1;--mid-gray:#8A8A96;--dark-text:#1C1C1C;
+      --font:"Inter","Helvetica Neue",Arial,sans-serif;
+    }
+    *{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:var(--font);background:var(--off-white);color:var(--dark-text);line-height:1.65;font-size:16px;-webkit-font-smoothing:antialiased;}
+    .skip-link{position:absolute;left:-999px;top:0;background:var(--gold);color:var(--navy);padding:10px 16px;font-weight:700;z-index:10;}
+    .skip-link:focus{left:8px;top:8px;}
+    a{color:var(--copper);}
+    /* Header */
+    header{background: linear-gradient(160deg, rgba(15,26,46,0.72) 0%, rgba(10,18,33,0.82) 100%), url('StockCake-Cosmic_Web_Complexity-1361288-standard-rot90ccw.jpg'); background-size: auto, 100% 100%; background-repeat: no-repeat, no-repeat; background-position: center, center;color:var(--off-white);padding:48px 24px 52px;position:relative;overflow:hidden;}
+    header::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 85% 12%,rgba(192,120,48,0.20) 0%,rgba(15,26,46,0) 55%);pointer-events:none;}
+    .header-inner{max-width:760px;margin:0 auto;position:relative;z-index:1;}
+    .wordmark{font-weight:800;font-size:1.25rem;letter-spacing:0.02em;margin-bottom:30px;}
+    .wordmark .dot{color:var(--copper);}
+    .wordmark a{color:var(--off-white);text-decoration:none;transition:opacity .18s ease;}
+    .wordmark a:hover,.wordmark a:focus-visible{opacity:.85;outline:none;}
+    .eyebrow{display:inline-block;font-size:0.72rem;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;}
+    header h1{font-weight:800;font-size:clamp(1.8rem,4.6vw,2.6rem);line-height:1.14;letter-spacing:-0.01em;margin-bottom:16px;}
+    .byline{font-size:0.9rem;color:var(--light-gray);letter-spacing:0.01em;}
+    .byline .sep{color:var(--copper);margin:0 8px;}
+    .lede{font-size:1.08rem;color:var(--light-gray);max-width:66ch;margin-top:18px;}
+    .backlink{display:inline-block;margin-top:26px;color:var(--gold);font-weight:600;font-size:0.9rem;text-decoration:none;border-bottom:1px solid rgba(212,168,83,0.4);}
+    .backlink:hover,.backlink:focus-visible{border-bottom-color:var(--gold);outline:none;}
+    /* Article */
+    main{max-width:760px;margin:0 auto;padding:48px 24px 8px;}
+    .disclaimer{background:#fff;border:1px solid var(--light-gray);border-left:4px solid var(--copper);border-radius:8px;padding:14px 18px;font-size:0.9rem;color:var(--navy-mid);margin-bottom:34px;}
+    article{font-size:1.05rem;}
+    article h2{font-weight:800;font-size:1.5rem;color:var(--navy);line-height:1.22;letter-spacing:-0.01em;margin:42px 0 14px;}
+    article h3{font-weight:700;font-size:1.18rem;color:var(--navy-mid);line-height:1.25;margin:30px 0 10px;}
+    article h2 + p, article h3 + p{margin-top:0;}
+    article p{margin:0 0 18px;color:var(--dark-text);}
+    article ul,article ol{margin:0 0 18px;padding-left:24px;}
+    article li{margin-bottom:8px;}
+    article strong{font-weight:700;color:var(--navy);}
+    article em{font-style:italic;}
+    article a{color:var(--copper);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(192,120,48,0.35);transition:border-color .18s ease;}
+    article a:hover,article a:focus-visible{border-bottom-color:var(--copper);outline:none;}
+    article hr{border:none;border-top:1px solid var(--light-gray);margin:34px 0;}
+    article h2#sources, article h2#references{border-top:1px solid var(--light-gray);padding-top:30px;font-size:1.2rem;color:var(--navy-mid);}
+    /* sources list smaller */
+    article h2[id^="sources"] ~ ul li, article h3[id^="sources"] ~ ul li{font-size:0.95rem;color:var(--navy-mid);}
+    /* tables */
+    article table{width:100%;border-collapse:collapse;margin:0 0 24px;font-size:0.95rem;}
+    article th,article td{border:1px solid var(--light-gray);padding:9px 12px;text-align:left;vertical-align:top;}
+    article thead th{background:var(--navy);color:var(--off-white);font-weight:700;}
+    article tbody tr:nth-child(even){background:#fff;}
+    article .table-wrap{overflow-x:auto;margin:0 0 24px;}
+    article .table-wrap table{margin:0;}
+    /* CTA */
+    .cta-band{background:var(--navy);color:var(--off-white);border-radius:12px;padding:42px 32px;text-align:center;margin:48px 0 8px;}
+    .cta-band h2{font-weight:800;font-size:clamp(1.4rem,3.4vw,1.9rem);margin-bottom:12px;letter-spacing:-0.01em;color:var(--off-white);}
+    .cta-band p{color:var(--light-gray);max-width:52ch;margin:0 auto 24px;}
+    .cta-band .btn{display:inline-block;background:var(--copper);color:#fff;font-weight:700;padding:13px 28px;border-radius:8px;text-decoration:none;transition:background .18s ease;}
+    .cta-band .btn:hover,.cta-band .btn:focus-visible{background:var(--gold);color:var(--navy);outline:none;}
+    /* Footer */
+    footer{max-width:760px;margin:16px auto 0;padding:24px;font-size:0.82rem;color:var(--mid-gray);border-top:1px solid var(--light-gray);}
+    footer p+p{margin-top:6px;}
+    footer a{color:var(--mid-gray);text-decoration:underline;}
+    @media (prefers-reduced-motion:reduce){*{transition:none!important;}}
+
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header>
+    <div class="header-inner">
+      <div class="wordmark"><a href="index.html">Malaniru<span class="dot">.</span></a></div>
+      <span class="eyebrow">AI Enablement &middot; Daily Intelligence Briefing</span>
+      <h1>Daily Intelligence Briefing — Thursday, September 17, 2026</h1>
+      <p class="byline">By Mark Andrew Harris<span class="sep">&middot;</span>September 17, 2026</p>
+      <p class="lede">The FOMC raised the target range to 3.75-4.00% on Wednesday — unanimous, 12-0, the first increase since July 2023 — and equities that had been higher all session turned down during Chair Warsh&#x27;s press conference. Google rolled out early access to an MCP server for Google Home, letting Claude, ChatGPT, Hermes, OpenClaw and Antigravity drive connected devices. Claude Code v2.1.274 landed at 00:19 UTC with 108 entries. A Euronews report put Anthropic&#x27;s pre-IPO perpetual futures near $2.15 trillion against a $965 billion last agreed round. Every figure carries a source and a confidence tag; this is market intelligence, not investment advice.</p>
+      <a class="backlink" href="daily-intelligence-briefings.html">&larr; All daily intelligence briefings</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <article>
+      <p><strong>[THOUGHT LEADERSHIP] [DRAFT — Pending Copy Review]</strong></p>
+      <h2 id="executive-summary">Executive Summary</h2>
+      <p><strong>The question this series spent two runs refusing to put a number on was answered yesterday afternoon, and the refusal was the right call.</strong> <strong>The FOMC raised the federal funds target range by 25 basis points to 3.75-4.00% on Wednesday, September 16 — a unanimous 12-0 vote and the first increase since July 2023</strong> (press, multi-source). ✅ <strong>All three US indexes were higher before the decision and turned lower during Chair Kevin Warsh's press conference; the Dow closed at 51,461.90, down 631.21 points or 1.21%, the S&amp;P 500 at 7,551.81, down 0.45%, and the Nasdaq Composite at 25,978.42, down 0.01%</strong> (press, multi-source). ✅ <strong>Google rolled out early access to a Model Context Protocol server for Google Home, opening the ecosystem to any MCP-speaking agent — Claude, ChatGPT, Hermes, OpenClaw and Google Antigravity are named</strong> (press, multi-source). 🔶 <strong>Claude Code v2.1.274 published at 00:19 UTC this morning with 108 entries, the largest release this series has recorded</strong> (primary, read directly at the changelog feed). ✅ <strong>A Euronews report this morning put Anthropic's pre-IPO perpetual futures near $2.15 trillion against a last agreed private valuation of $965 billion, and reported that OpenAI has stepped back from a 2026 listing entirely</strong> (press, single-source, detailed). 🔶 <strong>Anthropic's newsroom was readable at source again today after yesterday's tooling refusal, and the list-versus-featured discrepancy this series has tracked since September 13 is confirmed as still present.</strong> ✅</p>
+      <hr />
+      <h2 id="1-ai-market-trends">1. AI Market Trends</h2>
+      <p><strong>The Fed hiked, and the reconciliation this series has been running on index levels held for a third consecutive day.</strong> <strong>The target range moved to 3.75-4.00%, the vote was unanimous at 12-0, and coverage describes it as the first increase since July 2023</strong> (press, multi-source). ✅ <strong>The FOMC statement said economic activity "is expanding at a solid pace" and that inflation "remains elevated"</strong> (press, multi-source). 🔶 <strong>The dot plot showed 16 of 18 participants expecting another increase, four of those seeing two more as possible, with no increases penciled in for later years and one cut each indicated for 2028 and at least one for 2029</strong> (press, single-source at this level of detail). 🔶</p>
+      <p><strong>The session's shape is the part worth recording.</strong> <strong>All three indexes were higher at points during Wednesday before the decision, and turned lower during Warsh's press conference, which markets read as more hawkish on inflation than expected; reporting attributes the reversal to his stated intent to secure a "timelier return" to 2%</strong> (press, multi-source). 🔶 <strong>Long-dated yields rose, with the 10-year topping 5% again</strong> (press). 🔶</p>
+      <p><strong>The arithmetic checks out, and that is not a given on this retrieval surface.</strong> ✅ <strong>Tuesday's closes as published here yesterday were 52,093.11 for the Dow, 7,585.73 for the S&amp;P and 25,981.57 for the Nasdaq. Wednesday's reported declines of 631.21 points, 0.45% and 0.01% land exactly on 51,461.90, 7,551.81 and 25,978.42.</strong> <strong>Three independent index levels reconciling to the prior session to the decimal is the strongest verification signal this series has produced in a week of date-shifted figures, and it is worth stating explicitly rather than assuming.</strong></p>
+      <p><strong>Underneath a down tape, parts of the AI complex went up.</strong> <strong>Dell, Intel and Nvidia all finished the session in the green, described as value buying stabilising tech after the decision</strong> (press, single-source). 🔶 <strong>Intel rose about 4% on reports of early partnership discussions with SK Hynix on memory chips</strong> (press, multi-source). 🔶 ⚠️ <strong>A separate market-commentary surface described Wednesday as a session of <em>falling</em> Treasury yields removing a ceiling on mega-cap growth, which is the opposite of the multi-source account above. That piece appears to have been written before the decision; it is not carried as a description of the close, and the discrepancy is noted rather than resolved.</strong></p>
+      <p><strong>On the probability policy: two runs, four numbers, one outcome.</strong> ✅ <strong>On September 15 this series located 93% and 79.3% for the same binary question; on September 16, 92% and 60%. It printed none of them and named the decision time instead.</strong> <strong>The hike arrived, so the higher readings were directionally right — and a briefing that had printed 60% on Wednesday morning would have been publicly wrong about the single most consequential macro event of the week.</strong> <strong>The policy is not that probability figures are useless; it is that a monitoring product cannot print one number when its sources disagree by thirty-two points and still call itself a monitoring product.</strong></p>
+      <hr />
+      <h2 id="2-top-10-ai-agents-three-lenses">2. Top 10 AI Agents — Three Lenses</h2>
+      <p>Rankings as of Thursday, September 17, 2026. <strong>The relevance lens moved on the largest Claude Code release of the month; MCP moves up on a consumer-platform adoption event that is bigger than it first reads.</strong></p>
+      <h3 id="2a-relevance-for-claude-mcp-centered-work">2a. Relevance for Claude / MCP-Centered Work</h3>
+      <div class="table-wrap"><table>
+      <thead>
+      <tr>
+      <th>Rank</th>
+      <th>Agent / Platform</th>
+      <th>Justification</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>1</td>
+      <td>Claude Code + Agent SDK</td>
+      <td><strong>Holds first on a release larger than yesterday's record.</strong> <strong>v2.1.274, published to the changelog feed Thursday, September 17, 2026 at 00:19 UTC, carries 108 entries against roughly seventy in v2.1.273</strong> (Source: Claude Code changelog RSS, read directly September 17, 2026 — primary). ✅ <strong>The MCP cluster is the substantive part: Streamable HTTP tool calls no longer time out at about five minutes when a longer per-server <code>timeout</code> is set; <code>http</code> servers that only speak legacy HTTP+SSE no longer fail to connect when they answer the first request with 422 or another 4xx; prompts and resources now refresh when a server sends list-changed notifications without declaring <code>listChanged</code>; and a 403 <code>insufficient_scope</code> refusal now names the missing permissions and points to <code>/mcp</code> re-authentication instead of being reported as an expired sign-in.</strong> ✅ ⚠️ <strong>A separate fix stops MCP connection errors and the MCP login tool's description from displaying secrets resolved from <code>${VAR}</code> placeholders in MCP configs — a credential-disclosure path, fixed quietly in a long list.</strong></td>
+      </tr>
+      <tr>
+      <td>2</td>
+      <td>Model Context Protocol</td>
+      <td><strong>Rises from fourth to second on adoption, not specification.</strong> <strong>Google rolled out early access to an MCP server for Google Home on Tuesday, September 16, letting any MCP-speaking agent — Claude, ChatGPT, Hermes, OpenClaw and Google Antigravity are the named examples — work with connected devices and event history</strong> (press, multi-source; TechCrunch read at source). ✅ <strong>The specification itself is unchanged: 2026-07-28, roadmap August 22</strong> (search-level confirmation — ⚠️ <strong>the MCP blog was not read at source this run</strong>). 🔶 ⚠️ <strong>Setup requires the user to create a Google Cloud project and grant OAuth permissions to the agent, which puts consumer-grade credential handling in front of a home camera archive.</strong></td>
+      </tr>
+      <tr>
+      <td>3</td>
+      <td>Claudeforce / Salesforce in Claude</td>
+      <td><strong>Third, down one, on a second Dreamforce day that broadened rather than deepened.</strong> <strong>Day two added agents for Sales Cloud and Marketing Cloud, a shopper agent for Commerce Cloud and a Field Service agent with voice-to-text; Claudeforce moved into open beta</strong> (press, multi-source). 🔶 ⚠️ <strong>The canonical spelling of AIforce is still unconfirmed at salesforce.com and is still rendered three ways across outlets.</strong></td>
+      </tr>
+      <tr>
+      <td>4</td>
+      <td>Claude Fable 5.1 + Claude Mythos 5.1</td>
+      <td><strong>Fourth, on no news of its own.</strong> Shipped September 1, 2026; cache reads at <strong>$0.25 per million tokens</strong>, a 75% reduction, with input and output at <strong>$10 and $50 per million</strong>; Anthropic states typical workloads cost about <strong>25%</strong> less than Fable 5 and highly agentic workloads up to about <strong>45%</strong> less (primary, read in full September 13, 2026). ✅ ⚠️ <strong>Benchmarks remain vendor-reported on Anthropic's own harness, stated standard error ±3.5-4.5 points on Terminal-Bench-Science.</strong> 🔶</td>
+      </tr>
+      <tr>
+      <td>5</td>
+      <td>Enterprise Frontier Safeguards (EFS)</td>
+      <td><strong>Fifth, unchanged, sixth consecutive run, same reason.</strong> EFS gives enterprise customers <strong>the privacy equivalent of zero data retention while retaining misuse detection</strong>, developed with <strong>more than 100 customers</strong> across AWS, Google Cloud and Azure (primary, read September 13). ✅ ⚠️ <strong>Still announced rather than available; still phased "beginning this fall"; still no published general-availability date. It remains the most recent dated item in Anthropic's own News list.</strong> 🔶</td>
+      </tr>
+      </tbody>
+      </table></div>
+      <p><em>(Watch line: Claude Opus 5 — $5/$25, 1M context. Claude Sonnet 5 — $2/$10. Claude Fable 5.1 / Mythos 5.1 — $10/$50, cache reads $0.25/M. Claude Haiku 4.5 — $1/$5. Gemini 3.8 Flash — $0.75/$3.75, ⚠️ </em><em>reported to double January 1, 2027</em><em>. GPT-6 Astra — ⚠️ </em><em>a second surface this run dates the Astra announcement to September 1 and the release to September 3; still unverified at openai.com and still carried as unconfirmed.</em><em> DeepSeek V4.1-Flash.)</em></p>
+      <h3 id="2b-market-momentum-adoption-funding-buzz">2b. Market Momentum (adoption / funding / buzz)</h3>
+      <div class="table-wrap"><table>
+      <thead>
+      <tr>
+      <th>Rank</th>
+      <th>Agent / Platform</th>
+      <th>Justification</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>1</td>
+      <td>The Anthropic listing</td>
+      <td><strong>Takes first from the safety argument on a dated, detailed report.</strong> <strong>Euronews reports perpetual futures on Anthropic's pre-IPO valuation trading on Hyperliquid at an implied market capitalisation that reached an all-time high near $2.36 trillion and sat near $2.15 trillion at the time of writing — about 2.2 times the $965 billion Series H</strong> (press, single-source, September 17). 🔶 ⚠️ <strong>The market is thin: $6 million in 24-hour volume and $31 million in open interest, on the venue's own market maker's account. A price that moves a headline on $6 million of turnover is a sentiment indicator, not a valuation.</strong></td>
+      </tr>
+      <tr>
+      <td>2</td>
+      <td>The safety argument</td>
+      <td><strong>Falls to second as the news cycle moved to the Fed, without anything being settled.</strong> <strong>Huang and Zuckerberg against Amodei, Altman, Musk and Hassabis remains the standing split</strong> (press, multi-source, September 15-16). 🔶 ⚠️ <strong>No new participant, retraction or elaboration was located this run.</strong></td>
+      </tr>
+      <tr>
+      <td>3</td>
+      <td>MCP in the consumer home</td>
+      <td><strong>Enters third.</strong> <strong>Google Home Premium Advanced subscribers in the US — the $20-per-month tier — get early access starting September 16 and over the coming weeks; Google declined to say whether it will reach other tiers or markets</strong> (press, read at source). ✅ <strong>This is the first time a major consumer platform has opened its device graph to arbitrary third-party agents through MCP rather than through its own assistant.</strong> 🔶</td>
+      </tr>
+      <tr>
+      <td>4</td>
+      <td>Salesforce Agentforce + AIforce</td>
+      <td><strong>Third to fourth as Dreamforce's second day ran to customer proof rather than product.</strong> <strong>Siemens chief executive Roland Busch appeared to describe Agentforce use across interactions with customers and more than 100,000 suppliers</strong> (press, single-source). 🔶</td>
+      </tr>
+      <tr>
+      <td>5</td>
+      <td>Cybersecurity as the AI derivative</td>
+      <td><strong>Fifth, and deliberately unquantified this run.</strong> ⚠️ <strong>A surface dated today described CrowdStrike soaring 14% to an all-time high "on September 16." That figure matches the 13.8-14.2% Monday, September 14 move this series already carried, and contradicts the +3% Tuesday close at $243.54 it also carried. It is treated as a date-shifted restatement and no CrowdStrike move is printed for September 16.</strong></td>
+      </tr>
+      </tbody>
+      </table></div>
+      <h3 id="2c-capability-maturity-production-readiness">2c. Capability &amp; Maturity (production readiness)</h3>
+      <div class="table-wrap"><table>
+      <thead>
+      <tr>
+      <th>Rank</th>
+      <th>Agent / Platform</th>
+      <th>Justification</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>1</td>
+      <td>Claude Code + Agent SDK</td>
+      <td><strong>First for a fifth consecutive run, and this release is unusually weighted toward governed deployment.</strong> <strong>v2.1.274 adds a <code>claude_code.managed_settings_resolved</code> OpenTelemetry event reporting managed-settings sources and policy-helper state, with redacted settings and digests behind <code>OTEL_LOG_MANAGED_SETTINGS=1</code>; fixes <code>installed_plugins.json</code> being rewritten on nearly every start-up when plugin policy comes from remote managed settings; and switches Bedrock, Vertex, Foundry and telemetry-disabled installs to the v2 MCP client and MCP 2026-07-28 negotiation by default</strong> (primary). ✅ ⚠️ <strong>It also adds <code>enduser.sub</code> — the identity-provider subject — to the telemetry Claude Desktop and Cowork send through a Claude apps gateway. That is a durable cross-system user identifier newly leaving the host, and it belongs in a data-flow review rather than a changelog skim.</strong></td>
+      </tr>
+      <tr>
+      <td>2</td>
+      <td>Claude Fable 5.1</td>
+      <td><strong>Second, unchanged.</strong> Generally available on all platforms including AWS, Google Cloud and Azure as <code>claude-fable-5-1</code> (primary). ✅ <strong>Cyber safeguards fire about 60% less often per Claude Code session; biology safeguards 85% less often on benign queries.</strong> ✅ ⚠️ <strong>Anthropic's own page states the model "can still sometimes bypass approvals and auto-mode classifiers."</strong> 🔶</td>
+      </tr>
+      <tr>
+      <td>3</td>
+      <td>Salesforce Agentforce</td>
+      <td><strong>Third, unchanged.</strong> <strong>Multi-Agent Orchestration at GA, six named agents generally available, Hunter piloted with GA stated for November 2026</strong> (press, multi-source). 🔶 ⚠️ <strong>The Trusted Enterprise AI Harness and AI Control Plane — the governance layer — remain described as early FY28, a materially later date than the agents.</strong> 🔶</td>
+      </tr>
+      <tr>
+      <td>4</td>
+      <td>MCP 2026-07-28</td>
+      <td><strong>Rises to fourth.</strong> Stateless core, Multi Round-Trip Requests, cacheable list results, Tasks as an official extension, authorization hardened with issuer validation and Client ID Metadata Documents. ✅ <strong>Four of v2.1.274's fixes are implementation defects against this specification — timeouts, legacy transport fallback, list-changed handling, scope errors — which is evidence the specification is now being exercised hard enough to find them.</strong> 🔶</td>
+      </tr>
+      <tr>
+      <td>5</td>
+      <td>OpenAI Agents API</td>
+      <td><strong>Falls to fifth, and the silence is a week old.</strong> Public beta since September 10, managed Codex harness, durable sessions, hosted/self-hosted/partner sandboxes (press). 🔶 ⚠️ <strong>The reported absence of Zero Data Retention and US-only data residency remain uncorroborated and unverified at source for a third run.</strong></td>
+      </tr>
+      </tbody>
+      </table></div>
+      <p><strong>Divergence analysis.</strong> <strong>Claude Code tops two of three lenses for a third consecutive run, and the gap between the lenses is narrowing for an interesting reason: the release that keeps it at the top of relevance is the same release that keeps it at the top of maturity, because its content is almost entirely governance plumbing.</strong> ✅ <strong>MCP is the sharpest mover, up two places on relevance and one on maturity, on an adoption event rather than a specification change — and the maturity justification is inverted from the usual form: the protocol scores better because a client shipped four fixes against it.</strong> <strong>The momentum lens changed leadership from an argument to a price, which is a healthier top slot than it was yesterday but a thinner one than it looks — $6 million of daily turnover.</strong> ⚠️ <strong>The honest caveat is that two of the three momentum movements this run rest on single-source reporting.</strong></p>
+      <p><strong>What This Means for You.</strong> <strong>Two items, and both are policy work rather than tooling work.</strong> ✅ <strong>The first is the <code>${VAR}</code> secret-disclosure fix in v2.1.274: MCP connection errors and the login tool's own description were showing secrets resolved from placeholders in MCP configs.</strong> <strong>Any organization whose staff have been pasting error output into a ticket, a chat thread or a support case has a plausible credential-exposure path that closed this morning and was open before it — which makes credential rotation, not just upgrading, the correct remediation to specify.</strong> ⚠️ <strong>That is a compliance-awareness action item with something concrete to do in it, not a note to file.</strong> <strong>The second is <code>enduser.sub</code> in gateway telemetry.</strong> <strong>A documented AI implementation policy should treat any new identifier appearing in a telemetry stream as a reportable change to the organization's data map, and this one — an identity-provider subject, stable across systems — is exactly the category a data-protection impact assessment asks about.</strong> ✅ <strong>Neither item is a defect to complain about; both are the kind of change that only shows up if someone reads the changelog line by line, which is the argument for having someone do it.</strong> 🔶</p>
+      <hr />
+      <h2 id="3-agentic-ai-advances-new-releases">3. Agentic AI Advances &amp; New Releases</h2>
+      <ul>
+      <li><strong>Claude Code v2.1.274 — Thursday, September 17, 2026, 00:19 UTC — verified at source.</strong> <strong>108 entries. Beyond the MCP and telemetry items above: a visible warning when memory usage is critical, with steps to free memory or restart safely; <code>CLAUDE_CODE_MCP_STARTUP_WAIT_MS</code> to bound how long the first non-interactive turn waits for connecting MCP servers; corrupted transcripts self-healing out of endless "unexpected tool_use_id" retry loops; Bash permission checks now prompting for commands that loop over or assign certain special shell variables; worktree-isolated sessions now refusing certain nested shell expansions; and <code>"type": "sdk"</code> MCP entries in <code>.mcp.json</code>, settings, plugins and agent files now skipped with a warning</strong> (Source: Claude Code changelog feed, read directly — primary). ✅ ⚠️ <strong>The Claude apps gateway also gained a 25-second drain on SIGTERM (<code>CLAUDE_GATEWAY_DRAIN_TIMEOUT_MS</code>) and a spend-limit check reduced from four database round trips to one — operational detail that matters to anyone self-hosting the gateway.</strong></li>
+      <li><strong>Google Home MCP server — early access from Tuesday, September 16, 2026.</strong> <strong>Any MCP-speaking agent can review camera summaries, monitor smart-home activity, control connected devices and build custom dashboards across Nest doorbells and thermostats and "Works with Google Home" or Matter devices. Setup requires a Google Cloud project configured for Home MCP, after which the agent requests sign-in and permissions. Rollout is to Google Home Premium Advanced subscribers in the US, the $20-per-month tier, starting September 16 and continuing over the coming weeks</strong> (press, TechCrunch read at source September 17; corroborated by Engadget, Android Authority, Dataconomy). ✅ ⚠️ <strong>Google would not comment on wider rollout. Coverage also notes standing security criticism of MCP authentication practice; that criticism is general and is not a finding about this server.</strong></li>
+      <li><strong>Dreamforce day two — Wednesday, September 16.</strong> <strong>New Sales Cloud and Marketing Cloud agents, including a Marketing Cloud agent described as building campaigns unassisted; a Commerce Cloud shopper agent; a Field Service agent with voice-to-text. Claudeforce moved into open beta. Siemens chief executive Roland Busch appeared as customer proof</strong> (press, multi-source). 🔶 ⚠️ <strong>Day two was largely customer demonstration rather than new capability, and should not be read as a second product wave.</strong></li>
+      <li><strong>Standing carries, not re-verified this run.</strong> <strong>Colorado Senate Bill 26-189</strong>, signed <strong>May 14, 2026</strong>, effective <strong>January 1, 2027</strong>, centralising enforcement with the Colorado Attorney General. <strong>EU AI Act Article 50</strong> transparency obligations enforceable since <strong>August 2, 2026</strong>, penalties up to <strong>€15 million or 3% of worldwide annual turnover</strong>; <strong>Annex III</strong> at <strong>2 December 2027</strong>; <strong>Annex I</strong> at <strong>2 August 2028</strong>. 🔶 ⚠️ <strong>CVE-2026-59822 — the LiteLLM Bearer-token bypass on CISA's KEV catalog — has had no update for two runs and no patch-adoption figure has been located.</strong> Compliance awareness, not legal advice.</li>
+      </ul>
+      <p><strong>What This Means for You.</strong> <strong>The Google Home MCP server is the item to brief your organization on, and not for the reason it will be covered.</strong> ✅ <strong>The setup path is the finding: a consumer creates a Google Cloud project, configures an MCP server, hands the configuration to an agent, and grants OAuth permissions to reach a home camera archive.</strong> <strong>That is an enterprise integration pattern being handed to a consumer, and the same pattern is what your staff will now recognise and attempt at work.</strong> ⚠️ <strong>The practical consequence is that shadow-MCP — employees connecting personal or unsanctioned agents to organisational data through a protocol their IT team may not yet inventory — moves from a hypothetical to something with a mainstream on-ramp this week.</strong> <strong>The policy work that follows is narrow and writable today: an MCP server register, a rule that OAuth grants to agents are provisioned centrally rather than by end users, and a statement of which categories of data an agent may be granted.</strong> ✅ <strong>It pairs directly with the CrowdStrike Falcon Guardian shadow-agent discovery capability announced September 1, which gives the control a tooling answer as well as a policy one.</strong> 🔶</p>
+      <hr />
+      <h2 id="4-overnight-daily-release-monitor">4. Overnight / Daily Release Monitor</h2>
+      <p>Covering <strong>Wednesday, September 16 into Thursday, September 17</strong>. ✅ <strong>Anthropic's newsroom was reachable at source this run, reversing yesterday's tooling refusal; the Claude Code changelog feed was read directly.</strong></p>
+      <ul>
+      <li><strong>Claude Code v2.1.274 — Thursday, September 17, 2026, 00:19:50 GMT</strong> (primary, read directly). ✅ <strong>The only dated vendor release confirmed at source inside the overnight window. The feed's last build timestamp is 09:03:31 GMT today with v2.1.274 as the newest item, so nothing has shipped since.</strong> ✅</li>
+      <li><strong>Anthropic newsroom — read at source September 17.</strong> ✅ ⚠️ <strong>The list-versus-featured discrepancy this series has tracked since September 13 is confirmed as still present: the September 10 "Detecting and countering misuse of AI" report appears as a featured card but is absent from the dated News list, whose most recent entry remains "Developing Enterprise Frontier Safeguards with our customers," September 1, 2026.</strong> <strong>Five items of the News list run August 27 to August 14; nothing dated after September 1 appears in it.</strong></li>
+      <li><strong>Anthropic Singapore office — no corroboration at source.</strong> ⚠️ <strong>Yesterday's single-source press report of an October Singapore opening does not appear anywhere on anthropic.com/news as of this run. The report is not contradicted; it is simply still uncorroborated by the company, and should carry that caveat wherever it is repeated.</strong></li>
+      <li><strong>Google Home MCP server — Tuesday, September 16, 17:00 UTC</strong> (press, read at source). ✅ <strong>Detailed in Section 3.</strong></li>
+      <li><strong>No new MCP specification or roadmap publication located.</strong> <strong>2026-07-28 and the August 22 roadmap remain current</strong> (search-level confirmation only). 🔶</li>
+      <li><strong>One US session settled: Wednesday, September 16</strong> — covered in Section 1. ✅</li>
+      <li><strong>Scheduled today and ahead:</strong> <strong>Dreamforce concludes in San Francisco, with end-date reporting still split between September 17 and September 18; Microsoft's Agent-a-Thon runs through September 17, digital</strong> (press). 🔶 <strong>AGNTCon+MCPCon Europe, Amsterdam, September 17-18</strong> (press, single-source). 🔶 <strong>Micron fiscal Q4 September 30; next CPI October 14; next PPI October 15; TechCrunch Disrupt October 13-15.</strong> 🔶</li>
+      </ul>
+      <p><strong>What This Means for You.</strong> <strong>Today's monitoring result is the one worth writing into your own vendor-monitoring specification, because the check that failed yesterday succeeded today and produced a finding that only a repeated check could produce.</strong> ✅ <strong>Anthropic's newsroom was unreadable on September 16 and readable on September 17, and the September 10 report is still missing from the dated list five days on.</strong> <strong>A single observation of that gap is a curiosity; four observations across five days, with one acknowledged miss in the middle, is a characteristic of the source — and the difference between the two is entirely a function of running the check on a schedule and recording the misses.</strong> ⚠️ <strong>The transferable specification is short: a vendor-monitoring report must record attempted-and-failed checks as first-class entries, or its findings cannot distinguish "nothing happened" from "nobody looked."</strong> ✅ <strong>The second point is narrower and immediate — the Singapore announcement is now a day old and still uncorroborated at the vendor's own newsroom, which is the sort of thing that quietly becomes a fact in a board slide if no one is tracking the provenance tag alongside the claim.</strong> 🔶</p>
+      <hr />
+      <h2 id="5-ai-trading-trends">5. AI Trading Trends</h2>
+      <p><em>Market intelligence for situational awareness — not investment advice. No buy/sell/hold recommendations, price targets, or return forecasts. </em><em>Figures below are from the September 16 session or earlier and are dated individually.</em><em> Every figure carries a source and a confidence note.</em></p>
+      <h3 id="5a-ipos">5a. IPOs</h3>
+      <p>⚠️ <strong>No AI IPO was confirmed as priced in the United States between September 1 and September 17, 2026.</strong> 🔶 <strong>Fifth consecutive run carrying that finding.</strong></p>
+      <p><strong>Anthropic — the fullest dated picture this series has had.</strong> <strong>Euronews reports the last agreed valuation at $965 billion, set when a $65 billion Series H closed at the end of May led by Altimeter Capital, Dragoneer, Greenoaks and Sequoia — against $61.5 billion barely a year earlier, a roughly sixteenfold move in about twelve months. Annualised revenue run rate is reported to have passed $65 billion by the end of July; 2025 losses are reported at close to $42 billion. Amazon has committed as much as $33 billion; Anthropic has committed more than $100 billion of spending on AWS technologies over the coming decade. Reports put the target IPO valuation at $2 trillion, with Goldman Sachs, JPMorgan and Morgan Stanley leading an offering expected to raise more than $60 billion, on Nasdaq</strong> (press, single-source at this level of detail, September 17). 🔶 ✅ <strong>The confidential Form S-1 of June 1, 2026 remains the only company-confirmed filing event.</strong> ⚠️ <strong>The $2 trillion target and the $2.15-2.36 trillion Hyperliquid implied capitalisation together offer a plausible reading of the irreconcilable "$2 trillion" and "$2.3 trillion" figures this series has carried for a week — one is a reported target, the other a traded implied price — but neither company has confirmed either, and the reported raise of "more than $60 billion" sits against the "as much as $100 billion" carried previously. Both stand; neither is resolved.</strong></p>
+      <p><strong>OpenAI — the three-way contradiction resolves in one direction.</strong> <strong>Euronews reports that OpenAI, having filed confidentially, "has now stepped back entirely" from a 2026 listing, at a private valuation of $852 billion set during a $122 billion round in March; separate reporting has chief executive Sam Altman describing a listing this year as "ill-advised"</strong> (press, multi-source on the withdrawal, single-source on the valuation). 🔶 ⚠️ <strong>The confidential filing date is still reported as both May 22 and June 8 across sources and is not resolved here. The $852 billion figure supersedes the $730-850 billion range carried yesterday only in specificity, not in confirmation.</strong></p>
+      <p><strong>Cerebras — a figure this series carried is now corroborated and extended.</strong> ✅ <strong>Listed on Nasdaq in May after two false starts, raising $5.55 billion at $185 a share above its revised range; opened 89% higher and closed its first day near $311, valuing the company at roughly $67 billion against $23 billion three months earlier</strong> (press). 🔶 <strong>A $185 offer to a $311 first-day close is a 68% gain, which matches the 68% first-day figure this series has carried since September 13 — an independent confirmation rather than a restatement.</strong> ✅ ⚠️ <strong>The same report puts Cerebras at roughly $43.7 billion currently, after a disappointing first earnings report.</strong></p>
+      <p><strong>SpaceX — partial corroboration of yesterday's unconfirmed item.</strong> <strong>A second source now describes a June listing raising more than $85 billion, at a valuation that briefly touched $2.8 trillion before falling back to around $1.95 trillion</strong> (press). 🔶 ⚠️ <strong>The June listing is now two-source. The $150 share price, the SPCX ticker and the June 12 date carried yesterday remain single-source and unconfirmed. It is not an AI-core listing and is carried only as IPO-market context.</strong></p>
+      <h3 id="5b-top-5-traded-ai-related-tickers">5b. Top 5 traded AI-related tickers</h3>
+      <p><em>Inclusion reflects AI exposure and trading prominence, not merit. Latest verifiable signal only — no targets, no forecasts.</em></p>
+      <div class="table-wrap"><table>
+      <thead>
+      <tr>
+      <th>#</th>
+      <th>Ticker</th>
+      <th>Company</th>
+      <th>Why it's an AI-trading bellwether</th>
+      <th>Latest verifiable signal</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>1</td>
+      <td>NVDA</td>
+      <td>Nvidia</td>
+      <td>The volume anchor of the AI trade and a reported participant in the sector's largest pending listing</td>
+      <td><strong>Described as finishing September 16 in the green alongside Dell and Intel</strong> (press, single-source). 🔶 ⚠️ <strong>No verified close for September 15 or September 16 was retrieved and none is printed. The last figure this series stands behind remains the September 14 close of $210.96, down 3.36%.</strong></td>
+      </tr>
+      <tr>
+      <td>2</td>
+      <td>INTC</td>
+      <td>Intel</td>
+      <td>The week's clearest single-name catalyst, and a read on whether AI capital is broadening beyond accelerators</td>
+      <td><strong>Rose about 4% on September 16 on reports of early partnership discussions with SK Hynix on memory chips; coverage notes analyst target increases citing AI and data-centre demand</strong> (press, multi-source). 🔶 ⚠️ <strong>No closing level verified; the percentage move is carried, the price is not.</strong></td>
+      </tr>
+      <tr>
+      <td>3</td>
+      <td>DELL</td>
+      <td>Dell Technologies</td>
+      <td>The AI-server proxy, and the most extreme year-to-date move in the complex</td>
+      <td><strong>Reported up 5% to $568.52, with a year-to-date advance of 356%</strong> (press, single-source). 🔶 ⚠️ <strong>That figure is explicitly described as morning trading on September 16, not a close, and is not printed as one.</strong></td>
+      </tr>
+      <tr>
+      <td>4</td>
+      <td>CRWD</td>
+      <td>CrowdStrike</td>
+      <td>The security rotation's leader and the ongoing test of whether the AI-security bid persists</td>
+      <td>⚠️ <strong>No September 16 move is printed. A surface dated today describes a 14% advance to an all-time high "on September 16"; that matches the September 14 move already carried and contradicts the +3% close at $243.54 carried for September 15. Treated as date-shifted.</strong> 🔶</td>
+      </tr>
+      <tr>
+      <td>5</td>
+      <td>ORCL</td>
+      <td>Oracle</td>
+      <td>The purest listed read on whether AI infrastructure spending is being financed prudently</td>
+      <td>⚠️ <strong>No verified close for a third consecutive run.</strong> <strong>Standing context: press reports shares down roughly 24% year to date amid concern over debt-funded data-centre build-out; a separate note reports Q1 FY2027 revenue up 30% to $19.3 billion with Oracle Cloud Infrastructure up 121% to $7.4 billion</strong> (press, single-source). 🔶</td>
+      </tr>
+      </tbody>
+      </table></div>
+      <p><em>(PANW, AMD and MU are out this run for want of any dated close or percentage move.)</em></p>
+      <p><strong>Week ahead (September 17-18) — calendar, not forecast.</strong> <strong>The FOMC has acted: target range 3.75-4.00%, effective from the September 16 decision; the dot plot points to one further increase this year on 16 of 18 participants</strong> (press). 🔶 <strong>Dreamforce concludes, end date reported variously as September 17 and September 18.</strong> 🔶 <strong>Microsoft Agent-a-Thon through September 17. AGNTCon+MCPCon Europe, Amsterdam, September 17-18.</strong> 🔶 <strong>Anthropic's public S-1, if late-September reporting holds, would be expected in this window or shortly after</strong> — ⚠️ <strong>reported timetable, not a filed date; an October Nasdaq listing target is reported and unconfirmed.</strong> <strong>Micron fiscal Q4 September 30; next CPI October 14; next PPI October 15.</strong> 🔶 <strong>EU AI Act Article 50 obligations enforceable since August 2, 2026; Colorado's revised framework effective January 1, 2027.</strong></p>
+      <p><strong>What This Means for You.</strong> <strong>The probability-figure policy has now produced a documented result rather than a defensible abstention, and that changes what it is worth as a working rule.</strong> ✅ <strong>Across two runs this series located four implied-probability readings for the same binary outcome — 93%, 79.3%, 92% and 60% — printed none, named the decision time instead, and the decision landed.</strong> <strong>A monitoring report that had printed Wednesday's 60% would have been wrong about the week's largest macro event while looking authoritative; one that printed 93% would have been right by luck and would have taught its readers the wrong lesson about its sources.</strong> <strong>The rule that survives is the one worth writing into your own reporting policy: where credible sources disagree beyond a stated tolerance, the report describes the disagreement and the decision point, not a number.</strong> ⚠️ <strong>The second point is the table above, where four of five rows carry a caveat and only one prints a percentage move — and where today's specific failure is a fourth consecutive date-shifted figure, this time restating a Monday move as a Wednesday one.</strong> ✅ <strong>Four instances in four days is a property of the retrieval surface, not a run of bad luck, and the operational answer is a rule worth building into any dashboard your organization publishes internally: a figure whose date cannot be independently confirmed does not render, and the empty cell says why.</strong> Market intelligence only, not investment advice.</p>
+      <hr />
+      <h2 id="sources">Sources</h2>
+      <p><em>Verification note: the Claude Code changelog RSS feed and Anthropic's newsroom were both read at source on September 17, 2026 — the newsroom for the first time since September 15, after yesterday's tooling refusal. TechCrunch's Google Home MCP report and the Euronews Anthropic IPO report were read in full at source. All other items are press- or search-derived and tagged accordingly.</em></p>
+      <ul>
+      <li>Claude Code changelog RSS feed, read directly September 17, 2026 — v2.1.274 dated Thu, 17 Sep 2026 00:19:50 GMT, 108 entries; feed last built 09:03:31 GMT September 17 (primary). <a href="https://code.claude.com/docs/en/changelog/rss.xml" target="_blank" rel="noopener">https://code.claude.com/docs/en/changelog/rss.xml</a></li>
+      <li>Claude Code changelog (rendered page). <a href="https://code.claude.com/docs/en/changelog" target="_blank" rel="noopener">https://code.claude.com/docs/en/changelog</a></li>
+      <li>Anthropic Newsroom, read directly September 17, 2026 (primary — the list-versus-featured discrepancy; most recent dated News entry September 1, 2026). <a href="https://www.anthropic.com/news" target="_blank" rel="noopener">https://www.anthropic.com/news</a></li>
+      <li>CNBC, "Fed rate decision September 2026: Rates rise to 3.75%-4%," September 16, 2026 (press — the decision, the range). <a href="https://www.cnbc.com/2026/09/16/fed-rate-decision-september-2026.html" target="_blank" rel="noopener">https://www.cnbc.com/2026/09/16/fed-rate-decision-september-2026.html</a></li>
+      <li>CNBC, "Fed meeting recap: Warsh says inflation is still too high as Fed hikes for the first time since 2023," September 16, 2026 (press — statement language, dot plot). <a href="https://www.cnbc.com/2026/09/16/fed-meeting-today-live-updates.html" target="_blank" rel="noopener">https://www.cnbc.com/2026/09/16/fed-meeting-today-live-updates.html</a></li>
+      <li>InvestmentNews, "Fed under Warsh hands down unanimous September rate decision," September 2026 (press — the 12-0 vote). <a href="https://www.investmentnews.com/equities/warsh-federal-reserve-september-rate-decision/268178" target="_blank" rel="noopener">https://www.investmentnews.com/equities/warsh-federal-reserve-september-rate-decision/268178</a></li>
+      <li>Yahoo Finance, "Fed meeting live updates: Fed hikes interest rates by 25 basis points as Warsh vows 'timelier return' to 2% inflation," September 16, 2026 (press). <a href="https://finance.yahoo.com/economy/policy/live/federal-reserve-meeting-live-updates-chairman-kevin-warsh-143452661.html" target="_blank" rel="noopener">https://finance.yahoo.com/economy/policy/live/federal-reserve-meeting-live-updates-chairman-kevin-warsh-143452661.html</a></li>
+      <li>Yahoo Finance, "Stock Market Today (Sept. 16, 2026): Dow, S&amp;P 500 plummet after Fed hikes," September 16, 2026 (press — index closes, the green finishes for Dell, Intel and Nvidia). <a href="https://finance.yahoo.com/markets/stocks/articles/stock-market-today-sept-16-133949098.html" target="_blank" rel="noopener">https://finance.yahoo.com/markets/stocks/articles/stock-market-today-sept-16-133949098.html</a></li>
+      <li>CNBC, "Dow drops 600 points as Fed rate hike and Warsh's inflation talk unnerve investors: Live updates," September 16, 2026 (press). <a href="https://www.cnbc.com/2026/09/15/stock-market-today-live-updates.html" target="_blank" rel="noopener">https://www.cnbc.com/2026/09/15/stock-market-today-live-updates.html</a></li>
+      <li>The Motley Fool, "Stock Market Today, Sept. 16: Intel Jumps on SK Hynix Memory-Chip Manufacturing Talks," September 16, 2026 (press — the Intel move). <a href="https://www.fool.com/coverage/stock-market-today/2026/09/16/stock-market-today-sept-16-intel-jumps-on-sk-hynix-memory-chip-manufacturing-talks/" target="_blank" rel="noopener">https://www.fool.com/coverage/stock-market-today/2026/09/16/stock-market-today-sept-16-intel-jumps-on-sk-hynix-memory-chip-manufacturing-talks/</a></li>
+      <li>24/7 Wall St., "Dell Rises 5% Despite Fresh Silver Lake Share Sale Filings," September 16, 2026 (press, single-source — the $568.52 morning-trading level, explicitly not a close). <a href="https://247wallst.com/investing/2026/09/16/dell-rises-5-despite-fresh-silver-lake-share-sale-filings-super-micro-climbs-3-hewlett-packard-enterprise-ticks-up/" target="_blank" rel="noopener">https://247wallst.com/investing/2026/09/16/dell-rises-5-despite-fresh-silver-lake-share-sale-filings-super-micro-climbs-3-hewlett-packard-enterprise-ticks-up/</a></li>
+      <li>TechCrunch, Sarah Perez, "Your AI agents can now control your Google Home devices," September 16, 2026, 10:00 AM PDT (press, read in full at source — the MCP server, named agents, Premium Advanced tier and rollout). <a href="https://techcrunch.com/2026/09/16/your-ai-agents-can-now-control-your-google-home-devices/" target="_blank" rel="noopener">https://techcrunch.com/2026/09/16/your-ai-agents-can-now-control-your-google-home-devices/</a></li>
+      <li>Engadget, "Google Home is going agentic via integration with the MCP standard," September 2026 (press). <a href="https://www.engadget.com/2260280/google-home-is-going-agentic-via-integration-with-the-mcp-standard/" target="_blank" rel="noopener">https://www.engadget.com/2260280/google-home-is-going-agentic-via-integration-with-the-mcp-standard/</a></li>
+      <li>Android Authority, "Google Home will soon let you swap Gemini for Claude, or another agent of your choice," September 2026 (press). <a href="https://www.androidauthority.com/google-home-mcp-connector-ai-agents-3711914/" target="_blank" rel="noopener">https://www.androidauthority.com/google-home-mcp-connector-ai-agents-3711914/</a></li>
+      <li>Dataconomy, "Google Home Adds MCP Support For AI Agents," September 17, 2026 (press). <a href="https://dataconomy.com/2026/09/17/google-home-adds-mcp-support-for-ai-agents/" target="_blank" rel="noopener">https://dataconomy.com/2026/09/17/google-home-adds-mcp-support-for-ai-agents/</a></li>
+      <li>Euronews, "Anthropic priced above $2 trillion as markets eagerly await IPO filing," September 17, 2026 (press, read in full at source — Series H, run rate, losses, Hyperliquid implied capitalisation and liquidity, banks, Cerebras and SpaceX detail, OpenAI withdrawal). <a href="https://www.euronews.com/business/2026/09/17/anthropic-priced-above-2-trillion-as-markets-eagerly-await-ipo-filing" target="_blank" rel="noopener">https://www.euronews.com/business/2026/09/17/anthropic-priced-above-2-trillion-as-markets-eagerly-await-ipo-filing</a></li>
+      <li>ITPro, "Dreamforce 2026 live: All the news, updates, and announcements from day two in San Francisco," September 16, 2026 (press — the Cloud agents and the Siemens appearance). <a href="https://www.itpro.com/business/live/dreamforce-2026-live-all-the-news-updates-and-announcements-from-day-one" target="_blank" rel="noopener">https://www.itpro.com/business/live/dreamforce-2026-live-all-the-news-updates-and-announcements-from-day-one</a></li>
+      <li>Salesforce Ben, "Complete Roundup of the Agentforce Keynote at Dreamforce '26" (press — Claudeforce open beta). <a href="https://www.salesforceben.com/complete-roundup-of-the-agentforce-keynote-at-dreamforce-26/" target="_blank" rel="noopener">https://www.salesforceben.com/complete-roundup-of-the-agentforce-keynote-at-dreamforce-26/</a></li>
+      <li>SiliconANGLE, "CrowdStrike launches Falcon Guardian to police AI agents at the endpoint," September 1, 2026 (press — shadow-agent discovery and agent access controls). <a href="https://siliconangle.com/2026/09/01/crowdstrike-launches-falcon-guardian-to-police-ai-agents-at-the-endpoint/" target="_blank" rel="noopener">https://siliconangle.com/2026/09/01/crowdstrike-launches-falcon-guardian-to-police-ai-agents-at-the-endpoint/</a></li>
+      <li>Yahoo Finance / Insider Monkey, "CrowdStrike and Palo Alto Rallied While AI Stocks Sank" (press — the 14% figure treated here as a date-shifted restatement and not printed). <a href="https://finance.yahoo.com/technology/ai/articles/crowdstrike-palo-alto-rallied-while-211451001.html" target="_blank" rel="noopener">https://finance.yahoo.com/technology/ai/articles/crowdstrike-palo-alto-rallied-while-211451001.html</a></li>
+      <li>Model Context Protocol Blog, "The 2026-07-28 Specification" — most recent specification release, confirmed at search level September 17, 2026 (⚠️ not read at source this run). <a href="https://blog.modelcontextprotocol.io/posts/2026-07-28/" target="_blank" rel="noopener">https://blog.modelcontextprotocol.io/posts/2026-07-28/</a></li>
+      <li>Model Context Protocol Blog, "The New MCP Roadmap" — August 22, 2026 (search-level confirmation only). <a href="https://blog.modelcontextprotocol.io/posts/mcp-roadmap/" target="_blank" rel="noopener">https://blog.modelcontextprotocol.io/posts/mcp-roadmap/</a></li>
+      <li>Anthropic, "Introducing Claude Fable 5.1 and Claude Mythos 5.1," September 1, 2026 (primary, read in full September 13, 2026 — pricing, benchmarks, safeguards). <a href="https://www.anthropic.com/claude-fable-and-mythos-5-1" target="_blank" rel="noopener">https://www.anthropic.com/claude-fable-and-mythos-5-1</a></li>
+      <li>Anthropic, "Developing Enterprise Frontier Safeguards with our customers," September 1, 2026 (primary, read September 13, 2026). <a href="https://www.anthropic.com/news/enterprise-frontier-safeguards" target="_blank" rel="noopener">https://www.anthropic.com/news/enterprise-frontier-safeguards</a></li>
+      <li>Anthropic, "Confidentially submits draft S-1," June 1, 2026 (primary — the only company-confirmed filing event). <a href="https://www.anthropic.com/news/confidential-draft-s1-sec" target="_blank" rel="noopener">https://www.anthropic.com/news/confidential-draft-s1-sec</a></li>
+      </ul>
+    </article>
+
+    <section class="cta-band" id="contact" aria-labelledby="cta-heading">
+      <h2 id="cta-heading">From AI curiosity to AI capability</h2>
+      <p>This briefing is part of the field research behind our AI Enablement service &mdash; a curated, white-glove Claude Cowork implementation tailored to your organization&rsquo;s workflow.</p>
+      <a class="btn" href="https://calendly.com/mark-malaniru/30min" target="_blank" rel="noopener">Book a discovery call</a>
+    </section>
+    <!-- mal-ai-disclaimer:v1 -->
+  <aside class="mal-ai-disclaimer" role="note" aria-label="AI transparency notice" style="max-width:760px;margin:2.5rem auto 0;padding:1rem 1.25rem;border:1px solid #d9c3a5;border-left:4px solid #C07830;border-radius:6px;background:#faf6f0;color:#5c5347;font-size:0.82rem;line-height:1.6;box-sizing:border-box;">
+    <strong style="display:block;color:#8a5a1e;font-size:0.78rem;letter-spacing:.04em;text-transform:uppercase;margin-bottom:.35rem;">AI Transparency Notice</strong>
+    This article was produced through Malaniru&rsquo;s guided-research process: generated with the assistance of AI and reviewed by a person before publication (human-in-the-loop). In line with EU AI Act transparency obligations, we disclose that AI systems were used to create this content. It is provided for general information only, may contain inaccuracies, and is not professional advice &mdash; verify before relying on it.
+  </aside>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Malaniru Inc, LLC &middot; Lafayette, Colorado &middot; AI Enablement</p>
+    <p><a href="daily-intelligence-briefings.html">&larr; Back to Daily Intelligence Briefings</a> &middot; <a href="index.html">AI Enablement</a></p>
+      <nav class="mal-footernav" data-mal-footernav aria-label="Site" style="margin-top:0.7rem;font-size:0.82rem;line-height:1.9;">
+      <a href="about.html" style="color:#C07830;font-weight:700;text-decoration:none;">About</a> &middot;
+      <a href="pricing.html" style="color:#C07830;font-weight:700;text-decoration:none;">Pricing</a> &middot;
+      <a href="index.html" style="color:#C07830;font-weight:700;text-decoration:none;">AI Enablement</a>
+     &middot;
+      <a href="privacy-policy.html" style="color:#C07830;font-weight:700;text-decoration:none;">Privacy</a>
+    </nav>
+  </footer>
+</body>
+</html>

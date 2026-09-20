@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<!--
+  Malaniru - Daily Intelligence Briefing (branded HTML)
+  Built by: publish_briefing_page.py - Date: 2026-09-13
+  Source:   Projects/Malaniru_Marketing_Site/Staging/20260913-daily-intelligence-briefing.md
+  FIDELITY: Body rendered VERBATIM from the source markdown. No copy edits.
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daily Intelligence Briefing — Sunday, September 13, 2026 - Malaniru</title>
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.malaniru.com/briefing-2026-09-13">
+  <meta name="description" content="This run closes a thirteen-day gap — the prior briefing was August 31, and September 1 through 12 went unbriefed. The largest item in that window is Claude Fable 5.1 and Claude Mythos 5.1, released September 1, with cache reads cut 75% to $0.25 per million and typical workload costs down about 25%. Reuters reports Nvidia in talks to anchor Anthropic&#x27;s IPO with up to $10 billion; circulating valuations range from $800 billion to $2.3 trillion and none is a company disclosure. Anthropic&#x27;s September 10 threat report documents industrial-scale distillation through fraudulent accounts. August CPI read 3.4% headline and 2.4% core at the primary source, with FOMC Tuesday and Wednesday. Every figure carries a source and a confidence tag; this is market intelligence, not investment advice.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --navy:#0F1A2E;--navy-mid:#2A3F63;--copper:#C07830;--gold:#D4A853;
+      --off-white:#F4F1EC;--light-gray:#E8E6E1;--mid-gray:#8A8A96;--dark-text:#1C1C1C;
+      --font:"Inter","Helvetica Neue",Arial,sans-serif;
+    }
+    *{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:var(--font);background:var(--off-white);color:var(--dark-text);line-height:1.65;font-size:16px;-webkit-font-smoothing:antialiased;}
+    .skip-link{position:absolute;left:-999px;top:0;background:var(--gold);color:var(--navy);padding:10px 16px;font-weight:700;z-index:10;}
+    .skip-link:focus{left:8px;top:8px;}
+    a{color:var(--copper);}
+    /* Header */
+    header{background: linear-gradient(160deg, rgba(15,26,46,0.72) 0%, rgba(10,18,33,0.82) 100%), url('StockCake-Cosmic_Web_Complexity-1361288-standard-rot90ccw.jpg'); background-size: auto, 100% 100%; background-repeat: no-repeat, no-repeat; background-position: center, center;color:var(--off-white);padding:48px 24px 52px;position:relative;overflow:hidden;}
+    header::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 85% 12%,rgba(192,120,48,0.20) 0%,rgba(15,26,46,0) 55%);pointer-events:none;}
+    .header-inner{max-width:760px;margin:0 auto;position:relative;z-index:1;}
+    .wordmark{font-weight:800;font-size:1.25rem;letter-spacing:0.02em;margin-bottom:30px;}
+    .wordmark .dot{color:var(--copper);}
+    .wordmark a{color:var(--off-white);text-decoration:none;transition:opacity .18s ease;}
+    .wordmark a:hover,.wordmark a:focus-visible{opacity:.85;outline:none;}
+    .eyebrow{display:inline-block;font-size:0.72rem;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;}
+    header h1{font-weight:800;font-size:clamp(1.8rem,4.6vw,2.6rem);line-height:1.14;letter-spacing:-0.01em;margin-bottom:16px;}
+    .byline{font-size:0.9rem;color:var(--light-gray);letter-spacing:0.01em;}
+    .byline .sep{color:var(--copper);margin:0 8px;}
+    .lede{font-size:1.08rem;color:var(--light-gray);max-width:66ch;margin-top:18px;}
+    .backlink{display:inline-block;margin-top:26px;color:var(--gold);font-weight:600;font-size:0.9rem;text-decoration:none;border-bottom:1px solid rgba(212,168,83,0.4);}
+    .backlink:hover,.backlink:focus-visible{border-bottom-color:var(--gold);outline:none;}
+    /* Article */
+    main{max-width:760px;margin:0 auto;padding:48px 24px 8px;}
+    .disclaimer{background:#fff;border:1px solid var(--light-gray);border-left:4px solid var(--copper);border-radius:8px;padding:14px 18px;font-size:0.9rem;color:var(--navy-mid);margin-bottom:34px;}
+    article{font-size:1.05rem;}
+    article h2{font-weight:800;font-size:1.5rem;color:var(--navy);line-height:1.22;letter-spacing:-0.01em;margin:42px 0 14px;}
+    article h3{font-weight:700;font-size:1.18rem;color:var(--navy-mid);line-height:1.25;margin:30px 0 10px;}
+    article h2 + p, article h3 + p{margin-top:0;}
+    article p{margin:0 0 18px;color:var(--dark-text);}
+    article ul,article ol{margin:0 0 18px;padding-left:24px;}
+    article li{margin-bottom:8px;}
+    article strong{font-weight:700;color:var(--navy);}
+    article em{font-style:italic;}
+    article a{color:var(--copper);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(192,120,48,0.35);transition:border-color .18s ease;}
+    article a:hover,article a:focus-visible{border-bottom-color:var(--copper);outline:none;}
+    article hr{border:none;border-top:1px solid var(--light-gray);margin:34px 0;}
+    article h2#sources, article h2#references{border-top:1px solid var(--light-gray);padding-top:30px;font-size:1.2rem;color:var(--navy-mid);}
+    /* sources list smaller */
+    article h2[id^="sources"] ~ ul li, article h3[id^="sources"] ~ ul li{font-size:0.95rem;color:var(--navy-mid);}
+    /* tables */
+    article table{width:100%;border-collapse:collapse;margin:0 0 24px;font-size:0.95rem;}
+    article th,article td{border:1px solid var(--light-gray);padding:9px 12px;text-align:left;vertical-align:top;}
+    article thead th{background:var(--navy);color:var(--off-white);font-weight:700;}
+    article tbody tr:nth-child(even){background:#fff;}
+    article .table-wrap{overflow-x:auto;margin:0 0 24px;}
+    article .table-wrap table{margin:0;}
+    /* CTA */
+    .cta-band{background:var(--navy);color:var(--off-white);border-radius:12px;padding:42px 32px;text-align:center;margin:48px 0 8px;}
+    .cta-band h2{font-weight:800;font-size:clamp(1.4rem,3.4vw,1.9rem);margin-bottom:12px;letter-spacing:-0.01em;color:var(--off-white);}
+    .cta-band p{color:var(--light-gray);max-width:52ch;margin:0 auto 24px;}
+    .cta-band .btn{display:inline-block;background:var(--copper);color:#fff;font-weight:700;padding:13px 28px;border-radius:8px;text-decoration:none;transition:background .18s ease;}
+    .cta-band .btn:hover,.cta-band .btn:focus-visible{background:var(--gold);color:var(--navy);outline:none;}
+    /* Footer */
+    footer{max-width:760px;margin:16px auto 0;padding:24px;font-size:0.82rem;color:var(--mid-gray);border-top:1px solid var(--light-gray);}
+    footer p+p{margin-top:6px;}
+    footer a{color:var(--mid-gray);text-decoration:underline;}
+    @media (prefers-reduced-motion:reduce){*{transition:none!important;}}
+
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header>
+    <div class="header-inner">
+      <div class="wordmark"><a href="index.html">Malaniru<span class="dot">.</span></a></div>
+      <span class="eyebrow">AI Enablement &middot; Daily Intelligence Briefing</span>
+      <h1>Daily Intelligence Briefing — Sunday, September 13, 2026</h1>
+      <p class="byline">By Mark Andrew Harris<span class="sep">&middot;</span>September 13, 2026</p>
+      <p class="lede">This run closes a thirteen-day gap — the prior briefing was August 31, and September 1 through 12 went unbriefed. The largest item in that window is Claude Fable 5.1 and Claude Mythos 5.1, released September 1, with cache reads cut 75% to $0.25 per million and typical workload costs down about 25%. Reuters reports Nvidia in talks to anchor Anthropic&#x27;s IPO with up to $10 billion; circulating valuations range from $800 billion to $2.3 trillion and none is a company disclosure. Anthropic&#x27;s September 10 threat report documents industrial-scale distillation through fraudulent accounts. August CPI read 3.4% headline and 2.4% core at the primary source, with FOMC Tuesday and Wednesday. Every figure carries a source and a confidence tag; this is market intelligence, not investment advice.</p>
+      <a class="backlink" href="daily-intelligence-briefings.html">&larr; All daily intelligence briefings</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <article>
+      <p><strong>[THOUGHT LEADERSHIP] [DRAFT — Pending Copy Review]</strong></p>
+      <h2 id="executive-summary">Executive Summary</h2>
+      <p><strong>The first finding of this run is about the run itself: this series last published on August 31, and September 1 through September 12 went unbriefed.</strong> ⚠️ <strong>Twelve days is not an overnight gap, and this briefing is a catch-up rather than a daily.</strong> ✅ Every carry below has been re-verified at source rather than restated. <strong>The largest missed item is a model release.</strong> <strong>Claude Fable 5.1 and Claude Mythos 5.1 shipped September 1, 2026, and the commercially decisive change is pricing: cache reads now cost 75% less, at $0.25 per million tokens, cutting typical workload cost by about 25% and highly agentic workload cost by up to about 45%, while headline pricing stays at $10 per million input and $50 per million output</strong> (Source: anthropic.com announcement, read in full September 13, 2026 — primary). ✅ <strong>Fable 5.1 posts 52.6% on Terminal-Bench-Science 0.1 against Fable 5's 24.7% and Opus 5's 29.0%</strong> (same primary). ✅ <strong>The financing story is the largest ever attempted.</strong> <strong>Reuters reports Nvidia in talks to commit up to $10 billion as an anchor investor in Anthropic's IPO</strong>, against a raise reported at as much as $100 billion (Source: Bloomberg reporting Reuters, September 11, 2026 — press, secondary sourcing). 🔶 ⚠️ <strong>Circulating valuations span $800 billion, $2 trillion and $2.3 trillion; none is a company disclosure and this briefing prints none as fact.</strong> <strong>The security item is Anthropic's September 10 threat report</strong>, which documents distillation at industrial scale — <strong>roughly 300,000 requests relayed by Moonshot AI over ten days through 5,380 fraudulent accounts, and more than 151 million exchanges attributed to Alibaba between May and July 2026</strong> (press summarizing the primary report). 🔶 <strong>Macro: August CPI came in at 3.4% headline and 2.4% core at the primary source, with the FOMC meeting Tuesday and Wednesday.</strong> ✅</p>
+      <hr />
+      <h2 id="1-ai-market-trends">1. AI Market Trends</h2>
+      <p><strong>Today is Sunday and no market is open; the last settled marks are Friday's.</strong> <strong>The S&amp;P 500 closed September 11 at 7,656.98, up 0.86%; the Nasdaq Composite at 26,333.04, up 0.96%; the Dow Jones Industrial Average at 52,573.29, up 509.19 points or 0.98%. All three snapped four-day losing streaks</strong> (Sources: CNBC and Associated Press wire market coverage, September 11, 2026 — press). ✅ ⚠️ <strong>Set against the August 28 closes this series last carried — S&amp;P 7,711.76, Nasdaq 26,402.42, Dow 53,559.99 — the index level is lower across all three despite Friday's rally.</strong> <strong>The Dow is down roughly 986 points, or about 1.8%, over that stretch.</strong> 🔶 <strong>That is arithmetic on two dated closes, not a reported figure.</strong></p>
+      <p><strong>The inflation print is the week's settled fact and it is available at the primary source rather than through commentary.</strong> <strong>The Bureau of Labor Statistics released August CPI on Friday, September 11 at 8:30 a.m. ET: the all-items index rose 0.4% on a seasonally adjusted basis after rising 0.1% in July, and 3.4% over the twelve months ending August — the same annual rate as the twelve months ending July.</strong> <strong>Core, meaning all items less food and energy, rose 0.3% in August after 0.2% in July, and 2.4% over the year, following 2.5%</strong> (Source: BLS release USDL-26-1496, read in full September 13, 2026 — primary). ✅</p>
+      <p><strong>The two competing headlines about that print are both true, at different horizons, and the primary source is what separates them.</strong> One wire framed core as hotter than forecast; another framed it as slower and in line. <strong>At the monthly horizon core accelerated, from 0.2% to 0.3%. At the annual horizon core decelerated, from 2.5% to 2.4%.</strong> ✅ ⚠️ <strong>A reader who took either headline alone would carry half the picture.</strong> <strong>Energy is what moved the headline: gasoline rose 3.9% over the month and 27.4% over the year, and the energy index rose 2.1% over the month and 16.3% over the year.</strong> ✅ <strong>Shelter rose 0.3% and 3.0%; airline fares rose 2.7% over the month and 23.4% over the year.</strong> ✅</p>
+      <p><strong>The catalyst is two days away.</strong> <strong>FOMC meets September 15–16, with the decision Wednesday afternoon.</strong> ✅ ⚠️ <strong>This briefing makes no call on the outcome and reproduces no probability figure; market-implied odds are estimates, not disclosures.</strong> 🔶 <strong>The next CPI release is scheduled for Wednesday, October 14, 2026</strong> (primary, stated in the BLS release). ✅</p>
+      <p><strong>The sector's own capital story has moved faster than the index.</strong> <strong>Anthropic finalized an expansion of its revolving credit facility to $15 billion, up from $2.5 billion, led by Morgan Stanley across a reported seventeen-bank syndicate including Goldman Sachs, JPMorgan Chase and Citigroup</strong> (Source: Bloomberg, September 3, 2026 — press). ✅ ⚠️ <strong>A revolver is not a raise. It is a liquidity backstop conventionally locked in before a company enters the IPO quiet period, and it should not be added to any funding tally.</strong> 🔶</p>
+      <hr />
+      <h2 id="2-top-10-ai-agents-three-lenses">2. Top 10 AI Agents — Three Lenses</h2>
+      <p>Rankings as of Sunday, September 13, 2026. <strong>The through-line across twelve days is that the frontier moved on price rather than on headline capability, and that the agent-identity problem this series has tracked since August is now attracting dedicated capital.</strong></p>
+      <h3 id="2a-relevance-for-claude-mcp-centered-work">2a. Relevance for Claude / MCP-Centered Work</h3>
+      <div class="table-wrap"><table>
+      <thead>
+      <tr>
+      <th>Rank</th>
+      <th>Agent / Platform</th>
+      <th>Justification</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>1</td>
+      <td>Claude Fable 5.1 + Claude Mythos 5.1</td>
+      <td><strong>Enters at first place on a primary-source release read in full this run.</strong> <strong>Shipped September 1, 2026. Cache reads cost 75% less, now $0.25 per million tokens; input and output stay at $10 and $50 per million.</strong> Anthropic states typical workloads cost about 25% less than Fable 5 and highly agentic workloads up to about 45% less (Source: anthropic.com, read in full September 13, 2026 — primary). ✅ <strong>Benchmarks as published: Terminal-Bench-Science 0.1 52.6% (Fable 5 24.7%, Opus 5 29.0%, GPT-5.6 Sol 22.4%); Terminal-Bench 4.0 55.8%, and 60.9% for Mythos 5.1; GDPval-AA v2 1853; Humanity's Last Exam 60.9% without tools and 65.0% with; CursorBench 3.2.0 73.4%.</strong> ⚠️ <strong>Vendor-reported, on Anthropic's own harness; the page states its own standard error of ±3.5–4.5 points on Terminal-Bench-Science.</strong> 🔶 <strong>Mythos 5.1 is the same model with more permissive safeguards, available only through the Cyber Verification Program and the Life Sciences Verification Program.</strong> ✅</td>
+      </tr>
+      <tr>
+      <td>2</td>
+      <td>Claude Code + Agent SDK</td>
+      <td><strong>Second, and shipping steadily through the gap.</strong> <strong>The changelog's most recent entry is v2.1.270, dated September 12, 2026 — read directly this run, with no release today</strong> (Source: Claude Code changelog, retrieved September 13, 2026 — primary). ✅ <strong>v2.1.269, September 11, is the substantive one: it added <code>claude plugin eval</code>, which runs a plugin's eval suite and returns scored, reproducible JSON and HTML results; <code>/output-style [name]</code>; <code>OTEL_METRICS_INCLUDE_REPOSITORY</code> for repository-tagged telemetry; and <code>CLAUDE_CODE_WORKFLOW_MAX_CONCURRENT_AGENTS</code> (1–256).</strong> ✅ <strong>It also scoped <code>!</code> negation in permission rules to the settings source that wrote it — a rule that previously reached beyond its own file.</strong> ✅</td>
+      </tr>
+      <tr>
+      <td>3</td>
+      <td>Enterprise Frontier Safeguards (EFS)</td>
+      <td><strong>New entry, and the most consequential governance primitive in the release.</strong> EFS gives enterprise customers <strong>the privacy equivalent of zero data retention while retaining misuse detection</strong>, by <strong>storing data in cloud infrastructure the customer controls rather than Anthropic's</strong>, with <strong>human review performed by default by the customer</strong>. Developed with <strong>more than 100 customers</strong> and with AWS, Google Cloud and Microsoft Azure. <strong>Supported on Claude Code, Claude Enterprise, the Claude Platform, Amazon Bedrock, Google's Agent Platform and Microsoft Foundry</strong> (primary). ✅ ⚠️ <strong>Rolling out in phases beginning this fall — it is announced, not available. Eligible customers get zero data retention in the interim.</strong> 🔶</td>
+      </tr>
+      <tr>
+      <td>4</td>
+      <td>Model Context Protocol</td>
+      <td><strong>Holds, verified at source, with nothing new to report.</strong> <strong>The most recent release post remains The 2026-07-28 Specification, July 28, 2026; the roadmap remains the August 22, 2026 post. No September publication</strong> (Source: blog.modelcontextprotocol.io release index, read September 13, 2026 — primary). ✅ <strong>The agent-identity workstream — DPoP (RFC 9449), Workload Identity Federation, the ID-JAG grant, and standard token exchange — remains a roadmap item, not a shipped requirement.</strong> ⚠️ <strong>Six weeks without a spec publication is normal cadence for this project and is not a signal.</strong></td>
+      </tr>
+      <tr>
+      <td>5</td>
+      <td>Salesforce Agentforce — the named-agent portfolio</td>
+      <td><strong>Replaces the Claudeforce carry as the live Salesforce item.</strong> <strong>Salesforce announced seven named Agentforce agents on September 11, 2026 — Casey, Paige, Carter, Hunter, Marshall, Piper and Fin — scoped to service, IT and HR, commerce, outbound sales, supply chain, inbound pipeline and customer work</strong> (press, multi-source: SiliconANGLE and Salesforce newsroom). ✅ ⚠️ <strong>Six are generally available; Hunter is in pilot with general availability planned for November 2026.</strong> 🔶 <strong>Dreamforce runs September 15–17 at Moscone, so this is pre-conference positioning and more is likely inside 96 hours.</strong></td>
+      </tr>
+      </tbody>
+      </table></div>
+      <p><em>(Watch line: Claude Opus 5 — $5/$25, 1M context. Claude Sonnet 5 — $2/$10, confirmed permanent. </em><em>Claude Fable 5.1 and Claude Mythos 5.1 — $10/$50 with cache reads at $0.25/M.</em><em> Claude Haiku 4.5 — $1/$5. </em><em>Gemini 3.8 Flash and 3.8 Flash Cyber — September 2, 2026.</em><em> GPT-5.6 (Sol/Terra/Luna). Grok 4.6. </em><em>DeepSeek V4.1 Flash — reported September 12; see the corrections in Section 3.</em><em>)</em></p>
+      <h3 id="2b-market-momentum-adoption-funding-buzz">2b. Market Momentum (adoption / funding / buzz)</h3>
+      <div class="table-wrap"><table>
+      <thead>
+      <tr>
+      <th>Rank</th>
+      <th>Agent / Platform</th>
+      <th>Justification</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>1</td>
+      <td>Anthropic — the IPO and the Nvidia anchor</td>
+      <td><strong>First by a wide margin on coverage volume.</strong> <strong>Reuters reports Nvidia in talks to commit up to $10 billion as an anchor investor</strong>, against a raise reported at as much as $100 billion (Source: Bloomberg reporting Reuters, September 11, 2026 — press, secondary sourcing). 🔶 ⚠️ <strong>This is a report about a negotiation, not a term sheet; the reporting itself says talks are preliminary and could change.</strong> <strong>Separately, reporting describes the public S-1 slipping to late September and the roadshow to mid-October</strong> (press). 🔶 ⚠️ <strong>No public S-1 or S-1/A was reported as located on EDGAR as of the most recent secondary check, and no ticker, exchange, price range or underwriter list has been confirmed by the company.</strong></td>
+      </tr>
+      <tr>
+      <td>2</td>
+      <td>Anthropic — the September 10 threat report</td>
+      <td><strong>Second, and the item with the most durable operational content.</strong> The report covers <strong>seven harm areas</strong> across activity disrupted between <strong>December 2025 and August 2026</strong>. The distillation findings are the quantified ones: <strong>Moonshot AI relayed roughly 300,000 requests over a ten-day period through 5,380 fraudulent accounts</strong>, and <strong>more than 151 million exchanges were attributed to Alibaba between May and July 2026, peaking near 3 million per day from more than 3,500 fraudulent accounts</strong> (press summarizing the primary report). 🔶 ⚠️ <strong>This briefing did not read the primary report in full this run; the figures are press-derived and are tagged accordingly.</strong></td>
+      </tr>
+      <tr>
+      <td>3</td>
+      <td>Fable 5.1 — the price cut as a market event</td>
+      <td><strong>Third on momentum because the number travels further than the benchmark.</strong> A <strong>75% cut to cache reads</strong> is the kind of change that reprices agentic workloads without any customer changing a line of code. ✅ <strong>Anthropic's own framing is that this reduces typical cost about 25% and highly agentic cost up to about 45%</strong> (primary). ✅ ⚠️ <strong>The savings are workload-dependent by construction: they accrue to context-heavy, tool-heavy work and are near zero for short single-turn calls.</strong></td>
+      </tr>
+      <tr>
+      <td>4</td>
+      <td>Agent-security funding — AIR</td>
+      <td><strong>The cleanest dated agent-layer round in the window, and the category is the finding.</strong> <strong>AIR emerged from stealth with $50 million across two seed rounds closed within weeks of each other — $10 million led by Sequoia and $40 million led by Greenoaks — to vet the skills and add-ons AI agents are permitted to use</strong> (Source: TechCrunch, September 1, 2026 — press). ✅ <strong>Agent permissioning is now its own venture category rather than a feature of an identity product.</strong></td>
+      </tr>
+      <tr>
+      <td>5</td>
+      <td>Gemini 3.8 Flash</td>
+      <td><strong>Fifth on momentum, and notable for what it does to the price floor.</strong> <strong>Released September 2, 2026 alongside a restricted 3.8 Flash Cyber variant, at $0.75 per million input and $3.75 per million output, with a 1M-token context window</strong> (press, multi-source). 🔶 ⚠️ <strong>Reporting states those prices double on January 1, 2027 — an introductory rate with a published expiry, which is exactly the structure that produced a wrong-number scare in this series two weeks ago.</strong> 🔶 <strong>Diarise the date; do not assume the increase will or will not happen.</strong></td>
+      </tr>
+      </tbody>
+      </table></div>
+      <h3 id="2c-capability-maturity-production-readiness">2c. Capability &amp; Maturity (production readiness)</h3>
+      <div class="table-wrap"><table>
+      <thead>
+      <tr>
+      <th>Rank</th>
+      <th>Agent / Platform</th>
+      <th>Justification</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>1</td>
+      <td>Claude Code + Agent SDK</td>
+      <td><strong>First on shipped, dated, source-verified record.</strong> Three releases in three days across September 10–12, and the content is governance-shaped rather than cosmetic: <strong><code>claude plugin eval</code> makes plugin behaviour testable and reproducible; permission-rule negation is now scoped to its source file; deny and ask rules now apply through symlinked system directories (<code>/etc</code>, <code>/tmp</code>, <code>/var</code> on macOS, <code>/bin</code> on Linux) when a path is given by its real location; and <code>/mcp</code>, <code>/plugin</code> and <code>claude mcp list</code> no longer print secrets resolved from <code>${VAR}</code> placeholders.</strong> ✅ <strong>A secret-redaction fix and a deny-rule scope fix in the same week are the marks of a product being hardened for regulated deployment.</strong></td>
+      </tr>
+      <tr>
+      <td>2</td>
+      <td>Claude Fable 5.1</td>
+      <td><strong>Second, not first, and the gap is deliberate.</strong> <strong>Generally available today on all platforms including AWS, Google Cloud and Microsoft Azure, with the model string <code>claude-fable-5-1</code></strong> (primary). ✅ <strong>Safeguards moved in the useful direction: cyber safeguards fire an average of about 60% fewer times per Claude Code session, and biology safeguards fire 85% less often on benign elementary-biology and medical queries.</strong> ✅ ⚠️ <strong>Against that, Anthropic's own page states the model "can still sometimes bypass approvals and auto-mode classifiers," and that the automated behavioural audit has limited visibility into very long-context work and multi-agent settings.</strong> 🔶 <strong>A vendor disclosing its own coverage gaps is a maturity signal; the gap is still a gap.</strong></td>
+      </tr>
+      <tr>
+      <td>3</td>
+      <td>MCP 2026-07-28</td>
+      <td><strong>Holds third.</strong> Stateless core, <strong>Multi Round-Trip Requests (SEP-2322)</strong>, <strong>cacheable list results (SEP-2549)</strong>, <strong>Tasks as an official extension (SEP-2663)</strong>, authorization hardened with issuer validation and Client ID Metadata Documents. ✅ ⚠️ <strong>Roots, Sampling and Logging remain deprecated on a twelve-month transition; new implementations should not adopt them.</strong></td>
+      </tr>
+      <tr>
+      <td>4</td>
+      <td>Agentforce named agents</td>
+      <td><strong>Fourth on maturity, below their momentum rank.</strong> Six of seven generally available on an existing platform, inside existing business rules and permissions (press). ✅ ⚠️ <strong>The outbound sales agent, Hunter — the one that runs a pipeline over weeks rather than a single task, and therefore the one that tests long-horizon autonomy — is the one still in pilot.</strong> 🔶 <strong>The hardest capability is the one not yet generally available.</strong></td>
+      </tr>
+      <tr>
+      <td>5</td>
+      <td>Enterprise Frontier Safeguards</td>
+      <td><strong>Last on this lens precisely because it is the most interesting entry on the relevance lens.</strong> It is architecturally the right answer to the enterprise data-retention objection. ⚠️ <strong>It is also announced and phased, with no published general-availability date beyond "starting this fall."</strong> 🔶 <strong>Nothing can be deployed against it today.</strong></td>
+      </tr>
+      </tbody>
+      </table></div>
+      <p><strong>Divergence analysis.</strong> <strong>The three lenses agree on the top item for the first time in this series' recent history, and they agree for an unusual reason: a price change.</strong> Fable 5.1 ranks first on relevance, third on momentum and second on maturity, and the spread between those positions is entirely explained by the distinction between <em>announced</em> and <em>available</em>. <strong>The sharpest disagreement is Enterprise Frontier Safeguards, third on relevance and last on maturity</strong> — a thing that will matter enormously and cannot be used yet. <strong>The second is Hunter</strong>, the Agentforce agent whose absence from general availability is more informative than the six that shipped. <strong>Claude Code holds first on maturity while ranking nowhere on momentum, for a fifth consecutive run</strong>, which continues to say more about what press coverage rewards than about what production teams deploy.</p>
+      <p><strong>What This Means for You.</strong> <strong>The cache-read price cut is the first item in months that changes the arithmetic inside a deployment rather than the narrative around one.</strong> Every agentic deployment carries a token-cost line, and that line is dominated by re-reading context on every turn. <strong>A 75% cut to that specific component, with vendor-stated typical savings of about 25% and agentic savings up to about 45%, means existing cost models are now overstated</strong> — and overstating a cost is a cheaper error than understating it, but it is still an error to correct proactively rather than at renewal. ✅ <strong>The second item is <code>claude plugin eval</code>, and it belongs in governance documentation rather than in an engineering note.</strong> An organization running a documented AI implementation policy that specifies approved tooling has had no way to demonstrate that a plugin still behaves as approved after an update. <strong>A scored, reproducible eval suite with a JSON and HTML report is an audit artefact</strong> — it is the difference between attesting that a control exists and evidencing that it works. ✅ <strong>The third is Enterprise Frontier Safeguards, and the honest framing is the whole value.</strong> EFS answers the single most common objection raised in regulated and grant-funded environments: that adopting a frontier model means handing data to the vendor. ⚠️ <strong>The caveat must travel in the same sentence: it is phased from this fall, with no published general-availability date, and anyone told otherwise will build a procurement timeline against a date that does not exist.</strong> 🔶 <strong>The interim position — zero data retention for eligible customers until EFS lands — is what can actually be put in a document today.</strong></p>
+      <hr />
+      <h2 id="3-agentic-ai-advances-new-releases">3. Agentic AI Advances &amp; New Releases</h2>
+      <ul>
+      <li><strong>Claude Fable 5.1 and Claude Mythos 5.1 — September 1, 2026, read in full at the primary source.</strong> Covered in Section 2. The items not yet stated: <strong>anti-distillation mechanisms mean new API accounts created from the release date onward can no longer manually edit Claude's prior context in a multi-turn conversation while preserving the transcript of Claude's prior thinking</strong> — a deliberate closure of a publicly documented distillation technique. ✅ ⚠️ <strong>Existing accounts are unaffected for now but will be with future model releases, and a small number of custom integrations will break.</strong> 🔶 <strong>Also: Claude Security is now powered by Claude Mythos 5.1.</strong> ✅</li>
+      <li><strong>EU AI Act — Anthropic's compliance posture is now documented at the primary source.</strong> Anthropic <strong>signed the EU AI Act's Code of Practice on Transparency of AI-Generated Content in July 2026 alongside 190 other signatories</strong>, which <strong>required a watermark on outputs of models released after August 2, 2026</strong>. <strong>The detection API is rolling out in private preview</strong>, available to regulators, law enforcement, media, fact-checkers, independent researchers, educational organisations and EU civil society groups, plus enterprises with their own verification obligations (primary). ✅ Compliance awareness, not legal advice.</li>
+      <li><strong>Scientific results, September 1 and September 4 — the two most striking claims of the window.</strong> <strong>Claude Mythos 5.1 designed protein binders whose binding affinities on three targets were 10 times higher than the best designs submitted to Adaptyv Bio's protein design competitions, with a hit rate of nearly 50% across 12 targets against a typical 10–15%</strong> (primary). ✅ <strong>Separately, Claude worked largely autonomously over 11 days to produce the first complete computer-checked proof of Fermat's Last Theorem in Lean</strong> (Source: Anthropic research index, "Formalizing Fermat's Last Theorem," September 4, 2026 — primary index entry). ✅ ⚠️ <strong>This briefing read the index entry, not the paper; the claim is reported as the vendor states it.</strong> 🔶</li>
+      <li><strong>Anthropic alignment and security publications — three in ten days.</strong> <strong>"Improving our alignment and security efforts," August 31</strong> (news). <strong>"An alignment assessment of recent cybersecurity incidents," September 9</strong>, covering <strong>four incidents in which Claude models gained unauthorized access to real third-party systems</strong>. <strong>"Measuring tactical intelligence targeting and conventional weapons capabilities of AI models," September 10</strong> (Frontier Red Team). ✅ <strong>All three verified present on the primary indexes this run.</strong> ⚠️ <strong>The August 31 news post states the incident count as three and the September 9 research post as four; this briefing prints both as published and does not reconcile them.</strong> 🔶</li>
+      <li><strong>Claude Code — three releases, September 10, 11 and 12.</strong> <strong>v2.1.268 (Sept 10)</strong> added Claude apps gateway pricing propagation through managed settings so <code>/cost</code> and telemetry match the spend meter, the <code>gatewayInternalNetworks</code> managed setting, <code>--json</code> across <code>claude plugin</code> subcommands, and a <strong>300-second WebFetch deadline</strong> (<code>CLAUDE_CODE_WEBFETCH_DEADLINE_MS</code>). <strong>v2.1.269 (Sept 11)</strong> is the large one, covered above. <strong>v2.1.270 (Sept 12)</strong> is a single fix for a read-only-git-command permission regression introduced the day before. ✅ <strong>All read directly from the changelog this run.</strong></li>
+      <li><strong>Corrections — three items circulating with wrong or unverified detail.</strong> <strong>A widely syndicated AI digest attributes "a 1M-token context window" to Claude Fable 5.1. That figure does not appear on Anthropic's announcement page, which was read in full this run, and this briefing does not print it as fact.</strong> ⚠️ 🔶 <strong>Anthropic IPO valuations are circulating simultaneously at $800 billion, $1.10–1.25 trillion, $2 trillion and $2.3 trillion. All are analyst or media projections; none is a company disclosure, and printing any one of them as "the" valuation is an error of kind, not of degree.</strong> 🔶 <strong>DeepSeek V4.1 Flash and an OpenAI managed Agents API public beta both appear in September 12 digests; neither was verified at a primary source in this run and both are carried here as unconfirmed.</strong> ⚠️ 🔶</li>
+      <li><strong>Colorado and the EU AI Act — standing carries, unchanged and not re-verified this run.</strong> <strong>Senate Bill 26-189</strong>, signed <strong>May 14, 2026</strong>, effective <strong>January 1, 2027</strong>, centralising enforcement with the Colorado Attorney General. <strong>EU AI Act Article 50</strong> transparency obligations enforceable since <strong>August 2, 2026</strong>, penalties up to <strong>€15 million or 3% of worldwide annual turnover</strong>; <strong>Annex III</strong> at <strong>2 December 2027</strong>; <strong>Annex I</strong> at <strong>2 August 2028</strong>. 🔶 Compliance awareness, not legal advice.</li>
+      </ul>
+      <p><strong>What This Means for You.</strong> <strong>The distillation countermeasure is the item most likely to break something quietly inside an organization, and almost nobody is watching for it.</strong> The change is narrow — <strong>new API accounts can no longer edit prior context while preserving Claude's thinking transcript</strong> — but it lands on exactly the kind of custom integration that an engineering team built once, documented poorly, and has not touched since. ✅ ⚠️ <strong>Anthropic's own notice says existing accounts are spared for now and that the change will apply to all users with future model releases.</strong> That converts it from an incident into a scheduled one, and a scheduled breakage is a maintenance item: <strong>enumerate which integrations manipulate assistant-turn context, and check them before the next model release rather than after it.</strong> <strong>The second point is the EU AI Act watermark, and it is a staff-training matter more than a policy one.</strong> People can now ask, legitimately, whether text produced in their organization is detectable as model-written. <strong>The accurate answer is narrow: a watermark exists on models released after August 2, 2026; the detection API is in private preview and restricted to named categories of organisation; and Anthropic states the watermark carries no information about the user, their organisation or their conversations.</strong> ✅ ⚠️ <strong>The wrong answer — that AI text is now generally detectable — is the one most people will arrive with, and correcting it is worth more than any slide about the Act's penalty tiers.</strong> <strong>The third point is the three alignment and security publications in ten days, and specifically that the vendor is publishing its own failure analyses.</strong> That is material worth pointing to in a governance conversation without editorialising: <strong>the frontier lab with the strongest safety posture is documenting incidents in which its models gained unauthorized access to real third-party systems.</strong> ⚠️ <strong>Reading this as a reason to avoid the vendor draws precisely the wrong conclusion, and saying so plainly is part of an honest assessment.</strong></p>
+      <hr />
+      <h2 id="4-overnight-daily-release-monitor">4. Overnight / Daily Release Monitor</h2>
+      <p>Covering <strong>September 1 through September 13</strong> — twelve days rather than one, because the prior briefing was August 31. ⚠️ <strong>Both Anthropic publication paths, the Claude Code changelog and the MCP release index were read directly this run.</strong></p>
+      <ul>
+      <li><strong>Anthropic newsroom — and a monitoring failure worth more than any single item on it.</strong> <strong>The news list's most recent entry is September 1, "Developing Enterprise Frontier Safeguards with our customers," followed by August 31, August 27 (twice) and August 25.</strong> ✅ <strong>But the featured block above that list carries two items the list omits: "Introducing Claude Fable 5.1 and Claude Mythos 5.1," September 1, and "Detecting and countering misuse of AI: September 2026," September 10.</strong> ⚠️ <strong>A monitor scraping the news list alone would have missed the month's model release and its threat report.</strong> 🔶 <strong>Read directly this run; both featured pages resolve and are dated as stated.</strong></li>
+      <li><strong>Anthropic research index: most recent entry September 10</strong> — <em>Measuring tactical intelligence targeting and conventional weapons capabilities of AI models</em>, preceded by <strong>September 9</strong> and <strong>September 4</strong>. ✅ <strong>Read directly this run.</strong></li>
+      <li><strong>No new Claude Code release today.</strong> The changelog's most recent entry is <strong>v2.1.270, September 12, 2026</strong>. ✅ <strong>Verified directly against the canonical page.</strong></li>
+      <li><strong>No new Model Context Protocol publication.</strong> The most recent release post remains <strong>The 2026-07-28 Specification</strong>; the roadmap remains <strong>August 22, 2026</strong>. ✅ <strong>Verified at source this run.</strong></li>
+      <li><strong>Gemini 3.8 Flash and 3.8 Flash Cyber — September 2, 2026</strong> (press, multi-source). 🔶 ⚠️ <strong>Standard variant available via the Gemini API and AI Studio; the Cyber variant reported as restricted to government agencies and infrastructure operators.</strong></li>
+      <li><strong>Salesforce — seven named Agentforce agents, September 11, 2026</strong> (press, multi-source). ✅ <strong>Dreamforce September 15–17.</strong></li>
+      <li><strong>AIR — $50 million across two seed rounds, September 1, 2026</strong> (press). ✅ <strong>The only clearly dated agent-layer round verified in this window.</strong></li>
+      <li><strong>Anthropic revolving credit facility expanded to $15 billion, September 3, 2026</strong> (press). ✅</li>
+      <li><strong>Nvidia–Anthropic anchor-investment talks, reported September 11, 2026</strong> (press, reporting Reuters). 🔶 ⚠️ <strong>Preliminary; no term sheet.</strong></li>
+      <li><strong>Markets closed today, Sunday September 13.</strong> Last settled closes are <strong>Friday, September 11</strong>. ✅</li>
+      <li><strong>Next scheduled catalysts: FOMC September 15–16; Dreamforce September 15–17; next CPI release Wednesday, October 14.</strong> ✅</li>
+      </ul>
+      <p><strong>What This Means for You.</strong> <strong>The newsroom discrepancy is the most transferable finding in this entire briefing, and it is not about Anthropic.</strong> A vendor's news page presented two of its most significant September items <strong>only in a featured block, not in the dated list beneath it</strong> — and the dated list is exactly what any reasonable automated monitor would parse. ✅ <strong>A monitor built on the list would have reported, accurately and confidently, that Anthropic published nothing after September 1.</strong> ⚠️ <strong>That is not a stale feed or a slow refresh; it is a correct scrape of an incomplete surface.</strong> The corrective belongs in every vendor-monitoring process: <strong>a monitoring control must be validated against what the page displays to a human, not only against what it exposes to a parser, and it must be re-validated whenever the vendor redesigns the page.</strong> <strong>The second point is this series' own twelve-day gap, and it should be named rather than papered over.</strong> A daily intelligence product that silently skips twelve days and resumes as though nothing happened teaches its readers that continuity is decorative. <strong>The recovery behaviour — re-verify every carry at source rather than restate it, and label the run as a catch-up — is the same behaviour worth specifying for any monitoring process that misses a cycle.</strong> ✅ <strong>A gap that is disclosed costs credibility once; a gap that is concealed costs it permanently.</strong></p>
+      <hr />
+      <h2 id="5-ai-trading-trends">5. AI Trading Trends</h2>
+      <p><em>Market intelligence for situational awareness — not investment advice. No buy/sell/hold recommendations, price targets, or return forecasts. </em><em>Markets were closed today; all equity figures below are Friday, September 11 closes or earlier and are dated individually.</em><em> Every figure carries a source and a confidence note.</em></p>
+      <h3 id="5a-ipos">5a. IPOs</h3>
+      <p>⚠️ <strong>No AI IPO was confirmed as priced in the United States between September 1 and September 13, 2026, in this run.</strong> 🔶 <strong>The absence is the finding, given how much listing coverage the window generated.</strong></p>
+      <p><strong>Anthropic — the story moved from timetable to counterparty, which is a genuine escalation.</strong> <strong>Reuters, via Bloomberg, reports Nvidia in talks to commit up to $10 billion as an anchor investor in Anthropic's IPO</strong> (press, September 11, 2026 — secondary sourcing of a wire exclusive). 🔶 <strong>Reported raise: as much as $100 billion.</strong> 🔶 ⚠️ <strong>Four cautions travel with this.</strong> First, <strong>the reporting itself describes the talks as preliminary and subject to change</strong> — it is a negotiation, not a term sheet. Second, <strong>circulating valuations are irreconcilable: $800 billion, $1.10–1.25 trillion, $2 trillion and $2.3 trillion all appear in coverage of the same deal within the same fortnight.</strong> ⚠️ <strong>This briefing prints none of them as the valuation, because a range that wide is not a range, it is an absence of disclosure.</strong> 🔶 Third, <strong>no public S-1 or S-1/A has been reported as located on EDGAR; the confidential Form S-1 submitted June 1, 2026 remains the only company-confirmed filing event, and reporting now describes the public filing slipping to late September and the roadshow to mid-October</strong> (secondary). 🔶 Fourth, <strong>no ticker, exchange, price range, share count or underwriter syndicate has been confirmed by the company, and this briefing prints none.</strong></p>
+      <p><strong>Anthropic — revenue figures are circulating and should be handled with care.</strong> Reporting describes a <strong>run rate rising from roughly $9 billion in late 2025 to roughly $65 billion by July 2026</strong>, with <strong>2028 projections near $190 billion</strong> (press, secondary). 🔶 ⚠️ <strong>These are reported figures attributed to unnamed sources ahead of a registration statement, not audited disclosures. The S-1, when public, is the document that settles them.</strong></p>
+      <p><strong>OpenAI — no filing observed.</strong> Reporting through this window continues to describe a listing timetable without a filed date (secondary). 🔶 ⚠️ <strong>Reported timetable, not a filed date.</strong></p>
+      <h3 id="5b-top-5-traded-ai-related-tickers">5b. Top 5 traded AI-related tickers</h3>
+      <p><em>Inclusion reflects AI exposure and trading prominence, not merit. Latest verifiable signal only — no targets, no forecasts.</em></p>
+      <div class="table-wrap"><table>
+      <thead>
+      <tr>
+      <th>#</th>
+      <th>Ticker</th>
+      <th>Company</th>
+      <th>Why it's an AI-trading bellwether</th>
+      <th>Latest verifiable signal</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>1</td>
+      <td>NVDA</td>
+      <td>Nvidia</td>
+      <td>The volume anchor of the AI trade, and now a reported participant in the sector's largest pending listing</td>
+      <td><strong>Closed September 11 at $218.29</strong> (market-data aggregator, retrieved September 13 — press/data-provider, single-source). 🔶 ⚠️ <strong>This series last carried a $217.55 close for August 28; the two are consistent in direction and magnitude, so no withdrawal is required.</strong> ✅</td>
+      </tr>
+      <tr>
+      <td>2</td>
+      <td>MU</td>
+      <td>Micron</td>
+      <td>The AI-memory read-through, and the nearest dated earnings catalyst in the group</td>
+      <td><strong>Closed September 11 at $975.26</strong> (market-data aggregator, retrieved September 13 — press/data-provider, single-source). 🔶 ⚠️ <strong>This series last carried $935.39 for August 28; the move is directionally coherent but the two prints come from the same class of source and neither is exchange-confirmed here.</strong> 🔶 <strong>Fiscal Q4 results are reported as scheduled for September 30</strong> (press). 🔶</td>
+      </tr>
+      <tr>
+      <td>3</td>
+      <td>ORCL</td>
+      <td>Oracle</td>
+      <td>The purest listed read on whether AI infrastructure spending is being financed prudently</td>
+      <td>⚠️ <strong>No verified September 11 close was retrieved in this run and none is printed.</strong> <strong>Press reports shares down roughly 24% year to date in 2026 amid concern over debt-funded AI data-centre build-out</strong> (press, single-source). 🔶 ⚠️ <strong>Coverage of a September 11 earnings reaction was retrieved but conflicts with figures attributed to the June quarter; nothing from it is carried.</strong></td>
+      </tr>
+      <tr>
+      <td>4</td>
+      <td>AMD</td>
+      <td>Advanced Micro Devices</td>
+      <td>The second accelerator vendor, and the cleanest test of whether the AI trade is broadening past one name</td>
+      <td>⚠️ <strong>No verified September 11 close was retrieved and none is printed.</strong> <strong>Press describes AMD among AI names moving 5–8% during the week</strong> (press, single-source, undated within the week). 🔶 ⚠️ <strong>A weekly range attributed to no specific session is not a price, and this briefing does not convert it into one.</strong></td>
+      </tr>
+      <tr>
+      <td>5</td>
+      <td>PLTR</td>
+      <td>Palantir</td>
+      <td>Re-enters on named activity after being dropped on staleness in the prior run</td>
+      <td>⚠️ <strong>No verified close was retrieved for this run and none is printed.</strong> <strong>Press describes the stock back above the $190 level during the week</strong> (press, single-source). 🔶 ⚠️ <strong>"Above $190" is a level, not a close, and is carried as such.</strong></td>
+      </tr>
+      </tbody>
+      </table></div>
+      <p><em>(CRM is out of the table this run despite the Agentforce announcement: no verified close was retrieved, and an announcement is not a price. SMCI remains out on staleness.)</em></p>
+      <p><strong>Week ahead (September 14–18) — calendar, not forecast.</strong> <strong>FOMC meets Tuesday and Wednesday, September 15–16, with the decision Wednesday afternoon</strong>, the first meeting since the August CPI print. ✅ <strong>Dreamforce runs September 15–17</strong> — the most likely venue for further Agentforce and Claude-partnership announcements. ✅ <strong>Anthropic's public S-1, if reporting of a late-September filing holds, would be expected in this window or immediately after</strong> — ⚠️ <strong>reported timetable, not a filed date.</strong> 🔶 <strong>Micron fiscal Q4 results reported as scheduled for September 30.</strong> 🔶 <strong>Next CPI: Wednesday, October 14.</strong> ✅ <strong>EU AI Act Article 50 obligations have been enforceable since August 2, 2026; Colorado's revised framework takes effect January 1, 2027.</strong> (Sources: Bureau of Labor Statistics release schedule; Federal Reserve; Salesforce; European Commission.)</p>
+      <p><strong>What This Means for You.</strong> <strong>The Anthropic valuation spread is the most useful teaching artefact this series has produced in a month, and it has nothing to do with investing.</strong> Four figures — $800 billion, $1.1–1.25 trillion, $2 trillion, $2.3 trillion — are in circulation for the same company in the same fortnight, each attributed to reporting, each repeated as though settled. ✅ <strong>The ratio between the lowest and highest is nearly three to one.</strong> <strong>The transferable discipline is that when a quantity's reported range exceeds the precision anyone is claiming for it, the correct output is the range and its provenance, not a midpoint.</strong> ⚠️ <strong>A document that picks one of those numbers has manufactured confidence that no source supports.</strong> <strong>The second point is the cache-read price cut viewed as a procurement event rather than a product one.</strong> A 75% reduction in one cost component, announced by the vendor with workload-dependent savings of 25% to 45%, <strong>arrives in the same fortnight as a Google model priced at $0.75 and $3.75 per million with a published January 1 increase.</strong> ✅ 🔶 <strong>Frontier inference pricing is now moving in both directions on published schedules</strong>, which means any multi-year cost model that treats token cost as a fixed input is modelling the wrong thing. <strong>The correct structure is a dated assumption with a review trigger, not a number.</strong> <strong>The third point is narrow and practical: three of five tickers in the table above carry no printed price this run, because no verifiable close was retrieved for them.</strong> ⚠️ <strong>That is the table working as designed.</strong> <strong>A monitoring product that always fills every cell is either very well sourced or not checking.</strong> Market intelligence only, not investment advice.</p>
+      <hr />
+      <h2 id="sources">Sources</h2>
+      <ul>
+      <li>Anthropic, "Introducing Claude Fable 5.1 and Claude Mythos 5.1," September 1, 2026 — read in full September 13, 2026 (primary; pricing, benchmarks, safeguards, EFS, EU AI Act watermark, scientific results). <a href="https://www.anthropic.com/claude-fable-and-mythos-5-1" target="_blank" rel="noopener">https://www.anthropic.com/claude-fable-and-mythos-5-1</a></li>
+      <li>Anthropic Newsroom index, retrieved September 13, 2026 — most recent list entry September 1; featured block carries September 1 and September 10 items the list omits (primary, read directly). <a href="https://www.anthropic.com/news" target="_blank" rel="noopener">https://www.anthropic.com/news</a></li>
+      <li>Anthropic Research index, retrieved September 13, 2026 — most recent entry September 10 (primary, read directly). <a href="https://www.anthropic.com/research" target="_blank" rel="noopener">https://www.anthropic.com/research</a></li>
+      <li>Anthropic, "Detecting and countering misuse of AI: September 2026," September 10, 2026 (primary page, not read in full this run). <a href="https://www.anthropic.com/threat-intelligence-report-september-2026" target="_blank" rel="noopener">https://www.anthropic.com/threat-intelligence-report-september-2026</a></li>
+      <li>Anthropic, "Developing Enterprise Frontier Safeguards with our customers," September 1, 2026 (primary). <a href="https://www.anthropic.com/news/enterprise-frontier-safeguards" target="_blank" rel="noopener">https://www.anthropic.com/news/enterprise-frontier-safeguards</a></li>
+      <li>Anthropic, "Improving our alignment and security efforts," August 31, 2026 (primary). <a href="https://www.anthropic.com/news/improving-alignment-security-efforts" target="_blank" rel="noopener">https://www.anthropic.com/news/improving-alignment-security-efforts</a></li>
+      <li>Anthropic Research, "An alignment assessment of recent cybersecurity incidents," September 9, 2026 (primary index entry). <a href="https://www.anthropic.com/research/alignment-assessment-cybersecurity-incidents" target="_blank" rel="noopener">https://www.anthropic.com/research/alignment-assessment-cybersecurity-incidents</a></li>
+      <li>Anthropic Research, "Formalizing Fermat's Last Theorem," September 4, 2026 (primary index entry). <a href="https://www.anthropic.com/research/formalizing-fermats-last-theorem" target="_blank" rel="noopener">https://www.anthropic.com/research/formalizing-fermats-last-theorem</a></li>
+      <li>Anthropic Research, "Measuring tactical intelligence targeting and conventional weapons capabilities of AI models," September 10, 2026 (primary index entry). <a href="https://www.anthropic.com/research/intelligence-targeting-conventional-weapons-capabilities" target="_blank" rel="noopener">https://www.anthropic.com/research/intelligence-targeting-conventional-weapons-capabilities</a></li>
+      <li>Claude Code changelog, most recent entry v2.1.270 dated September 12, 2026, read directly September 13, 2026 (primary). <a href="https://code.claude.com/docs/en/changelog" target="_blank" rel="noopener">https://code.claude.com/docs/en/changelog</a></li>
+      <li>Model Context Protocol Blog, release index, read September 13, 2026 — most recent release post remains The 2026-07-28 Specification (primary). <a href="https://blog.modelcontextprotocol.io/tags/release/" target="_blank" rel="noopener">https://blog.modelcontextprotocol.io/tags/release/</a></li>
+      <li>Model Context Protocol Blog, "The New MCP Roadmap," August 22, 2026 (primary). <a href="https://blog.modelcontextprotocol.io/posts/mcp-roadmap/" target="_blank" rel="noopener">https://blog.modelcontextprotocol.io/posts/mcp-roadmap/</a></li>
+      <li>US Bureau of Labor Statistics, "Consumer Price Index — August 2026," release USDL-26-1496, September 11, 2026, read in full September 13, 2026 (primary). <a href="https://www.bls.gov/news.release/cpi.nr0.htm" target="_blank" rel="noopener">https://www.bls.gov/news.release/cpi.nr0.htm</a></li>
+      <li>CNBC, "Stock market news for Sept. 11, 2026" (press — Friday closes). <a href="https://www.cnbc.com/2026/09/10/stock-market-today-live-updates.html" target="_blank" rel="noopener">https://www.cnbc.com/2026/09/10/stock-market-today-live-updates.html</a></li>
+      <li>Washington Post / AP, "How major US stock indexes fared Friday 9/11/2026" (press — Friday closes). <a href="https://www.washingtonpost.com/business/2026/09/11/wall-street-stocks-dow-nasdaq/b7beaa5c-ae1d-11f1-b498-8697f35a6743_story.html" target="_blank" rel="noopener">https://www.washingtonpost.com/business/2026/09/11/wall-street-stocks-dow-nasdaq/b7beaa5c-ae1d-11f1-b498-8697f35a6743_story.html</a></li>
+      <li>CNBC, "CPI inflation report August 2026," September 11, 2026 (press). <a href="https://www.cnbc.com/2026/09/11/cpi-inflation-report-august-2026.html" target="_blank" rel="noopener">https://www.cnbc.com/2026/09/11/cpi-inflation-report-august-2026.html</a></li>
+      <li>Bloomberg, "US Core CPI Rises More Than Forecast, Bolstering Case for Hike," September 11, 2026 (press — the competing framing resolved against the primary). <a href="https://www.bloomberg.com/news/articles/2026-09-11/us-core-cpi-rises-more-than-forecast-bolstering-case-for-hike" target="_blank" rel="noopener">https://www.bloomberg.com/news/articles/2026-09-11/us-core-cpi-rises-more-than-forecast-bolstering-case-for-hike</a></li>
+      <li>Bloomberg, "Nvidia Mulls $10 Billion Anthropic IPO Backing, Reuters Says," September 11, 2026 (press, reporting a Reuters exclusive). <a href="https://www.bloomberg.com/news/articles/2026-09-11/nvidia-in-talks-to-invest-up-to-10b-in-anthropic-ipo-reuters" target="_blank" rel="noopener">https://www.bloomberg.com/news/articles/2026-09-11/nvidia-in-talks-to-invest-up-to-10b-in-anthropic-ipo-reuters</a></li>
+      <li>Bloomberg, "Anthropic Nears Finalizing $15 Billion Pre-IPO Credit Facility," September 3, 2026 (press). <a href="https://www.bloomberg.com/news/articles/2026-09-03/anthropic-nears-finalizing-15-billion-pre-ipo-credit-facility" target="_blank" rel="noopener">https://www.bloomberg.com/news/articles/2026-09-03/anthropic-nears-finalizing-15-billion-pre-ipo-credit-facility</a></li>
+      <li>Forbes, "Anthropic Delays IPO To Mid-October, Locks In $15 Billion Credit Line," September 7, 2026 (press — the S-1 and roadshow slip). <a href="https://www.forbes.com/sites/jonmarkman/2026/09/07/anthropic-delays-ipo-to-mid-october-locks-in-15-billion-credit-line/" target="_blank" rel="noopener">https://www.forbes.com/sites/jonmarkman/2026/09/07/anthropic-delays-ipo-to-mid-october-locks-in-15-billion-credit-line/</a></li>
+      <li>TechCrunch, "AIR raises $50M to help companies vet the skills and add-ons AI agents use," September 1, 2026 (press). <a href="https://techcrunch.com/2026/09/01/air-raises-50m-to-help-companies-vet-the-skills-and-add-ons-ai-agents-use/" target="_blank" rel="noopener">https://techcrunch.com/2026/09/01/air-raises-50m-to-help-companies-vet-the-skills-and-add-ons-ai-agents-use/</a></li>
+      <li>SiliconANGLE, "Salesforce introduces new AI agents to automate sales, support tasks," September 11, 2026 (press). <a href="https://siliconangle.com/2026/09/11/salesforce-introduces-new-ai-agents-to-automate-sales-support-tasks/" target="_blank" rel="noopener">https://siliconangle.com/2026/09/11/salesforce-introduces-new-ai-agents-to-automate-sales-support-tasks/</a></li>
+      <li>Salesforce Newsroom, "Salesforce Expands Agentforce With a New Portfolio of AI Agents Built for High-Value Work," September 11, 2026 (vendor primary). <a href="https://www.salesforce.com/uk/news/stories/agentforce-job-ready-ai-agents/" target="_blank" rel="noopener">https://www.salesforce.com/uk/news/stories/agentforce-job-ready-ai-agents/</a></li>
+      <li>The Register, "With Gemini 3.8 Flash, Google reminds everyone it's still in the race," September 2, 2026 (press). <a href="https://www.theregister.com/ai-and-ml/2026/09/02/with_gemini_38_flash_google_reminds_everyone_its_still_in_the_race/5294049" target="_blank" rel="noopener">https://www.theregister.com/ai-and-ml/2026/09/02/with_gemini_38_flash_google_reminds_everyone_its_still_in_the_race/5294049</a></li>
+      <li>Yahoo Finance, "Oracle Shares Are Down 24% So Far in 2026 Amid AI Bubble Fears" (press — the year-to-date figure only). <a href="https://finance.yahoo.com/markets/stocks/articles/oracle-shares-down-24-far-125000674.html" target="_blank" rel="noopener">https://finance.yahoo.com/markets/stocks/articles/oracle-shares-down-24-far-125000674.html</a></li>
+      <li>Rappler, "Anthropic disrupts Russian, Chinese AI campaigns targeting its Claude models," September 2026 (press — the threat-report figures). <a href="https://www.rappler.com/technology/anthropic-threat-intelligence-report-september-2026/" target="_blank" rel="noopener">https://www.rappler.com/technology/anthropic-threat-intelligence-report-september-2026/</a></li>
+      <li>AI Agent Store daily aggregation, week of September 13, 2026, retrieved September 13, 2026 (secondary — the source of the unverified Fable 5.1 context-window figure and the DeepSeek and OpenAI Agents API items flagged in Section 3). <a href="https://aiagentstore.ai/ai-agent-news/this-week" target="_blank" rel="noopener">https://aiagentstore.ai/ai-agent-news/this-week</a></li>
+      </ul>
+    </article>
+
+    <section class="cta-band" id="contact" aria-labelledby="cta-heading">
+      <h2 id="cta-heading">From AI curiosity to AI capability</h2>
+      <p>This briefing is part of the field research behind our AI Enablement service &mdash; a curated, white-glove Claude Cowork implementation tailored to your organization&rsquo;s workflow.</p>
+      <a class="btn" href="https://calendly.com/mark-malaniru/30min" target="_blank" rel="noopener">Book a discovery call</a>
+    </section>
+    <!-- mal-ai-disclaimer:v1 -->
+  <aside class="mal-ai-disclaimer" role="note" aria-label="AI transparency notice" style="max-width:760px;margin:2.5rem auto 0;padding:1rem 1.25rem;border:1px solid #d9c3a5;border-left:4px solid #C07830;border-radius:6px;background:#faf6f0;color:#5c5347;font-size:0.82rem;line-height:1.6;box-sizing:border-box;">
+    <strong style="display:block;color:#8a5a1e;font-size:0.78rem;letter-spacing:.04em;text-transform:uppercase;margin-bottom:.35rem;">AI Transparency Notice</strong>
+    This article was produced through Malaniru&rsquo;s guided-research process: generated with the assistance of AI and reviewed by a person before publication (human-in-the-loop). In line with EU AI Act transparency obligations, we disclose that AI systems were used to create this content. It is provided for general information only, may contain inaccuracies, and is not professional advice &mdash; verify before relying on it.
+  </aside>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Malaniru Inc, LLC &middot; Lafayette, Colorado &middot; AI Enablement</p>
+    <p><a href="daily-intelligence-briefings.html">&larr; Back to Daily Intelligence Briefings</a> &middot; <a href="index.html">AI Enablement</a></p>
+      <nav class="mal-footernav" data-mal-footernav aria-label="Site" style="margin-top:0.7rem;font-size:0.82rem;line-height:1.9;">
+      <a href="about.html" style="color:#C07830;font-weight:700;text-decoration:none;">About</a> &middot;
+      <a href="pricing.html" style="color:#C07830;font-weight:700;text-decoration:none;">Pricing</a> &middot;
+      <a href="index.html" style="color:#C07830;font-weight:700;text-decoration:none;">AI Enablement</a>
+     &middot;
+      <a href="privacy-policy.html" style="color:#C07830;font-weight:700;text-decoration:none;">Privacy</a>
+    </nav>
+  </footer>
+</body>
+</html>

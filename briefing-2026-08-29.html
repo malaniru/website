@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<!--
+  Malaniru - Daily Intelligence Briefing (branded HTML)
+  Built by: publish_briefing_page.py - Date: 2026-08-29
+  Source:   Projects/Malaniru_Marketing_Site/Staging/20260829-daily-intelligence-briefing.md
+  FIDELITY: Body rendered VERBATIM from the source markdown. No copy edits.
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daily Intelligence Briefing — Saturday, August 29, 2026 - Malaniru</title>
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.malaniru.com/briefing-2026-08-29">
+  <meta name="description" content="Saturday&#x27;s briefing leads with a release that reads like an audit response. Claude Code v2.1.251 landed Friday with 71 entries, and the bulk of them close permission and path-traversal gaps rather than add features — symlink swaps inside the working directory, plugin paths escaping the plugin folder, Bash approvals slipping past arithmetic assignments. It lands the same month Check Point disclosed 11 vulnerabilities across LangChain, LangGraph, CrewAI, AutoGen, Microsoft Agent Framework and Google ADK. Friday&#x27;s tape gave back a little: S&amp;P 500 7,711.76, Nasdaq 26,402.42, Dow 53,559.99, all three still green on the week, after Fed Chair Kevin Warsh used his first Jackson Hole keynote to say inflation is still too high and rates may have to go up. Every figure carries a source and a confidence tag; this is market intelligence, not investment advice.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --navy:#0F1A2E;--navy-mid:#2A3F63;--copper:#C07830;--gold:#D4A853;
+      --off-white:#F4F1EC;--light-gray:#E8E6E1;--mid-gray:#8A8A96;--dark-text:#1C1C1C;
+      --font:"Inter","Helvetica Neue",Arial,sans-serif;
+    }
+    *{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:var(--font);background:var(--off-white);color:var(--dark-text);line-height:1.65;font-size:16px;-webkit-font-smoothing:antialiased;}
+    .skip-link{position:absolute;left:-999px;top:0;background:var(--gold);color:var(--navy);padding:10px 16px;font-weight:700;z-index:10;}
+    .skip-link:focus{left:8px;top:8px;}
+    a{color:var(--copper);}
+    /* Header */
+    header{background: linear-gradient(160deg, rgba(15,26,46,0.72) 0%, rgba(10,18,33,0.82) 100%), url('StockCake-Cosmic_Web_Complexity-1361288-standard-rot90ccw.jpg'); background-size: auto, 100% 100%; background-repeat: no-repeat, no-repeat; background-position: center, center;color:var(--off-white);padding:48px 24px 52px;position:relative;overflow:hidden;}
+    header::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 85% 12%,rgba(192,120,48,0.20) 0%,rgba(15,26,46,0) 55%);pointer-events:none;}
+    .header-inner{max-width:760px;margin:0 auto;position:relative;z-index:1;}
+    .wordmark{font-weight:800;font-size:1.25rem;letter-spacing:0.02em;margin-bottom:30px;}
+    .wordmark .dot{color:var(--copper);}
+    .wordmark a{color:var(--off-white);text-decoration:none;transition:opacity .18s ease;}
+    .wordmark a:hover,.wordmark a:focus-visible{opacity:.85;outline:none;}
+    .eyebrow{display:inline-block;font-size:0.72rem;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;}
+    header h1{font-weight:800;font-size:clamp(1.8rem,4.6vw,2.6rem);line-height:1.14;letter-spacing:-0.01em;margin-bottom:16px;}
+    .byline{font-size:0.9rem;color:var(--light-gray);letter-spacing:0.01em;}
+    .byline .sep{color:var(--copper);margin:0 8px;}
+    .lede{font-size:1.08rem;color:var(--light-gray);max-width:66ch;margin-top:18px;}
+    .backlink{display:inline-block;margin-top:26px;color:var(--gold);font-weight:600;font-size:0.9rem;text-decoration:none;border-bottom:1px solid rgba(212,168,83,0.4);}
+    .backlink:hover,.backlink:focus-visible{border-bottom-color:var(--gold);outline:none;}
+    /* Article */
+    main{max-width:760px;margin:0 auto;padding:48px 24px 8px;}
+    .disclaimer{background:#fff;border:1px solid var(--light-gray);border-left:4px solid var(--copper);border-radius:8px;padding:14px 18px;font-size:0.9rem;color:var(--navy-mid);margin-bottom:34px;}
+    article{font-size:1.05rem;}
+    article h2{font-weight:800;font-size:1.5rem;color:var(--navy);line-height:1.22;letter-spacing:-0.01em;margin:42px 0 14px;}
+    article h3{font-weight:700;font-size:1.18rem;color:var(--navy-mid);line-height:1.25;margin:30px 0 10px;}
+    article h2 + p, article h3 + p{margin-top:0;}
+    article p{margin:0 0 18px;color:var(--dark-text);}
+    article ul,article ol{margin:0 0 18px;padding-left:24px;}
+    article li{margin-bottom:8px;}
+    article strong{font-weight:700;color:var(--navy);}
+    article em{font-style:italic;}
+    article a{color:var(--copper);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(192,120,48,0.35);transition:border-color .18s ease;}
+    article a:hover,article a:focus-visible{border-bottom-color:var(--copper);outline:none;}
+    article hr{border:none;border-top:1px solid var(--light-gray);margin:34px 0;}
+    article h2#sources, article h2#references{border-top:1px solid var(--light-gray);padding-top:30px;font-size:1.2rem;color:var(--navy-mid);}
+    /* sources list smaller */
+    article h2[id^="sources"] ~ ul li, article h3[id^="sources"] ~ ul li{font-size:0.95rem;color:var(--navy-mid);}
+    /* tables */
+    article table{width:100%;border-collapse:collapse;margin:0 0 24px;font-size:0.95rem;}
+    article th,article td{border:1px solid var(--light-gray);padding:9px 12px;text-align:left;vertical-align:top;}
+    article thead th{background:var(--navy);color:var(--off-white);font-weight:700;}
+    article tbody tr:nth-child(even){background:#fff;}
+    article .table-wrap{overflow-x:auto;margin:0 0 24px;}
+    article .table-wrap table{margin:0;}
+    /* CTA */
+    .cta-band{background:var(--navy);color:var(--off-white);border-radius:12px;padding:42px 32px;text-align:center;margin:48px 0 8px;}
+    .cta-band h2{font-weight:800;font-size:clamp(1.4rem,3.4vw,1.9rem);margin-bottom:12px;letter-spacing:-0.01em;color:var(--off-white);}
+    .cta-band p{color:var(--light-gray);max-width:52ch;margin:0 auto 24px;}
+    .cta-band .btn{display:inline-block;background:var(--copper);color:#fff;font-weight:700;padding:13px 28px;border-radius:8px;text-decoration:none;transition:background .18s ease;}
+    .cta-band .btn:hover,.cta-band .btn:focus-visible{background:var(--gold);color:var(--navy);outline:none;}
+    /* Footer */
+    footer{max-width:760px;margin:16px auto 0;padding:24px;font-size:0.82rem;color:var(--mid-gray);border-top:1px solid var(--light-gray);}
+    footer p+p{margin-top:6px;}
+    footer a{color:var(--mid-gray);text-decoration:underline;}
+    @media (prefers-reduced-motion:reduce){*{transition:none!important;}}
+
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header>
+    <div class="header-inner">
+      <div class="wordmark"><a href="index.html">Malaniru<span class="dot">.</span></a></div>
+      <span class="eyebrow">AI Enablement &middot; Daily Intelligence Briefing</span>
+      <h1>Daily Intelligence Briefing — Saturday, August 29, 2026</h1>
+      <p class="byline">By Mark Andrew Harris<span class="sep">&middot;</span>August 29, 2026</p>
+      <p class="lede">Saturday&#x27;s briefing leads with a release that reads like an audit response. Claude Code v2.1.251 landed Friday with 71 entries, and the bulk of them close permission and path-traversal gaps rather than add features — symlink swaps inside the working directory, plugin paths escaping the plugin folder, Bash approvals slipping past arithmetic assignments. It lands the same month Check Point disclosed 11 vulnerabilities across LangChain, LangGraph, CrewAI, AutoGen, Microsoft Agent Framework and Google ADK. Friday&#x27;s tape gave back a little: S&amp;P 500 7,711.76, Nasdaq 26,402.42, Dow 53,559.99, all three still green on the week, after Fed Chair Kevin Warsh used his first Jackson Hole keynote to say inflation is still too high and rates may have to go up. Every figure carries a source and a confidence tag; this is market intelligence, not investment advice.</p>
+      <a class="backlink" href="daily-intelligence-briefings.html">&larr; All daily intelligence briefings</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <article>
+      <p><strong>[THOUGHT LEADERSHIP] [DRAFT — Pending Copy Review]</strong></p>
+      <h2 id="executive-summary">Executive Summary</h2>
+      <p><strong>Claude Code shipped v2.1.251 on Friday with 71 changelog entries, and the character of the release is the story: it is dominated by security and permission fixes rather than capability additions</strong> (Source: Claude Code changelog, retrieved August 29, 2026 — primary). ✅ Among them: <strong>file tools following a symlink swapped inside the working directory after the permission check</strong>, <strong>plugin commands pointing outside the plugin directory</strong>, <strong>Grep and Glob not applying <code>Read(...)</code> deny rules through symlinked search paths</strong>, and <strong>Bash approvals auto-approving arithmetic assignments such as <code>OPTIND=1/0</code></strong>. The release also <strong>routes Claude in Chrome browser actions through Claude Code's own permission checks</strong> and <strong>requires approval for managed settings that terminate sandbox TLS, inject credentials or weaken sandbox isolation.</strong> ⚠️ <strong>The context that makes this matter is external:</strong> Check Point researchers disclosed <strong>11 vulnerabilities across LangChain, LangGraph, CrewAI, AutoGen, Microsoft Agent Framework and Google ADK</strong> — insecure deserialization, SSRF, path traversal, use-after-free — after a year of testing (Source: The Register, August 5, 2026 — press). ✅ <strong>Friday's tape gave a little back</strong>: <strong>S&amp;P 500 7,711.76 (−0.25%)</strong>, <strong>Nasdaq Composite 26,402.42 (−0.52%)</strong>, <strong>Dow 53,559.99 (−9.45 points, −0.02%)</strong>, with <strong>all three still higher on the week</strong>, after <strong>Fed Chair Kevin Warsh used his first Jackson Hole keynote to say inflation remains too high and rates may have to rise.</strong> ⚠️ <strong>Anthropic published nothing new on Friday</strong>; the newsroom still ends at August 27.</p>
+      <hr />
+      <h2 id="1-ai-market-trends">1. AI Market Trends</h2>
+      <p><strong>Friday was a small give-back inside a good week, and the reason it was small is the more interesting fact.</strong> The three closes this briefing verified: <strong>S&amp;P 500 7,711.76, down 0.25%</strong>; <strong>Nasdaq Composite 26,402.42, down 0.52%</strong>; <strong>Dow Jones Industrial Average 53,559.99, down 9.45 points or 0.02%</strong> (Sources: Yahoo Finance live coverage and CNBC market updates, August 28, 2026 — press). ✅ <strong>All three reconcile arithmetically against Thursday's closes</strong> — 7,730.99, 26,541.35 and 53,569.44 — to the decimal, including the Dow's 9.45-point drop. That is the cleanest reconciliation this series has run in two weeks, and the figures are printed with confidence. <strong>All three indexes finished the week higher.</strong> ⚠️ <strong>No Russell 2000 close was verified in this run and none is printed.</strong></p>
+      <p><strong>The macro event was Kevin Warsh's first Jackson Hole keynote, and it was hawkish.</strong> The Fed Chair said <strong>inflation is still too high</strong> and signalled that the central bank <strong>may have to raise rates in the coming months</strong> — a clearer statement of his outlook than he had previously offered. On the recent cooler prints: <em>"they do not tell me that underlying trends have meaningfully improved."</em> He <strong>declined to offer forward guidance or a reaction function</strong>, using the address instead as a statement of governance philosophy, and called for a <strong>"quieter" central bank</strong> in which investors are not <em>"looking primarily to the Fed for their next trade"</em> (Sources: CNBC, Forbes and Washington Post coverage of the August 28 address — press). ✅ ⚠️ <strong>Reported market read-through: a majority of investors now expect a hike in September.</strong> 🔶 <strong>That is a characterisation of positioning drawn from press summary, not a futures-implied probability this briefing verified, and no probability figure is printed.</strong> The standing macro backdrop is unchanged from Thursday: <strong>core PCE 3.3% year over year, Q2 GDP +1.5% annualized, unemployment 4.1%, policy rate target 3.5%–3.75%</strong>, next <strong>FOMC September 15–16.</strong></p>
+      <p><strong>The chip tariff proposal firmed up in outline without becoming policy.</strong> Reporting this week has <strong>Commerce Secretary Howard Lutnick favouring a structure that caps duty-free chip imports at a volume pegged to each company's committed US production</strong>, and Commerce officials indicating privately that <strong>the exemptions attached to January's 25% tariff — covering data centres, R&amp;D, startups and consumer devices — may not carry over</strong>. The framework under discussion would extend tariff treatment to <strong>finished goods built with foreign chips: laptops, gaming consoles and data-centre servers</strong> (Sources: Politico reporting drawing on eight sources, as summarised by CNBC, Tom's Hardware and Data Center Dynamics, August 27–28, 2026 — press). ⚠️ <strong>Preliminary and fluid, expected to be phased rather than applied at once, and not adopted.</strong> Read alongside Thursday's unverified report that <strong>AI server system prices rise more than 15% on early-2027 shipments</strong> 🔶, the direction of travel on infrastructure cost is up on two independent, unconfirmed vectors.</p>
+      <p><strong>The enterprise adoption numbers published this month do not agree with each other, and the disagreement is worth more than any single figure.</strong> Caylent's 2026 Enterprise Readiness survey, published in August, reports <strong>59.5% of senior enterprise leaders say their organizations already run AI agents autonomously in production</strong> and <strong>98% would let agents run production under the right conditions</strong>. CrewAI's 2026 State of Agentic AI reports <strong>65% already using agents</strong>, <strong>81% either fully scaled or actively expanding</strong>, and <strong>31% of workflows automated</strong>. A separate tracked figure puts <strong>31% of enterprises with at least one agent in production</strong> — banking and insurance at <strong>47%</strong>, healthcare <strong>18%</strong>, government <strong>14%</strong> — while another finds <strong>88% of agent pilots never graduate to production</strong>, blocked by <strong>evaluation gaps (64%), governance friction (57%) and model reliability (51%)</strong> (Sources: vendor and industry survey summaries retrieved August 29, 2026 — secondary and self-reported). ⚠️ <strong>Every one of these is a vendor-published or vendor-commissioned survey with a different definition of "in production" and a different sampling frame. None should be quoted as a market fact.</strong> 🔶 <strong>The defensible reading is the spread itself: the gap between 59.5% and 31% is a definitional gap, and the 88% pilot-failure figure sits underneath both.</strong></p>
+      <hr />
+      <h2 id="2-top-10-ai-agents-three-lenses">2. Top 10 AI Agents — Three Lenses</h2>
+      <p>Rankings as of Saturday, August 29, 2026. <strong>The through-line this morning is hardening.</strong> The most consequential release of the day added almost no capability and closed a great deal of surface area.</p>
+      <h3 id="2a-relevance-for-claude-mcp-centered-work">2a. Relevance for Claude / MCP-Centered Work</h3>
+      <div class="table-wrap"><table>
+      <thead>
+      <tr>
+      <th>Rank</th>
+      <th>Agent / Platform</th>
+      <th>Justification</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>1</td>
+      <td>Claude Code + Agent SDK</td>
+      <td><strong>v2.1.251, August 28, 71 entries — and unlike Thursday's 49-entry release, the weight is on containment rather than features</strong> (Source: Claude Code changelog, retrieved August 29, 2026 — primary). ✅ Four fixes matter to anyone deploying an agent inside a client environment: <strong>file tools (Read, Write, Edit) following a symlink swapped inside the working directory <em>after</em> the permission check</strong>, which could read or write outside the approved location; <strong>plugin commands declared in a marketplace entry pointing outside the plugin directory</strong>, now rejected as path traversal; <strong>Grep and Glob not applying <code>Read(...)</code> deny rules to files reached through a symlinked search path</strong>; and <strong>Bash permission checks auto-approving commands that assign an arithmetic expression to an integer shell variable</strong> (<code>OPTIND=1/0</code>, <code>RANDOM=2+2</code>), which now prompt. Three governance changes ship alongside: <strong>managed settings that terminate sandbox TLS, route sandbox traffic through a custom proxy, inject credentials or weaken sandbox isolation now require approval before they apply</strong>; <strong><code>ANTHROPIC_CUSTOM_HEADERS</code> from managed or project settings requires approval when it sets a credential, org/tenant, routing or API-behaviour header</strong>; and <strong>project-level <code>.claude/settings.json</code> <code>env</code> can no longer set <code>CLAUDE_CONFIG_DIR</code>, <code>CLAUDE_CODE_TMPDIR</code> or <code>TMPDIR</code>/<code>TMP</code>/<code>TEMP</code></strong>. New surface: <strong><code>PreModelSwitch</code> and <code>PostModelSwitch</code> hook events</strong> that can block, confirm or annotate a model switch.</td>
+      </tr>
+      <tr>
+      <td>2</td>
+      <td>Claudeforce — Salesforce in Claude</td>
+      <td><strong>Carry, unchanged since August 26.</strong> <strong>Salesforce in Claude</strong> is a Plugin with <strong>37 prebuilt sales skills</strong>, built on <strong>AIforce</strong> (MCP servers, APIs, CLI tools), with <strong>actions routed back through Salesforce so business rules are enforced</strong> and <strong>a single admin connection</strong> managing authentication and permissions centrally. <strong>Claude is the default model for Slack and Slackbot</strong>, available in <strong>Agentforce via Amazon Bedrock inside the Salesforce Trust Boundary</strong> (Source: Salesforce newsroom, August 26, 2026 — primary). ✅ ⚠️ <strong>Pilot now; open beta expected September 2026. No new publication August 27–29.</strong></td>
+      </tr>
+      <tr>
+      <td>3</td>
+      <td>Model Hardware Standard (MHS)</td>
+      <td><strong>Carry from August 27, still the most strategically significant item of the week.</strong> Shared specification for agents to operate physical devices, <strong>control routed through MCP, the CLI and code files</strong>, model-agnostic, working with <strong>any device that has a programmable interface</strong>, with an <strong>auto-generated reference file stating what safety limits will be enforced</strong> (Source: anthropic.com — primary). ✅ ⚠️ <strong>Waitlisted research preview; not open source yet; no update published August 28 or 29.</strong></td>
+      </tr>
+      <tr>
+      <td>4</td>
+      <td>Claude in Chrome + Cowork built-in browser</td>
+      <td><strong>Moved because v2.1.251 changed how it is governed, not because it added anything.</strong> Browser actions <strong>now always go through Claude Code's permission checks, including in sessions with telemetry disabled</strong> — previously those sessions used the Chrome extension's own prompts (Source: Claude Code changelog — primary). ✅ That collapses two permission models into one, which is the difference between a control an administrator can describe and a control they have to test. Claude in Chrome remains <strong>generally available on every paid plan</strong>; Cowork's browser remains <strong>separate from the user's, with banking, email and single sign-on excluded unless deliberately included</strong> (carried, primary).</td>
+      </tr>
+      <tr>
+      <td>5</td>
+      <td>Model Context Protocol</td>
+      <td><strong>No new publication since the August 22 roadmap; the specification revision remains 2026-07-28.</strong> 🔶 ⚠️ <strong>Confidence is lower than yesterday's on this point: the MCP blog host could not be retrieved directly in this run (blocked by egress policy), so the "no new post" finding rests on search-result restatement rather than a direct read of the post index.</strong> It should be re-verified at source on the next run. Roadmap priorities unchanged: <strong>agentic messaging primitives; HTTP-native transport unification and hardening; agent identity and enterprise-ready security; improved primitives; improved SDK developer experience.</strong></td>
+      </tr>
+      </tbody>
+      </table></div>
+      <p><em>(Watch line: Claude Opus 5 — $5/$25, 1M context; </em><em>v2.1.251 makes Opus 5 the default model for seat-based Enterprise subscriptions</em><em>. Claude Sonnet 5 — $2/$10. Claude Fable 5 and Claude Mythos 5 — both carry computer-use and browser-use toolsets; </em><em>Fable continues to block professional biology and drug-development queries</em><em>. GPT-5.6 (Sol/Terra/Luna). Grok 4.6. Gemini 3.7 Flash — August 13. IBM Granite 4.2 — August 25. GLM-5.3-Flash and Qwen3.8-Flash-Next — both August 26. Gemini 3.5 Pro — still unreleased.)</em></p>
+      <h3 id="2b-market-momentum-adoption-funding-buzz">2b. Market Momentum (adoption / funding / buzz)</h3>
+      <div class="table-wrap"><table>
+      <thead>
+      <tr>
+      <th>Rank</th>
+      <th>Agent / Platform</th>
+      <th>Justification</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>1</td>
+      <td>Claudeforce — Claude inside Slack and Salesforce</td>
+      <td><strong>Still the largest distribution event of the year, three days on, and nothing has displaced it.</strong> Claude is the default model across <strong>Slack AI, Slackbot, Salesforce in Claude, Headless 360, Agentforce Coworker</strong>, and <strong>Claude Code across Salesforce's engineering organization</strong> (Source: Salesforce newsroom — primary). ✅ ⚠️ <strong>The published adoption figure — Slackbot driving 8.1 million hours of annualized productivity gains internally, up over 2x quarter over quarter — is a self-reported vendor metric.</strong></td>
+      </tr>
+      <tr>
+      <td>2</td>
+      <td>Anthropic — the listing story</td>
+      <td><strong>Moved up on volume of coverage, not on new disclosure, and that distinction is the whole entry.</strong> Secondary reporting this week converges on: <strong>confidential SEC filing June 1, 2026</strong>; <strong>public S-1 expected summer or early fall</strong>; <strong>target October 2026 Nasdaq listing</strong>; <strong>Goldman Sachs, JPMorgan and Morgan Stanley leading</strong>; <strong>an offering reported at more than $60 billion</strong>; and <strong>investors targeting a $2 trillion valuation</strong> (Sources: IPO-tracker and financial-media summaries retrieved August 29, 2026 — secondary throughout). 🔶 ⚠️ <strong>None of this is company-published.</strong> See Section 5 for the full treatment, including a ticker symbol now circulating that no exchange has confirmed.</td>
+      </tr>
+      <tr>
+      <td>3</td>
+      <td>Nvidia</td>
+      <td><strong>The print is done; the tape moved on.</strong> ⚠️ <strong>No verified August 28 close was retrieved for NVDA and none is printed.</strong> The underlying filing is unchanged: <strong>fiscal Q2 FY2027 revenue $96,221 million, Data Center $89.0 billion, gross margins 75.0%, Q3 guided to $108.0 billion ± 2%</strong> (Source: NVIDIA Form 8-K exhibit, SEC EDGAR — primary). ✅ New and secondary: a summary attributes to the company a <strong>projection of roughly 70% revenue growth for fiscal 2028</strong> (Source: earnings-summary write-up retrieved August 29 — secondary). 🔶 <strong>Not read against the filing; treat as reported.</strong></td>
+      </tr>
+      <tr>
+      <td>4</td>
+      <td>Agent-layer funding</td>
+      <td><strong>Three dated rounds inside 48 hours, and the mix has shifted from horizontal platforms to vertical agents.</strong> <strong>Instinct raised $250 million Series B on August 26</strong> from Index Ventures and Benchmark, taking total funding to <strong>$350 million</strong> at a <strong>$2.5 billion</strong> valuation, in consumer AI agents. <strong>Agentrys raised $24.5 million across pre-seed and seed on August 26</strong> — a <strong>$19.1 million</strong> seed led by Etna Capital plus a <strong>$5.4 million</strong> pre-seed led by MediaTek — building agents for <strong>semiconductor engineering workflows including verification and physical design</strong>. <strong>Breedr raised $27 million Series B on August 27</strong>, led by Partech's impact fund, to a total of about <strong>$46.6 million</strong> (Sources: startup funding trackers and press, retrieved August 29, 2026 — press and secondary). ⚠️ <strong>Tracker-sourced; amounts and valuations are as reported by the companies.</strong></td>
+      </tr>
+      <tr>
+      <td>5</td>
+      <td>Enterprise agent-governance platforms</td>
+      <td><strong>A new category is forming and it is selling controls, not capability.</strong> <strong>AccuKnox launched AgentZ on August 27</strong> — a <strong>model-agnostic</strong> platform bundling <strong>agents, sandboxes, workflows, role-based access, runtime credential injection and audit traces</strong>, deployable <strong>SaaS, on-prem or air-gapped</strong>, structured as Organizations → Workspaces → Agents → Workflows → Sandboxes (Source: AccuKnox press release via GlobeNewswire, August 27, 2026 — primary press release, vendor-authored). ⚠️ <strong>Vendor announcement; no independent evaluation.</strong> It sits alongside <strong>Google Cloud's Gemini Enterprise Agent Platform</strong>, which consolidates Vertex AI and Agentspace into a single build-scale-govern surface. 🔶</td>
+      </tr>
+      </tbody>
+      </table></div>
+      <h3 id="2c-capability-maturity-production-readiness">2c. Capability &amp; Maturity (production readiness)</h3>
+      <div class="table-wrap"><table>
+      <thead>
+      <tr>
+      <th>Rank</th>
+      <th>Agent / Platform</th>
+      <th>Justification</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>1</td>
+      <td>Claude Code + Agent SDK</td>
+      <td><strong>Extends its lead, and for once the reason is subtractive.</strong> Thursday gave administrators <code>--restricted</code>; Friday closed four concrete permission-bypass paths and made three classes of settings require explicit approval. <strong>A product that publishes the symlink-TOCTOU it just fixed is a product being audited</strong>, which is a stronger maturity signal than a feature list. ✅ <strong>Shipped, documented, dated August 28.</strong></td>
+      </tr>
+      <tr>
+      <td>2</td>
+      <td>Claude inside Agentforce</td>
+      <td><strong>Available through Amazon Bedrock within the Salesforce Trust Boundary</strong> — the fact that makes it deployable for regulated customers rather than merely available (Source: Salesforce newsroom — primary). ✅ ⚠️ <strong>Salesforce in Claude itself is still pilot-stage; open beta targeted for September.</strong></td>
+      </tr>
+      <tr>
+      <td>3</td>
+      <td>MCP 2026-07-28</td>
+      <td><strong>Stable, shipped, and the substrate under both of the entries above it.</strong> Stateless core, Multi Round-Trip Requests, header-based routing, cacheable list results, authorization hardening including <strong>issuer validation, issuer-bound client credentials and Client ID Metadata Documents as the preferred client registration path</strong>, a formal extensions framework, updated Tier 1 SDKs. ✅ ⚠️ <strong>Roots, Sampling and Logging are deprecated with a twelve-month transition; new implementations should not adopt them.</strong></td>
+      </tr>
+      <tr>
+      <td>4</td>
+      <td>Claude in Chrome</td>
+      <td><strong>Generally available with published attack-success rates</strong>, and as of v2.1.251 <strong>governed by one permission model instead of two</strong> (primary). ✅ ⚠️ <strong>Anthropic's own framing stands: prompt injection remains a moving target.</strong></td>
+      </tr>
+      <tr>
+      <td>5</td>
+      <td>Open-source agent frameworks (LangChain, LangGraph, CrewAI, AutoGen, Microsoft Agent Framework, Google ADK)</td>
+      <td><strong>Ranked last on this lens this week, and the reason is documented rather than inferred.</strong> Check Point researchers spent a year testing these frameworks and <strong>disclosed 11 vulnerabilities</strong>: <strong>insecure deserialization, server-side request forgery, path traversal and use-after-free</strong>. The structural finding is worse than the individual bugs: <strong>prompt-controlled content can cross the boundary into trusted framework logic</strong>, reaching <strong>orchestration, memory, state and system instructions</strong> that were meant to be off-limits to user input (Source: The Register, August 5, 2026, reporting the disclosure — press). ✅ ⚠️ <strong>These are disclosed and, per the reporting, fixed or being fixed — the maturity signal is that the class of bug is twenty-year-old application-security failure sitting underneath agents with database and mailbox access.</strong></td>
+      </tr>
+      </tbody>
+      </table></div>
+      <p><strong>Divergence analysis.</strong> <strong>The three lenses have converged on a single theme for the first time in weeks, and that convergence is itself the finding.</strong> Claude Code ranks <strong>first on relevance and first on maturity</strong> while <strong>not appearing in the top three on momentum</strong> — a release consisting largely of security fixes generates no buzz, which is exactly the asymmetry that makes the momentum lens unreliable as a proxy for readiness. The inverse case is the Anthropic listing story, which ranks <strong>second on momentum and appears on neither other lens</strong>, because coverage volume is not disclosure. <strong>The sharpest spread is the open-source framework cohort</strong>: these tools sit at or near the top of most public adoption rankings and rank <strong>last on maturity here</strong>, on the strength of a dated, named disclosure. <strong>MCP again scores on two lenses without publishing anything in seven days</strong> — but this week that carry is flagged, because the finding could not be verified at source in this run.</p>
+      <p><strong>What This Means for You.</strong> <strong>Friday's release is the most useful governance document published this month, and almost nobody will read it, because it is a changelog.</strong> Every serious internal conversation about agent deployment eventually reaches the same question — <em>what stops this thing from reading a file it shouldn't?</em> — and the honest answer has usually been a mix of configuration and trust. <strong>v2.1.251 changes the shape of that answer: the symlink-swap fix, the plugin path-traversal rejection, the deny-rule enforcement through symlinked search paths, and the arithmetic-assignment approval gap are four specific, dated, published closures of exactly the failure mode most organizations worry about.</strong> The practical step that follows is concrete: <strong>a documented AI implementation policy should name a minimum version for the agent runtime, not just a configuration</strong>, because several of these are fixes an older binary does not have. <strong>The Check Point disclosure is the other half of the same conversation, and it deserves careful reading rather than alarm.</strong> The finding that matters is not that six named frameworks had bugs — it is Check Point's structural point that <strong>prompt-controlled content reached orchestration, memory and system instructions</strong>, which reframes agent security from <em>control the tools</em> to <em>the framework itself is in scope</em>. For anyone building internal training on this, that is a slide: <strong>the model is not the only attack surface, and the sandbox is not the only control.</strong> <strong>The caution is the adoption statistics.</strong> Someone will arrive at your next planning meeting with the 59.5%-in-production figure from a vendor survey; the same month produced an 88% pilot-failure figure. <strong>Neither belongs in a board deck without its sampling frame attached</strong>, and the more useful number to discuss is the blocker list — evaluation gaps, governance friction, model reliability — because two of those three are governance problems, not technology ones.</p>
+      <hr />
+      <h2 id="3-agentic-ai-advances-new-releases">3. Agentic AI Advances &amp; New Releases</h2>
+      <ul>
+      <li><strong>Claude Code v2.1.251 — August 28, 2026, 71 entries.</strong> Security and permissions: <strong>symlink-swap TOCTOU in Read/Write/Edit fixed</strong>; <strong>plugin marketplace commands can no longer point outside the plugin directory</strong>; <strong>Grep and Glob now apply <code>Read(...)</code> deny rules through symlinked search paths</strong>; <strong>Bash approvals no longer auto-approve arithmetic assignments to integer shell variables</strong>; <strong>the Workflow tool no longer reads (or quotes in errors) a <code>scriptPath</code> outside the session's read scope before the permission check</strong>; <strong>project settings can no longer enable detailed beta tracing or raw API body logging</strong>; <strong>sandboxed Bash commands can no longer redirect or replace their own output files</strong>. Approval gates added for <strong>managed settings that terminate sandbox TLS, proxy sandbox traffic, inject credentials or weaken sandbox isolation</strong>, and for <strong><code>ANTHROPIC_CUSTOM_HEADERS</code> setting credential, org/tenant, routing or API-behaviour headers</strong>. New: <strong><code>PreModelSwitch</code>/<code>PostModelSwitch</code> hooks</strong>; <strong><code>SessionStart</code> resume hooks receive session staleness and estimated re-cache cost</strong>; <strong>a per-session prompt-cache line in <code>/cost</code></strong> and a matching <code>prompt_cache</code> status-line object; <strong>a Spend limit bar in <code>/usage</code></strong>; <strong>live streaming of foreground subagent tool calls to Remote Control clients</strong>. Changed: <strong>Claude in Chrome browser actions always go through Claude Code's permission checks</strong>; <strong>default model for seat-based Enterprise subscriptions is now Opus 5</strong>; <strong><code>/effort</code> saves a default per model</strong>; <strong>project-level <code>env</code> no longer sets <code>CLAUDE_CONFIG_DIR</code>, <code>CLAUDE_CODE_TMPDIR</code> or <code>TMPDIR</code></strong>. Removed: <strong>syntax highlighting for six rarely used languages, cutting 2.5 MB</strong>; the native binary is <strong>about 5 MB smaller</strong>. (Source: Claude Code changelog — primary.) ✅</li>
+      <li><strong>Agent-framework vulnerability disclosure — 11 CVEs across six frameworks.</strong> Check Point researchers, after roughly a year of testing, disclosed <strong>11 vulnerabilities across LangChain, LangGraph, CrewAI, AutoGen, Microsoft Agent Framework and Google ADK</strong> — <strong>insecure deserialization, server-side request forgery, path traversal, use-after-free</strong>. Structural finding: <strong>prompt-controlled content can cross into trusted framework logic</strong>, reaching <strong>orchestration, memory, state and system instructions</strong>. (Source: The Register, August 5, 2026 — press.) ✅ ⚠️ <strong>Dated August 5 and surfaced again in this week's aggregation; it is not a new disclosure, and this briefing prints it as an August 5 item.</strong></li>
+      <li><strong>AccuKnox AgentZ — August 27, 2026.</strong> Model-agnostic platform bundling <strong>agents, sandboxes, workflows, role-based access, runtime credential injection and audit traces</strong>; deployable <strong>SaaS, on-prem or air-gapped</strong>; object model of <strong>Organizations, Workspaces, Agents, Workflows, Sandboxes</strong> with users and roles across it. (Source: AccuKnox press release via GlobeNewswire, August 27, 2026 — vendor-authored primary.) ⚠️ <strong>No independent evaluation; capability claims are the vendor's.</strong></li>
+      <li><strong>Tencent Hy4 preview — reported August 28, 2026.</strong> Listed as the single tracked model release on that date. (Source: model-release tracker retrieved August 29, 2026 — secondary.) 🔶 <strong>Not confirmed against a Tencent publication in this run; treat the name and date as tracker-reported.</strong></li>
+      <li><strong>Model Hardware Standard and the science seats — carried from August 27.</strong> MHS research preview: <strong>MCP, CLI and code files as the three control paths</strong>; named partners <strong>Genentech, Carnegie Mellon (~3x faster dose-response), University of Washington (six instruments in under a week), QuEra, Tetsuwan Scientific</strong>; adopters <strong>Hugging Face (LeRobot)</strong> and <strong>Raspberry Pi</strong>. Alongside it, <strong>10,000 Claude seats for scientists</strong> (standard free; premium with <strong>5x limits at $15/month</strong>) and <strong>AI for Science credits up to $50,000 per project</strong> extended beyond biology. ⚠️ <strong>Biology and chemistry researchers remain limited to Opus-class models.</strong> (Source: anthropic.com — primary.) ✅</li>
+      <li><strong>EU AI Act — standing carry.</strong> <strong>Article 50</strong> transparency obligations enforceable since <strong>August 2, 2026</strong>, penalties up to <strong>€15 million or 3% of worldwide annual turnover</strong>; <strong>Annex III</strong> high-risk obligations at <strong>2 December 2027</strong>; <strong>Annex I</strong> embedded-product obligations at <strong>2 August 2028</strong>. ⚠️ Compliance awareness, not legal advice.</li>
+      </ul>
+      <p><strong>What This Means for You.</strong> <strong>Put Friday's changelog and the Check Point disclosure side by side and you have the clearest statement yet of where agent risk actually lives — and it is not where most internal conversations put it.</strong> Both documents describe the same class of failure: <strong>not a model that says the wrong thing, but a framework that lets untrusted input reach a place the permission check already approved.</strong> A symlink swapped after the check. A plugin path that escapes its directory. A deserializer that runs. <strong>None of these is an AI problem; all of them are application-security problems underneath an AI product</strong>, which is why the mitigation is version control and configuration review rather than prompt engineering. <strong>The practical addition to any AI implementation policy is a two-line requirement</strong>: pin a minimum version for every agent runtime in scope, and require that the vendor publish a changelog a security reviewer can read. Both are trivially checkable and both would have caught the items above. <strong>The second observation belongs to smaller organizations in particular — foundations, nonprofits and mid-market teams with a lean IT function.</strong> AgentZ and Gemini Enterprise Agent Platform are early entries in a category selling <strong>audit traces, role-based access and air-gapped deployment</strong> — which is to say, selling the governance layer as a product. <strong>For an organization without the staff to build that layer, buying it may be more defensible than building it</strong>, provided the control requirements are defined first and the vendor is chosen second. ⚠️ <strong>Neither platform has independent evaluation behind it, and neither should be adopted on the strength of a press release.</strong></p>
+      <hr />
+      <h2 id="4-overnight-daily-release-monitor">4. Overnight / Daily Release Monitor</h2>
+      <p>Covering roughly August 28 – August 29 since the prior briefing. <strong>Friday's US closes are printed as closes and reconcile against Thursday. Vendor items are dated primary records unless flagged.</strong></p>
+      <ul>
+      <li><strong>Claude Code v2.1.251 shipped August 28 with 71 entries</strong> — the largest release this series has counted, exceeding Thursday's 49 — and is dominated by security, permission and settings-approval changes. ✅ <strong>Verified directly against the changelog this run.</strong></li>
+      <li><strong>Anthropic published nothing on August 28 or 29.</strong> The newsroom index still ends at <strong>August 27</strong> (<em>Previewing the Model Hardware Standard</em>, <em>Expanding our support for scientists</em>), preceded by <strong>August 25</strong> (<em>wellbeing research grants</em>). ✅ <strong>Verified directly against the newsroom index this run.</strong></li>
+      <li><strong>Claude platform status: a resolved incident on August 28.</strong> <strong>Elevated errors on Claude Code and Claude Cowork</strong>, attributed to <strong>an upstream cloud provider</strong> affecting Cowork and Claude Code on the web; <strong>a mitigation was applied at 20:21 UTC on August 28</strong> and the incident was <strong>resolved by end of day</strong>. Some sessions failed to start or disconnected mid-task and could be retried. <strong>No incidents reported on August 29.</strong> (Source: status-aggregator coverage of the official page, retrieved August 29, 2026 — secondary.) ⚠️ <strong>The primary incident feed could not be retrieved directly in this run; this is an aggregator restatement, and the exact incident-open timestamp is therefore not stated.</strong> It ends the clean stretch that began after the August 24 incident.</li>
+      <li><strong>No new Model Context Protocol publication identified.</strong> The most recent post remains <strong>The New MCP Roadmap, August 22, 2026</strong>. 🔶 ⚠️ <strong>Not verified at source in this run — the MCP blog host is outside this environment's egress allowlist, and the finding rests on search-result restatement. Re-verify next run.</strong></li>
+      <li><strong>Friday's US closes.</strong> <strong>S&amp;P 500 7,711.76 (−0.25%)</strong>, <strong>Nasdaq Composite 26,402.42 (−0.52%)</strong>, <strong>Dow 53,559.99 (−9.45 points, −0.02%)</strong> (press). ✅ <strong>Reconciled against Thursday to the decimal.</strong> <strong>All three finished the week higher.</strong> ⚠️ <strong>No Russell 2000 close verified; none printed.</strong></li>
+      <li><strong>Jackson Hole concluded.</strong> <strong>Fed Chair Kevin Warsh's first keynote was delivered Friday, August 28</strong>: inflation still too high, rates may have to rise, no forward guidance, a call for a <strong>"quieter" central bank</strong>. ✅ Next <strong>FOMC: September 15–16.</strong></li>
+      <li><strong>One tracked model release dated August 28: Tencent Hy4 preview.</strong> 🔶 <strong>Tracker-reported, not confirmed at source.</strong> The prior tracked releases remain <strong>GLM-5.3-Flash and Qwen3.8-Flash-Next, both August 26.</strong></li>
+      <li><strong>Three dated agent-layer funding rounds August 26–27</strong>: <strong>Instinct $250M Series B at $2.5B</strong>, <strong>Agentrys $24.5M pre-seed + seed</strong>, <strong>Breedr $27M Series B</strong>. ⚠️ Tracker-sourced.</li>
+      <li><strong>Colorado — standing carry.</strong> <strong>Senate Bill 26-189</strong>, signed <strong>May 14, 2026</strong>, effective <strong>January 1, 2027</strong>: regulated object becomes <strong>"automated decision making technology" in "consequential decisions"</strong>; <strong>mandatory risk-management programs and annual impact assessments eliminated</strong>; <strong>advance notice, post-decision disclosures and consumer rights</strong> required; enforcement <strong>centralised with the Colorado Attorney General</strong>. ⚠️ Compliance awareness, not legal advice.</li>
+      <li><strong>Agent payments — standing carry.</strong> <strong>AI AGENT Act (S.5051)</strong>, introduced <strong>July 21, 2026</strong>, would define a <strong>"custodial user agent"</strong> with transparent, documented, limited and revocable authority and direct <strong>NIST</strong> to develop verification standards. ⚠️ <strong>Introduced, not enacted.</strong></li>
+      </ul>
+      <p><strong>What This Means for You.</strong> <strong>Two of this run's findings are flagged as unverified-at-source rather than confirmed, and that is worth stating plainly rather than hiding in a symbol.</strong> The MCP "no new publication" finding and the Claude status finding both rest on restatement this morning because the underlying hosts were not retrievable from this environment. <strong>Yesterday's edition verified the MCP post index directly and said so; today's cannot, and the honest move is to downgrade the confidence rather than repeat yesterday's certainty.</strong> That is also the process lesson for any organization running its own vendor monitoring: <strong>a finding is only as current as the last time you touched the source, and an inherited "no change" is not the same as a checked one.</strong> The operational note is smaller but more immediate. <strong>The August 28 incident hit Claude Code and Claude Cowork specifically, and the cause was an upstream cloud provider rather than the model vendor itself.</strong> For anyone drafting availability expectations into an internal plan, that is the useful shape of the answer: <strong>the dependency chain under an agent platform is longer than the vendor's own status page implies</strong>, and a continuity plan that names only the model vendor is incomplete.</p>
+      <hr />
+      <h2 id="5-ai-trading-trends">5. AI Trading Trends</h2>
+      <p><em>Market intelligence for situational awareness — not investment advice. No buy/sell/hold recommendations, price targets, or return forecasts. </em><em>Analyst ratings and price targets were retrieved in this run and are deliberately not printed.</em><em> Index figures are Friday, August 28 closes. Every figure carries a source and a confidence note.</em></p>
+      <h3 id="5a-ipos">5a. IPOs</h3>
+      <p>⚠️ <strong>The August finding is now final for the month: no AI IPO has been confirmed as priced in the United States in August 2026.</strong> The largest confirmed US deal of the month remains <strong>Lyntris Inc. (LYNX)</strong>, a defence contractor that priced <strong>August 19 at $17.50</strong> in a downsized offering raising about <strong>$298 million</strong>. 🔶</p>
+      <p><strong>Anthropic — the coverage has moved a long way ahead of the disclosure, and the gap is now the story.</strong> What multiple secondary sources this week agree on: a <strong>confidential SEC filing on June 1, 2026</strong>; a <strong>public S-1 expected in summer or early fall</strong>; a <strong>target October 2026 Nasdaq listing</strong>; <strong>Goldman Sachs, JPMorgan and Morgan Stanley</strong> leading; an offering <strong>reported at more than $60 billion</strong>; and <strong>investors targeting a $2 trillion valuation</strong> against the <strong>$965 billion May 2026 Series H-1 post-money</strong> (Sources: IPO trackers and financial-media summaries retrieved August 29, 2026 — secondary throughout). 🔶</p>
+      <p>⚠️ <strong>Three cautions, and they are the reason this entry exists.</strong> First, <strong>no public S-1 is available as of August 29</strong> — this briefing verified the Anthropic newsroom directly this run and its most recent posts, dated August 27, concern laboratory hardware and science seats, not a listing. ✅ <strong>The June 1, 2026 Rule 135 notice remains the only primary document</strong>, and it stated explicitly that <strong>the number of shares and the proposed price had not been determined</strong> and that the offering <strong>depends on market conditions</strong>. Second, <strong>at least one aggregator is now printing a ticker — "NASDAQ: ANTP" — alongside the company name.</strong> 🔶 ⚠️ <strong>No exchange listing, no registration statement and no company communication confirms that symbol, and it should not be repeated as fact.</strong> Third, <strong>the $2 trillion figure is described in the sourcing as an investor target, not a valuation</strong>, and the difference between those two words is roughly a trillion dollars.</p>
+      <p><strong>The 2026 AI listings.</strong> ⚠️ <strong>The prices in the right-hand column were retrieved on August 25 and have not been refreshed since — they are now four sessions stale and are printed only as the last verified marks.</strong></p>
+      <div class="table-wrap"><table>
+      <thead>
+      <tr>
+      <th>Listing</th>
+      <th>Date</th>
+      <th>IPO price</th>
+      <th>Price (retrieved Aug 25)</th>
+      <th>vs. issue</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td><strong>Cerebras Systems (CBRS)</strong></td>
+      <td>May 14, 2026</td>
+      <td>$185.00</td>
+      <td>$185.43</td>
+      <td><strong>−0.4%</strong></td>
+      </tr>
+      <tr>
+      <td><strong>Quantinuum (QNT)</strong></td>
+      <td>June 4, 2026</td>
+      <td>$60.00</td>
+      <td>$52.07</td>
+      <td><strong>−13.2%</strong></td>
+      </tr>
+      <tr>
+      <td><strong>SpaceX (SPCX)</strong></td>
+      <td>June 12, 2026</td>
+      <td>$135.00</td>
+      <td>$135.00</td>
+      <td><strong>flat</strong></td>
+      </tr>
+      <tr>
+      <td><strong>SK hynix (SKHY)</strong></td>
+      <td>July 10, 2026</td>
+      <td>$149.00</td>
+      <td>$155.37</td>
+      <td><strong>+5.0%</strong></td>
+      </tr>
+      </tbody>
+      </table></div>
+      <p>(Source: recent-IPO records compiled from SEC filings, retrieved August 25, 2026.) 🔶 ⚠️ <strong>No refresh was available this run. The one intervening print this series carried — SpaceX at $140.17 in early trading on August 27 — was a session print, not a close, and is not restated here as a mark.</strong></p>
+      <ul>
+      <li><strong>OpenAI — reportedly deferring.</strong> Coverage through August has the company <strong>prioritising a roughly $1 trillion valuation and financial stability with a 2027 debut</strong>. ⚠️ <strong>Secondary throughout; the reliable facts remain negative ones.</strong> The <strong>"Jalapeño"</strong> custom-silicon account carried Thursday <strong>remains an unread secondary source with no vendor confirmation</strong> and is not upgraded. 🔶</li>
+      </ul>
+      <h3 id="5b-top-5-traded-ai-related-tickers">5b. Top 5 traded AI-related tickers</h3>
+      <p>⚠️ <strong>This run retrieved no verified most-active-by-volume list for August 28, and none is asserted.</strong> The five below are the AI-exposed names this series tracks, ordered by AI relevance, each carrying the most recent signal that could be attributed to a source. 🔶 <strong>Several of those signals are stale by one to three sessions and are labelled as such — a stale mark is printed as a stale mark, not restated as Friday's close.</strong></p>
+      <div class="table-wrap"><table>
+      <thead>
+      <tr>
+      <th>#</th>
+      <th>Ticker</th>
+      <th>Company</th>
+      <th>Why it's an AI-trading bellwether</th>
+      <th>Latest verifiable signal</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>1</td>
+      <td>NVDA</td>
+      <td>Nvidia</td>
+      <td>The volume anchor of the AI trade</td>
+      <td>⚠️ <strong>No verified August 28 close retrieved and none printed.</strong> Last carried mark: <strong>approximately $227.97–$227.98 on August 27</strong> (press, single-source). 🔶 Underlying: <strong>Q2 FY2027 revenue $96,221 million, Data Center $89.0 billion, Q3 guided to $108.0 billion ± 2%</strong> (SEC 8-K — primary) ✅</td>
+      </tr>
+      <tr>
+      <td>2</td>
+      <td>CRM</td>
+      <td>Salesforce</td>
+      <td>The most AI-exposed large-cap software name following Claudeforce</td>
+      <td>⚠️ <strong>No verified close retrieved for August 27 or 28.</strong> Last carried mark: <strong>+20.1% at midday on August 27</strong> on a Q2 beat plus the Anthropic partnership (press). 🔶 <strong>A midday print, not a close</strong></td>
+      </tr>
+      <tr>
+      <td>3</td>
+      <td>MU</td>
+      <td>Micron</td>
+      <td>The AI-memory read-through</td>
+      <td><strong>Reported at $919.67, down 1.68%</strong>, in a summary retrieved August 29 (press, single-source). ⚠️ <strong>The retrieved text does not state the session date, so this is printed as a recent mark of unstated date, not as Friday's close.</strong> 🔶 Same summary: <strong>shares up about 59% in 2026</strong></td>
+      </tr>
+      <tr>
+      <td>4</td>
+      <td>SMCI</td>
+      <td>Super Micro Computer</td>
+      <td>AI server assembly — directly exposed to both the reported 15% server price increase and the proposed server tariffs</td>
+      <td><strong>Closed August 25 at $38.46, up 9.35%</strong> (press, single-source). 🔶 ⚠️ <strong>Three sessions stale; no August 27 or 28 figure retrieved</strong></td>
+      </tr>
+      <tr>
+      <td>5</td>
+      <td>AMD</td>
+      <td>Advanced Micro Devices</td>
+      <td>The second accelerator vendor, and the cleanest read on whether the AI trade is broadening past one name</td>
+      <td><strong>Closed August 25 at $479.18, up 4.91%</strong>, attributed to an analyst upgrade (press, single-source). 🔶 ⚠️ <strong>Three sessions stale. The upgrade's rating and price target were retrieved and are deliberately not printed</strong></td>
+      </tr>
+      </tbody>
+      </table></div>
+      <p><em>(PLTR drops out of the table this run rather than carrying an August 27 print into a Saturday briefing without a refresh. Last carried mark, not restated as current: </em><em>$185.82 on August 27</em><em> — press, single-source.)</em></p>
+      <p><strong>Week ahead (August 29 – September 5) — calendar, not forecast.</strong> <strong>Jackson Hole concluded August 29 following Chair Warsh's Friday keynote.</strong> Next <strong>FOMC: September 15–16.</strong> <strong>Salesforce in Claude open beta is expected in September.</strong> <strong>Semiconductor tariff proposals remain under consideration with no adopted framework</strong>, and Commerce is reported to be weighing whether January's data-centre exemptions carry over. <strong>Anthropic's public S-1, if the reported October timetable holds, would be expected in this window or shortly after</strong> — ⚠️ <strong>reported timetable, not a filed date.</strong> EU AI Act <strong>Article 50 obligations have been enforceable since August 2, 2026</strong>, with <strong>Annex III</strong> at <strong>December 2, 2027</strong> and <strong>Annex I</strong> at <strong>August 2, 2028</strong>; <strong>Colorado's revised framework takes effect January 1, 2027.</strong> (Sources: published economic calendars; Federal Reserve; European Commission; Salesforce; IPO trackers.)</p>
+      <p><strong>What This Means for You.</strong> <strong>The transferable observation this week is about cost assumptions, and it now has three named sources pushing the same direction.</strong> <strong>Server system prices are reportedly rising more than 15% on early-2027 shipments</strong> 🔶; <strong>proposed semiconductor tariffs may extend to data-centre servers with January's exemptions possibly not carrying over</strong> ⚠️; and <strong>the Fed Chair used his first Jackson Hole keynote to signal that rates may rise rather than fall.</strong> ⚠️ <strong>None of the three is settled</strong>, and none should be written into a budget as a figure. <strong>But the assumption most three-year AI budgets still carry — that infrastructure and per-token costs fall automatically every year — now has three dated reasons to be stated as an assumption rather than a fact</strong>, and stating it that way is the entire recommendation. <strong>The second point is about diligence, and it applies to how any organization talks about its AI vendors.</strong> A ticker symbol for an unlisted company is circulating in AI-adjacent financial media this week, attached to a valuation described as an investor target. <strong>The discipline that keeps a briefing like this useful — print the primary document, name the absence, refuse the unconfirmed number — is the same discipline you need when a board asks what an AI vendor is worth.</strong> ⚠️ <strong>This briefing prints no ticker for Anthropic and no valuation it cannot attribute to a filing.</strong> Market intelligence only, not investment advice.</p>
+      <hr />
+      <h2 id="sources">Sources</h2>
+      <ul>
+      <li>Claude Code changelog, entries v2.1.251 (August 28, 2026) and v2.1.250 (August 28, 2026), retrieved August 29, 2026 (primary). <a href="https://code.claude.com/docs/en/changelog" target="_blank" rel="noopener">https://code.claude.com/docs/en/changelog</a></li>
+      <li>Anthropic Newsroom index, retrieved August 29, 2026, confirming August 27 as the most recent publication date (primary). <a href="https://www.anthropic.com/news" target="_blank" rel="noopener">https://www.anthropic.com/news</a></li>
+      <li>Anthropic, "Previewing the Model Hardware Standard," August 27, 2026 (primary). <a href="https://www.anthropic.com/news/model-hardware-standard-research-preview" target="_blank" rel="noopener">https://www.anthropic.com/news/model-hardware-standard-research-preview</a></li>
+      <li>Anthropic, "Expanding our support for scientists," August 27, 2026 (primary). <a href="https://www.anthropic.com/news/expanding-support-for-scientists" target="_blank" rel="noopener">https://www.anthropic.com/news/expanding-support-for-scientists</a></li>
+      <li>Salesforce, "Salesforce and Anthropic Announce Claudeforce: The #1 AI Meets the #1 AI CRM," August 26, 2026 (primary). <a href="https://www.salesforce.com/news/press-releases/2026/08/26/salesforce-and-anthropic-announce-claudeforce/" target="_blank" rel="noopener">https://www.salesforce.com/news/press-releases/2026/08/26/salesforce-and-anthropic-announce-claudeforce/</a></li>
+      <li>NVIDIA, "NVIDIA Announces Financial Results for Second Quarter Fiscal 2027," Form 8-K exhibit, August 26, 2026 (primary, SEC EDGAR). <a href="https://www.sec.gov/Archives/edgar/data/1045810/000104581026000073/q2fy27pr.htm" target="_blank" rel="noopener">https://www.sec.gov/Archives/edgar/data/1045810/000104581026000073/q2fy27pr.htm</a></li>
+      <li>Yahoo Finance, "Stock market today: Dow, S&amp;P 500, Nasdaq moderate as markets digest Warsh's Jackson Hole speech," August 28, 2026 (press). <a href="https://finance.yahoo.com/markets/live/stock-market-today-friday-august-28-dow-sp-500-nasdaq-dip-fed-warsh-jackson-hole-speech-081514091.html" target="_blank" rel="noopener">https://finance.yahoo.com/markets/live/stock-market-today-friday-august-28-dow-sp-500-nasdaq-dip-fed-warsh-jackson-hole-speech-081514091.html</a></li>
+      <li>CNBC, "Stock market news for Aug. 28, 2026," August 28, 2026 (press). <a href="https://www.cnbc.com/2026/08/27/stock-market-today-live-updates.html" target="_blank" rel="noopener">https://www.cnbc.com/2026/08/27/stock-market-today-live-updates.html</a></li>
+      <li>CNBC, "Fed Chairman Warsh warns on inflation at Jackson Hole," August 28, 2026 (press). <a href="https://www.cnbc.com/2026/08/28/kevin-warsh-jackson-hole-federal-reserve-inflation.html" target="_blank" rel="noopener">https://www.cnbc.com/2026/08/28/kevin-warsh-jackson-hole-federal-reserve-inflation.html</a></li>
+      <li>The Washington Post, "Fed chair Warsh, concerned about inflation, says bank 'has more work to do,'" August 28, 2026 (press). <a href="https://www.washingtonpost.com/business/2026/08/28/fed-chair-warsh-speaks-jackson-hole-conference/" target="_blank" rel="noopener">https://www.washingtonpost.com/business/2026/08/28/fed-chair-warsh-speaks-jackson-hole-conference/</a></li>
+      <li>Forbes, "Fed Chair Kevin Warsh Says Inflation Still Too High In First Jackson Hole Speech," August 28, 2026 (press). <a href="https://www.forbes.com/sites/tylerroush/2026/08/28/fed-chair-kevin-warsh-says-inflation-still-too-high-in-first-jackson-hole-speech/" target="_blank" rel="noopener">https://www.forbes.com/sites/tylerroush/2026/08/28/fed-chair-kevin-warsh-says-inflation-still-too-high-in-first-jackson-hole-speech/</a></li>
+      <li>CNBC, "U.S. considers fresh round of tariffs on semiconductors, report says," August 27, 2026 (press). <a href="https://www.cnbc.com/2026/08/27/trump-semiconductor-tech-tariffs.html" target="_blank" rel="noopener">https://www.cnbc.com/2026/08/27/trump-semiconductor-tech-tariffs.html</a></li>
+      <li>Data Center Dynamics, "Trump admin considers more semiconductor tariffs, could include data center servers," August 2026 (press). <a href="https://www.datacenterdynamics.com/en/news/trump-admin-considers-more-semiconductor-tariffs-and-possibly-data-center-servers/" target="_blank" rel="noopener">https://www.datacenterdynamics.com/en/news/trump-admin-considers-more-semiconductor-tariffs-and-possibly-data-center-servers/</a></li>
+      <li>The Register, "Prompt injection isn't the bug, AI agent frameworks are," August 5, 2026 (press — the Check Point 11-vulnerability disclosure). <a href="https://www.theregister.com/security/2026/08/05/prompt_injection_isnt_the_bug/" target="_blank" rel="noopener">https://www.theregister.com/security/2026/08/05/prompt_injection_isnt_the_bug/</a></li>
+      <li>AccuKnox, "AccuKnox Launches AgentZ to Help Enterprises Build, Run, and Govern AI Agents at Scale," GlobeNewswire, August 27, 2026 (vendor-authored primary). <a href="https://www.globenewswire.com/news-release/2026/08/27/3351759/0/en/accuknox-launches-agentz-to-help-enterprises-build-run-and-govern-ai-agents-at-scale.html" target="_blank" rel="noopener">https://www.globenewswire.com/news-release/2026/08/27/3351759/0/en/accuknox-launches-agentz-to-help-enterprises-build-run-and-govern-ai-agents-at-scale.html</a></li>
+      <li>Tech Startups, "Startup Funding News Today, August 27, 2026: Instinct, Breedr, Agentrys &amp; More," August 27, 2026 (press). <a href="https://techstartups.com/2026/08/27/startup-funding-news-today-august-27-2026-instinct-breedr-agentrys-more/" target="_blank" rel="noopener">https://techstartups.com/2026/08/27/startup-funding-news-today-august-27-2026-instinct-breedr-agentrys-more/</a></li>
+      <li>Model Context Protocol Blog, "The New MCP Roadmap," August 22, 2026 (primary — not re-verified at source in this run). <a href="https://blog.modelcontextprotocol.io/posts/mcp-roadmap/" target="_blank" rel="noopener">https://blog.modelcontextprotocol.io/posts/mcp-roadmap/</a></li>
+      <li>Model Context Protocol Blog, "The 2026-07-28 Specification," July 28, 2026 (primary). <a href="https://blog.modelcontextprotocol.io/posts/2026-07-28/" target="_blank" rel="noopener">https://blog.modelcontextprotocol.io/posts/2026-07-28/</a></li>
+      <li>StatusGator / Claude Status coverage, retrieved August 29, 2026 (secondary — the primary incident feed was not retrievable in this run). <a href="https://statusgator.com/services/claude" target="_blank" rel="noopener">https://statusgator.com/services/claude</a></li>
+      <li>Caylent 2026 Enterprise Readiness survey and CrewAI 2026 State of Agentic AI, as summarised in industry aggregations retrieved August 29, 2026 (secondary, vendor-commissioned). <a href="https://www.prnewswire.com/news-releases/98-of-enterprise-leaders-would-let-ai-agents-run-production-under-the-right-conditions-caylent-survey-reveals-302844574.html" target="_blank" rel="noopener">https://www.prnewswire.com/news-releases/98-of-enterprise-leaders-would-let-ai-agents-run-production-under-the-right-conditions-caylent-survey-reveals-302844574.html</a></li>
+      <li>StartupHub.ai, "Best AI chip stocks to watch: SMCI and AMD surge ahead of Nvidia earnings, August 25, 2026" (press, single-source — used only for the flagged stale SMCI and AMD marks). <a href="https://www.startuphub.ai/ai-news/ai-stocks-daily/2026/ai-stocks-2026-08-25" target="_blank" rel="noopener">https://www.startuphub.ai/ai-news/ai-stocks-daily/2026/ai-stocks-2026-08-25</a></li>
+      <li>Yahoo Finance, "Stock Market News for Aug 28, 2026" (press — used for the flagged, undated Micron mark). <a href="https://finance.yahoo.com/markets/stocks/articles/stock-market-news-aug-28-133400922.html" target="_blank" rel="noopener">https://finance.yahoo.com/markets/stocks/articles/stock-market-news-aug-28-133400922.html</a></li>
+      </ul>
+    </article>
+
+    <section class="cta-band" id="contact" aria-labelledby="cta-heading">
+      <h2 id="cta-heading">From AI curiosity to AI capability</h2>
+      <p>This briefing is part of the field research behind our AI Enablement service &mdash; a curated, white-glove Claude Cowork implementation tailored to your organization&rsquo;s workflow.</p>
+      <a class="btn" href="https://calendly.com/mark-malaniru/30min" target="_blank" rel="noopener">Book a discovery call</a>
+    </section>
+    <!-- mal-ai-disclaimer:v1 -->
+  <aside class="mal-ai-disclaimer" role="note" aria-label="AI transparency notice" style="max-width:760px;margin:2.5rem auto 0;padding:1rem 1.25rem;border:1px solid #d9c3a5;border-left:4px solid #C07830;border-radius:6px;background:#faf6f0;color:#5c5347;font-size:0.82rem;line-height:1.6;box-sizing:border-box;">
+    <strong style="display:block;color:#8a5a1e;font-size:0.78rem;letter-spacing:.04em;text-transform:uppercase;margin-bottom:.35rem;">AI Transparency Notice</strong>
+    This article was produced through Malaniru&rsquo;s guided-research process: generated with the assistance of AI and reviewed by a person before publication (human-in-the-loop). In line with EU AI Act transparency obligations, we disclose that AI systems were used to create this content. It is provided for general information only, may contain inaccuracies, and is not professional advice &mdash; verify before relying on it.
+  </aside>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Malaniru Inc, LLC &middot; Lafayette, Colorado &middot; AI Enablement</p>
+    <p><a href="daily-intelligence-briefings.html">&larr; Back to Daily Intelligence Briefings</a> &middot; <a href="index.html">AI Enablement</a></p>
+      <nav class="mal-footernav" data-mal-footernav aria-label="Site" style="margin-top:0.7rem;font-size:0.82rem;line-height:1.9;">
+      <a href="about.html" style="color:#C07830;font-weight:700;text-decoration:none;">About</a> &middot;
+      <a href="pricing.html" style="color:#C07830;font-weight:700;text-decoration:none;">Pricing</a> &middot;
+      <a href="index.html" style="color:#C07830;font-weight:700;text-decoration:none;">AI Enablement</a>
+     &middot;
+      <a href="privacy-policy.html" style="color:#C07830;font-weight:700;text-decoration:none;">Privacy</a>
+    </nav>
+  </footer>
+</body>
+</html>
