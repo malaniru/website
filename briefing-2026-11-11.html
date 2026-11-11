@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<!--
+  Malaniru - Daily Intelligence Briefing (branded HTML)
+  Built by: publish_briefing_page.py - Date: 2026-11-11
+  Source:   Projects/Malaniru_Marketing_Site/Staging/20261111-daily-intelligence-briefing.md
+  FIDELITY: Body rendered VERBATIM from the source markdown. No copy edits.
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daily Intelligence Briefing — Wednesday, November 11, 2026 - Malaniru</title>
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.malaniru.com/briefing-2026-11-11">
+  <meta name="description" content="Wednesday edition: Anthropic launched the roadshow for its IPO on November 10, offering 825 million Class A shares at an expected $70 to $78 each on the Nasdaq as ANT. Press reports put the fully diluted valuation at up to $1.404 trillion and trading near November 19. Nvidia fell for a second session after its board opened an independent investigation; IBM and Microsoft announced an agent platform and Google Cloud previewed Gemini for healthcare. Every figure carries a source and a confidence tag. This is market intelligence, not investment advice.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --navy:#0F1A2E;--navy-mid:#2A3F63;--copper:#C07830;--gold:#D4A853;
+      --off-white:#F4F1EC;--light-gray:#E8E6E1;--mid-gray:#8A8A96;--dark-text:#1C1C1C;
+      --font:"Inter","Helvetica Neue",Arial,sans-serif;
+    }
+    *{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:var(--font);background:var(--off-white);color:var(--dark-text);line-height:1.65;font-size:16px;-webkit-font-smoothing:antialiased;}
+    .skip-link{position:absolute;left:-999px;top:0;background:var(--gold);color:var(--navy);padding:10px 16px;font-weight:700;z-index:10;}
+    .skip-link:focus{left:8px;top:8px;}
+    a{color:var(--copper);}
+    /* Header */
+    header{background: linear-gradient(160deg, rgba(15,26,46,0.72) 0%, rgba(10,18,33,0.82) 100%), url('StockCake-Cosmic_Web_Complexity-1361288-standard-rot90ccw.jpg'); background-size: auto, 100% 100%; background-repeat: no-repeat, no-repeat; background-position: center, center;color:var(--off-white);padding:48px 24px 52px;position:relative;overflow:hidden;}
+    header::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 85% 12%,rgba(192,120,48,0.20) 0%,rgba(15,26,46,0) 55%);pointer-events:none;}
+    .header-inner{max-width:760px;margin:0 auto;position:relative;z-index:1;}
+    .wordmark{font-weight:800;font-size:1.25rem;letter-spacing:0.02em;margin-bottom:30px;}
+    .wordmark .dot{color:var(--copper);}
+    .wordmark a{color:var(--off-white);text-decoration:none;transition:opacity .18s ease;}
+    .wordmark a:hover,.wordmark a:focus-visible{opacity:.85;outline:none;}
+    .eyebrow{display:inline-block;font-size:0.72rem;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;}
+    header h1{font-weight:800;font-size:clamp(1.8rem,4.6vw,2.6rem);line-height:1.14;letter-spacing:-0.01em;margin-bottom:16px;}
+    .byline{font-size:0.9rem;color:var(--light-gray);letter-spacing:0.01em;}
+    .byline .sep{color:var(--copper);margin:0 8px;}
+    .lede{font-size:1.08rem;color:var(--light-gray);max-width:66ch;margin-top:18px;}
+    .backlink{display:inline-block;margin-top:26px;color:var(--gold);font-weight:600;font-size:0.9rem;text-decoration:none;border-bottom:1px solid rgba(212,168,83,0.4);}
+    .backlink:hover,.backlink:focus-visible{border-bottom-color:var(--gold);outline:none;}
+    /* Article */
+    main{max-width:760px;margin:0 auto;padding:48px 24px 8px;}
+    .disclaimer{background:#fff;border:1px solid var(--light-gray);border-left:4px solid var(--copper);border-radius:8px;padding:14px 18px;font-size:0.9rem;color:var(--navy-mid);margin-bottom:34px;}
+    article{font-size:1.05rem;}
+    article h2{font-weight:800;font-size:1.5rem;color:var(--navy);line-height:1.22;letter-spacing:-0.01em;margin:42px 0 14px;}
+    article h3{font-weight:700;font-size:1.18rem;color:var(--navy-mid);line-height:1.25;margin:30px 0 10px;}
+    article h2 + p, article h3 + p{margin-top:0;}
+    article p{margin:0 0 18px;color:var(--dark-text);}
+    article ul,article ol{margin:0 0 18px;padding-left:24px;}
+    article li{margin-bottom:8px;}
+    article strong{font-weight:700;color:var(--navy);}
+    article em{font-style:italic;}
+    article a{color:var(--copper);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(192,120,48,0.35);transition:border-color .18s ease;}
+    article a:hover,article a:focus-visible{border-bottom-color:var(--copper);outline:none;}
+    article hr{border:none;border-top:1px solid var(--light-gray);margin:34px 0;}
+    article h2#sources, article h2#references{border-top:1px solid var(--light-gray);padding-top:30px;font-size:1.2rem;color:var(--navy-mid);}
+    /* sources list smaller */
+    article h2[id^="sources"] ~ ul li, article h3[id^="sources"] ~ ul li{font-size:0.95rem;color:var(--navy-mid);}
+    /* tables */
+    article table{width:100%;border-collapse:collapse;margin:0 0 24px;font-size:0.95rem;}
+    article th,article td{border:1px solid var(--light-gray);padding:9px 12px;text-align:left;vertical-align:top;}
+    article thead th{background:var(--navy);color:var(--off-white);font-weight:700;}
+    article tbody tr:nth-child(even){background:#fff;}
+    article .table-wrap{overflow-x:auto;margin:0 0 24px;}
+    article .table-wrap table{margin:0;}
+    /* CTA */
+    .cta-band{background:var(--navy);color:var(--off-white);border-radius:12px;padding:42px 32px;text-align:center;margin:48px 0 8px;}
+    .cta-band h2{font-weight:800;font-size:clamp(1.4rem,3.4vw,1.9rem);margin-bottom:12px;letter-spacing:-0.01em;color:var(--off-white);}
+    .cta-band p{color:var(--light-gray);max-width:52ch;margin:0 auto 24px;}
+    .cta-band .btn{display:inline-block;background:var(--copper);color:#fff;font-weight:700;padding:13px 28px;border-radius:8px;text-decoration:none;transition:background .18s ease;}
+    .cta-band .btn:hover,.cta-band .btn:focus-visible{background:var(--gold);color:var(--navy);outline:none;}
+    /* Footer */
+    footer{max-width:760px;margin:16px auto 0;padding:24px;font-size:0.82rem;color:var(--mid-gray);border-top:1px solid var(--light-gray);}
+    footer p+p{margin-top:6px;}
+    footer a{color:var(--mid-gray);text-decoration:underline;}
+    @media (prefers-reduced-motion:reduce){*{transition:none!important;}}
+
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header>
+    <div class="header-inner">
+      <div class="wordmark"><a href="index.html">Malaniru<span class="dot">.</span></a></div>
+      <span class="eyebrow">AI Enablement &middot; Daily Intelligence Briefing</span>
+      <h1>Daily Intelligence Briefing — Wednesday, November 11, 2026</h1>
+      <p class="byline">By Mark Andrew Harris<span class="sep">&middot;</span>November 11, 2026</p>
+      <p class="lede">Wednesday edition: Anthropic launched the roadshow for its IPO on November 10, offering 825 million Class A shares at an expected $70 to $78 each on the Nasdaq as ANT. Press reports put the fully diluted valuation at up to $1.404 trillion and trading near November 19. Nvidia fell for a second session after its board opened an independent investigation; IBM and Microsoft announced an agent platform and Google Cloud previewed Gemini for healthcare. Every figure carries a source and a confidence tag. This is market intelligence, not investment advice.</p>
+      <a class="backlink" href="daily-intelligence-briefings.html">&larr; All daily intelligence briefings</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <article>
+      <p><strong>[THOUGHT LEADERSHIP] [DRAFT — Pending Copy Review]</strong></p>
+      <h2 id="executive-summary">Executive Summary</h2>
+      <p><strong>Anthropic launched the roadshow for its proposed IPO on Tuesday, November 10, offering 825,000,000 Class A shares at an expected $70.00 to $78.00 per share on the Nasdaq Global Select Market under the symbol "ANT."</strong> ✅ (Anthropic, roadshow announcement, November 10; company-reported; the registration statement is not yet effective). <strong>TechCrunch and Fortune, reading the amended filing, put the fully diluted valuation at up to $1.404 trillion at the top of the range and the October revenue run rate at about $81 billion; TechCrunch, citing CNBC, says trading could start close to November 19</strong> 🔶 (TechCrunch and Fortune, November 10; we did not read the filing). <strong>Nvidia fell for a second straight session on November 10, by about 5.5%, after its board opened an independent investigation into reports that its CEO was the target of a foreign intelligence effort</strong> ✅ (Nvidia Board statement, November 8; The Motley Fool, November 10). <strong>On the product side, IBM and Microsoft announced an enterprise agent platform and Google Cloud put an agent for hospitals and insurers into US preview</strong> ✅ (Microsoft Source, November 10; The Next Web, November 10). ⚠️ <strong>Anthropic's offering terms can still change before pricing, and no final price exists yet.</strong></p>
+      <hr />
+      <h2 id="1-ai-market-trends">1. AI Market Trends</h2>
+      <p><strong>Anthropic's offering terms are now public.</strong> ✅ <strong>Anthropic's November 10 announcement says 825,000,000 shares are offered, 801,351,354 by Anthropic and 23,648,646 by existing stockholders; Anthropic will not receive proceeds from the selling stockholders; it expects to grant the underwriters a 30-day option on up to 123,750,000 more shares; and the price is expected to be between $70.00 and $78.00. Goldman Sachs &amp; Co. LLC and Morgan Stanley &amp; Co. LLC are listed as prospectus contacts</strong> (Anthropic, November 10; company-reported). ✅ <strong>At those terms the gross offering is $57.75 billion to $64.35 billion</strong> (TechCrunch, November 10; arithmetic matches 825 million shares times the range). ✅ <strong>Renaissance Capital's headline describes a "$61 billion IPO, targeting a $1.2 trillion market cap," with about 3% of shares secondary</strong> (Renaissance Capital, November 10; headline and summary only). ⚠️ <strong>The $1.2 trillion and $1.404 trillion figures use different bases (market cap versus fully diluted at the top of the range); do not mix them. This also supersedes the $75 billion raise estimate carried in earlier editions.</strong></p>
+      <p><strong>What the amended filing reportedly shows.</strong> 🔶 <strong>TechCrunch reports an October run-rate revenue of $81 billion, about $10 billion more than at the end of September; third-quarter revenue of $17 billion; nine-month revenue of $33.2 billion; a nine-month net loss of $104 billion; compute and infrastructure commitments of $900.9 billion; and nearly $132 billion in cash and short-term investments</strong> (TechCrunch, November 10; secondary reading of the filing). 🔶 <strong>TechCrunch and Fortune report a $26 billion private placement of non-voting Class N stock at the IPO price to seven companies including Google and Nvidia, with Google and Nvidia investing $10 billion each</strong> (TechCrunch; Fortune, November 10). 🔶 <strong>The Motley Fool reports AMD plans to invest $2.5 billion in that placement, counting toward an earlier commitment of up to $5 billion tied to chip deliveries</strong> (The Motley Fool, November 10). ⚠️ <strong>We did not read the filing on EDGAR; check each figure there before repeating it.</strong> This answers the open question from our last edition: the roadshow did start this week, despite the investor doubts Reuters reported on November 6.</p>
+      <p><strong>Safety disclosure in the filing.</strong> 🔶 <strong>Fortune reports the filing says internal estimates indicate Anthropic "may imminently meet" a Responsible Scaling Policy threshold for dramatically accelerated AI progress, and that no current model has crossed it</strong> (Fortune, November 10; quoting the filing).</p>
+      <p><strong>Market backdrop.</strong> ✅ <strong>On November 10 the S&amp;P 500 closed at 7,520.93, down 0.38%, and the Nasdaq Composite at about 25,066, down 0.74%, after October consumer prices rose 0.4% against an expected 0.3%</strong> (TheStreet, November 10). ✅ <strong>Nvidia's board said on November 8 that a committee of independent directors, with outside counsel, will investigate reporting that CEO Jensen Huang was the target of a foreign intelligence effort, and that it has "no reason to believe" national security or company secrets were compromised</strong> (Nvidia, Statement from NVIDIA Board of Directors, November 8; company-reported).</p>
+      <h2 id="2-top-10-ai-agents-three-lenses">2. Top 10 AI Agents — Three Lenses</h2>
+      <p>Rankings as of Wednesday, November 11, 2026. <strong>Board changes: two new entries in Market Momentum (IBM and Microsoft's Imagine Enterprise, and Google Cloud's Gemini for healthcare); Claude Haiku 5.5 and GPT-6 Cyber drop out of that lens. The other two lenses hold.</strong> 🔶 <strong>Placement is our judgment from vendor-reported information and press coverage volume.</strong> <em>(Top 5 shown per lens.)</em></p>
+      <h3 id="2a-relevance-for-claude-mcp-centered-work">2a. Relevance for Claude / MCP-Centered Work</h3>
+      <div class="table-wrap"><table>
+      <thead>
+      <tr>
+      <th>Rank</th>
+      <th>Agent / Platform</th>
+      <th>Justification</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>1</td>
+      <td>Claude Fable 5.2</td>
+      <td><strong>Holds first.</strong> ✅ <strong>Generally available since November 9; API model ID <code>claude-fable-5-2</code></strong> (Anthropic, November 9; carried). ⚠️ <strong>Anthropic recommends Claude Opus 5.5 as its daily driver for most coding and knowledge tasks.</strong></td>
+      </tr>
+      <tr>
+      <td>2</td>
+      <td>Claude Opus 5.5</td>
+      <td><strong>Holds.</strong> ✅ <strong>Announced September 22, 2026</strong> (Anthropic; carried).</td>
+      </tr>
+      <tr>
+      <td>3</td>
+      <td>Claude Sonnet 5.5</td>
+      <td><strong>Holds.</strong> ✅ <strong>Announced September 28, 2026</strong> (Anthropic Newsroom; carried).</td>
+      </tr>
+      <tr>
+      <td>4</td>
+      <td>Claude Code v2.1.311</td>
+      <td><strong>Holds; no newer build.</strong> ✅ <strong>v2.1.311 (October 26) is still the newest entry and lists 56 fixes; the changelog still names Fable 5.1, not Fable 5.2, in its <code>ultrathink</code> note</strong> (Claude Code changelog, read November 11; first 100,000 of about 126,227 characters).</td>
+      </tr>
+      <tr>
+      <td>5</td>
+      <td>Claude Haiku 5.5</td>
+      <td><strong>Holds.</strong> ✅ <strong>Announced October 7, 2026</strong> (Anthropic Newsroom; carried). ⚠️ <strong>Benchmarks self-reported.</strong></td>
+      </tr>
+      </tbody>
+      </table></div>
+      <h3 id="2b-market-momentum-adoption-funding-buzz">2b. Market Momentum (adoption / funding / buzz)</h3>
+      <div class="table-wrap"><table>
+      <thead>
+      <tr>
+      <th>Rank</th>
+      <th>Agent / Platform</th>
+      <th>Justification</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>1</td>
+      <td>Claude Fable 5.2 / Mythos 5.2</td>
+      <td><strong>Holds first.</strong> ✅ <strong>Launched November 9 and covered the same day by several outlets</strong> (carried). ⚠️ <strong>Capability claims are Anthropic's own.</strong></td>
+      </tr>
+      <tr>
+      <td>2</td>
+      <td>Google Gemini 4 Argon</td>
+      <td><strong>Holds.</strong> ✅ <strong>Generally available October 13</strong> (Google, Gemini API changelog, read November 11).</td>
+      </tr>
+      <tr>
+      <td>3</td>
+      <td>Meta Muse Wonder / Muse Spark Open</td>
+      <td><strong>Holds; carried.</strong> ✅ <strong>Muse Spark Open launched October 15</strong> (TechCrunch; carried). ⚠️ <strong>Capability claims are Meta's own.</strong></td>
+      </tr>
+      <tr>
+      <td>4</td>
+      <td>IBM and Microsoft — Imagine Enterprise</td>
+      <td><strong>New entry.</strong> ✅ <strong>Announced November 10 as a platform to build, run and govern AI agents, starting with financial services, insurance and retail, with more than 6,000 prebuilt agents and assets from IBM Consulting</strong> (Microsoft Source, November 10; company-reported). ⚠️ <strong>The release names no AI models and does not mention MCP.</strong></td>
+      </tr>
+      <tr>
+      <td>5</td>
+      <td>Google Cloud — Gemini for healthcare</td>
+      <td><strong>New entry.</strong> ✅ <strong>Preview in the US from November 10 for hospitals and insurers, with five ready-made skills and named launch customers including HCA Healthcare and Northwell Health</strong> (The Next Web, November 10; citing Google Cloud's release, which we did not read).</td>
+      </tr>
+      </tbody>
+      </table></div>
+      <h3 id="2c-capability-maturity-production-readiness">2c. Capability &amp; Maturity (production readiness)</h3>
+      <div class="table-wrap"><table>
+      <thead>
+      <tr>
+      <th>Rank</th>
+      <th>Agent / Platform</th>
+      <th>Justification</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>1</td>
+      <td>Claude Code v2.1.311</td>
+      <td><strong>Holds first on shipped, GA tooling.</strong> ✅ <strong>Lists 56 bug fixes</strong> (Claude Code changelog).</td>
+      </tr>
+      <tr>
+      <td>2</td>
+      <td>Claude Opus 5.5</td>
+      <td><strong>Holds.</strong> ✅ <strong>First on the Artificial Analysis index at 58 as of October 12</strong> (Decrypt; carried, not re-checked).</td>
+      </tr>
+      <tr>
+      <td>3</td>
+      <td>Claude Fable 5.2</td>
+      <td><strong>Holds.</strong> ✅ <strong>Anthropic reports 49.1% on FrontierCode 2.0</strong> (Anthropic, November 9; carried). ⚠️ <strong>Self-reported; no independent results seen yet.</strong></td>
+      </tr>
+      <tr>
+      <td>4</td>
+      <td>Claude Sonnet 5.5</td>
+      <td><strong>Holds.</strong> ✅ <strong>Tied at 56 on the Artificial Analysis index</strong> (Decrypt; carried).</td>
+      </tr>
+      <tr>
+      <td>5</td>
+      <td>GPT-6.1 Sol</td>
+      <td><strong>Holds; carried, not re-verified.</strong> ✅ <strong>Named in OpenAI's November 4 customer story</strong> (OpenAI RSS feed; carried; vendor-published).</td>
+      </tr>
+      </tbody>
+      </table></div>
+      <p><strong>Divergence analysis.</strong> 🔶 <strong>Momentum is shifting toward packaged, industry-specific agent platforms (IBM and Microsoft for regulated industries, Google Cloud for healthcare), while the maturity lens still favors tooling with a shipped track record. Both new entries are announcements or previews, so neither enters the maturity lens yet.</strong> ⚠️ <strong>Customer outcomes quoted at launch, such as Northwell's statement about insurance denials, are customer or vendor claims, not independent results.</strong></p>
+      <p><strong>What This Means for You.</strong> 🔶 <strong>When vendors package agents for a specific industry, the governance controls they ship become part of what you are buying. Before adopting one, ask which models it uses, where data is processed, and what logs you can see.</strong> ⚠️ <strong>Rankings reflect vendor-reported information and press coverage, not independent testing.</strong></p>
+      <hr />
+      <h2 id="3-agentic-ai-advances-new-releases">3. Agentic AI Advances &amp; New Releases</h2>
+      <ul>
+      <li><strong>IBM and Microsoft — Imagine Enterprise (November 10).</strong> ✅ <strong>Described as "an agentic platform designed to help enterprises build, run and govern AI agents," combining Microsoft Foundry, GitHub Copilot, Copilot Studio, Fabric, Entra, Purview, Defender and Azure with IBM Consulting Advantage; clients can have IBM Consulting deploy and operate it, co-develop with IBM, or manage it themselves; the companies plan to extend it to manufacturing, energy, public sector and mobility</strong> (Microsoft Source, November 10; company-reported).</li>
+      <li><strong>Google Cloud — Gemini for healthcare (November 10).</strong> ✅ <strong>An agent that works across record, billing and insurance systems, built on Google's general Gemini agent, with skills such as summarizing medical records and checking insurance benefits; partners named the same day include GoodRx, UiPath and InterSystems</strong> (The Next Web, November 10). ⚠️ <strong>The figure that clinicians lose "nearly 28 hours a week" to administration comes from a Google-commissioned study with The Harris Poll; treat it as vendor-sponsored.</strong></li>
+      <li><strong>OpenAI — newest item.</strong> ✅ <strong>"Closing the AI guidance gap in education" (November 10, 09:00 GMT), on EMEA education partnerships and ThinkYoung research on teacher support and AI literacy</strong> (OpenAI RSS feed; description only; feed build date November 10, 10:32 GMT; read up to 100,000 of 100,703 characters).</li>
+      <li><strong>Anthropic.</strong> ✅ <strong>No new model or product post since the November 9 Fable 5.2 and Mythos 5.2 launch; the November 10 post is the roadshow announcement</strong> (Anthropic Newsroom, read November 11).</li>
+      <li><strong>Google — Gemini API changelog.</strong> ✅ <strong>Newest entry is still October 26 (paid-tier projects new to the Generate Content API store requests by default); "Gemini 4 Carbon," cited in Anthropic's benchmark table, still does not appear</strong> (Google, Gemini API changelog, read November 11).</li>
+      <li><strong>Model Context Protocol.</strong> ✅ <strong>Newest blog post is still "The Official Ruby SDK for MCP Reaches Tier 1" (October 30)</strong> (Model Context Protocol Blog).</li>
+      <li><strong>Standing carries, not re-verified.</strong> <strong>Colorado Senate Bill 26-189</strong>, effective <strong>January 1, 2027</strong>; <strong>EU AI Act Article 50</strong> enforceable since <strong>August 2, 2026</strong>. Compliance awareness, not legal advice; confirm with counsel.</li>
+      </ul>
+      <p><strong>What This Means for You.</strong> 🔶 <strong>Agents built for regulated work, such as healthcare billing and insurance, raise the stakes on data handling. Confirm whether a preview product is covered by the same data terms as the generally available service before you put real records through it.</strong> ⚠️ <strong>Descriptions are condensed from vendor releases and press coverage and are company-reported.</strong></p>
+      <hr />
+      <h2 id="4-overnight-daily-release-monitor">4. Overnight / Daily Release Monitor</h2>
+      <p>Covering <strong>Tuesday, November 10 into Wednesday, November 11</strong>. ✅ <strong>Pages reached today: the Anthropic newsroom list and roadshow announcement, the OpenAI RSS feed, the Gemini API changelog, the Claude Code changelog, the MCP blog, the Renaissance Capital news list, the Nvidia Board statement, the Microsoft Source release, and press articles from TechCrunch, Fortune, The Motley Fool, TheStreet and The Next Web, through automated page summarization.</strong></p>
+      <ul>
+      <li><strong>Anthropic.</strong> ✅ <strong>New: roadshow launch, November 10. A November 11 date header appears on the newsroom page with no titled post under it.</strong></li>
+      <li><strong>Claude Code.</strong> ✅ <strong>v2.1.311 (October 26) is still the newest build listed.</strong></li>
+      <li><strong>OpenAI.</strong> ✅ <strong>One item dated November 10; nothing dated November 11</strong> (OpenAI RSS feed).</li>
+      <li><strong>Google.</strong> ✅ <strong>No new Gemini API changelog entry; Gemini for healthcare entered US preview</strong> (Section 3).</li>
+      <li><strong>MCP.</strong> ✅ <strong>Newest post is dated October 30.</strong></li>
+      <li><strong>IPO calendar.</strong> ✅ <strong>Renaissance Capital lists two November 10 items: Anthropic's terms and American Barrick Gold filing for an estimated $6 billion IPO; nothing yet for November 11</strong> (Renaissance Capital; headlines only). ⚠️ <strong>American Barrick Gold is not AI-related.</strong></li>
+      <li><strong>Scheduled ahead:</strong> ✅ <strong>Anthropic Usage Policy effective November 12</strong> (Anthropic, October 8; carried); ✅ <strong>Nvidia earnings November 17</strong> (The Motley Fool, November 10); 🔶 <strong>Anthropic trading close to November 19</strong> (TechCrunch, citing CNBC; not confirmed by Anthropic); <strong>Microsoft Ignite, November 17–20</strong> (carried; not re-verified).</li>
+      </ul>
+      <p><strong>What This Means for You.</strong> ✅ <strong>Anthropic's updated usage policy takes effect November 12; check which of your approved uses it touches.</strong> ⚠️ <strong>A quiet list is not proof that nothing was released; feeds and first-page lists can lag, and IPO dates are estimates until pricing.</strong></p>
+      <hr />
+      <h2 id="5-ai-trading-trends">5. AI Trading Trends</h2>
+      <p><em>Market intelligence for situational awareness — not investment advice. No buy/sell/hold recommendations, price targets, or return forecasts.</em> Every figure carries a source and a confidence note. ✅ <strong>This edition was compiled early on Wednesday, November 11, before US markets opened. The latest completed session is Tuesday, November 10; our price-history source had not posted it, so November 10 figures below come from The Motley Fool's market coverage, and names without a November 10 figure use earlier closes. The table is not a same-day comparison.</strong> ⚠️ <strong>Microsoft, Oracle and Meta were not checked and are not ranked.</strong></p>
+      <h3 id="5a-ipos">5a. IPOs</h3>
+      <p>✅ <strong>Anthropic — roadshow launched November 10: 825,000,000 Class A shares at an expected $70.00 to $78.00, Nasdaq Global Select Market, symbol "ANT"; a 30-day underwriters' option on up to 123,750,000 more shares; the registration statement is not yet effective</strong> (Anthropic, November 10; company-reported). 🔶 <strong>Reported valuation up to $1.404 trillion fully diluted at the top of the range; Renaissance Capital's headline says a $1.2 trillion market cap; trading close to November 19</strong> (TechCrunch, citing CNBC; Fortune; Renaissance Capital, November 10). 🔶 <strong>Fortune reports the terms in rounded form, up to $64.4 billion raised and up to $1.4 trillion valued, and notes trading could start as early as Wednesday or Thursday of next week.</strong> ⚠️ <strong>No final price exists; terms can change. Not investment advice.</strong></p>
+      <p>✅ <strong>American Barrick Gold filed for an estimated $6 billion IPO on November 10</strong> (Renaissance Capital; headline only; not AI-related). ✅ <strong>Carried: Windward Bio Group set terms for a $175 million US IPO on November 9; Sensing4D AI filed for a $35 million US IPO; Firmus withdrew its planned A$5 billion ASX IPO on October 9</strong> (Renaissance Capital; Reuters via The Star; carried). 🔶 <strong>OpenAI — no 2026 IPO, per press (carried; Gizmodo).</strong></p>
+      <h3 id="5b-top-traded-ai-related-tickers">5b. Top traded AI-related tickers</h3>
+      <p><em>Ranking basis: our selection of AI-exposed names, ordered by the latest reported share volume we could confirm. This is not a verified market-wide ranking. No targets, no forecasts.</em></p>
+      <div class="table-wrap"><table>
+      <thead>
+      <tr>
+      <th>#</th>
+      <th>Ticker</th>
+      <th>Company</th>
+      <th>Why it's an AI-trading bellwether</th>
+      <th>Latest verifiable signal</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>1</td>
+      <td>NVDA</td>
+      <td>Nvidia</td>
+      <td>Dominant AI accelerator supplier; reported $10 billion buyer in Anthropic's private placement</td>
+      <td>✅ <strong>November 10: closed $168.89, down 5.47%, volume about 425.9 million, per the quote data; the article text gives $168.80, down 5.52%, on 420.8 million</strong> (The Motley Fool, November 10). ✅ <strong>November 9: closed $178.67, down 4.27%, volume 462,595,620</strong> (stockanalysis.com, read November 11). ⚠️ <strong>The two November 10 figure sets differ slightly; check before repeating.</strong></td>
+      </tr>
+      <tr>
+      <td>2</td>
+      <td>AMD</td>
+      <td>Advanced Micro Devices</td>
+      <td>AI accelerator supplier; reported $2.5 billion buyer in Anthropic's private placement</td>
+      <td>✅ <strong>November 10: closed $515.21, up 1.30%, volume about 46.9 million</strong> (The Motley Fool, November 10). ✅ <strong>November 6: closed $449.04, up 11.04%, volume 45,782,696</strong> (stockanalysis.com). ⚠️ <strong>Our source shows no November 9 row, so the move from $449.04 to $515.21 spans two sessions we could not split.</strong></td>
+      </tr>
+      <tr>
+      <td>3</td>
+      <td>AMZN</td>
+      <td>Amazon</td>
+      <td>Large cloud and AI platform provider</td>
+      <td>⚠️ <strong>Carried, not re-verified: November 6 close $259.30, down 0.35%, volume 42,574,231 (our November 10 edition). The price page failed to load today.</strong></td>
+      </tr>
+      <tr>
+      <td>4</td>
+      <td>GOOGL</td>
+      <td>Alphabet</td>
+      <td>Cloud and model developer; reported $10 billion buyer in Anthropic's private placement</td>
+      <td>✅ <strong>November 6: closed $284.78, up 0.78%, volume 36,346,984</strong> (stockanalysis.com, read November 11; no later row posted).</td>
+      </tr>
+      <tr>
+      <td>5</td>
+      <td>AVGO</td>
+      <td>Broadcom</td>
+      <td>Chip supplier named among Anthropic's private-placement buyers</td>
+      <td>✅ <strong>November 10: closed $331.98, up 3.91%</strong> (The Motley Fool, November 10). ⚠️ <strong>No volume figure confirmed, so its place in this order is not volume-based.</strong></td>
+      </tr>
+      </tbody>
+      </table></div>
+      <p><strong>Context, not forecast.</strong> ✅ <strong>Nvidia's three-month average daily volume is given as 122.7 million to 127.2 million shares, against about 420 million or more on November 10</strong> (The Motley Fool, November 10). ⚠️ <strong>Volume figures are sometimes revised after the session. We report data and make no projection.</strong></p>
+      <p><strong>What This Means for You.</strong> ✅ <strong>Market context only; no operational implication and no investment guidance. When chip suppliers and cloud providers also buy stakes in a model vendor, supplier relationships become more tightly linked; documenting which vendors your AI use depends on is a reasonable planning step.</strong> ⚠️ <strong>Price and volume figures come from press coverage and price-history aggregators; trace each to a primary source before repeating it.</strong></p>
+      <h2 id="sources">Sources</h2>
+      <p><em>Verification note: this run reached the Anthropic newsroom list and roadshow announcement, OpenAI's RSS feed (titles, dates and short descriptions; individual posts were not loaded), the Gemini API changelog, the Claude Code changelog (first 100,000 of about 126,227 characters), the Model Context Protocol blog, Renaissance Capital's news list, the Nvidia Board statement, the Microsoft Source release, and articles from TechCrunch, Fortune, The Motley Fool, TheStreet and The Next Web, all through automated page summarization, so every figure should be checked against the linked page before external use. The CNBC and CNN articles could not be loaded. The amended S-1 on EDGAR was not read; filing figures are known only through press coverage. The stockanalysis.com Amazon page failed and its Meta page returned stale 2025 data.</em></p>
+      <ul>
+      <li>Anthropic, "Anthropic launches roadshow for proposed initial public offering," November 10, 2026 (primary, company-reported). <a href="https://www.anthropic.com/news/roadshow-launch" target="_blank" rel="noopener">https://www.anthropic.com/news/roadshow-launch</a></li>
+      <li>Anthropic Newsroom (primary, list read November 11, 2026). <a href="https://www.anthropic.com/news" target="_blank" rel="noopener">https://www.anthropic.com/news</a></li>
+      <li>TechCrunch, "Anthropic sets IPO price range of $70 to $78 per share to reach an implied valuation of $1.404 trillion," November 10, 2026 (press). <a href="https://techcrunch.com/2026/11/10/anthropic-sets-ipo-price-range-of-70-to-78-per-share-to-reach-an-implied-valuation-of-1-404-trillion/" target="_blank" rel="noopener">https://techcrunch.com/2026/11/10/anthropic-sets-ipo-price-range-of-70-to-78-per-share-to-reach-an-implied-valuation-of-1-404-trillion/</a></li>
+      <li>Fortune, "Anthropic sets IPO range valuing it at up to $1.4 trillion amid AI stock sell-off," November 10, 2026 (press). <a href="https://fortune.com/2026/11/10/anthropic-ipo-price-range-ai-stock-sell-off/" target="_blank" rel="noopener">https://fortune.com/2026/11/10/anthropic-ipo-price-range-ai-stock-sell-off/</a></li>
+      <li>Renaissance Capital, IPO Center news list (read November 11, 2026). <a href="https://www.renaissancecapital.com/IPO-Center/News" target="_blank" rel="noopener">https://www.renaissancecapital.com/IPO-Center/News</a></li>
+      <li>NVIDIA, "Statement from NVIDIA Board of Directors," November 8, 2026 (primary, company-reported). <a href="https://investor.nvidia.com/news/press-release-details/2026/Statement-from-NVIDIA-Board-of-Directors/" target="_blank" rel="noopener">https://investor.nvidia.com/news/press-release-details/2026/Statement-from-NVIDIA-Board-of-Directors/</a></li>
+      <li>The Motley Fool, "Stock Market Today, Nov. 10: Nvidia Stock Plunges 5.5% as CEO Scandal Overshadows Its Upcoming Earnings Report," November 10, 2026 (press). <a href="https://www.fool.com/coverage/stock-market-today/2026/11/10/stock-market-today-nov-10-nvidia-stock-plunges-5-5-as-ceo-scandal-overshadows-its-upcoming-earnings-report/" target="_blank" rel="noopener">https://www.fool.com/coverage/stock-market-today/2026/11/10/stock-market-today-nov-10-nvidia-stock-plunges-5-5-as-ceo-scandal-overshadows-its-upcoming-earnings-report/</a></li>
+      <li>The Motley Fool, "Stock Market Today, Nov. 10: AMD Rises on Plan to Invest $2.5 Billion in Anthropic," November 10, 2026 (press). <a href="https://www.fool.com/coverage/stock-market-today/2026/11/10/stock-market-today-nov-10-amd-rises-on-plan-to-invest-usd2-5-billion-in-anthropic/" target="_blank" rel="noopener">https://www.fool.com/coverage/stock-market-today/2026/11/10/stock-market-today-nov-10-amd-rises-on-plan-to-invest-usd2-5-billion-in-anthropic/</a></li>
+      <li>TheStreet, "Stock Market Today (Nov. 10, 2026)," November 10, 2026 (press). <a href="https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-nov-10-2026" target="_blank" rel="noopener">https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-nov-10-2026</a></li>
+      <li>Microsoft Source, "IBM and Microsoft announce a new AI agent platform designed for industry-specific transformation," November 10, 2026 (primary, company-reported). <a href="https://news.microsoft.com/source/2026/11/10/ibm-and-microsoft-announce-a-new-ai-agent-platform-designed-for-industry-specific-transformation" target="_blank" rel="noopener">https://news.microsoft.com/source/2026/11/10/ibm-and-microsoft-announce-a-new-ai-agent-platform-designed-for-industry-specific-transformation</a></li>
+      <li>The Next Web, "Google Cloud launches Gemini for healthcare to take on hospital paperwork," November 10, 2026 (press). <a href="https://thenextweb.com/news/gemini-for-healthcare-google-cloud-ai-agent-launch" target="_blank" rel="noopener">https://thenextweb.com/news/gemini-for-healthcare-google-cloud-ai-agent-launch</a></li>
+      <li>OpenAI Newsroom RSS feed (primary, read November 11, 2026). <a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">https://openai.com/news/rss.xml</a></li>
+      <li>Claude Code changelog (primary, read November 11, 2026). <a href="https://code.claude.com/docs/en/changelog" target="_blank" rel="noopener">https://code.claude.com/docs/en/changelog</a></li>
+      <li>Google, Gemini API changelog (primary, read November 11, 2026). <a href="https://aistudio.google.com/docs/changelog" target="_blank" rel="noopener">https://aistudio.google.com/docs/changelog</a></li>
+      <li>Model Context Protocol Blog (primary, read November 11, 2026). <a href="https://blog.modelcontextprotocol.io/" target="_blank" rel="noopener">https://blog.modelcontextprotocol.io/</a></li>
+      <li>stockanalysis.com price history, read November 11, 2026: NVDA <a href="https://stockanalysis.com/stocks/nvda/history/" target="_blank" rel="noopener">https://stockanalysis.com/stocks/nvda/history/</a> ; AMD <a href="https://stockanalysis.com/stocks/amd/history/" target="_blank" rel="noopener">https://stockanalysis.com/stocks/amd/history/</a> ; GOOGL <a href="https://stockanalysis.com/stocks/googl/history/" target="_blank" rel="noopener">https://stockanalysis.com/stocks/googl/history/</a></li>
+      <li>Carried: Anthropic, "Introducing Claude Fable 5.2 and Claude Mythos 5.2," November 9, 2026 (primary, company-reported). <a href="https://www.anthropic.com/claude-fable-and-mythos-5-2" target="_blank" rel="noopener">https://www.anthropic.com/claude-fable-and-mythos-5-2</a></li>
+      <li>Carried: Anthropic, "2026 Usage Policy update," October 8, 2026 (primary, company-reported). <a href="https://www.anthropic.com/news/2026-usage-policy-update" target="_blank" rel="noopener">https://www.anthropic.com/news/2026-usage-policy-update</a></li>
+      <li>Carried: Anthropic, "Introducing Claude Haiku 5.5," October 7, 2026 (primary). <a href="https://www.anthropic.com/claude-haiku-5-5" target="_blank" rel="noopener">https://www.anthropic.com/claude-haiku-5-5</a></li>
+      <li>Carried: TechCrunch, "Meta launches an open-weight AI model that runs on Macs," October 15, 2026 (secondary; Meta figures self-reported). <a href="https://techcrunch.com/2026/10/15/meta-launches-an-open-weight-model-that-runs-on-macs/" target="_blank" rel="noopener">https://techcrunch.com/2026/10/15/meta-launches-an-open-weight-model-that-runs-on-macs/</a></li>
+      <li>Carried: Decrypt, "Meta's New Muse Wonder Finally Puts Zuckerberg in the Frontier AI Race," October 12, 2026 (secondary). <a href="https://decrypt.co/380768/meta-muse-wonder-zuckerberg-frontier-ai-race" target="_blank" rel="noopener">https://decrypt.co/380768/meta-muse-wonder-zuckerberg-frontier-ai-race</a></li>
+      <li>Carried: Reuters, "Nvidia-backed Firmus scraps $5 billion Australian IPO on poor demand," October 9, 2026, via The Star (press). <a href="https://www.thestar.com.my/tech/tech-news/2026/10/09/nvidia-backed-firmus-scraps-5-billion-australian-ipo-on-poor-demand" target="_blank" rel="noopener">https://www.thestar.com.my/tech/tech-news/2026/10/09/nvidia-backed-firmus-scraps-5-billion-australian-ipo-on-poor-demand</a></li>
+      <li>Carried: Gizmodo, "No OpenAI IPO Until the AI Stops Going Rogue, CEO Sam Altman Says" (press). <a href="https://gizmodo.com/no-openai-ipo-until-the-ai-stops-going-rogue-ceo-sam-altman-says-2000819194" target="_blank" rel="noopener">https://gizmodo.com/no-openai-ipo-until-the-ai-stops-going-rogue-ceo-sam-altman-says-2000819194</a></li>
+      </ul>
+    </article>
+
+    <section class="cta-band" id="contact" aria-labelledby="cta-heading">
+      <h2 id="cta-heading">From AI curiosity to AI capability</h2>
+      <p>This briefing is part of the field research behind our AI Enablement service &mdash; a curated, white-glove Claude Cowork implementation tailored to your organization&rsquo;s workflow.</p>
+      <a class="btn" href="https://calendly.com/mark-malaniru/30min" target="_blank" rel="noopener">Book a discovery call</a>
+    </section>
+    <!-- mal-ai-disclaimer:v1 -->
+  <aside class="mal-ai-disclaimer" role="note" aria-label="AI transparency notice" style="max-width:760px;margin:2.5rem auto 0;padding:1rem 1.25rem;border:1px solid #d9c3a5;border-left:4px solid #C07830;border-radius:6px;background:#faf6f0;color:#5c5347;font-size:0.82rem;line-height:1.6;box-sizing:border-box;">
+    <strong style="display:block;color:#8a5a1e;font-size:0.78rem;letter-spacing:.04em;text-transform:uppercase;margin-bottom:.35rem;">AI Transparency Notice</strong>
+    This article was produced through Malaniru&rsquo;s guided-research process: generated with the assistance of AI and reviewed by a person before publication (human-in-the-loop). In line with EU AI Act transparency obligations, we disclose that AI systems were used to create this content. It is provided for general information only, may contain inaccuracies, and is not professional advice &mdash; verify before relying on it.
+  </aside>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Malaniru Inc, LLC &middot; Lafayette, Colorado &middot; AI Enablement</p>
+    <p><a href="daily-intelligence-briefings.html">&larr; Back to Daily Intelligence Briefings</a> &middot; <a href="index.html">AI Enablement</a></p>
+      <nav class="mal-footernav" data-mal-footernav aria-label="Site" style="margin-top:0.7rem;font-size:0.82rem;line-height:1.9;">
+      <a href="about.html" style="color:#C07830;font-weight:700;text-decoration:none;">About</a> &middot;
+      <a href="pricing.html" style="color:#C07830;font-weight:700;text-decoration:none;">Pricing</a> &middot;
+      <a href="index.html" style="color:#C07830;font-weight:700;text-decoration:none;">AI Enablement</a>
+     &middot;
+      <a href="privacy-policy.html" style="color:#C07830;font-weight:700;text-decoration:none;">Privacy</a>
+    </nav>
+  </footer>
+</body>
+</html>

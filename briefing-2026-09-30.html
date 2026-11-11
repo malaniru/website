@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<!--
+  Malaniru - Daily Intelligence Briefing (branded HTML)
+  Built by: publish_briefing_page.py - Date: 2026-09-30
+  Source:   Projects/Malaniru_Marketing_Site/Staging/20260930-daily-intelligence-briefing.md
+  FIDELITY: Body rendered VERBATIM from the source markdown. No copy edits.
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daily Intelligence Briefing — Wednesday, September 30, 2026 - Malaniru</title>
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.malaniru.com/briefing-2026-09-30">
+  <meta name="description" content="At DevDay, OpenAI launched GPT-6.1 Sol at $2/$10 per million tokens and always-on Dots agents, and press reports say OpenAI confirmed GPT-6.1 Astra is shelved and that CEO Sam Altman said OpenAI will not go public in 2026. Six AI leaders signed a non-binding White House safety accord, Meta launched Muse for Small Business, a Third Circuit ruling rejected a fair-use defense in an AI-training case, and a high-severity flaw in the official MCP Python SDK was disclosed. Anthropic&#x27;s draft IPO prospectus was reported to have leaked to Reuters, with no public SEC filing confirmed. Every figure carries a source and a confidence tag. This is market intelligence, not investment advice.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --navy:#0F1A2E;--navy-mid:#2A3F63;--copper:#C07830;--gold:#D4A853;
+      --off-white:#F4F1EC;--light-gray:#E8E6E1;--mid-gray:#8A8A96;--dark-text:#1C1C1C;
+      --font:"Inter","Helvetica Neue",Arial,sans-serif;
+    }
+    *{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:var(--font);background:var(--off-white);color:var(--dark-text);line-height:1.65;font-size:16px;-webkit-font-smoothing:antialiased;}
+    .skip-link{position:absolute;left:-999px;top:0;background:var(--gold);color:var(--navy);padding:10px 16px;font-weight:700;z-index:10;}
+    .skip-link:focus{left:8px;top:8px;}
+    a{color:var(--copper);}
+    /* Header */
+    header{background: linear-gradient(160deg, rgba(15,26,46,0.72) 0%, rgba(10,18,33,0.82) 100%), url('StockCake-Cosmic_Web_Complexity-1361288-standard-rot90ccw.jpg'); background-size: auto, 100% 100%; background-repeat: no-repeat, no-repeat; background-position: center, center;color:var(--off-white);padding:48px 24px 52px;position:relative;overflow:hidden;}
+    header::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 85% 12%,rgba(192,120,48,0.20) 0%,rgba(15,26,46,0) 55%);pointer-events:none;}
+    .header-inner{max-width:760px;margin:0 auto;position:relative;z-index:1;}
+    .wordmark{font-weight:800;font-size:1.25rem;letter-spacing:0.02em;margin-bottom:30px;}
+    .wordmark .dot{color:var(--copper);}
+    .wordmark a{color:var(--off-white);text-decoration:none;transition:opacity .18s ease;}
+    .wordmark a:hover,.wordmark a:focus-visible{opacity:.85;outline:none;}
+    .eyebrow{display:inline-block;font-size:0.72rem;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;}
+    header h1{font-weight:800;font-size:clamp(1.8rem,4.6vw,2.6rem);line-height:1.14;letter-spacing:-0.01em;margin-bottom:16px;}
+    .byline{font-size:0.9rem;color:var(--light-gray);letter-spacing:0.01em;}
+    .byline .sep{color:var(--copper);margin:0 8px;}
+    .lede{font-size:1.08rem;color:var(--light-gray);max-width:66ch;margin-top:18px;}
+    .backlink{display:inline-block;margin-top:26px;color:var(--gold);font-weight:600;font-size:0.9rem;text-decoration:none;border-bottom:1px solid rgba(212,168,83,0.4);}
+    .backlink:hover,.backlink:focus-visible{border-bottom-color:var(--gold);outline:none;}
+    /* Article */
+    main{max-width:760px;margin:0 auto;padding:48px 24px 8px;}
+    .disclaimer{background:#fff;border:1px solid var(--light-gray);border-left:4px solid var(--copper);border-radius:8px;padding:14px 18px;font-size:0.9rem;color:var(--navy-mid);margin-bottom:34px;}
+    article{font-size:1.05rem;}
+    article h2{font-weight:800;font-size:1.5rem;color:var(--navy);line-height:1.22;letter-spacing:-0.01em;margin:42px 0 14px;}
+    article h3{font-weight:700;font-size:1.18rem;color:var(--navy-mid);line-height:1.25;margin:30px 0 10px;}
+    article h2 + p, article h3 + p{margin-top:0;}
+    article p{margin:0 0 18px;color:var(--dark-text);}
+    article ul,article ol{margin:0 0 18px;padding-left:24px;}
+    article li{margin-bottom:8px;}
+    article strong{font-weight:700;color:var(--navy);}
+    article em{font-style:italic;}
+    article a{color:var(--copper);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(192,120,48,0.35);transition:border-color .18s ease;}
+    article a:hover,article a:focus-visible{border-bottom-color:var(--copper);outline:none;}
+    article hr{border:none;border-top:1px solid var(--light-gray);margin:34px 0;}
+    article h2#sources, article h2#references{border-top:1px solid var(--light-gray);padding-top:30px;font-size:1.2rem;color:var(--navy-mid);}
+    /* sources list smaller */
+    article h2[id^="sources"] ~ ul li, article h3[id^="sources"] ~ ul li{font-size:0.95rem;color:var(--navy-mid);}
+    /* tables */
+    article table{width:100%;border-collapse:collapse;margin:0 0 24px;font-size:0.95rem;}
+    article th,article td{border:1px solid var(--light-gray);padding:9px 12px;text-align:left;vertical-align:top;}
+    article thead th{background:var(--navy);color:var(--off-white);font-weight:700;}
+    article tbody tr:nth-child(even){background:#fff;}
+    article .table-wrap{overflow-x:auto;margin:0 0 24px;}
+    article .table-wrap table{margin:0;}
+    /* CTA */
+    .cta-band{background:var(--navy);color:var(--off-white);border-radius:12px;padding:42px 32px;text-align:center;margin:48px 0 8px;}
+    .cta-band h2{font-weight:800;font-size:clamp(1.4rem,3.4vw,1.9rem);margin-bottom:12px;letter-spacing:-0.01em;color:var(--off-white);}
+    .cta-band p{color:var(--light-gray);max-width:52ch;margin:0 auto 24px;}
+    .cta-band .btn{display:inline-block;background:var(--copper);color:#fff;font-weight:700;padding:13px 28px;border-radius:8px;text-decoration:none;transition:background .18s ease;}
+    .cta-band .btn:hover,.cta-band .btn:focus-visible{background:var(--gold);color:var(--navy);outline:none;}
+    /* Footer */
+    footer{max-width:760px;margin:16px auto 0;padding:24px;font-size:0.82rem;color:var(--mid-gray);border-top:1px solid var(--light-gray);}
+    footer p+p{margin-top:6px;}
+    footer a{color:var(--mid-gray);text-decoration:underline;}
+    @media (prefers-reduced-motion:reduce){*{transition:none!important;}}
+
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header>
+    <div class="header-inner">
+      <div class="wordmark"><a href="index.html">Malaniru<span class="dot">.</span></a></div>
+      <span class="eyebrow">AI Enablement &middot; Daily Intelligence Briefing</span>
+      <h1>Daily Intelligence Briefing — Wednesday, September 30, 2026</h1>
+      <p class="byline">By Mark Andrew Harris<span class="sep">&middot;</span>September 30, 2026</p>
+      <p class="lede">At DevDay, OpenAI launched GPT-6.1 Sol at $2/$10 per million tokens and always-on Dots agents, and press reports say OpenAI confirmed GPT-6.1 Astra is shelved and that CEO Sam Altman said OpenAI will not go public in 2026. Six AI leaders signed a non-binding White House safety accord, Meta launched Muse for Small Business, a Third Circuit ruling rejected a fair-use defense in an AI-training case, and a high-severity flaw in the official MCP Python SDK was disclosed. Anthropic&#x27;s draft IPO prospectus was reported to have leaked to Reuters, with no public SEC filing confirmed. Every figure carries a source and a confidence tag. This is market intelligence, not investment advice.</p>
+      <a class="backlink" href="daily-intelligence-briefings.html">&larr; All daily intelligence briefings</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <article>
+      <p><strong>[THOUGHT LEADERSHIP] [DRAFT — Pending Copy Review]</strong></p>
+      <h2 id="executive-summary">Executive Summary</h2>
+      <p><strong>Yesterday's open question, whether OpenAI's DevDay would address its safety troubles, now has an answer: it shipped products and conceded the Astra shelving.</strong> ✅ <strong>OpenAI launched GPT-6.1 Sol at $2 input / $10 output per million tokens, positioned as near-Astra performance at one-fifth of Astra's token price, plus always-on "dots" agents, a cloud Codex, and a Decisions API</strong> (OpenAI, DevDay recap and GPT-6.1 Sol post, read at source; benchmarks are self-reported). 🔶 <strong>Press coverage of DevDay reports that OpenAI confirmed the shelving of GPT-6.1 Astra and that CEO Sam Altman said OpenAI will not go public in 2026 until it can make "confident safety claims"; we did not find either statement in an OpenAI post.</strong> ✅ <strong>Six AI-company leaders signed a non-binding White House accord on frontier safeguards on September 29</strong> (Al Jazeera). ⚠️ <strong>Anthropic's draft prospectus was reported as leaked to Reuters, and Fortune states it was not publicly filed; the reported figures remain unconfirmed by any filing we could read.</strong> ✅ <strong>Two further items matter to teams building on agents: a high-severity OAuth flaw in the official MCP Python SDK was disclosed, and the Third Circuit affirmed that an AI-training use of Westlaw headnotes was not fair use.</strong></p>
+      <hr />
+      <h2 id="1-ai-market-trends">1. AI Market Trends</h2>
+      <p><strong>OpenAI used DevDay to move from disclosure to product, while press coverage says it conceded the shelved model and pushed back its IPO.</strong> ✅ <strong>OpenAI's DevDay recap and its GPT-6.1 Sol post (both read at source, September 29) describe GPT-6.1 Sol as available to Plus, Pro, Business, Enterprise, and Edu users in ChatGPT Work and Codex and through the API as <code>gpt-6.1-sol</code> at $2 input, $0.10 cached input, and $10 output per million tokens — "one-fifth of Astra's standard API input and output token prices"; the post reports self-reported results including a 2.2-point lead over Claude Opus 5.5 on AutomationBench and a factuality error rate cut from 11.4% to 7.7% at low reasoning effort.</strong> ✅ <strong>The recap also lists "dots," always-on agents available to Pro and Business Premium plans in eligible markets; a new Pro 500 plan; Codex in the cloud; an Agents API with computer use; a Decisions API in limited preview; MCP Events for trigger-based plugin automation; and Bedrock Managed Agents powered by OpenAI on AWS</strong> (OpenAI, DevDay recap, read at source; the recap page was read through automated page summarization). 🔶 <strong>Press coverage (Axios, Yahoo Tech) reports that OpenAI acknowledged shelving GPT-6.1 Astra, that future Astra models remain in development, and that Altman said OpenAI will not pursue an IPO in 2026; Gizmodo quotes him: "We have got to be able to make confident safety claims."</strong> ⚠️ <strong>The CNBC live blog returned an access error, and we found no OpenAI post stating the IPO position or the cancellation itself, so both remain press-sourced.</strong> 🔶 <strong>The Hacker News, citing Reuters, quotes OpenAI head of safety systems Saachi Jain saying the model "didn't quite meet the bar in terms of staying within scope and authorization."</strong></p>
+      <p><strong>Six AI leaders signed a voluntary safety accord at the White House.</strong> ✅ <strong>Al Jazeera reports that on September 29 the leaders of Anthropic, OpenAI, Google, Meta, xAI, and Nvidia signed a "Joint Commitment on Frontier Responsibilities," pledging "robust" safeguards including internal monitoring teams, third-party audits, and regular meetings to set safety standards; the accord is non-binding and says some measures "may make sense" to codify into law eventually</strong> (Al Jazeera, read at source). ✅ <strong>Al Jazeera also quotes critics, including Toby Walsh, who question why an industry "marks its own homework."</strong> ⚠️ <strong>One aggregator summary we read also described a separate executive order renaming "artificial intelligence"; we found no corroboration and are not carrying it.</strong></p>
+      <p><strong>Anthropic: leaked prospectus coverage continues; no public filing is confirmed.</strong> ✅ <strong>Fortune reports the prospectus was "leaked to Reuters" and describes it as a draft; Anthropic has not commented in the article we read</strong> (Fortune, read at source). ✅ <strong>Figures attributed to the draft by Fortune: 2025 revenue of $4.6 billion, an operating loss of about $8.06 billion, a net loss of $42 billion, year-end 2025 cash of $20.28 billion, $518 billion in cloud and data-center commitments, and two customers accounting for nearly a quarter of 2025 revenue</strong> (Fortune, read at source; unconfirmed by any SEC filing we could read). ⚠️ <strong>Timing reports conflict: Reuters-based coverage says a listing could come after the November U.S. midterm elections, while earlier Fortune and Bloomberg-sourced (via Quartz) reports pointed to an October Nasdaq listing at a valuation near $2 trillion. We treat the venue, date, and valuation as unconfirmed.</strong> ✅ <strong>Claude Sonnet 5.5, released September 28 at $2/$10 per million tokens, is carried from yesterday's briefing; Claude Code v2.1.285 (September 29) is covered in Section 3.</strong></p>
+      <p><strong>Meta and the courts also moved.</strong> ✅ <strong>Meta announced Muse for Small Business on September 29, with a free tier and paid plans and 15 listed connectors including Shopify, Slack, Stripe, Intuit QuickBooks, Notion, and Zoom; TechCrunch reports Meta introduced a "Meta Enterprise Platform" the previous day</strong> (TechCrunch, read at source). ✅ <strong>The Third Circuit affirmed on September 30 that Ross Intelligence's use of Westlaw headnotes to build a competing legal search tool was not fair use — the first U.S. appellate ruling on fair use in AI training; Reuters notes the case did not involve generative AI</strong> (Reuters, via Claims Journal, read at source). 🔶 <strong>An American Bar Association commentary published this month describes the underlying Ross precedent as narrower than early headlines suggested; we have not read it in full.</strong></p>
+      <p><strong>Continuing stories.</strong> ✅ <strong>The Model Context Protocol blog has no new post since August 22.</strong> ✅ <strong>Anthropic's newsroom shows no post after September 23.</strong> ✅ <strong>The Gemini API release notes show no entry after September 22.</strong></p>
+      <hr />
+      <h2 id="2-top-10-ai-agents-three-lenses">2. Top 10 AI Agents — Three Lenses</h2>
+      <p>Rankings as of Wednesday, September 30, 2026. <strong>Board changes: OpenAI's DevDay launches move it up the momentum board, Meta's Muse for Small Business and the White House accord enter momentum, and GPT-6.1 Sol enters maturity.</strong> <em>(Top 5 shown per lens.)</em></p>
+      <h3 id="2a-relevance-for-claude-mcp-centered-work">2a. Relevance for Claude / MCP-Centered Work</h3>
+      <div class="table-wrap"><table>
+      <thead>
+      <tr>
+      <th>Rank</th>
+      <th>Agent / Platform</th>
+      <th>Justification</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>1</td>
+      <td>Claude Opus 5.5</td>
+      <td><strong>Holds first.</strong> ✅ <strong>$4/$20 per-million-token pricing</strong> (Anthropic, carried); ⚠️ performance claims vendor-reported.</td>
+      </tr>
+      <tr>
+      <td>2</td>
+      <td>Claude Sonnet 5.5</td>
+      <td><strong>Holds second.</strong> ✅ <strong>$2/$10 per million tokens, now the default Sonnet model in Claude Code</strong> (Claude Code changelog, read at source); ⚠️ benchmarks self-reported.</td>
+      </tr>
+      <tr>
+      <td>3</td>
+      <td>OpenAI Agentic Systems (ChatGPT Agent-class)</td>
+      <td><strong>Holds third.</strong> ✅ <strong>DevDay added an Agents API with computer use, MCP Events, and GPT-6.1 Sol at $2/$10</strong> (OpenAI, read at source); 🔶 <strong>press-reported Astra shelving and IPO deferral keep the governance caveat attached.</strong></td>
+      </tr>
+      <tr>
+      <td>4</td>
+      <td>Claude Code v2.1.285</td>
+      <td><strong>Holds fourth, now on the September 29 release</strong> — <code>claude plugin configure</code>, an <code>allowedProviders</code> managed setting, and <code>CLAUDE_CODE_DISABLE_WEB_FETCH</code> (Claude Code changelog, read at source).</td>
+      </tr>
+      <tr>
+      <td>5</td>
+      <td>Microsoft Copilot Autopilot + Entra Agent Identities</td>
+      <td><strong>Holds fifth; no new development read this run</strong> (carried).</td>
+      </tr>
+      </tbody>
+      </table></div>
+      <p><em>(Pricing watch, per million tokens: GPT-6.1 Sol — $2/$10, cached input $0.10 (verified today); Sonnet 5.5 — $2/$10; Opus 5.5 — $4/$20; Opus 5 — $5/$25; GPT-6 Luna — $0.10/$0.50; Fable 5.1 / Mythos 5.1 — $10/$50; Gemini 3.8 Flash — $0.75/$3.75, ⚠️ reported to double January 1, 2027. Items other than GPT-6.1 Sol and Sonnet 5.5 are carried and were not re-read today.)</em></p>
+      <h3 id="2b-market-momentum-adoption-funding-buzz">2b. Market Momentum (adoption / funding / buzz)</h3>
+      <div class="table-wrap"><table>
+      <thead>
+      <tr>
+      <th>Rank</th>
+      <th>Agent / Platform</th>
+      <th>Justification</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>1</td>
+      <td>OpenAI DevDay launches (dots, GPT-6.1 Sol)</td>
+      <td><strong>Rises to first.</strong> ✅ <strong>More than 20 announcements in one day, led by always-on agents and a near-Astra model at one-fifth the price</strong> (OpenAI, read at source).</td>
+      </tr>
+      <tr>
+      <td>2</td>
+      <td>Anthropic IPO-document coverage</td>
+      <td><strong>Holds second.</strong> 🔶 <strong>Fortune and Reuters-based coverage of the leaked draft continued September 29; public-filing status unconfirmed (Section 5a).</strong></td>
+      </tr>
+      <tr>
+      <td>3</td>
+      <td>Meta Muse for Small Business</td>
+      <td><strong>Enters third — new.</strong> ✅ <strong>Free tier plus paid plans and 15 connectors, launched September 29</strong> (TechCrunch, read at source).</td>
+      </tr>
+      <tr>
+      <td>4</td>
+      <td>White House frontier-safeguards accord</td>
+      <td><strong>Enters fourth — new.</strong> ✅ <strong>Six leaders signed a non-binding commitment September 29</strong> (Al Jazeera, read at source).</td>
+      </tr>
+      <tr>
+      <td>5</td>
+      <td>Claude Sonnet 5.5</td>
+      <td><strong>Drops to fifth; no new development beyond the Claude Code default change</strong> (carried).</td>
+      </tr>
+      </tbody>
+      </table></div>
+      <h3 id="2c-capability-maturity-production-readiness">2c. Capability &amp; Maturity (production readiness)</h3>
+      <div class="table-wrap"><table>
+      <thead>
+      <tr>
+      <th>Rank</th>
+      <th>Agent / Platform</th>
+      <th>Justification</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>1</td>
+      <td>Claude Code v2.1.285</td>
+      <td><strong>Holds first on shipped, GA reliability; new release September 29</strong> (changelog, read at source).</td>
+      </tr>
+      <tr>
+      <td>2</td>
+      <td>Claude Opus 5.5</td>
+      <td><strong>Holds second.</strong> ⚠️ Capability figures vendor-reported.</td>
+      </tr>
+      <tr>
+      <td>3</td>
+      <td>Claude Sonnet 5.5</td>
+      <td><strong>Holds third — GA; vendor-reported benchmarks only, no independent verification found.</strong></td>
+      </tr>
+      <tr>
+      <td>4</td>
+      <td>GPT-6.1 Sol</td>
+      <td><strong>Enters fourth — new.</strong> ✅ <strong>Generally available in the API and ChatGPT Work/Codex, though not yet in Chat; ⚠️ every benchmark in the release post is self-reported and none has been independently verified</strong> (OpenAI, read at source).</td>
+      </tr>
+      <tr>
+      <td>5</td>
+      <td>Mastercard Agent Pay</td>
+      <td><strong>Drops to fifth; no new development — still a live, completed real-money transaction on existing card rails</strong> (carried).</td>
+      </tr>
+      </tbody>
+      </table></div>
+      <p><strong>Divergence analysis.</strong> ✅ <strong>The relevance and maturity boards remain led by shipped Anthropic products, while the momentum board is now led by OpenAI's launch day, so the divergence is between where attention is and where production-ready tooling is.</strong> ⚠️ <strong>The strongest reading available, held loosely, is that OpenAI is keeping its most capable model out of release while selling a cheaper, lower-risk tier; that reading depends on press-reported statements we could not confirm in an OpenAI post.</strong> 🔶 <strong>GPT-6.1 Sol's entry on the maturity board rests entirely on vendor-reported benchmarks; the ranking will move if independent evaluations disagree.</strong></p>
+      <p><strong>What This Means for You.</strong> ✅ <strong>One vendor's pattern is worth copying in your own AI policy: shipping a cheaper, lower-autonomy tier while withholding its most capable model is applying a release gate, and your policy should say what a new model or agent must pass before deployment and who can say no.</strong> ✅ <strong>A near-Astra-class model at $2/$10 per million tokens, matching Sonnet 5.5's list price, means model choice is now about cost per completed task and safety posture, so pilot on your own tasks rather than relying on vendor-reported benchmarks.</strong> ⚠️ <strong>A voluntary, non-binding industry accord does not replace your own controls; standing guidance that autonomous agents should not run in production without scoped credentials and human review for most organizations is unchanged.</strong></p>
+      <hr />
+      <h2 id="3-agentic-ai-advances-new-releases">3. Agentic AI Advances &amp; New Releases</h2>
+      <ul>
+      <li><strong>OpenAI — GPT-6.1 Sol, September 29 (primary, read at source).</strong> ✅ <strong><code>gpt-6.1-sol</code> in the API at $2/$10; self-reported: matches GPT-6 Astra on DeepSWE v1.1 at one-fifth the cost, within 2.1 points of Astra on OSWorld 2.0 at one-seventh the cost, and 2.2 points above Claude Opus 5.5 on AutomationBench. An Ultrafast variant is described as coming soon; a separate safety addendum was also published.</strong></li>
+      <li><strong>OpenAI — DevDay platform items, September 29 (primary, read at source).</strong> ✅ <strong>Agents API with computer use and multi-agent support; Decisions API in limited preview; MCP Events for trigger-based plugin automation; Codex in the cloud and a refreshed CLI; Private Inference preview planned for fall 2026; Bedrock Managed Agents powered by OpenAI.</strong> 🔶 <strong>BGR reports GPT-6 Astra Ultrafast at six times standard API pricing and up to eight times faster in Codex; the OpenAI recap lists the speed figures but not that price, so the pricing multiple is press-reported.</strong></li>
+      <li><strong>Claude Code v2.1.285, September 29 (changelog, read at source).</strong> ✅ <strong><code>CLAUDE_CODE_DISABLE_WEB_FETCH</code> environment variable, <code>claude --desktop</code>, <code>claude plugin configure &lt;plugin&gt;</code>, and an <code>allowedProviders</code> managed setting to restrict API providers. Reminder: v2.1.284 (September 28) made Sonnet 5.5 the default Sonnet model, and v2.1.283 (September 25) added <code>deniedModels</code> and <code>availableModelsMatch</code> managed settings.</strong></li>
+      <li><strong>MCP Python SDK OAuth flaw, disclosed September 28 (The Hacker News, read at source).</strong> ✅ <strong>A malicious MCP server could redirect OAuth token exchanges to attacker-controlled endpoints and capture credentials, including client secrets and authorization codes. Affected: 1.x versions 1.9.1 through 1.29.1 and 2.x versions 2.0.0 through 2.1.1; fixed in 1.30.0 and 2.2.0. CVSS 7.5 for non-interactive providers and 6.5 for interactive; no CVE assigned as of September 29; discovered by Cycode.</strong></li>
+      <li><strong>Meta — Muse for Small Business, September 29 (TechCrunch, read at source).</strong> ✅ <strong>Connectors include Shopify, Dropbox, Slack, Asana, Box, Canva, Figma, Notion, Stripe, Zoom, and Intuit QuickBooks, plus Instagram professional analytics, Facebook Pages, and Meta ad accounts.</strong></li>
+      <li><strong>Google Gemini API release notes — read at source.</strong> ✅ <strong>Most recent entry September 22 (Gemini 3.8 Flash TTS models); no new entry since yesterday.</strong></li>
+      <li><strong>Model Context Protocol blog — read at source.</strong> ✅ <strong>No post since August 22 (roadmap).</strong></li>
+      <li><strong>Standing carries, not re-verified this run.</strong> <strong>Colorado Senate Bill 26-189</strong>, effective <strong>January 1, 2027</strong>; <strong>EU AI Act Article 50</strong> enforceable since <strong>August 2, 2026</strong>; <strong>Annex III</strong> at <strong>2 December 2027</strong>; <strong>Annex I</strong> at <strong>2 August 2028</strong>. Compliance awareness, not legal advice.</li>
+      </ul>
+      <p><strong>What This Means for You.</strong> ✅ <strong>If your tools use the official MCP Python SDK, check your version against the affected ranges and rotate any OAuth client secrets that a connected server could have reached; a patch does not undo an exposed secret.</strong> ✅ <strong>New managed settings such as <code>allowedProviders</code>, <code>deniedModels</code>, and <code>availableModelsMatch</code> let administrators pin which models and providers staff can use, which is a practical way to keep a default-model change from altering your risk posture unannounced.</strong> 🔶 <strong>Treat every vendor-reported benchmark, including the GPT-6.1 Sol figures, as a starting point for your own testing.</strong></p>
+      <hr />
+      <h2 id="4-overnight-daily-release-monitor">4. Overnight / Daily Release Monitor</h2>
+      <p>Covering <strong>Tuesday, September 29 into early Wednesday, September 30 (early-morning Eastern time).</strong> ✅ <strong>Vendor pages reached at source today: OpenAI newsroom, DevDay recap, and GPT-6.1 Sol post; Anthropic newsroom; Claude Code changelog; Gemini API release notes; MCP blog.</strong></p>
+      <ul>
+      <li><strong>Anthropic.</strong> ✅ <strong>Claude Code v2.1.285 released September 29. The newsroom index still lists September 23 as its newest post.</strong> 🔶 <strong>Forkast reports that Anthropic's own Frontier Safety Roadmap sets a September 30 deadline for a first phase of a provable-inference prototype, originally due May 15, with no public roadmap update since July 29; we did not read the roadmap itself.</strong></li>
+      <li><strong>OpenAI.</strong> ✅ <strong>DevDay recap, GPT-6.1 Sol, and a GPT-6.1 Sol safety addendum, all September 29.</strong></li>
+      <li><strong>Meta.</strong> ✅ <strong>Muse for Small Business, September 29.</strong></li>
+      <li><strong>Security.</strong> ✅ <strong>MCP Python SDK advisory, September 28 (Section 3).</strong></li>
+      <li><strong>Scheduled ahead:</strong> <strong><code>gemini-omni-flash-preview</code> deprecation, today — September 30</strong> ✅; <strong><code>antigravity-preview-05-2026</code> shutdown, October 5</strong> ✅; <strong>OpenAI executive testimony to Australia's Joint Select Committee on AI, October 6</strong> ✅ (carried from OpenAI's September 28 post, not re-read today); <strong>GPT-5.5 retirement from ChatGPT and Codex, October 14</strong> 🔶 (carried); <strong>Microsoft Ignite, November 17–20</strong> ✅ (carried).</li>
+      </ul>
+      <p><strong>What This Means for You.</strong> ✅ <strong>A busy launch day like DevDay is a reminder to separate what a vendor's own post says from what press attributes to it; today two of the most consequential statements, the Astra confirmation and the IPO deferral, are press-sourced, and decisions are best made once a primary post exists.</strong> 🔶 <strong>Deprecation dates such as today's <code>gemini-omni-flash-preview</code> endpoint are worth tracking in a simple register so an integration does not fail unannounced.</strong></p>
+      <hr />
+      <h2 id="5-ai-trading-trends">5. AI Trading Trends</h2>
+      <p><em>Market intelligence for situational awareness — not investment advice. No buy/sell/hold recommendations, price targets, or return forecasts.</em> Every figure carries a source and a confidence note. ✅ <strong>Session figures below are September 29 regular-session closes per stockanalysis.com (read at source); September 30 premarket quotes (about 4:36–5:06am ET) are shown where captured and can reverse by the 9:30am ET open.</strong> ⚠️ <strong>We did not verify the cause of any move and draw no causal line to the news above.</strong></p>
+      <h3 id="5a-ipos">5a. IPOs</h3>
+      <p>🔶 <strong>Anthropic — public filing status remains unconfirmed.</strong> ✅ <strong>Anthropic confirmed in June 2026 that it confidentially submitted a draft S-1</strong> (Anthropic, carried). ✅ <strong>Fortune reports the prospectus was leaked to Reuters and describes it as a draft, not a public filing</strong> (Fortune, read at source). ⚠️ <strong>Listing timing is disputed between an October Nasdaq report and a post-midterms report (Section 1); no ticker, price range, or date is confirmed.</strong> Reported financial figures are summarized in Section 1 with their caveats.</p>
+      <p>🔶 <strong>OpenAI — no 2026 IPO, per press.</strong> <strong>Yahoo Tech and Gizmodo report that Altman said OpenAI will not go public in 2026; we found no OpenAI post stating this.</strong></p>
+      <p>✅ <strong>Nscale (planned NYSE: NSCL) — filed for a U.S. IPO on September 18, 2026; Renaissance Capital lists a $2.0 billion deal size with price range not yet announced, and its profile now names Goldman Sachs, J.P. Morgan, and Morgan Stanley among a syndicate of 23 or more firms</strong> (Renaissance Capital, read at source). ⚠️ <strong>Other outlets cite much larger valuation figures that we could not reconcile, so we print none.</strong></p>
+      <p>⚠️ <strong>No AI-related IPO was confirmed as priced between September 29 and September 30, 2026.</strong></p>
+      <h3 id="5b-top-5-traded-ai-related-tickers-september-29-session">5b. Top 5 traded AI-related tickers — September 29 session</h3>
+      <p><em>Ranking basis this run: magnitude of the September 29 regular-session move across the eight tickers this series tracks. Inclusion reflects AI exposure and news flow. No targets, no forecasts.</em></p>
+      <div class="table-wrap"><table>
+      <thead>
+      <tr>
+      <th>#</th>
+      <th>Ticker</th>
+      <th>Company</th>
+      <th>Why it's an AI-trading bellwether</th>
+      <th>Latest verifiable signal</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>1</td>
+      <td>ORCL</td>
+      <td>Oracle</td>
+      <td>Project Jupiter data-center scrutiny</td>
+      <td>✅ <strong>Closed $137.79, up 3.91% on September 29; quoted $138.68 premarket, up 0.65%, at ~4:36am ET September 30</strong> (stockanalysis.com, read at source).</td>
+      </tr>
+      <tr>
+      <td>2</td>
+      <td>META</td>
+      <td>Meta Platforms</td>
+      <td>Muse for Small Business launch</td>
+      <td>✅ <strong>Closed $738.79, up 3.24% on September 29; quoted $737.20 premarket, down 0.22%, at ~4:42am ET September 30</strong> (stockanalysis.com, read at source).</td>
+      </tr>
+      <tr>
+      <td>3</td>
+      <td>NVDA</td>
+      <td>Nvidia</td>
+      <td>Buyback increase and agent-safety platform</td>
+      <td>✅ <strong>Closed $227.21, down 0.72% on September 29; quoted $228.15 premarket, up 0.41%, at ~5:06am ET September 30</strong> (stockanalysis.com, read at source).</td>
+      </tr>
+      <tr>
+      <td>4</td>
+      <td>GOOGL</td>
+      <td>Alphabet</td>
+      <td>Gemini platform and enterprise agent activity</td>
+      <td>✅ <strong>Closed $340.92, down 0.53% on September 29; quoted $343.85 premarket, up 0.86%, at ~4:48am ET September 30</strong> (stockanalysis.com, read at source).</td>
+      </tr>
+      <tr>
+      <td>5</td>
+      <td>AKAM</td>
+      <td>Akamai</td>
+      <td>Anthropic cloud-services deal reported at $11.6 billion over seven years</td>
+      <td>✅ <strong>Closed $108.45, down 0.50% on September 29; after-hours $108.47 at 7:59pm ET</strong> (stockanalysis.com, read at source).</td>
+      </tr>
+      </tbody>
+      </table></div>
+      <p><em>(Also tracked, September 29 closes: AMD $607.57, down 0.05%; MSFT $508.96, down 0.05%; AMZN $246.67, up 0.21% — all stockanalysis.com, read at source.)</em></p>
+      <p><strong>Context, not forecast.</strong> ✅ <strong>Oracle and Meta rose more than 3% on September 29 after a September 28 session in which seven of the eight tracked tickers fell; the other six moved by less than 1% in either direction</strong> (stockanalysis.com, read at source). ⚠️ <strong>We are reporting the data, not explaining or projecting it.</strong></p>
+      <p><strong>What This Means for You.</strong> ✅ <strong>Two AI-exposed names rose more than 3% in a session that followed broad declines, which shows how quickly sentiment can swing on product launches and policy headlines, though this report draws no causal line.</strong> ⚠️ <strong>Figures leaked from a draft prospectus should not be cited as established fact in your own materials until a public filing exists.</strong></p>
+      <h2 id="sources">Sources</h2>
+      <p><em>Verification note: this run read at source OpenAI's newsroom, DevDay recap, and GPT-6.1 Sol post; Anthropic's newsroom; the Claude Code changelog; the Gemini API release notes; the MCP blog; Renaissance Capital's Nscale page; stockanalysis.com pages for all eight tickers; and articles from Al Jazeera, Fortune, TechCrunch, The Hacker News, and Claims Journal (Reuters). Several pages were read through automated page summarization and should be checked against the linked pages before external use. CNBC's DevDay live blog returned an access error. OpenAI's Astra shelving confirmation and Altman's IPO statement are sourced to press coverage (Axios, Yahoo Tech, Gizmodo, The Hacker News) and not to an OpenAI post. Anthropic prospectus figures rest on Fortune's report of a leaked draft, not an SEC filing. Anthropic's Frontier Safety Roadmap deadline is sourced to Forkast, not the roadmap itself.</em></p>
+      <ul>
+      <li>OpenAI, "DevDay 2026 Recap," September 29, 2026 (primary). <a href="https://openai.com/index/devday-2026-recap/" target="_blank" rel="noopener">https://openai.com/index/devday-2026-recap/</a></li>
+      <li>OpenAI, "Introducing GPT-6.1 Sol," September 29, 2026 (primary; benchmarks self-reported). <a href="https://openai.com/index/introducing-gpt-6-1-sol/" target="_blank" rel="noopener">https://openai.com/index/introducing-gpt-6-1-sol/</a></li>
+      <li>OpenAI Newsroom (primary, read September 30, 2026). <a href="https://openai.com/news/" target="_blank" rel="noopener">https://openai.com/news/</a></li>
+      <li>Axios, "The 5 biggest announcements from OpenAI's blockbuster AI conference," September 29, 2026 (press). <a href="https://www.axios.com/2026/09/29/openai-dev-day-2026-dots-space-sol" target="_blank" rel="noopener">https://www.axios.com/2026/09/29/openai-dev-day-2026-dots-space-sol</a></li>
+      <li>BGR, "Everything OpenAI Announced At DevDay 2026" (press). <a href="https://www.bgr.com/2272332/openai-devday-2026-announcements/" target="_blank" rel="noopener">https://www.bgr.com/2272332/openai-devday-2026-announcements/</a></li>
+      <li>Yahoo Tech, "OpenAI DevDay 2026: Sam Altman keynote amid AI safety scrutiny" (press). <a href="https://tech.yahoo.com/ai/chatgpt/articles/openai-devday-2026-sam-altman-132804849.html" target="_blank" rel="noopener">https://tech.yahoo.com/ai/chatgpt/articles/openai-devday-2026-sam-altman-132804849.html</a></li>
+      <li>Gizmodo, "No OpenAI IPO Until the AI Stops Going Rogue, CEO Sam Altman Says" (press). <a href="https://gizmodo.com/no-openai-ipo-until-the-ai-stops-going-rogue-ceo-sam-altman-says-2000819194" target="_blank" rel="noopener">https://gizmodo.com/no-openai-ipo-until-the-ai-stops-going-rogue-ceo-sam-altman-says-2000819194</a></li>
+      <li>The Hacker News, "OpenAI Shelves GPT-6.1 Astra After Tests Find Deception and Unauthorized Actions," September 2026 (press). <a href="https://thehackernews.com/2026/09/openai-shelves-gpt-61-astra-after-tests.html" target="_blank" rel="noopener">https://thehackernews.com/2026/09/openai-shelves-gpt-61-astra-after-tests.html</a></li>
+      <li>Al Jazeera, "Trump, tech bosses sign voluntary pact pledging 'robust' AI safeguards," September 29, 2026 (press). <a href="https://www.aljazeera.com/news/2026/9/29/trump-top-tech-firms-sign-accord-to-self-police-ai-development" target="_blank" rel="noopener">https://www.aljazeera.com/news/2026/9/29/trump-top-tech-firms-sign-accord-to-self-police-ai-development</a></li>
+      <li>Fortune, "Anthropic $2 trillion IPO S-1 prospectus has leaked—and it shows steep losses," September 29, 2026 (press). <a href="https://fortune.com/2026/09/29/anthropic-ipo-s-1-prospectus-income-statement/" target="_blank" rel="noopener">https://fortune.com/2026/09/29/anthropic-ipo-s-1-prospectus-income-statement/</a></li>
+      <li>Fortune, "Anthropic's leaked IPO prospectus details steep losses, rapid growth, and a fear that AI could end humanity," September 29, 2026 (press). <a href="https://fortune.com/2026/09/29/anthropic-leaked-ipo-prospectus-losses-growth-ai-end-humanity/" target="_blank" rel="noopener">https://fortune.com/2026/09/29/anthropic-leaked-ipo-prospectus-losses-growth-ai-end-humanity/</a></li>
+      <li>Quartz, "Anthropic moving forward with $2 trillion IPO on Nasdaq," September 15, 2026 (press, citing Bloomberg). <a href="https://qz.com/anthropic-ipo-2-trillion-nasdaq-091526" target="_blank" rel="noopener">https://qz.com/anthropic-ipo-2-trillion-nasdaq-091526</a></li>
+      <li>TechCrunch, "Meta is expanding its AI agent Muse to small businesses," September 29, 2026 (press). <a href="https://techcrunch.com/2026/09/29/meta-is-expanding-its-ai-agent-muse-to-small-businesses/" target="_blank" rel="noopener">https://techcrunch.com/2026/09/29/meta-is-expanding-its-ai-agent-muse-to-small-businesses/</a></li>
+      <li>The Hacker News, "Official MCP Python SDK Flaw Can Let Malicious Servers Steal OAuth Credentials," September 2026 (press). <a href="https://thehackernews.com/2026/09/official-mcp-python-sdk-flaw-can-let.html" target="_blank" rel="noopener">https://thehackernews.com/2026/09/official-mcp-python-sdk-flaw-can-let.html</a></li>
+      <li>Claims Journal (Reuters), "Appeals Court Upholds Thomson Reuters' Landmark Win in AI Training Lawsuit," September 30, 2026 (press). <a href="https://www.claimsjournal.com/news/national/2026/09/30/340457.htm" target="_blank" rel="noopener">https://www.claimsjournal.com/news/national/2026/09/30/340457.htm</a></li>
+      <li>American Bar Association, Business Law Today, "Thomson Reuters v. Ross, One Year Later: A Narrower Precedent Than the Headlines Suggested," September 2026 (analysis; not read in full). <a href="https://businesslawtoday.org/2026/09/thomson-reuters-v-ross-one-year-later-a-narrower-precedent-than-the-headlines-suggested/" target="_blank" rel="noopener">https://businesslawtoday.org/2026/09/thomson-reuters-v-ross-one-year-later-a-narrower-precedent-than-the-headlines-suggested/</a></li>
+      <li>Forkast, "Anthropic's Self-Imposed Safety Deadline Arrives in Two Days. The Silence Is the Signal.," September 2026 (press; roadmap not read). <a href="https://forkast.news/anthropics-self-imposed-safety-deadline-arrives-in-two-days-the-silence-is-the-signal/" target="_blank" rel="noopener">https://forkast.news/anthropics-self-imposed-safety-deadline-arrives-in-two-days-the-silence-is-the-signal/</a></li>
+      <li>Anthropic Newsroom (primary, read September 30, 2026). <a href="https://www.anthropic.com/news" target="_blank" rel="noopener">https://www.anthropic.com/news</a></li>
+      <li>Claude Code changelog, v2.1.285 (primary, read September 30, 2026). <a href="https://code.claude.com/docs/en/changelog" target="_blank" rel="noopener">https://code.claude.com/docs/en/changelog</a></li>
+      <li>Google, Gemini API release notes (primary, read September 30, 2026). <a href="https://ai.google.dev/gemini-api/docs/changelog" target="_blank" rel="noopener">https://ai.google.dev/gemini-api/docs/changelog</a></li>
+      <li>Model Context Protocol Blog (primary, read September 30, 2026). <a href="https://blog.modelcontextprotocol.io/posts/" target="_blank" rel="noopener">https://blog.modelcontextprotocol.io/posts/</a></li>
+      <li>Renaissance Capital, Nscale (NSCL) IPO profile (read September 30, 2026). <a href="https://www.renaissancecapital.com/Profile/NSCL/Nscale/IPO" target="_blank" rel="noopener">https://www.renaissancecapital.com/Profile/NSCL/Nscale/IPO</a></li>
+      <li>stockanalysis.com quote pages for ORCL, META, NVDA, GOOGL, AKAM, AMD, MSFT, AMZN, accessed September 30, 2026. <a href="https://stockanalysis.com/stocks/nvda/" target="_blank" rel="noopener">https://stockanalysis.com/stocks/nvda/</a> (and equivalent tickers)</li>
+      </ul>
+    </article>
+
+    <section class="cta-band" id="contact" aria-labelledby="cta-heading">
+      <h2 id="cta-heading">From AI curiosity to AI capability</h2>
+      <p>This briefing is part of the field research behind our AI Enablement service &mdash; a curated, white-glove Claude Cowork implementation tailored to your organization&rsquo;s workflow.</p>
+      <a class="btn" href="https://calendly.com/mark-malaniru/30min" target="_blank" rel="noopener">Book a discovery call</a>
+    </section>
+    <!-- mal-ai-disclaimer:v1 -->
+  <aside class="mal-ai-disclaimer" role="note" aria-label="AI transparency notice" style="max-width:760px;margin:2.5rem auto 0;padding:1rem 1.25rem;border:1px solid #d9c3a5;border-left:4px solid #C07830;border-radius:6px;background:#faf6f0;color:#5c5347;font-size:0.82rem;line-height:1.6;box-sizing:border-box;">
+    <strong style="display:block;color:#8a5a1e;font-size:0.78rem;letter-spacing:.04em;text-transform:uppercase;margin-bottom:.35rem;">AI Transparency Notice</strong>
+    This article was produced through Malaniru&rsquo;s guided-research process: generated with the assistance of AI and reviewed by a person before publication (human-in-the-loop). In line with EU AI Act transparency obligations, we disclose that AI systems were used to create this content. It is provided for general information only, may contain inaccuracies, and is not professional advice &mdash; verify before relying on it.
+  </aside>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Malaniru Inc, LLC &middot; Lafayette, Colorado &middot; AI Enablement</p>
+    <p><a href="daily-intelligence-briefings.html">&larr; Back to Daily Intelligence Briefings</a> &middot; <a href="index.html">AI Enablement</a></p>
+      <nav class="mal-footernav" data-mal-footernav aria-label="Site" style="margin-top:0.7rem;font-size:0.82rem;line-height:1.9;">
+      <a href="about.html" style="color:#C07830;font-weight:700;text-decoration:none;">About</a> &middot;
+      <a href="pricing.html" style="color:#C07830;font-weight:700;text-decoration:none;">Pricing</a> &middot;
+      <a href="index.html" style="color:#C07830;font-weight:700;text-decoration:none;">AI Enablement</a>
+     &middot;
+      <a href="privacy-policy.html" style="color:#C07830;font-weight:700;text-decoration:none;">Privacy</a>
+    </nav>
+  </footer>
+</body>
+</html>

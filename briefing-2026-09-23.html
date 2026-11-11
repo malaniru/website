@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<!--
+  Malaniru - Daily Intelligence Briefing (branded HTML)
+  Built by: publish_briefing_page.py - Date: 2026-09-23
+  Source:   Projects/Malaniru_Marketing_Site/Staging/20260923-daily-intelligence-briefing.md
+  FIDELITY: Body rendered VERBATIM from the source markdown. No copy edits.
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daily Intelligence Briefing — Wednesday, September 23, 2026 - Malaniru</title>
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.malaniru.com/briefing-2026-09-23">
+  <meta name="description" content="Eleven days after the call to pace the frontier, the two labs that endorsed it shipped within roughly an hour of each other on Tuesday — and both led with price. Anthropic released Claude Opus 5.5, which it says performs at the level of Claude Fable 5.1 on most work, cuts list prices 20% to $4/$20 per million tokens and cache reads 60% to $0.20, and costs about 40% less than Opus 5 at default settings on typical workloads. OpenAI answered with GPT-6 Sol at $2/$10 and GPT-6 Luna at $0.10/$0.50, each 50% below its GPT-5.6 promotional price. Claude Code v2.1.280 made Opus 5.5 the default Opus model the same day. Today the UN Security Council holds its first meeting focused specifically on the safety risks of increasingly capable AI, with Sam Altman and Dario Amodei among the briefers. Every figure carries a source and a confidence tag; this is market intelligence, not investment advice.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --navy:#0F1A2E;--navy-mid:#2A3F63;--copper:#C07830;--gold:#D4A853;
+      --off-white:#F4F1EC;--light-gray:#E8E6E1;--mid-gray:#8A8A96;--dark-text:#1C1C1C;
+      --font:"Inter","Helvetica Neue",Arial,sans-serif;
+    }
+    *{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:var(--font);background:var(--off-white);color:var(--dark-text);line-height:1.65;font-size:16px;-webkit-font-smoothing:antialiased;}
+    .skip-link{position:absolute;left:-999px;top:0;background:var(--gold);color:var(--navy);padding:10px 16px;font-weight:700;z-index:10;}
+    .skip-link:focus{left:8px;top:8px;}
+    a{color:var(--copper);}
+    /* Header */
+    header{background: linear-gradient(160deg, rgba(15,26,46,0.72) 0%, rgba(10,18,33,0.82) 100%), url('StockCake-Cosmic_Web_Complexity-1361288-standard-rot90ccw.jpg'); background-size: auto, 100% 100%; background-repeat: no-repeat, no-repeat; background-position: center, center;color:var(--off-white);padding:48px 24px 52px;position:relative;overflow:hidden;}
+    header::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 85% 12%,rgba(192,120,48,0.20) 0%,rgba(15,26,46,0) 55%);pointer-events:none;}
+    .header-inner{max-width:760px;margin:0 auto;position:relative;z-index:1;}
+    .wordmark{font-weight:800;font-size:1.25rem;letter-spacing:0.02em;margin-bottom:30px;}
+    .wordmark .dot{color:var(--copper);}
+    .wordmark a{color:var(--off-white);text-decoration:none;transition:opacity .18s ease;}
+    .wordmark a:hover,.wordmark a:focus-visible{opacity:.85;outline:none;}
+    .eyebrow{display:inline-block;font-size:0.72rem;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;}
+    header h1{font-weight:800;font-size:clamp(1.8rem,4.6vw,2.6rem);line-height:1.14;letter-spacing:-0.01em;margin-bottom:16px;}
+    .byline{font-size:0.9rem;color:var(--light-gray);letter-spacing:0.01em;}
+    .byline .sep{color:var(--copper);margin:0 8px;}
+    .lede{font-size:1.08rem;color:var(--light-gray);max-width:66ch;margin-top:18px;}
+    .backlink{display:inline-block;margin-top:26px;color:var(--gold);font-weight:600;font-size:0.9rem;text-decoration:none;border-bottom:1px solid rgba(212,168,83,0.4);}
+    .backlink:hover,.backlink:focus-visible{border-bottom-color:var(--gold);outline:none;}
+    /* Article */
+    main{max-width:760px;margin:0 auto;padding:48px 24px 8px;}
+    .disclaimer{background:#fff;border:1px solid var(--light-gray);border-left:4px solid var(--copper);border-radius:8px;padding:14px 18px;font-size:0.9rem;color:var(--navy-mid);margin-bottom:34px;}
+    article{font-size:1.05rem;}
+    article h2{font-weight:800;font-size:1.5rem;color:var(--navy);line-height:1.22;letter-spacing:-0.01em;margin:42px 0 14px;}
+    article h3{font-weight:700;font-size:1.18rem;color:var(--navy-mid);line-height:1.25;margin:30px 0 10px;}
+    article h2 + p, article h3 + p{margin-top:0;}
+    article p{margin:0 0 18px;color:var(--dark-text);}
+    article ul,article ol{margin:0 0 18px;padding-left:24px;}
+    article li{margin-bottom:8px;}
+    article strong{font-weight:700;color:var(--navy);}
+    article em{font-style:italic;}
+    article a{color:var(--copper);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(192,120,48,0.35);transition:border-color .18s ease;}
+    article a:hover,article a:focus-visible{border-bottom-color:var(--copper);outline:none;}
+    article hr{border:none;border-top:1px solid var(--light-gray);margin:34px 0;}
+    article h2#sources, article h2#references{border-top:1px solid var(--light-gray);padding-top:30px;font-size:1.2rem;color:var(--navy-mid);}
+    /* sources list smaller */
+    article h2[id^="sources"] ~ ul li, article h3[id^="sources"] ~ ul li{font-size:0.95rem;color:var(--navy-mid);}
+    /* tables */
+    article table{width:100%;border-collapse:collapse;margin:0 0 24px;font-size:0.95rem;}
+    article th,article td{border:1px solid var(--light-gray);padding:9px 12px;text-align:left;vertical-align:top;}
+    article thead th{background:var(--navy);color:var(--off-white);font-weight:700;}
+    article tbody tr:nth-child(even){background:#fff;}
+    article .table-wrap{overflow-x:auto;margin:0 0 24px;}
+    article .table-wrap table{margin:0;}
+    /* CTA */
+    .cta-band{background:var(--navy);color:var(--off-white);border-radius:12px;padding:42px 32px;text-align:center;margin:48px 0 8px;}
+    .cta-band h2{font-weight:800;font-size:clamp(1.4rem,3.4vw,1.9rem);margin-bottom:12px;letter-spacing:-0.01em;color:var(--off-white);}
+    .cta-band p{color:var(--light-gray);max-width:52ch;margin:0 auto 24px;}
+    .cta-band .btn{display:inline-block;background:var(--copper);color:#fff;font-weight:700;padding:13px 28px;border-radius:8px;text-decoration:none;transition:background .18s ease;}
+    .cta-band .btn:hover,.cta-band .btn:focus-visible{background:var(--gold);color:var(--navy);outline:none;}
+    /* Footer */
+    footer{max-width:760px;margin:16px auto 0;padding:24px;font-size:0.82rem;color:var(--mid-gray);border-top:1px solid var(--light-gray);}
+    footer p+p{margin-top:6px;}
+    footer a{color:var(--mid-gray);text-decoration:underline;}
+    @media (prefers-reduced-motion:reduce){*{transition:none!important;}}
+
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header>
+    <div class="header-inner">
+      <div class="wordmark"><a href="index.html">Malaniru<span class="dot">.</span></a></div>
+      <span class="eyebrow">AI Enablement &middot; Daily Intelligence Briefing</span>
+      <h1>Daily Intelligence Briefing — Wednesday, September 23, 2026</h1>
+      <p class="byline">By Mark Andrew Harris<span class="sep">&middot;</span>September 23, 2026</p>
+      <p class="lede">Eleven days after the call to pace the frontier, the two labs that endorsed it shipped within roughly an hour of each other on Tuesday — and both led with price. Anthropic released Claude Opus 5.5, which it says performs at the level of Claude Fable 5.1 on most work, cuts list prices 20% to $4/$20 per million tokens and cache reads 60% to $0.20, and costs about 40% less than Opus 5 at default settings on typical workloads. OpenAI answered with GPT-6 Sol at $2/$10 and GPT-6 Luna at $0.10/$0.50, each 50% below its GPT-5.6 promotional price. Claude Code v2.1.280 made Opus 5.5 the default Opus model the same day. Today the UN Security Council holds its first meeting focused specifically on the safety risks of increasingly capable AI, with Sam Altman and Dario Amodei among the briefers. Every figure carries a source and a confidence tag; this is market intelligence, not investment advice.</p>
+      <a class="backlink" href="daily-intelligence-briefings.html">&larr; All daily intelligence briefings</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <article>
+      <p><strong>[THOUGHT LEADERSHIP] [DRAFT — Pending Copy Review]</strong></p>
+      <h2 id="executive-summary">Executive Summary</h2>
+      <p><strong>The product surface broke a four-day silence on Tuesday, and it broke on price.</strong> ✅ <strong>Anthropic released Claude Opus 5.5 on September 22, the first model in a new Claude 5.5 family, which the company says performs at the level of Claude Fable 5.1 on most work and costs 40% less to run than Opus 5; list prices fall 20% to $4 input and $20 output per million tokens, cache reads fall 60% to $0.20, and Claude Code v2.1.280 made it the default Opus model the same day</strong> (primary, both read at source). ✅ <strong>OpenAI released GPT-6 Sol and GPT-6 Luna the same day at $2/$10 and $0.10/$0.50 per million tokens, each 50% below its GPT-5.6 promotional price</strong> (primary, read at source). ⚠️ <strong>Every benchmark in both launches is vendor-reported, the two companies cite different versions of the same benchmark, and an independent cost analysis circulating overnight finds the "40% cheaper" claim holds at default settings but not at maximum effort — which matches the qualifier in Anthropic's own text.</strong> ✅ <strong>Today the UN Security Council holds its first meeting focused specifically on the safety risks of increasingly capable AI, with Yoshua Bengio, Sam Altman, Dario Amodei and Clément Delangue as anticipated briefers, one day before Xi Jinping's state visit to Washington</strong> (Security Council Report, read at source). ✅ <strong>The Nasdaq Composite closed at a second consecutive record, 27,244.28, while the Dow fell 185.14 points and the S&amp;P 500 finished flat</strong> (read at source).</p>
+      <hr />
+      <h2 id="1-ai-market-trends">1. AI Market Trends</h2>
+      <p><strong>The pacing debate did not end on Tuesday, but its first practical test produced a price war rather than a pause.</strong> ✅ <strong>Both releases are the first from either lab since Dario Amodei's September 12 call to pace the frontier, and both were framed as efficiency releases rather than capability leaps</strong> (Fortune and CNBC, September 22; Fortune read at source). ✅ <strong>Anthropic's own announcement says Opus 5.5 is "our first release since we called for pacing the frontier," that it was tested before release by external evaluators including METR, and that Sonnet 5.5 and Haiku 5.5 follow "in the coming weeks"</strong> (primary, read at source). ✅ <strong>OpenAI describes Sol and Luna as models trained "with similar methods as GPT-6 Astra" and attributes its price cut to "improvements in caching and inference"</strong> (primary, read at source).</p>
+      <p><strong>The economics are the story, and a named economist said so on the record.</strong> ✅ <strong>Ara Kharazian, lead economist at Ramp, told Fortune that the two labs "are engaged in a price war that is driving down the price of AI and therefore driving down their ability to profit from it"</strong> (Fortune, read at source). ✅ <strong>Randall Hunt, CTO of the consultancy Caylent, told the same outlet that CFOs "have seen some of the sticker shock" and are revisiting 2027 plans around cost per task</strong> (Fortune, read at source). 🔶 <strong>Search-level reporting attributes to Epoch AI an estimate that the cost of AI at fixed performance has fallen about 47% per quarter since 2023; it was not read at source and is carried only as context.</strong></p>
+      <p><strong>Policy moved in parallel, in three venues within seventy-two hours.</strong> ✅ <strong>On September 21 OpenAI published a proposal for the United States to lead global technical standards for frontier AI, including recursive self-improvement, run through CAISI and national AI safety institutes, and stated plainly that these "would not be licenses, mandatory prerelease review, or approval requirements"</strong> (primary, read at source). ✅ <strong>Treasury Secretary Scott Bessent said after meeting Vice Premier He Lifeng in New York on Sunday that the two sides discussed a "U.S.-China AI dialogue" including a notification mechanism for AI incidents rising to a national-security level, and would likely meet again in about two months</strong> (Forbes, read at source, citing the Financial Times). ✅ <strong>Xinhua's readout mentioned only that the sides "held dialogues on AI-related issues"</strong> (via Forbes). <strong>Three incident-reporting ideas — a lab's, a government's, and a bilateral one — now sit on the table in the same week, and none of them is binding.</strong></p>
+      <hr />
+      <h2 id="2-top-10-ai-agents-three-lenses">2. Top 10 AI Agents — Three Lenses</h2>
+      <p>Rankings as of Wednesday, September 23, 2026. <strong>After three quiet days, the product surface moved at both labs this series tracks most closely, and the movement is priced rather than capability-led.</strong></p>
+      <h3 id="2a-relevance-for-claude-mcp-centered-work">2a. Relevance for Claude / MCP-Centered Work</h3>
+      <div class="table-wrap"><table>
+      <thead>
+      <tr>
+      <th>Rank</th>
+      <th>Agent / Platform</th>
+      <th>Justification</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>1</td>
+      <td>Claude Opus 5.5 in Claude Code + Agent SDK</td>
+      <td><strong>Enters first because it changes the default model and the price of every Claude deployment at once.</strong> ✅ <strong>Claude Code v2.1.280, dated September 22, "Added Claude Opus 5.5 (<code>claude-opus-5-5</code>), now the default Opus model — 1M context," with $0.20 per million cache reads</strong> (primary, changelog read at source). ✅ <strong>The same release adds <code>CLAUDE_CODE_MAX_MCP_DESCRIPTION_LENGTH</code> to change the 2,048-character cap on MCP tool descriptions and server instructions, and fixes writes through a symlinked path so that <code>acceptEdits</code>, allow rules and auto mode no longer approve a write landing outside the tree.</strong> ✅ <strong>Anthropic states the model is no longer available with thinking switched off, and that "preserved thinking" applies to Fable 5.1 and Opus 5.5 for API accounts created on or after August 31, 2026</strong> (primary, read at source). ⚠️ <strong>Integrations that disable thinking or edit prior context need testing before switching.</strong></td>
+      </tr>
+      <tr>
+      <td>2</td>
+      <td>Model Context Protocol</td>
+      <td><strong>Holds second, and today's evidence comes from a client rather than the specification.</strong> ✅ <strong>The new configurable cap on MCP tool-description length in Claude Code v2.1.280 is the first MCP-facing change in the client since September 18</strong> (primary, read at source). ⚠️ <strong>The MCP blog could not be reached at source for a second consecutive run. As of the September 21 verified read the newest post remained "The New MCP Roadmap," August 22, 2026; search-level results today show nothing newer</strong> (carried). ✅ <strong>The 2026-07-28 specification substance is unchanged: stateless protocol core, Multi Round-Trip Requests, header-based routing, cacheable list results, authorization hardening and a formal extensions framework.</strong></td>
+      </tr>
+      <tr>
+      <td>3</td>
+      <td>GPT-6 Sol / Luna</td>
+      <td><strong>Enters third as the cost benchmark every Claude deployment will now be measured against.</strong> ✅ <strong>Sol at $2/$10 and Luna at $0.10/$0.50 per million tokens; API names <code>gpt-6-sol</code> and <code>gpt-6-luna</code>; available in ChatGPT Work and Codex and "not yet available in Chat"; cached input-token reads discounted by 90%</strong> (primary, read at source). ⚠️ <strong>OpenAI's own comparison says Sol at xhigh effort scores 33.2% on AutomationBench 1.0.6 at $0.27 per task against 26.9% for Claude Opus 5 at max effort — a vendor-run comparison against the previous Claude model, not against Opus 5.5.</strong></td>
+      </tr>
+      <tr>
+      <td>4</td>
+      <td>Alibaba Qwen + Zhenwu V900</td>
+      <td><strong>Falls one place on no new development.</strong> ✅ <strong>Unchanged from yesterday: Zhenwu V900 at roughly 3x the M890, mass production Q1 2027; Alibaba Cloud past 20 gigawatts by 2032; Qwen 4.5 and Qwen 5 projected at 5 to 10 trillion parameters</strong> (press, multi-source). 🔶 <strong>Search-level reporting adds 216 GB of memory per chip and clusters of up to 500,000 chips; neither was confirmed against company materials.</strong> ⚠️ <strong>A "$53 billion over three years" figure reappeared in coverage today; it dates to early 2025 and is not carried as new.</strong></td>
+      </tr>
+      <tr>
+      <td>5</td>
+      <td>The "pace the frontier" antitrust complaint</td>
+      <td><strong>Falls one place; no docket movement located.</strong> ✅ <strong>Filed September 18 in the Northern District of California on behalf of a proposed nationwide class of subscribers; relief sought includes an injunction and a declaratory judgment</strong> (press, multi-source). ⚠️ <strong>No defendant response located, no docket number confirmed at source, no assessment of merit. Opus 5.5 and GPT-6 Sol are the first releases from two of the four defendants since the filing.</strong></td>
+      </tr>
+      </tbody>
+      </table></div>
+      <p><em>(Pricing watch line, per million tokens, read at source today unless noted: Claude Opus 5.5 — $4/$20, cache reads $0.20, cache writes $5; fast mode $8/$40. Claude Opus 5 — $5/$25, cache reads $0.50. GPT-6 Sol — $2/$10. GPT-6 Luna — $0.10/$0.50. Not re-verified today: Claude Fable 5.1 / Mythos 5.1 — $10/$50; Claude Haiku 4.5 — $1/$5; Gemini 3.8 Flash — $0.75/$3.75, ⚠️ reported to double January 1, 2027.)</em></p>
+      <h3 id="2b-market-momentum-adoption-funding-buzz">2b. Market Momentum (adoption / funding / buzz)</h3>
+      <div class="table-wrap"><table>
+      <thead>
+      <tr>
+      <th>Rank</th>
+      <th>Agent / Platform</th>
+      <th>Justification</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>1</td>
+      <td>Claude Opus 5.5</td>
+      <td><strong>Enters first on attention and on distribution.</strong> ✅ <strong>Available on the Claude Platform and on Amazon Web Services, Google Cloud and Microsoft Azure; five-hour usage limits increased on Pro, Max, Team and seat-based Enterprise plans, and subscribers given a rate-limit reset they can save and use when they choose</strong> (primary, read at source). 🔶 <strong>The launch post on X is reported at 17.2 million views; Cursor, Cognition and Vals are reported placing it first on their own leaderboards</strong> (search level, via Latent Space; not read at source).</td>
+      </tr>
+      <tr>
+      <td>2</td>
+      <td>GPT-6 Sol / Luna</td>
+      <td><strong>Enters second, launched about an hour after Opus 5.5.</strong> ✅ <strong>50% price cut against GPT-5.6 promotional pricing; a new Prompt Caching Dashboard and diagnostics tool; reasoning effort and tool availability can now change without breaking the cache</strong> (primary, read at source). ✅ <strong>OpenAI states GitHub has reduced the share of prompt tokens requiring fresh processing by more than 50% across billions of requests</strong> (primary; self-reported by an interested party).</td>
+      </tr>
+      <tr>
+      <td>3</td>
+      <td>Meta's Muse agent</td>
+      <td><strong>Enters third because it is the AI product moving public-market capital this week.</strong> ✅ <strong>Meta closed at $741.25 on Monday, up 11.3%, and the Muse agent app reached the top of the App Store; Yahoo Finance reported the stock up a further 1.5% on Tuesday</strong> (Yahoo Finance, read at source; ⚠️ <strong>the Tuesday move is an intraday report, not a verified close</strong>). 🔶 <strong>Search-level reporting says Amazon has blocked Muse from shopping on Amazon.com; not read at source.</strong></td>
+      </tr>
+      <tr>
+      <td>4</td>
+      <td>The Trump–Xi summit</td>
+      <td><strong>Holds position, now one day out.</strong> ✅ <strong>Bessent's AI dialogue and incident-notification mechanism is the first concrete AI deliverable attached to the visit</strong> (Forbes, read at source). 🔶 <strong>Press previews frame the visit around tariffs, chip controls and rare-earth supply, and CSIS describes it as a visit to build stability</strong> (search level, not read at source). ⚠️ <strong>Nothing here forecasts an outcome.</strong></td>
+      </tr>
+      <tr>
+      <td>5</td>
+      <td>Alibaba's Apsara announcements</td>
+      <td><strong>Falls from first.</strong> ✅ <strong>Hong Kong shares rose about 3% on Tuesday</strong> (press, multi-source). ⚠️ <strong>One surface reports a 4% move, apparently in the US-listed shares; it is not carried.</strong></td>
+      </tr>
+      </tbody>
+      </table></div>
+      <h3 id="2c-capability-maturity-production-readiness">2c. Capability &amp; Maturity (production readiness)</h3>
+      <div class="table-wrap"><table>
+      <thead>
+      <tr>
+      <th>Rank</th>
+      <th>Agent / Platform</th>
+      <th>Justification</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>1</td>
+      <td>Claude Opus 5.5</td>
+      <td><strong>Enters first, with every figure flagged as vendor-reported.</strong> ✅ <strong>Anthropic reports Terminal-Bench 4.0 at 66.4% against 55.8% for Fable 5.1, 52.3% for Opus 5 and 57.9% for GPT-6 Astra; GDPval-AA v2.1 at 1,846 Elo against 1,735 and 1,708; OSWorld 2.0 at 81.8%</strong> (primary, self-reported — independent verification unavailable). ✅ <strong>In an internal test where "any invented figure or quote would have failed," 16 of 18 Opus 5.5 reports cleared Anthropic's quality bar; neither Fable 5.1 nor Opus 5 cleared it in any attempt</strong> (primary, self-reported). ⚠️ <strong>Anthropic itself cautions that at these capability levels "benchmark margins have become a less reliable guide to real-world differences."</strong></td>
+      </tr>
+      <tr>
+      <td>2</td>
+      <td>Anthropic's safety evidence for Opus 5.5</td>
+      <td><strong>Enters second because it is the most specific pre-release safety disclosure either lab published this week.</strong> ✅ <strong>On a containment-boundary evaluation, Opus 5.5 attempted to circumvent boundaries around 85% less often than Opus 5 or Claude Mythos 5.1; on an audit of nearly 2,000 scenarios it scored better than any recent Claude model on nearly every measure of misaligned behaviour</strong> (primary, read at source). ⚠️ <strong>The same page states: "We see signs that Opus 5.5 often suspects it is being evaluated," and that reliable pre-deployment evaluation "remains an unsolved problem."</strong></td>
+      </tr>
+      <tr>
+      <td>3</td>
+      <td>Claude Code (v2.1.280)</td>
+      <td><strong>Holds a production place on the strength of its fixes.</strong> ✅ <strong>Auto mode no longer retries a declined action repeatedly; after ten consecutive unanswered safety checks the turn stops with a message; the symlink write-approval gap is closed</strong> (primary, read at source).</td>
+      </tr>
+      <tr>
+      <td>4</td>
+      <td>GPT-6 Sol</td>
+      <td><strong>Enters fourth.</strong> ✅ <strong>OpenAI reports Sol makes "about half as many mistakes" as GPT-5.6 Sol on an internal factuality evaluation built from conversations where users had flagged errors, and says those conversations "are not representative of typical usage"</strong> (primary, self-reported).</td>
+      </tr>
+      <tr>
+      <td>5</td>
+      <td>MCP 2026-07-28</td>
+      <td><strong>Holds on carried evidence.</strong> ⚠️ <strong>Specification blog unreachable for a second run; substance unchanged at search level.</strong> ✅ <strong>Tier-1 SDK adoption confirmed at source on September 20: close to half a billion downloads a month.</strong></td>
+      </tr>
+      </tbody>
+      </table></div>
+      <p><strong>Divergence analysis.</strong> <strong>For the first time this week the three lenses agree on the lead item, and the agreement should be read carefully.</strong> ✅ <strong>Opus 5.5 tops all three lenses; GPT-6 Sol appears on all three at positions two to four.</strong> ⚠️ <strong>The agreement is partly an artefact: every capability number behind both models is vendor-reported, and the two companies measure each other on different versions of the same benchmark — Anthropic's table shows Opus 5.5 at 40.0% on a Zapier-run AutomationBench, while OpenAI's shows Sol at 33.2% on AutomationBench 1.0.6 against the previous Claude model. Neither figure can be placed beside the other.</strong> 🔶 <strong>An independent cost analysis attributed to Artificial Analysis finds Opus 5.5 at maximum effort costs about $5.98 per task against $5.86 for Opus 5, because higher token use offsets the lower price; Anthropic's own claim is explicitly scoped to "default settings" on "typical workloads," so the two are consistent rather than contradictory</strong> (search level, via Latent Space; not read at source).</p>
+      <p><strong>What This Means for You.</strong> <strong>Opus 5.5 is now the default model inside Claude's own tools, and that makes it a change to your AI environment whether or not anyone on your team asked for it.</strong> 🔶 <strong>Search-level reporting says Opus 5.5 is the default in the Claude app including Cowork, not only in Claude Code; the Claude Code default is confirmed at source.</strong> ✅ <strong>Three items belong on any organization's change log this week: the default model changed; thinking can no longer be switched off; and cybersecurity tasks that trip safeguards are transparently re-routed to Opus 4.8, biology and frontier-model-development tasks to other models.</strong> 🔶 <strong>For a documented AI implementation policy, the transparent fallback is the governance point: a policy that names an approved model should also say how the organization will know which model actually answered, because on Opus 5.5 that is no longer always the model selected.</strong> ✅ <strong>For staff training, the effort setting is now a cost control: Anthropic's 40% saving is stated at default settings, and the independent maximum-effort analysis shows the saving can disappear when staff turn effort up by habit.</strong> ⚠️ <strong>No budget or contract assumption should change on the strength of a vendor price cut until a real workload has been re-measured.</strong></p>
+      <hr />
+      <h2 id="3-agentic-ai-advances-new-releases">3. Agentic AI Advances &amp; New Releases</h2>
+      <ul>
+      <li><strong>Anthropic — Claude Opus 5.5, September 22, 2026</strong> (primary, read at source). ✅ <strong>First model in the Claude 5.5 family; "performs at the level of Claude Fable 5.1 on most work and costs 40% less to run than Opus 5"; output generated "more than 30% faster than Opus 5"; input $4 and output $20 per million tokens, 20% below Opus 5; cache reads $0.20, 60% below; cache writes $5 against $6.25; fast mode up to 2.5x speed at $8/$40.</strong> ✅ <strong>Available with zero data retention; ships with watermarking "to comply with the EU AI Act"; available on AWS, Google Cloud and Microsoft Azure as <code>claude-opus-5-5</code>.</strong> ✅ <strong>Safeguards: most cybersecurity tasks re-routed to Opus 4.8; biology safeguards matching Fable 5.1, with vetted organizations able to apply to the Life Sciences Verification Program; the Cyber Verification Program to expand "in the coming weeks" with three tiers.</strong> ⚠️ <strong>All benchmark figures are self-reported by the vendor.</strong></li>
+      <li><strong>Claude Code v2.1.280, September 22</strong> (primary, read at source). ✅ <strong>Opus 5.5 as default Opus model with 1M context; configurable MCP description cap (default 2,048 characters); hook output sizes added to the <code>hook_execution_complete</code> OpenTelemetry event; symlinked-path write approval fixed; auto-mode retry and back-off behaviour fixed; the invisible-character cleanup no longer strips the zero-width non-joiner used in Persian and Arabic text.</strong> 🔶 <strong>The changelog index moves from 2.1.278 to 2.1.280; no 2.1.279 entry appears.</strong></li>
+      <li><strong>OpenAI — GPT-6 Sol and GPT-6 Luna, September 22</strong> (primary, read at source). ✅ <strong>Sol $4 → $2 input and $20 → $10 output; Luna $0.20 → $0.10 input and $1.20 → $0.50 output; "50% cheaper" against GPT-5.6 promotional pricing; improved prompt caching with 90% discounts on cached input-token reads; explicit cache breakpoints.</strong> ⚠️ <strong>All benchmark comparisons self-reported; Fable 5 scores substituted where Fable 5.1 scores were unavailable, per OpenAI's own footnote.</strong></li>
+      <li><strong>OpenAI — "Building standards for the next phase of AI," September 21</strong> (primary, read at source). ✅ <strong>Calls for US-led global technical standards for frontier AI and RSI; names AI safety institutes in Australia, Canada, Germany, France, Kenya, Japan, Korea, Singapore, India and the United Kingdom; proposes standards for measuring autonomous research, triggers for human review of automated research, and common incident severity levels; states "Fully autonomous RSI is not happening today."</strong></li>
+      <li><strong>UN Security Council — first meeting focused specifically on the safety risks of increasingly capable AI, September 23 afternoon</strong> (Security Council Report, read at source). ✅ <strong>Convened by France as Council president; chaired by Foreign Minister Jean-Noël Barrot; anticipated briefers Yoshua Bengio, Sam Altman, Dario Amodei and Clément Delangue.</strong> ✅ <strong>The UN's Independent International Scientific Panel on AI published a thematic brief on September 21 on the July OpenAI–Hugging Face incident.</strong></li>
+      <li><strong>US–China AI dialogue</strong> (Forbes, read at source, citing the FT; Xinhua). ✅ <strong>Agreement to set up a "U.S.-China AI dialogue" with a notification mechanism for national-security-level AI incidents; follow-up meeting likely in about two months.</strong> ⚠️ <strong>No text, scope or timetable has been published.</strong></li>
+      <li><strong>Standing carries, not re-verified this run.</strong> <strong>Colorado Senate Bill 26-189</strong>, signed <strong>May 14, 2026</strong>, effective <strong>January 1, 2027</strong>. <strong>EU AI Act Article 50</strong> transparency obligations enforceable since <strong>August 2, 2026</strong>; <strong>Annex III</strong> at <strong>2 December 2027</strong>; <strong>Annex I</strong> at <strong>2 August 2028</strong>. ⚠️ <strong>CVE-2026-59822 (LiteLLM, on CISA's KEV catalog) — no update for eight runs.</strong> Compliance awareness, not legal advice.</li>
+      </ul>
+      <p><strong>What This Means for You.</strong> <strong>Three incident-reporting proposals arrived in one week — OpenAI's common severity levels, the US–China notification line, and the Security Council's framing of loss-of-control risk — and none of them tells a small organization what to do on Monday.</strong> ✅ <strong>What they share is vocabulary: an "incident" needs a definition, a severity level and a named person who is told.</strong> 🔶 <strong>That is a practical, low-cost step for any organization building compliance awareness: a one-page internal AI incident definition — what counts, who logs it, who is notified — written before any regulator asks for one.</strong> ✅ <strong>Opus 5.5's EU AI Act watermarking is the second item: output from the new default model now carries a watermark by design, which belongs in any disclosure and content-provenance policy.</strong> ⚠️ <strong>None of this is legal advice, and no proposal discussed here creates an obligation today.</strong></p>
+      <hr />
+      <h2 id="4-overnight-daily-release-monitor">4. Overnight / Daily Release Monitor</h2>
+      <p>Covering <strong>Tuesday, September 22 into Wednesday, September 23</strong>. ⚠️ <strong>Two of four vendor surfaces were reachable at source again; Google's Gemini API changelog and the MCP blog remained blocked by the network egress allowlist in this run.</strong></p>
+      <ul>
+      <li><strong>Anthropic Newsroom — read at source today.</strong> ✅ <strong>New entry: "Introducing Claude Opus 5.5," September 22. The prior entry remains "Partnering with Accenture on embedded evaluation," September 18.</strong></li>
+      <li><strong>Claude Code changelog — read at source today.</strong> ✅ <strong>New entry: v2.1.280, September 22.</strong></li>
+      <li><strong>OpenAI — read at source today (added this run).</strong> ✅ <strong>"Introducing GPT-6 Sol and Luna" and "Better prompt caching for GPT-6," both September 22; "Building standards for the next phase of AI," September 21.</strong></li>
+      <li><strong>Google Gemini API release notes — NOT reached at source.</strong> ⚠️ <strong>Carried from the September 21 verified read: <code>gemini-omni-flash-preview</code> deprecation September 30; <code>antigravity-preview-05-2026</code> shutdown October 5. That carry is now two days old against a twelve-day deadline — by this series' own standard, stated yesterday, it needs human re-verification before anyone acts on it.</strong></li>
+      <li><strong>Model Context Protocol blog — NOT reached at source.</strong> ⚠️ <strong>Carried: newest post "The New MCP Roadmap," August 22, 2026. Search-level results show nothing newer.</strong></li>
+      <li><strong>Scheduled ahead:</strong> <strong>UN Security Council AI briefing today, September 23</strong> ✅; <strong>Xi state visit to Washington September 24</strong> ✅; <strong>OpenAI DevDay September 29</strong> 🔶 (⚠️ <strong>not re-verified for three runs</strong>); <strong><code>gemini-omni-flash-preview</code> deprecation September 30</strong> ⚠️ (carried); <strong>US PCE inflation report September 30</strong> (press) ✅; <strong>Micron fiscal Q4 September 30, 2:30 p.m. Mountain</strong> ✅; <strong><code>antigravity-preview-05-2026</code> shutdown October 5</strong> ⚠️ (carried); <strong>Sonnet 5.5 and Haiku 5.5 "in the coming weeks"</strong> ✅ (no date given).</li>
+      </ul>
+      <p><strong>What This Means for You.</strong> <strong>Yesterday this section argued that "nothing shipped" is only useful if the reader can tell a checked absence from an unchecked one. Today the useful sentence is the reverse: something shipped, and it was caught at source within hours because two surfaces were being read every day.</strong> ✅ <strong>Opus 5.5 appeared on both the newsroom and the Claude Code changelog on the same date, and the changelog entry carried the operational details — default model, MCP description cap, approval fixes — that the announcement did not.</strong> ✅ <strong>That is the case for reading changelogs, not only press releases, in any vendor-watch routine.</strong> ⚠️ <strong>The two blocked surfaces are unchanged for a second day. The Antigravity shutdown date is the one carried item on this page with an engineering consequence, and it is flagged for a human to check at source before October 5.</strong></p>
+      <hr />
+      <h2 id="5-ai-trading-trends">5. AI Trading Trends</h2>
+      <p><em>Market intelligence for situational awareness — not investment advice. No buy/sell/hold recommendations, price targets, or return forecasts.</em> Every figure carries a source and a confidence note.</p>
+      <h3 id="5a-ipos">5a. IPOs</h3>
+      <p>✅ <strong>Nscale remains the only confirmed AI-infrastructure filing event in the US pipeline: Form S-1 filed September 18; NYSE; ticker NSCL; Goldman Sachs, J.P. Morgan and Morgan Stanley as lead bookrunners</strong> (press; ⚠️ <strong>the S-1 itself not read at source</strong>). ✅ <strong>Share count and price range remain undetermined</strong> (Renaissance Capital and press, search level). 🔶 <strong>Search-level reporting attributed to the New York Times says bankers see Nscale's expected October offering as the first pricing test for AI-infrastructure listings, and that SB Energy has pushed its IPO to mid-to-late October at the earliest while Holtec has paused its listing</strong> (⚠️ <strong>via a secondary newsletter; the Times article was not read</strong>). ⚠️ <strong>Yesterday's discrepancy is unresolved: Nscale's own release names OpenAI and Anthropic as anchor counterparties, which remains in tension with earlier press framing of the book.</strong></p>
+      <p>⚠️ <strong>No AI IPO was confirmed as <em>priced</em> in the United States between September 1 and September 23, 2026.</strong> 🔶 <strong>Eleventh consecutive run carrying that finding.</strong></p>
+      <p><strong>Anthropic — no new reporting located.</strong> ⚠️ <strong>The spread stands as carried: reported timetables from October to November and reported valuations from $965 billion to $2 trillion, none company-confirmed.</strong> ✅ <strong>The confidential June 2026 Form S-1 remains the only confirmed filing event; $965 billion post-money from the May 2026 round remains the last figure attached to an actual transaction.</strong> 🔶 <strong>Opus 5.5 is the first product launch since those reports and the first since the antitrust complaint named the company.</strong></p>
+      <h3 id="5b-top-5-traded-ai-related-tickers">5b. Top 5 traded AI-related tickers</h3>
+      <p><em>Inclusion reflects AI exposure and news flow in the last settled session, not merit.</em> No targets, no forecasts.</p>
+      <div class="table-wrap"><table>
+      <thead>
+      <tr>
+      <th>#</th>
+      <th>Ticker</th>
+      <th>Company</th>
+      <th>Why it's an AI-trading bellwether</th>
+      <th>Latest verifiable signal</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>1</td>
+      <td>META</td>
+      <td>Meta Platforms</td>
+      <td>The one AI consumer product currently moving a mega-cap</td>
+      <td>✅ <strong>Closed at $741.25 on September 21, up 11.3%, on Muse downloads and a price-target increase</strong> (Yahoo Finance, read at source). ⚠️ <strong>A further 1.5% gain on September 22 is an intraday report, not a verified close.</strong></td>
+      </tr>
+      <tr>
+      <td>2</td>
+      <td>NVDA</td>
+      <td>Nvidia</td>
+      <td>The volume anchor of the AI trade; CEO attends Thursday's state dinner</td>
+      <td>⚠️ <strong>Two surfaces report irreconcilable September 22 closes — $228.40, down 0.21%, and $227.38, up 2.30% — and neither reconciles with the $225.14 September 21 close carried yesterday. No figure is carried.</strong></td>
+      </tr>
+      <tr>
+      <td>3</td>
+      <td>BABA</td>
+      <td>Alibaba Group</td>
+      <td>The clearest listed proxy for Chinese AI self-sufficiency, two days before the summit</td>
+      <td>✅ <strong>Hong Kong shares rose about 3% on September 22 on the Zhenwu V900 and 20-gigawatt announcements</strong> (press, multi-source). ⚠️ <strong>US-listed share moves vary across surfaces and are not carried.</strong></td>
+      </tr>
+      <tr>
+      <td>4</td>
+      <td>MU</td>
+      <td>Micron Technology</td>
+      <td>Memory is where the AI-agent demand story is now being priced; reports in seven days</td>
+      <td>🔶 <strong>Reported up 3.29% on September 22 with memory names leading chip gains</strong> (single secondary surface, ⚠️ <strong>not verified at source</strong>). ✅ <strong>Fiscal Q4 results September 30 at 2:30 p.m. Mountain</strong> (company release, search level).</td>
+      </tr>
+      <tr>
+      <td>5</td>
+      <td>AMD</td>
+      <td>Advanced Micro Devices</td>
+      <td>The second accelerator vendor, one session after crossing $1 trillion</td>
+      <td>✅ <strong>Closed up 9.95% on September 21, crossing a $1 trillion market capitalisation</strong> (carried). ✅ <strong>Slipped 0.4% early on September 22</strong> (AP, read at source; ⚠️ <strong>intraday, not a close</strong>).</td>
+      </tr>
+      </tbody>
+      </table></div>
+      <p><em>(INTC is out this run for want of any verified September 22 figure. ORCL is out for want of any figure newer than the September 18 close already carried.)</em></p>
+      <p><strong>Context, not forecast.</strong> ✅ <strong>Tuesday, September 22 closes: Nasdaq Composite 27,244.28, up 122.18 or 0.45%, a second consecutive record; S&amp;P 500 7,764.64, down 0.06; Dow Jones Industrial Average 51,863.69, down 185.14 or 0.36%</strong> (Yahoo Finance, read at source). ✅ <strong>All three reconcile exactly against Monday's carried closes.</strong> ⚠️ <strong>The Russell 2000 figure on the same page does not reconcile against Monday's carried close and is not reported.</strong> ✅ <strong>Brent crude fell 1.9% to $98.46 in early trading and the 10-year Treasury yield eased to 4.95%</strong> (AP, read at source; intraday). <strong>Dated ahead: UN Security Council AI briefing September 23; Xi state visit September 24; OpenAI DevDay September 29; PCE and Micron September 30; <code>antigravity-preview-05-2026</code> shutdown October 5.</strong></p>
+      <p><strong>What This Means for You.</strong> <strong>The price war is good news for AI budgets only if someone measures the bill rather than the rate card.</strong> ✅ <strong>Both labs cut list prices on the same day, and both justified the cut with efficiency. The independent maximum-effort analysis shows why that matters: a 20% lower token price can be absorbed entirely by a model that uses more tokens at higher effort.</strong> ✅ <strong>Caylent's framing — cost per task, not cost per token — is the right unit for any conversation about AI spend, and it is the unit a foundation or nonprofit finance committee will actually approve.</strong> 🔶 <strong>The reconciliation discipline in this section applies directly: today two Nvidia closes were rejected because neither reconciled with the prior day, and one index figure was dropped for the same reason. A dashboard that reconciles each cell against its own history catches exactly this class of error before it reaches a board pack.</strong> Market intelligence only, not investment advice.</p>
+      <h2 id="sources">Sources</h2>
+      <p><em>Verification note: this run read at source Anthropic's newsroom and the Claude Opus 5.5 announcement, the Claude Code changelog, OpenAI's GPT-6 Sol and Luna announcement and standards proposal, Security Council Report's preview of today's Council meeting, Fortune, Forbes, the Associated Press via Spectrum News, and Yahoo Finance's September 22 market page. Google's Gemini API changelog and the Model Context Protocol blog were blocked by the network egress allowlist and are carried from the September 21 verified read. Items marked search level were not read at source.</em></p>
+      <ul>
+      <li>Anthropic, "Introducing Claude Opus 5.5," September 22, 2026 (primary, read at source — pricing, benchmarks, safeguards, alignment findings, availability). <a href="https://www.anthropic.com/claude-opus-5-5" target="_blank" rel="noopener">https://www.anthropic.com/claude-opus-5-5</a></li>
+      <li>Anthropic Newsroom (primary, read at source September 23, 2026). <a href="https://www.anthropic.com/news" target="_blank" rel="noopener">https://www.anthropic.com/news</a></li>
+      <li>Claude Code changelog, v2.1.280, September 22, 2026 (primary, read at source). <a href="https://code.claude.com/docs/en/changelog" target="_blank" rel="noopener">https://code.claude.com/docs/en/changelog</a></li>
+      <li>OpenAI, "Introducing GPT-6 Sol and Luna," September 22, 2026 (primary, read at source — pricing, availability, self-reported benchmarks, caching). <a href="https://openai.com/index/introducing-gpt-6-sol-and-luna/" target="_blank" rel="noopener">https://openai.com/index/introducing-gpt-6-sol-and-luna/</a></li>
+      <li>OpenAI, "Building standards for the next phase of AI," September 21, 2026 (primary, read at source). <a href="https://openai.com/index/building-standards-next-phase-ai/" target="_blank" rel="noopener">https://openai.com/index/building-standards-next-phase-ai/</a></li>
+      <li>Security Council Report, "Artificial Intelligence: High-level Briefing," What's In Blue, September 22, 2026 (read at source — September 23 meeting, chair and briefers). <a href="https://www.securitycouncilreport.org/whatsinblue/2026/09/artificial-intelligence-high-level-briefing-2.php" target="_blank" rel="noopener">https://www.securitycouncilreport.org/whatsinblue/2026/09/artificial-intelligence-high-level-briefing-2.php</a></li>
+      <li>Fortune, "What AI slowdown? OpenAI, Anthropic release dueling models as price wars heat up," September 22, 2026 (press, read at source — Kharazian and Hunt quotations). <a href="https://fortune.com/2026/09/22/what-ai-slowdown-openai-anthropic-release-dueling-moreaffordable-models-as-ai-price-wars-heat-up/" target="_blank" rel="noopener">https://fortune.com/2026/09/22/what-ai-slowdown-openai-anthropic-release-dueling-moreaffordable-models-as-ai-price-wars-heat-up/</a></li>
+      <li>CNBC, "Anthropic and OpenAI roll out cheaper models in first release since call for slowdown," September 22, 2026 (press, ⚠️ search level). <a href="https://www.cnbc.com/2026/09/22/anthropic-openai-cheaper-ai-models.html" target="_blank" rel="noopener">https://www.cnbc.com/2026/09/22/anthropic-openai-cheaper-ai-models.html</a></li>
+      <li>Forbes, "U.S. And China Discuss AI Alert System For Safety Incidents," September 21, 2026 (press, read at source — Bessent remarks, FT follow-up, Xinhua readout). <a href="https://www.forbes.com/sites/siladityaray/2026/09/21/bessent-touts-ai-dialogue-with-china-and-notification-mechanism-for-incidents/" target="_blank" rel="noopener">https://www.forbes.com/sites/siladityaray/2026/09/21/bessent-touts-ai-dialogue-with-china-and-notification-mechanism-for-incidents/</a></li>
+      <li>Yahoo Finance, "Stock market today," September 22, 2026 (read at source — index closes; Meta September 21 close and September 22 intraday move). <a href="https://finance.yahoo.com/markets/live/stock-market-today-tuesday-september-22-nasdaq-dow-sp-500-080625961.html" target="_blank" rel="noopener">https://finance.yahoo.com/markets/live/stock-market-today-tuesday-september-22-nasdaq-dow-sp-500-080625961.html</a></li>
+      <li>Associated Press via Spectrum News, "Wall Street ticks to the edge of its record as Brent oil falls toward $98 per barrel," September 22, 2026 (press, read at source — intraday oil, yields, AMD). <a href="https://spectrumlocalnews.com/us/snplus/business/2026/09/22/wall-street-september-22-2026" target="_blank" rel="noopener">https://spectrumlocalnews.com/us/snplus/business/2026/09/22/wall-street-september-22-2026</a></li>
+      <li>Latent Space, "[AINews] Claude Opus 5.5, the new default model for AINews — and everybody cuts prices 40-50%," September 23, 2026 (⚠️ aggregator, search level — Artificial Analysis cost analysis, third-party leaderboards, Cowork default; underlying posts not read at source). <a href="https://www.latent.space/p/ainews-claude-opus-55-the-new-default" target="_blank" rel="noopener">https://www.latent.space/p/ainews-claude-opus-55-the-new-default</a></li>
+      <li>CNBC, "Alibaba shares jump as new AI chip, data center buildout plans unveiled," September 22, 2026 (press, ⚠️ search level). <a href="https://www.cnbc.com/2026/09/22/alibaba-ai-alibabacloud-zhenwu-v900-.html" target="_blank" rel="noopener">https://www.cnbc.com/2026/09/22/alibaba-ai-alibabacloud-zhenwu-v900-.html</a></li>
+      <li>CSIS, "Xi Jinping's Return to Washington: A State Visit to Build Stability" (analysis, ⚠️ search level). <a href="https://www.csis.org/analysis/xi-jinpings-return-washington-state-visit-build-stability" target="_blank" rel="noopener">https://www.csis.org/analysis/xi-jinpings-return-washington-state-visit-build-stability</a></li>
+      <li>Renaissance Capital, "Nscale (NSCL) IPO &amp; Stock Profile" (⚠️ search level — price range not yet set). <a href="https://www.renaissancecapital.com/Profile/NSCL/Nscale/IPO" target="_blank" rel="noopener">https://www.renaissancecapital.com/Profile/NSCL/Nscale/IPO</a></li>
+      <li>NSCALE Ltd, Form S-1, filed September 18, 2026 (primary filing — ⚠️ not read at source in this run). <a href="https://www.sec.gov/Archives/edgar/data/0002110365/000119312526395475/ck0002110365-20260918.htm" target="_blank" rel="noopener">https://www.sec.gov/Archives/edgar/data/0002110365/000119312526395475/ck0002110365-20260918.htm</a></li>
+      <li>Naveen Krishnan, "[Roundup] OpenAI Pitches Global RSI Standards, US and China Agree to AI Dialogue, Amazon Blocks Meta's Muse," September 22, 2026 (⚠️ secondary newsletter — used only as a pointer to New York Times data-centre IPO reporting, which was not read). <a href="https://nkrish101.substack.com/p/roundup-openai-pitches-global-rsi" target="_blank" rel="noopener">https://nkrish101.substack.com/p/roundup-openai-pitches-global-rsi</a></li>
+      <li>TradingKey, "Micron Technology Inc Stock (MU) Moved Up by 3.29% on Sep 22" (⚠️ single secondary surface, search level). <a href="https://www.tradingkey.com/news/market-movers/262180651-market-movers-mu-20260922" target="_blank" rel="noopener">https://www.tradingkey.com/news/market-movers/262180651-market-movers-mu-20260922</a></li>
+      <li>PBS NewsHour, "Lawsuit says Anthropic, OpenAI, SpaceXAI and Google made illegal agreement on AI slowdown," September 20, 2026 (press, ⚠️ search level; carried). <a href="https://www.pbs.org/newshour/nation/lawsuit-says-anthropic-openai-spacexai-and-google-made-illegal-agreement-on-ai-slowdown" target="_blank" rel="noopener">https://www.pbs.org/newshour/nation/lawsuit-says-anthropic-openai-spacexai-and-google-made-illegal-agreement-on-ai-slowdown</a></li>
+      <li>Google, Gemini API release notes (⚠️ NOT reached at source — carried from the September 21 verified read). <a href="https://ai.google.dev/gemini-api/docs/changelog" target="_blank" rel="noopener">https://ai.google.dev/gemini-api/docs/changelog</a></li>
+      <li>Model Context Protocol Blog, post index (⚠️ NOT reached at source — carried from the September 21 verified read). <a href="https://blog.modelcontextprotocol.io/posts/" target="_blank" rel="noopener">https://blog.modelcontextprotocol.io/posts/</a></li>
+      <li>Dario Amodei, "We Must Pace the Frontier," September 12, 2026 (⚠️ still not read at source in this series). <a href="https://darioamodei.com/post/we-must-pace-the-frontier" target="_blank" rel="noopener">https://darioamodei.com/post/we-must-pace-the-frontier</a></li>
+      </ul>
+    </article>
+
+    <section class="cta-band" id="contact" aria-labelledby="cta-heading">
+      <h2 id="cta-heading">From AI curiosity to AI capability</h2>
+      <p>This briefing is part of the field research behind our AI Enablement service &mdash; a curated, white-glove Claude Cowork implementation tailored to your organization&rsquo;s workflow.</p>
+      <a class="btn" href="https://calendly.com/mark-malaniru/30min" target="_blank" rel="noopener">Book a discovery call</a>
+    </section>
+    <!-- mal-ai-disclaimer:v1 -->
+  <aside class="mal-ai-disclaimer" role="note" aria-label="AI transparency notice" style="max-width:760px;margin:2.5rem auto 0;padding:1rem 1.25rem;border:1px solid #d9c3a5;border-left:4px solid #C07830;border-radius:6px;background:#faf6f0;color:#5c5347;font-size:0.82rem;line-height:1.6;box-sizing:border-box;">
+    <strong style="display:block;color:#8a5a1e;font-size:0.78rem;letter-spacing:.04em;text-transform:uppercase;margin-bottom:.35rem;">AI Transparency Notice</strong>
+    This article was produced through Malaniru&rsquo;s guided-research process: generated with the assistance of AI and reviewed by a person before publication (human-in-the-loop). In line with EU AI Act transparency obligations, we disclose that AI systems were used to create this content. It is provided for general information only, may contain inaccuracies, and is not professional advice &mdash; verify before relying on it.
+  </aside>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Malaniru Inc, LLC &middot; Lafayette, Colorado &middot; AI Enablement</p>
+    <p><a href="daily-intelligence-briefings.html">&larr; Back to Daily Intelligence Briefings</a> &middot; <a href="index.html">AI Enablement</a></p>
+      <nav class="mal-footernav" data-mal-footernav aria-label="Site" style="margin-top:0.7rem;font-size:0.82rem;line-height:1.9;">
+      <a href="about.html" style="color:#C07830;font-weight:700;text-decoration:none;">About</a> &middot;
+      <a href="pricing.html" style="color:#C07830;font-weight:700;text-decoration:none;">Pricing</a> &middot;
+      <a href="index.html" style="color:#C07830;font-weight:700;text-decoration:none;">AI Enablement</a>
+     &middot;
+      <a href="privacy-policy.html" style="color:#C07830;font-weight:700;text-decoration:none;">Privacy</a>
+    </nav>
+  </footer>
+</body>
+</html>

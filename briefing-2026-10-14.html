@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<!--
+  Malaniru - Daily Intelligence Briefing (branded HTML)
+  Built by: publish_briefing_page.py - Date: 2026-10-14
+  Source:   Projects/Malaniru_Marketing_Site/Staging/20261014-daily-intelligence-briefing.md
+  FIDELITY: Body rendered VERBATIM from the source markdown. No copy edits.
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daily Intelligence Briefing — Wednesday, October 14, 2026 - Malaniru</title>
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.malaniru.com/briefing-2026-10-14">
+  <meta name="description" content="Wednesday pre-market: Google&#x27;s Gemini API changelog lists Gemini 4 Argon as generally available on October 13, Claude Code shipped v2.1.299 today, and Anthropic&#x27;s and OpenAI&#x27;s newsrooms show nothing new since October 8. A Bloomberg-sourced report puts an Anthropic investor event on October 14, which Anthropic has not confirmed. Every figure carries a source and a confidence tag. This is market intelligence, not investment advice.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --navy:#0F1A2E;--navy-mid:#2A3F63;--copper:#C07830;--gold:#D4A853;
+      --off-white:#F4F1EC;--light-gray:#E8E6E1;--mid-gray:#8A8A96;--dark-text:#1C1C1C;
+      --font:"Inter","Helvetica Neue",Arial,sans-serif;
+    }
+    *{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:var(--font);background:var(--off-white);color:var(--dark-text);line-height:1.65;font-size:16px;-webkit-font-smoothing:antialiased;}
+    .skip-link{position:absolute;left:-999px;top:0;background:var(--gold);color:var(--navy);padding:10px 16px;font-weight:700;z-index:10;}
+    .skip-link:focus{left:8px;top:8px;}
+    a{color:var(--copper);}
+    /* Header */
+    header{background: linear-gradient(160deg, rgba(15,26,46,0.72) 0%, rgba(10,18,33,0.82) 100%), url('StockCake-Cosmic_Web_Complexity-1361288-standard-rot90ccw.jpg'); background-size: auto, 100% 100%; background-repeat: no-repeat, no-repeat; background-position: center, center;color:var(--off-white);padding:48px 24px 52px;position:relative;overflow:hidden;}
+    header::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 85% 12%,rgba(192,120,48,0.20) 0%,rgba(15,26,46,0) 55%);pointer-events:none;}
+    .header-inner{max-width:760px;margin:0 auto;position:relative;z-index:1;}
+    .wordmark{font-weight:800;font-size:1.25rem;letter-spacing:0.02em;margin-bottom:30px;}
+    .wordmark .dot{color:var(--copper);}
+    .wordmark a{color:var(--off-white);text-decoration:none;transition:opacity .18s ease;}
+    .wordmark a:hover,.wordmark a:focus-visible{opacity:.85;outline:none;}
+    .eyebrow{display:inline-block;font-size:0.72rem;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;}
+    header h1{font-weight:800;font-size:clamp(1.8rem,4.6vw,2.6rem);line-height:1.14;letter-spacing:-0.01em;margin-bottom:16px;}
+    .byline{font-size:0.9rem;color:var(--light-gray);letter-spacing:0.01em;}
+    .byline .sep{color:var(--copper);margin:0 8px;}
+    .lede{font-size:1.08rem;color:var(--light-gray);max-width:66ch;margin-top:18px;}
+    .backlink{display:inline-block;margin-top:26px;color:var(--gold);font-weight:600;font-size:0.9rem;text-decoration:none;border-bottom:1px solid rgba(212,168,83,0.4);}
+    .backlink:hover,.backlink:focus-visible{border-bottom-color:var(--gold);outline:none;}
+    /* Article */
+    main{max-width:760px;margin:0 auto;padding:48px 24px 8px;}
+    .disclaimer{background:#fff;border:1px solid var(--light-gray);border-left:4px solid var(--copper);border-radius:8px;padding:14px 18px;font-size:0.9rem;color:var(--navy-mid);margin-bottom:34px;}
+    article{font-size:1.05rem;}
+    article h2{font-weight:800;font-size:1.5rem;color:var(--navy);line-height:1.22;letter-spacing:-0.01em;margin:42px 0 14px;}
+    article h3{font-weight:700;font-size:1.18rem;color:var(--navy-mid);line-height:1.25;margin:30px 0 10px;}
+    article h2 + p, article h3 + p{margin-top:0;}
+    article p{margin:0 0 18px;color:var(--dark-text);}
+    article ul,article ol{margin:0 0 18px;padding-left:24px;}
+    article li{margin-bottom:8px;}
+    article strong{font-weight:700;color:var(--navy);}
+    article em{font-style:italic;}
+    article a{color:var(--copper);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(192,120,48,0.35);transition:border-color .18s ease;}
+    article a:hover,article a:focus-visible{border-bottom-color:var(--copper);outline:none;}
+    article hr{border:none;border-top:1px solid var(--light-gray);margin:34px 0;}
+    article h2#sources, article h2#references{border-top:1px solid var(--light-gray);padding-top:30px;font-size:1.2rem;color:var(--navy-mid);}
+    /* sources list smaller */
+    article h2[id^="sources"] ~ ul li, article h3[id^="sources"] ~ ul li{font-size:0.95rem;color:var(--navy-mid);}
+    /* tables */
+    article table{width:100%;border-collapse:collapse;margin:0 0 24px;font-size:0.95rem;}
+    article th,article td{border:1px solid var(--light-gray);padding:9px 12px;text-align:left;vertical-align:top;}
+    article thead th{background:var(--navy);color:var(--off-white);font-weight:700;}
+    article tbody tr:nth-child(even){background:#fff;}
+    article .table-wrap{overflow-x:auto;margin:0 0 24px;}
+    article .table-wrap table{margin:0;}
+    /* CTA */
+    .cta-band{background:var(--navy);color:var(--off-white);border-radius:12px;padding:42px 32px;text-align:center;margin:48px 0 8px;}
+    .cta-band h2{font-weight:800;font-size:clamp(1.4rem,3.4vw,1.9rem);margin-bottom:12px;letter-spacing:-0.01em;color:var(--off-white);}
+    .cta-band p{color:var(--light-gray);max-width:52ch;margin:0 auto 24px;}
+    .cta-band .btn{display:inline-block;background:var(--copper);color:#fff;font-weight:700;padding:13px 28px;border-radius:8px;text-decoration:none;transition:background .18s ease;}
+    .cta-band .btn:hover,.cta-band .btn:focus-visible{background:var(--gold);color:var(--navy);outline:none;}
+    /* Footer */
+    footer{max-width:760px;margin:16px auto 0;padding:24px;font-size:0.82rem;color:var(--mid-gray);border-top:1px solid var(--light-gray);}
+    footer p+p{margin-top:6px;}
+    footer a{color:var(--mid-gray);text-decoration:underline;}
+    @media (prefers-reduced-motion:reduce){*{transition:none!important;}}
+
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header>
+    <div class="header-inner">
+      <div class="wordmark"><a href="index.html">Malaniru<span class="dot">.</span></a></div>
+      <span class="eyebrow">AI Enablement &middot; Daily Intelligence Briefing</span>
+      <h1>Daily Intelligence Briefing — Wednesday, October 14, 2026</h1>
+      <p class="byline">By Mark Andrew Harris<span class="sep">&middot;</span>October 14, 2026</p>
+      <p class="lede">Wednesday pre-market: Google&#x27;s Gemini API changelog lists Gemini 4 Argon as generally available on October 13, Claude Code shipped v2.1.299 today, and Anthropic&#x27;s and OpenAI&#x27;s newsrooms show nothing new since October 8. A Bloomberg-sourced report puts an Anthropic investor event on October 14, which Anthropic has not confirmed. Every figure carries a source and a confidence tag. This is market intelligence, not investment advice.</p>
+      <a class="backlink" href="daily-intelligence-briefings.html">&larr; All daily intelligence briefings</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <article>
+      <p><strong>[THOUGHT LEADERSHIP] [DRAFT — Pending Copy Review]</strong></p>
+      <h2 id="executive-summary">Executive Summary</h2>
+      <p><strong>Wednesday opens with one model moving to general availability, one agent-tooling release, and no new posts from the big labs' newsrooms.</strong> ✅ <strong>Google's Gemini API changelog lists Gemini 4 Argon (<code>gemini-4-argon</code>) as generally available on October 13; the models page labels it stable with a 1 million token context window</strong> (Google, Gemini API changelog and models page, read October 14). ✅ <strong>Claude Code v2.1.299 was released today, October 14, adding idle-conversation compaction and changes to how Model Context Protocol (MCP) connectors are handled</strong> (Claude Code changelog). ✅ <strong>Anthropic's newsroom and OpenAI's newsroom show nothing dated after October 8, and the MCP blog has no post since August 22</strong> (vendor pages, read through automated page summarization). 🔶 <strong>A Bloomberg-sourced report, relayed by Stocktwits, says Anthropic invited investors to an event on October 14; Anthropic has not confirmed it, and no filing, ticker or price range is public.</strong> U.S. regular-session trading has not opened at the time of writing.</p>
+      <hr />
+      <h2 id="1-ai-market-trends">1. AI Market Trends</h2>
+      <p><strong>Gemini 4 Argon reaches general availability.</strong> ✅ <strong>The Gemini API changelog lists "Gemini 4 Argon (<code>gemini-4-argon</code>) became generally available" on October 13 and describes it as the most capable Gemini model for complex coding, agentic, math and science tasks. The models page lists it as stable, "our flagship reasoning model," with a unified 1 million token context window</strong> (Google, Gemini API changelog and models page, read October 14). ⚠️ <strong>The models page we read does not show pricing, and we did not re-verify pricing today. Earlier briefings carried $2/$10 per million tokens introductory and $4/$20 after; treat that as carried, not confirmed. On September 30, a secondary report said the initial rollout was limited to cybersecurity partners; that is now superseded by the changelog entry.</strong></p>
+      <p><strong>Anthropic investor event, still secondhand.</strong> 🔶 <strong>Stocktwits, citing Bloomberg, reported on October 1 that Anthropic sent invitations to an investor event on October 14 at its San Francisco headquarters, targeting a November stock market debut, with formal IPO marketing possibly starting the week of November 9. Bloomberg's sources are people familiar with the matter and investors; a company spokesperson declined to comment</strong> (Stocktwits, October 1, 2026, citing Bloomberg). 🔶 <strong>The same report says investors put Anthropic's fair value between $1.8 trillion and $2 trillion; this is an investor estimate, not a company figure.</strong> ⚠️ <strong>We read a secondary summary, not Bloomberg. Specifics are described as subject to change. Whether the event takes place today is unconfirmed.</strong></p>
+      <p><strong>Meta's Muse Wonder keeps drawing attention.</strong> ✅ <strong>Meta shares closed up 2.63% on October 13, after a 3.38% gain on October 12</strong> (stockanalysis.com). 🔶 <strong>Quote-page headlines include Bloomberg Technology's "Meta's Muse Wonder Takes Aim at OpenAI, Anthropic"; we did not open it and cannot tie the share move to any cause.</strong> ✅ <strong>The Muse Wonder release details (October 12; $4/$20 per million tokens for Muse Wonder; Muse Wonder Full limited to Muse Code subscribers; proprietary weights) are carried from yesterday's briefing</strong> (Decrypt; Tech Times, citing VentureBeat; Meta results self-reported).</p>
+      <p><strong>Headline-only items from quote pages.</strong> 🔶 <strong>Reuters headlines listed on Nvidia's page: "Nvidia pledges $250 million to boost UK AI safety research," "Nvidia to buy a minority stake in France's Doctolib," and "Nvidia's China AI-chip share falls as Huawei closes gap, report finds." On Alphabet's page: "Google DeepMind, Google Cloud to allow European researchers access to frontier models" (Reuters). On Microsoft's page: "Microsoft Cloud president asks managers to lower costs by 20%, Information says" (TheFly)</strong> (stockanalysis.com headline lists, October 14). ⚠️ <strong>We opened none of them; treat each as a headline, not a confirmed fact.</strong></p>
+      <p><strong>Decart, carried.</strong> 🔶 <strong>Reuters, relaying the Wall Street Journal, reported on October 11 that Amazon is in talks to buy Decart for around $7 billion; an earlier Bloomberg-sourced report said Anthropic explored a deal and decided not to proceed</strong> (Reuters, via KFGO, October 11; The Deep Dive, September 8, carried). ⚠️ <strong>Search results today show continued syndicated coverage; we found nothing confirming a deal and did not open the new items.</strong></p>
+      <p><strong>Carried, not re-verified.</strong> ✅ <strong>Anthropic's updated Usage Policy takes effect November 12; Anthropic committed $150 million over three years to the Genesis Mission</strong> (Anthropic, October 8, company-reported).</p>
+      <h2 id="2-top-10-ai-agents-three-lenses">2. Top 10 AI Agents — Three Lenses</h2>
+      <p>Rankings as of Wednesday, October 14, 2026. <strong>Board changes: one. Gemini 4 Argon moves from second to first on the Market Momentum board after reaching general availability, and Meta's Muse Wonder moves down one.</strong> 🔶 <strong>Placement is our judgment from vendor-reported information and press coverage volume.</strong> <em>(Top 5 shown per lens.)</em></p>
+      <h3 id="2a-relevance-for-claude-mcp-centered-work">2a. Relevance for Claude / MCP-Centered Work</h3>
+      <div class="table-wrap"><table>
+      <thead>
+      <tr>
+      <th>Rank</th>
+      <th>Agent / Platform</th>
+      <th>Justification</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>1</td>
+      <td>Claude Opus 5.5</td>
+      <td><strong>Holds first.</strong> ✅ <strong>$4/$20 per-million-token pricing</strong> (Anthropic, carried). ✅ <strong>Ranked first on the Artificial Analysis index at 58, per yesterday's briefing</strong> (Decrypt, October 12, carried; not re-checked today).</td>
+      </tr>
+      <tr>
+      <td>2</td>
+      <td>Claude Sonnet 5.5</td>
+      <td><strong>Holds second.</strong> ✅ <strong>$2/$10 per million tokens; cache reads priced at $0.10 per million tokens in Claude Code</strong> (Anthropic, carried; Claude Code changelog, carried).</td>
+      </tr>
+      <tr>
+      <td>3</td>
+      <td>Claude Code v2.1.299</td>
+      <td><strong>Holds third; new release today (October 14).</strong> ✅ <strong>Cloud and Remote Control connectors negotiate MCP protocol version 2026-07-28 by default; connector and Anthropic-hosted MCP requests no longer follow HTTP redirects; MCP allow rules now match only the named server</strong> (Claude Code changelog).</td>
+      </tr>
+      <tr>
+      <td>4</td>
+      <td>Claude Haiku 5.5</td>
+      <td><strong>Holds fourth.</strong> ✅ <strong>$0.10/$0.50 per million tokens, 1M context</strong> (Anthropic, October 7, carried). ⚠️ <strong>Benchmarks self-reported.</strong></td>
+      </tr>
+      <tr>
+      <td>5</td>
+      <td>Google Gemini agent for work (Claude-capable routing)</td>
+      <td><strong>Holds fifth; no new development.</strong> ✅ <strong>Selects between Gemini and Claude per task</strong> (Reuters, October 8, carried).</td>
+      </tr>
+      </tbody>
+      </table></div>
+      <p><em>(Pricing watch, per million tokens, input/output: Haiku 5.5 $0.10/$0.50; Sonnet 5.5 $2/$10; Opus 5.5 $4/$20; Meta Muse Wonder $4/$20; GPT-6 Astra $10/$50, GPT-6.1 Sol $2/$10, GPT-6 Luna $0.10/$0.50; Gemini 4 Argon $2/$10 introductory, $4/$20 after — all carried from earlier briefings, not re-verified today.)</em></p>
+      <h3 id="2b-market-momentum-adoption-funding-buzz">2b. Market Momentum (adoption / funding / buzz)</h3>
+      <div class="table-wrap"><table>
+      <thead>
+      <tr>
+      <th>Rank</th>
+      <th>Agent / Platform</th>
+      <th>Justification</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>1</td>
+      <td>Google Gemini 4 Argon</td>
+      <td><strong>Moves up one.</strong> ✅ <strong>Generally available October 13 per the Gemini API changelog; stable on the models page</strong> (Google). ⚠️ <strong>The 77.9% DeepSWE v1.1 figure from earlier briefings is Google's own and was not re-verified.</strong></td>
+      </tr>
+      <tr>
+      <td>2</td>
+      <td>Meta Muse Wonder / Muse Wonder Full</td>
+      <td><strong>Moves down one.</strong> ✅ <strong>Shares closed up 2.63% on October 13</strong> (stockanalysis.com). ⚠️ <strong>Capability claims are Meta's own; no cause for the share move was verified.</strong></td>
+      </tr>
+      <tr>
+      <td>3</td>
+      <td>Claude Haiku 5.5 launch</td>
+      <td><strong>Holds third.</strong> ✅ <strong>Available October 7 on Anthropic's API, Amazon Web Services, Google Cloud and Microsoft Azure</strong> (Anthropic, carried).</td>
+      </tr>
+      <tr>
+      <td>4</td>
+      <td>OpenAI GPT-6 Intelligent UI rollout</td>
+      <td><strong>Holds fourth.</strong> ✅ <strong>"More than 1.2 billion people who use ChatGPT every week," company-reported</strong> (OpenAI, October 7, carried).</td>
+      </tr>
+      <tr>
+      <td>5</td>
+      <td>Anthropic Cyber Mission</td>
+      <td><strong>Holds fifth.</strong> ✅ <strong>11 founding partners for the Critical Infrastructure Defense Program</strong> (Anthropic, October 8, carried; company-reported).</td>
+      </tr>
+      </tbody>
+      </table></div>
+      <h3 id="2c-capability-maturity-production-readiness">2c. Capability &amp; Maturity (production readiness)</h3>
+      <div class="table-wrap"><table>
+      <thead>
+      <tr>
+      <th>Rank</th>
+      <th>Agent / Platform</th>
+      <th>Justification</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>1</td>
+      <td>Claude Code v2.1.299</td>
+      <td><strong>Holds first on shipped, GA reliability.</strong> ✅ <strong>v2.1.299 (October 14) lists 16 improvements and 131 bug fixes, collapsed on the changelog page</strong> (Claude Code changelog). ⚠️ <strong>The page has no entries for v2.1.297 or v2.1.298, so we cannot say what they contained.</strong></td>
+      </tr>
+      <tr>
+      <td>2</td>
+      <td>Claude Opus 5.5</td>
+      <td><strong>Holds second.</strong> ✅ <strong>First on the third-party Artificial Analysis index at 58 as of October 12</strong> (Decrypt, carried).</td>
+      </tr>
+      <tr>
+      <td>3</td>
+      <td>Claude Sonnet 5.5</td>
+      <td><strong>Holds third — GA.</strong> ✅ <strong>Tied at 56 with Muse Wonder Full on the same index</strong> (Decrypt, carried).</td>
+      </tr>
+      <tr>
+      <td>4</td>
+      <td>GPT-6.1 Sol</td>
+      <td><strong>Holds fourth.</strong> ⚠️ <strong>Self-reported benchmarks; the naming mismatch with OpenAI's "GPT-6 Sol" safety page remains unreconciled.</strong></td>
+      </tr>
+      <tr>
+      <td>5</td>
+      <td>Claude Haiku 5.5</td>
+      <td><strong>Holds fifth.</strong> ✅ <strong>Anthropic reports 72.4% on OSWorld 2.1 (offline subset) and 39.2% on Terminal-Bench 4.0</strong> (Anthropic, October 7, carried). ⚠️ <strong>Self-reported.</strong></td>
+      </tr>
+      </tbody>
+      </table></div>
+      <p><strong>Divergence analysis.</strong> ✅ <strong>The one move today is on the momentum board, where a general-availability release from Google overtakes Meta's launch week.</strong> 🔶 <strong>We leave Gemini 4 Argon off the maturity board: it became generally available only yesterday, we found no independent benchmark for it, and its figures are Google's own.</strong> ⚠️ <strong>Every Argon claim, every Meta benchmark and every OpenAI usage figure is vendor-reported.</strong></p>
+      <p><strong>What This Means for You.</strong> ✅ <strong>A model moving from limited access to general availability is the point at which it becomes a realistic option for your own pilots.</strong> 🔶 <strong>Re-test on your own tasks and check data-handling terms before switching; general availability does not tell you how a model performs on your workflow.</strong> ⚠️ <strong>Vendor benchmark tables mix self-run and third-party results.</strong></p>
+      <hr />
+      <h2 id="3-agentic-ai-advances-new-releases">3. Agentic AI Advances &amp; New Releases</h2>
+      <ul>
+      <li><strong>Gemini 4 Argon, generally available October 13.</strong> ✅ <strong>Model ID <code>gemini-4-argon</code>; stable; 1 million token context window; Google describes it as its flagship reasoning model</strong> (Google, Gemini API changelog and models page; self-reported). ⚠️ <strong>No pricing on the models page we read.</strong></li>
+      <li><strong>Claude Code v2.1.299, October 14 — new.</strong> ✅ <strong>Idle compaction: a conversation of 200,000 or more tokens left idle for about 54 minutes is compacted before its one-hour prompt cache expires; the threshold is set with <code>CLAUDE_CODE_IDLE_COMPACT_MIN_TOKENS</code> and the feature can be turned off with <code>"idleCompaction": false</code>. New <code>CLAUDE_CODE_DISABLE_FILE_MENTIONS</code> variable sends file paths rather than contents for <code>@</code> mentions. <code>UserPromptSubmit</code> hooks now run before a skill or custom command expands, so a blocking hook also stops its embedded shell commands. The exit resume line uses the session ID rather than the session name. Also added: <code>/effort</code> and <code>/fast</code> in agent view, <code>--shutdown-drain-sec</code> for the self-hosted runner orchestrator, and <code>--disallow-tools</code> for <code>claude plugin eval</code></strong> (Claude Code changelog). ✅ <strong>MCP changes: connector and Anthropic-hosted MCP requests no longer follow HTTP redirects; cloud and Remote Control connectors negotiate MCP protocol version 2026-07-28 by default, with <code>MCP_PROTOCOL_NEGOTIATION=legacy</code> to opt out; allow rules now match only the named server, so <code>mcp__a</code> no longer covers a server named <code>a__b</code>.</strong> ⚠️ <strong>We read the first 100,000 of about 124,586 characters of the page.</strong></li>
+      <li><strong>Gemini API changes, carried.</strong> ✅ <strong>October 8: <code>gemini-3.7-flash</code> is deprecated and routed to <code>gemini-3.8-flash</code>, <code>gemini-3.5-flash</code> to <code>gemini-3.6-flash</code>, and the Deep Research agent <code>deep-research-pro-preview-12-2025</code> shuts down October 23, 2026. October 6: <code>gemini-nano-banana-2.1</code> became generally available</strong> (Google, Gemini API changelog).</li>
+      <li><strong>Anthropic and OpenAI newsrooms.</strong> ✅ <strong>Newest Anthropic post: "2026 Usage Policy update" and two others, all October 8. Newest OpenAI post: "Disrupting AI-enabled 'false front' operations," October 8</strong> (newsroom lists, read October 14). ⚠️ <strong>We read titles and dates; the OpenAI page showed only nine posts before a "Load more" control.</strong></li>
+      <li><strong>MCP blog — no post since August 22 ("The New MCP Roadmap").</strong> ✅ <strong>The 2026-07-28 specification remains the newest release listed.</strong></li>
+      <li><strong>Standing carries, not re-verified this run.</strong> <strong>Colorado Senate Bill 26-189</strong>, effective <strong>January 1, 2027</strong>; <strong>EU AI Act Article 50</strong> enforceable since <strong>August 2, 2026</strong>; <strong>Annex III</strong> at <strong>2 December 2027</strong>; <strong>Annex I</strong> at <strong>2 August 2028</strong>. Compliance awareness, not legal advice; confirm with counsel.</li>
+      </ul>
+      <p><strong>What This Means for You.</strong> ✅ <strong>Changes to how agent tools handle connectors, redirects and permission rules can alter what an approved agent setup is allowed to reach.</strong> 🔶 <strong>Review your tool permission rules and connector settings after updating any agent software, and note that the MCP protocol version negotiated by default has changed for some connector types.</strong> ⚠️ <strong>We summarized vendor pages and did not read every changelog entry in full.</strong></p>
+      <hr />
+      <h2 id="4-overnight-daily-release-monitor">4. Overnight / Daily Release Monitor</h2>
+      <p>Covering <strong>Tuesday, October 13 into Wednesday, October 14</strong> (checked in the early morning). ✅ <strong>Vendor pages reached today: Anthropic newsroom, OpenAI newsroom, Claude Code changelog, Gemini API changelog, Gemini models page and the MCP blog, all through automated page summarization.</strong></p>
+      <ul>
+      <li><strong>Anthropic.</strong> ✅ <strong>No newsroom post dated after October 8. Claude Code v2.1.299 released October 14.</strong></li>
+      <li><strong>OpenAI.</strong> ✅ <strong>No post dated after October 8.</strong></li>
+      <li><strong>Google.</strong> ✅ <strong>Gemini 4 Argon generally available, October 13 (Gemini API changelog).</strong></li>
+      <li><strong>MCP.</strong> ✅ <strong>No new blog post since August 22.</strong></li>
+      <li><strong>Headline-only items seen on quote pages (not opened):</strong> 🔶 <strong>"Credo Breaks the Memory Wall Using AMD Programmable Logic-Based AI Accelerators" (Business Wire); "OneAdvanced Leverages NVIDIA Technologies to Advance Safer Agentic AI for UK Critical Sectors" (Business Wire); "LSEG teams up with NVIDIA for faster market data processing" (Reuters); "Google Play now supports private, vibe-coded apps built just for you" (TechCrunch); "Microsoft-Backed AI Defender Reach Security Raises Over $50M In New Funds to Power Global Expansion" (TipRanks).</strong> ⚠️ <strong>None was opened; dates are approximate.</strong></li>
+      <li><strong>IPO calendar.</strong> ✅ <strong>Renaissance Capital's list shows one AI-adjacent item among its twelve newest: Apex Treasury II, a special-purpose acquisition company (SPAC), filed on October 13 for a $250 million IPO, with a stated focus that includes "AI infrastructure, energy, defense, and fintech"</strong> (Renaissance Capital, read October 14). ⚠️ <strong>A SPAC has no operating business at listing; this is not an AI company IPO.</strong></li>
+      <li><strong>Scheduled ahead (carried unless noted):</strong> <strong>GPT-5.5 retirement from ChatGPT and Codex, October 14</strong> 🔶 (search-result headlines said the API is not shutting down; not opened); <strong>Anthropic investor event, October 14, reported by Bloomberg via secondary sources</strong> ⚠️; <strong>Gemini Deep Research agent shutdown, October 23</strong> ✅; <strong>Microsoft fiscal Q1 2027 results, October 28</strong> (carried); <strong>AMD fiscal Q3 2026 results, November 3</strong> (carried); <strong>Akamai third-quarter 2026 investor call, Thursday, November 5, at 4:30 PM ET</strong> (GlobeNewswire, October 8) ✅; <strong>Anthropic Usage Policy effective November 12</strong> ✅; <strong>Microsoft Ignite, November 17–20</strong> (carried).</li>
+      </ul>
+      <p><strong>What This Means for You.</strong> ✅ <strong>Dated changes such as the October 14 model retirement, the October 23 agent shutdown and the November 12 policy effective date are prompts to check which of your approved AI uses touch them.</strong> 🔶 <strong>A reported investor event is a secondary-source item and should not be repeated as confirmed.</strong></p>
+      <hr />
+      <h2 id="5-ai-trading-trends">5. AI Trading Trends</h2>
+      <p><em>Market intelligence for situational awareness — not investment advice. No buy/sell/hold recommendations, price targets, or return forecasts.</em> Every figure carries a source and a confidence note. ✅ <strong>Figures below are the Tuesday, October 13 regular-session closes (4:00 PM EDT) per stockanalysis.com quote pages checked October 14, with Wednesday pre-market quotes timestamped between 4:18 and 5:09 AM EDT. The Wednesday regular session had not opened at the time of writing.</strong> ⚠️ <strong>Pre-market quotes are thin-volume indications. We did not verify the cause of any move; headlines are cited as headlines only.</strong></p>
+      <h3 id="5a-ipos">5a. IPOs</h3>
+      <p>🔶 <strong>Anthropic — public filing status remains unconfirmed.</strong> ✅ <strong>Anthropic announced on June 1, 2026 that it confidentially submitted a draft S-1 to the SEC; share count and pricing were not determined</strong> (Yahoo Finance, June 1, 2026, carried). ⚠️ <strong>An October 14 investor event and a November listing target trace to Bloomberg-sourced reports with unnamed sources (see Section 1); no primary filing, ticker, price range or date is confirmed.</strong></p>
+      <p>✅ <strong>Firmus (Australia) — withdrew its planned A$5 billion ASX IPO on October 9</strong> (Reuters, via The Star; carried).</p>
+      <p>🔶 <strong>OpenAI — no 2026 IPO, per press (carried).</strong> <strong>Yahoo Tech and Gizmodo reported September 29 that Altman said OpenAI will not go public in 2026.</strong></p>
+      <p>✅ <strong>No newly filed or priced operating-company IPO on Renaissance Capital's list through October 13 is described as AI-related; the one AI-adjacent item is the SPAC noted in Section 4.</strong> ⚠️ <strong>DayOne, a data center developer, appears in the pipeline, but the page does not connect it to AI.</strong></p>
+      <h3 id="5b-top-5-traded-ai-related-tickers-october-13-session-latest-available">5b. Top 5 traded AI-related tickers — October 13 session (latest available)</h3>
+      <p><em>Ranking basis this run: magnitude of the October 13 regular-session move across the eight tickers this series tracks. Inclusion reflects AI exposure and news flow. No targets, no forecasts.</em></p>
+      <div class="table-wrap"><table>
+      <thead>
+      <tr>
+      <th>#</th>
+      <th>Ticker</th>
+      <th>Company</th>
+      <th>Why it's an AI-trading bellwether</th>
+      <th>Latest verifiable signal</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>1</td>
+      <td>ORCL</td>
+      <td>Oracle</td>
+      <td>AI cloud infrastructure; headlines tie it to data-center demand and AI financing</td>
+      <td>✅ <strong>Closed $143.20, up $5.81 (4.23%); volume 26,325,819; pre-market $143.71, up 0.36%</strong> (stockanalysis.com).</td>
+      </tr>
+      <tr>
+      <td>2</td>
+      <td>META</td>
+      <td>Meta Platforms</td>
+      <td>Released Muse Wonder frontier models October 12 (Section 1)</td>
+      <td>✅ <strong>Closed $762.50, up $19.54 (2.63%); volume 22,706,153; pre-market $766.29, up 0.50%</strong> (stockanalysis.com).</td>
+      </tr>
+      <tr>
+      <td>3</td>
+      <td>AMD</td>
+      <td>Advanced Micro Devices</td>
+      <td>AI accelerators; headline about AMD programmable-logic accelerators</td>
+      <td>✅ <strong>Closed $605.53, up $11.29 (1.90%); volume 17,932,395; pre-market $606.88, up 0.22%</strong> (stockanalysis.com).</td>
+      </tr>
+      <tr>
+      <td>4</td>
+      <td>AKAM</td>
+      <td>Akamai Technologies</td>
+      <td>Seven-year Anthropic infrastructure agreement (8-K dated September 24, carried)</td>
+      <td>✅ <strong>Closed $99.93, down $1.72 (1.69%); volume 4,860,524; after-hours $100.41, up 0.48%; no pre-market quote shown</strong> (stockanalysis.com).</td>
+      </tr>
+      <tr>
+      <td>5</td>
+      <td>NVDA</td>
+      <td>Nvidia</td>
+      <td>Dominant AI accelerator supplier; headlines on UK safety funding and China share</td>
+      <td>✅ <strong>Closed $228.52, up $2.20 (0.97%); volume 84,038,069; pre-market $229.04, up 0.23%</strong> (stockanalysis.com).</td>
+      </tr>
+      </tbody>
+      </table></div>
+      <p><em>(Also tracked, October 13 closes: MSFT $543.45, up 0.43%, volume 23,701,552, pre-market $544.48, up 0.19%; GOOGL $353.78, up 0.30%, volume 23,263,579, pre-market $356.63, up 0.81%; AMZN $258.58, down 0.37%, volume 25,298,603, pre-market $259.88, up 0.50% — all stockanalysis.com, read through automated page summarization.)</em></p>
+      <p><strong>Context, not forecast.</strong> ✅ <strong>Six of eight tracked tickers closed higher on October 13 (ORCL, META, AMD, NVDA, MSFT, GOOGL); two closed lower (AKAM, AMZN).</strong> 🔶 <strong>Quote-page headlines include "Why is Oracle stock gaining 4% today?" (Invezz) and "Why are Intel and AMD stocks falling on Tuesday?" (Invezz); the second does not match AMD's October 13 close, and we cannot tie either headline to a price move.</strong> ⚠️ <strong>We are reporting the data, not explaining or projecting it. The next regular session is Wednesday, October 14.</strong></p>
+      <p><strong>What This Means for You.</strong> ✅ <strong>Market context only; no operational implication and no investment guidance.</strong> ⚠️ <strong>Quote-page headlines are unverified aggregations; trace each to a primary source before repeating it.</strong></p>
+      <h2 id="sources">Sources</h2>
+      <p><em>Verification note: this run reached Anthropic's and OpenAI's newsroom lists, the Claude Code changelog (first 100,000 of about 124,586 characters), the Gemini API changelog and models page, the MCP blog, Renaissance Capital's news list, eight stockanalysis.com quote pages, and a small number of secondary articles, all through automated page summarization, so every figure should be checked against the linked page before external use. Headlines listed as unopened were not read.</em></p>
+      <ul>
+      <li>Claude Code changelog, v2.1.299 (October 14) (primary, read October 14, 2026). <a href="https://code.claude.com/docs/en/changelog" target="_blank" rel="noopener">https://code.claude.com/docs/en/changelog</a></li>
+      <li>Anthropic Newsroom (primary, list read October 14, 2026). <a href="https://www.anthropic.com/news" target="_blank" rel="noopener">https://www.anthropic.com/news</a></li>
+      <li>OpenAI Newsroom (primary, list read October 14, 2026). <a href="https://openai.com/news/" target="_blank" rel="noopener">https://openai.com/news/</a></li>
+      <li>Google, Gemini API changelog (primary, read October 14, 2026). <a href="https://ai.google.dev/gemini-api/docs/changelog" target="_blank" rel="noopener">https://ai.google.dev/gemini-api/docs/changelog</a></li>
+      <li>Google, Gemini API models page (primary, read October 14, 2026). <a href="https://ai.google.dev/gemini-api/docs/models" target="_blank" rel="noopener">https://ai.google.dev/gemini-api/docs/models</a></li>
+      <li>Model Context Protocol Blog (primary, read October 14, 2026). <a href="https://blog.modelcontextprotocol.io/posts/" target="_blank" rel="noopener">https://blog.modelcontextprotocol.io/posts/</a></li>
+      <li>Stocktwits, "Anthropic Reportedly Sends Investors IPO Invitations Ahead Of Potential Thanksgiving Debut," October 1, 2026, citing Bloomberg (secondary). <a href="https://stocktwits.com/news-articles/markets/equity/anthropic-reportedly-sends-investors-ipo-invitations/cZD0ZdRRB0S" target="_blank" rel="noopener">https://stocktwits.com/news-articles/markets/equity/anthropic-reportedly-sends-investors-ipo-invitations/cZD0ZdRRB0S</a></li>
+      <li>Let's Data Science, "Google Introduces Gemini 4 Argon With Limited Cyber-Defense Rollout," September 30, 2026 (secondary; superseded on availability by the changelog). <a href="https://letsdatascience.com/news/google-introduces-gemini-4-argon-with-limited-cyber-defense-d3adff18" target="_blank" rel="noopener">https://letsdatascience.com/news/google-introduces-gemini-4-argon-with-limited-cyber-defense-d3adff18</a></li>
+      <li>Renaissance Capital, IPO Center news list (read October 14, 2026). <a href="https://www.renaissancecapital.com/IPO-Center/News" target="_blank" rel="noopener">https://www.renaissancecapital.com/IPO-Center/News</a></li>
+      <li>stockanalysis.com quote pages for NVDA, ORCL, AMD, AKAM, AMZN, MSFT, GOOGL, META, checked October 14, 2026. <a href="https://stockanalysis.com/stocks/nvda/" target="_blank" rel="noopener">https://stockanalysis.com/stocks/nvda/</a> (and equivalent tickers)</li>
+      <li>Carried: Decrypt, "Meta's New Muse Wonder Finally Puts Zuckerberg in the Frontier AI Race," October 12, 2026 (secondary; Meta figures self-reported). <a href="https://decrypt.co/380768/meta-muse-wonder-zuckerberg-frontier-ai-race" target="_blank" rel="noopener">https://decrypt.co/380768/meta-muse-wonder-zuckerberg-frontier-ai-race</a></li>
+      <li>Carried: Tech Times, "Meta Claims Muse Wonder AI Helps the Company to Catch Up to Rivals' Frontier Models—But How?," October 13, 2026, citing VentureBeat (secondary). <a href="https://www.techtimes.com/articles/328939/20261013/meta-claims-muse-wonder-ai-helps-company-catch-rivals-frontier-models-how.htm" target="_blank" rel="noopener">https://www.techtimes.com/articles/328939/20261013/meta-claims-muse-wonder-ai-helps-company-catch-rivals-frontier-models-how.htm</a></li>
+      <li>Carried: Reuters, "Amazon in talks to buy AI startup Decart for around $7 billion, WSJ reports," October 11, 2026, via KFGO (press, relaying WSJ and Bloomberg). <a href="https://kfgo.com/2026/10/11/amazon-in-talks-to-buy-ai-startup-decart-for-around-7-billion-wsj-reports/" target="_blank" rel="noopener">https://kfgo.com/2026/10/11/amazon-in-talks-to-buy-ai-startup-decart-for-around-7-billion-wsj-reports/</a></li>
+      <li>Carried: The Deep Dive, "Anthropic Walks Away From $6 Billion Decart Deal After Due Diligence," September 8, 2026, citing Bloomberg (secondary). <a href="https://thedeepdive.ca/anthropic-walks-away-from-6-billion-decart-deal-after-due-diligence/" target="_blank" rel="noopener">https://thedeepdive.ca/anthropic-walks-away-from-6-billion-decart-deal-after-due-diligence/</a></li>
+      <li>Carried: Anthropic, "2026 Usage Policy update," October 8, 2026 (primary, company-reported). <a href="https://www.anthropic.com/news/2026-usage-policy-update" target="_blank" rel="noopener">https://www.anthropic.com/news/2026-usage-policy-update</a></li>
+      <li>Carried: Anthropic, "Building on our commitment to American scientific discovery," October 8, 2026 (primary, company-reported). <a href="https://www.anthropic.com/news/genesis-mission-commitment" target="_blank" rel="noopener">https://www.anthropic.com/news/genesis-mission-commitment</a></li>
+      <li>Carried: Anthropic, "Introducing Claude Haiku 5.5," October 7, 2026 (primary). <a href="https://www.anthropic.com/claude-haiku-5-5" target="_blank" rel="noopener">https://www.anthropic.com/claude-haiku-5-5</a></li>
+      <li>Carried: Reuters, "Google Cloud introduces Gemini agent for work as AI race heats up," October 8, 2026, via The Star (press). <a href="https://www.thestar.com.my/tech/tech-news/2026/10/08/google-cloud-introduces-gemini-agent-for-work-as-ai-race-heats-up" target="_blank" rel="noopener">https://www.thestar.com.my/tech/tech-news/2026/10/08/google-cloud-introduces-gemini-agent-for-work-as-ai-race-heats-up</a></li>
+      <li>Carried: Reuters, "Nvidia-backed Firmus scraps $5 billion Australian IPO on poor demand," October 9, 2026 (press, via The Star). <a href="https://www.thestar.com.my/tech/tech-news/2026/10/09/nvidia-backed-firmus-scraps-5-billion-australian-ipo-on-poor-demand" target="_blank" rel="noopener">https://www.thestar.com.my/tech/tech-news/2026/10/09/nvidia-backed-firmus-scraps-5-billion-australian-ipo-on-poor-demand</a></li>
+      <li>Carried: Akamai Technologies, Form 8-K Exhibit 99.1, September 24, 2026 (primary, SEC EDGAR). <a href="https://www.sec.gov/Archives/edgar/data/0001086222/000119312526401048/d288154dex991.htm" target="_blank" rel="noopener">https://www.sec.gov/Archives/edgar/data/0001086222/000119312526401048/d288154dex991.htm</a></li>
+      <li>Carried: Yahoo Finance, "AI giant Anthropic files for public offering," June 1, 2026 (press). <a href="https://finance.yahoo.com/markets/stocks/articles/ai-giant-anthropic-files-public-160911679.html" target="_blank" rel="noopener">https://finance.yahoo.com/markets/stocks/articles/ai-giant-anthropic-files-public-160911679.html</a></li>
+      <li>Carried: Gizmodo, "No OpenAI IPO Until the AI Stops Going Rogue, CEO Sam Altman Says" (press). <a href="https://gizmodo.com/no-openai-ipo-until-the-ai-stops-going-rogue-ceo-sam-altman-says-2000819194" target="_blank" rel="noopener">https://gizmodo.com/no-openai-ipo-until-the-ai-stops-going-rogue-ceo-sam-altman-says-2000819194</a></li>
+      </ul>
+    </article>
+
+    <section class="cta-band" id="contact" aria-labelledby="cta-heading">
+      <h2 id="cta-heading">From AI curiosity to AI capability</h2>
+      <p>This briefing is part of the field research behind our AI Enablement service &mdash; a curated, white-glove Claude Cowork implementation tailored to your organization&rsquo;s workflow.</p>
+      <a class="btn" href="https://calendly.com/mark-malaniru/30min" target="_blank" rel="noopener">Book a discovery call</a>
+    </section>
+    <!-- mal-ai-disclaimer:v1 -->
+  <aside class="mal-ai-disclaimer" role="note" aria-label="AI transparency notice" style="max-width:760px;margin:2.5rem auto 0;padding:1rem 1.25rem;border:1px solid #d9c3a5;border-left:4px solid #C07830;border-radius:6px;background:#faf6f0;color:#5c5347;font-size:0.82rem;line-height:1.6;box-sizing:border-box;">
+    <strong style="display:block;color:#8a5a1e;font-size:0.78rem;letter-spacing:.04em;text-transform:uppercase;margin-bottom:.35rem;">AI Transparency Notice</strong>
+    This article was produced through Malaniru&rsquo;s guided-research process: generated with the assistance of AI and reviewed by a person before publication (human-in-the-loop). In line with EU AI Act transparency obligations, we disclose that AI systems were used to create this content. It is provided for general information only, may contain inaccuracies, and is not professional advice &mdash; verify before relying on it.
+  </aside>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Malaniru Inc, LLC &middot; Lafayette, Colorado &middot; AI Enablement</p>
+    <p><a href="daily-intelligence-briefings.html">&larr; Back to Daily Intelligence Briefings</a> &middot; <a href="index.html">AI Enablement</a></p>
+      <nav class="mal-footernav" data-mal-footernav aria-label="Site" style="margin-top:0.7rem;font-size:0.82rem;line-height:1.9;">
+      <a href="about.html" style="color:#C07830;font-weight:700;text-decoration:none;">About</a> &middot;
+      <a href="pricing.html" style="color:#C07830;font-weight:700;text-decoration:none;">Pricing</a> &middot;
+      <a href="index.html" style="color:#C07830;font-weight:700;text-decoration:none;">AI Enablement</a>
+     &middot;
+      <a href="privacy-policy.html" style="color:#C07830;font-weight:700;text-decoration:none;">Privacy</a>
+    </nav>
+  </footer>
+</body>
+</html>

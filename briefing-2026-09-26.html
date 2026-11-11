@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<!--
+  Malaniru - Daily Intelligence Briefing (branded HTML)
+  Built by: publish_briefing_page.py - Date: 2026-09-26
+  Source:   Projects/Malaniru_Marketing_Site/Staging/20260926-daily-intelligence-briefing.md
+  FIDELITY: Body rendered VERBATIM from the source markdown. No copy edits.
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daily Intelligence Briefing — Saturday, September 26, 2026 - Malaniru</title>
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.malaniru.com/briefing-2026-09-26">
+  <meta name="description" content="Microsoft&#x27;s September 25 Copilot relaunch gives autonomous &#x27;Autopilot&#x27; agents their own Entra identities — email, calendar, OneDrive, and Teams access — and shifts billing to usage-based Copilot Credits; MSFT closed up 3.66%. A Santa Fe jury found Meta misled consumers over Cambridge Analytica-era data sharing, and META fell 3.33% the same session. Nscale secured $3.36 billion in convertible financing ahead of its still-unpriced NYSE listing. Claude Code shipped two more governance-relevant point releases; Gemini 4 entered post-training with no confirmed date. Every figure carries a source and a confidence tag; this is market intelligence, not investment advice.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --navy:#0F1A2E;--navy-mid:#2A3F63;--copper:#C07830;--gold:#D4A853;
+      --off-white:#F4F1EC;--light-gray:#E8E6E1;--mid-gray:#8A8A96;--dark-text:#1C1C1C;
+      --font:"Inter","Helvetica Neue",Arial,sans-serif;
+    }
+    *{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:var(--font);background:var(--off-white);color:var(--dark-text);line-height:1.65;font-size:16px;-webkit-font-smoothing:antialiased;}
+    .skip-link{position:absolute;left:-999px;top:0;background:var(--gold);color:var(--navy);padding:10px 16px;font-weight:700;z-index:10;}
+    .skip-link:focus{left:8px;top:8px;}
+    a{color:var(--copper);}
+    /* Header */
+    header{background: linear-gradient(160deg, rgba(15,26,46,0.72) 0%, rgba(10,18,33,0.82) 100%), url('StockCake-Cosmic_Web_Complexity-1361288-standard-rot90ccw.jpg'); background-size: auto, 100% 100%; background-repeat: no-repeat, no-repeat; background-position: center, center;color:var(--off-white);padding:48px 24px 52px;position:relative;overflow:hidden;}
+    header::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 85% 12%,rgba(192,120,48,0.20) 0%,rgba(15,26,46,0) 55%);pointer-events:none;}
+    .header-inner{max-width:760px;margin:0 auto;position:relative;z-index:1;}
+    .wordmark{font-weight:800;font-size:1.25rem;letter-spacing:0.02em;margin-bottom:30px;}
+    .wordmark .dot{color:var(--copper);}
+    .wordmark a{color:var(--off-white);text-decoration:none;transition:opacity .18s ease;}
+    .wordmark a:hover,.wordmark a:focus-visible{opacity:.85;outline:none;}
+    .eyebrow{display:inline-block;font-size:0.72rem;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;}
+    header h1{font-weight:800;font-size:clamp(1.8rem,4.6vw,2.6rem);line-height:1.14;letter-spacing:-0.01em;margin-bottom:16px;}
+    .byline{font-size:0.9rem;color:var(--light-gray);letter-spacing:0.01em;}
+    .byline .sep{color:var(--copper);margin:0 8px;}
+    .lede{font-size:1.08rem;color:var(--light-gray);max-width:66ch;margin-top:18px;}
+    .backlink{display:inline-block;margin-top:26px;color:var(--gold);font-weight:600;font-size:0.9rem;text-decoration:none;border-bottom:1px solid rgba(212,168,83,0.4);}
+    .backlink:hover,.backlink:focus-visible{border-bottom-color:var(--gold);outline:none;}
+    /* Article */
+    main{max-width:760px;margin:0 auto;padding:48px 24px 8px;}
+    .disclaimer{background:#fff;border:1px solid var(--light-gray);border-left:4px solid var(--copper);border-radius:8px;padding:14px 18px;font-size:0.9rem;color:var(--navy-mid);margin-bottom:34px;}
+    article{font-size:1.05rem;}
+    article h2{font-weight:800;font-size:1.5rem;color:var(--navy);line-height:1.22;letter-spacing:-0.01em;margin:42px 0 14px;}
+    article h3{font-weight:700;font-size:1.18rem;color:var(--navy-mid);line-height:1.25;margin:30px 0 10px;}
+    article h2 + p, article h3 + p{margin-top:0;}
+    article p{margin:0 0 18px;color:var(--dark-text);}
+    article ul,article ol{margin:0 0 18px;padding-left:24px;}
+    article li{margin-bottom:8px;}
+    article strong{font-weight:700;color:var(--navy);}
+    article em{font-style:italic;}
+    article a{color:var(--copper);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(192,120,48,0.35);transition:border-color .18s ease;}
+    article a:hover,article a:focus-visible{border-bottom-color:var(--copper);outline:none;}
+    article hr{border:none;border-top:1px solid var(--light-gray);margin:34px 0;}
+    article h2#sources, article h2#references{border-top:1px solid var(--light-gray);padding-top:30px;font-size:1.2rem;color:var(--navy-mid);}
+    /* sources list smaller */
+    article h2[id^="sources"] ~ ul li, article h3[id^="sources"] ~ ul li{font-size:0.95rem;color:var(--navy-mid);}
+    /* tables */
+    article table{width:100%;border-collapse:collapse;margin:0 0 24px;font-size:0.95rem;}
+    article th,article td{border:1px solid var(--light-gray);padding:9px 12px;text-align:left;vertical-align:top;}
+    article thead th{background:var(--navy);color:var(--off-white);font-weight:700;}
+    article tbody tr:nth-child(even){background:#fff;}
+    article .table-wrap{overflow-x:auto;margin:0 0 24px;}
+    article .table-wrap table{margin:0;}
+    /* CTA */
+    .cta-band{background:var(--navy);color:var(--off-white);border-radius:12px;padding:42px 32px;text-align:center;margin:48px 0 8px;}
+    .cta-band h2{font-weight:800;font-size:clamp(1.4rem,3.4vw,1.9rem);margin-bottom:12px;letter-spacing:-0.01em;color:var(--off-white);}
+    .cta-band p{color:var(--light-gray);max-width:52ch;margin:0 auto 24px;}
+    .cta-band .btn{display:inline-block;background:var(--copper);color:#fff;font-weight:700;padding:13px 28px;border-radius:8px;text-decoration:none;transition:background .18s ease;}
+    .cta-band .btn:hover,.cta-band .btn:focus-visible{background:var(--gold);color:var(--navy);outline:none;}
+    /* Footer */
+    footer{max-width:760px;margin:16px auto 0;padding:24px;font-size:0.82rem;color:var(--mid-gray);border-top:1px solid var(--light-gray);}
+    footer p+p{margin-top:6px;}
+    footer a{color:var(--mid-gray);text-decoration:underline;}
+    @media (prefers-reduced-motion:reduce){*{transition:none!important;}}
+
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header>
+    <div class="header-inner">
+      <div class="wordmark"><a href="index.html">Malaniru<span class="dot">.</span></a></div>
+      <span class="eyebrow">AI Enablement &middot; Daily Intelligence Briefing</span>
+      <h1>Daily Intelligence Briefing — Saturday, September 26, 2026</h1>
+      <p class="byline">By Mark Andrew Harris<span class="sep">&middot;</span>September 26, 2026</p>
+      <p class="lede">Microsoft&#x27;s September 25 Copilot relaunch gives autonomous &#x27;Autopilot&#x27; agents their own Entra identities — email, calendar, OneDrive, and Teams access — and shifts billing to usage-based Copilot Credits; MSFT closed up 3.66%. A Santa Fe jury found Meta misled consumers over Cambridge Analytica-era data sharing, and META fell 3.33% the same session. Nscale secured $3.36 billion in convertible financing ahead of its still-unpriced NYSE listing. Claude Code shipped two more governance-relevant point releases; Gemini 4 entered post-training with no confirmed date. Every figure carries a source and a confidence tag; this is market intelligence, not investment advice.</p>
+      <a class="backlink" href="daily-intelligence-briefings.html">&larr; All daily intelligence briefings</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <article>
+      <p><strong>[THOUGHT LEADERSHIP] [DRAFT — Pending Copy Review]</strong></p>
+      <h2 id="executive-summary">Executive Summary</h2>
+      <p><strong>Microsoft rebuilt Copilot around persistent, autonomous agents that now carry their own corporate identities.</strong> ✅ <strong>Microsoft's September 25 relaunch gives "Autopilot" agents dedicated Entra identities — email, calendar, OneDrive storage, and Teams access — so agents appear on org charts as themselves rather than through a shared service account</strong> (TechJuice.pk, read at source, citing Microsoft's announcement). ✅ <strong>The app also shifts billing from pure per-user licensing toward "per-seat-plus-consumption," metering Cowork, Code, Autopilot, and frontier-model usage through new "Copilot Credits"</strong> (TechJuice.pk; Yahoo Finance, read at source). ✅ <strong>MSFT closed at $516.17, up 3.66%, the same day</strong> (stockanalysis.com, read at source). ✅ <strong>A Santa Fe jury separately found Meta misled consumers over Cambridge Analytica-era data-sharing claims; META fell 3.33% the same session</strong> (Investing.com, citing Reuters/AP; stockanalysis.com, read at source). ✅ <strong>Nscale, still pre-IPO, secured $3.36 billion in convertible financing — including $1 billion more expected from Nvidia in mid-November — ahead of its still-unpriced NYSE listing</strong> (TechCrunch, read at source). ✅ <strong>Anthropic's Dario Amodei and OpenAI's Sam Altman separately urged the UN Security Council toward global AI governance this week; the US delegate rejected international control</strong> (Al Jazeera, read at source). 🔶 <strong>Google DeepMind's chief said Gemini 4 has entered post-training and could ship well before year-end, with no confirmed date from Google itself</strong> (Yahoo Finance, citing The Information, secondhand).</p>
+      <hr />
+      <h2 id="1-ai-market-trends">1. AI Market Trends</h2>
+      <p><strong>Microsoft's Copilot overhaul is this week's clearest signal that agentic AI is becoming an enterprise identity-management problem, not just a productivity story.</strong> ✅ <strong>CEO Satya Nadella called the redesigned app "a new OS for work," organized around three sections — Home (chat plus a task-delegation feature called Cowork), Code (natural-language app-building drawing on GitHub Copilot's underlying technology), and Autopilot, formerly called Scout (persistent, cloud-based agents that monitor email and Teams channels and perform recurring tasks autonomously)</strong> (TechJuice.pk, read at source). ✅ <strong>Autopilot agents receive their own Entra identities — email, calendar, OneDrive storage, and Teams access — and appear on organizational charts as themselves rather than operating anonymously through a shared service account</strong> (TechJuice.pk, read at source). 🔶 <strong>Microsoft's own cited adoption numbers show why the push is urgent: fewer than 7% of Microsoft 365's 450-million-plus commercial seats carry a Copilot license, despite the company reporting more than 30 million paid seats in July</strong> (Yahoo Finance, read at source). ✅ <strong>Home and Code reach early access over the coming weeks through Microsoft's Frontier program; Autopilot enters private preview at the end of the month, with more detail expected at Microsoft Ignite, November 17–20</strong> (TechJuice.pk; Yahoo Finance, read at source). ✅ <strong>MSFT closed up 3.66% at $516.17 the same day — its largest one-day AI-news-driven move tracked in this series in recent weeks</strong> (stockanalysis.com, read at source).</p>
+      <p><strong>Meta absorbed a second major adverse jury verdict in New Mexico within six months, and the market noticed.</strong> ✅ <strong>A Santa Fe jury found Meta misled consumers about its data-sharing practices tied to the Cambridge Analytica scandal, and also ruled against the company on claims related to hate-speech-policy enforcement; the jury decided liability only, leaving the penalty amount to the judge</strong> (Investing.com, citing Reuters/AP, read at source). 🔶 <strong>Coverage frames this as the second such adverse finding against Meta in New Mexico in six months, following an earlier trial reportedly resulting in a nine-figure penalty over teen-safety claims — that earlier figure comes from a secondary summary and was not independently re-verified at a primary source this run.</strong> ✅ <strong>META closed at $751.66, down 3.33% (-$25.93) from the prior session's $777.59</strong> (stockanalysis.com, read at source).</p>
+      <p><strong>Meta's Muse personal-AI-agent app kept growing quickly even as the litigation news weighed on the stock.</strong> ✅ <strong>Download trackers disagree on scale — Sensor Tower estimates 3.4 million, Apptopia 4.3 million, Appfigures roughly 2.3 million since its September 8 launch — but agree on direction: Muse has averaged 55% daily download growth in its first two weeks, against a cited 24% for ChatGPT at a comparable stage, and has held the #1 US App Store slot since September 18 and #1 on Google Play since September 19</strong> (TechCrunch, read at source). 🔶 <strong>Ad load remains light — only 6% of impressions through September 19 — consistent with Meta prioritizing growth over monetization for now, notwithstanding last week's separate monetization commentary.</strong></p>
+      <p><strong>Nscale moved closer to its NYSE listing without setting a price.</strong> ✅ <strong>The company secured $3.36 billion in convertible-note financing led by hedge fund Third Point — $2.36 billion closed immediately, with a further $1 billion expected from existing investor Nvidia around mid-November — earmarked for AI data-center buildout, including large campuses in Norway and West Virginia</strong> (TechCrunch, read at source). ✅ <strong>Nscale says it has accumulated more than $103 billion in contracts since spinning out of Australian crypto miner Arkon Energy in 2024; its NYSE registration, filed September 18, "has not yet become effective," and stockanalysis.com's own tracking page lists its IPO price as pending</strong> (TechCrunch; stockanalysis.com, read at source).</p>
+      <p><strong>Two frontier-lab CEOs took their case for global AI governance to the UN Security Council this week — and the US pushed back.</strong> ✅ <strong>Anthropic's Dario Amodei told the Council, "If managed poorly, I even believe AI could be a risk to humanity as a whole," and OpenAI's Sam Altman warned that without governance, humanity could "lose control of the future of AI," arguing the decisions "cannot be made by labs in San Francisco alone"</strong> (Al Jazeera, read at source). ⚠️ <strong>US representative Michael Kratsios said the US would "totally reject all efforts by international bodies to assert centralised control and global governance of AI" — a direct rebuttal, not a negotiating position that resolved anything this week.</strong></p>
+      <p>⚠️ <strong>No additional AI-specific funding round or enterprise contract beyond the Nscale financing above was confirmed at a reputable source for this window; general funding-roundup aggregators exist but their individual figures were not independently verified this run and are omitted rather than guessed.</strong></p>
+      <hr />
+      <h2 id="2-top-10-ai-agents-three-lenses">2. Top 10 AI Agents — Three Lenses</h2>
+      <p>Rankings as of Saturday, September 26, 2026. <strong>The relevance and momentum boards both move today — Microsoft's Copilot relaunch is the first non-Anthropic, non-Google story to top either board in this series' recent runs.</strong></p>
+      <h3 id="2a-relevance-for-claude-mcp-centered-work">2a. Relevance for Claude / MCP-Centered Work</h3>
+      <div class="table-wrap"><table>
+      <thead>
+      <tr>
+      <th>Rank</th>
+      <th>Agent / Platform</th>
+      <th>Justification</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>1</td>
+      <td>Claude Opus 5.5</td>
+      <td><strong>Holds first; no new pricing or performance news this run.</strong> ✅ <strong>Carried: matches Claude Fable 5.1 performance at 40% lower operational cost, at verified $4/$20 per-million-token pricing</strong> (primary, carried from Sept 22 announcement).</td>
+      </tr>
+      <tr>
+      <td>2</td>
+      <td>Microsoft Copilot Autopilot + Entra Agent Identities</td>
+      <td><strong>Enters second on direct governance relevance.</strong> ✅ <strong>Giving autonomous agents their own Entra identities — email, calendar, file storage, Teams access — operationalizes a non-human-identity governance question every organization adopting agentic AI now needs to answer, at Microsoft's platform scale</strong> (TechJuice.pk, read at source). 🔶 <strong>Still private preview — relevant to policy-writing now, not yet to production deployment.</strong></td>
+      </tr>
+      <tr>
+      <td>3</td>
+      <td>Claude Code v2.1.283</td>
+      <td><strong>Enters third on a governance-relevant release.</strong> ✅ <strong>Dated September 25: adds gateway hint headers, managed settings for model control, MCP tool outputs surfaced in telemetry, a new prompt-audit tool, and improved MCP progress reporting</strong> (primary, changelog read at source).</td>
+      </tr>
+      <tr>
+      <td>4</td>
+      <td>Model Context Protocol</td>
+      <td><strong>Holds fourth.</strong> ✅ <strong>Newest blog post remains "The New MCP Roadmap," August 22, 2026</strong> (primary, read at source).</td>
+      </tr>
+      <tr>
+      <td>5</td>
+      <td>GPT-6 Sol / Luna</td>
+      <td><strong>Holds fifth; no new pricing or distribution news.</strong> ✅ <strong>$2/$10 and $0.10/$0.50 per million tokens</strong> (primary, carried).</td>
+      </tr>
+      </tbody>
+      </table></div>
+      <p><em>(Pricing watch, per million tokens, carried and not re-read today: Opus 5.5 — $4/$20; Opus 5 — $5/$25; GPT-6 Sol — $2/$10; GPT-6 Luna — $0.10/$0.50; Fable 5.1 / Mythos 5.1 — $10/$50; Gemini 3.8 Flash — $0.75/$3.75, ⚠️ reported to double January 1, 2027.)</em></p>
+      <h3 id="2b-market-momentum-adoption-funding-buzz">2b. Market Momentum (adoption / funding / buzz)</h3>
+      <div class="table-wrap"><table>
+      <thead>
+      <tr>
+      <th>Rank</th>
+      <th>Agent / Platform</th>
+      <th>Justification</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>1</td>
+      <td>Microsoft Copilot / Autopilot relaunch</td>
+      <td><strong>Rises to first on the week's largest AI-product story.</strong> ✅ <strong>MSFT closed up 3.66% to $516.17 on Microsoft's largest Copilot update to date</strong> (stockanalysis.com; TechJuice.pk, read at source).</td>
+      </tr>
+      <tr>
+      <td>2</td>
+      <td>Meta's Muse</td>
+      <td><strong>Holds second on continued fast growth.</strong> ✅ <strong>55%/day download growth in its first two weeks, #1 on the US App Store since September 18</strong> (TechCrunch, read at source).</td>
+      </tr>
+      <tr>
+      <td>3</td>
+      <td>Meta New Mexico jury verdict</td>
+      <td><strong>Enters third on negative momentum with a real dollar impact.</strong> ✅ <strong>META fell 3.33% the day the verdict was reported</strong> (stockanalysis.com; Investing.com, read at source).</td>
+      </tr>
+      <tr>
+      <td>4</td>
+      <td>Nscale financing / IPO</td>
+      <td><strong>Holds fourth.</strong> ✅ <strong>$3.36 billion convertible financing closed September 25, still no IPO price set</strong> (TechCrunch, read at source).</td>
+      </tr>
+      <tr>
+      <td>5</td>
+      <td>Gemini 4</td>
+      <td><strong>Holds fifth on a continuing unofficial timing signal.</strong> 🔶 <strong>In post-training, could ship well before year-end per DeepMind's chief</strong> (Yahoo Finance, secondhand).</td>
+      </tr>
+      </tbody>
+      </table></div>
+      <h3 id="2c-capability-maturity-production-readiness">2c. Capability &amp; Maturity (production readiness)</h3>
+      <div class="table-wrap"><table>
+      <thead>
+      <tr>
+      <th>Rank</th>
+      <th>Agent / Platform</th>
+      <th>Justification</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>1</td>
+      <td>Claude Code v2.1.283</td>
+      <td><strong>Holds first on shipped, GA reliability and governance fixes across three straight point releases (.281, .282, .283).</strong> ✅ <strong>All three dated September 23–25, changelog read at source.</strong></td>
+      </tr>
+      <tr>
+      <td>2</td>
+      <td>Claude Opus 5.5</td>
+      <td><strong>Holds second.</strong> ⚠️ <strong>Capability figures remain vendor-reported.</strong></td>
+      </tr>
+      <tr>
+      <td>3</td>
+      <td>Microsoft Copilot Autopilot</td>
+      <td><strong>Enters third on architectural significance, with a maturity caveat.</strong> ⚠️ <strong>Still private preview, not GA — listed for what it signals about where agent platforms are headed, not for production readiness today</strong> (TechJuice.pk, read at source).</td>
+      </tr>
+      <tr>
+      <td>4</td>
+      <td>MCP 2026-07-28</td>
+      <td><strong>Holds fourth.</strong> ✅ <strong>Specification substance unchanged.</strong></td>
+      </tr>
+      <tr>
+      <td>5</td>
+      <td>Grok 4.7 (xAI)</td>
+      <td><strong>Enters fifth.</strong> ⚠️ <strong>xAI's own site describes it as "twice as fast, at half the price of comparable models" for coding and knowledge work — self-reported, no independent benchmark located</strong> (x.ai, read at source).</td>
+      </tr>
+      </tbody>
+      </table></div>
+      <p><strong>Divergence analysis.</strong> <strong>For the first time in recent runs of this series, a single story — Microsoft's Copilot relaunch — places on all three boards at once.</strong> ✅ <strong>That is unusual: relevance, momentum, and capability rankings in this series have typically been led by different stories entirely, as they were as recently as yesterday.</strong> 🔶 <strong>But the capability placement carries a real caveat — Autopilot is private preview, not shipped — so today's convergence is really "one story is important on three different axes," not "one product is simultaneously the most relevant, most talked-about, and most production-ready thing available."</strong> ⚠️ <strong>Gemini 4's continued absence from these boards despite two straight days of executive commentary is itself informative: commentary is not shipping, and this series does not rank based on interviews alone once a real product story is available to compare against.</strong></p>
+      <p><strong>What This Means for You.</strong> ✅ <strong>Handing autonomous agents their own full corporate identities — email, calendar, file storage, Teams access — multiplies the number of "identities" an organization's access-governance program has to track, audit, and rotate.</strong> 🔶 <strong>That turns the credential-hygiene lesson from earlier threat-intelligence reporting — a stolen developer token becoming full administrative cloud access in about three hours — from a single-vendor concern into a platform-wide one: an agent identity with its own inbox and file storage is a new category of insider-risk surface most existing access-review cadences were never built to cover.</strong> ✅ <strong>Any organization evaluating an agent platform like this should treat "who owns and audits a non-human identity" as a concrete governance question to answer in a documented AI implementation policy before autonomous agents leave preview — not a hypothetical for a future policy revision.</strong> ⚠️ <strong>This capability is only entering private preview at month's end, so no organization should be putting these agents into production yet; the actionable step today is updating policy language, not deployment.</strong></p>
+      <hr />
+      <h2 id="3-agentic-ai-advances-new-releases">3. Agentic AI Advances &amp; New Releases</h2>
+      <ul>
+      <li><strong>Claude Code v2.1.283, September 25</strong> (primary, changelog read at source). ✅ <strong>Adds gateway hint headers; managed settings for model control; MCP tool outputs now surfaced in telemetry; a new prompt-audit tool; improved MCP progress reporting.</strong></li>
+      <li><strong>Claude Code v2.1.282, September 24</strong> (primary, changelog read at source; carried from yesterday's run). ✅ <strong><code>maxProseWidth</code> setting, startup telemetry notices, an improved <code>/artifacts</code> view, and several reliability fixes.</strong></li>
+      <li><strong>Claude Code v2.1.281, September 23</strong> (primary, changelog read at source). ✅ <strong>Adds Gateway Bedrock support and MCP URL-mode elicitation.</strong></li>
+      <li><strong>Microsoft — Copilot relaunch, September 25</strong> (TechJuice.pk; Yahoo Finance, read at source; full detail in Section 1). ✅ <strong>The most significant agentic-AI platform announcement of the window, independent of vendor — it sets a concrete identity-and-billing model (Entra agent identities; usage-based "Copilot Credits") that other agent platforms will likely be compared against.</strong></li>
+      <li><strong>Google DeepMind — Gemini 4 post-training update, September 23–24</strong> (Yahoo Finance, citing remarks at The Information's AI Agenda Live Summit, secondhand). 🔶 <strong>DeepMind's Koray Kavukcuoglu said the team aims to "roll out an early post-training version as soon as possible... much earlier than the end of the year."</strong> ⚠️ <strong>A secondary aggregator cited comparative scores on a benchmark named "Intelligence Index v4.3.2" (Gemini 3.6 Flash 34.0; Opus 5.5 57.6; GPT-6 Sol 47.5) — this benchmark and its scores could not be verified against a primary source this run. <code>[SOURCE UNVERIFIED — do not use in external output]</code>.</strong></li>
+      <li><strong>xAI — Grok 4.7, September 21</strong> (x.ai, read at source; carried context). ⚠️ <strong>Self-reported as "twice as fast, at half the price of comparable models" for coding and knowledge work — no independent benchmark located.</strong></li>
+      <li><strong>Model Context Protocol Blog — read at source; no new post since August 22, 2026.</strong></li>
+      <li><strong>Standing carries, not re-verified this run.</strong> <strong>Colorado Senate Bill 26-189</strong>, effective <strong>January 1, 2027</strong>. <strong>EU AI Act Article 50</strong> enforceable since <strong>August 2, 2026</strong>; <strong>Annex III</strong> at <strong>2 December 2027</strong>; <strong>Annex I</strong> at <strong>2 August 2028</strong>. ⚠️ <strong>CVE-2026-59822 (LiteLLM, CISA KEV) — no update for eleven runs.</strong> Compliance awareness, not legal advice.</li>
+      </ul>
+      <p><strong>What This Means for You.</strong> ✅ <strong>The governance features shipped in Claude Code this week — managed settings for model control and a prompt-audit tool — give organizations concrete, nameable controls to require in a documented AI implementation policy, rather than generic guidance.</strong> 🔶 <strong>The Copilot relaunch is worth planning around even before its agent features leave preview: any organization already licensing Microsoft 365 Copilot should expect an identity-and-billing model change, so budget and governance conversations aren't a surprise later this year.</strong> ⚠️ <strong>The Gemini 4 benchmark figures above are unverified and should not be repeated as fact until confirmed at a primary source.</strong></p>
+      <hr />
+      <h2 id="4-overnight-daily-release-monitor">4. Overnight / Daily Release Monitor</h2>
+      <p>Covering <strong>Thursday, September 24 into Saturday, September 26.</strong> ✅ <strong>All five vendor surfaces this series tracks were reached at source today.</strong></p>
+      <ul>
+      <li><strong>Anthropic Newsroom — read at source.</strong> ✅ <strong>No new post since September 23's enzyme-system announcement.</strong> (Most recent before that: September 22, Opus 5.5 launch and an Ebola situation-report feature; September 18, the Accenture embedded-evaluation partnership.)</li>
+      <li><strong>Claude Code changelog — read at source.</strong> ✅ <strong>Active: v2.1.282 (September 24) and v2.1.283 (September 25).</strong></li>
+      <li><strong>OpenAI — read at source.</strong> ✅ <strong>No new post dated September 24–26.</strong> (Most recent: September 21–23 items — Sam Altman's UN Security Council remarks, "Two years of OpenAI Academy," ChatGPT Ads expansion to Southeast Asia and Taiwan, expanded Airbnb access to GPT-6 Astra.)</li>
+      <li><strong>Google Gemini API release notes — read at source.</strong> ✅ <strong>No new entry since September 22's TTS models.</strong></li>
+      <li><strong>Model Context Protocol blog — read at source.</strong> ✅ <strong>No new post since August 22.</strong></li>
+      <li><strong>Scheduled ahead:</strong> <strong>OpenAI DevDay, September 29</strong>, Fort Mason, San Francisco, Altman keynote 10:00am PT livestreamed, in-person applications already closed ✅; <strong><code>gemini-omni-flash-preview</code> deprecation, September 30</strong> ✅ (carried); <strong><code>antigravity-preview-05-2026</code> shutdown, October 5</strong> ✅ (carried); <strong>GPT-5.5 retirement from ChatGPT, ChatGPT Work/Business/Enterprise/Edu, and Codex, October 14</strong> 🔶 (API-access scope not fully confirmed); <strong>Sonnet 5.5 and Haiku 5.5 "in the coming weeks"</strong> ✅ (carried); <strong>Project Jupiter air-quality permit deadline, November 23</strong> ✅ (carried); <strong>Microsoft Ignite, November 17–20</strong>, with further Copilot/Autopilot detail expected ✅ (new this run); 🔶 <strong>a follow-up US-China summit focused on AI safety reportedly planned for November in Shenzhen — single-source, secondhand, not independently confirmed.</strong></li>
+      </ul>
+      <p><strong>What This Means for You.</strong> ✅ <strong>Four of five tracked vendor surfaces went quiet again today; that pattern of long quiet stretches punctuated by release bursts has held consistently.</strong> 🔶 <strong>Microsoft Ignite (November 17–20) is now a calendar item worth watching for any organization using Copilot, ahead of its autonomous-agent features' expected broader rollout.</strong></p>
+      <hr />
+      <h2 id="5-ai-trading-trends">5. AI Trading Trends</h2>
+      <p><em>Market intelligence for situational awareness — not investment advice. No buy/sell/hold recommendations, price targets, or return forecasts.</em> Every figure carries a source and a confidence note.</p>
+      <h3 id="5a-ipos">5a. IPOs</h3>
+      <p>✅ <strong>Nscale (planned NYSE ticker: NSCL) — still pre-IPO as of September 26, 2026; registration filed September 18 "has not yet become effective," and stockanalysis.com lists its IPO price as pending</strong> (TechCrunch; stockanalysis.com, read at source). ✅ <strong>New this run: Nscale secured $3.36 billion in convertible-note financing on September 25 — $2.36 billion closed immediately, roughly $1 billion more expected from Nvidia around mid-November — led by hedge fund Third Point</strong> (TechCrunch, read at source). 🔶 <strong>Filing-stage coverage cites $56.4 billion in remaining performance obligations, a net loss widening to $1.02 billion, more than $8 billion in debt, and a $3.5 billion compute-purchase commitment from Figure AI; named backers in filing coverage include Nvidia, Microsoft, Blue Owl, Dell, and Fidelity — treat as filing-stage detail, not an audited figure.</strong> 🔶 <strong>Expected-valuation figures near $30–35 billion and a raise near $3 billion continue to circulate in secondary coverage; the price range remains unset at source.</strong></p>
+      <p>⚠️ <strong>Anthropic — no S-1 filing or pricing date confirmed as of September 26, 2026.</strong> 🔶 <strong>Secondary coverage (Forbes, Yahoo Finance, and others) discusses a possible fall-2026 listing at valuations ranging from roughly $965 billion to $2 trillion; treat all of these figures as speculative until an actual filing is confirmed.</strong></p>
+      <p>⚠️ <strong>No AI-related IPO was confirmed as priced in the United States between September 24 and September 26, 2026.</strong></p>
+      <h3 id="5b-top-5-traded-ai-related-tickers">5b. Top 5 traded AI-related tickers</h3>
+      <p><em>Inclusion reflects AI exposure and news flow in the most recent settled session (Friday, September 25 — markets are closed over the weekend), not merit.</em> No targets, no forecasts.</p>
+      <div class="table-wrap"><table>
+      <thead>
+      <tr>
+      <th>#</th>
+      <th>Ticker</th>
+      <th>Company</th>
+      <th>Why it's an AI-trading bellwether</th>
+      <th>Latest verifiable signal</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>1</td>
+      <td>MSFT</td>
+      <td>Microsoft</td>
+      <td>This week's largest AI-product news — the Copilot/Autopilot relaunch</td>
+      <td>✅ <strong>Closed $516.17, up $18.24 or 3.66%, vs. $497.93 prior close</strong> (stockanalysis.com, read at source).</td>
+      </tr>
+      <tr>
+      <td>2</td>
+      <td>META</td>
+      <td>Meta Platforms</td>
+      <td>Litigation risk collided with a fast-growing AI product this week</td>
+      <td>✅ <strong>Closed $751.66, down $25.93 or 3.33%, vs. $777.59 prior close</strong> (stockanalysis.com, read at source).</td>
+      </tr>
+      <tr>
+      <td>3</td>
+      <td>GOOGL</td>
+      <td>Alphabet</td>
+      <td>Gemini developer platform; Gemini 4 timing signal continues</td>
+      <td>✅ <strong>Closed $343.92, up $1.56 or 0.46%, vs. $342.36 prior close</strong> (stockanalysis.com, read at source).</td>
+      </tr>
+      <tr>
+      <td>4</td>
+      <td>NVDA</td>
+      <td>Nvidia</td>
+      <td>Volume anchor of the AI trade; committing roughly $1 billion to Nscale's financing</td>
+      <td>✅ <strong>Closed $225.07, up $0.49 or 0.22%, vs. $224.58 prior close</strong> (stockanalysis.com, read at source).</td>
+      </tr>
+      <tr>
+      <td>5</td>
+      <td>ORCL</td>
+      <td>Oracle</td>
+      <td>Continuing Stargate / Project Jupiter infrastructure-risk overhang from earlier this week</td>
+      <td>✅ <strong>Closed $137.10, down $2.44 or 1.75%, vs. $139.54 prior close</strong> (stockanalysis.com, read at source).</td>
+      </tr>
+      </tbody>
+      </table></div>
+      <p><em>(AMZN closed up 0.12% to $249.67 and AMD closed up 0.22% to $630.63 — both essentially flat with no distinct AI-specific catalyst identified at source this run, and are out of the top five.)</em></p>
+      <p><strong>Context, not forecast.</strong> ✅ <strong>Friday, September 25 closes: Dow Jones Industrial Average 51,828.62, up 478.64 (0.93%), snapping a three-week losing streak; S&amp;P 500 7,743.41, up 39.28 (0.51%); Nasdaq Composite 27,068.72, up 129.34 (0.48%) — both indices posted weekly gains</strong> (Yahoo Finance, read at source). ✅ <strong>The 10-year Treasury yield closed near 5.18%, described in coverage as its highest level since the 2007–2008 financial crisis; BlackRock's Rick Rieder called the bond selloff "not a crisis but an eye-opener"</strong> (Yahoo Finance, read at source). ✅ <strong>WTI crude fell to about $92 a barrel on optimism over potential US-Iran talks regarding the Strait of Hormuz</strong> (Yahoo Finance, read at source). ✅ <strong>The University of Michigan consumer-sentiment index fell to a four-month low of 48.1, citing high gas prices and tariff concerns</strong> (Yahoo Finance, read at source). 🔶 <strong>A follow-up US-China summit focused on AI safety is reportedly being planned for November in Shenzhen — single-source, not independently confirmed.</strong></p>
+      <p><strong>What This Means for You.</strong> ✅ <strong>Microsoft's stock rewarded a governance-and-identity announcement — not a pure capability claim — more than any single AI story has moved MSFT in recent weeks; that is a market signal that agentic-AI governance is being priced as a real feature, not overhead.</strong> 🔶 <strong>Meta's session is a reminder that legal and regulatory exposure can move an AI-adjacent stock as much as product news — worth keeping in mind when evaluating any AI vendor on capability and price alone.</strong> Market intelligence only, not investment advice.</p>
+      <h2 id="sources">Sources</h2>
+      <p><em>Verification note: this run read at source the Microsoft Copilot relaunch coverage (TechJuice.pk, Yahoo Finance, iPhone in Canada), TechCrunch's Nscale financing and Meta Muse coverage, Investing.com's Reuters/AP-sourced Meta jury-verdict coverage, Al Jazeera's UN Security Council coverage, the Claude Code changelog, x.ai's news page, the Anthropic newsroom, the OpenAI newsroom, the Gemini API release notes, the MCP blog index, the Nscale stockanalysis.com listing, and stockanalysis.com's historical price pages for MSFT, META, GOOGL, NVDA, ORCL, AMZN, and AMD. U.S. News/AP's own page returned a fetch error (403) and is cited via the Investing.com/Reuters republication instead. The Yahoo Finance market-wrap article and the Gemini-4-benchmark-citing aggregator are read at source but the benchmark figures within the latter are flagged unverified and not carried as fact.</em></p>
+      <ul>
+      <li>TechJuice.pk, "Microsoft Just Gave AI Agents Their Own Email Addresses," September 25, 2026 (press, read at source). <a href="https://www.techjuice.pk/microsoft-copilot-agents-entra-identity-autopilot/" target="_blank" rel="noopener">https://www.techjuice.pk/microsoft-copilot-agents-entra-identity-autopilot/</a></li>
+      <li>Yahoo Finance, "Microsoft relaunches Copilot app with coding and AI agents," September 25, 2026 (press, read at source). <a href="https://finance.yahoo.com/technology/ai/articles/microsoft-relaunches-copilot-app-coding-125333413.html" target="_blank" rel="noopener">https://finance.yahoo.com/technology/ai/articles/microsoft-relaunches-copilot-app-coding-125333413.html</a></li>
+      <li>iPhone in Canada, "Microsoft Announces Copilot Refresh With Autonomous Agents, Built-In Office and App Creation," September 25, 2026 (press, secondary corroboration). <a href="https://www.iphoneincanada.ca/2026/09/25/microsoft-copilot-refresh-office-and-app-creation/" target="_blank" rel="noopener">https://www.iphoneincanada.ca/2026/09/25/microsoft-copilot-refresh-office-and-app-creation/</a></li>
+      <li>TechCrunch, "Ahead of U.S. IPO, British AI neocloud Nscale secures $3.36B in convertible financing," September 25, 2026 (press, read at source). <a href="https://techcrunch.com/2026/09/25/ahead-of-u-s-ipo-british-ai-neocloud-nscale-secures-3-36b-in-convertible-finacing/" target="_blank" rel="noopener">https://techcrunch.com/2026/09/25/ahead-of-u-s-ipo-british-ai-neocloud-nscale-secures-3-36b-in-convertible-finacing/</a></li>
+      <li>TechCrunch, "Meta is putting its muscle behind Muse as the AI app takes off," September 25, 2026 (press, read at source). <a href="https://techcrunch.com/2026/09/25/meta-is-putting-its-muscle-behind-muse-as-the-ai-app-takes-off/" target="_blank" rel="noopener">https://techcrunch.com/2026/09/25/meta-is-putting-its-muscle-behind-muse-as-the-ai-app-takes-off/</a></li>
+      <li>Investing.com (Reuters), "Meta Misled Consumers in Case Over Cambridge Analytica Scandal, New Mexico Jury Says," September 25, 2026 (press, read at source). <a href="https://www.investing.com/news/stock-market-news/meta-misled-consumers-in-case-over-cambridge-analytica-scandal-new-mexico-jury-says-4917926" target="_blank" rel="noopener">https://www.investing.com/news/stock-market-news/meta-misled-consumers-in-case-over-cambridge-analytica-scandal-new-mexico-jury-says-4917926</a></li>
+      <li>Al Jazeera, "OpenAI, Anthropic CEOs call for global AI regulation at UN," September 24, 2026 (press, read at source). <a href="https://www.aljazeera.com/news/2026/9/24/ai-corporate-leaders-tell-un-the-industry-needs-global-regulation" target="_blank" rel="noopener">https://www.aljazeera.com/news/2026/9/24/ai-corporate-leaders-tell-un-the-industry-needs-global-regulation</a></li>
+      <li>Yahoo Finance, "Google's Gemini 4 Enters Post-Training — and the Three-Way Frontier Race Just Compressed," September 24, 2026 (press, citing The Information, secondhand; benchmark figures unverified). <a href="https://finance.yahoo.com/technology/ai/articles/google-gemini-4-enters-post-122454510.html" target="_blank" rel="noopener">https://finance.yahoo.com/technology/ai/articles/google-gemini-4-enters-post-122454510.html</a></li>
+      <li>x.ai, News index — Grok 4.7 (September 21, 2026) and Grok Bot (September 22, 2026) posts (primary, read at source). <a href="https://x.ai/news" target="_blank" rel="noopener">https://x.ai/news</a></li>
+      <li>Claude Code changelog, v2.1.281–v2.1.283, September 23–25, 2026 (primary, read at source). <a href="https://code.claude.com/docs/en/changelog" target="_blank" rel="noopener">https://code.claude.com/docs/en/changelog</a></li>
+      <li>Anthropic Newsroom (primary, read at source September 26, 2026). <a href="https://www.anthropic.com/news" target="_blank" rel="noopener">https://www.anthropic.com/news</a></li>
+      <li>OpenAI Newsroom (primary, read at source September 26, 2026). <a href="https://openai.com/news/" target="_blank" rel="noopener">https://openai.com/news/</a></li>
+      <li>Google, Gemini API release notes (primary, read at source September 26, 2026). <a href="https://ai.google.dev/gemini-api/docs/changelog" target="_blank" rel="noopener">https://ai.google.dev/gemini-api/docs/changelog</a></li>
+      <li>Model Context Protocol Blog, post index (primary, read at source September 26, 2026). <a href="https://blog.modelcontextprotocol.io/posts/" target="_blank" rel="noopener">https://blog.modelcontextprotocol.io/posts/</a></li>
+      <li>stockanalysis.com, historical price pages for MSFT, META, GOOGL, NVDA, ORCL, AMZN, and AMD, accessed September 26, 2026 (read at source). <a href="https://stockanalysis.com/stocks/msft/history/" target="_blank" rel="noopener">https://stockanalysis.com/stocks/msft/history/</a> (and equivalent tickers)</li>
+      <li>stockanalysis.com, NSCL (Nscale) listing page, accessed September 26, 2026 (read at source). <a href="https://stockanalysis.com/stocks/nscl/" target="_blank" rel="noopener">https://stockanalysis.com/stocks/nscl/</a></li>
+      <li>Yahoo Finance, "Stock market today: Dow, S&amp;P 500, Nasdaq notch weekly wins as market shrugs off bond sell-off, oil prices ease," September 25, 2026 (read at source). <a href="https://finance.yahoo.com/markets/live/stock-market-today-friday-september-25-dow-sp-500-nasdaq-081738529.html" target="_blank" rel="noopener">https://finance.yahoo.com/markets/live/stock-market-today-friday-september-25-dow-sp-500-nasdaq-081738529.html</a></li>
+      <li>OpenAI DevDay 2026 event page, accessed September 26, 2026 (primary, read at source). <a href="https://devday.openai.com/" target="_blank" rel="noopener">https://devday.openai.com/</a></li>
+      <li>Startup Fortune, "OpenAI Will Retire GPT-5.5 From ChatGPT and Codex on October 14," September 2026 (press, read at source; API-access scope not fully confirmed). <a href="https://startupfortune.com/openai-will-retire-gpt-55-from-chatgpt-and-codex-on-october-14/" target="_blank" rel="noopener">https://startupfortune.com/openai-will-retire-gpt-55-from-chatgpt-and-codex-on-october-14/</a></li>
+      </ul>
+    </article>
+
+    <section class="cta-band" id="contact" aria-labelledby="cta-heading">
+      <h2 id="cta-heading">From AI curiosity to AI capability</h2>
+      <p>This briefing is part of the field research behind our AI Enablement service &mdash; a curated, white-glove Claude Cowork implementation tailored to your organization&rsquo;s workflow.</p>
+      <a class="btn" href="https://calendly.com/mark-malaniru/30min" target="_blank" rel="noopener">Book a discovery call</a>
+    </section>
+    <!-- mal-ai-disclaimer:v1 -->
+  <aside class="mal-ai-disclaimer" role="note" aria-label="AI transparency notice" style="max-width:760px;margin:2.5rem auto 0;padding:1rem 1.25rem;border:1px solid #d9c3a5;border-left:4px solid #C07830;border-radius:6px;background:#faf6f0;color:#5c5347;font-size:0.82rem;line-height:1.6;box-sizing:border-box;">
+    <strong style="display:block;color:#8a5a1e;font-size:0.78rem;letter-spacing:.04em;text-transform:uppercase;margin-bottom:.35rem;">AI Transparency Notice</strong>
+    This article was produced through Malaniru&rsquo;s guided-research process: generated with the assistance of AI and reviewed by a person before publication (human-in-the-loop). In line with EU AI Act transparency obligations, we disclose that AI systems were used to create this content. It is provided for general information only, may contain inaccuracies, and is not professional advice &mdash; verify before relying on it.
+  </aside>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Malaniru Inc, LLC &middot; Lafayette, Colorado &middot; AI Enablement</p>
+    <p><a href="daily-intelligence-briefings.html">&larr; Back to Daily Intelligence Briefings</a> &middot; <a href="index.html">AI Enablement</a></p>
+      <nav class="mal-footernav" data-mal-footernav aria-label="Site" style="margin-top:0.7rem;font-size:0.82rem;line-height:1.9;">
+      <a href="about.html" style="color:#C07830;font-weight:700;text-decoration:none;">About</a> &middot;
+      <a href="pricing.html" style="color:#C07830;font-weight:700;text-decoration:none;">Pricing</a> &middot;
+      <a href="index.html" style="color:#C07830;font-weight:700;text-decoration:none;">AI Enablement</a>
+     &middot;
+      <a href="privacy-policy.html" style="color:#C07830;font-weight:700;text-decoration:none;">Privacy</a>
+    </nav>
+  </footer>
+</body>
+</html>
